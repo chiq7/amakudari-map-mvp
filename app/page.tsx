@@ -1,5 +1,6 @@
 
 import Link from 'next/link';
+import JapanRegionMap from '../components/JapanRegionMap';
 
 // NOTE: This is a simplified data loader for a static build.
 async function getData() {
@@ -67,45 +68,33 @@ export default async function Home() {
                     <p className="text-sm text-gray-600 leading-relaxed">
                         地域別の公表再就職情報を確認できます。数字は、各地域に所在地がある法人への再就職情報件数です。
                     </p>
-                    <form action="/search" method="GET" className="mt-4">
-                        <input
-                            className="w-full bg-white border border-gray-300 rounded-lg py-2.5 px-4 text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm placeholder:text-gray-400"
-                            placeholder="都道府県名・市区町村名で検索"
-                            type="text"
-                            name="q"
-                        />
-                    </form>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                        {['東京都', '大阪府', '神奈川県', '愛知県', '福岡県', '北海道'].map((area) => (
-                            <Link
-                                key={area}
-                                href={`/search?q=${encodeURIComponent(area)}`}
-                                className="rounded-full border border-gray-300 bg-gray-50 px-3 py-1.5 text-sm font-semibold text-gray-700 hover:border-blue-500 hover:text-blue-600 transition-colors"
-                            >
-                                {area}
-                            </Link>
-                        ))}
+                    <div className="mt-4 grid grid-cols-1 lg:grid-cols-5 gap-4">
+                        <div className="lg:col-span-3">
+                            <JapanRegionMap />
+                        </div>
+                        <div className="lg:col-span-2">
+                            <form action="/search" method="GET">
+                                <input
+                                    className="w-full bg-white border border-gray-300 rounded-lg py-2.5 px-4 text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm placeholder:text-gray-400"
+                                    placeholder="都道府県名・市区町村名で検索"
+                                    type="text"
+                                    name="q"
+                                />
+                            </form>
+                            <div className="mt-3 flex flex-wrap gap-2">
+                                {['東京都', '大阪府', '神奈川県', '愛知県', '福岡県', '北海道'].map((area) => (
+                                    <Link
+                                        key={area}
+                                        href={`/search?q=${encodeURIComponent(area)}`}
+                                        className="rounded-full border border-gray-300 bg-gray-50 px-3 py-1.5 text-sm font-semibold text-gray-700 hover:border-blue-500 hover:text-blue-600 transition-colors"
+                                    >
+                                        {area}
+                                    </Link>
+                                ))}
+                            </div>
+                            <p className="mt-3 text-xs text-gray-500">地域別データは順次追加予定です。</p>
+                        </div>
                     </div>
-                    <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                        {[
-                            ['北海道・東北', 118],
-                            ['関東', 426],
-                            ['中部', 173],
-                            ['近畿', 214],
-                            ['中国・四国', 96],
-                            ['九州・沖縄', 142],
-                        ].map(([area, count]) => (
-                            <Link
-                                key={area}
-                                href={`/search?q=${encodeURIComponent(area as string)}`}
-                                className="flex items-center justify-between rounded border border-gray-200 bg-gray-50 px-3 py-3 text-sm hover:border-blue-500 transition-colors"
-                            >
-                                <span className="font-semibold text-gray-800">{area}</span>
-                                <span className="font-mono text-gray-600">{count}件</span>
-                            </Link>
-                        ))}
-                    </div>
-                    <p className="mt-3 text-xs text-gray-500">地域別データは順次追加予定です。</p>
                 </div>
             </section>
 
