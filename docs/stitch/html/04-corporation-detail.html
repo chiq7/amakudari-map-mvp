@@ -1,0 +1,398 @@
+<!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>天下りマップ | 一般財団法人 日本総合研究所 詳細情報</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7f9fb;
+            color: #191c1e;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "surface-tint": "#565e74",
+                      "on-secondary-fixed": "#00174b",
+                      "on-primary-fixed": "#131b2e",
+                      "secondary": "#0051d5",
+                      "on-surface-variant": "#45464d",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "primary-container": "#131b2e",
+                      "secondary-container": "#316bf3",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#eff1f3",
+                      "surface-dim": "#d8dadc",
+                      "outline-variant": "#c6c6cd",
+                      "error": "#ba1a1a",
+                      "surface": "#f7f9fb",
+                      "on-tertiary-container": "#98805d",
+                      "surface-container-high": "#e6e8ea",
+                      "inverse-primary": "#bec6e0",
+                      "tertiary-container": "#271901",
+                      "tertiary-fixed-dim": "#dec29a",
+                      "secondary-fixed": "#dbe1ff",
+                      "tertiary-fixed": "#fcdeb5",
+                      "on-tertiary-fixed": "#271901",
+                      "surface-container": "#eceef0",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "primary-fixed-dim": "#bec6e0",
+                      "primary": "#000000",
+                      "on-background": "#191c1e",
+                      "surface-variant": "#e0e3e5",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "outline": "#76777d",
+                      "inverse-surface": "#2d3133",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#f7f9fb",
+                      "primary-fixed": "#dae2fd",
+                      "tertiary": "#000000",
+                      "surface-container-low": "#f2f4f6",
+                      "on-tertiary-fixed-variant": "#574425",
+                      "on-surface": "#191c1e",
+                      "background": "#f7f9fb",
+                      "on-secondary-container": "#fefcff",
+                      "on-primary-container": "#7c839b",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "1rem",
+                      "stack-compact": "0.5rem",
+                      "stack-default": "1.5rem",
+                      "gutter": "1rem",
+                      "container-max": "1280px",
+                      "margin-desktop": "2rem"
+              },
+              "fontFamily": {
+                      "body-md": ["Plus Jakarta Sans"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "headline-xl-mobile": ["Plus Jakarta Sans"],
+                      "data-mono": ["monospace"],
+                      "label-md": ["Plus Jakarta Sans"],
+                      "body-sm": ["Plus Jakarta Sans"],
+                      "headline-xl": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "headline-xl-mobile": ["30px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "data-mono": ["14px", {"lineHeight": "1", "fontWeight": "400"}],
+                      "label-md": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "headline-xl": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface">
+<!-- Header (TopNavBar) -->
+<header class="w-full sticky top-0 z-50 bg-surface-container-lowest border-b border-outline-variant">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg text-primary cursor-pointer">
+                天下りマップ
+            </div>
+<nav class="hidden md:flex items-center gap-8"><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors cursor-pointer" href="#">話題から探す</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors cursor-pointer" href="#">ランキング</a><a class="font-body-md text-body-md hover:text-secondary transition-colors cursor-pointer text-secondary border-b-2 border-secondary pb-1 font-bold" href="#">法人検索</a><a class="font-body-md text-body-md cursor-pointer text-on-surface-variant hover:text-secondary" href="#">データ方針</a></nav>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container border border-outline-variant rounded-lg text-body-sm focus:ring-1 focus:ring-secondary outline-none w-64" placeholder="法人名・氏名・官職で検索" type="text">
+</div>
+<button class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8">
+<!-- Hero Section -->
+<section class="">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+<div>
+<nav class="flex items-center gap-2 mb-4 text-label-md font-label-md text-on-surface-variant"><span class="">TOP</span><span class="material-symbols-outlined text-[12px]">chevron_right</span><span class="">法人検索</span><span class="material-symbols-outlined text-[12px]">chevron_right</span><span class="text-primary">一般財団法人 日本総合研究所</span></nav>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-2">一般財団法人 日本総合研究所</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">公表資料に基づく再就職情報</p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-label-md font-label-md text-secondary-fixed-variant border border-outline-variant rounded cursor-pointer hover:bg-surface-container-high transition-colors">国土交通省</span>
+<span class="px-3 py-1 bg-surface-container text-label-md font-label-md text-secondary-fixed-variant border border-outline-variant rounded cursor-pointer hover:bg-surface-container-high transition-colors">経済産業省</span>
+<span class="px-3 py-1 bg-surface-container text-label-md font-label-md text-secondary-fixed-variant border border-outline-variant rounded cursor-pointer hover:bg-surface-container-high transition-colors">内閣府</span>
+</div>
+</div>
+<!-- Stats Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-4">
+<div class="bg-secondary-fixed p-6 border-2 border-outline-variant rounded-xl shadow-sm">
+<p class="text-label-md font-label-md text-on-secondary-fixed-variant mb-2">公表再就職者数</p>
+<div class="flex items-baseline gap-1">
+<span class="text-[48px] font-headline-xl text-primary leading-tight">42</span>
+<span class="text-body-md font-bold text-on-surface-variant">人</span>
+</div>
+</div>
+<div class="bg-surface-container-high p-6 border border-outline-variant rounded-xl shadow-sm">
+<p class="text-label-md font-label-md text-on-surface-variant mb-2">最多出身省庁</p>
+<div class="text-body-lg font-bold text-primary leading-tight">国土交通省（18人）</div>
+</div>
+<div class="bg-surface-container-high p-6 border border-outline-variant rounded-xl shadow-sm">
+<p class="text-label-md font-label-md text-on-surface-variant mb-2">平均待機日数</p>
+<div class="flex items-baseline gap-1">
+<span class="text-[48px] font-headline-xl text-primary leading-tight">45</span>
+<span class="text-body-md font-bold text-on-surface-variant">日</span>
+</div>
+</div>
+<div class="p-6 border-2 border-outline-variant rounded-xl shadow-sm bg-blue-50">
+<p class="text-label-md font-label-md text-on-secondary-fixed-variant mb-2">退職翌日再就職</p>
+<div class="flex items-baseline gap-1">
+<span class="text-[48px] font-headline-xl text-primary leading-tight">12</span>
+<span class="text-body-md font-bold text-on-surface-variant">件</span>
+</div>
+</div>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant opacity-70">
+                本ページは政府・各省庁等の公表資料に基づき、官民の人材移動を中立的に整理したものです。特定の因果関係や不適切性を断定・示すものではありません。
+            </p>
+</section>
+<!-- Main Content -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<h2 class="font-headline-md text-headline-md text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">list_alt</span>
+                    公表再就職者一覧
+                </h2>
+<div class="flex flex-wrap items-center gap-3">
+<select class="bg-surface-container-lowest border border-outline-variant text-body-sm rounded px-3 py-2 outline-none focus:ring-1 focus:ring-secondary">
+<option>省庁で絞る</option>
+<option>国土交通省</option>
+<option>総務省</option>
+</select>
+<select class="bg-surface-container-lowest border border-outline-variant text-body-sm rounded px-3 py-2 outline-none focus:ring-1 focus:ring-secondary">
+<option>待機日数で絞る</option>
+<option>0日 (翌日)</option>
+<option>30日以内</option>
+</select>
+<select class="bg-surface-container-lowest border border-outline-variant text-body-sm rounded px-3 py-2 outline-none focus:ring-1 focus:ring-secondary font-bold text-secondary">
+<option>再就職日が新しい順</option>
+<option>待機日数が短い順</option>
+</select>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="pl-8 pr-4 py-2 bg-surface-container-lowest border border-outline-variant rounded text-body-sm focus:ring-1 focus:ring-secondary outline-none" placeholder="キーワード検索" type="text">
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden">
+<div class="overflow-x-auto custom-scrollbar">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">
+<th class="px-4 py-3 border-b border-outline-variant">元省庁</th>
+<th class="px-4 py-3 border-b border-outline-variant">離職時官職</th>
+<th class="px-4 py-3 border-b border-outline-variant">氏名</th>
+<th class="px-4 py-3 border-b border-outline-variant">再就職先での地位</th>
+<th class="px-4 py-3 border-b border-outline-variant">離職日</th>
+<th class="px-4 py-3 border-b border-outline-variant">再就職日</th>
+<th class="px-4 py-3 border-b border-outline-variant text-center">待機日数</th>
+<th class="px-4 py-3 border-b border-outline-variant text-center">出典</th>
+</tr>
+</thead>
+<tbody class="text-body-sm font-body-sm text-on-surface divide-y divide-outline-variant">
+<tr class="hover:bg-surface-container-low transition-colors" style="transform: translateX(0px); transition: transform 0.2s ease-out;">
+<td class="px-4 py-4">国土交通省</td>
+<td class="px-4 py-4">大臣官房審議官</td>
+<td class="px-4 py-4"><a class="text-secondary hover:underline font-bold" href="#">佐藤 健一</a></td>
+<td class="px-4 py-4">専務理事</td>
+<td class="px-4 py-4 font-data-mono">2023/03/31</td>
+<td class="px-4 py-4 font-data-mono">2023/04/01</td>
+<td class="px-4 py-4 text-center font-bold"><span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-bold">0</span></td>
+<td class="px-4 py-4 text-center"><a class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span></a></td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-4 py-4">総務省</td>
+<td class="px-4 py-4">情報流通行政局長</td>
+<td class="px-4 py-4"><a class="text-secondary hover:underline font-bold" href="#">田中 博</a></td>
+<td class="px-4 py-4">顧問</td>
+<td class="px-4 py-4 font-data-mono">2022/12/31</td>
+<td class="px-4 py-4 font-data-mono">2023/02/15</td>
+<td class="px-4 py-4 text-center">46</td>
+<td class="px-4 py-4 text-center"><a class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span></a></td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-4 py-4">経済産業省</td>
+<td class="px-4 py-4">中小企業庁次長</td>
+<td class="px-4 py-4"><a class="text-secondary hover:underline font-bold" href="#">渡辺 誠</a></td>
+<td class="px-4 py-4">理事</td>
+<td class="px-4 py-4 font-data-mono">2023/03/31</td>
+<td class="px-4 py-4 font-data-mono">2023/04/01</td>
+<td class="px-4 py-4 text-center font-bold"><span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-bold">0</span></td>
+<td class="px-4 py-4 text-center"><a class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span></a></td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-4 py-4">国土交通省</td>
+<td class="px-4 py-4">航空局次長</td>
+<td class="px-4 py-4"><a class="text-secondary hover:underline font-bold" href="#">伊藤 裕二</a></td>
+<td class="px-4 py-4">常務理事</td>
+<td class="px-4 py-4 font-data-mono">2023/01/15</td>
+<td class="px-4 py-4 font-data-mono">2023/04/01</td>
+<td class="px-4 py-4 text-center">76</td>
+<td class="px-4 py-4 text-center"><a class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-4 bg-surface-container-low flex justify-between items-center border-t border-outline-variant">
+<span class="text-body-sm text-on-surface-variant">42件中 1-4件を表示</span>
+<div class="flex gap-2">
+<button class="px-3 py-1 bg-surface-container-lowest border border-outline-variant rounded hover:bg-surface-container transition-colors disabled:opacity-50" disabled="">前へ</button>
+<button class="px-3 py-1 bg-secondary text-on-secondary rounded font-bold">1</button>
+<button class="px-3 py-1 bg-surface-container-lowest border border-outline-variant rounded hover:bg-surface-container transition-colors">2</button>
+<button class="px-3 py-1 bg-surface-container-lowest border border-outline-variant rounded hover:bg-surface-container transition-colors">次へ</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Data Visualization Section -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+<!-- Chart: Origin Ministries -->
+<div class="bg-surface-container-lowest p-6 border border-outline-variant rounded-lg shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">bar_chart</span>
+                    元省庁の内訳
+                </h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-label-md font-label-md mb-1">
+<span class="">国土交通省</span>
+<span class="">18人</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-secondary h-2 rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-label-md font-label-md mb-1">
+<span class="">経済産業省</span>
+<span class="">12人</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-secondary-container h-2 rounded-full" style="width: 28%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-label-md font-label-md mb-1">
+<span class="">総務省</span>
+<span class="">8人</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-on-primary-container h-2 rounded-full" style="width: 19%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-label-md font-label-md mb-1">
+<span class="">その他</span>
+<span class="">4人</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-outline h-2 rounded-full" style="width: 9%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Chart: Wait Distribution -->
+<div class="bg-surface-container-lowest p-6 border border-outline-variant rounded-lg shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">analytics</span>
+                    待機日数の分布
+                </h3>
+<div class="flex items-end justify-between h-48 gap-4 px-2"><div class="flex-1 flex flex-col items-center gap-2"><div class="w-full bg-secondary-container rounded-t-sm relative group" style="height: 48%;"><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-label-md font-bold">12</span></div><span class="text-label-md font-label-md text-center leading-tight">退職翌日</span></div><div class="flex-1 flex flex-col items-center gap-2"><div class="w-full bg-secondary-container opacity-80 rounded-t-sm relative group" style="height: 72%;"><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-label-md font-bold">18</span></div><span class="text-label-md font-label-md text-center leading-tight">7日以内</span></div><div class="flex-1 flex flex-col items-center gap-2"><div class="w-full bg-secondary-container opacity-60 rounded-t-sm relative group" style="height: 100%;"><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-label-md font-bold">25</span></div><span class="text-label-md font-label-md text-center leading-tight">30日以内</span></div><div class="flex-1 flex flex-col items-center gap-2"><div class="w-full bg-secondary-container opacity-40 rounded-t-sm relative group" style="height: 68%;"><span class="absolute -top-6 left-1/2 -translate-x-1/2 text-label-md font-bold">17</span></div><span class="text-label-md font-label-md text-center leading-tight">31日以上</span></div></div>
+</div>
+</section>
+<!-- Related Info Section -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">link</span>
+                関連情報
+            </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div class="space-y-6"><div><h4 class="text-label-md font-label-md text-on-surface-variant mb-2 uppercase">関連話題</h4><div class="flex flex-wrap gap-2"><a class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant rounded-full text-body-sm transition-colors" href="#">#独立行政法人</a><a class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant rounded-full text-body-sm transition-colors" href="#">#公益法人</a><a class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant rounded-full text-body-sm transition-colors" href="#">#官民人材交流センター</a></div></div><div><h4 class="text-label-md font-label-md text-on-surface-variant mb-2 uppercase">関連省庁</h4><div class="flex flex-wrap gap-2"><a class="px-3 py-1 bg-surface-container-low border border-outline-variant rounded text-body-sm hover:bg-surface-container transition-colors" href="#">国土交通省</a><a class="px-3 py-1 bg-surface-container-low border border-outline-variant rounded text-body-sm hover:bg-surface-container transition-colors" href="#">経済産業省</a><a class="px-3 py-1 bg-surface-container-low border border-outline-variant rounded text-body-sm hover:bg-surface-container transition-colors" href="#">総務省</a></div></div></div><div><h4 class="text-label-md font-label-md text-on-surface-variant mb-2 uppercase">出典資料</h4><ul class="space-y-2"><li class=""><a class="text-body-sm text-secondary hover:underline flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[18px]">description</span>内閣官房：再就職等監視委員会 公表資料 (2023年度)</a></li><li class=""><a class="text-body-sm text-secondary hover:underline flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[18px]">description</span>国土交通省：職員の再就職状況の公表について</a></li><li class=""><a class="text-body-sm text-secondary hover:underline flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[18px]">description</span>経済産業省：離職者再就職情報の定期公表</a></li><li class=""><a class="text-body-sm text-secondary hover:underline flex items-center gap-2 font-bold" href="#"><span class="material-symbols-outlined text-[18px]">policy</span>本サイトのデータ方針について</a></li></ul></div></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-stack-default bg-surface-container border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-8 max-w-container-max mx-auto gap-4">
+<div class="flex flex-col items-center md:items-start">
+<div class="font-headline-md text-headline-md text-primary mb-2">天下りマップ</div>
+<div class="font-body-sm text-body-sm text-on-surface">© 2024 天下りマップ. All rights reserved.</div>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-secondary transition-all duration-150" href="#">免責事項</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-secondary transition-all duration-150" href="#">プライバシーポリシー</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-secondary transition-all duration-150" href="#">データの方針と手法</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-secondary transition-all duration-150" href="#">お問い合わせ</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for table rows
+        document.querySelectorAll('tbody tr').forEach(row => {
+            row.addEventListener('mouseenter', () => {
+                row.style.transform = 'translateX(4px)';
+                row.style.transition = 'transform 0.2s ease-out';
+            });
+            row.addEventListener('mouseleave', () => {
+                row.style.transform = 'translateX(0)';
+            });
+        });
+
+        // Search bar focus effect
+        const searchInput = document.querySelector('input[type="text"]');
+        if(searchInput) {
+            searchInput.addEventListener('focus', () => {
+                searchInput.parentElement.classList.add('ring-2', 'ring-secondary-container');
+            });
+            searchInput.addEventListener('blur', () => {
+                searchInput.parentElement.classList.remove('ring-2', 'ring-secondary-container');
+            });
+        }
+    </script>
+
+
+</body></html>

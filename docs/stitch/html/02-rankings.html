@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ランキングから探す - 天下りマップ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f7f9fb",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "on-primary": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "on-secondary-fixed": "#00174b",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#bec6e0",
+                        "on-tertiary-fixed-variant": "#574425",
+                        "primary": "#000000",
+                        "outline": "#76777d",
+                        "outline-variant": "#c6c6cd",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#fefcff",
+                        "primary-container": "#131b2e",
+                        "on-surface-variant": "#45464d",
+                        "tertiary": "#000000",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "primary-fixed": "#dae2fd",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#dec29a",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-container": "#98805d",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#565e74",
+                        "surface-container": "#eceef0",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#7c839b",
+                        "inverse-on-surface": "#eff1f3",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#191c1e",
+                        "on-background": "#191c1e",
+                        "tertiary-fixed": "#fcdeb5",
+                        "surface-container-low": "#f2f4f6",
+                        "secondary": "#0051d5",
+                        "secondary-container": "#316bf3",
+                        "surface-variant": "#e0e3e5",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-primary-fixed": "#131b2e",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#dbe1ff",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-fixed": "#271901",
+                        "tertiary-container": "#271901",
+                        "surface-dim": "#d8dadc",
+                        "surface-bright": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-default": "1.5rem",
+                        "margin-mobile": "1rem",
+                        "stack-compact": "0.5rem",
+                        "container-max": "1280px",
+                        "margin-desktop": "2rem",
+                        "gutter": "1rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "data-mono": ["monospace"],
+                        "headline-xl-mobile": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-xl": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-lg": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "data-mono": ["14px", {"lineHeight": "1", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["30px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "label-md": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-xl": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-outline-variant docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-16">
+<div class="font-headline-lg text-headline-lg font-bold text-primary">天下りマップ</div>
+<nav class="hidden md:flex gap-6 h-full items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 h-full flex items-center" href="#">話題から探す</a>
+<a class="font-label-md text-label-md text-secondary border-b-2 border-secondary font-bold h-full flex items-center" href="#">ランキング</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 h-full flex items-center" href="#">法人検索</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 h-full flex items-center" href="#">データ方針</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<input class="pl-10 pr-4 py-2 border border-outline-variant rounded-full bg-surface-container-lowest text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent w-64" placeholder="法人名・氏名・官職で検索" type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search" style="font-size: 20px;">search</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 sm:hidden">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6 md:py-8 flex flex-col gap-6">
+<!-- Hero Section -->
+<section class="flex flex-col gap-2">
+<h1 class="font-headline-xl text-headline-xl text-primary">ランキングから探す</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">
+                政府・各省庁等の公表資料に基づく再就職情報を、件数・待機日数などの指標別に整理しています。
+            </p>
+<div class="bg-surface-container-low p-2 rounded-lg border border-outline-variant flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-outline" data-icon="info" style="font-size: 18px;">info</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant">
+                    本ページは政府・各省庁等の公表資料に基づき、官民の人材移動を中立的に整理したものです。特定の不適切性を断定するものではありません。
+                </p>
+</div>
+</section>
+<!-- Filters & Summary (Compact) -->
+<section class="flex flex-col gap-3">
+<div class="flex flex-wrap gap-2 items-center bg-surface-container-lowest p-2 rounded-lg border border-outline-variant">
+<div class="font-label-md text-on-surface-variant whitespace-nowrap px-2">絞り込み:</div>
+<select class="border-outline-variant rounded-md text-sm py-1 pl-2 pr-8 focus:ring-secondary focus:border-secondary bg-surface flex-grow max-w-[180px]">
+<option>すべての省庁</option>
+<option>国土交通省</option>
+<option>財務省</option>
+<option>経済産業省</option>
+<option>総務省</option>
+</select>
+<select class="border-outline-variant rounded-md text-sm py-1 pl-2 pr-8 focus:ring-secondary focus:border-secondary bg-surface flex-grow max-w-[180px]">
+<option>すべての法人種別</option>
+<option>一般財団法人</option>
+<option>公益財団法人</option>
+<option>株式会社</option>
+<option>独立行政法人</option>
+</select>
+<select class="border-outline-variant rounded-md text-sm py-1 pl-2 pr-8 focus:ring-secondary focus:border-secondary bg-surface flex-grow max-w-[180px]"><option>すべての地域</option><option>東京都</option><option>大阪府</option><option>神奈川県</option><option>愛知県</option></select><div class="relative flex-grow max-w-[250px] ml-auto"><input class="w-full pl-8 pr-2 py-1 border border-outline-variant rounded-md text-sm focus:ring-secondary focus:border-secondary bg-surface" placeholder="キーワード検索" type="text"/><span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-on-surface-variant" style="font-size: 16px;">search</span></div></div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-2.5 flex justify-between items-center hover:border-outline transition-colors shadow-sm">
+<div class="font-label-md text-xs text-on-surface-variant">公表再就職者数</div>
+<span class="material-symbols-outlined text-outline-variant text-lg" data-icon="groups">groups</span>
+</div>
+<div class="bg-primary-fixed border border-secondary rounded-lg p-2.5 flex justify-between items-center shadow-sm relative overflow-hidden">
+<div class="font-label-md text-xs text-on-primary-fixed-variant flex items-center gap-1 z-10 font-bold">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="bolt">bolt</span>
+                    退職翌日再就職
+                </div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-2.5 flex justify-between items-center hover:border-outline transition-colors shadow-sm">
+<div class="font-label-md text-xs text-on-surface-variant">30日以内再就職</div>
+<span class="material-symbols-outlined text-outline-variant text-lg" data-icon="timer">timer</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-2.5 flex justify-between items-center hover:border-outline transition-colors shadow-sm">
+<div class="font-label-md text-xs text-on-surface-variant">平均待機日数</div>
+<span class="material-symbols-outlined text-outline-variant text-lg" data-icon="hourglass_empty">hourglass_empty</span>
+</div>
+</div>
+</section>
+<!-- 2-Column Grid for Rankings -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Section 1: 公表再就職者数 -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="groups">groups</span>
+<h2 class="font-headline-md text-lg text-primary">公表再就職者数ランキング</h2>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg flex flex-col">
+<div class="divide-y divide-outline-variant flex-grow">
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">1</div>
+<div class="truncate">
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">一般財団法人 公共政策総合研究所</h3>
+<div class="text-xs text-on-surface-variant truncate">最多出身: 国土交通省 | 翌日: 12件</div>
+</div>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">42</span>
+<span class="text-xs text-on-surface-variant ml-0.5">人</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">2</div>
+<div class="truncate">
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">株式会社 日本インフラ整備機構</h3>
+<div class="text-xs text-on-surface-variant truncate">最多出身: 国土交通省 | 翌日: 14件</div>
+</div>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">35</span>
+<span class="text-xs text-on-surface-variant ml-0.5">人</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">3</div>
+<div class="truncate">
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">公益財団法人 国際技術交流協会</h3>
+<div class="text-xs text-on-surface-variant truncate">最多出身: 経済産業省 | 翌日: 8件</div>
+</div>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">28</span>
+<span class="text-xs text-on-surface-variant ml-0.5">人</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">4</div>
+<div class="truncate">
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">独立行政法人 都市再生機構</h3>
+<div class="text-xs text-on-surface-variant truncate">最多出身: 国土交通省 | 翌日: 6件</div>
+</div>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">24</span>
+<span class="text-xs text-on-surface-variant ml-0.5">人</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">5</div>
+<div class="truncate">
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">日本電信電話株式会社</h3>
+<div class="text-xs text-on-surface-variant truncate">最多出身: 総務省 | 翌日: 4件</div>
+</div>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">18</span>
+<span class="text-xs text-on-surface-variant ml-0.5">人</span>
+</div>
+</a>
+</div>
+<div class="p-2 border-t border-outline-variant text-center">
+<button class="text-secondary font-label-md text-sm hover:underline">詳細ランキングを見る</button>
+</div>
+</div>
+</section>
+<!-- Section 2: 退職翌日再就職 (Emphasized) -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<div class="bg-primary-fixed p-1 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="bolt">bolt</span>
+</div>
+<h2 class="font-headline-md text-lg text-primary font-bold">退職翌日再就職ランキング</h2>
+</div>
+<div class="bg-primary-fixed/10 border-2 border-secondary/30 rounded-lg flex flex-col relative overflow-hidden">
+<div class="absolute right-0 top-0 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[150px]" data-icon="bolt">bolt</span>
+</div>
+<div class="divide-y divide-outline-variant flex-grow relative z-10">
+<a class="flex items-center justify-between p-3 bg-primary-fixed/20 hover:bg-primary-fixed/40 transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-secondary w-5 text-center font-bold text-lg">1</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">株式会社 日本インフラ整備機構</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="bolt">bolt</span>
+<span class="font-headline-lg text-primary font-bold text-2xl">14</span>
+<span class="text-xs text-on-surface-variant font-bold">件</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center font-bold group-hover:text-primary transition-colors text-lg">2</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">一般財団法人 公共政策総合研究所</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary font-bold text-xl">12</span>
+<span class="text-xs text-on-surface-variant ml-0.5">件</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center font-bold group-hover:text-primary transition-colors text-lg">3</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">公益財団法人 国際技術交流協会</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary font-bold text-xl">8</span>
+<span class="text-xs text-on-surface-variant ml-0.5">件</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center font-bold group-hover:text-primary transition-colors text-lg">4</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">独立行政法人 都市再生機構</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary font-bold text-xl">6</span>
+<span class="text-xs text-on-surface-variant ml-0.5">件</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center font-bold group-hover:text-primary transition-colors text-lg">5</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">一般社団法人 公共交通研究会</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary font-bold text-xl">5</span>
+<span class="text-xs text-on-surface-variant ml-0.5">件</span>
+</div>
+</a>
+</div>
+<div class="p-2 border-t border-outline-variant/30 text-center relative z-10 bg-surface-container-lowest/50">
+<button class="text-secondary font-label-md text-sm hover:underline">詳細ランキングを見る</button>
+</div>
+</div>
+</section>
+<!-- Section 3: 30日以内再就職 (Slightly emphasized) -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="timer">timer</span>
+<h2 class="font-headline-md text-lg text-primary">30日以内再就職ランキング</h2>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg flex flex-col shadow-sm">
+<div class="divide-y divide-outline-variant flex-grow">
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">1</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">一般財団法人 公共政策総合研究所</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">25</span>
+<span class="text-xs text-on-surface-variant ml-0.5">件</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">2</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">株式会社 日本インフラ整備機構</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">22</span>
+<span class="text-xs text-on-surface-variant ml-0.5">件</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">3</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">公益財団法人 国際技術交流協会</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">15</span>
+<span class="text-xs text-on-surface-variant ml-0.5">件</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">4</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">独立行政法人 都市再生機構</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">12</span>
+<span class="text-xs text-on-surface-variant ml-0.5">件</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">5</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">一般社団法人 公共交通研究会</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">9</span>
+<span class="text-xs text-on-surface-variant ml-0.5">件</span>
+</div>
+</a>
+</div>
+<div class="p-2 border-t border-outline-variant text-center">
+<button class="text-secondary font-label-md text-sm hover:underline">詳細ランキングを見る</button>
+</div>
+</div>
+</section>
+<!-- Section 4: 平均待機日数 -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="hourglass_empty">hourglass_empty</span>
+<h2 class="font-headline-md text-lg text-primary">平均待機日数ランキング</h2>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg flex flex-col">
+<div class="divide-y divide-outline-variant flex-grow">
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">1</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">株式会社 日本インフラ整備機構</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">12</span>
+<span class="text-xs text-on-surface-variant ml-0.5">日</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">2</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">一般財団法人 公共政策総合研究所</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">18</span>
+<span class="text-xs text-on-surface-variant ml-0.5">日</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">3</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">公益財団法人 国際技術交流協会</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">32</span>
+<span class="text-xs text-on-surface-variant ml-0.5">日</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">4</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">独立行政法人 都市再生機構</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">45</span>
+<span class="text-xs text-on-surface-variant ml-0.5">日</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-3 truncate">
+<div class="font-label-md text-outline-variant w-5 text-center group-hover:text-primary transition-colors text-lg">5</div>
+<h3 class="font-body-md font-bold text-primary group-hover:text-secondary transition-colors truncate">一般社団法人 公共交通研究会</h3>
+</div>
+<div class="text-right whitespace-nowrap pl-2">
+<span class="font-headline-md text-primary text-xl">60</span>
+<span class="text-xs text-on-surface-variant ml-0.5">日</span>
+</div>
+</a>
+</div>
+<div class="p-2 border-t border-outline-variant text-center">
+<button class="text-secondary font-label-md text-sm hover:underline">詳細ランキングを見る</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<section class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant"><h2 class="font-headline-md text-lg text-primary mb-6">関連する切り口から探す</h2><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"><div class="flex flex-col gap-3"><h3 class="font-label-md text-on-surface-variant border-b border-outline-variant pb-2">省庁別に見る</h3><ul class="flex flex-col gap-2"><li class="text-body-sm"><a class="text-secondary hover:underline" href="#">国土交通省</a></li><li class="text-body-sm"><a class="text-secondary hover:underline" href="#">経済産業省</a></li><li class="text-body-sm"><a class="text-secondary hover:underline" href="#">総務省</a></li><li class="text-body-sm"><a class="text-secondary hover:underline" href="#">内閣府</a></li></ul></div><div class="flex flex-col gap-3"><h3 class="font-label-md text-on-surface-variant border-b border-outline-variant pb-2">地域別に見る</h3><ul class="flex flex-col gap-2"><li class="text-body-sm"><a class="text-secondary hover:underline" href="#">東京都</a></li><li class="text-body-sm"><a class="text-secondary hover:underline" href="#">関東地方</a></li><li class="text-body-sm"><a class="text-secondary hover:underline" href="#">大阪府</a></li><li class="text-body-sm"><a class="text-secondary hover:underline" href="#">近畿地方</a></li></ul></div><div class="flex flex-col gap-3"><h3 class="font-label-md text-on-surface-variant border-b border-outline-variant pb-2">法人種別から見る</h3><ul class="flex flex-col gap-2"><li class="text-body-sm"><a class="text-secondary hover:underline" href="#">公益法人</a></li><li class="text-body-sm"><a class="text-secondary hover:underline" href="#">独立行政法人</a></li><li class="text-body-sm"><a class="text-secondary hover:underline" href="#">一般財団法人</a></li><li class="text-body-sm"><a class="text-secondary hover:underline" href="#">株式会社</a></li></ul></div><div class="flex flex-col gap-3"><h3 class="font-label-md text-on-surface-variant border-b border-outline-variant pb-2">話題から見る</h3><div class="flex flex-wrap gap-2"><a class="text-xs bg-surface-container-high px-2 py-1 rounded hover:bg-surface-variant" href="#">#ライドシェア</a><a class="text-xs bg-surface-container-high px-2 py-1 rounded hover:bg-surface-variant" href="#">#再エネ</a><a class="text-xs bg-surface-container-high px-2 py-1 rounded hover:bg-surface-variant" href="#">#医療報酬</a><a class="text-xs bg-surface-container-high px-2 py-1 rounded hover:bg-surface-variant" href="#">#公益法人</a><a class="text-xs bg-surface-container-high px-2 py-1 rounded hover:bg-surface-variant" href="#">#官民人材交流センター</a></div></div></div></section><footer class="bg-surface-container-low border-t border-outline-variant w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full py-stack-default px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="font-headline-md text-headline-md font-bold text-primary">天下りマップ</div>
+<div class="flex flex-wrap gap-4 justify-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">免責事項</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">プライバシーポリシー</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">データ方針</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">お問い合わせ</a>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-right">
+                © 2024 天下りマップ. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

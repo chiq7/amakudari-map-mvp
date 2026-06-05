@@ -1,0 +1,280 @@
+<!DOCTYPE html><html class="light" lang="ja" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>データ方針 | 天下りマップ (Tenkakuri Map)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            font-family: 'Noto Sans JP', 'Plus Jakarta Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#c6c6cd",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#565e74",
+                      "error": "#ba1a1a",
+                      "tertiary-container": "#271901",
+                      "on-tertiary-container": "#98805d",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "secondary-container": "#316bf3",
+                      "on-primary-fixed": "#131b2e",
+                      "secondary-fixed": "#dbe1ff",
+                      "primary-fixed-dim": "#bec6e0",
+                      "error-container": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-background": "#191c1e",
+                      "on-error": "#ffffff",
+                      "surface-bright": "#f7f9fb",
+                      "tertiary-fixed": "#fcdeb5",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "tertiary-fixed-dim": "#dec29a",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#e6e8ea",
+                      "outline": "#76777d",
+                      "inverse-surface": "#2d3133",
+                      "tertiary": "#000000",
+                      "surface-variant": "#e0e3e5",
+                      "surface-container-low": "#f2f4f6",
+                      "secondary": "#0051d5",
+                      "primary-container": "#131b2e",
+                      "on-secondary-fixed": "#00174b",
+                      "background": "#f7f9fb",
+                      "on-surface": "#191c1e",
+                      "inverse-primary": "#bec6e0",
+                      "surface-container-highest": "#e0e3e5",
+                      "primary": "#000000",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "on-surface-variant": "#45464d",
+                      "on-primary-container": "#7c839b",
+                      "primary-fixed": "#dae2fd",
+                      "on-secondary-container": "#fefcff",
+                      "surface": "#f7f9fb",
+                      "surface-container": "#eceef0",
+                      "surface-dim": "#d8dadc",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#271901",
+                      "on-tertiary-fixed-variant": "#574425"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-compact": "0.5rem",
+                      "margin-mobile": "1rem",
+                      "gutter": "1rem",
+                      "stack-default": "1.5rem",
+                      "container-max": "1280px",
+                      "margin-desktop": "2rem"
+              },
+              "fontFamily": {
+                      "label-md": ["Plus Jakarta Sans", "Noto Sans JP"],
+                      "headline-xl-mobile": ["Plus Jakarta Sans", "Noto Sans JP"],
+                      "headline-md": ["Plus Jakarta Sans", "Noto Sans JP"],
+                      "headline-xl": ["Plus Jakarta Sans", "Noto Sans JP"],
+                      "body-sm": ["Plus Jakarta Sans", "Noto Sans JP"],
+                      "body-lg": ["Plus Jakarta Sans", "Noto Sans JP"],
+                      "headline-lg": ["Plus Jakarta Sans", "Noto Sans JP"],
+                      "body-md": ["Plus Jakarta Sans", "Noto Sans JP"],
+                      "data-mono": ["monospace"]
+              },
+              "fontSize": {
+                      "label-md": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-xl-mobile": ["30px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "headline-xl": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "data-mono": ["14px", {"lineHeight": "1", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface docked full-width top-0 sticky z-50 border-b border-outline-variant transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg text-headline-lg font-bold text-primary" href="#">天下りマップ</a>
+<nav class="hidden lg:flex items-center gap-6 h-full">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">話題から探す</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">ランキング</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">法人検索</a>
+<a class="font-label-md text-label-md text-secondary border-b-2 border-secondary font-bold" href="#">データ方針</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden md:block">
+<input class="bg-surface-container-low border border-outline-variant px-4 py-1.5 rounded-lg text-body-sm w-64 focus:ring-1 focus:ring-secondary focus:border-secondary outline-none" placeholder="法人名・氏名・官職で検索" type="text">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-low transition-colors duration-200">
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-default">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-8 text-on-surface-variant">
+<a class="font-label-md text-label-md hover:text-secondary" href="#">トップ</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="font-label-md text-label-md text-on-surface">データ方針</span>
+</nav>
+<!-- Hero -->
+<section class="mb-8"><h1 class="font-headline-xl text-headline-xl mb-4 text-primary border-l-4 border-secondary pl-4">データ方針</h1><p class="font-body-md text-body-md text-on-surface-variant max-w-4xl leading-relaxed">本サイトは、政府・各省庁等が公表している再就職関連資料をもとに、検索・閲覧しやすく整理したデータベースです。掲載情報について、当サイトが個人・法人・省庁の不適切性を独自に判断するものではありません。</p></section>
+<!-- Summary Cards -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-12"><div class="bg-white border border-outline-variant p-6 rounded-lg shadow-sm"><div class="flex items-center gap-3 mb-3 text-secondary"><span class="material-symbols-outlined text-3xl">analytics</span><h3 class="font-headline-md text-headline-md">公表資料に基づく整理</h3></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">内閣官房や各省庁が公表する一次資料を基に、情報を機械的に整理・掲載しています。</p></div><div class="bg-white border border-outline-variant p-6 rounded-lg shadow-sm"><div class="flex items-center gap-3 mb-3 text-secondary"><span class="material-symbols-outlined text-3xl">balance</span><h3 class="font-headline-md text-headline-md">中立的なデータ表示</h3></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">特定の意図や主観を排除し、事実に基づいたデータ検索・閲覧機能を提供します。</p></div><div class="bg-white border border-outline-variant p-6 rounded-lg shadow-sm"><div class="flex items-center gap-3 mb-3 text-secondary"><span class="material-symbols-outlined text-3xl">link</span><h3 class="font-headline-md text-headline-md">出典リンクの明示</h3></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">各データには出典となる公表資料へのリンクを明示し、透明性を確保しています。</p></div></section>
+<hr class="border-outline-variant mb-12">
+<!-- Main Content -->
+<div class="max-w-5xl space-y-12">
+<!-- Data Sources -->
+<section>
+<h2 class="font-headline-lg text-headline-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="source">source</span>
+                    データソース（出典元）
+                </h2>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden">
+<ul class="divide-y divide-outline-variant">
+<li class="px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-2">
+<span class="font-label-md text-label-md">内閣官房</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">国家公務員の再就職状況の公表資料</span>
+</li>
+<li class="px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-2">
+<span class="font-label-md text-label-md">各省庁（外務省、財務省等）</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">各省庁における再就職情報の公表資料</span>
+</li>
+<li class="px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-2">
+<span class="font-label-md text-label-md">総務省</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">地方独立行政法人及び特殊法人の役員人事情報</span>
+</li>
+<li class="px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-2">
+<span class="font-label-md text-label-md">国立国会図書館</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">政治・行政関連アーカイブ（WARP）</span>
+</li>
+</ul>
+</div>
+<div class="mt-4 p-4 bg-surface-container border-l-4 border-outline text-on-surface-variant flex gap-3">
+<span class="material-symbols-outlined shrink-0 text-outline">info</span>
+<p class="font-body-sm text-body-sm leading-relaxed">
+                        当サイトは機械的なプログラムによってデータを収集・整理しているため、表記の揺れや、一次資料自体の誤りにより実際の事実と異なる場合があります。最新かつ正確な情報は必ず各省庁の公式サイトをご確認ください。
+                    </p>
+</div>
+</section>
+<!-- Methodology -->
+<section>
+<h2 class="font-headline-lg text-headline-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="grid_on">grid_on</span>
+                    表示項目と抽出ルール
+                </h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="border border-outline-variant p-4 rounded bg-surface"><p class="font-label-md text-label-md text-on-surface-variant mb-1">氏名</p><p class="font-body-md text-body-md font-bold leading-relaxed">公表資料上の氏名</p></div>
+<div class="border border-outline-variant p-4 rounded bg-surface"><p class="font-label-md text-label-md text-on-surface-variant mb-1">元省庁</p><p class="font-body-md text-body-md font-bold leading-relaxed">離職時の所属</p></div>
+<div class="border border-outline-variant p-4 rounded bg-surface"><p class="font-label-md text-label-md text-on-surface-variant mb-1">離職時儰職</p><p class="font-body-md text-body-md font-bold leading-relaxed">離職時点の儰職</p></div>
+<div class="border border-outline-variant p-4 rounded bg-surface"><p class="font-label-md text-label-md text-on-surface-variant mb-1">再就職先法人</p><p class="font-body-md text-body-md font-bold leading-relaxed">公表された再就職先</p></div>
+</div>
+</section>
+<!-- Waiting Period -->
+<section>
+<h2 class="font-headline-lg text-headline-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="schedule">schedule</span>
+                    「待機期間」の算出について
+                </h2>
+<div class="bg-surface-container-low p-8 rounded-lg border border-outline-variant">
+<p class="font-body-md text-body-md mb-6 leading-relaxed">
+                        当サイトでは、<strong>「離職日」</strong>から<strong>「再就職日」</strong>までの日数を「待機期間」として算出しています。
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+<div class="flex flex-col gap-2">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 text-label-md rounded-full w-fit">0日 / 30日未満</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                離職後すぐに再就職したケースを視覚的に区別するためにハイライト表示を行う場合があります。これは統計的な比較を容易にするためのものであり、不適切な再就職であることを示唆するものではありません。
+                            </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="inline-block bg-surface-container-highest text-on-surface-variant px-3 py-1 text-label-md rounded-full w-fit">例外の考慮</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                出向や定年退職、自己都合退職などの区分は一次資料に準拠しますが、システム上すべての個別事情を網羅できない場合があります。
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Tags/Rankings/Aggregates -->
+<section>
+<h2 class="font-headline-lg text-headline-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="label">label</span>
+                    タグ付け・ランキング・集計
+                </h2>
+<div class="border border-outline-variant rounded-lg p-6 space-y-4">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        膨大な公表資料の中からユーザーが必要な情報にたどり着きやすくするため、以下の加工を行っています。
+                    </p>
+<ul class="list-disc list-inside space-y-2 font-body-sm text-body-sm text-on-surface">
+<li class=""><strong>業種カテゴリ:</strong> 法人種別（独法、公益、民間等）によるタグ付け</li>
+<li class=""><strong>省庁別集計:</strong> 省庁ごとの再就職人数の推移の可視化</li>
+<li class=""><strong>ランキング:</strong> 検索頻度や再就職人数等に基づく並び替え（批判や推奨を目的としません）</li>
+</ul>
+</div>
+</section>
+<!-- Disclaimer -->
+<section class="p-8 rounded-xl text-on-primary-container bg-primary-container border border-outline-variant"><div class="flex items-center gap-3 mb-4"><span class="material-symbols-outlined text-3xl text-on-primary-fixed-variant text-white" data-icon="gavel">gavel</span><h2 class="font-headline-lg text-white" style="opacity: 0;">免責事項・法的判断について</h2></div><p class="font-body-md text-body-md leading-relaxed mb-4 text-on-primary-container">本サイトは、公表資料に基づく再就職情報を検索・閲覧しやすく整理したデータベースです。掲載されている再就職事例について、倫理的な妥当性、法的整合性、または不祥事の有無について当サイトが独自の判断を下すことはありません。特定の人物や団体への誹謗中傷、名誉毉損に繋がるような情報の利用は固く禁じております。データに基づかない主観的な批判は行もないよう、利用者の皆様には冷静かつ客観的な情報活用をお願い申し上げます。</p></section>
+<!-- Contact/Correction -->
+<section class="text-center py-12 bg-surface-container-low rounded-lg border border-outline-variant">
+<h2 class="font-headline-md text-headline-md mb-4">掲載内容の修正・お問い合わせ</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-8 px-6 leading-relaxed">
+                    事実と異なるデータが表示されている場合や、情報の削除依頼等は、一次資料のURLを添えて下記よりご連絡ください。<br>
+                    確認後、順次対応いたします。
+                </p>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-on-primary-container transition-all flex items-center gap-2 mx-auto">
+                    お問い合わせする
+                    <span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</section>
+</div>
+<!-- Bottom Navigation -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-12"><div class="bg-white border border-outline-variant p-6 rounded-lg shadow-sm"><div class="flex items-center gap-3 mb-3 text-secondary"><span class="material-symbols-outlined text-3xl">analytics</span><h3 class="font-headline-md text-headline-md">公表資料に基づく整理</h3></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">内閣官房や各省庁が公表する一次資料を基に、情報を機械的に整理・掲載しています。</p></div><div class="bg-white border border-outline-variant p-6 rounded-lg shadow-sm"><div class="flex items-center gap-3 mb-3 text-secondary"><span class="material-symbols-outlined text-3xl">balance</span><h3 class="font-headline-md text-headline-md">中立的なデータ表示</h3></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">特定の意図や主観を排除し、事実に基づいたデータ検索・閲覧機能を提供します。</p></div><div class="bg-white border border-outline-variant p-6 rounded-lg shadow-sm"><div class="flex items-center gap-3 mb-3 text-secondary"><span class="material-symbols-outlined text-3xl">link</span><h3 class="font-headline-md text-headline-md">出典リンクの明示</h3></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">各データには出典となる公表資料へのリンクを明示し、透明性を確保しています。</p></div></section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant mt-16">
+<div class="flex flex-col md:flex-row justify-between items-center w-full py-stack-default px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<span class="font-headline-md text-headline-md font-bold text-primary">天下りマップ</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left leading-relaxed">© 2024 天下りマップ. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">免責事項</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">プライバシーポリシー</a>
+<a class="font-label-md text-label-md text-secondary underline" href="#">データ方針</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">お問い合わせ</a>
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+</body></html>
