@@ -1,64 +1,139 @@
+import Link from "next/link";
+import { Breadcrumb, SourceLinkList, StatCard, TagChip } from "@/components/ui";
+import { getPerson, persons } from "@/lib/static-content";
 
-// app/persons/[person_slug]/page.tsx
-
-import Link from 'next/link';
-
-// This function generates the static pages for each person at build time
-export async function generateStaticParams() {
-    const fs = require('fs');
-    const path = require('path');
-    const persons = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'public/data/persons.json'), 'utf8'));
-    return persons.map((person: any) => ({
-        person_slug: person.person_slug,
-    }));
+export function generateStaticParams() {
+  return persons.map((person) => ({ person_slug: person.slug }));
 }
 
-async function getPerson(slug: string) {
-    const fs = require('fs');
-    const path = require('path');
-    const persons = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'public/data/persons.json'), 'utf8'));
-    return persons.find((p: any) => p.person_slug === slug);
-}
+export default function PersonDetailPage({ params }: { params: { person_slug: string } }) {
+  const person = getPerson(params.person_slug);
+  const [corporationType, ...corporationNameParts] = person.corporationName.split(" ");
+  const corporationDisplayName = corporationNameParts.join(" ");
 
-export async function generateMetadata({ params }: { params: { person_slug: string } }) {
-    const person = await getPerson(params.person_slug);
-    return { title: `${person?.氏名}の公表再就職情報` };
-}
+  return (
+    <div className="flex flex-col gap-8">
+      <Breadcrumb
+        items={[
+          { label: "TOP", href: "/" },
+          { label: "法人検索", href: "/corporations" },
+          { label: person.corporationName, href: `/corporations/${person.corporationSlug}` },
+          { label: person.name },
+        ]}
+      />
 
+      <section>
+        <h1 className="text-3xl font-bold text-primary md:text-4xl">{person.name} 氏の公表再就職情報</h1>
+        <p className="mt-2 text-base text-on-surface-variant">政府・各省庁等の公表資料に基づく再就職情報</p>
+      </section>
 
-export default async function PersonPage({ params }: { params: { person_slug: string } }) {
-    const person = await getPerson(params.person_slug);
-
-    if (!person) {
-        return <div>Person not found.</div>;
-    }
-
-    return (
-        <div className="bg-gray-800 p-6 rounded-lg max-w-4xl mx-auto">
-            <h1 className="text-3xl font-bold mb-4">{person.氏名}の公表再就職情報</h1>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <InfoCard label="離職時年齢" value={person.離職時年齢} />
-                <InfoCard label="離職時官職" value={person.離職時官職} />
-                <InfoCard label="離職日" value={person.離職日} />
-                <InfoCard label="再就職日" value={person.再就職日} />
-                <InfoCard label="待機日数" value={person.wait_days !== null ? `${person.wait_days} 日` : '計算不可'} />
-                <InfoCard label="再就職先名称" value={<Link href={`/organizations/${person.organization_slug}`} className="text-blue-400 hover:underline">{person.再就職先名称}</Link>} />
-                <InfoCard label="再就職先業務内容" value={person.再就職先業務内容} />
-                <InfoCard label="再就職先地位" value={person.再就職先地位} />
-            </div>
-
-            <div className="mt-6 text-xs text-gray-500">
-                <p><b>出典:</b> {person.元ファイル名} ({person.ソース区分})</p>
-                <p className="mt-2"><b>注意:</b> 本ページは公表資料に基づく再就職情報を整理したものです。同姓同名の人物と混同しないよう、離職時官職・再就職先・日付をあわせて表示しています。</p>
-            </div>
+      <section className="grid grid-cols-1 gap-4 md:grid-cols-4">
+        <StatCard label="元省庁" value={person.ministry} />
+        <StatCard label="離職時官職" value={person.formerPosition} />
+        <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-sm">
+          <p className="mb-1 text-sm text-on-surface-variant">再就職先</p>
+          <p className="text-sm font-semibold text-on-surface-variant">{corporationType}</p>
+          <p className="mt-1 text-xl font-bold text-primary">{corporationDisplayName}</p>
         </div>
-    );
-}
+        <div className="flex items-center justify-between gap-4 rounded-lg border border-secondary/30 bg-secondary-fixed p-4 shadow-sm">
+          <p className="text-sm text-on-surface-variant">待機日数</p>
+          <p className="flex shrink-0 items-baseline gap-1 text-primary">
+            <span className="text-4xl font-bold">{person.waitDays}</span>
+            <span className="text-sm font-semibold text-on-surface-variant">日</span>
+          </p>
+        </div>
+      </section>
 
-const InfoCard = ({ label, value }: { label: string, value: any }) => (
-    <div className="bg-gray-700 p-4 rounded">
-        <h3 className="text-sm font-semibold text-gray-400">{label}</h3>
-        <p className="text-lg">{value}</p>
+      <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-6">
+        <h2 className="mb-6 text-2xl font-bold text-primary">再就職プロフィール・フロー</h2>
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
+          <div className="rounded-lg border border-outline-variant bg-surface-container-low p-5">
+            <div className="mb-4 flex flex-wrap items-center gap-2">
+              <span className="rounded bg-on-surface-variant px-2 py-1 text-sm font-semibold text-surface">離職時</span>
+              <span className="font-mono text-sm text-on-surface-variant">{person.retiredAt} 離職</span>
+            </div>
+            <p className="text-sm text-on-surface-variant">所属省庁</p>
+            <p className="mt-1 text-lg font-bold">{person.ministry}</p>
+            <div className="my-4 border-t border-outline-variant" />
+            <p className="text-sm text-on-surface-variant">役職名</p>
+            <p className="mt-1">{person.formerPosition}</p>
+          </div>
+
+          <div className="rounded-lg border border-secondary/20 bg-surface-container-lowest p-4 text-center shadow-sm">
+            <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-secondary-container text-lg font-bold text-on-secondary">
+              →
+            </div>
+            <p className="text-sm font-bold text-secondary">待機期間 {person.waitDays}日</p>
+            <p className="mt-1 text-xs text-on-surface-variant">
+              {person.waitDays === 0 ? "離職翌日の再就職として整理" : "公表日付に基づき算出"}
+            </p>
+          </div>
+
+          <div className="rounded-lg border border-outline-variant bg-surface-container-low p-5">
+            <div className="mb-4 flex flex-wrap items-center gap-2">
+              <span className="rounded bg-secondary px-2 py-1 text-sm font-semibold text-on-secondary">再就職先</span>
+              <span className="font-mono text-sm text-on-surface-variant">{person.reemployedAt} 就任</span>
+            </div>
+            <p className="text-sm text-on-surface-variant">法人名</p>
+            <Link href={`/corporations/${person.corporationSlug}`} className="mt-1 block text-lg font-bold text-secondary hover:underline">
+              {person.corporationName}
+            </Link>
+            <div className="my-4 border-t border-outline-variant" />
+            <p className="text-sm text-on-surface-variant">役職名</p>
+            <p className="mt-1">{person.newPosition}</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="mb-2 text-sm font-bold text-on-surface-variant">関連タグ</h2>
+        <div className="flex flex-wrap gap-2">
+          <TagChip href={`/corporations?ministry=${encodeURIComponent(person.ministry)}`}>国土交通省</TagChip>
+          <TagChip href="/corporations?nextDay=true" active={person.waitDays === 0}>
+            退職翌日再就職
+          </TagChip>
+          <TagChip href="/corporations?type=一般財団法人">一般財団法人</TagChip>
+          <TagChip href="/corporations?region=東京都">東京都</TagChip>
+          <TagChip href={`/corporations?position=${encodeURIComponent(person.newPosition)}`}>専務理事</TagChip>
+          <TagChip href="/corporations?position=管理職">管理職</TagChip>
+          <TagChip href="/corporations?tag=再就職情報">再就職情報</TagChip>
+        </div>
+      </section>
+
+      <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+          <h2 className="mb-4 text-xl font-bold text-primary">出典・公表資料</h2>
+          <SourceLinkList
+            links={[
+              { label: person.source, href: "https://www.cas.go.jp/" },
+              { label: "国土交通省：退職公務員の再就職状況報告", href: "https://www.mlit.go.jp/" },
+            ]}
+          />
+          <p className="mt-4 text-xs leading-relaxed text-on-surface-variant">
+            本ページに記載されている情報は、公的資料に基づき機械的に整理したものです。掲載されている個人の資質や再就職の正当性について評価を行うものではありません。
+          </p>
+        </div>
+        <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+          <h2 className="mb-4 text-xl font-bold text-primary">関連リンク</h2>
+          <div className="flex flex-col gap-3">
+            <Link href={`/corporations/${person.corporationSlug}`} className="font-semibold text-secondary hover:underline">
+              法人情報を詳しく見る
+            </Link>
+            <Link href={`/corporations?ministry=${encodeURIComponent(person.ministry)}`} className="font-semibold text-secondary hover:underline">
+              国土交通省の再就職統計を見る
+            </Link>
+            <Link href="/rankings" className="font-semibold text-secondary hover:underline">
+              ランキングを見る
+            </Link>
+            <Link href={`/corporations?ministry=${encodeURIComponent(person.ministry)}&waitDays=0`} className="font-semibold text-secondary hover:underline">
+              類似の再就職事例を見る
+            </Link>
+            <Link href="/data-policy" className="font-semibold text-secondary hover:underline">
+              データ方針について
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
-);
+  );
+}
