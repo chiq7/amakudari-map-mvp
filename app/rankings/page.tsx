@@ -1,4 +1,4 @@
-import { corporations } from "@/lib/static-content";
+import { rankingLists } from "@/lib/static-content";
 import { DataNotice, RankingCard, TagChip } from "@/components/ui";
 
 const linkGroups = [
@@ -33,11 +33,6 @@ const linkGroups = [
 ];
 
 export default function RankingsPage() {
-  const byCount = [...corporations].sort((a, b) => b.count - a.count);
-  const byNextDay = [...corporations].sort((a, b) => b.nextDay - a.nextDay);
-  const byWithin30 = [...corporations].sort((a, b) => b.within30Days - a.within30Days);
-  const byWaitDays = [...corporations].sort((a, b) => a.averageWaitDays - b.averageWaitDays);
-
   return (
     <div className="flex flex-col gap-7">
       <section>
@@ -127,37 +122,37 @@ export default function RankingsPage() {
         <RankingCard
           title="公表再就職者数ランキング"
           unit="人"
-          items={byCount.map((corporation) => ({
-            label: corporation.name,
-            value: corporation.count,
-            href: `/corporations/${corporation.slug}`,
+          items={rankingLists.publicRecords.map((item) => ({
+            label: item.label,
+            value: item.value,
+            href: `/corporations/${item.corporationSlug}`,
           }))}
         />
         <RankingCard
           title="退職翌日再就職件数ランキング"
           unit="件"
-          items={byNextDay.map((corporation) => ({
-            label: corporation.name,
-            value: corporation.nextDay,
-            href: `/corporations/${corporation.slug}`,
+          items={rankingLists.nextDay.map((item) => ({
+            label: item.label,
+            value: item.value,
+            href: `/corporations/${item.corporationSlug}`,
           }))}
         />
         <RankingCard
           title="30日以内再就職ランキング"
           unit="件"
-          items={byWithin30.map((corporation) => ({
-            label: corporation.name,
-            value: corporation.within30Days,
-            href: `/corporations/${corporation.slug}`,
+          items={rankingLists.within30Days.map((item) => ({
+            label: item.label,
+            value: item.value,
+            href: `/corporations/${item.corporationSlug}`,
           }))}
         />
         <RankingCard
           title="平均待機日数が短い法人"
           unit="日"
-          items={byWaitDays.map((corporation) => ({
-            label: corporation.name,
-            value: corporation.averageWaitDays,
-            href: `/corporations/${corporation.slug}`,
+          items={rankingLists.shortestAverageWaitingDays.map((item) => ({
+            label: item.label,
+            value: item.value,
+            href: `/corporations/${item.corporationSlug}`,
           }))}
         />
       </section>

@@ -1,0 +1,9 @@
+{
+  "lastUpdated": "2026-06-08",
+  "sourceDescription": "政府・各省庁等の公表資料に基づくサンプル静的データ",
+  "productionRecordCount": 4,
+  "corporationCount": 4,
+  "personCount": 4,
+  "rankingCount": 4,
+  "note": "Phase 0Aではproduction JSONを表示用データとして利用し、draft/archiveは将来の半自動更新フロー用に予約しています。"
+}

@@ -1,0 +1,95 @@
+[
+  {
+    "person_slug": "sato-kenichi",
+    "name": "佐藤 健一",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "大臣官房審議官",
+    "corporationSlug": "public-policy-research",
+    "corporationName": "一般財団法人 公共政策総合研究所",
+    "newPosition": "専務理事",
+    "retirementDate": "2023/03/31",
+    "reemploymentDate": "2023/04/01",
+    "waitingDays": 0,
+    "tags": [
+      "国土交通省",
+      "退職翌日再就職",
+      "一般財団法人",
+      "東京都",
+      "専務理事",
+      "管理職",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-2023",
+      "mlit-retired-officials-2023"
+    ]
+  },
+  {
+    "person_slug": "tanaka-hiroshi",
+    "name": "田中 博",
+    "fromMinistry": "総務省",
+    "previousPosition": "情報流通行政局長",
+    "corporationSlug": "public-policy-research",
+    "corporationName": "一般財団法人 公共政策総合研究所",
+    "newPosition": "顧問",
+    "retirementDate": "2022/12/31",
+    "reemploymentDate": "2023/02/15",
+    "waitingDays": 46,
+    "tags": [
+      "総務省",
+      "一般財団法人",
+      "東京都",
+      "顧問",
+      "再就職情報"
+    ],
+    "sources": [
+      "mic-reemployment"
+    ]
+  },
+  {
+    "person_slug": "watanabe-makoto",
+    "name": "渡辺 誠",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "中小企業庁次長",
+    "corporationSlug": "public-policy-research",
+    "corporationName": "一般財団法人 公共政策総合研究所",
+    "newPosition": "理事",
+    "retirementDate": "2023/03/31",
+    "reemploymentDate": "2023/04/01",
+    "waitingDays": 0,
+    "tags": [
+      "経済産業省",
+      "退職翌日再就職",
+      "一般財団法人",
+      "東京都",
+      "理事",
+      "再就職情報"
+    ],
+    "sources": [
+      "meti-reemployment"
+    ]
+  },
+  {
+    "person_slug": "ito-yuji",
+    "name": "伊藤 裕二",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "航空局次長",
+    "corporationSlug": "public-policy-research",
+    "corporationName": "一般財団法人 公共政策総合研究所",
+    "newPosition": "常務理事",
+    "retirementDate": "2023/01/15",
+    "reemploymentDate": "2023/04/01",
+    "waitingDays": 76,
+    "tags": [
+      "国土交通省",
+      "一般財団法人",
+      "東京都",
+      "常務理事",
+      "管理職",
+      "再就職情報"
+    ],
+    "sources": [
+      "mlit-reemployment"
+    ]
+  }
+]

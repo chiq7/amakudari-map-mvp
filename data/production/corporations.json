@@ -1,0 +1,120 @@
+[
+  {
+    "slug": "public-policy-research",
+    "name": "一般財団法人 公共政策総合研究所",
+    "type": "一般財団法人",
+    "prefecture": "東京都",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 18
+    },
+    "counts": {
+      "publicRecords": 42,
+      "nextDay": 12,
+      "within30Days": 25
+    },
+    "waitingDays": {
+      "average": 45
+    },
+    "relatedPersons": [
+      "sato-kenichi",
+      "tanaka-hiroshi",
+      "watanabe-makoto",
+      "ito-yuji"
+    ],
+    "sources": [
+      "cabinet-office-2023",
+      "mlit-reemployment",
+      "meti-reemployment"
+    ],
+    "topics": [
+      "再就職情報",
+      "公益法人",
+      "官民人材交流センター"
+    ]
+  },
+  {
+    "slug": "infrastructure-development",
+    "name": "株式会社 日本インフラ整備機構",
+    "type": "株式会社",
+    "prefecture": "東京都",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 16
+    },
+    "counts": {
+      "publicRecords": 35,
+      "nextDay": 14,
+      "within30Days": 22
+    },
+    "waitingDays": {
+      "average": 12
+    },
+    "relatedPersons": [],
+    "sources": [
+      "cabinet-office-2023",
+      "mlit-reemployment"
+    ],
+    "topics": [
+      "インフラ",
+      "公共事業",
+      "再就職情報"
+    ]
+  },
+  {
+    "slug": "international-technology-exchange",
+    "name": "公益財団法人 国際技術交流協会",
+    "type": "公益財団法人",
+    "prefecture": "大阪府",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 12
+    },
+    "counts": {
+      "publicRecords": 28,
+      "nextDay": 8,
+      "within30Days": 15
+    },
+    "waitingDays": {
+      "average": 32
+    },
+    "relatedPersons": [],
+    "sources": [
+      "cabinet-office-2023",
+      "meti-reemployment"
+    ],
+    "topics": [
+      "技術交流",
+      "公益法人",
+      "再就職情報"
+    ]
+  },
+  {
+    "slug": "urban-renaissance",
+    "name": "独立行政法人 都市再生機構",
+    "type": "独立行政法人",
+    "prefecture": "東京都",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 11
+    },
+    "counts": {
+      "publicRecords": 24,
+      "nextDay": 6,
+      "within30Days": 12
+    },
+    "waitingDays": {
+      "average": 45
+    },
+    "relatedPersons": [],
+    "sources": [
+      "cabinet-office-2023",
+      "mlit-reemployment"
+    ],
+    "topics": [
+      "都市再生",
+      "独立行政法人",
+      "再就職情報"
+    ]
+  }
+]

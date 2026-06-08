@@ -1,119 +1,86 @@
-export const corporations = [
-  {
-    slug: "public-policy-research",
-    name: "一般財団法人 公共政策総合研究所",
-    type: "一般財団法人",
-    region: "東京都",
-    count: 42,
-    topMinistry: "国土交通省",
-    topMinistryCount: 18,
-    nextDay: 12,
-    within30Days: 25,
-    averageWaitDays: 45,
-    topics: ["再就職情報", "公益法人", "官民人材交流センター"],
-  },
-  {
-    slug: "infrastructure-development",
-    name: "株式会社 日本インフラ整備機構",
-    type: "株式会社",
-    region: "東京都",
-    count: 35,
-    topMinistry: "国土交通省",
-    topMinistryCount: 16,
-    nextDay: 14,
-    within30Days: 22,
-    averageWaitDays: 12,
-    topics: ["インフラ", "公共事業", "再就職情報"],
-  },
-  {
-    slug: "international-technology-exchange",
-    name: "公益財団法人 国際技術交流協会",
-    type: "公益財団法人",
-    region: "大阪府",
-    count: 28,
-    topMinistry: "経済産業省",
-    topMinistryCount: 12,
-    nextDay: 8,
-    within30Days: 15,
-    averageWaitDays: 32,
-    topics: ["技術交流", "公益法人", "再就職情報"],
-  },
-  {
-    slug: "urban-renaissance",
-    name: "独立行政法人 都市再生機構",
-    type: "独立行政法人",
-    region: "東京都",
-    count: 24,
-    topMinistry: "国土交通省",
-    topMinistryCount: 11,
-    nextDay: 6,
-    within30Days: 12,
-    averageWaitDays: 45,
-    topics: ["都市再生", "独立行政法人", "再就職情報"],
-  },
-];
+import corporationsData from "@/data/production/corporations.json";
+import personsData from "@/data/production/persons.json";
+import rankingsData from "@/data/production/rankings.json";
+import recordsData from "@/data/production/records.json";
+import sourcesData from "@/data/production/sources.json";
+import topicsData from "@/data/production/topics.json";
+import type {
+  Corporation,
+  CorporationData,
+  DataMeta,
+  Person,
+  PersonData,
+  RankingDisplayItem,
+  RankingItem,
+  RankingsData,
+  ReemploymentRecord,
+  Source,
+  Topic,
+} from "@/lib/types";
+import metaData from "@/data/production/meta.json";
 
-export const persons = [
-  {
-    slug: "sato-kenichi",
-    name: "佐藤 健一",
-    ministry: "国土交通省",
-    formerPosition: "大臣官房審議官",
-    corporationSlug: "public-policy-research",
-    corporationName: "一般財団法人 公共政策総合研究所",
-    newPosition: "専務理事",
-    retiredAt: "2023/03/31",
-    reemployedAt: "2023/04/01",
-    waitDays: 0,
-    source: "内閣官房：国家公務員の再就職状況の公表資料（2023年度）",
-  },
-  {
-    slug: "tanaka-hiroshi",
-    name: "田中 博",
-    ministry: "総務省",
-    formerPosition: "情報流通行政局長",
-    corporationSlug: "public-policy-research",
-    corporationName: "一般財団法人 公共政策総合研究所",
-    newPosition: "顧問",
-    retiredAt: "2022/12/31",
-    reemployedAt: "2023/02/15",
-    waitDays: 46,
-    source: "総務省：職員の再就職状況の公表資料",
-  },
-  {
-    slug: "watanabe-makoto",
-    name: "渡辺 誠",
-    ministry: "経済産業省",
-    formerPosition: "中小企業庁次長",
-    corporationSlug: "public-policy-research",
-    corporationName: "一般財団法人 公共政策総合研究所",
-    newPosition: "理事",
-    retiredAt: "2023/03/31",
-    reemployedAt: "2023/04/01",
-    waitDays: 0,
-    source: "経済産業省：離職者再就職情報の定期公表",
-  },
-  {
-    slug: "ito-yuji",
-    name: "伊藤 裕二",
-    ministry: "国土交通省",
-    formerPosition: "航空局次長",
-    corporationSlug: "public-policy-research",
-    corporationName: "一般財団法人 公共政策総合研究所",
-    newPosition: "常務理事",
-    retiredAt: "2023/01/15",
-    reemployedAt: "2023/04/01",
-    waitDays: 76,
-    source: "国土交通省：職員の再就職状況の公表資料",
-  },
-];
+const rawCorporations = corporationsData as CorporationData[];
+const rawPersons = personsData as PersonData[];
 
-export const totals = {
-  publicRecords: 1733,
-  corporations: 860,
-  nextDayCorporations: 84,
-  within30DaysCorporations: 248,
+export const sources = sourcesData as Source[];
+export const topics = topicsData as Topic[];
+export const rankings = rankingsData as RankingsData;
+export const records = recordsData as ReemploymentRecord[];
+export const meta = metaData as DataMeta;
+
+const sourcesById = new Map(sources.map((source) => [source.id, source]));
+
+export const corporations: Corporation[] = rawCorporations.map((corporation) => ({
+  slug: corporation.slug,
+  name: corporation.name,
+  type: corporation.type,
+  region: corporation.prefecture,
+  count: corporation.counts.publicRecords,
+  topMinistry: corporation.ministry.name,
+  topMinistryCount: corporation.ministry.count,
+  nextDay: corporation.counts.nextDay,
+  within30Days: corporation.counts.within30Days,
+  averageWaitDays: corporation.waitingDays.average,
+  topics: corporation.topics,
+  relatedPersons: corporation.relatedPersons,
+  sources: corporation.sources,
+}));
+
+export const persons: Person[] = rawPersons.map((person) => {
+  const primarySource = sourcesById.get(person.sources[0]);
+
+  return {
+    slug: person.person_slug,
+    name: person.name,
+    ministry: person.fromMinistry,
+    formerPosition: person.previousPosition,
+    corporationSlug: person.corporationSlug,
+    corporationName: person.corporationName,
+    newPosition: person.newPosition,
+    retiredAt: person.retirementDate,
+    reemployedAt: person.reemploymentDate,
+    waitDays: person.waitingDays,
+    source: primarySource ? `${primarySource.publisher}：${primarySource.title}` : "",
+    sourceIds: person.sources,
+    tags: person.tags,
+  };
+});
+
+function hydrateRanking(items: RankingItem[]): RankingDisplayItem[] {
+  return items.flatMap((item) => {
+    const corporation = corporations.find((candidate) => candidate.slug === item.corporationSlug);
+    return corporation ? [{ ...item, label: corporation.name }] : [];
+  });
+}
+
+export const rankingLists = {
+  publicRecords: hydrateRanking(rankings.rankings.publicRecords),
+  nextDay: hydrateRanking(rankings.rankings.nextDay),
+  within30Days: hydrateRanking(rankings.rankings.within30Days),
+  shortestAverageWaitingDays: hydrateRanking(rankings.rankings.shortestAverageWaitingDays),
 };
+
+export const totals = rankings.totals;
 
 export function getCorporation(slug: string) {
   return corporations.find((corporation) => corporation.slug === slug) ?? corporations[0];

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cabinet-office-2023",
+    "title": "国家公務員の再就職状況の公表資料（2023年度）",
+    "publisher": "内閣官房",
+    "url": "https://www.cas.go.jp/",
+    "publishedAt": "2023",
+    "memo": "国家公務員の再就職状況に関する公表資料"
+  },
+  {
+    "id": "mlit-reemployment",
+    "title": "職員の再就職状況の公表資料",
+    "publisher": "国土交通省",
+    "url": "https://www.mlit.go.jp/",
+    "publishedAt": "",
+    "memo": "国土交通省職員の再就職状況"
+  },
+  {
+    "id": "mlit-retired-officials-2023",
+    "title": "退職公務員の再就職状況報告",
+    "publisher": "国土交通省",
+    "url": "https://www.mlit.go.jp/",
+    "publishedAt": "2023",
+    "memo": "令和5年の公表資料"
+  },
+  {
+    "id": "meti-reemployment",
+    "title": "離職者再就職情報の定期公表",
+    "publisher": "経済産業省",
+    "url": "https://www.meti.go.jp/",
+    "publishedAt": "",
+    "memo": "経済産業省の定期公表資料"
+  },
+  {
+    "id": "mic-reemployment",
+    "title": "職員の再就職状況の公表資料",
+    "publisher": "総務省",
+    "url": "https://www.soumu.go.jp/",
+    "publishedAt": "",
+    "memo": "総務省職員の再就職状況"
+  }
+]
