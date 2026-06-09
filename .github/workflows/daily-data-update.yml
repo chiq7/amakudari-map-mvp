@@ -1,0 +1,88 @@
+name: Daily data update
+
+on:
+  schedule:
+    - cron: "17 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: daily-data-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Pick 20 unreleased records
+        id: pick
+        run: npm run pick:pool -- --count 20
+
+      - name: Generate merged production candidate
+        if: steps.pick.outputs.picked_count != '0'
+        run: >
+          npm run generate:candidate --
+          --file data/draft/pending/daily-pick.json
+          --merge-production
+
+      - name: Validate candidate
+        if: steps.pick.outputs.picked_count != '0'
+        run: npm run validate:candidate
+
+      - name: Apply candidate to workflow branch
+        if: steps.pick.outputs.picked_count != '0'
+        run: >
+          npm run apply:candidate --
+          --archive-label daily-${{ github.run_id }}
+
+      - name: Validate production data
+        if: steps.pick.outputs.picked_count != '0'
+        run: npm run validate:data
+
+      - name: Generate content check
+        if: steps.pick.outputs.picked_count != '0'
+        run: npm run generate:content
+
+      - name: Type check
+        if: steps.pick.outputs.picked_count != '0'
+        run: npx tsc --noEmit
+
+      - name: Build
+        if: steps.pick.outputs.picked_count != '0'
+        run: npm run build
+
+      - name: Prepare pull request metadata
+        if: steps.pick.outputs.picked_count != '0'
+        id: metadata
+        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Create pull request
+        if: steps.pick.outputs.picked_count != '0'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automation/daily-data-update
+          delete-branch: true
+          commit-message: "chore: daily data update ${{ steps.pick.outputs.picked_count }} records"
+          title: "chore: daily data update ${{ steps.metadata.outputs.date }} (${{ steps.pick.outputs.picked_count }} records)"
+          body: |
+            Automated daily data update.
+
+            - Added records: ${{ steps.pick.outputs.picked_count }}
+            - Source: committed Cabinet Office 106-25-1 data pool
+            - Validation: candidate, production data, TypeScript, and build
