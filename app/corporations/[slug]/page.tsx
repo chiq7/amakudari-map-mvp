@@ -1,13 +1,6 @@
 import Link from "next/link";
 import { Breadcrumb, HighlightStatCard, SourceLinkList, StatCard, TagChip } from "@/components/ui";
-import { corporations, getCorporation, persons } from "@/lib/static-content";
-
-const waitDistribution = [
-  { label: "退職翌日", value: 12, height: "48%" },
-  { label: "7日以内", value: 18, height: "72%" },
-  { label: "30日以内", value: 25, height: "100%" },
-  { label: "31日以上", value: 17, height: "68%" },
-];
+import { corporations, getCorporation, persons, records, sources } from "@/lib/static-content";
 
 export function generateStaticParams() {
   return corporations.map((corporation) => ({ slug: corporation.slug }));
@@ -16,6 +9,52 @@ export function generateStaticParams() {
 export default function CorporationDetailPage({ params }: { params: { slug: string } }) {
   const corporation = getCorporation(params.slug);
   const relatedPersons = persons.filter((person) => person.corporationSlug === corporation.slug);
+  const relatedRecords = records.filter((record) => record.corporationSlug === corporation.slug);
+  const ministryCounts = relatedRecords.reduce<Map<string, number>>((counts, record) => {
+    counts.set(record.fromMinistry, (counts.get(record.fromMinistry) ?? 0) + 1);
+    return counts;
+  }, new Map());
+  const ministryBreakdown = Array.from(ministryCounts.entries())
+    .map(([name, count]) => ({ name, count }))
+    .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name, "ja"));
+  const topMinistry = ministryBreakdown[0];
+  const averageWaitDays =
+    relatedRecords.length > 0
+      ? Math.round(
+          (relatedRecords.reduce((total, record) => total + record.waitingDays, 0) /
+            relatedRecords.length) *
+            10,
+        ) / 10
+      : 0;
+  const nextDayCount = relatedRecords.filter((record) => record.waitingDays === 0).length;
+  const waitDistribution = [
+    {
+      label: "退職翌日",
+      value: relatedRecords.filter((record) => record.waitingDays === 0).length,
+    },
+    {
+      label: "7日以内",
+      value: relatedRecords.filter(
+        (record) => record.waitingDays >= 1 && record.waitingDays <= 7,
+      ).length,
+    },
+    {
+      label: "30日以内",
+      value: relatedRecords.filter(
+        (record) => record.waitingDays >= 8 && record.waitingDays <= 30,
+      ).length,
+    },
+    {
+      label: "31日以上",
+      value: relatedRecords.filter((record) => record.waitingDays >= 31).length,
+    },
+  ];
+  const maxWaitDistributionCount = Math.max(
+    1,
+    ...waitDistribution.map((item) => item.value),
+  );
+  const relatedSourceIds = new Set(relatedRecords.map((record) => record.sourceId));
+  const relatedSources = sources.filter((source) => relatedSourceIds.has(source.id));
 
   return (
     <div className="flex flex-col gap-8">
@@ -33,17 +72,22 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
           <p className="mt-2 text-base text-on-surface-variant">公表資料に基づく再就職情報</p>
         </div>
         <div className="flex flex-wrap gap-2">
-          <TagChip href={`/corporations?ministry=${encodeURIComponent(corporation.topMinistry)}`}>{corporation.topMinistry}</TagChip>
+          {topMinistry && (
+            <TagChip href={`/corporations?ministry=${encodeURIComponent(topMinistry.name)}`}>{topMinistry.name}</TagChip>
+          )}
           <TagChip href={`/corporations?type=${encodeURIComponent(corporation.type)}`}>{corporation.type}</TagChip>
           <TagChip href={`/corporations?region=${encodeURIComponent(corporation.region)}`}>{corporation.region}</TagChip>
         </div>
       </section>
 
       <section className="grid grid-cols-1 gap-4 md:grid-cols-4">
-        <StatCard label="公表再就職者数" value={corporation.count} unit="人" />
-        <StatCard label="最多出身省庁" value={`${corporation.topMinistry}（${corporation.topMinistryCount}人）`} />
-        <StatCard label="平均待機日数" value={corporation.averageWaitDays} unit="日" />
-        <HighlightStatCard label="退職翌日再就職" value={corporation.nextDay} unit="件" />
+        <StatCard label="公表再就職者数" value={relatedRecords.length} unit="人" />
+        <StatCard
+          label="最多出身省庁"
+          value={topMinistry ? `${topMinistry.name}（${topMinistry.count}人）` : "該当なし"}
+        />
+        <StatCard label="平均待機日数" value={averageWaitDays} unit="日" />
+        <HighlightStatCard label="退職翌日再就職" value={nextDayCount} unit="件" />
       </section>
 
       {corporation.basicInfo && (
@@ -127,19 +171,26 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
       <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
           <h2 className="mb-4 text-xl font-bold text-primary">元省庁の内訳</h2>
-          <div className="space-y-3">
-            {["国土交通省", "経済産業省", "総務省"].map((ministry, index) => (
-              <div key={ministry}>
-                <div className="mb-1 flex justify-between text-sm font-semibold">
-                  <span>{ministry}</span>
-                  <span>{[18, 12, 8][index]}人</span>
+          {ministryBreakdown.length > 0 ? (
+            <div className="space-y-3">
+              {ministryBreakdown.map((ministry) => (
+                <div key={ministry.name}>
+                  <div className="mb-1 flex justify-between text-sm font-semibold">
+                    <span>{ministry.name}</span>
+                    <span>{ministry.count}人</span>
+                  </div>
+                  <div className="h-2 rounded-full bg-surface-container">
+                    <div
+                      className="h-2 rounded-full bg-secondary"
+                      style={{ width: `${(ministry.count / relatedRecords.length) * 100}%` }}
+                    />
+                  </div>
                 </div>
-                <div className="h-2 rounded-full bg-surface-container">
-                  <div className="h-2 rounded-full bg-secondary" style={{ width: `${[42, 28, 19][index]}%` }} />
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm text-on-surface-variant">集計対象の公表記録はありません。</p>
+          )}
         </div>
 
         <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
@@ -148,7 +199,10 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
             {waitDistribution.map((item) => (
               <div key={item.label} className="flex flex-1 flex-col items-center gap-2">
                 <div className="flex h-36 w-full items-end">
-                  <div className="relative w-full rounded-t bg-secondary-container" style={{ height: item.height }}>
+                  <div
+                    className="relative w-full rounded-t bg-secondary-container"
+                    style={{ height: `${(item.value / maxWaitDistributionCount) * 100}%` }}
+                  >
                     <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-sm font-bold">{item.value}</span>
                   </div>
                 </div>
@@ -166,19 +220,22 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
             <div>
               <h3 className="mb-2 text-sm font-bold text-on-surface-variant">関連話題</h3>
               <div className="flex flex-wrap gap-2">
-                {["独立行政法人", "公益法人", "官民人材交流センター"].map((label) => (
+                {corporation.topics.map((label) => (
                   <TagChip key={label} href={`/corporations?topic=${encodeURIComponent(label)}`}>
                     {label}
                   </TagChip>
                 ))}
+                {corporation.topics.length === 0 && (
+                  <span className="text-sm text-on-surface-variant">関連話題は登録されていません。</span>
+                )}
               </div>
             </div>
             <div>
               <h3 className="mb-2 text-sm font-bold text-on-surface-variant">関連省庁</h3>
               <div className="flex flex-wrap gap-2">
-                {["国土交通省", "経済産業省", "総務省"].map((label) => (
-                  <TagChip key={label} href={`/corporations?ministry=${encodeURIComponent(label)}`}>
-                    {label}
+                {ministryBreakdown.map((ministry) => (
+                  <TagChip key={ministry.name} href={`/corporations?ministry=${encodeURIComponent(ministry.name)}`}>
+                    {ministry.name}
                   </TagChip>
                 ))}
               </div>
@@ -187,12 +244,10 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
           <div>
             <h3 className="mb-2 text-sm font-bold text-on-surface-variant">出典資料</h3>
             <SourceLinkList
-              links={[
-                { label: "内閣官房：再就職等監視委員会公表資料", href: "https://www.cas.go.jp/" },
-                { label: "国土交通省：職員の再就職状況の公表について", href: "https://www.mlit.go.jp/" },
-                { label: "経済産業省：離職者再就職情報の定期公表", href: "https://www.meti.go.jp/" },
-                { label: "本サイトのデータ方針について", href: "/data-policy" },
-              ]}
+              links={relatedSources.map((source) => ({
+                label: `${source.publisher}：${source.title}`,
+                href: source.url,
+              }))}
             />
             <p className="mt-4 text-xs leading-relaxed text-on-surface-variant">
               本ページは政府・各省庁等の公表資料に基づき、官民の人材移動を中立的に整理したものです。特定の因果関係や不適切性を断定・示すものではありません。
@@ -204,9 +259,9 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
       <section className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         {[
           ["法人情報を詳しく見る", corporation.name, `/corporations/${corporation.slug}`],
-          ["省庁別の集計を見る", `${corporation.topMinistry}の再就職統計を見る`, `/corporations?ministry=${encodeURIComponent(corporation.topMinistry)}`],
+          ["省庁別の集計を見る", `${topMinistry?.name ?? "省庁"}の再就職統計を見る`, `/corporations?ministry=${encodeURIComponent(topMinistry?.name ?? "")}`],
           ["待機日数から探す", "退職翌日再就職ランキングを見る", "/rankings"],
-          ["事例を比較する", "類似の再就職事例を見る", `/corporations?ministry=${encodeURIComponent(corporation.topMinistry)}&waitDays=0`],
+          ["事例を比較する", "類似の再就職事例を見る", `/corporations?ministry=${encodeURIComponent(topMinistry?.name ?? "")}&waitDays=0`],
         ].map(([label, title, href]) => (
           <Link key={label} href={href} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4 hover:border-secondary">
             <span className="text-sm font-semibold text-on-surface-variant">{label}</span>
