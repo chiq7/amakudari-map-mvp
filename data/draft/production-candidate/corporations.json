@@ -2413,18 +2413,20 @@
       "count": 1
     },
     "counts": {
-      "publicRecords": 1,
+      "publicRecords": 2,
       "nextDay": 0,
-      "within30Days": 1
+      "within30Days": 2
     },
     "waitingDays": {
       "average": 1
     },
     "relatedPersons": [
-      "person-ec89fec3c55c9ffb"
+      "person-ec89fec3c55c9ffb",
+      "person-9f33be49c8959f2e"
     ],
     "sources": [
-      "cabinet-office-annual-2024"
+      "cabinet-office-annual-2024",
+      "cabinet-office-106-25-1-r05-files4"
     ],
     "topics": []
   },
@@ -2825,6 +2827,481 @@
     ],
     "sources": [
       "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-e963be1af8212c06",
+    "name": "学校法人廣池学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "内閣府",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-ff4932e826c179e6"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-9f6d08b38820e0a0",
+    "name": "学校法人京都産業大学",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "警察庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 3
+    },
+    "relatedPersons": [
+      "person-976d95e664e0913e"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-c0c04a1a1c5aac07",
+    "name": "PwC Japan有限責任監査法人",
+    "type": "監査法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "カジノ管理委員会",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-03e039ba52b769c0"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-135a1b46a1549dd5",
+    "name": "株式会社小松製作所",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "金融庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 31
+    },
+    "relatedPersons": [
+      "person-f1a2828fdf10c657"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-c75ea824505cae64",
+    "name": "学校法人日本福祉大学",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-0b79eaacb7785fca"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-0de7c6f8b13ced91",
+    "name": "一般社団法人日本更生保護女性連盟",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 64
+    },
+    "relatedPersons": [
+      "person-adcc75994f20a4bc"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-1ffc5d01f15475f8",
+    "name": "学校法人亀井学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-7892a65f1d6035fa"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-a7a052aaf6e74bd6",
+    "name": "学校法人別府大学",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-f804ff4466358e56"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-35bfb3eeff7140df",
+    "name": "弁護士法人三浦法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-a0d961d9ba8087ab"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-af2d1e7e05a20dba",
+    "name": "独立行政法人地域医療機能推進機構",
+    "type": "独立行政法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-8e1ee8141dca0216"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-c025bf19956ce7e6",
+    "name": "社会福祉法人安立園",
+    "type": "社会福祉法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 8
+    },
+    "relatedPersons": [
+      "person-23aeb5340c368dba"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-185b3a35ad2eb790",
+    "name": "弁護士法人御堂筋法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 62
+    },
+    "relatedPersons": [
+      "person-56ac010dc7f3b284"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-9a5f13b06911e809",
+    "name": "マルハニチロ株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-56247396a000c772"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-4deb1f80021694a9",
+    "name": "学校法人玉木学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-39d1a749245cd6bb"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-eb156c9e81e60f92",
+    "name": "青木信用金庫",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 31
+    },
+    "relatedPersons": [
+      "person-979c821616cd60a0"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-7e0ddafb39edd01e",
+    "name": "学校法人津田塾大学",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-9f33be49c8959f2e"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-d911857977692e63",
+    "name": "JPモルガン・チェ―ス銀行",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-2030660e3cb1f3c9"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-5ba5bb8ce6d36efb",
+    "name": "学校法人常翔学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-676dc9b61f1ace5b"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-690523a33e388965",
+    "name": "学校法人日本体育大学",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "文部科学省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-287ba3b5dd4b3d82"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
     ],
     "topics": []
   }
