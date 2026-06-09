@@ -1,0 +1,34 @@
+{
+  "sourceType": "gbizinfo-api-v2",
+  "status": "awaiting-api-token",
+  "createdAt": "2026-06-09",
+  "fetchedAt": null,
+  "apiVersion": "v2",
+  "eligibleCorporationCount": 87,
+  "targetCount": 87,
+  "processedCount": 0,
+  "recordFields": [
+    "corporateNumber",
+    "corporationSlug",
+    "corporationName",
+    "officialName",
+    "subsidies",
+    "procurements",
+    "certifications",
+    "licenses",
+    "sourceName",
+    "sourceUrl",
+    "fetchedAt",
+    "notes"
+  ],
+  "summary": {
+    "corporationsWithSubsidies": 0,
+    "corporationsWithProcurements": 0,
+    "corporationsWithCertifications": 0,
+    "subsidyCount": 0,
+    "procurementCount": 0,
+    "certificationCount": 0,
+    "licenseCount": 0
+  },
+  "records": []
+}
