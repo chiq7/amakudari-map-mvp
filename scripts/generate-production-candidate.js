@@ -3,18 +3,24 @@ const crypto = require("node:crypto");
 const fs = require("node:fs");
 const path = require("node:path");
 
-const SOURCE_ID = "cabinet-office-annual-2024";
+const DEFAULT_SOURCE_ID = "cabinet-office-annual-2024";
 
 function parseArguments(argv) {
   const options = {};
   for (let index = 0; index < argv.length; index += 1) {
-    if (argv[index] === "--file") {
+    const argument = argv[index];
+    if (argument === "--file") {
       options.file = argv[index + 1];
       index += 1;
-    } else if (argv[index] === "--help" || argv[index] === "-h") {
+    } else if (argument === "--output-dir") {
+      options.outputDirectory = argv[index + 1];
+      index += 1;
+    } else if (argument === "--merge-production") {
+      options.mergeProduction = true;
+    } else if (argument === "--help" || argument === "-h") {
       options.help = true;
     } else {
-      throw new Error(`Unknown argument: ${argv[index]}`);
+      throw new Error(`Unknown argument: ${argument}`);
     }
   }
   return options;
@@ -22,8 +28,18 @@ function parseArguments(argv) {
 
 function usage() {
   console.error(
-    'Usage: npm run generate:candidate -- --file "data/draft/..._all.json"',
+    [
+      "Usage:",
+      '  npm run generate:candidate -- --file "data/draft/pending/daily-pick.json"',
+      "Options:",
+      "  --merge-production  Merge draft records with current production records",
+      "  --output-dir PATH   Candidate output directory",
+    ].join("\n"),
   );
+}
+
+function readJson(filePath) {
+  return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
 function stableSlug(prefix, value) {
@@ -56,45 +72,99 @@ function mode(values) {
   );
 }
 
-function generateCandidate(draftFile) {
-  const inputPath = path.resolve(draftFile);
-  const draft = JSON.parse(fs.readFileSync(inputPath, "utf8"));
+function draftIdentity(record) {
+  return [
+    record.personName,
+    record.originMinistry,
+    record.titleAtRetirement,
+    record.retirementDate ?? "",
+  ].join("\u001f");
+}
+
+function loadExistingDraftRecords(productionDirectory) {
+  const records = readJson(path.join(productionDirectory, "records.json"));
+  const corporations = readJson(
+    path.join(productionDirectory, "corporations.json"),
+  );
+  const corporationTypeBySlug = new Map(
+    corporations.map((corporation) => [corporation.slug, corporation.type]),
+  );
+
+  return records.map((record) => ({
+    rawId: record.rawId,
+    dedupeKey: record.dedupeKey,
+    personName: record.name,
+    originMinistry: record.fromMinistry,
+    titleAtRetirement: record.previousPosition,
+    retirementDate: record.retirementDate,
+    reemploymentDate: record.reemploymentDate,
+    waitingDays: record.waitingDays,
+    corporationName: record.corporationName,
+    corporationType:
+      corporationTypeBySlug.get(record.corporationSlug) || "未分類",
+    newPosition: record.newPosition,
+    sourceId: record.sourceId,
+    sourceUrl: record.sourceUrl,
+  }));
+}
+
+function mergeRecords(existingRecords, draftRecords) {
+  const productionDedupeKeys = new Set(
+    existingRecords.map((record) => record.dedupeKey),
+  );
+  const merged = [...existingRecords];
+  const seen = new Set(productionDedupeKeys);
+
+  for (const record of draftRecords) {
+    if (seen.has(record.dedupeKey)) continue;
+    seen.add(record.dedupeKey);
+    merged.push(record);
+  }
+
+  return {
+    records: merged,
+    addedCount: merged.length - existingRecords.length,
+    skippedCount: draftRecords.length - (merged.length - existingRecords.length),
+  };
+}
+
+function generateCandidate(options) {
+  const inputPath = path.resolve(options.file);
+  const draft = readJson(inputPath);
   if (!Array.isArray(draft.records) || draft.records.length === 0) {
     throw new Error("Draft file must contain a non-empty records array.");
   }
 
-  const outputDirectory = path.join(
-    process.cwd(),
-    "data",
-    "draft",
-    "production-candidate",
+  const productionDirectory = path.join(process.cwd(), "data", "production");
+  const outputDirectory = path.resolve(
+    options.outputDirectory ??
+      path.join("data", "draft", "production-candidate"),
   );
   fs.mkdirSync(outputDirectory, { recursive: true });
 
+  const existingRecords = options.mergeProduction
+    ? loadExistingDraftRecords(productionDirectory)
+    : [];
+  const merged = mergeRecords(existingRecords, draft.records);
+  if (options.mergeProduction && merged.addedCount === 0) {
+    throw new Error("Draft contains no records that are new to production.");
+  }
+
+  const draftRecords = merged.records;
   const corporationSlugByName = new Map();
   const personSlugByIdentity = new Map();
 
-  for (const record of draft.records) {
+  for (const record of draftRecords) {
     corporationSlugByName.set(
       record.corporationName,
       stableSlug("corporation", record.corporationName),
     );
-    const identity = [
-      record.personName,
-      record.originMinistry,
-      record.titleAtRetirement,
-      record.retirementDate ?? "",
-    ].join("\u001f");
+    const identity = draftIdentity(record);
     personSlugByIdentity.set(identity, stableSlug("person", identity));
   }
 
-  const records = draft.records.map((record) => {
-    const identity = [
-      record.personName,
-      record.originMinistry,
-      record.titleAtRetirement,
-      record.retirementDate ?? "",
-    ].join("\u001f");
+  const records = draftRecords.map((record) => {
+    const identity = draftIdentity(record);
     return {
       rawId: record.rawId,
       dedupeKey: record.dedupeKey,
@@ -108,14 +178,16 @@ function generateCandidate(draftFile) {
       retirementDate: record.retirementDate,
       reemploymentDate: record.reemploymentDate,
       waitingDays: record.waitingDays,
-      sourceId: SOURCE_ID,
+      sourceId: record.sourceId || DEFAULT_SOURCE_ID,
       sourceUrl: record.sourceUrl,
     };
   });
 
   const personGroups = new Map();
   records.forEach((record) => {
-    if (!personGroups.has(record.personSlug)) personGroups.set(record.personSlug, []);
+    if (!personGroups.has(record.personSlug)) {
+      personGroups.set(record.personSlug, []);
+    }
     personGroups.get(record.personSlug).push(record);
   });
   const persons = [...personGroups.entries()].map(([personSlug, group]) => {
@@ -136,7 +208,7 @@ function generateCandidate(draftFile) {
         "再就職情報",
         ...(representative.waitingDays <= 30 ? ["30日以内"] : []),
       ],
-      sources: [SOURCE_ID],
+      sources: [...new Set(group.map((record) => record.sourceId))],
     };
   });
 
@@ -147,26 +219,26 @@ function generateCandidate(draftFile) {
     }
     corporationGroups.get(record.corporationSlug).push({
       ...record,
-      corporationType: draft.records[index].corporationType || "未分類",
+      corporationType: draftRecords[index].corporationType || "未分類",
     });
   });
   const corporations = [...corporationGroups.entries()].map(
     ([corporationSlug, group]) => {
       const waitingDays = group.map((record) => record.waitingDays);
-      const relatedPersons = [...new Set(group.map((record) => record.personSlug))];
+      const relatedPersons = [
+        ...new Set(group.map((record) => record.personSlug)),
+      ];
+      const topMinistry = mode(group.map((record) => record.fromMinistry));
       return {
         slug: corporationSlug,
         name: group[0].corporationName,
         type: mode(group.map((record) => record.corporationType)),
         prefecture: "不明",
         ministry: {
-          name: mode(group.map((record) => record.fromMinistry)),
-          count: Math.max(
-            ...[...new Set(group.map((record) => record.fromMinistry))].map(
-              (ministry) =>
-                group.filter((record) => record.fromMinistry === ministry).length,
-            ),
-          ),
+          name: topMinistry,
+          count: group.filter(
+            (record) => record.fromMinistry === topMinistry,
+          ).length,
         },
         counts: {
           publicRecords: group.length,
@@ -182,7 +254,7 @@ function generateCandidate(draftFile) {
           ),
         },
         relatedPersons,
-        sources: [SOURCE_ID],
+        sources: [...new Set(group.map((record) => record.sourceId))],
         topics: [],
       };
     },
@@ -225,15 +297,26 @@ function generateCandidate(draftFile) {
     },
   };
 
+  const productionSources = options.mergeProduction
+    ? readJson(path.join(productionDirectory, "sources.json"))
+    : [];
+  const sourceById = new Map(
+    productionSources.map((source) => [source.id, source]),
+  );
+  for (const source of draft.sources ?? []) {
+    sourceById.set(source.id, source);
+  }
+  const sources = [...sourceById.values()];
+
   const meta = {
     lastUpdated: draft.createdAt,
     sourceDescription:
-      "内閣官房の国家公務員再就職状況年度公表Excelから生成したproduction候補",
+      "内閣官房の国家公務員再就職状況公表Excelから生成したproduction候補",
     productionRecordCount: records.length,
     corporationCount: corporations.length,
     personCount: persons.length,
     rankingCount: Object.keys(rankings.rankings).length,
-    note: "令和6年度公表資料から生成。元府省庁と法人種別の一部は名称から推定。",
+    note: "公表資料から生成。元府省庁と法人種別の一部は名称から推定。",
   };
 
   writeJson(outputDirectory, "records.json", records);
@@ -241,9 +324,12 @@ function generateCandidate(draftFile) {
   writeJson(outputDirectory, "corporations.json", corporations);
   writeJson(outputDirectory, "rankings.json", rankings);
   writeJson(outputDirectory, "meta.json", meta);
+  writeJson(outputDirectory, "sources.json", sources);
 
   console.log(`Production candidate generated from ${draft.records.length} draft records.`);
-  console.log(`- records: ${records.length}`);
+  console.log(`- added records: ${merged.addedCount}`);
+  console.log(`- skipped duplicates: ${merged.skippedCount}`);
+  console.log(`- total records: ${records.length}`);
   console.log(`- persons: ${persons.length}`);
   console.log(`- corporations: ${corporations.length}`);
   console.log(`- output: ${path.relative(process.cwd(), outputDirectory)}`);
@@ -255,7 +341,7 @@ try {
     usage();
     process.exitCode = options.help ? 0 : 1;
   } else {
-    generateCandidate(options.file);
+    generateCandidate(options);
   }
 } catch (error) {
   console.error(`Candidate generation failed: ${error.message}`);

@@ -1,0 +1,1240 @@
+{
+  "sourceType": "cabinet-office-annual-excel",
+  "status": "draft",
+  "createdAt": "2026-06-09",
+  "limit": 47,
+  "sources": [
+    {
+      "id": "cabinet-office-106-25-1-r05-files4",
+      "title": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "publisher": "内閣官房",
+      "url": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedAt": "",
+      "memo": "国家公務員法第106条の25第1項等に基づく報告"
+    }
+  ],
+  "records": [
+    {
+      "rawId": "d8459a4868028d3627e865b53aed583a69cc3436688af870f99339f05e074cb2",
+      "dedupeKey": "22ecb7348549a895967cfd09431adeaffa8b4b6d909ad22f3c7c7b34066d7aac",
+      "personName": "萩野 覚",
+      "originMinistry": "内閣府",
+      "titleAtRetirement": "内閣府経済社会総合研究所上席主任研究官 併任 総務省統計委員会担当室長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人廣池学園",
+      "corporationType": "学校法人",
+      "newPosition": "麗澤大学経済学部教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "b4474de703b05d101a2b42666c363e907fb130e14504596b9b974271d049efd2",
+      "dedupeKey": "b792a5d8c0fe138e87b4ceab08d2bcb46fdcf6912d4524509563a1b5e25c2b23",
+      "personName": "岡部 正勝",
+      "originMinistry": "警察庁",
+      "titleAtRetirement": "警察庁長官官房付",
+      "retirementDate": "2024-03-29",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 3,
+      "corporationName": "学校法人京都産業大学",
+      "corporationType": "学校法人",
+      "newPosition": "京都産業大学法学部教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "d97f0fda7ea0156ff39fcbec7d7095253bc0bf93669763922348a68591f04605",
+      "dedupeKey": "4740a04af7c62be575b67d46548dd31dcae36464e25380dc78c41a24ee2b7fc8",
+      "personName": "廣井 真",
+      "originMinistry": "カジノ管理委員会",
+      "titleAtRetirement": "カジノ管理委員会事務局監督調査部財務監督課課長補佐",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "PwC Japan有限責任監査法人",
+      "corporationType": "監査法人",
+      "newPosition": "シニアマネージャー",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "60d24c2450e3c3287213a47bcd3067daea25a96212c7b19125232655ce2ad87e",
+      "dedupeKey": "77aeb51dbf6b038d9236bd63e31679528a38cc33a1a5a54b05a23499f8edd603",
+      "personName": "髙津戸 朱子",
+      "originMinistry": "金融庁",
+      "titleAtRetirement": "金融庁審判官 兼 総合政策局総務課 兼 総合政策局監察官 兼 総合政策局総合政策課金融行政モニターサポートスタッフ 兼 企画市場局総務課リーガル・アドバイザー 兼 監督局総務課",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-05-01",
+      "waitingDays": 31,
+      "corporationName": "株式会社小松製作所",
+      "corporationType": "営利法人",
+      "newPosition": "法務部員",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "a3b89a66257facc2f6a1e5762527e15a95b2105b87f8b7c8e26b730e9c0f9bb1",
+      "dedupeKey": "55fd8e15d5e94a491cf5fd45a861bfdab3615b61cb0f9f67569098059ac976a3",
+      "personName": "河尻 恵",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "国立武蔵野学院長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人日本福祉大学",
+      "corporationType": "学校法人",
+      "newPosition": "日本福祉大学福祉経営学部特命教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "e0a0ab5985133ad1d6de2c1ebe693255207014b725de4b7cae58b54eff2f76b6",
+      "dedupeKey": "2b152e95d208f3604fc06a4946deffcf0a5dc56f9380c640a7452f4989c0c634",
+      "personName": "大塲 玲子",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "関東地方更生保護委員会委員長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-06-03",
+      "waitingDays": 64,
+      "corporationName": "一般社団法人日本更生保護女性連盟",
+      "corporationType": "一般社団法人",
+      "newPosition": "事務局長",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "87ef3a2040104cbc8874f391211b1460cbe985ba160bbc7057be82e57119a0cf",
+      "dedupeKey": "3325d6679ad2b96f5e57805481a316acbf813b1bbc07769c65603b41d9cff49d",
+      "personName": "長内 直樹",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "長岡区検察庁副検事",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人亀井学園",
+      "corporationType": "学校法人",
+      "newPosition": "江戸川めぐみ幼稚園事務員",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "c1e64b22006e797cd047d4b5e7cbf41a38ba63cd510928097976b3d52d891d45",
+      "dedupeKey": "5c9a5066a9b2b4386b01f301ba9d5f37b4325193c3b2946c0548841b04b1b2e0",
+      "personName": "齊藤 哲也",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "岡山少年鑑別所長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人別府大学",
+      "corporationType": "学校法人",
+      "newPosition": "別府大学文学部人間関係学科教員",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "3d7e51f6d72074f8e8140b165a72d94fdecec8cb9474550f74b2ab515cc373e5",
+      "dedupeKey": "c6c5f9ff1745866d6b7bca3b9eab3392825ff30a0d5c02933835b0f44604d33b",
+      "personName": "齋藤 亮太",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "千葉地方検察庁検事",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "弁護士法人三浦法律事務所",
+      "corporationType": "弁護士法人",
+      "newPosition": "弁護士",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "415d23ff6b18f5b6491e9e52927336bb43692314c2134a61f76449930f2e7773",
+      "dedupeKey": "5f51a10bf64c5acfe8e67e82f1da543645b7b275b81cfbdca1fd729573bd2927",
+      "personName": "武田 智博",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "高松刑務所医務部長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "独立行政法人地域医療機能推進機構",
+      "corporationType": "独立行政法人",
+      "newPosition": "りつりん病院非常勤医師",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "e262f34e04ed2dc27eeb4aed1be1d78f0d6908ceed2e8033e4a1663287dcae86",
+      "dedupeKey": "1a526291905202f66bdeeeeeb08ba094d7f44a51be0cb665b336c5da2e9327d8",
+      "personName": "中田 学司",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "名古屋刑務所長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-08",
+      "waitingDays": 8,
+      "corporationName": "社会福祉法人安立園",
+      "corporationType": "社会福祉法人",
+      "newPosition": "晴見保育園副園長",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "791241b551266d359d550d255dd28a1b288434cb22c2942da9a97b831bc64179",
+      "dedupeKey": "9416997fbfeb505cb7bf3330d598eee27b4d1615d640f0e5030479e5566112f6",
+      "personName": "畑 尚登",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "東京地方検察庁検事",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-06-01",
+      "waitingDays": 62,
+      "corporationName": "弁護士法人御堂筋法律事務所",
+      "corporationType": "弁護士法人",
+      "newPosition": "弁護士",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "005d2571421b3ef29300793e2118b4b7d8f43b8a6552d80af9698a6e65c25c59",
+      "dedupeKey": "3698c93ea7300fe867f9de8b757689da6f424214e9237ae295a4db02ab277cc7",
+      "personName": "花見 佳澄",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "東京地方検察庁立川支部検事",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "マルハニチロ株式会社",
+      "corporationType": "営利法人",
+      "newPosition": "弁護士",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "b8fb0f273c7c7780b94eb51c7355299f1019c8d4c7e0726096312967aff2ae3f",
+      "dedupeKey": "bd0ece9b91f7396a6a686e78e87aa4edca058e11601ed762206ae68d047c1762",
+      "personName": "福永 晋哉",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "名古屋刑務所分類審議室長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人玉木学園",
+      "corporationType": "学校法人",
+      "newPosition": "学習支援員",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "dc2a11c9d9feba3ee4eb8d1943f48a7c88ad5aa94f2fbfe49bd1a70bd78ff31d",
+      "dedupeKey": "8e1d9df782e0c012ffd1599ba63cb44bdecd8350c40aae60df260d1f67f292c9",
+      "personName": "井上 浩",
+      "originMinistry": "財務省",
+      "titleAtRetirement": "関東財務局総務部長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-05-01",
+      "waitingDays": 31,
+      "corporationName": "青木信用金庫",
+      "corporationType": "",
+      "newPosition": "臨時職員",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type source column was not found and could not be inferred."
+      ]
+    },
+    {
+      "rawId": "a4b94c4607bf5723802d5f4f847d3ff11d3a3ae5c9cd7b0aec1d1cb4717f1a5f",
+      "dedupeKey": "d07545cf3ae562726fb0185fd31ef72d6af2c7c195b5f4e9c69b86460add9947",
+      "personName": "大西 淳也",
+      "originMinistry": "財務省",
+      "titleAtRetirement": "財務省大臣官房付",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "国立大学法人東京大学",
+      "corporationType": "国立大学法人",
+      "newPosition": "東京大学大学院公共政策学連携研究部客員教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "2c8fada76d968aa91d671ed4677ca3f578a5cc8a89875508e975d153a9d4736e",
+      "dedupeKey": "e9e2976c72b078ff9e00fe2bdc85d48fb1e8c5ec5f11dc3f55c284ddee9eddb3",
+      "personName": "大西 淳也",
+      "originMinistry": "財務省",
+      "titleAtRetirement": "財務省大臣官房付",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人津田塾大学",
+      "corporationType": "学校法人",
+      "newPosition": "津田塾大学総合政策学部総合政策学科教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "e50b4a06130059a6be9c06d4d77eba443c956389ce14e042f621f8dc6378603e",
+      "dedupeKey": "87823869090ab6a237693524cb65968d550386a9913a60518faf8fea7aff8bac",
+      "personName": "棚瀨 順哉",
+      "originMinistry": "財務省",
+      "titleAtRetirement": "財務省国際局為替市場課資金管理専門官",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "JPモルガン・チェ―ス銀行",
+      "corporationType": "",
+      "newPosition": "東京支店市場調査本部エグゼクティブ・ディレクター",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type source column was not found and could not be inferred."
+      ]
+    },
+    {
+      "rawId": "b127ec78af42de869936a0441e0d8f4b82d24592f5bb873f3c0b0d28609be0eb",
+      "dedupeKey": "fc00ec2953bab2bff4b5da85cdbd5d8d82ee2d8b670b4073d271b438032a434a",
+      "personName": "團野 正浩",
+      "originMinistry": "財務省",
+      "titleAtRetirement": "国税庁長官官房付",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人常翔学園",
+      "corporationType": "学校法人",
+      "newPosition": "摂南大学法学部法律学科教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "699091fdcf6ee296ec801ce25a14be2ae4565071a5994d7cd28d33a455e89119",
+      "dedupeKey": "46ae3f57ffd834872b04e2ef04c39dc53b3629a4a78c452d155f796e31be4faa",
+      "personName": "辻 庄市",
+      "originMinistry": "財務省",
+      "titleAtRetirement": "財務省大臣官房付",
+      "retirementDate": "2024-04-01",
+      "reemploymentDate": "2024-06-27",
+      "waitingDays": 87,
+      "corporationName": "日本酒類販売株式会社",
+      "corporationType": "営利法人",
+      "newPosition": "社外監査役",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "0dd0ac37551c39d6447dc5974ca8c76806d34428fbc282aa148c51a2b5ca5690",
+      "dedupeKey": "3e8879290fd4d730c752fa513fafb4c2707cbc7ce6b3721b6b95ba758dd2f9e3",
+      "personName": "石田 有記",
+      "originMinistry": "文部科学省",
+      "titleAtRetirement": "文部科学省初等中等教育局教育課程課教育課程企画室長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人日本体育大学",
+      "corporationType": "学校法人",
+      "newPosition": "日本体育大学児童スポーツ教育学部教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "76c938cf693bfd2e538da1bf20cc5f2e14ae7c5f5f5e110bc47b403c4ae98dca",
+      "dedupeKey": "9e7f4ca549d13c8077a9264d72bcd99a549a503a5724b62554a6cd4511cafcf5",
+      "personName": "森 政之",
+      "originMinistry": "文部科学省",
+      "titleAtRetirement": "文部科学省大臣官房文教施設企画・防災部技術参事官",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人芝浦工業大学",
+      "corporationType": "学校法人",
+      "newPosition": "芝浦工業大学SIT総合研究所特任教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "3d54f62ba2f6bda275090141f9b1441f9cf2d115725f73f25943920e3f0f7027",
+      "dedupeKey": "c1c589e0e4da0d5c3d6e42e73bb223e8926bee2bc30e93114d13deb7e87ddb86",
+      "personName": "工藤 由起子",
+      "originMinistry": "厚生労働省",
+      "titleAtRetirement": "国立医薬品食品衛生研究所衛生微生物部長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人星薬科大学",
+      "corporationType": "学校法人",
+      "newPosition": "星薬科大学薬学部微生物学教室教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "8d30fb07b91cf53e3f6c9354958ebec206eed4610b05175ff2ced61e181fa62a",
+      "dedupeKey": "a5d319ab349ba153a25891461963bb35fb0b9f74cec12c440077ba7daab7740e",
+      "personName": "黒田 誠",
+      "originMinistry": "厚生労働省",
+      "titleAtRetirement": "国立感染症研究所病原体ゲノム解析研究センター長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人銀杏学園",
+      "corporationType": "学校法人",
+      "newPosition": "熊本保健科学大学保健科学部医学検査学科教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "8526f84938bffc31999b407e9dc9f93f748afefa3694f33a1048e40d36517ec6",
+      "dedupeKey": "5d79b4c4bab5d515817714c60587bdb25b1bf7156ae4c6d1e9da8cd831b628a0",
+      "personName": "伊藤 武徳",
+      "originMinistry": "農林水産省",
+      "titleAtRetirement": "関東森林管理局下越森林管理署長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "日本林業土木株式会社",
+      "corporationType": "営利法人",
+      "newPosition": "前橋出張所長",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "24db03f6caf83b4283fe7060f536c3e5fb99bdad4b0fa85ae52dae022a584fef",
+      "dedupeKey": "12a086e42c94c4bbeb01babe683ef574b4b707f7b2288a3f104a4644f08cb4f8",
+      "personName": "乾 光一",
+      "originMinistry": "農林水産省",
+      "titleAtRetirement": "東北森林管理局総務企画部長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "日本林業土木株式会社",
+      "corporationType": "営利法人",
+      "newPosition": "本社総務部部長 兼 営業部次長 兼 技術部次長",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "4069bc6890635c64e8600676c747fa94bee479a7a1caad64b67aebbec9440bd7",
+      "dedupeKey": "cce5c0da24b0766acc754c43c5ddd85ff47401ae947a1a2fd4de06f1c5e4792c",
+      "personName": "木村 敏宏",
+      "originMinistry": "農林水産省",
+      "titleAtRetirement": "中部森林管理局北信森林管理署長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-15",
+      "waitingDays": 15,
+      "corporationName": "日本林業土木株式会社",
+      "corporationType": "営利法人",
+      "newPosition": "長野出張所長",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "bb1c27050c6661e359b2ac1c30a7309c8e6b1f9766a45bb9ad0c2883bb362294",
+      "dedupeKey": "dc306acc058edd2f7fcf3782b3ac595ee908be47894651646a1f89e254069f93",
+      "personName": "十二 康典",
+      "originMinistry": "農林水産省",
+      "titleAtRetirement": "農林水産省輸出・国際局輸出企画課輸出連携推進調査官",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "PwCコンサルティング合同会社",
+      "corporationType": "営利法人",
+      "newPosition": "マネージャー",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "b5a943757a3549148160d9d3f653fe7f87e99078c8fb1dd0738489021da41d02",
+      "dedupeKey": "cbde21419ddeaddd6ae50a5c1adc2ea886c3440dbea47890e729772a3acaa68f",
+      "personName": "德川 浩一",
+      "originMinistry": "農林水産省",
+      "titleAtRetirement": "関東森林管理局日光森林管理署長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-05-01",
+      "waitingDays": 31,
+      "corporationName": "一般財団法人日本木材総合情報センター",
+      "corporationType": "一般財団法人",
+      "newPosition": "参与（業務）",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "167b9523a4ed083305574af3db5d6daf1805e3d33495f5782c6d2c57e61bcb8e",
+      "dedupeKey": "3f06e1da80b3608b6bf0c373ae319167d37a8eb38d5e4b2821626481642e712c",
+      "personName": "中島 勇雄",
+      "originMinistry": "農林水産省",
+      "titleAtRetirement": "関東森林管理局会津森林管理署長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "新電力開発株式会社",
+      "corporationType": "営利法人",
+      "newPosition": "山林管理本部長",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "17ee430b000620ea250481c90fd6780af971c111df9ab95791ad0fcc9b67390e",
+      "dedupeKey": "3639e455212426ddd5c98d61735d077b17907bb8dfe2f56c31b8c39161494aba",
+      "personName": "原嶋 広行",
+      "originMinistry": "農林水産省",
+      "titleAtRetirement": "北海道森林管理局総務企画部長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "公益社団法人国土緑化推進機構",
+      "corporationType": "公益社団法人",
+      "newPosition": "募金企画部調査役",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "b6fc825507c7f3f1c1efdb55ee875d606f4cae64542c8ad8e5bd1a26f7bbdec4",
+      "dedupeKey": "907e06cd51efb7835dad6c5bb42f42ce6e4adfc8bee60d28428127e63e74ede9",
+      "personName": "坂本 和英",
+      "originMinistry": "経済産業省",
+      "titleAtRetirement": "経済産業省近畿経済産業局資源エネルギー環境部電源開発調整官",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "公益財団法人尼崎地域産業活性化機構",
+      "corporationType": "公益財団法人",
+      "newPosition": "参与",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "a99b049fb05473aa0bdfe01641a584af3a57e79ccbc5ed5f9a7943b02541da66",
+      "dedupeKey": "0cca94c315730e011056ea50e6f2eb8db8b574b9e6b627e62dded4ef1571cd73",
+      "personName": "前川 慎喜",
+      "originMinistry": "経済産業省",
+      "titleAtRetirement": "特許庁審判部審判長（第5部門）",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "国立大学法人北海道国立大学機構",
+      "corporationType": "国立大学法人",
+      "newPosition": "北海道国立大学機構本部産学官金連携統合情報センター特任教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "c4d5f0929efa288807652fc0a3b745f3cdabd63f067f1c3856f4ad70ffdd5047",
+      "dedupeKey": "22a57373809fe892d196a0fc44b5cec59e49813206bef9bc2e99420b580129ed",
+      "personName": "山崎 知巳",
+      "originMinistry": "経済産業省",
+      "titleAtRetirement": "経済産業省大臣官房付",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "国立大学法人東京大学",
+      "corporationType": "国立大学法人",
+      "newPosition": "東京大学産学協創推進本部副本部長",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "ee0b901cde90d0c495b8977fa9c8ac0780e322bd9ae26ec61f001b77263d51ca",
+      "dedupeKey": "508246afd939beeb8ee775a0f3bc78be83157249876e89a1921fee45b7dd87fa",
+      "personName": "吉倉 秀和",
+      "originMinistry": "経済産業省",
+      "titleAtRetirement": "経済産業省商務情報政策局商務・サービスグループサービス政策課スポーツ産業室長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人大阪成蹊学園",
+      "corporationType": "学校法人",
+      "newPosition": "びわこ成蹊スポーツ大学スポーツ学部専任教員（准教授）",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "96e9f05f65b44a5a1b10f7d8c0bd9e36ba986ed910f4fe559f617f005d43df0b",
+      "dedupeKey": "b6d898b928d7b52e08135bb4baa567a39011e5350432750fea7522c4efc63d88",
+      "personName": "森山 啓",
+      "originMinistry": "経済産業省",
+      "titleAtRetirement": "特許庁審判部審判長（第36部門長） 併任 審判部訟務室長",
+      "retirementDate": "2024-04-01",
+      "reemploymentDate": "2024-07-01",
+      "waitingDays": 91,
+      "corporationName": "弁理士法人第一国際特許事務所",
+      "corporationType": "",
+      "newPosition": "弁理士",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type source column was not found and could not be inferred."
+      ]
+    },
+    {
+      "rawId": "22ed9a59efce2c222fcd3ead1ee8a3505d5d3d9d71ee93110875db9f1d8507fe",
+      "dedupeKey": "c536cb0c292083d0a1f0d6a20304afa7b164cbe0183b3a9c64407fff0065798b",
+      "personName": "鈴木 雅晴",
+      "originMinistry": "国土交通省",
+      "titleAtRetirement": "中部運輸局海上安全環境部首席船舶検査官",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "一般財団法人日本舶用品検定協会",
+      "corporationType": "一般財団法人",
+      "newPosition": "検定検査員",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "bcf8bc3b1fdbacdf8c40ee5fff3e7cde0a64111d5d0dd6399a61b35cdcd7caa9",
+      "dedupeKey": "464b3a796028442de3b7f36fa03aff87bc70aa580022d166d65c2e4fcff09554",
+      "personName": "竹本 康祐",
+      "originMinistry": "国土交通省",
+      "titleAtRetirement": "中国運輸局海上安全環境部調整官",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "一般財団法人日本舶用品検定協会",
+      "corporationType": "一般財団法人",
+      "newPosition": "検定検査員",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "466342e01aa38aa0f6e137b90e3b6b2260a173f985000a0e788d615be5bdadfd",
+      "dedupeKey": "d0c634350f175f6a265675756b50a4d7305f5143f131da80841d4109ea835532",
+      "personName": "東川 直正",
+      "originMinistry": "国土交通省",
+      "titleAtRetirement": "国土交通省大臣官房付",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "公益社団法人2025年日本国際博覧会協会",
+      "corporationType": "公益社団法人",
+      "newPosition": "理事・副事務総長",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "5481d35e78a32cd043e3792802fda962d6d6046f775cbc437f7e45fa321dfa11",
+      "dedupeKey": "501bf4c45840bf77adf28d0f5968618ae194a093aa26b11478a1dd2863057be7",
+      "personName": "中村 昌巨",
+      "originMinistry": "国土交通省",
+      "titleAtRetirement": "海上保安庁第七管区海上保安本部総務部情報管理官",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "第一警備保障株式会社",
+      "corporationType": "営利法人",
+      "newPosition": "一般社員（係長級）",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "c46879ecc5bc1de2ff21c39866966572aad6619316684a4b717da060324cf2dd",
+      "dedupeKey": "ef54cd1df4b445ed4a5a90b2c84efdf5e0e172bf053813d106f63ea7b5696f68",
+      "personName": "八木 正人",
+      "originMinistry": "国土交通省",
+      "titleAtRetirement": "神戸運輸監理部総務企画部長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "一般財団法人神戸港湾福利厚生協会",
+      "corporationType": "一般財団法人",
+      "newPosition": "総務部長",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "b8a412afb94a126aaab5888534a4a69580244372578cc0ce9517201f776af1c8",
+      "dedupeKey": "86346fd129215dd97f58a4ecdf9eb27c192f8d346d9bb4d4461a013530b02c35",
+      "personName": "山西 光一",
+      "originMinistry": "国土交通省",
+      "titleAtRetirement": "国土交通省大臣官房総務課公文書監理・情報公開室長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "公益財団法人交通エコロジー・モビリティ財団",
+      "corporationType": "公益財団法人",
+      "newPosition": "総務部長",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "32c20423bd44d7e30fb087b241450aa39480f5879f593a1820dc86b2f630f85f",
+      "dedupeKey": "dc430fd11e11a60444f23b91c95201b4bf6bc5885ea74de1e3a2a1633e835c56",
+      "personName": "要藤 正任",
+      "originMinistry": "国土交通省",
+      "titleAtRetirement": "国土交通省大臣官房付",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人京都産業大学",
+      "corporationType": "学校法人",
+      "newPosition": "京都産業大学経済学部教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "2034750f965fe93397a270d1fc2f19fb57f234d17b19938641c460dc79c7a9df",
+      "dedupeKey": "adc6703e353676235b9bde4102d9e25e80fb11c5eaad7cbd981a786622602c79",
+      "personName": "小栁 康一",
+      "originMinistry": "国土交通省",
+      "titleAtRetirement": "国土交通省大臣官房運輸安全監理官付首席運輸安全調査官",
+      "retirementDate": "2024-04-01",
+      "reemploymentDate": "2024-04-02",
+      "waitingDays": 1,
+      "corporationName": "一般財団法人日本船舶技術研究協会",
+      "corporationType": "一般財団法人",
+      "newPosition": "参与",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "15e6e8a0787836e657ed1950cab15afb68c4cd596a7765292e76fce6b998da6a",
+      "dedupeKey": "566fab93c48377682c5777ce7a8190fa35ea29e20e544ad3759f65f21eeb9f92",
+      "personName": "厂原 隆俊",
+      "originMinistry": "国土交通省",
+      "titleAtRetirement": "海上保安庁函館海上保安部巡視船つがる運用司令長",
+      "retirementDate": "2024-05-31",
+      "reemploymentDate": "2024-06-01",
+      "waitingDays": 1,
+      "corporationName": "広洋海運有限会社",
+      "corporationType": "",
+      "newPosition": "航海士",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type source column was not found and could not be inferred."
+      ]
+    },
+    {
+      "rawId": "78fd6ebf952a634e6fc4c71a06c8ac65644b23812cdb87f7b3bec01decedf7ad",
+      "dedupeKey": "44c452cd541e3ce812ed0d52cc6fa9e5467464b6dec454369075ebec7d207a8e",
+      "personName": "奥山 正樹",
+      "originMinistry": "環境省",
+      "titleAtRetirement": "環境省大臣官房付",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人江戸川学園",
+      "corporationType": "学校法人",
+      "newPosition": "江戸川大学社会学部専任教員（教授）",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "01f456aa2ab09d4d030e03a5958a6875548395afda9d6e2643e6eed535789fdc",
+      "dedupeKey": "1389a4cf1dd89ba5bc7a7abc1f202b144ae9f4f41c8c3e068bc0574bcfec228c",
+      "personName": "中村 邦彦",
+      "originMinistry": "環境省",
+      "titleAtRetirement": "環境省自然環境局総務課皇居外苑管理事務所長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 1,
+      "corporationName": "一般社団法人地域循環共生社会連携協会",
+      "corporationType": "一般社団法人",
+      "newPosition": "事務局次長",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r05-files4",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    }
+  ]
+}

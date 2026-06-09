@@ -1,0 +1,252 @@
+{
+  "sourceType": "cabinet-office-annual-excel",
+  "status": "draft",
+  "createdAt": "2026-06-09",
+  "limit": 9,
+  "sources": [
+    {
+      "id": "cabinet-office-106-25-1-r06-files",
+      "title": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
+      "publisher": "内閣官房",
+      "url": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
+      "publishedAt": "",
+      "memo": "国家公務員法第106条の25第1項等に基づく報告"
+    }
+  ],
+  "records": [
+    {
+      "rawId": "4826f4437d9e96da816fc585a411768597ec0b07bdc7ee1e2aaace12f3de6dc8",
+      "dedupeKey": "b88e035a0354059b4f325e51e29b0b4fb7771c92a398974d92a2c84cc6618e80",
+      "personName": "田辺 治",
+      "originMinistry": "公正取引委員会",
+      "titleAtRetirement": "公正取引委員会事務総局審査局長",
+      "retirementDate": "2024-01-12",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 80,
+      "corporationName": "学校法人白鷗大学",
+      "corporationType": "学校法人",
+      "newPosition": "白鷗大学法学部専任教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r06-files",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "f32ba0fd2240e6a76ce5b3816b9cb3ba079708b2c6e8a077a61113e2a6f0129a",
+      "dedupeKey": "758ce86524254d365a73d8228fe114ee0518a4b5f7b273a7473221408e714321",
+      "personName": "杉 俊弘",
+      "originMinistry": "警察庁",
+      "titleAtRetirement": "警察庁交通局交通指導課長",
+      "retirementDate": "2024-01-26",
+      "reemploymentDate": "2024-02-28",
+      "waitingDays": 33,
+      "corporationName": "ファーストブラザーズ株式会社",
+      "corporationType": "営利法人",
+      "newPosition": "常勤監査役",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r06-files",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "3b004284f9d0e387a2a283c840e24654b04bfa27f0bb85820c5feaa086330aa7",
+      "dedupeKey": "e9370b7652140ccddd3889f380870e8e89526228ec4f4f7f261ea12c841a993a",
+      "personName": "山嵜 祥吾",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "東京地方検察庁検事 併任 法務省刑事局付 兼 訟務局付",
+      "retirementDate": "2023-12-28",
+      "reemploymentDate": "2024-01-15",
+      "waitingDays": 18,
+      "corporationName": "弁護士法人上原総合法律事務所",
+      "corporationType": "弁護士法人",
+      "newPosition": "弁護士",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r06-files",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "5fd85385ce0ca7b905b950358f2e6cd528df33c18d40084ba08148ea381c3c63",
+      "dedupeKey": "f210d9bd47e58e8835d6b82b294315a113264b98e84eecda8f291591e96bfd73",
+      "personName": "梶原 真也",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "東京高等検察庁検事",
+      "retirementDate": "2023-12-31",
+      "reemploymentDate": "2024-01-04",
+      "waitingDays": 4,
+      "corporationName": "弁護士法人春田法律事務所",
+      "corporationType": "弁護士法人",
+      "newPosition": "広島オフィス弁護士",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r06-files",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "f30fefdb3a1e3a1616746ec9f07b7660c37f4f8d2042770c3beba044824413df",
+      "dedupeKey": "be497e6ec72df4aa71ffb94f01b3049aae509dc95f18905ccde76e0810f88a59",
+      "personName": "福島 崇之",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "法務総合研究所国際協力部法務教官",
+      "retirementDate": "2023-12-31",
+      "reemploymentDate": "2024-02-01",
+      "waitingDays": 32,
+      "corporationName": "Assegaf Hamzah&Partners法律事務所",
+      "corporationType": "",
+      "newPosition": "外国法弁護士",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r06-files",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type source column was not found and could not be inferred."
+      ]
+    },
+    {
+      "rawId": "0c7b4e98bd56f6f2b52ee63e2452e2ff3a33a9d3d36d2aa06e47332ca7e5c681",
+      "dedupeKey": "8c7d4c4de9cbc40d200db6ab90c06374779485dc43492b661668855cc88920a3",
+      "personName": "金谷 梨紗",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "神戸地方検察庁検事",
+      "retirementDate": "2024-02-01",
+      "reemploymentDate": "2024-04-01",
+      "waitingDays": 60,
+      "corporationName": "中原和之法律事務所",
+      "corporationType": "",
+      "newPosition": "弁護士",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r06-files",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type source column was not found and could not be inferred."
+      ]
+    },
+    {
+      "rawId": "f5d8dad91241624086c41fc5c2594edb345db5482349def2c30a2130292e4f1f",
+      "dedupeKey": "f72144891a40f18d08b28e18489e01ba9309641b78303dba349e4b982f0aef23",
+      "personName": "佐川 雄一",
+      "originMinistry": "法務省",
+      "titleAtRetirement": "神戸地方検察庁検事",
+      "retirementDate": "2024-03-15",
+      "reemploymentDate": "2024-03-18",
+      "waitingDays": 3,
+      "corporationName": "弁護士法人ベリーベスト法律事務所",
+      "corporationType": "弁護士法人",
+      "newPosition": "高松オフィス弁護士",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r06-files",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "d5c55de8e2fd6475e544807aa5f99994861492d3a89c831154d6e126314b0099",
+      "dedupeKey": "6d2b03bcb33a132a90a4425c1fb4686018c6213319a4097cd27465d99d1d0745",
+      "personName": "井上 悟志",
+      "originMinistry": "経済産業省",
+      "titleAtRetirement": "経済産業省大臣官房付",
+      "retirementDate": "2023-12-31",
+      "reemploymentDate": "2024-01-01",
+      "waitingDays": 1,
+      "corporationName": "学校法人東京理科大学",
+      "corporationType": "学校法人",
+      "newPosition": "東京理科大学経営学研究科技術経営専攻教授",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r06-files",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "d1575d097403805a53ec5676e1c30ee73a25b63283e803dcbcca433c3e0490dd",
+      "dedupeKey": "8e69319a381735463df6ec0abc96a2d3dbfe48e306b4c8628327652a576b2421",
+      "personName": "芦田 真太郎",
+      "originMinistry": "国土交通省",
+      "titleAtRetirement": "国土交通省航空局航空ネットワーク部航空ネットワーク企画課空港経営改革推進室専門官",
+      "retirementDate": "2023-12-31",
+      "reemploymentDate": "2024-01-01",
+      "waitingDays": 1,
+      "corporationName": "東急株式会社",
+      "corporationType": "営利法人",
+      "newPosition": "社会インフラ事業部課長級",
+      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
+      "sourceId": "cabinet-office-106-25-1-r06-files",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
+      "publishedDate": "",
+      "flags": {
+        "nextDay": false,
+        "within30Days": true
+      },
+      "status": "draft",
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    }
+  ]
+}

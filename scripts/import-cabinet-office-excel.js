@@ -36,7 +36,10 @@ function usage() {
       "  --file   Local .xlsx or .xls file to import (required)",
       `  --limit  Maximum records to write (default: ${DEFAULT_LIMIT})`,
       "  --all    Import every data row",
+      "  --output          Output JSON path (optional)",
+      "  --source-id       Source identifier stored in each record",
       "  --source-url      Source URL stored in each record",
+      "  --source-title    Source title stored in each record",
       "  --published-date  Publication date stored in each record (YYYY-MM-DD)",
     ].join("\n"),
   );
@@ -45,7 +48,9 @@ function usage() {
 function parseArguments(argv) {
   const options = {
     limit: DEFAULT_LIMIT,
+    sourceId: "",
     sourceUrl: "",
+    sourceTitle: "",
     publishedDate: "",
   };
 
@@ -60,8 +65,17 @@ function parseArguments(argv) {
       index += 1;
     } else if (argument === "--all") {
       options.all = true;
+    } else if (argument === "--output") {
+      options.output = argv[index + 1];
+      index += 1;
+    } else if (argument === "--source-id") {
+      options.sourceId = argv[index + 1] ?? "";
+      index += 1;
     } else if (argument === "--source-url") {
       options.sourceUrl = argv[index + 1] ?? "";
+      index += 1;
+    } else if (argument === "--source-title") {
+      options.sourceTitle = argv[index + 1] ?? "";
       index += 1;
     } else if (argument === "--published-date") {
       options.publishedDate = argv[index + 1] ?? "";
@@ -271,7 +285,7 @@ function inferOriginMinistry(titleAtRetirement) {
   if (/^消防庁/.test(titleAtRetirement)) return "総務省";
   if (/^(?:独立行政法人統計センター)/.test(titleAtRetirement)) return "総務省";
   if (
-    /^(?:最高検察庁|.+高等検察庁|.+地方検察庁|.+区検察庁|.+刑務所|.+拘置所|.+少年刑務所|.+少年鑑別所|.+少年院|法務局|.+法務局)/.test(
+    /^(?:最高検察庁|.+高等検察庁|.+地方検察庁|.+区検察庁|.+刑務所|.+拘置所|.+少年刑務所|.+少年鑑別所|.+少年院|法務局|.+法務局|国立武蔵野学院|.+地方更生保護委員会|法務総合研究所)/.test(
       titleAtRetirement,
     )
   ) {
@@ -286,7 +300,7 @@ function inferOriginMinistry(titleAtRetirement) {
   }
   if (/^科学技術・学術政策研究所/.test(titleAtRetirement)) return "文部科学省";
   if (
-    /^(?:国立障害者リハビリテーションセンター|.+検疫所|国立社会保障・人口問題研究所|国立.+療養所|国立感染症研究所)/.test(
+    /^(?:国立障害者リハビリテーションセンター|.+検疫所|国立社会保障・人口問題研究所|国立.+療養所|国立感染症研究所|国立医薬品食品衛生研究所)/.test(
       titleAtRetirement,
     )
   ) {
@@ -299,7 +313,7 @@ function inferOriginMinistry(titleAtRetirement) {
     return "経済産業省";
   }
   if (
-    /^(?:海上保安庁|運輸安全委員会|海難審判所|国土技術政策総合研究所|.+運輸局)/.test(
+    /^(?:海上保安庁|運輸安全委員会|海難審判所|国土技術政策総合研究所|.+運輸局|神戸運輸監理部)/.test(
       titleAtRetirement,
     )
   ) {
@@ -370,6 +384,7 @@ function convertRow(
   row,
   columnMap,
   sourceTitle,
+  sourceId,
   sourceUrl,
   publishedDate,
 ) {
@@ -453,6 +468,7 @@ function convertRow(
     corporationType,
     newPosition,
     sourceTitle,
+    sourceId,
     sourceUrl,
     publishedDate,
     flags: {
@@ -516,7 +532,14 @@ function localDateParts(date = new Date()) {
 }
 
 function importExcel(filePath, options) {
-  const { limit, sourceUrl, publishedDate } = options;
+  const {
+    limit,
+    output,
+    sourceId,
+    sourceUrl,
+    sourceTitle: configuredSourceTitle,
+    publishedDate,
+  } = options;
   const resolvedFilePath = path.resolve(filePath);
   if (!fs.existsSync(resolvedFilePath)) {
     throw new Error(`Excel file not found: ${resolvedFilePath}`);
@@ -571,7 +594,7 @@ function importExcel(filePath, options) {
 
   const { name: sheetName, rows, headerRowIndex } = selectedSheet;
   const columnMap = buildColumnMap(rows[headerRowIndex]);
-  const sourceTitle = path.basename(resolvedFilePath);
+  const sourceTitle = configuredSourceTitle || path.basename(resolvedFilePath);
   const records = rows
     .slice(headerRowIndex + 1)
     .filter((row) => isDataRow(row, columnMap))
@@ -581,6 +604,7 @@ function importExcel(filePath, options) {
         row,
         columnMap,
         sourceTitle,
+        sourceId,
         sourceUrl,
         publishedDate,
       ),
@@ -593,22 +617,40 @@ function importExcel(filePath, options) {
   validateRecords(records);
 
   const today = localDateParts();
-  const output = {
+  const outputDocument = {
     sourceType: SOURCE_TYPE,
     status: "draft",
     createdAt: today.iso,
     limit: limit ?? records.length,
+    sources: sourceId
+      ? [
+          {
+            id: sourceId,
+            title: sourceTitle,
+            publisher: "内閣官房",
+            url: sourceUrl,
+            publishedAt: publishedDate,
+            memo: "国家公務員法第106条の25第1項等に基づく報告",
+          },
+        ]
+      : [],
     records,
   };
   const outputDirectory = path.join(process.cwd(), "data", "draft");
   const outputSuffix = limit === null ? "all" : `sample${limit}`;
-  const outputPath = path.join(
-    outputDirectory,
-    `${today.compact}_cabinet-office_reemployment_${outputSuffix}.json`,
-  );
+  const outputPath = output
+    ? path.resolve(output)
+    : path.join(
+        outputDirectory,
+        `${today.compact}_cabinet-office_reemployment_${outputSuffix}.json`,
+      );
 
-  fs.mkdirSync(outputDirectory, { recursive: true });
-  fs.writeFileSync(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(
+    outputPath,
+    `${JSON.stringify(outputDocument, null, 2)}\n`,
+    "utf8",
+  );
 
   console.log(`Imported ${records.length} draft record(s) from sheet "${sheetName}".`);
   console.log(`Output: ${path.relative(process.cwd(), outputPath)}`);

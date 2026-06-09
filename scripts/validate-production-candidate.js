@@ -2,11 +2,22 @@
 const fs = require("node:fs");
 const path = require("node:path");
 
-const directory = path.join(
-  process.cwd(),
-  "data",
-  "draft",
-  "production-candidate",
+function parseArguments(argv) {
+  const options = {};
+  for (let index = 0; index < argv.length; index += 1) {
+    if (argv[index] === "--dir") {
+      options.directory = argv[index + 1];
+      index += 1;
+    } else {
+      throw new Error(`Unknown argument: ${argv[index]}`);
+    }
+  }
+  return options;
+}
+
+const options = parseArguments(process.argv.slice(2));
+const directory = path.resolve(
+  options.directory ?? path.join("data", "draft", "production-candidate"),
 );
 
 function readJson(fileName) {
@@ -39,6 +50,7 @@ function validate() {
     "corporations.json",
     "rankings.json",
     "meta.json",
+    "sources.json",
   ];
   requiredFiles.forEach((fileName) => {
     if (!fs.existsSync(path.join(directory, fileName))) {
@@ -52,12 +64,14 @@ function validate() {
   const corporations = readJson("corporations.json");
   const rankings = readJson("rankings.json");
   const meta = readJson("meta.json");
+  const sources = readJson("sources.json");
 
   if (!Array.isArray(records)) errors.push("records.json must contain an array.");
   if (!Array.isArray(persons)) errors.push("persons.json must contain an array.");
   if (!Array.isArray(corporations)) {
     errors.push("corporations.json must contain an array.");
   }
+  if (!Array.isArray(sources)) errors.push("sources.json must contain an array.");
   if (errors.length) return errors;
 
   duplicates(records.map((record) => record.rawId)).forEach((value) =>
@@ -77,6 +91,7 @@ function validate() {
   const corporationSlugs = new Set(
     corporations.map((corporation) => corporation.slug),
   );
+  const sourceIds = new Set(sources.map((source) => source.id));
 
   records.forEach((record, index) => {
     const prefix = `records[${index}]`;
@@ -106,6 +121,9 @@ function validate() {
     if (!corporationSlugs.has(record.corporationSlug)) {
       errors.push(`${prefix}.corporationSlug references an unknown corporation.`);
     }
+    if (!sourceIds.has(record.sourceId)) {
+      errors.push(`${prefix}.sourceId references an unknown source.`);
+    }
   });
 
   persons.forEach((person, index) => {
@@ -129,6 +147,11 @@ function validate() {
     if (!corporationSlugs.has(person.corporationSlug)) {
       errors.push(`${prefix}.corporationSlug references an unknown corporation.`);
     }
+    for (const sourceId of person.sources ?? []) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(`${prefix}.sources references an unknown source.`);
+      }
+    }
   });
 
   corporations.forEach((corporation, index) => {
@@ -148,6 +171,20 @@ function validate() {
     ].forEach((value, fieldIndex) => {
       if (!isFiniteNumber(value)) {
         errors.push(`${prefix} numeric field ${fieldIndex} must be a number.`);
+      }
+    });
+    for (const sourceId of corporation.sources ?? []) {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(`${prefix}.sources references an unknown source.`);
+      }
+    }
+  });
+
+  sources.forEach((source, index) => {
+    const prefix = `sources[${index}]`;
+    ["id", "title", "publisher", "url"].forEach((field) => {
+      if (!isNonEmptyString(source[field])) {
+        errors.push(`${prefix}.${field} is required.`);
       }
     });
   });
