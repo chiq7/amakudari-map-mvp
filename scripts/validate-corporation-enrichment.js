@@ -26,12 +26,6 @@ function validate() {
   if (!Array.isArray(candidate.records)) {
     return ["records must contain an array."];
   }
-  if (candidate.records.length !== production.length) {
-    errors.push(
-      `Candidate count ${candidate.records.length} must equal production corporation count ${production.length}.`,
-    );
-  }
-
   const productionSlugs = new Set(production.map((item) => item.slug));
   const seenSlugs = new Set();
   const seenCorporateNumbers = new Set();

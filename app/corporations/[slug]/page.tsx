@@ -46,6 +46,42 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         <HighlightStatCard label="退職翌日再就職" value={corporation.nextDay} unit="件" />
       </section>
 
+      {corporation.basicInfo && (
+        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+          <h2 className="text-xl font-bold text-primary">法人基本情報</h2>
+          <p className="mt-1 text-sm text-on-surface-variant">
+            国税庁 法人番号公表サイトに基づく法人基本情報です。
+          </p>
+          <dl className="mt-5 grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
+            {[
+              ["法人番号", corporation.basicInfo.corporateNumber],
+              ["正式名称", corporation.basicInfo.officialName],
+              ["所在地", corporation.basicInfo.registeredAddress],
+              ["都道府県", corporation.basicInfo.prefecture],
+              ["市区町村", corporation.basicInfo.city],
+            ].map(([label, value]) => (
+              <div key={label}>
+                <dt className="text-sm font-semibold text-on-surface-variant">{label}</dt>
+                <dd className="mt-1 text-base text-primary">{value}</dd>
+              </div>
+            ))}
+            <div>
+              <dt className="text-sm font-semibold text-on-surface-variant">出典</dt>
+              <dd className="mt-1">
+                <a
+                  href={corporation.basicInfo.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold text-secondary hover:underline"
+                >
+                  {corporation.basicInfo.sourceName}
+                </a>
+              </dd>
+            </div>
+          </dl>
+        </section>
+      )}
+
       <section className="flex flex-col gap-4">
         <h2 className="text-2xl font-bold text-primary">公表再就職者一覧</h2>
         <div className="overflow-x-auto rounded-lg border border-outline-variant bg-surface-container-lowest">

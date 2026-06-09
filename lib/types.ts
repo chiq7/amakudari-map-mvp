@@ -18,6 +18,17 @@ export interface CorporationData {
   relatedPersons: string[];
   sources: string[];
   topics: string[];
+  basicInfo?: CorporationBasicInfo;
+}
+
+export interface CorporationBasicInfo {
+  corporateNumber: string;
+  officialName: string;
+  registeredAddress: string;
+  prefecture: string;
+  city: string;
+  sourceName: string;
+  sourceUrl: string;
 }
 
 export interface PersonData {
@@ -119,6 +130,7 @@ export interface Corporation {
   topics: string[];
   relatedPersons: string[];
   sources: string[];
+  basicInfo?: CorporationBasicInfo;
 }
 
 export interface Person {

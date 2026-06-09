@@ -82,6 +82,7 @@ function validateData() {
   const sourceIds = new Set(sources.map((source) => source.id));
   const corporationSlugSet = new Set(corporationSlugs);
   const personSlugSet = new Set(personSlugs);
+  const corporateNumbers = [];
 
   for (const slug of findDuplicates(corporationSlugs)) {
     errors.push(`Duplicate corporation slug: ${slug}`);
@@ -128,7 +129,32 @@ function validateData() {
     for (const sourceId of corporation.sources ?? []) {
       if (!sourceIds.has(sourceId)) errors.push(`${prefix}.sources references unknown source: ${sourceId}`);
     }
+
+    if (corporation.basicInfo !== undefined) {
+      const basicInfo = corporation.basicInfo;
+      const requiredBasicInfoStrings = [
+        ["basicInfo.corporateNumber", basicInfo?.corporateNumber],
+        ["basicInfo.officialName", basicInfo?.officialName],
+        ["basicInfo.registeredAddress", basicInfo?.registeredAddress],
+        ["basicInfo.prefecture", basicInfo?.prefecture],
+        ["basicInfo.city", basicInfo?.city],
+        ["basicInfo.sourceName", basicInfo?.sourceName],
+        ["basicInfo.sourceUrl", basicInfo?.sourceUrl],
+      ];
+      for (const [field, value] of requiredBasicInfoStrings) {
+        if (!isNonEmptyString(value)) errors.push(`${prefix}.${field} is required.`);
+      }
+      if (!/^\d{13}$/.test(basicInfo?.corporateNumber ?? "")) {
+        errors.push(`${prefix}.basicInfo.corporateNumber must contain 13 digits.`);
+      } else {
+        corporateNumbers.push(basicInfo.corporateNumber);
+      }
+    }
   });
+
+  for (const corporateNumber of findDuplicates(corporateNumbers)) {
+    errors.push(`Duplicate corporation basicInfo.corporateNumber: ${corporateNumber}`);
+  }
 
   persons.forEach((person, index) => {
     const prefix = `persons.json[${index}]`;
