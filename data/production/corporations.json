@@ -1,120 +1,2831 @@
 [
   {
-    "slug": "public-policy-research",
-    "name": "一般財団法人 公共政策総合研究所",
-    "type": "一般財団法人",
-    "prefecture": "東京都",
+    "slug": "corporation-e03e9788f561e8dc",
+    "name": "日本電気株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
     "ministry": {
-      "name": "国土交通省",
-      "count": 18
+      "name": "内閣官房",
+      "count": 1
     },
     "counts": {
-      "publicRecords": 42,
-      "nextDay": 12,
-      "within30Days": 25
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
     },
     "waitingDays": {
-      "average": 45
+      "average": 1
     },
     "relatedPersons": [
-      "sato-kenichi",
-      "tanaka-hiroshi",
-      "watanabe-makoto",
-      "ito-yuji"
+      "person-706e15081556fe4f"
     ],
     "sources": [
-      "cabinet-office-2023",
-      "mlit-reemployment",
-      "meti-reemployment"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [
-      "再就職情報",
-      "公益法人",
-      "官民人材交流センター"
-    ]
+    "topics": []
   },
   {
-    "slug": "infrastructure-development",
-    "name": "株式会社 日本インフラ整備機構",
-    "type": "株式会社",
-    "prefecture": "東京都",
+    "slug": "corporation-ef433625144affa7",
+    "name": "Mercer Japan Ltd.",
+    "type": "営利法人",
+    "prefecture": "不明",
     "ministry": {
-      "name": "国土交通省",
-      "count": 16
+      "name": "人事院",
+      "count": 1
     },
     "counts": {
-      "publicRecords": 35,
-      "nextDay": 14,
-      "within30Days": 22
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
     },
     "waitingDays": {
-      "average": 12
+      "average": 1
     },
-    "relatedPersons": [],
-    "sources": [
-      "cabinet-office-2023",
-      "mlit-reemployment"
+    "relatedPersons": [
+      "person-2e2a5504f9e7cedb"
     ],
-    "topics": [
-      "インフラ",
-      "公共事業",
-      "再就職情報"
-    ]
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
   },
   {
-    "slug": "international-technology-exchange",
-    "name": "公益財団法人 国際技術交流協会",
-    "type": "公益財団法人",
-    "prefecture": "大阪府",
+    "slug": "corporation-422fcd4b721a97db",
+    "name": "国立大学法人一橋大学",
+    "type": "国立大学法人",
+    "prefecture": "不明",
     "ministry": {
-      "name": "経済産業省",
-      "count": 12
+      "name": "内閣府",
+      "count": 1
     },
     "counts": {
-      "publicRecords": 28,
-      "nextDay": 8,
-      "within30Days": 15
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-cb9ecf95b8330edd"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-e567a3b6d3515e87",
+    "name": "UBS SuMi TRUSTウェルス・マネジメント株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "内閣府",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-923c8eb18236e4ae"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-3434f15cf98a7746",
+    "name": "医療用医薬品製造販売業公正取引協議会",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "公正取引委員会",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-62ca83dc9175d7a5"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-e1648d16c37b3462",
+    "name": "株式会社CONNECT",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "警察庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-9665ec2c44bc6bd3"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-da2514eef391144e",
+    "name": "学校法人国士舘",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "警察庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-d87a1385b2397845"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-83ba7ab290ca473c",
+    "name": "一般社団法人日本資金決済業協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "金融庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 16
+    },
+    "relatedPersons": [
+      "person-e686f8d6ee993bed"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-8e026326c8c73f9b",
+    "name": "有限責任あずさ監査法人",
+    "type": "監査法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "金融庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 20
+    },
+    "relatedPersons": [
+      "person-053139775cdd784f"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-1b9ba40fde5710ba",
+    "name": "PwCコンサルティング合同会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "金融庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
     },
     "waitingDays": {
       "average": 32
     },
-    "relatedPersons": [],
-    "sources": [
-      "cabinet-office-2023",
-      "meti-reemployment"
+    "relatedPersons": [
+      "person-db7620c558034204"
     ],
-    "topics": [
-      "技術交流",
-      "公益法人",
-      "再就職情報"
-    ]
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
   },
   {
-    "slug": "urban-renaissance",
-    "name": "独立行政法人 都市再生機構",
-    "type": "独立行政法人",
-    "prefecture": "東京都",
+    "slug": "corporation-d128581eec5ff70e",
+    "name": "一般財団法人全国農林漁業団体共済会",
+    "type": "一般財団法人",
+    "prefecture": "不明",
     "ministry": {
-      "name": "国土交通省",
-      "count": 11
+      "name": "金融庁",
+      "count": 1
     },
     "counts": {
-      "publicRecords": 24,
-      "nextDay": 6,
-      "within30Days": 12
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
     },
     "waitingDays": {
-      "average": 45
+      "average": 1
     },
-    "relatedPersons": [],
-    "sources": [
-      "cabinet-office-2023",
-      "mlit-reemployment"
+    "relatedPersons": [
+      "person-9dab5daa7a4a2e55"
     ],
-    "topics": [
-      "都市再生",
-      "独立行政法人",
-      "再就職情報"
-    ]
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-f17458638467b979",
+    "name": "日本郵政株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "デジタル庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-cdc91df0d85498cb"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-0a3ac944abcf469c",
+    "name": "株式会社SHIFT",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "デジタル庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-3faad66bf6fdb81c"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-62cd4d96eea932a7",
+    "name": "株式会社かんぽ生命保険",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "デジタル庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-64f7c8753be0c8ba"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-2f9bb2f47094bead",
+    "name": "一般社団法人日本インタラクティブ広告協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "総務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-e41be88b50fbcafe"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-bf88da389e6bbbbd",
+    "name": "株式会社スマートビジョンロジスティクス",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "総務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-72497c8c82f2bb49"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-abd325e7edcf550f",
+    "name": "学校法人東京理科大学",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "総務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-8521aa4d1743ba3a"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-ccf1b357fdd4bac7",
+    "name": "医療法人社団相光会",
+    "type": "医療法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-0b07a8cdad2d9c89"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-6d91bd2821b9ea71",
+    "name": "社会福祉法人恩賜財団済生会",
+    "type": "社会福祉法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-0b07a8cdad2d9c89"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-c0e38542357088c1",
+    "name": "パナソニックオペレーショナルエクセレンス株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-cc6a2f8f41ab876e"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-e666aa92add9aa73",
+    "name": "アトム法律事務所弁護士法人",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 32
+    },
+    "relatedPersons": [
+      "person-f204d7332eee03f6"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-9a275eef566c170a",
+    "name": "弁護士法人ウィステリア法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-9565d81c26f38b53"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-d4d329708660c891",
+    "name": "弁護士法人東京国際法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-112624443738f6aa"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-d70e5c64dcb5793a",
+    "name": "弁護士法人森・濱田松本法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-8d7ccb8e21ce6055"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-597b59be862d6f97",
+    "name": "アイフル株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-4d034b8efbd1829a"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-36561f4cddba908f",
+    "name": "八雲法律事務所",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-afb7e6639841d67f"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-d56862c846b1031a",
+    "name": "株式会社アガルートホールディングス",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 41
+    },
+    "relatedPersons": [
+      "person-97ef572373447d76"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-63393aec6de8b34a",
+    "name": "弁護士法人瓜生・糸賀法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-851f3d75b6097c83"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-be04e0192b8e9695",
+    "name": "弁護士法人シティユーワ法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-8ed9d19601aa2f80"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-6a0604f14df9f027",
+    "name": "株式会社NSD",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-0ff2b9b3df40c8fc"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-a23302a67802cb03",
+    "name": "パナソニックインダストリー株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-1aec845e53eb60da"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-1b34b2c2bdd61380",
+    "name": "アイエイ弁護士法人",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 31
+    },
+    "relatedPersons": [
+      "person-19c93a7e237fc310"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-97bdd6cbe8017306",
+    "name": "株式会社ONODERA USER RUN",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 31
+    },
+    "relatedPersons": [
+      "person-c79332c4d9fcee95"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-5d5eece61494fa6c",
+    "name": "弁護士法人ブナの森法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-029f43f32f511ef8"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-94971fb9c303f424",
+    "name": "学校法人光華女子学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-549d21f13a3a98e1"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-c7cffa216a59b04f",
+    "name": "弁護士法人響",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-343dfd91902e7bbe"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-cd6a91ece0c971e2",
+    "name": "弁護士法人第一法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-08e5732317e54aee"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-0fef83885c4a0112",
+    "name": "吉本興業ホールディングス株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 11
+    },
+    "relatedPersons": [
+      "person-f612744616ca40af"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-87b2bac9c0b05551",
+    "name": "渥美坂井法律事務所弁護士法人",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-1e0478d13919de9e"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-60809b45d97eee2c",
+    "name": "更生保護法人日新協会",
+    "type": "更生保護法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 4
+    },
+    "relatedPersons": [
+      "person-a6afe31a6700afe3"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-8f36ecd2e8c591ce",
+    "name": "学校法人花園学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-568e86e4efa15928"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-852d31eb77873884",
+    "name": "弁護士法人西村あさひ法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-84cc2a9aa89f278f"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-cd40e7a107656d28",
+    "name": "株式会社大創産業",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-149e0dbd98810e8f"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-19e8222871a2f704",
+    "name": "株式会社リクルート",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-cd3a95d268ab2ff3"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-33db9318c3e1fa57",
+    "name": "株式会社ユニバレオ",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-e01abfa892f4ab21"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-bd1f52e49a0d4581",
+    "name": "学校法人天理大学",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "外務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-3a2638e68ae3a773"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-da0285b9b6f3c143",
+    "name": "日本酒類販売株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 87
+    },
+    "relatedPersons": [
+      "person-6928ccaac10a336f"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-a15aca39149090f1",
+    "name": "株式会社四銀地域経済研究所",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-297876842834090a"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-7e2865a91b29e89a",
+    "name": "株式会社四国銀行",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-297876842834090a"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-a1a725b5f2afc38d",
+    "name": "一般社団法人大阪府信用組合協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-edefd9521ef9986f"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-8bedac202ab4bff4",
+    "name": "大川信用金庫",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 7
+    },
+    "relatedPersons": [
+      "person-c233ec070e9e3295"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-05ea94e1ee7315af",
+    "name": "一般社団法人静岡県信用金庫協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 15
+    },
+    "relatedPersons": [
+      "person-ce695800a1017a8b"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-4e67bf8c2cd447e7",
+    "name": "一般社団法人東海地区信用金庫協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 31
+    },
+    "relatedPersons": [
+      "person-d80f3ef323954844"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-5801cf2c3b4f6ec1",
+    "name": "株式会社東海信金ビジネス",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 31
+    },
+    "relatedPersons": [
+      "person-d80f3ef323954844"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-1f5c239de0b78cd8",
+    "name": "滋賀中央信用金庫",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 92
+    },
+    "relatedPersons": [
+      "person-7efbf76f12ceed27"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-078b8e30ed17fd58",
+    "name": "鹿児島相互信用金庫",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 92
+    },
+    "relatedPersons": [
+      "person-1fe2a555bac89b41"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-5e8fc8079869ace3",
+    "name": "一般社団法人第二種金融商品取引業協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 31
+    },
+    "relatedPersons": [
+      "person-e727ac2caae8248f"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-d94c98fbb46a432b",
+    "name": "大和信用金庫",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-ad5220869337b8e9"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-5139b1f417c6c361",
+    "name": "水沢信用金庫",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 31
+    },
+    "relatedPersons": [
+      "person-febe125c78c09889"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-18351298ebe5922b",
+    "name": "株式会社しんきん総合サービス",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 10
+    },
+    "relatedPersons": [
+      "person-75306da63fc1706e"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-f04cffb28be960f3",
+    "name": "尼崎信用金庫",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-f3d183f6005d88ed"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-0169181d8e040028",
+    "name": "税理士法人チェスター",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-c59906a89ec3c9eb"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-bead0cc15a164ac9",
+    "name": "公益社団法人旭納税協会",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 22
+    },
+    "relatedPersons": [
+      "person-7ff9e86e6274a511"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-7f132a71d61c3d90",
+    "name": "公益社団法人和田山納税協会",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 22
+    },
+    "relatedPersons": [
+      "person-a5401bd76cb2f162"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-78329eee5945eb13",
+    "name": "公益社団法人枚方納税協会",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 22
+    },
+    "relatedPersons": [
+      "person-e23c924e72027b1a"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-3fca79b7d66671aa",
+    "name": "公益社団法人吹田納税協会",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 22
+    },
+    "relatedPersons": [
+      "person-13da649584e6f464"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-fe5c27527a12c96f",
+    "name": "公益社団法人下京納税協会",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 22
+    },
+    "relatedPersons": [
+      "person-4adf7b6b40a3c29a"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-f314dc6387542035",
+    "name": "公益社団法人相生納税協会",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 22
+    },
+    "relatedPersons": [
+      "person-eb0a0bbcf7aeeab2"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-624e8db45952d725",
+    "name": "公益社団法人東大阪納税協会",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 53
+    },
+    "relatedPersons": [
+      "person-1c803ae1b9007261"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-9bfab7141e039e5c",
+    "name": "かがやき税理士法人",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 22
+    },
+    "relatedPersons": [
+      "person-f72ad9f7262ae41e"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-399f4748f1e88f0f",
+    "name": "公益社団法人兵庫納税協会",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 26
+    },
+    "relatedPersons": [
+      "person-e71d3d0774126a36"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-56c743871d87e006",
+    "name": "公益社団法人今津納税協会",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 53
+    },
+    "relatedPersons": [
+      "person-5a24e3679daf2fe9"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-00a8ec66d925cefc",
+    "name": "辻・本郷税理士法人",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 37
+    },
+    "relatedPersons": [
+      "person-e778d7707969b0f1"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-51629f45fe171057",
+    "name": "税理士法人小島税理士オフィス",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 47
+    },
+    "relatedPersons": [
+      "person-56d1e8650d8b7267"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-5f83a4a60101ded5",
+    "name": "公益社団法人堺納税協会",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 22
+    },
+    "relatedPersons": [
+      "person-e7e10811195861a1"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-3ce293e3eb6f5b56",
+    "name": "筑後信用金庫",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-7558feb270f067cb"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-b709218686bcad4a",
+    "name": "公立大学法人福井県立大学",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-d67853153d541578"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-1588636ec0d018b8",
+    "name": "株式会社ウィザス",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "文部科学省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 2
+    },
+    "relatedPersons": [
+      "person-5a2fddf7233f571f"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-a7d5d36c642025a5",
+    "name": "学校法人沖縄科学技術大学院大学学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "文部科学省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-2cf1c9c5e837c90e"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-ef880b69b1b05857",
+    "name": "医療法人社団東光会戸田中央リハビリテーション病院",
+    "type": "医療法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "厚生労働省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-a67c5a1a2157c2c8"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-c603b6dbb94eb60d",
+    "name": "公立大学法人名古屋市立大学",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "厚生労働省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-973251d0142d6454"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-1266b131bd4ed8aa",
+    "name": "学校法人城西大学",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "厚生労働省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-dbc2ed2451153b4c"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-32034cb736d95fde",
+    "name": "医療法人社団あしたば会富士在宅診療所",
+    "type": "医療法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "厚生労働省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-148d60ac8f750887"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-4b5d536d1df51698",
+    "name": "国立健康危機管理研究機構",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "厚生労働省",
+      "count": 2
+    },
+    "counts": {
+      "publicRecords": 2,
+      "nextDay": 0,
+      "within30Days": 2
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-70dd151b5c4a77f3",
+      "person-59d10f48d9e7a9ae"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-3b7391ca417a3fec",
+    "name": "一般社団法人全国木材組合連合会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "農林水産省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 31
+    },
+    "relatedPersons": [
+      "person-98172b7ea2f2528f"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-e71d8d6350fbc74a",
+    "name": "一般社団法人日本森林技術協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "農林水産省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-670841032417813e"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-786cf53338862538",
+    "name": "学校法人加計学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "厚生労働省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-f8245ad60ecf8e97"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-0797ac4c7725544f",
+    "name": "一般財団法人日本木材総合情報センター",
+    "type": "一般財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "農林水産省",
+      "count": 3
+    },
+    "counts": {
+      "publicRecords": 3,
+      "nextDay": 0,
+      "within30Days": 3
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-c6c5b895488e7aee",
+      "person-344da3b532d61b2a",
+      "person-99c256667cbdc2eb"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-e9a10f20167a62e6",
+    "name": "一般社団法人日本木材輸出振興協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "農林水産省",
+      "count": 2
+    },
+    "counts": {
+      "publicRecords": 2,
+      "nextDay": 0,
+      "within30Days": 2
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-344da3b532d61b2a",
+      "person-99c256667cbdc2eb"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-f839081c87d5561e",
+    "name": "公益財団法人日本住宅・木材技術センター",
+    "type": "公益財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "農林水産省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-6807ef034564d586"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-c1e234631f32ddb7",
+    "name": "弁理士法人第一国際特許事務所",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 91
+    },
+    "relatedPersons": [
+      "person-f1e17e96764e3afa"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-67961c0304729668",
+    "name": "森・濱田松本法律事務所",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-2bb8dead49438581"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-cb81d513eeafab21",
+    "name": "トヨタ自動車株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-0afde729a238ec95"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-34cb1e3996452ec7",
+    "name": "株式会社ツガミ",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-52ff2a4059e36a01"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-7939cf8cb15724a1",
+    "name": "READYFOR株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-073f3aab1b93ab27"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-79b5373b65e3ff2f",
+    "name": "国立大学法人大阪大学",
+    "type": "国立大学法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-f266a8544b37d5b3"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-a57bf773653fc7f8",
+    "name": "国立大学法人東京大学",
+    "type": "国立大学法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-ec89fec3c55c9ffb"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-4c1ca410f9da3957",
+    "name": "弁理士法人山王内外特許事務所",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-acb29602c73d7e5b"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-d3dc8445587ebb41",
+    "name": "マツダ株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 3
+    },
+    "relatedPersons": [
+      "person-3cfaf1d714e2e67e"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-0519e1b60bee4e84",
+    "name": "学校法人中村産業学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-57a836248640e12b"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-1e27e65a50a8be26",
+    "name": "一般財団法人日本船舶技術研究協会",
+    "type": "一般財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-db85a248caca4d8a"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-9c275b909e54df61",
+    "name": "広洋海運有限会社",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-257afb1d4c462565"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-cfd7f487ee8992e1",
+    "name": "コスモエコパワー株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-98a53d3cbf8b48f1"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-1f52916c5d7de408",
+    "name": "西播商事株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-ef083461a80e6fc5"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-777a212b2a2b1dfd",
+    "name": "特定非営利活動法人ピースウィンズ・ジャパン",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 5
+    },
+    "relatedPersons": [
+      "person-6619eb63147fd9a5"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-8b694954b805ee30",
+    "name": "公益財団法人日本船員雇用促進センター",
+    "type": "公益財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 31
+    },
+    "relatedPersons": [
+      "person-f5b54a35d61c4754"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-891463cf86adef3b",
+    "name": "国立研究開発法人建築研究所",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-30b07eb66a4a0635"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-cd59be9437edd994",
+    "name": "一般財団法人日本舶用品検定協会",
+    "type": "一般財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-88decd449b26b1ea"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-6e2ce329a271f2e0",
+    "name": "スカイワークスフィルターソリューションズジャパン株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "原子力規制委員会",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-e57ab4ebe27a4d32"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-4efc1bbc3ae2410e",
+    "name": "一般財団法人環境イノベーション情報機構",
+    "type": "一般財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "環境省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-18c8d0455dd86ce9"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-ed9bb6fc87f2cfe5",
+    "name": "公益財団法人廃棄物・3R研究財団",
+    "type": "公益財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "環境省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-3ca782f71e9ca9d5"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-1b6f5678ee61cfd9",
+    "name": "一般財団法人国民公園協会",
+    "type": "一般財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "環境省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-f597c3edd9e0df2b"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-877203d3508dc695",
+    "name": "エヌ・ティ・ティ・インターネット株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "総務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-ed3290bc20f5a7c5"
+    ],
+    "sources": [
+      "cabinet-office-annual-2024"
+    ],
+    "topics": []
   }
 ]

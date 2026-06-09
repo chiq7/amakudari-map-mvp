@@ -1,0 +1,82 @@
+{
+  "totals": {
+    "publicRecords": 1733,
+    "corporations": 860,
+    "nextDayCorporations": 84,
+    "within30DaysCorporations": 248
+  },
+  "rankings": {
+    "publicRecords": [
+      {
+        "corporationSlug": "public-policy-research",
+        "value": 42
+      },
+      {
+        "corporationSlug": "infrastructure-development",
+        "value": 35
+      },
+      {
+        "corporationSlug": "international-technology-exchange",
+        "value": 28
+      },
+      {
+        "corporationSlug": "urban-renaissance",
+        "value": 24
+      }
+    ],
+    "nextDay": [
+      {
+        "corporationSlug": "infrastructure-development",
+        "value": 14
+      },
+      {
+        "corporationSlug": "public-policy-research",
+        "value": 12
+      },
+      {
+        "corporationSlug": "international-technology-exchange",
+        "value": 8
+      },
+      {
+        "corporationSlug": "urban-renaissance",
+        "value": 6
+      }
+    ],
+    "within30Days": [
+      {
+        "corporationSlug": "public-policy-research",
+        "value": 25
+      },
+      {
+        "corporationSlug": "infrastructure-development",
+        "value": 22
+      },
+      {
+        "corporationSlug": "international-technology-exchange",
+        "value": 15
+      },
+      {
+        "corporationSlug": "urban-renaissance",
+        "value": 12
+      }
+    ],
+    "shortestAverageWaitingDays": [
+      {
+        "corporationSlug": "infrastructure-development",
+        "value": 12
+      },
+      {
+        "corporationSlug": "international-technology-exchange",
+        "value": 32
+      },
+      {
+        "corporationSlug": "public-policy-research",
+        "value": 45
+      },
+      {
+        "corporationSlug": "urban-renaissance",
+        "value": 45
+      }
+    ]
+  }
+}

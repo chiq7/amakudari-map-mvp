@@ -233,7 +233,7 @@ function generateCandidate(draftFile) {
     corporationCount: corporations.length,
     personCount: persons.length,
     rankingCount: Object.keys(rankings.rankings).length,
-    note: "人間確認前の候補データ。data/productionには未反映。",
+    note: "令和6年度公表資料から生成。元府省庁と法人種別の一部は名称から推定。",
   };
 
   writeJson(outputDirectory, "records.json", records);

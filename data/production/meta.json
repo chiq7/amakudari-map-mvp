@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-06-08",
-  "sourceDescription": "政府・各省庁等の公表資料に基づくサンプル静的データ",
-  "productionRecordCount": 4,
-  "corporationCount": 4,
-  "personCount": 4,
+  "lastUpdated": "2026-06-09",
+  "sourceDescription": "内閣官房の国家公務員再就職状況年度公表Excelから生成したproduction候補",
+  "productionRecordCount": 117,
+  "corporationCount": 113,
+  "personCount": 112,
   "rankingCount": 4,
-  "note": "Phase 0Aではproduction JSONを表示用データとして利用し、draft/archiveは将来の半自動更新フロー用に予約しています。"
+  "note": "令和6年度公表資料から生成。元府省庁と法人種別の一部は名称から推定。"
 }

@@ -11,7 +11,8 @@
     "generate:content": "node scripts/generate-static-content.js",
     "import:excel": "node scripts/import-cabinet-office-excel.js",
     "generate:candidate": "node scripts/generate-production-candidate.js",
-    "validate:candidate": "node scripts/validate-production-candidate.js"
+    "validate:candidate": "node scripts/validate-production-candidate.js",
+    "apply:candidate": "node scripts/apply-production-candidate.js"
   },
   "dependencies": {
     "next": "14.2.3",
