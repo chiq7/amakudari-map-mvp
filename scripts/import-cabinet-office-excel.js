@@ -8,6 +8,7 @@ const DEFAULT_LIMIT = 10;
 const SOURCE_TYPE = "cabinet-office-annual-excel";
 
 const FIELD_ALIASES = {
+  recordNumber: ["番号", "No.", "No"],
   personName: ["氏名", "名前"],
   originMinistry: [
     "元府省庁",
@@ -34,12 +35,19 @@ function usage() {
       "Options:",
       "  --file   Local .xlsx or .xls file to import (required)",
       `  --limit  Maximum records to write (default: ${DEFAULT_LIMIT})`,
+      "  --all    Import every data row",
+      "  --source-url      Source URL stored in each record",
+      "  --published-date  Publication date stored in each record (YYYY-MM-DD)",
     ].join("\n"),
   );
 }
 
 function parseArguments(argv) {
-  const options = { limit: DEFAULT_LIMIT };
+  const options = {
+    limit: DEFAULT_LIMIT,
+    sourceUrl: "",
+    publishedDate: "",
+  };
 
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
@@ -50,6 +58,14 @@ function parseArguments(argv) {
     } else if (argument === "--limit") {
       options.limit = Number(argv[index + 1]);
       index += 1;
+    } else if (argument === "--all") {
+      options.all = true;
+    } else if (argument === "--source-url") {
+      options.sourceUrl = argv[index + 1] ?? "";
+      index += 1;
+    } else if (argument === "--published-date") {
+      options.publishedDate = argv[index + 1] ?? "";
+      index += 1;
     } else if (argument === "--help" || argument === "-h") {
       options.help = true;
     } else {
@@ -59,6 +75,13 @@ function parseArguments(argv) {
 
   if (!Number.isInteger(options.limit) || options.limit < 1) {
     throw new Error("--limit must be a positive integer.");
+  }
+  if (options.all) options.limit = null;
+  if (
+    options.publishedDate &&
+    !/^\d{4}-\d{2}-\d{2}$/.test(options.publishedDate)
+  ) {
+    throw new Error("--published-date must use YYYY-MM-DD format.");
   }
 
   return options;
@@ -246,6 +269,7 @@ function inferOriginMinistry(titleAtRetirement) {
     return "警察庁";
   }
   if (/^消防庁/.test(titleAtRetirement)) return "総務省";
+  if (/^(?:独立行政法人統計センター)/.test(titleAtRetirement)) return "総務省";
   if (
     /^(?:最高検察庁|.+高等検察庁|.+地方検察庁|.+区検察庁|.+刑務所|.+拘置所|.+少年刑務所|.+少年鑑別所|.+少年院|法務局|.+法務局)/.test(
       titleAtRetirement,
@@ -253,8 +277,33 @@ function inferOriginMinistry(titleAtRetirement) {
   ) {
     return "法務省";
   }
-  if (/^(?:財務総合政策研究所|.+財務局|.+税関|国税庁|.+国税局)/.test(titleAtRetirement)) {
+  if (
+    /^(?:財務総合政策研究所|.+財務局|.+財務支局|.+税関|国税庁|.+国税局)/.test(
+      titleAtRetirement,
+    )
+  ) {
     return "財務省";
+  }
+  if (/^科学技術・学術政策研究所/.test(titleAtRetirement)) return "文部科学省";
+  if (
+    /^(?:国立障害者リハビリテーションセンター|.+検疫所|国立社会保障・人口問題研究所|国立.+療養所|国立感染症研究所)/.test(
+      titleAtRetirement,
+    )
+  ) {
+    return "厚生労働省";
+  }
+  if (/^(?:.+森林管理局|動物検疫所)/.test(titleAtRetirement)) {
+    return "農林水産省";
+  }
+  if (/^(?:特許庁|中小企業庁|.+経済産業局)/.test(titleAtRetirement)) {
+    return "経済産業省";
+  }
+  if (
+    /^(?:海上保安庁|運輸安全委員会|海難審判所|国土技術政策総合研究所|.+運輸局)/.test(
+      titleAtRetirement,
+    )
+  ) {
+    return "国土交通省";
   }
 
   const authorities = [
@@ -283,6 +332,7 @@ function inferOriginMinistry(titleAtRetirement) {
     "経済産業省",
     "国土交通省",
     "環境省",
+    "原子力規制委員会",
     "防衛省",
     "会計検査院",
   ];
@@ -316,7 +366,13 @@ function inferCorporationType(corporationName) {
   return "";
 }
 
-function convertRow(row, columnMap, sourceTitle) {
+function convertRow(
+  row,
+  columnMap,
+  sourceTitle,
+  sourceUrl,
+  publishedDate,
+) {
   const personName = cleanString(rowValue(row, columnMap, "personName"));
   const titleAtRetirement = cleanString(
     rowValue(row, columnMap, "titleAtRetirement"),
@@ -343,7 +399,6 @@ function convertRow(row, columnMap, sourceTitle) {
   );
   const retirementDate = retirementDateResult.value;
   const reemploymentDate = reemploymentDateResult.value;
-  const sourceUrl = "";
   const notes = [
     retirementDateResult.warning,
     reemploymentDateResult.warning,
@@ -399,7 +454,7 @@ function convertRow(row, columnMap, sourceTitle) {
     newPosition,
     sourceTitle,
     sourceUrl,
-    publishedDate: "",
+    publishedDate,
     flags: {
       nextDay: waitingDays === 0,
       within30Days:
@@ -411,6 +466,14 @@ function convertRow(row, columnMap, sourceTitle) {
 }
 
 function isDataRow(row, columnMap) {
+  if (columnMap.recordNumber !== undefined) {
+    const recordNumber = rowValue(row, columnMap, "recordNumber");
+    return (
+      (typeof recordNumber === "number" && Number.isFinite(recordNumber)) ||
+      /^\d+$/.test(cleanString(recordNumber))
+    );
+  }
+
   return Boolean(
     cleanString(rowValue(row, columnMap, "personName")) ||
       cleanString(rowValue(row, columnMap, "corporationName")),
@@ -452,7 +515,8 @@ function localDateParts(date = new Date()) {
   };
 }
 
-function importExcel(filePath, limit) {
+function importExcel(filePath, options) {
+  const { limit, sourceUrl, publishedDate } = options;
   const resolvedFilePath = path.resolve(filePath);
   if (!fs.existsSync(resolvedFilePath)) {
     throw new Error(`Excel file not found: ${resolvedFilePath}`);
@@ -511,8 +575,16 @@ function importExcel(filePath, limit) {
   const records = rows
     .slice(headerRowIndex + 1)
     .filter((row) => isDataRow(row, columnMap))
-    .slice(0, limit)
-    .map((row) => convertRow(row, columnMap, sourceTitle));
+    .slice(0, limit ?? undefined)
+    .map((row) =>
+      convertRow(
+        row,
+        columnMap,
+        sourceTitle,
+        sourceUrl,
+        publishedDate,
+      ),
+    );
 
   if (records.length === 0) {
     throw new Error("No data rows were found below the detected header row.");
@@ -525,13 +597,14 @@ function importExcel(filePath, limit) {
     sourceType: SOURCE_TYPE,
     status: "draft",
     createdAt: today.iso,
-    limit,
+    limit: limit ?? records.length,
     records,
   };
   const outputDirectory = path.join(process.cwd(), "data", "draft");
+  const outputSuffix = limit === null ? "all" : `sample${limit}`;
   const outputPath = path.join(
     outputDirectory,
-    `${today.compact}_cabinet-office_reemployment_sample10.json`,
+    `${today.compact}_cabinet-office_reemployment_${outputSuffix}.json`,
   );
 
   fs.mkdirSync(outputDirectory, { recursive: true });
@@ -539,7 +612,7 @@ function importExcel(filePath, limit) {
 
   console.log(`Imported ${records.length} draft record(s) from sheet "${sheetName}".`);
   console.log(`Output: ${path.relative(process.cwd(), outputPath)}`);
-  if (records.length < limit) {
+  if (limit !== null && records.length < limit) {
     console.warn(
       `Warning: requested ${limit} record(s), but only ${records.length} data row(s) were found.`,
     );
@@ -552,7 +625,7 @@ try {
     usage();
     process.exitCode = options.help ? 0 : 1;
   } else {
-    importExcel(options.file, options.limit);
+    importExcel(options.file, options);
   }
 } catch (error) {
   console.error(`Excel import failed: ${error.message}`);

@@ -1,0 +1,1826 @@
+{
+  "totals": {
+    "publicRecords": 117,
+    "corporations": 113,
+    "nextDayCorporations": 0,
+    "within30DaysCorporations": 94
+  },
+  "rankings": {
+    "publicRecords": [
+      {
+        "corporationSlug": "corporation-0797ac4c7725544f",
+        "value": 3
+      },
+      {
+        "corporationSlug": "corporation-4b5d536d1df51698",
+        "value": 2
+      },
+      {
+        "corporationSlug": "corporation-e9a10f20167a62e6",
+        "value": 2
+      },
+      {
+        "corporationSlug": "corporation-e03e9788f561e8dc",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-ef433625144affa7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-422fcd4b721a97db",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-e567a3b6d3515e87",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-3434f15cf98a7746",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-e1648d16c37b3462",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-da2514eef391144e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-83ba7ab290ca473c",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8e026326c8c73f9b",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1b9ba40fde5710ba",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d128581eec5ff70e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-f17458638467b979",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-0a3ac944abcf469c",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-62cd4d96eea932a7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-2f9bb2f47094bead",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-bf88da389e6bbbbd",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-abd325e7edcf550f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-ccf1b357fdd4bac7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-6d91bd2821b9ea71",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-c0e38542357088c1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-e666aa92add9aa73",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-9a275eef566c170a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d4d329708660c891",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d70e5c64dcb5793a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-597b59be862d6f97",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-36561f4cddba908f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d56862c846b1031a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-63393aec6de8b34a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-be04e0192b8e9695",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-6a0604f14df9f027",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a23302a67802cb03",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1b34b2c2bdd61380",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-97bdd6cbe8017306",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5d5eece61494fa6c",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-94971fb9c303f424",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-c7cffa216a59b04f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cd6a91ece0c971e2",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-0fef83885c4a0112",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-87b2bac9c0b05551",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-60809b45d97eee2c",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8f36ecd2e8c591ce",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-852d31eb77873884",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cd40e7a107656d28",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-19e8222871a2f704",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-33db9318c3e1fa57",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-bd1f52e49a0d4581",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-da0285b9b6f3c143",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a15aca39149090f1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-7e2865a91b29e89a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a1a725b5f2afc38d",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8bedac202ab4bff4",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-05ea94e1ee7315af",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-4e67bf8c2cd447e7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5801cf2c3b4f6ec1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1f5c239de0b78cd8",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-078b8e30ed17fd58",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5e8fc8079869ace3",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d94c98fbb46a432b",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5139b1f417c6c361",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-18351298ebe5922b",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-f04cffb28be960f3",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-0169181d8e040028",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-bead0cc15a164ac9",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-7f132a71d61c3d90",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-78329eee5945eb13",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-3fca79b7d66671aa",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-fe5c27527a12c96f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-f314dc6387542035",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-624e8db45952d725",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-9bfab7141e039e5c",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-399f4748f1e88f0f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-56c743871d87e006",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-00a8ec66d925cefc",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-51629f45fe171057",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5f83a4a60101ded5",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-3ce293e3eb6f5b56",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-b709218686bcad4a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1588636ec0d018b8",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a7d5d36c642025a5",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-ef880b69b1b05857",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-c603b6dbb94eb60d",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1266b131bd4ed8aa",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-32034cb736d95fde",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-3b7391ca417a3fec",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-e71d8d6350fbc74a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-786cf53338862538",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-f839081c87d5561e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-c1e234631f32ddb7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-67961c0304729668",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cb81d513eeafab21",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-34cb1e3996452ec7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-7939cf8cb15724a1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-79b5373b65e3ff2f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a57bf773653fc7f8",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-4c1ca410f9da3957",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d3dc8445587ebb41",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-0519e1b60bee4e84",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1e27e65a50a8be26",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-9c275b909e54df61",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cfd7f487ee8992e1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1f52916c5d7de408",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-777a212b2a2b1dfd",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8b694954b805ee30",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-891463cf86adef3b",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cd59be9437edd994",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-6e2ce329a271f2e0",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-4efc1bbc3ae2410e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-ed9bb6fc87f2cfe5",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1b6f5678ee61cfd9",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-877203d3508dc695",
+        "value": 1
+      }
+    ],
+    "nextDay": [
+      {
+        "corporationSlug": "corporation-e03e9788f561e8dc",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-ef433625144affa7",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-422fcd4b721a97db",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-e567a3b6d3515e87",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-3434f15cf98a7746",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-e1648d16c37b3462",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-da2514eef391144e",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-83ba7ab290ca473c",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-8e026326c8c73f9b",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-1b9ba40fde5710ba",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-d128581eec5ff70e",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-f17458638467b979",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-0a3ac944abcf469c",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-62cd4d96eea932a7",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-2f9bb2f47094bead",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-bf88da389e6bbbbd",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-abd325e7edcf550f",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-ccf1b357fdd4bac7",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-6d91bd2821b9ea71",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-c0e38542357088c1",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-e666aa92add9aa73",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-9a275eef566c170a",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-d4d329708660c891",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-d70e5c64dcb5793a",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-597b59be862d6f97",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-36561f4cddba908f",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-d56862c846b1031a",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-63393aec6de8b34a",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-be04e0192b8e9695",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-6a0604f14df9f027",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-a23302a67802cb03",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-1b34b2c2bdd61380",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-97bdd6cbe8017306",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-5d5eece61494fa6c",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-94971fb9c303f424",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-c7cffa216a59b04f",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-cd6a91ece0c971e2",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-0fef83885c4a0112",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-87b2bac9c0b05551",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-60809b45d97eee2c",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-8f36ecd2e8c591ce",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-852d31eb77873884",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-cd40e7a107656d28",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-19e8222871a2f704",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-33db9318c3e1fa57",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-bd1f52e49a0d4581",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-da0285b9b6f3c143",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-a15aca39149090f1",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-7e2865a91b29e89a",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-a1a725b5f2afc38d",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-8bedac202ab4bff4",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-05ea94e1ee7315af",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-4e67bf8c2cd447e7",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-5801cf2c3b4f6ec1",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-1f5c239de0b78cd8",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-078b8e30ed17fd58",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-5e8fc8079869ace3",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-d94c98fbb46a432b",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-5139b1f417c6c361",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-18351298ebe5922b",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-f04cffb28be960f3",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-0169181d8e040028",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-bead0cc15a164ac9",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-7f132a71d61c3d90",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-78329eee5945eb13",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-3fca79b7d66671aa",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-fe5c27527a12c96f",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-f314dc6387542035",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-624e8db45952d725",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-9bfab7141e039e5c",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-399f4748f1e88f0f",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-56c743871d87e006",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-00a8ec66d925cefc",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-51629f45fe171057",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-5f83a4a60101ded5",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-3ce293e3eb6f5b56",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-b709218686bcad4a",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-1588636ec0d018b8",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-a7d5d36c642025a5",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-ef880b69b1b05857",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-c603b6dbb94eb60d",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-1266b131bd4ed8aa",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-32034cb736d95fde",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-4b5d536d1df51698",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-3b7391ca417a3fec",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-e71d8d6350fbc74a",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-786cf53338862538",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-0797ac4c7725544f",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-e9a10f20167a62e6",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-f839081c87d5561e",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-c1e234631f32ddb7",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-67961c0304729668",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-cb81d513eeafab21",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-34cb1e3996452ec7",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-7939cf8cb15724a1",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-79b5373b65e3ff2f",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-a57bf773653fc7f8",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-4c1ca410f9da3957",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-d3dc8445587ebb41",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-0519e1b60bee4e84",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-1e27e65a50a8be26",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-9c275b909e54df61",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-cfd7f487ee8992e1",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-1f52916c5d7de408",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-777a212b2a2b1dfd",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-8b694954b805ee30",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-891463cf86adef3b",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-cd59be9437edd994",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-6e2ce329a271f2e0",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-4efc1bbc3ae2410e",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-ed9bb6fc87f2cfe5",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-1b6f5678ee61cfd9",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-877203d3508dc695",
+        "value": 0
+      }
+    ],
+    "within30Days": [
+      {
+        "corporationSlug": "corporation-0797ac4c7725544f",
+        "value": 3
+      },
+      {
+        "corporationSlug": "corporation-4b5d536d1df51698",
+        "value": 2
+      },
+      {
+        "corporationSlug": "corporation-e9a10f20167a62e6",
+        "value": 2
+      },
+      {
+        "corporationSlug": "corporation-e03e9788f561e8dc",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-ef433625144affa7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-422fcd4b721a97db",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-e567a3b6d3515e87",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-3434f15cf98a7746",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-e1648d16c37b3462",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-da2514eef391144e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-83ba7ab290ca473c",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8e026326c8c73f9b",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d128581eec5ff70e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-f17458638467b979",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-0a3ac944abcf469c",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-62cd4d96eea932a7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-2f9bb2f47094bead",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-bf88da389e6bbbbd",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-abd325e7edcf550f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-ccf1b357fdd4bac7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-6d91bd2821b9ea71",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-c0e38542357088c1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-9a275eef566c170a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d4d329708660c891",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d70e5c64dcb5793a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-597b59be862d6f97",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-36561f4cddba908f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-63393aec6de8b34a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-be04e0192b8e9695",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-6a0604f14df9f027",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a23302a67802cb03",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5d5eece61494fa6c",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-94971fb9c303f424",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-c7cffa216a59b04f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cd6a91ece0c971e2",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-0fef83885c4a0112",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-87b2bac9c0b05551",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-60809b45d97eee2c",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8f36ecd2e8c591ce",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-852d31eb77873884",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cd40e7a107656d28",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-19e8222871a2f704",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-33db9318c3e1fa57",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-bd1f52e49a0d4581",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a15aca39149090f1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-7e2865a91b29e89a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a1a725b5f2afc38d",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8bedac202ab4bff4",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-05ea94e1ee7315af",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d94c98fbb46a432b",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-18351298ebe5922b",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-f04cffb28be960f3",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-0169181d8e040028",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-bead0cc15a164ac9",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-7f132a71d61c3d90",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-78329eee5945eb13",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-3fca79b7d66671aa",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-fe5c27527a12c96f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-f314dc6387542035",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-9bfab7141e039e5c",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-399f4748f1e88f0f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5f83a4a60101ded5",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-3ce293e3eb6f5b56",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-b709218686bcad4a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1588636ec0d018b8",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a7d5d36c642025a5",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-ef880b69b1b05857",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-c603b6dbb94eb60d",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1266b131bd4ed8aa",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-32034cb736d95fde",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-e71d8d6350fbc74a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-786cf53338862538",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-f839081c87d5561e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-67961c0304729668",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cb81d513eeafab21",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-34cb1e3996452ec7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-7939cf8cb15724a1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-79b5373b65e3ff2f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a57bf773653fc7f8",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-4c1ca410f9da3957",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d3dc8445587ebb41",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-0519e1b60bee4e84",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1e27e65a50a8be26",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-9c275b909e54df61",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cfd7f487ee8992e1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1f52916c5d7de408",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-777a212b2a2b1dfd",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-891463cf86adef3b",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cd59be9437edd994",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-6e2ce329a271f2e0",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-4efc1bbc3ae2410e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-ed9bb6fc87f2cfe5",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1b6f5678ee61cfd9",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-877203d3508dc695",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1b9ba40fde5710ba",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-e666aa92add9aa73",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-d56862c846b1031a",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-1b34b2c2bdd61380",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-97bdd6cbe8017306",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-da0285b9b6f3c143",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-4e67bf8c2cd447e7",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-5801cf2c3b4f6ec1",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-1f5c239de0b78cd8",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-078b8e30ed17fd58",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-5e8fc8079869ace3",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-5139b1f417c6c361",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-624e8db45952d725",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-56c743871d87e006",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-00a8ec66d925cefc",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-51629f45fe171057",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-3b7391ca417a3fec",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-c1e234631f32ddb7",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-8b694954b805ee30",
+        "value": 0
+      }
+    ],
+    "shortestAverageWaitingDays": [
+      {
+        "corporationSlug": "corporation-e03e9788f561e8dc",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-ef433625144affa7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-422fcd4b721a97db",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-e567a3b6d3515e87",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-3434f15cf98a7746",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-e1648d16c37b3462",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-da2514eef391144e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d128581eec5ff70e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-f17458638467b979",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-0a3ac944abcf469c",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-62cd4d96eea932a7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-2f9bb2f47094bead",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-bf88da389e6bbbbd",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-abd325e7edcf550f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-ccf1b357fdd4bac7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-6d91bd2821b9ea71",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-c0e38542357088c1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-9a275eef566c170a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d4d329708660c891",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d70e5c64dcb5793a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-597b59be862d6f97",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-36561f4cddba908f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-63393aec6de8b34a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-be04e0192b8e9695",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-6a0604f14df9f027",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a23302a67802cb03",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5d5eece61494fa6c",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-94971fb9c303f424",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-c7cffa216a59b04f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cd6a91ece0c971e2",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-87b2bac9c0b05551",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8f36ecd2e8c591ce",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-852d31eb77873884",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cd40e7a107656d28",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-19e8222871a2f704",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-33db9318c3e1fa57",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-bd1f52e49a0d4581",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a15aca39149090f1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-7e2865a91b29e89a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a1a725b5f2afc38d",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-d94c98fbb46a432b",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-f04cffb28be960f3",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-0169181d8e040028",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-3ce293e3eb6f5b56",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-b709218686bcad4a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a7d5d36c642025a5",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-ef880b69b1b05857",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-c603b6dbb94eb60d",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1266b131bd4ed8aa",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-32034cb736d95fde",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-4b5d536d1df51698",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-e71d8d6350fbc74a",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-786cf53338862538",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-0797ac4c7725544f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-e9a10f20167a62e6",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-f839081c87d5561e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-67961c0304729668",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cb81d513eeafab21",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-34cb1e3996452ec7",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-7939cf8cb15724a1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-79b5373b65e3ff2f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-a57bf773653fc7f8",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-4c1ca410f9da3957",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-0519e1b60bee4e84",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1e27e65a50a8be26",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-9c275b909e54df61",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cfd7f487ee8992e1",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1f52916c5d7de408",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-891463cf86adef3b",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-cd59be9437edd994",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-6e2ce329a271f2e0",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-4efc1bbc3ae2410e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-ed9bb6fc87f2cfe5",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1b6f5678ee61cfd9",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-877203d3508dc695",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1588636ec0d018b8",
+        "value": 2
+      },
+      {
+        "corporationSlug": "corporation-d3dc8445587ebb41",
+        "value": 3
+      },
+      {
+        "corporationSlug": "corporation-60809b45d97eee2c",
+        "value": 4
+      },
+      {
+        "corporationSlug": "corporation-777a212b2a2b1dfd",
+        "value": 5
+      },
+      {
+        "corporationSlug": "corporation-8bedac202ab4bff4",
+        "value": 7
+      },
+      {
+        "corporationSlug": "corporation-18351298ebe5922b",
+        "value": 10
+      },
+      {
+        "corporationSlug": "corporation-0fef83885c4a0112",
+        "value": 11
+      },
+      {
+        "corporationSlug": "corporation-05ea94e1ee7315af",
+        "value": 15
+      },
+      {
+        "corporationSlug": "corporation-83ba7ab290ca473c",
+        "value": 16
+      },
+      {
+        "corporationSlug": "corporation-8e026326c8c73f9b",
+        "value": 20
+      },
+      {
+        "corporationSlug": "corporation-bead0cc15a164ac9",
+        "value": 22
+      },
+      {
+        "corporationSlug": "corporation-7f132a71d61c3d90",
+        "value": 22
+      },
+      {
+        "corporationSlug": "corporation-78329eee5945eb13",
+        "value": 22
+      },
+      {
+        "corporationSlug": "corporation-3fca79b7d66671aa",
+        "value": 22
+      },
+      {
+        "corporationSlug": "corporation-fe5c27527a12c96f",
+        "value": 22
+      },
+      {
+        "corporationSlug": "corporation-f314dc6387542035",
+        "value": 22
+      },
+      {
+        "corporationSlug": "corporation-9bfab7141e039e5c",
+        "value": 22
+      },
+      {
+        "corporationSlug": "corporation-5f83a4a60101ded5",
+        "value": 22
+      },
+      {
+        "corporationSlug": "corporation-399f4748f1e88f0f",
+        "value": 26
+      },
+      {
+        "corporationSlug": "corporation-1b34b2c2bdd61380",
+        "value": 31
+      },
+      {
+        "corporationSlug": "corporation-97bdd6cbe8017306",
+        "value": 31
+      },
+      {
+        "corporationSlug": "corporation-4e67bf8c2cd447e7",
+        "value": 31
+      },
+      {
+        "corporationSlug": "corporation-5801cf2c3b4f6ec1",
+        "value": 31
+      },
+      {
+        "corporationSlug": "corporation-5e8fc8079869ace3",
+        "value": 31
+      },
+      {
+        "corporationSlug": "corporation-5139b1f417c6c361",
+        "value": 31
+      },
+      {
+        "corporationSlug": "corporation-3b7391ca417a3fec",
+        "value": 31
+      },
+      {
+        "corporationSlug": "corporation-8b694954b805ee30",
+        "value": 31
+      },
+      {
+        "corporationSlug": "corporation-1b9ba40fde5710ba",
+        "value": 32
+      },
+      {
+        "corporationSlug": "corporation-e666aa92add9aa73",
+        "value": 32
+      },
+      {
+        "corporationSlug": "corporation-00a8ec66d925cefc",
+        "value": 37
+      },
+      {
+        "corporationSlug": "corporation-d56862c846b1031a",
+        "value": 41
+      },
+      {
+        "corporationSlug": "corporation-51629f45fe171057",
+        "value": 47
+      },
+      {
+        "corporationSlug": "corporation-624e8db45952d725",
+        "value": 53
+      },
+      {
+        "corporationSlug": "corporation-56c743871d87e006",
+        "value": 53
+      },
+      {
+        "corporationSlug": "corporation-da0285b9b6f3c143",
+        "value": 87
+      },
+      {
+        "corporationSlug": "corporation-c1e234631f32ddb7",
+        "value": 91
+      },
+      {
+        "corporationSlug": "corporation-1f5c239de0b78cd8",
+        "value": 92
+      },
+      {
+        "corporationSlug": "corporation-078b8e30ed17fd58",
+        "value": 92
+      }
+    ]
+  }
+}
