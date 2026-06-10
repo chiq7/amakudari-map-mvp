@@ -222,7 +222,7 @@ function generateCandidate(options) {
       corporationType: draftRecords[index].corporationType || "未分類",
     });
   });
-  const corporations = [...corporationGroups.entries()].map(
+  const recordCorporations = [...corporationGroups.entries()].map(
     ([corporationSlug, group]) => {
       const waitingDays = group.map((record) => record.waitingDays);
       const relatedPersons = [
@@ -259,9 +259,24 @@ function generateCandidate(options) {
       };
     },
   );
+  const existingCorporations = options.mergeProduction
+    ? readJson(path.join(productionDirectory, "corporations.json"))
+    : [];
+  const recordCorporationSlugs = new Set(
+    recordCorporations.map((corporation) => corporation.slug),
+  );
+  const profileOnlyCorporations = existingCorporations.filter(
+    (corporation) =>
+      !recordCorporationSlugs.has(corporation.slug) &&
+      (corporation.publicOfficers?.length ?? 0) > 0,
+  );
+  const corporations = [...recordCorporations, ...profileOnlyCorporations];
+  const rankedCorporations = corporations.filter(
+    (corporation) => corporation.counts.publicRecords > 0,
+  );
 
   const ranking = (selector, direction = "desc") =>
-    [...corporations]
+    [...rankedCorporations]
       .sort((left, right) => {
         const difference = selector(left) - selector(right);
         return direction === "asc" ? difference : -difference;

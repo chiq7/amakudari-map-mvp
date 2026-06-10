@@ -54,5 +54,29 @@
     "url": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
     "publishedAt": "",
     "memo": "国家公務員法第106条の25第1項等に基づく報告"
+  },
+  {
+    "id": "gbizinfo-luup",
+    "title": "株式会社Ｌｕｕｐ 法人プロフィール",
+    "publisher": "経済産業省 gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1011001123515",
+    "publishedAt": "",
+    "memo": "法人番号、所在地、代表者、従業員数、事業概要等の公的法人情報"
+  },
+  {
+    "id": "luup-management-structure-20241016",
+    "title": "Luup、社外取締役・監査役を迎え経営体制を強化",
+    "publisher": "株式会社Luup",
+    "url": "https://luup.sc/news/2024-10-16-management-structure/",
+    "publishedAt": "2024-10-16",
+    "memo": "樋口建史氏、國峯孝祐氏の監査役就任と略歴に関する公式発表"
+  },
+  {
+    "id": "luup-company-profile",
+    "title": "会社情報",
+    "publisher": "株式会社Luup",
+    "url": "https://luup.sc/company/",
+    "publishedAt": "",
+    "memo": "役員氏名、役職、公開プロフィールを掲載する公式会社情報"
   }
 ]

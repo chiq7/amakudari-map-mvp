@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import organizationsData from "@/public/data/organizations.json";
 import topicsData from "@/public/data/topics.json";
-import { corporations, persons } from "@/lib/static-content";
+import { corporations, persons, publicOfficers } from "@/lib/static-content";
 import { canonicalUrl } from "@/lib/seo";
 
 type OrganizationRecord = {
@@ -33,6 +33,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...persons.map((person) => ({
       url: canonicalUrl(`/persons/${person.slug}`),
+    })),
+    ...publicOfficers.map((officer) => ({
+      url: canonicalUrl(`/public-officers/${officer.slug}`),
     })),
     ...(organizationsData as OrganizationRecord[]).map((organization) => ({
       url: canonicalUrl(

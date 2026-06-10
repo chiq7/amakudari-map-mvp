@@ -123,7 +123,11 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
     1,
     ...waitDistribution.map((item) => item.value),
   );
-  const relatedSourceIds = new Set(relatedRecords.map((record) => record.sourceId));
+  const relatedSourceIds = new Set([
+    ...corporation.sources,
+    ...relatedRecords.map((record) => record.sourceId),
+    ...corporation.publicOfficers.flatMap((officer) => officer.sourceIds),
+  ]);
   const relatedSources = sources.filter((source) => relatedSourceIds.has(source.id));
 
   return (
@@ -139,9 +143,11 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
       <section className="flex flex-col gap-4">
         <div>
           <h1 className="text-3xl font-bold text-primary md:text-4xl">{corporation.name}</h1>
-          <p className="mt-2 text-base text-on-surface-variant">公表資料に基づく再就職情報</p>
+          <p className="mt-2 text-base text-on-surface-variant">公表資料に基づく法人・人材情報</p>
           <p className="mt-2 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
-            このページでは、{corporation.name}に関する公表再就職記録を法人単位で整理し、元府省庁、再就職者数、再就職時期、出典資料を確認できるようにしています。表示内容は公表資料の記録を整理したものです。
+            {corporation.publicOfficers.length > 0
+              ? `${corporation.name}について、公的法人情報と同社が公表している役員・経歴情報をもとに、法人情報および元行政機関出身者の就任情報を整理しています。表示内容は公開情報に基づく記録整理であり、違法性や責任を断定するものではありません。`
+              : `このページでは、${corporation.name}に関する公表再就職記録を法人単位で整理し、元府省庁、再就職者数、再就職時期、出典資料を確認できるようにしています。表示内容は公表資料の記録を整理したものです。`}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -167,7 +173,7 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
           <h2 className="text-xl font-bold text-primary">法人基本情報</h2>
           <p className="mt-1 text-sm text-on-surface-variant">
-            国税庁 法人番号公表サイトに基づく法人基本情報です。
+            {corporation.basicInfo.sourceName}に基づく法人基本情報です。
           </p>
           <dl className="mt-5 grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
             {[
@@ -393,6 +399,30 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         </section>
       )}
 
+      {corporation.publicOfficers.length > 0 && (
+        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+          <h2 className="text-2xl font-bold text-primary">公表役員情報</h2>
+          <p className="mt-2 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
+            同社の公式発表・会社情報に掲載された元行政機関出身者の役員プロフィールです。国家公務員の再就職状況公表資料に基づく記録とは区別して表示しています。
+          </p>
+          <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+            {corporation.publicOfficers.map((officer) => (
+              <article key={officer.slug} className="rounded border border-outline-variant bg-surface p-4">
+                <p className="text-sm font-semibold text-secondary">{officer.role}</p>
+                <h3 className="mt-1 text-xl font-bold text-primary">
+                  <Link href={`/public-officers/${officer.slug}`} className="hover:underline">
+                    {officer.name}
+                  </Link>
+                </h3>
+                <p className="mt-2 text-sm font-semibold">{officer.formerPosition}</p>
+                <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{officer.profile}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {relatedPersons.length > 0 ? (
       <section className="flex flex-col gap-4">
         <h2 className="text-2xl font-bold text-primary">公表再就職者一覧</h2>
         <div className="overflow-x-auto rounded-lg border border-outline-variant bg-surface-container-lowest">
@@ -434,6 +464,14 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
           </table>
         </div>
       </section>
+      ) : (
+        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+          <h2 className="text-2xl font-bold text-primary">公表再就職記録</h2>
+          <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
+            現在、国家公務員の再就職状況公表資料に基づく記録は登録されていません。上記の公表役員情報は、法人の公式発表に基づくプロフィールとして区別して掲載しています。
+          </p>
+        </section>
+      )}
 
       <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">

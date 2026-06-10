@@ -7049,5 +7049,85 @@
       "cabinet-office-106-25-1-r05-files4"
     ],
     "topics": []
+  },
+  {
+    "slug": "corporation-luup",
+    "name": "株式会社Luup",
+    "aliases": [
+      "株式会社Ｌｕｕｐ",
+      "LUUP",
+      "Luup",
+      "ループ"
+    ],
+    "type": "株式会社",
+    "prefecture": "東京都",
+    "ministry": {
+      "name": "警察庁",
+      "count": 0
+    },
+    "counts": {
+      "publicRecords": 0,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 0
+    },
+    "relatedPersons": [],
+    "sources": [
+      "gbizinfo-luup",
+      "luup-management-structure-20241016",
+      "luup-company-profile"
+    ],
+    "topics": [
+      "ライドシェア",
+      "モビリティ",
+      "電動キックボード",
+      "電動マイクロモビリティ"
+    ],
+    "basicInfo": {
+      "corporateNumber": "1011001123515",
+      "officialName": "株式会社Ｌｕｕｐ",
+      "registeredAddress": "東京都品川区西五反田８丁目９番５号ＦＯＲＥＣＡＳＴ五反田ＷＥＳＴ７階",
+      "prefecture": "東京都",
+      "city": "品川区",
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1011001123515"
+    },
+    "gbizInfo": {
+      "businessSummary": "電動マイクロモビリティのシェアリングサービス提供",
+      "employeeNumber": 128,
+      "establishmentDate": "2018-07-30",
+      "representativeName": "代表取締役 岡井 大輝",
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1011001123515",
+      "fetchedAt": "2026-06-11"
+    },
+    "publicOfficers": [
+      {
+        "slug": "person-public-631f5638307eb6aa",
+        "name": "樋口 建史",
+        "role": "監査役",
+        "formerOrganization": "警察庁",
+        "formerPosition": "元警視総監",
+        "profile": "警視総監、ミャンマー駐箚特命全権大使など行政機関で要職を務めたほか、複数企業で社外役員や顧問を歴任した経歴が、株式会社Luupの公式会社情報に掲載されています。",
+        "sourceIds": [
+          "luup-management-structure-20241016",
+          "luup-company-profile"
+        ]
+      },
+      {
+        "slug": "person-public-5cba53619b92884a",
+        "name": "國峯 孝祐",
+        "role": "監査役",
+        "formerOrganization": "経済産業省",
+        "formerPosition": "元経済産業省、弁護士",
+        "profile": "8年間の経済産業省勤務後に弁護士となり、2017年に國峯法律事務所を設立した経歴が、株式会社Luupの公式会社情報に掲載されています。",
+        "sourceIds": [
+          "luup-management-structure-20241016",
+          "luup-company-profile"
+        ]
+      }
+    ]
   }
 ]

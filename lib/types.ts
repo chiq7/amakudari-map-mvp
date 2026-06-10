@@ -18,8 +18,20 @@ export interface CorporationData {
   relatedPersons: string[];
   sources: string[];
   topics: string[];
+  aliases?: string[];
   basicInfo?: CorporationBasicInfo;
   gbizInfo?: GbizInfo;
+  publicOfficers?: PublicOfficerProfile[];
+}
+
+export interface PublicOfficerProfile {
+  slug: string;
+  name: string;
+  role: string;
+  formerOrganization: string;
+  formerPosition: string;
+  profile: string;
+  sourceIds: string[];
 }
 
 export interface CorporationBasicInfo {
@@ -197,12 +209,14 @@ export interface Corporation {
   averageWaitDays: number;
   ministries: string[];
   topics: string[];
+  aliases: string[];
   relatedTags: string[];
   description: string;
   relatedPersons: string[];
   sources: string[];
   basicInfo?: CorporationBasicInfo;
   gbizInfo?: GbizInfo;
+  publicOfficers: PublicOfficerProfile[];
 }
 
 export interface Person {

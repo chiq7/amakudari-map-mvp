@@ -57,16 +57,31 @@ export const corporations: Corporation[] = rawCorporations.map((corporation) => 
   within30Days: corporation.counts.within30Days,
   averageWaitDays: corporation.waitingDays.average,
   ministries: Array.from(
-    ministriesByCorporation.get(corporation.slug) ?? [corporation.ministry.name],
+    new Set([
+      ...Array.from(
+        ministriesByCorporation.get(corporation.slug) ?? [corporation.ministry.name],
+      ),
+      ...(corporation.publicOfficers ?? []).map((officer) => officer.formerOrganization),
+    ]),
   ),
   topics: corporation.topics,
+  aliases: corporation.aliases ?? [],
   relatedTags: Array.from(tagsByCorporation.get(corporation.slug) ?? []),
   description: corporation.gbizInfo?.businessSummary ?? "",
   relatedPersons: corporation.relatedPersons,
   sources: corporation.sources,
   basicInfo: corporation.basicInfo,
   gbizInfo: corporation.gbizInfo,
+  publicOfficers: corporation.publicOfficers ?? [],
 }));
+
+export const publicOfficers = corporations.flatMap((corporation) =>
+  corporation.publicOfficers.map((officer) => ({
+    ...officer,
+    corporationSlug: corporation.slug,
+    corporationName: corporation.name,
+  })),
+);
 
 export const persons: Person[] = rawPersons.map((person) => {
   const primarySource = sourcesById.get(person.sources[0]);
@@ -110,4 +125,8 @@ export function getCorporation(slug: string) {
 
 export function getPerson(slug: string) {
   return persons.find((person) => person.slug === slug) ?? persons[0];
+}
+
+export function getPublicOfficer(slug: string) {
+  return publicOfficers.find((officer) => officer.slug === slug);
 }

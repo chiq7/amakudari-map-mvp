@@ -82,6 +82,7 @@ function validateData() {
   const sourceIds = new Set(sources.map((source) => source.id));
   const corporationSlugSet = new Set(corporationSlugs);
   const personSlugSet = new Set(personSlugs);
+  const publicOfficerSlugs = [];
   const corporateNumbers = [];
 
   for (const slug of findDuplicates(corporationSlugs)) {
@@ -129,6 +130,37 @@ function validateData() {
     for (const sourceId of corporation.sources ?? []) {
       if (!sourceIds.has(sourceId)) errors.push(`${prefix}.sources references unknown source: ${sourceId}`);
     }
+    if (
+      corporation.aliases !== undefined &&
+      (!Array.isArray(corporation.aliases) ||
+        corporation.aliases.some((alias) => !isNonEmptyString(alias)))
+    ) {
+      errors.push(`${prefix}.aliases must contain non-empty strings.`);
+    }
+
+    for (const [officerIndex, officer] of (corporation.publicOfficers ?? []).entries()) {
+      const officerPrefix = `${prefix}.publicOfficers[${officerIndex}]`;
+      publicOfficerSlugs.push(officer.slug);
+      for (const [field, value] of [
+        ["slug", officer.slug],
+        ["name", officer.name],
+        ["role", officer.role],
+        ["formerOrganization", officer.formerOrganization],
+        ["formerPosition", officer.formerPosition],
+        ["profile", officer.profile],
+      ]) {
+        if (!isNonEmptyString(value)) errors.push(`${officerPrefix}.${field} is required.`);
+      }
+      if (!Array.isArray(officer.sourceIds) || officer.sourceIds.length === 0) {
+        errors.push(`${officerPrefix}.sourceIds must contain at least one source.`);
+      } else {
+        for (const sourceId of officer.sourceIds) {
+          if (!sourceIds.has(sourceId)) {
+            errors.push(`${officerPrefix}.sourceIds references unknown source: ${sourceId}`);
+          }
+        }
+      }
+    }
 
     if (corporation.basicInfo !== undefined) {
       const basicInfo = corporation.basicInfo;
@@ -154,6 +186,10 @@ function validateData() {
 
   for (const corporateNumber of findDuplicates(corporateNumbers)) {
     errors.push(`Duplicate corporation basicInfo.corporateNumber: ${corporateNumber}`);
+  }
+
+  for (const slug of findDuplicates(publicOfficerSlugs)) {
+    errors.push(`Duplicate public officer slug: ${slug}`);
   }
 
   persons.forEach((person, index) => {

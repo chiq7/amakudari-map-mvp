@@ -335,7 +335,7 @@ function buildCandidate(draft, production, additions) {
       corporation,
     ]),
   );
-  const corporations = [...recordsByCorporation.entries()].map(
+  const recordCorporations = [...recordsByCorporation.entries()].map(
     ([corporationSlug, group]) => {
       const existing = existingCorporationBySlug.get(corporationSlug);
       const topMinistry = mode(group.map((record) => record.fromMinistry));
@@ -374,9 +374,21 @@ function buildCandidate(draft, production, additions) {
       };
     },
   );
+  const recordCorporationSlugs = new Set(
+    recordCorporations.map((corporation) => corporation.slug),
+  );
+  const profileOnlyCorporations = production.corporations.filter(
+    (corporation) =>
+      !recordCorporationSlugs.has(corporation.slug) &&
+      (corporation.publicOfficers?.length ?? 0) > 0,
+  );
+  const corporations = [...recordCorporations, ...profileOnlyCorporations];
+  const rankedCorporations = corporations.filter(
+    (corporation) => corporation.counts.publicRecords > 0,
+  );
 
   const ranking = (selector, direction = "desc") =>
-    [...corporations]
+    [...rankedCorporations]
       .sort((left, right) => {
         const difference = selector(left) - selector(right);
         return direction === "asc" ? difference : -difference;

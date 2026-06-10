@@ -36,9 +36,17 @@ function matchesTag(corporation: Corporation, tag: string) {
   const normalizedTag = tag.toLocaleLowerCase("ja");
   return [
     corporation.name,
+    ...corporation.aliases,
     corporation.description,
     ...corporation.topics,
     ...corporation.relatedTags,
+    ...corporation.publicOfficers.flatMap((officer) => [
+      officer.name,
+      officer.role,
+      officer.formerOrganization,
+      officer.formerPosition,
+      officer.profile,
+    ]),
   ].some((value) => value.toLocaleLowerCase("ja").includes(normalizedTag));
 }
 
@@ -174,12 +182,20 @@ function CorporationsContent() {
       const normalizedKeyword = keyword.toLocaleLowerCase("ja");
       return [
         corporation.name,
+        ...corporation.aliases,
         corporation.type,
         corporation.region,
         corporation.description,
         ...corporation.ministries,
         ...corporation.topics,
         ...corporation.relatedTags,
+        ...corporation.publicOfficers.flatMap((officer) => [
+          officer.name,
+          officer.role,
+          officer.formerOrganization,
+          officer.formerPosition,
+          officer.profile,
+        ]),
       ].some((value) => value.toLocaleLowerCase("ja").includes(normalizedKeyword));
     })
     .sort((left, right) => {

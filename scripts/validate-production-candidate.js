@@ -178,6 +178,21 @@ function validate() {
         errors.push(`${prefix}.sources references an unknown source.`);
       }
     }
+    for (const [officerIndex, officer] of (corporation.publicOfficers ?? []).entries()) {
+      const officerPrefix = `${prefix}.publicOfficers[${officerIndex}]`;
+      ["slug", "name", "role", "formerOrganization", "formerPosition", "profile"].forEach(
+        (field) => {
+          if (!isNonEmptyString(officer[field])) {
+            errors.push(`${officerPrefix}.${field} is required.`);
+          }
+        },
+      );
+      for (const sourceId of officer.sourceIds ?? []) {
+        if (!sourceIds.has(sourceId)) {
+          errors.push(`${officerPrefix}.sourceIds references an unknown source.`);
+        }
+      }
+    }
   });
 
   sources.forEach((source, index) => {
