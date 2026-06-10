@@ -2,14 +2,16 @@
 // app/search/page.tsx
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { trackEvent } from '@/lib/analytics';
 
 export default function SearchPage() {
     const [persons, setPersons] = useState([]);
     const [orgs, setOrgs] = useState([]);
     const [query, setQuery] = useState('');
     const [results, setResults] = useState({ persons: [], orgs: [] });
+    const lastTrackedQuery = useRef('');
 
     useEffect(() => {
         Promise.all([
@@ -19,6 +21,14 @@ export default function SearchPage() {
             setPersons(p);
             setOrgs(o);
         });
+    }, []);
+
+    useEffect(() => {
+        const storedQuery = sessionStorage.getItem('amakudari:search-query');
+        if (!storedQuery) return;
+
+        sessionStorage.removeItem('amakudari:search-query');
+        setQuery(storedQuery);
     }, []);
 
     useEffect(() => {
@@ -39,6 +49,21 @@ export default function SearchPage() {
             setResults({ persons: [], orgs: [] });
         }
     }, [query, persons, orgs]);
+
+    useEffect(() => {
+        if (query.length <= 1 || query === lastTrackedQuery.current) return;
+
+        const timeout = window.setTimeout(() => {
+            trackEvent('site_search', {
+                result_count: results.persons.length + results.orgs.length,
+                page_type: 'search',
+                location: 'search_results',
+            });
+            lastTrackedQuery.current = query;
+        }, 500);
+
+        return () => window.clearTimeout(timeout);
+    }, [query, results]);
 
     return (
         <div>

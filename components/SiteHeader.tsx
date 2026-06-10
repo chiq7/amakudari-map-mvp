@@ -45,14 +45,18 @@ export default function SiteHeader() {
             })}
           </nav>
         </div>
-        <form action="/corporations" className="hidden w-72 lg:block">
+        <form
+          action="/search"
+          className="hidden w-72 lg:block"
+          data-analytics-event="site_search"
+          data-analytics-location="site_header"
+        >
           <label className="sr-only" htmlFor="site-search">
             法人名・氏名・官職で検索
           </label>
           <div className="relative">
             <input
               id="site-search"
-              name="keyword"
               type="search"
               placeholder="法人名・氏名・官職で検索"
               className="h-9 w-full rounded border border-outline-variant bg-surface-container-lowest px-3 pr-9 text-sm text-on-surface outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/20"

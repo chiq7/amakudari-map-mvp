@@ -2,6 +2,7 @@
 // app/organizations/[organization_slug]/page.tsx
 
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export async function generateStaticParams() {
     const fs = require('fs');
@@ -21,7 +22,10 @@ async function getOrganization(slug: string) {
 
 export async function generateMetadata({ params }: { params: { organization_slug: string } }) {
     const org = await getOrganization(params.organization_slug);
-    return { title: `${org?.再就職先名称}の関連情報` };
+    return {
+        title: `${org?.再就職先名称}の関連情報`,
+        alternates: { canonical: `/organizations/${params.organization_slug}` },
+    } satisfies Metadata;
 }
 
 export default async function OrganizationPage({ params }: { params: { organization_slug: string } }) {

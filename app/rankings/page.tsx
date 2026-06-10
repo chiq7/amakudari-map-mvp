@@ -122,6 +122,7 @@ export default function RankingsPage() {
         <RankingCard
           title="公表再就職者数ランキング"
           unit="人"
+          rankingType="public_records"
           items={rankingLists.publicRecords.map((item) => ({
             label: item.label,
             value: item.value,
@@ -131,6 +132,7 @@ export default function RankingsPage() {
         <RankingCard
           title="退職翌日再就職件数ランキング"
           unit="件"
+          rankingType="next_day"
           items={rankingLists.nextDay.map((item) => ({
             label: item.label,
             value: item.value,
@@ -140,6 +142,7 @@ export default function RankingsPage() {
         <RankingCard
           title="30日以内再就職ランキング"
           unit="件"
+          rankingType="within_30_days"
           items={rankingLists.within30Days.map((item) => ({
             label: item.label,
             value: item.value,
@@ -149,6 +152,7 @@ export default function RankingsPage() {
         <RankingCard
           title="平均待機日数が短い法人"
           unit="日"
+          rankingType="shortest_average_wait"
           items={rankingLists.shortestAverageWaitingDays.map((item) => ({
             label: item.label,
             value: item.value,

@@ -1,9 +1,20 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Breadcrumb, HighlightStatCard, SourceLinkList, StatCard, TagChip } from "@/components/ui";
 import { corporations, getCorporation, persons, records, sources } from "@/lib/static-content";
 
 export function generateStaticParams() {
   return corporations.map((corporation) => ({ slug: corporation.slug }));
+}
+
+export function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Metadata {
+  return {
+    alternates: { canonical: `/corporations/${params.slug}` },
+  };
 }
 
 export default function CorporationDetailPage({ params }: { params: { slug: string } }) {
@@ -116,6 +127,9 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
                   href={corporation.basicInfo.sourceUrl}
                   target="_blank"
                   rel="noreferrer"
+                  data-analytics-event="source_link"
+                  data-source-type="corporate_registry"
+                  data-analytics-location="corporation_basic_info"
                   className="font-semibold text-secondary hover:underline"
                 >
                   {corporation.basicInfo.sourceName}

@@ -1,9 +1,20 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Breadcrumb, SourceLinkList, StatCard, TagChip } from "@/components/ui";
 import { getPerson, persons } from "@/lib/static-content";
 
 export function generateStaticParams() {
   return persons.map((person) => ({ person_slug: person.slug }));
+}
+
+export function generateMetadata({
+  params,
+}: {
+  params: { person_slug: string };
+}): Metadata {
+  return {
+    alternates: { canonical: `/persons/${params.person_slug}` },
+  };
 }
 
 export default function PersonDetailPage({ params }: { params: { person_slug: string } }) {

@@ -1,6 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { corporations, totals } from "@/lib/static-content";
 import { SearchBox, TagChip } from "@/components/ui";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const cutGroups = [
   {
@@ -159,7 +164,10 @@ function StatTile({
 export default function Home() {
   return (
     <div className="flex flex-col gap-10">
-      <section className="mx-auto flex max-w-5xl flex-col items-center gap-5 py-4 text-center md:py-6">
+      <section
+        className="mx-auto flex max-w-5xl flex-col items-center gap-5 py-4 text-center md:py-6"
+        data-analytics-location="home_hero"
+      >
         <div>
           <h1 className="text-4xl font-bold tracking-normal text-primary md:text-5xl">
             公式資料から見る、官民人材移動データベース
@@ -170,7 +178,12 @@ export default function Home() {
         </div>
         <SearchBox className="w-full max-w-2xl" />
         <div className="flex flex-wrap justify-center gap-2">
-          <Link href="/corporations" className="rounded bg-primary px-5 py-2 text-sm font-bold text-white">
+          <Link
+            href="/corporations"
+            data-experiment-id="analytics-phase-1"
+            data-cta-name="browse_corporations"
+            className="rounded bg-primary px-5 py-2 text-sm font-bold text-white"
+          >
             法人を検索
           </Link>
           <Link href="/rankings" className="rounded border border-outline-variant px-5 py-2 text-sm font-bold text-on-surface">
@@ -240,7 +253,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-4">
-          {rankingBlocks.map((block) => (
+          {rankingBlocks.map((block, blockIndex) => (
             <section key={block.title} className="rounded-lg border border-outline-variant bg-surface-container-lowest shadow-sm">
               <div className="border-b border-outline-variant px-4 py-3">
                 <h3 className="font-bold text-primary">{block.title}</h3>
@@ -248,7 +261,19 @@ export default function Home() {
               <ol className="divide-y divide-outline-variant">
                 {block.items.map(([label, value, href], index) => (
                   <li key={label}>
-                    <Link href={String(href)} className="flex items-center justify-between gap-3 px-4 py-3 hover:bg-surface-container-low">
+                    <Link
+                      href={String(href)}
+                      data-ranking-type={
+                        [
+                          "public_records",
+                          "next_day",
+                          "within_30_days",
+                          "shortest_average_wait",
+                        ][blockIndex]
+                      }
+                      data-analytics-location="home_ranking_card"
+                      className="flex items-center justify-between gap-3 px-4 py-3 hover:bg-surface-container-low"
+                    >
                       <span className="min-w-0 truncate text-sm font-semibold">
                         <span className="mr-2 text-outline">{index + 1}</span>
                         {label}

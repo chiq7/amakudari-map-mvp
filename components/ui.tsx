@@ -6,7 +6,7 @@ type ClassName = {
 };
 
 export function SearchBox({
-  action = "/corporations",
+  action = "/search",
   placeholder = "法人名・省庁名・業務内容で検索",
   className = "",
 }: {
@@ -14,13 +14,17 @@ export function SearchBox({
   placeholder?: string;
 } & ClassName) {
   return (
-    <form action={action} className={className}>
+    <form
+      action={action}
+      className={className}
+      data-analytics-event="site_search"
+      data-analytics-location="search_box"
+    >
       <label className="sr-only" htmlFor="keyword-search">
         キーワード検索
       </label>
       <input
         id="keyword-search"
-        name="keyword"
         type="search"
         placeholder={placeholder}
         className="w-full rounded-lg border border-outline-variant bg-surface-container-lowest px-4 py-3 text-base text-on-surface outline-none transition placeholder:text-on-surface-variant focus:border-secondary focus:ring-2 focus:ring-secondary/20"
@@ -130,14 +134,19 @@ export function RankingCard({
   items,
   unit = "件",
   href = "/rankings",
+  rankingType = "general",
 }: {
   title: string;
   items: Array<{ label: string; value: number | string; href?: string }>;
   unit?: string;
   href?: string;
+  rankingType?: string;
 }) {
   return (
-    <section className="rounded-lg border border-outline-variant bg-surface-container-lowest">
+    <section
+      className="rounded-lg border border-outline-variant bg-surface-container-lowest"
+      data-analytics-location="ranking_card"
+    >
       <div className="border-b border-outline-variant px-4 py-3">
         <h2 className="text-lg font-bold text-primary">{title}</h2>
       </div>
@@ -146,6 +155,7 @@ export function RankingCard({
           <li key={`${item.label}-${index}`}>
             <Link
               href={item.href ?? href}
+              data-ranking-type={rankingType}
               className="flex items-center justify-between gap-4 px-4 py-3 transition-colors hover:bg-surface-container-low"
             >
               <span className="min-w-0 truncate text-sm font-semibold text-on-surface">
@@ -160,7 +170,11 @@ export function RankingCard({
         ))}
       </ol>
       <div className="border-t border-outline-variant px-4 py-3 text-right">
-        <Link href={href} className="text-sm font-semibold text-secondary hover:underline">
+        <Link
+          href={href}
+          data-ranking-type={rankingType}
+          className="text-sm font-semibold text-secondary hover:underline"
+        >
           詳細ランキングを見る
         </Link>
       </div>
@@ -202,6 +216,8 @@ export function SourceLinkList({
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
+            data-analytics-event="source_link"
+            data-analytics-location="source_list"
             className="text-sm font-semibold text-secondary hover:underline"
           >
             {link.label}

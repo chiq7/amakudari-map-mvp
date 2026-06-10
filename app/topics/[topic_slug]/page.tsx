@@ -1,6 +1,8 @@
 
 // app/topics/[topic_slug]/page.tsx
 
+import type { Metadata } from "next";
+
 export async function generateStaticParams() {
     const fs = require('fs');
     const path = require('path');
@@ -15,6 +17,16 @@ async function getTopic(slug: string) {
     const path = require('path');
     const topics = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'public/data/topics.json'), 'utf8'));
     return topics.find((t: any) => t.topic_slug === slug);
+}
+
+export async function generateMetadata({
+    params,
+}: {
+    params: { topic_slug: string };
+}): Promise<Metadata> {
+    return {
+        alternates: { canonical: `/topics/${params.topic_slug}` },
+    };
 }
 
 export default async function TopicDetailPage({ params }: { params: { topic_slug: string } }) {
