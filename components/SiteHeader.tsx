@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { href: "/corporations?topic=再就職情報", label: "話題から探す", activeFor: ["/topics"] },
+  { href: "/corporations?tag=再就職情報", label: "話題から探す", activeFor: ["/topics"] },
   { href: "/rankings", label: "ランキング", activeFor: ["/rankings"] },
   { href: "/corporations", label: "法人検索", activeFor: ["/corporations", "/persons"] },
   { href: "/data-policy", label: "データ方針", activeFor: ["/data-policy"] },

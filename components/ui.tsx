@@ -25,6 +25,7 @@ export function SearchBox({
       </label>
       <input
         id="keyword-search"
+        name="keyword"
         type="search"
         placeholder={placeholder}
         className="w-full rounded-lg border border-outline-variant bg-surface-container-lowest px-4 py-3 text-base text-on-surface outline-none transition placeholder:text-on-surface-variant focus:border-secondary focus:ring-2 focus:ring-secondary/20"

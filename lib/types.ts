@@ -149,6 +149,7 @@ export interface Source {
 export interface Topic {
   category: string;
   label: string;
+  queryKey: string;
   items: string[];
 }
 
@@ -194,7 +195,10 @@ export interface Corporation {
   nextDay: number;
   within30Days: number;
   averageWaitDays: number;
+  ministries: string[];
   topics: string[];
+  relatedTags: string[];
+  description: string;
   relatedPersons: string[];
   sources: string[];
   basicInfo?: CorporationBasicInfo;

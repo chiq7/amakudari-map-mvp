@@ -1,14 +1,17 @@
 export type AnalyticsValue = string | number | boolean | null | undefined;
 export type AnalyticsParams = Record<string, AnalyticsValue>;
 
-declare global {
-  interface Window {
-    dataLayer?: Array<Record<string, AnalyticsValue>>;
-  }
-}
+type AnalyticsWindow = Window & {
+  dataLayer?: Array<Record<string, AnalyticsValue>>;
+};
 
 export function trackEvent(eventName: string, params: AnalyticsParams = {}) {
-  if (typeof window === "undefined" || !Array.isArray(window.dataLayer)) {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  const analyticsWindow = window as AnalyticsWindow;
+  if (!Array.isArray(analyticsWindow.dataLayer)) {
     return;
   }
 
@@ -16,7 +19,7 @@ export function trackEvent(eventName: string, params: AnalyticsParams = {}) {
     Object.entries(params).filter(([, value]) => value !== undefined),
   );
 
-  window.dataLayer.push({
+  analyticsWindow.dataLayer.push({
     event: eventName,
     ...safeParams,
   });
@@ -45,4 +48,3 @@ export function getLinkType(pathname: string) {
   if (pageType.endsWith("_index")) return "index";
   return pageType;
 }
-

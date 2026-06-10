@@ -29,19 +29,39 @@ export const records = recordsData as ReemploymentRecord[];
 export const meta = metaData as DataMeta;
 
 const sourcesById = new Map(sources.map((source) => [source.id, source]));
+const ministriesByCorporation = new Map<string, Set<string>>();
+const tagsByCorporation = new Map<string, Set<string>>();
+
+rawPersons.forEach((person) => {
+  const ministries = ministriesByCorporation.get(person.corporationSlug) ?? new Set<string>();
+  ministries.add(person.fromMinistry);
+  ministriesByCorporation.set(person.corporationSlug, ministries);
+
+  const tags = tagsByCorporation.get(person.corporationSlug) ?? new Set<string>();
+  person.tags.forEach((tag) => tags.add(tag));
+  tagsByCorporation.set(person.corporationSlug, tags);
+});
 
 export const corporations: Corporation[] = rawCorporations.map((corporation) => ({
   slug: corporation.slug,
   name: corporation.name,
   type: corporation.type,
-  region: corporation.prefecture,
+  region:
+    corporation.prefecture !== "不明"
+      ? corporation.prefecture
+      : corporation.basicInfo?.prefecture || corporation.prefecture,
   count: corporation.counts.publicRecords,
   topMinistry: corporation.ministry.name,
   topMinistryCount: corporation.ministry.count,
   nextDay: corporation.counts.nextDay,
   within30Days: corporation.counts.within30Days,
   averageWaitDays: corporation.waitingDays.average,
+  ministries: Array.from(
+    ministriesByCorporation.get(corporation.slug) ?? [corporation.ministry.name],
+  ),
   topics: corporation.topics,
+  relatedTags: Array.from(tagsByCorporation.get(corporation.slug) ?? []),
+  description: corporation.gbizInfo?.businessSummary ?? "",
   relatedPersons: corporation.relatedPersons,
   sources: corporation.sources,
   basicInfo: corporation.basicInfo,

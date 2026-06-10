@@ -2,6 +2,7 @@
   {
     "category": "ministry",
     "label": "省庁から見る",
+    "queryKey": "ministry",
     "items": [
       "国土交通省",
       "経済産業省",
@@ -15,6 +16,7 @@
   {
     "category": "industry",
     "label": "業界から見る",
+    "queryKey": "tag",
     "items": [
       "建設・不動産",
       "IT・通信",
@@ -28,6 +30,7 @@
   {
     "category": "corporationType",
     "label": "法人種別から見る",
+    "queryKey": "type",
     "items": [
       "株式会社",
       "公益財団法人",
@@ -40,6 +43,7 @@
   {
     "category": "topic",
     "label": "テーマから見る",
+    "queryKey": "tag",
     "items": [
       "ライドシェア",
       "再エネ",
@@ -55,6 +59,7 @@
   {
     "category": "region",
     "label": "地域から見る",
+    "queryKey": "area",
     "items": [
       "東京都",
       "大阪府",

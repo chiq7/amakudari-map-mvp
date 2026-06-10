@@ -1,49 +1,17 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { corporations, totals } from "@/lib/static-content";
+import { corporations, topics, totals } from "@/lib/static-content";
 import { SearchBox, TagChip } from "@/components/ui";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-const cutGroups = [
-  {
-    title: "省庁から見る",
-    queryKey: "ministry",
-    links: ["国土交通省", "経済産業省", "厚生労働省", "防衛省"].map((label) => ({
-      label,
-    })),
-  },
-  {
-    title: "業界から見る",
-    queryKey: "industry",
-    links: ["建設・不動産", "IT・通信", "医療・福祉", "金融", "エネルギー"].map((label) => ({
-      label,
-    })),
-  },
-  {
-    title: "法人種別から見る",
-    queryKey: "type",
-    links: ["株式会社", "公益財団法人", "独立行政法人", "一般社団法人"].map((label) => ({
-      label,
-    })),
-  },
-  {
-    title: "テーマから見る",
-    queryKey: "topic",
-    links: ["ライドシェア", "再エネ", "防衛", "医療", "インフラ"].map((label) => ({
-      label,
-    })),
-  },
-  {
-    title: "地域から見る",
-    queryKey: "region",
-    links: ["東京都", "大阪府", "関東地方"].map((label) => ({
-      label,
-    })),
-  },
-];
+const cutGroups = topics.map((topic) => ({
+  title: topic.label,
+  queryKey: topic.queryKey,
+  links: topic.items.slice(0, 5).map((label) => ({ label })),
+}));
 
 const featuredCorporations = [
   corporations[0],
@@ -64,7 +32,7 @@ const rankingBlocks = [
   {
     title: "公表再就職者数",
     unit: "人",
-    href: "/rankings",
+    href: "/corporations?sort=publicRecords",
     items: [
       ["一般財団法人 公共政策総合研究所", 42, "/corporations/public-policy-research"],
       ["株式会社 日本インフラ整備機構", 35, "/corporations/infrastructure-development"],
@@ -74,7 +42,7 @@ const rankingBlocks = [
   {
     title: "退職翌日再就職件数",
     unit: "件",
-    href: "/rankings",
+    href: "/corporations?flag=nextDay",
     items: [
       ["株式会社 日本インフラ整備機構", 14, "/corporations/infrastructure-development"],
       ["一般財団法人 公共政策総合研究所", 12, "/corporations/public-policy-research"],
@@ -84,7 +52,7 @@ const rankingBlocks = [
   {
     title: "30日以内再就職件数",
     unit: "件",
-    href: "/rankings",
+    href: "/corporations?flag=within30Days",
     items: [
       ["一般財団法人 公共政策総合研究所", 25, "/corporations/public-policy-research"],
       ["株式会社 日本インフラ整備機構", 22, "/corporations/infrastructure-development"],
@@ -94,7 +62,7 @@ const rankingBlocks = [
   {
     title: "平均待機日数が短い法人",
     unit: "日",
-    href: "/rankings",
+    href: "/corporations?sort=shortestAverageWaitingDays",
     items: [
       ["株式会社 日本インフラ整備機構", 12, "/corporations/infrastructure-development"],
       ["公益財団法人 国際技術交流協会", 32, "/corporations/international-technology-exchange"],
@@ -126,7 +94,7 @@ const aggregateGroups = [
       ["製造", 82],
       ["運輸・物流", 64],
     ],
-    queryKey: "industry",
+    queryKey: "tag",
   },
 ];
 
@@ -356,7 +324,7 @@ export default function Home() {
           <p className="mb-2 text-xs font-bold text-on-surface-variant">注目指標</p>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
             <Link
-              href="/corporations?nextDay=true"
+              href="/corporations?flag=nextDay"
               className="flex items-center justify-between rounded border border-secondary/20 bg-secondary-fixed/50 px-3 py-2 hover:border-secondary"
             >
               <span className="text-sm font-bold text-secondary">退職翌日再就職</span>
@@ -366,7 +334,7 @@ export default function Home() {
               </span>
             </Link>
             <Link
-              href="/corporations?within30Days=true"
+              href="/corporations?flag=within30Days"
               className="flex items-center justify-between rounded border border-secondary/20 bg-secondary-fixed/50 px-3 py-2 hover:border-secondary"
             >
               <span className="text-sm font-bold text-secondary">30日以内再就職</span>
