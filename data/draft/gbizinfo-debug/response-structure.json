@@ -1,0 +1,1298 @@
+{
+  "sourceType": "gbizinfo-api-v2-response-structure",
+  "createdAt": "2026-06-10T09:32:33.272Z",
+  "valuePolicy": "API values are omitted. This file contains keys, value types, and array lengths only.",
+  "corporations": [
+    {
+      "corporationSlug": "corporation-f17458638467b979",
+      "corporationName": "日本郵政株式会社",
+      "corporateNumber": "5010001112697",
+      "endpoints": [
+        {
+          "endpoint": "corporation",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "aggregated_year",
+            "business_items",
+            "business_summary",
+            "capital_stock",
+            "close_cause",
+            "close_date",
+            "company_size_female",
+            "company_size_male",
+            "company_url",
+            "corporate_number",
+            "date_of_establishment",
+            "employee_number",
+            "founding_year",
+            "industry",
+            "kana",
+            "kind",
+            "location",
+            "name",
+            "name_en",
+            "postal_code",
+            "process",
+            "qualification_grade",
+            "representative_name",
+            "status",
+            "update_date"
+          ],
+          "fields": [
+            {
+              "key": "aggregated_year",
+              "type": "string"
+            },
+            {
+              "key": "business_items",
+              "type": "array",
+              "arrayLength": 0,
+              "sampleValueType": "empty",
+              "nestedKeys": []
+            },
+            {
+              "key": "business_summary",
+              "type": "string"
+            },
+            {
+              "key": "capital_stock",
+              "type": "number"
+            },
+            {
+              "key": "close_cause",
+              "type": "null"
+            },
+            {
+              "key": "close_date",
+              "type": "null"
+            },
+            {
+              "key": "company_size_female",
+              "type": "number"
+            },
+            {
+              "key": "company_size_male",
+              "type": "number"
+            },
+            {
+              "key": "company_url",
+              "type": "string"
+            },
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "date_of_establishment",
+              "type": "null"
+            },
+            {
+              "key": "employee_number",
+              "type": "number"
+            },
+            {
+              "key": "founding_year",
+              "type": "null"
+            },
+            {
+              "key": "industry",
+              "type": "array",
+              "arrayLength": 1,
+              "sampleValueType": "string",
+              "nestedKeys": []
+            },
+            {
+              "key": "kana",
+              "type": "string"
+            },
+            {
+              "key": "kind",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "name_en",
+              "type": "null"
+            },
+            {
+              "key": "postal_code",
+              "type": "string"
+            },
+            {
+              "key": "process",
+              "type": "string"
+            },
+            {
+              "key": "qualification_grade",
+              "type": "null"
+            },
+            {
+              "key": "representative_name",
+              "type": "string"
+            },
+            {
+              "key": "status",
+              "type": "string"
+            },
+            {
+              "key": "update_date",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "endpoint": "certification",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "certification",
+            "corporate_number",
+            "location",
+            "name"
+          ],
+          "fields": [
+            {
+              "key": "certification",
+              "type": "array",
+              "arrayLength": 1,
+              "sampleValueType": "object",
+              "nestedKeys": [
+                "category",
+                "date_of_approval",
+                "government_departments",
+                "target",
+                "title"
+              ]
+            },
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "endpoint": "commendation",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "commendation",
+            "corporate_number",
+            "location",
+            "name"
+          ],
+          "fields": [
+            {
+              "key": "commendation",
+              "type": "array",
+              "arrayLength": 1,
+              "sampleValueType": "object",
+              "nestedKeys": [
+                "category",
+                "date_of_commendation",
+                "government_departments",
+                "note",
+                "target",
+                "title"
+              ]
+            },
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "endpoint": "finance",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "finance",
+            "location",
+            "name"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "finance",
+              "type": "object",
+              "nestedKeys": [
+                "accounting_standards",
+                "fiscal_year_cover_page",
+                "major_shareholders",
+                "management_index"
+              ]
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "endpoint": "patent",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "location",
+            "name",
+            "patent"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "patent",
+              "type": "array",
+              "arrayLength": 1235,
+              "sampleValueType": "object",
+              "nestedKeys": [
+                "application_date",
+                "classifications",
+                "patent_type",
+                "registration_number",
+                "title",
+                "url"
+              ]
+            }
+          ]
+        },
+        {
+          "endpoint": "procurement",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "location",
+            "name",
+            "procurement"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "procurement",
+              "type": "array",
+              "arrayLength": 0,
+              "sampleValueType": "empty",
+              "nestedKeys": []
+            }
+          ]
+        },
+        {
+          "endpoint": "subsidy",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "location",
+            "name",
+            "subsidy"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "subsidy",
+              "type": "array",
+              "arrayLength": 5,
+              "sampleValueType": "object",
+              "nestedKeys": [
+                "amount",
+                "date_of_approval",
+                "government_departments",
+                "target",
+                "title"
+              ]
+            }
+          ]
+        },
+        {
+          "endpoint": "workplace",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "location",
+            "name",
+            "workplace_info"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "workplace_info",
+              "type": "object",
+              "nestedKeys": [
+                "base_infos",
+                "compatibility_of_childcare_and_work",
+                "women_activity_infos"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "corporationSlug": "corporation-0797ac4c7725544f",
+      "corporationName": "一般財団法人日本木材総合情報センター",
+      "corporateNumber": "8010005004211",
+      "endpoints": [
+        {
+          "endpoint": "corporation",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "aggregated_year",
+            "business_items",
+            "business_summary",
+            "capital_stock",
+            "close_cause",
+            "close_date",
+            "company_size_female",
+            "company_size_male",
+            "company_url",
+            "corporate_number",
+            "date_of_establishment",
+            "employee_number",
+            "founding_year",
+            "industry",
+            "kana",
+            "kind",
+            "location",
+            "name",
+            "name_en",
+            "postal_code",
+            "process",
+            "qualification_grade",
+            "representative_name",
+            "status",
+            "update_date"
+          ],
+          "fields": [
+            {
+              "key": "aggregated_year",
+              "type": "string"
+            },
+            {
+              "key": "business_items",
+              "type": "array",
+              "arrayLength": 0,
+              "sampleValueType": "empty",
+              "nestedKeys": []
+            },
+            {
+              "key": "business_summary",
+              "type": "null"
+            },
+            {
+              "key": "capital_stock",
+              "type": "null"
+            },
+            {
+              "key": "close_cause",
+              "type": "null"
+            },
+            {
+              "key": "close_date",
+              "type": "null"
+            },
+            {
+              "key": "company_size_female",
+              "type": "null"
+            },
+            {
+              "key": "company_size_male",
+              "type": "null"
+            },
+            {
+              "key": "company_url",
+              "type": "null"
+            },
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "date_of_establishment",
+              "type": "null"
+            },
+            {
+              "key": "employee_number",
+              "type": "null"
+            },
+            {
+              "key": "founding_year",
+              "type": "null"
+            },
+            {
+              "key": "industry",
+              "type": "array",
+              "arrayLength": 0,
+              "sampleValueType": "empty",
+              "nestedKeys": []
+            },
+            {
+              "key": "kana",
+              "type": "string"
+            },
+            {
+              "key": "kind",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "name_en",
+              "type": "null"
+            },
+            {
+              "key": "postal_code",
+              "type": "string"
+            },
+            {
+              "key": "process",
+              "type": "string"
+            },
+            {
+              "key": "qualification_grade",
+              "type": "null"
+            },
+            {
+              "key": "representative_name",
+              "type": "null"
+            },
+            {
+              "key": "status",
+              "type": "string"
+            },
+            {
+              "key": "update_date",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "endpoint": "certification",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "certification",
+            "corporate_number",
+            "location",
+            "name"
+          ],
+          "fields": [
+            {
+              "key": "certification",
+              "type": "array",
+              "arrayLength": 0,
+              "sampleValueType": "empty",
+              "nestedKeys": []
+            },
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "endpoint": "commendation",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "commendation",
+            "corporate_number",
+            "location",
+            "name"
+          ],
+          "fields": [
+            {
+              "key": "commendation",
+              "type": "array",
+              "arrayLength": 0,
+              "sampleValueType": "empty",
+              "nestedKeys": []
+            },
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "endpoint": "finance",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "finance",
+            "location",
+            "name"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "finance",
+              "type": "object",
+              "nestedKeys": [
+                "accounting_standards",
+                "fiscal_year_cover_page",
+                "major_shareholders",
+                "management_index"
+              ]
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "endpoint": "patent",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "location",
+            "name",
+            "patent"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "patent",
+              "type": "array",
+              "arrayLength": 0,
+              "sampleValueType": "empty",
+              "nestedKeys": []
+            }
+          ]
+        },
+        {
+          "endpoint": "procurement",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "location",
+            "name",
+            "procurement"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "procurement",
+              "type": "array",
+              "arrayLength": 1,
+              "sampleValueType": "object",
+              "nestedKeys": [
+                "amount",
+                "date_of_order",
+                "government_departments",
+                "note",
+                "title"
+              ]
+            }
+          ]
+        },
+        {
+          "endpoint": "subsidy",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "location",
+            "name",
+            "subsidy"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "subsidy",
+              "type": "array",
+              "arrayLength": 5,
+              "sampleValueType": "object",
+              "nestedKeys": [
+                "amount",
+                "date_of_approval",
+                "government_departments",
+                "target",
+                "title"
+              ]
+            }
+          ]
+        },
+        {
+          "endpoint": "workplace",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "location",
+            "name",
+            "workplace_info"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "workplace_info",
+              "type": "object",
+              "nestedKeys": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "corporationSlug": "corporation-891463cf86adef3b",
+      "corporationName": "国立研究開発法人建築研究所",
+      "corporateNumber": "9050005005205",
+      "endpoints": [
+        {
+          "endpoint": "corporation",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "aggregated_year",
+            "business_items",
+            "business_summary",
+            "capital_stock",
+            "close_cause",
+            "close_date",
+            "company_size_female",
+            "company_size_male",
+            "company_url",
+            "corporate_number",
+            "date_of_establishment",
+            "employee_number",
+            "founding_year",
+            "industry",
+            "kana",
+            "kind",
+            "location",
+            "name",
+            "name_en",
+            "postal_code",
+            "process",
+            "qualification_grade",
+            "representative_name",
+            "status",
+            "update_date"
+          ],
+          "fields": [
+            {
+              "key": "aggregated_year",
+              "type": "string"
+            },
+            {
+              "key": "business_items",
+              "type": "array",
+              "arrayLength": 0,
+              "sampleValueType": "empty",
+              "nestedKeys": []
+            },
+            {
+              "key": "business_summary",
+              "type": "null"
+            },
+            {
+              "key": "capital_stock",
+              "type": "null"
+            },
+            {
+              "key": "close_cause",
+              "type": "null"
+            },
+            {
+              "key": "close_date",
+              "type": "null"
+            },
+            {
+              "key": "company_size_female",
+              "type": "null"
+            },
+            {
+              "key": "company_size_male",
+              "type": "null"
+            },
+            {
+              "key": "company_url",
+              "type": "null"
+            },
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "date_of_establishment",
+              "type": "null"
+            },
+            {
+              "key": "employee_number",
+              "type": "null"
+            },
+            {
+              "key": "founding_year",
+              "type": "null"
+            },
+            {
+              "key": "industry",
+              "type": "array",
+              "arrayLength": 0,
+              "sampleValueType": "empty",
+              "nestedKeys": []
+            },
+            {
+              "key": "kana",
+              "type": "string"
+            },
+            {
+              "key": "kind",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "name_en",
+              "type": "null"
+            },
+            {
+              "key": "postal_code",
+              "type": "string"
+            },
+            {
+              "key": "process",
+              "type": "string"
+            },
+            {
+              "key": "qualification_grade",
+              "type": "null"
+            },
+            {
+              "key": "representative_name",
+              "type": "null"
+            },
+            {
+              "key": "status",
+              "type": "string"
+            },
+            {
+              "key": "update_date",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "endpoint": "certification",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "certification",
+            "corporate_number",
+            "location",
+            "name"
+          ],
+          "fields": [
+            {
+              "key": "certification",
+              "type": "array",
+              "arrayLength": 0,
+              "sampleValueType": "empty",
+              "nestedKeys": []
+            },
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "endpoint": "commendation",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "commendation",
+            "corporate_number",
+            "location",
+            "name"
+          ],
+          "fields": [
+            {
+              "key": "commendation",
+              "type": "array",
+              "arrayLength": 0,
+              "sampleValueType": "empty",
+              "nestedKeys": []
+            },
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "endpoint": "finance",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "finance",
+            "location",
+            "name"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "finance",
+              "type": "object",
+              "nestedKeys": [
+                "accounting_standards",
+                "fiscal_year_cover_page",
+                "major_shareholders",
+                "management_index"
+              ]
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "endpoint": "patent",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "location",
+            "name",
+            "patent"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "patent",
+              "type": "array",
+              "arrayLength": 49,
+              "sampleValueType": "object",
+              "nestedKeys": [
+                "application_date",
+                "classifications",
+                "patent_type",
+                "registration_number",
+                "title",
+                "url"
+              ]
+            }
+          ]
+        },
+        {
+          "endpoint": "procurement",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "location",
+            "name",
+            "procurement"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "procurement",
+              "type": "array",
+              "arrayLength": 0,
+              "sampleValueType": "empty",
+              "nestedKeys": []
+            }
+          ]
+        },
+        {
+          "endpoint": "subsidy",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "location",
+            "name",
+            "subsidy"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "subsidy",
+              "type": "array",
+              "arrayLength": 2,
+              "sampleValueType": "object",
+              "nestedKeys": [
+                "amount",
+                "date_of_approval",
+                "government_departments",
+                "target",
+                "title"
+              ]
+            }
+          ]
+        },
+        {
+          "endpoint": "workplace",
+          "topLevelKeys": [
+            "errors",
+            "hojin-infos",
+            "id",
+            "message"
+          ],
+          "hojinInfoCount": 1,
+          "nestedKeys": [
+            "corporate_number",
+            "location",
+            "name",
+            "workplace_info"
+          ],
+          "fields": [
+            {
+              "key": "corporate_number",
+              "type": "string"
+            },
+            {
+              "key": "location",
+              "type": "string"
+            },
+            {
+              "key": "name",
+              "type": "string"
+            },
+            {
+              "key": "workplace_info",
+              "type": "object",
+              "nestedKeys": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

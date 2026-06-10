@@ -20,9 +20,19 @@ const expectedRecordFields = [
   "corporationSlug",
   "corporationName",
   "officialName",
-  "subsidies",
-  "procurements",
+  "basicInfo",
+  "businessSummary",
+  "employeeNumber",
+  "capitalStock",
+  "establishmentDate",
+  "representativeName",
+  "workplaceInfo",
   "certifications",
+  "awards",
+  "finance",
+  "patents",
+  "procurements",
+  "subsidies",
   "licenses",
   "sourceName",
   "sourceUrl",
@@ -51,10 +61,12 @@ function validate() {
   if (candidate.sourceType !== "gbizinfo-api-v2") {
     errors.push("sourceType must be gbizinfo-api-v2.");
   }
+  const isCurrentSchema = candidate.schemaVersion === 2;
   if (!["awaiting-api-token", "draft"].includes(candidate.status)) {
     errors.push("status must be awaiting-api-token or draft.");
   }
   if (
+    isCurrentSchema &&
     JSON.stringify(candidate.recordFields) !==
     JSON.stringify(expectedRecordFields)
   ) {
@@ -112,12 +124,18 @@ function validate() {
       }
     }
     for (const field of [
-      "subsidies",
-      "procurements",
       "certifications",
+      "procurements",
+      "subsidies",
       "licenses",
       "notes",
     ]) {
+      if (!Array.isArray(record[field])) {
+        errors.push(`${prefix}.${field} must be an array.`);
+      }
+    }
+    if (!isCurrentSchema) return;
+    for (const field of ["awards", "patents"]) {
       if (!Array.isArray(record[field])) {
         errors.push(`${prefix}.${field} must be an array.`);
       }
@@ -132,7 +150,95 @@ function validate() {
     ) {
       errors.push(`${prefix}.sourceUrl must link to the corporate number.`);
     }
+    for (const field of ["employeeNumber", "capitalStock"]) {
+      if (
+        record[field] !== null &&
+        (typeof record[field] !== "number" || !Number.isFinite(record[field]))
+      ) {
+        errors.push(`${prefix}.${field} must be a number or null.`);
+      }
+    }
+    for (const field of [
+      "businessSummary",
+      "establishmentDate",
+      "representativeName",
+    ]) {
+      if (typeof record[field] !== "string") {
+        errors.push(`${prefix}.${field} must be a string.`);
+      }
+    }
+    for (const field of ["basicInfo", "workplaceInfo", "finance"]) {
+      if (
+        record[field] !== null &&
+        (typeof record[field] !== "object" || Array.isArray(record[field]))
+      ) {
+        errors.push(`${prefix}.${field} must be an object or null.`);
+      }
+    }
+    if (record.licenses.length !== 0) {
+      errors.push(`${prefix}.licenses must remain empty for gBizINFO v2.`);
+    }
   });
+
+  if (candidate.status === "draft" && isCurrentSchema) {
+    const records = candidate.records;
+    const hasMeaningfulData = (value) => {
+      if (Array.isArray(value)) {
+        return value.some(hasMeaningfulData);
+      }
+      if (value && typeof value === "object") {
+        return Object.values(value).some(hasMeaningfulData);
+      }
+      if (typeof value === "string") {
+        return value.trim().length > 0;
+      }
+      return value !== null && value !== undefined;
+    };
+    const expectedSummary = {
+      total: records.length,
+      basicInfoCount: records.filter((record) =>
+        hasMeaningfulData(record.basicInfo),
+      ).length,
+      businessSummaryCount: records.filter(
+        (record) => record.businessSummary,
+      ).length,
+      employeeNumberCount: records.filter(
+        (record) => record.employeeNumber !== null,
+      ).length,
+      capitalStockCount: records.filter(
+        (record) => record.capitalStock !== null,
+      ).length,
+      establishmentDateCount: records.filter(
+        (record) => record.establishmentDate,
+      ).length,
+      certificationCorporationCount: records.filter(
+        (record) => record.certifications.length > 0,
+      ).length,
+      awardCorporationCount: records.filter(
+        (record) => record.awards.length > 0,
+      ).length,
+      financeCorporationCount: records.filter((record) =>
+        hasMeaningfulData(record.finance),
+      ).length,
+      patentCorporationCount: records.filter(
+        (record) => record.patents.length > 0,
+      ).length,
+      procurementCorporationCount: records.filter(
+        (record) => record.procurements.length > 0,
+      ).length,
+      subsidyCorporationCount: records.filter(
+        (record) => record.subsidies.length > 0,
+      ).length,
+      workplaceInfoCount: records.filter((record) =>
+        hasMeaningfulData(record.workplaceInfo),
+      ).length,
+    };
+    for (const [field, expected] of Object.entries(expectedSummary)) {
+      if (candidate.summary?.[field] !== expected) {
+        errors.push(`summary.${field} must equal ${expected}.`);
+      }
+    }
+  }
 
   return errors;
 }
