@@ -45,6 +45,13 @@ export default function DataPolicyPage() {
         当サイトは機械的なプログラムによってデータを収集・整理しているため、表記の揺れや、一次資料自体の誤りにより実際の事実と異なる場合があります。最新かつ正確な情報は必ず各省庁の公式サイトをご確認ください。
       </DataNotice>
 
+      <section id="updates" className="rounded-lg border border-outline-variant bg-surface-container-lowest p-6">
+        <h2 className="mb-3 text-2xl font-bold text-primary">更新方針</h2>
+        <p className="leading-relaxed text-on-surface-variant">
+          新たな公表資料を確認できた場合は、出典、氏名、元府省庁、官職、再就職先、日付を確認し、重複を除いたうえで順次追加します。自動処理で作成した下書きは確認・承認を経てから公開データへ反映し、出典を確認できない情報は追加しません。
+        </p>
+      </section>
+
       <section id="fields">
         <h2 className="mb-4 text-2xl font-bold text-primary">表示項目と抽出ルール</h2>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-4">

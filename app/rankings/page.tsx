@@ -46,6 +46,20 @@ export default function RankingsPage() {
         ランキングは公表資料上の件数や日付を比較しやすく表示するものです。特定の評価や判断を示すものではありません。
       </DataNotice>
 
+      <section className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
+        {[
+          ["公表再就職者数", "公表資料に含まれる再就職記録の件数です。"],
+          ["退職翌日再就職", "公表された日付から退職翌日として整理した記録の件数です。"],
+          ["30日以内再就職", "離職日から30日以内の再就職記録を集計しています。"],
+          ["平均待機日数", "法人ごとの離職日から再就職日までの日数の平均です。"],
+        ].map(([title, description]) => (
+          <div key={title} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
+            <h2 className="font-bold text-primary">{title}</h2>
+            <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{description}</p>
+          </div>
+        ))}
+      </section>
+
       <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-3">
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:items-center">

@@ -140,6 +140,9 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         <div>
           <h1 className="text-3xl font-bold text-primary md:text-4xl">{corporation.name}</h1>
           <p className="mt-2 text-base text-on-surface-variant">公表資料に基づく再就職情報</p>
+          <p className="mt-2 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
+            このページでは、{corporation.name}に関する公表再就職記録を法人単位で整理し、元府省庁、再就職者数、再就職時期、出典資料を確認できるようにしています。表示内容は公表資料の記録を整理したものです。
+          </p>
         </div>
         <div className="flex flex-wrap gap-2">
           {topMinistry && (

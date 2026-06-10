@@ -38,6 +38,12 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
         <p className="mt-2 text-base text-on-surface-variant">政府・各省庁等の公表資料に基づく再就職情報</p>
       </section>
 
+      <section className="rounded-lg border border-outline-variant bg-surface-container-low p-4">
+        <p className="text-sm leading-relaxed text-on-surface-variant">
+          本ページは公表資料に記載された氏名・官職・再就職先を整理したものです。同姓同名の別人が含まれる可能性があるため、人物の特定には出典資料もあわせて確認してください。個人への評価や違法性を断定するものではありません。
+        </p>
+      </section>
+
       <section className="grid grid-cols-1 gap-4 md:grid-cols-4">
         <StatCard label="元省庁" value={person.ministry} />
         <StatCard label="離職時官職" value={person.formerPosition} />

@@ -196,7 +196,12 @@ function CorporationsContent() {
     <div className="flex flex-col gap-8">
       <section className="mx-auto max-w-4xl text-center">
         <h1 className="text-3xl font-bold text-primary md:text-4xl">法人検索</h1>
-        <p className="mt-2 text-base text-on-surface-variant">公表資料に記載された受け入れ法人を探せます。</p>
+        <p className="mt-2 text-base leading-relaxed text-on-surface-variant">
+          公表資料に記載された受け入れ法人について、再就職者数、元府省庁、再就職時期を確認できます。
+        </p>
+        <p className="mt-1 text-sm leading-relaxed text-on-surface-variant">
+          省庁、法人種別、地域、退職翌日、30日以内などの条件で絞り込めます。
+        </p>
       </section>
 
       <section className="mx-auto flex w-full max-w-4xl flex-col gap-3 rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-sm">
@@ -234,20 +239,25 @@ function CorporationsContent() {
         </section>
       ) : null}
 
-      <section className="grid grid-cols-1 gap-4 md:grid-cols-4">
-        <StatCard label="受け入れ法人" value={totals.corporations.toLocaleString()} unit="法人" />
-        <StatCard label="公表再就職者数" value={totals.publicRecords.toLocaleString()} unit="人" />
-        <HighlightStatCard label="退職翌日再就職あり" value={totals.nextDayCorporations} unit="法人" />
-        <HighlightStatCard label="30日以内再就職あり" value={totals.within30DaysCorporations} unit="法人" />
-      </section>
+      {!isFiltered ? (
+        <section className="grid grid-cols-1 gap-4 md:grid-cols-4">
+          <StatCard label="受け入れ法人" value={totals.corporations.toLocaleString()} unit="法人" />
+          <StatCard label="公表再就職者数" value={totals.publicRecords.toLocaleString()} unit="人" />
+          <HighlightStatCard label="退職翌日再就職あり" value={totals.nextDayCorporations} unit="法人" />
+          <HighlightStatCard label="30日以内再就職あり" value={totals.within30DaysCorporations} unit="法人" />
+        </section>
+      ) : null}
 
       <section className="flex flex-col gap-4">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <h2 className="text-2xl font-bold text-primary">法人一覧</h2>
-          <p className="text-sm text-on-surface-variant">
+          <p className="text-base font-bold text-primary">
             全 {totals.corporations}件中 {filteredCorporations.length}件を表示
           </p>
         </div>
+        <p className="text-sm leading-relaxed text-on-surface-variant">
+          件数は公表資料に含まれる再就職記録を法人単位で集計したものです。最多出身省庁や待機日数とあわせて、絞り込み結果の傾向を確認できます。
+        </p>
         {filteredCorporations.length > 0 ? (
           <div className="overflow-x-auto rounded-lg border border-outline-variant bg-surface-container-lowest">
             <table className="w-full min-w-[840px] text-left">

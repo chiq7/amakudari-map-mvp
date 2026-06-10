@@ -368,12 +368,12 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-4xl rounded-lg border border-outline-variant bg-surface-container-low p-7 text-center">
-        <h2 className="bg-transparent text-2xl font-bold text-primary">データの見方について</h2>
+        <h2 className="bg-transparent text-2xl font-bold text-primary">天下りマップとは</h2>
         <p className="mx-auto mt-3 max-w-3xl text-sm leading-relaxed text-on-surface-variant">
-          本サイトでは、政府・各省庁等の公表資料をもとに、再就職情報を検索しやすい形に整理しています。ランキングや待機日数は比較のための指標であり、特定の不適切性を示すものではありません。
+          天下りマップは、政府・各省庁等が公表する再就職関連資料をもとに、官民の人材移動を検索しやすく整理したデータベースです。法人別・個人別の記録や、件数・待機日数によるランキングを確認できます。
         </p>
-        <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-on-surface-variant">
-          本サイトは公表資料に基づく情報を中立的に整理したものです。掲載情報は、特定の個人・法人・省庁について不適切性を断定するものではありません。
+        <p className="mx-auto mt-3 max-w-3xl text-sm leading-relaxed text-on-surface-variant">
+          ランキングや待機日数は、公表内容を比較しやすくするための指標です。本サイトは適法性や妥当性を独自に判定するものではなく、特定の個人・法人・省庁への評価を目的としません。
         </p>
         <Link href="/data-policy" className="mt-5 inline-block rounded bg-primary px-6 py-2 text-sm font-bold text-white">
           データ方針を見る
