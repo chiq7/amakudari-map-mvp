@@ -16,6 +16,13 @@ const areaPrefectures: Record<string, string[]> = {
   近畿地方: ["三重県", "滋賀県", "京都府", "大阪府", "兵庫県", "奈良県", "和歌山県"],
 };
 
+type ActiveFilter = {
+  label: string;
+  heading: string;
+  description: string;
+  value: string;
+};
+
 function matchesType(corporation: Corporation, type: string) {
   return corporation.type === type || corporation.name.includes(type);
 }
@@ -33,6 +40,101 @@ function matchesTag(corporation: Corporation, tag: string) {
     ...corporation.topics,
     ...corporation.relatedTags,
   ].some((value) => value.toLocaleLowerCase("ja").includes(normalizedTag));
+}
+
+function getActiveFilters({
+  ministry,
+  type,
+  area,
+  flag,
+  tag,
+  keyword,
+  sort,
+}: {
+  ministry: string;
+  type: string;
+  area: string;
+  flag: string;
+  tag: string;
+  keyword: string;
+  sort: string;
+}) {
+  const filters: ActiveFilter[] = [];
+
+  if (ministry) {
+    filters.push({
+      label: "省庁",
+      heading: `${ministry}に関連する法人を表示中`,
+      description: `最多出身省庁が『${ministry}』の法人を表示しています。`,
+      value: ministry,
+    });
+  }
+  if (type) {
+    filters.push({
+      label: "法人種別",
+      heading: `${type}の法人を表示中`,
+      description: `法人種別が『${type}』の法人を表示しています。`,
+      value: type,
+    });
+  }
+  if (area) {
+    filters.push({
+      label: "地域",
+      heading: `${area}の法人を表示中`,
+      description: `所在地が『${area}』の法人を表示しています。`,
+      value: area,
+    });
+  }
+  if (flag === "nextDay") {
+    filters.push({
+      label: "指標",
+      heading: "退職翌日再就職がある法人を表示中",
+      description: "退職翌日再就職の記録がある法人を表示しています。",
+      value: "退職翌日再就職",
+    });
+  }
+  if (flag === "within30Days") {
+    filters.push({
+      label: "指標",
+      heading: "30日以内再就職がある法人を表示中",
+      description: "30日以内再就職の記録がある法人を表示しています。",
+      value: "30日以内再就職",
+    });
+  }
+  if (tag) {
+    filters.push({
+      label: "タグ",
+      heading: `「${tag}」に関連する法人を表示中`,
+      description: `「${tag}」に関連する法人を表示しています。`,
+      value: tag,
+    });
+  }
+  if (keyword) {
+    filters.push({
+      label: "検索語",
+      heading: `「${keyword}」の検索結果を表示中`,
+      description: `「${keyword}」を含む法人を表示しています。`,
+      value: keyword,
+    });
+  }
+  if (sort === "publicRecords") {
+    filters.push({
+      label: "並び順",
+      heading: "公表再就職者数の多い順で表示中",
+      description: "公表再就職者数の多い順で表示しています。",
+      value: "公表再就職者数",
+    });
+  }
+  if (sort === "shortestAverageWaitingDays") {
+    filters.push({
+      label: "並び順",
+      heading: "平均待機日数が短い順で表示中",
+      description: "平均待機日数が短い順で表示しています。",
+      value: "平均待機日数",
+    });
+  }
+
+  return filters;
 }
 
 function CorporationsContent() {
@@ -57,6 +159,8 @@ function CorporationsContent() {
     searchParams.get("industry")?.trim() ??
     "";
   const keyword = searchParams.get("keyword")?.trim() ?? "";
+  const activeFilters = getActiveFilters({ ministry, type, area, flag, tag, keyword, sort });
+  const primaryFilter = activeFilters[0];
 
   const filteredCorporations = corporations
     .filter((corporation) => !ministry || corporation.ministries.includes(ministry))
@@ -86,18 +190,7 @@ function CorporationsContent() {
       return 0;
     });
 
-  const conditionLabels = [
-    ministry ? `${ministry}に関連する法人` : "",
-    type ? `${type}の法人` : "",
-    area ? `${area}の法人` : "",
-    flag === "nextDay" ? "退職翌日再就職がある法人" : "",
-    flag === "within30Days" ? "30日以内再就職がある法人" : "",
-    tag ? `「${tag}」に関連する法人` : "",
-    keyword ? `「${keyword}」の検索結果` : "",
-    sort === "publicRecords" ? "公表再就職者数の多い順" : "",
-    sort === "shortestAverageWaitingDays" ? "平均待機日数が短い順" : "",
-  ].filter(Boolean);
-  const isFiltered = conditionLabels.length > 0;
+  const isFiltered = activeFilters.length > 0;
 
   return (
     <div className="flex flex-col gap-8">
@@ -120,11 +213,24 @@ function CorporationsContent() {
       </section>
 
       {isFiltered ? (
-        <section className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-secondary/30 bg-secondary-fixed/50 px-5 py-4">
-          <h2 className="text-xl font-bold text-primary">{conditionLabels.join("・")}</h2>
-          <Link href="/corporations" className="text-sm font-bold text-secondary hover:underline">
-            すべての法人を見る
-          </Link>
+        <section className="flex flex-col gap-3 rounded-lg border border-secondary/30 bg-secondary-fixed/50 px-5 py-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h2 className="text-xl font-bold text-primary">
+              {primaryFilter ? primaryFilter.heading : "絞り込み中"}
+            </h2>
+            <Link href="/corporations" className="text-sm font-bold text-secondary hover:underline">
+              すべての法人を見る
+            </Link>
+          </div>
+          {primaryFilter ? <p className="text-sm text-on-surface-variant">{primaryFilter.description}</p> : null}
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-sm font-semibold text-on-surface-variant">絞り込み条件：</span>
+            {activeFilters.map((filter) => (
+              <TagChip key={`${filter.label}-${filter.value}`} active>
+                {filter.value}
+              </TagChip>
+            ))}
+          </div>
         </section>
       ) : null}
 
@@ -144,7 +250,7 @@ function CorporationsContent() {
         </div>
         {filteredCorporations.length > 0 ? (
           <div className="overflow-x-auto rounded-lg border border-outline-variant bg-surface-container-lowest">
-          <table className="w-full min-w-[840px] text-left">
+            <table className="w-full min-w-[840px] text-left">
             <thead className="border-b border-outline-variant bg-surface-container-low">
               <tr>
                 <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">法人名</th>
@@ -161,7 +267,17 @@ function CorporationsContent() {
                 <tr key={corporation.slug} className="hover:bg-surface-container-low">
                   <td className="px-4 py-4 font-bold text-primary">{corporation.name}</td>
                   <td className="px-4 py-4 text-center font-semibold">{corporation.count}人</td>
-                  <td className="px-4 py-4 text-sm text-on-surface-variant">{corporation.topMinistry}</td>
+                  <td className="px-4 py-4 text-sm text-on-surface-variant">
+                    <span
+                      className={
+                        ministry && corporation.topMinistry === ministry
+                          ? "rounded-full bg-secondary-fixed px-2 py-1 font-bold text-secondary"
+                          : ""
+                      }
+                    >
+                      {corporation.topMinistry}
+                    </span>
+                  </td>
                   <td className="px-4 py-4 text-center">
                     <span className="rounded-full bg-secondary-fixed px-2 py-1 text-sm font-bold text-secondary">
                       {corporation.nextDay}件
