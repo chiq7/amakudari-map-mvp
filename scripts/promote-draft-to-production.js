@@ -5,6 +5,8 @@ const os = require("node:os");
 const path = require("node:path");
 const { spawnSync } = require("node:child_process");
 
+const DEFAULT_LIMIT = 10;
+const MAX_LIMIT = 30;
 const FILE_NAMES = [
   "records.json",
   "persons.json",
@@ -18,13 +20,14 @@ function usage() {
   console.log(
     [
       "Usage:",
-      '  npm run promote:draft -- --file "data/draft/example.json" --dry-run',
-      '  npm run promote:draft -- --file "data/draft/example.json" --apply',
+      '  npm run promote:draft -- --file "data/draft/example.json" --dry-run --limit 10',
+      '  npm run promote:draft -- --file "data/draft/example.json" --apply --limit 10',
       "",
       "Options:",
       "  --file PATH            Draft JSON file (required)",
       "  --dry-run              Report changes without writing (default)",
       "  --apply                Back up and update production",
+      `  --limit NUMBER         Maximum records to apply (default: ${DEFAULT_LIMIT}, max: ${MAX_LIMIT})`,
       "  --production-dir PATH  Override production directory",
       "  --archive-root PATH    Override archive root",
     ].join("\n"),
@@ -32,7 +35,7 @@ function usage() {
 }
 
 function parseArguments(argv) {
-  const options = { apply: false };
+  const options = { apply: false, limit: DEFAULT_LIMIT };
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
     if (argument === "--file") {
@@ -42,6 +45,9 @@ function parseArguments(argv) {
       options.apply = true;
     } else if (argument === "--dry-run") {
       options.apply = false;
+    } else if (argument === "--limit") {
+      options.limit = Number(argv[index + 1]);
+      index += 1;
     } else if (argument === "--production-dir") {
       options.productionDirectory = argv[index + 1];
       index += 1;
@@ -53,6 +59,13 @@ function parseArguments(argv) {
     } else {
       throw new Error(`Unknown argument: ${argument}`);
     }
+  }
+  if (
+    !Number.isInteger(options.limit) ||
+    options.limit < 1 ||
+    options.limit > MAX_LIMIT
+  ) {
+    throw new Error(`--limit must be an integer from 1 to ${MAX_LIMIT}.`);
   }
   return options;
 }
@@ -158,12 +171,14 @@ function loadProduction(productionDirectory) {
   return production;
 }
 
-function classifyDraft(draft, productionRecords) {
+function classifyDraft(draft, productionRecords, limit) {
   if (!Array.isArray(draft.records)) {
     throw new Error("Draft file must contain a records array.");
   }
 
-  const approved = draft.records.filter((record) => record.approved === true);
+  const approved = draft.records
+    .map((record, index) => ({ record, index }))
+    .filter(({ record }) => record.approved === true);
   const unapprovedCount = draft.records.length - approved.length;
   const productionKeys = new Set(
     productionRecords.map((record) => record.dedupeKey),
@@ -171,12 +186,14 @@ function classifyDraft(draft, productionRecords) {
   const seen = new Set();
   const additions = [];
   const invalid = [];
+  let invalidRecordCount = 0;
   let productionDuplicateCount = 0;
   let draftDuplicateCount = 0;
 
-  approved.forEach((record, index) => {
+  approved.forEach(({ record, index }) => {
     const errors = validateApprovedRecord(record, index);
     if (errors.length > 0) {
+      invalidRecordCount += 1;
       invalid.push(...errors);
       return;
     }
@@ -192,14 +209,20 @@ function classifyDraft(draft, productionRecords) {
     additions.push(record);
   });
 
+  const selectedAdditions = additions.slice(0, limit);
+
   return {
     totalCount: draft.records.length,
     approvedCount: approved.length,
     unapprovedCount,
     additions,
+    selectedAdditions,
+    pendingCount: additions.length - selectedAdditions.length,
     invalid,
+    invalidRecordCount,
     productionDuplicateCount,
     draftDuplicateCount,
+    duplicateCount: productionDuplicateCount + draftDuplicateCount,
   };
 }
 
@@ -462,19 +485,32 @@ function promote(options) {
   );
   const draft = readJson(draftPath);
   const production = loadProduction(productionDirectory);
-  const summary = classifyDraft(draft, production.records);
+  const summary = classifyDraft(draft, production.records, options.limit);
 
   console.log(options.apply ? "Promotion apply requested." : "Promotion dry-run.");
   console.log(`Input file: ${draftPath}`);
+  console.log(`Limit: ${options.limit}`);
   console.log(`Draft records: ${summary.totalCount}`);
   console.log(`Approved records: ${summary.approvedCount}`);
-  console.log(`Unapproved skipped: ${summary.unapprovedCount}`);
+  console.log(`Skipped: ${summary.unapprovedCount}`);
+  console.log(`Duplicates: ${summary.duplicateCount}`);
   console.log(
-    `Existing production duplicates: ${summary.productionDuplicateCount}`,
+    `  - Existing production: ${summary.productionDuplicateCount}`,
   );
-  console.log(`Draft duplicates: ${summary.draftDuplicateCount}`);
-  console.log(`Invalid approved records: ${summary.invalid.length}`);
-  console.log(`Records to add: ${summary.additions.length}`);
+  console.log(`  - Within draft: ${summary.draftDuplicateCount}`);
+  console.log(`Invalid approved records: ${summary.invalidRecordCount}`);
+  console.log(`Eligible records: ${summary.additions.length}`);
+  console.log(`Pending after limit: ${summary.pendingCount}`);
+  console.log(
+    options.apply
+      ? "Applied: 0 (not written yet)"
+      : "Applied: 0 (dry-run)",
+  );
+  console.log(
+    options.apply
+      ? `Selected for apply: ${summary.selectedAdditions.length}`
+      : `Would apply: ${summary.selectedAdditions.length}`,
+  );
 
   if (summary.invalid.length > 0) {
     console.log(`Missing or invalid fields: ${summary.invalid.join(", ")}`);
@@ -483,11 +519,17 @@ function promote(options) {
     }
   }
   if (!options.apply) return;
-  if (summary.additions.length === 0) {
-    throw new Error("No approved, non-duplicate records are available to add.");
+  if (summary.selectedAdditions.length === 0) {
+    console.log("No approved, non-duplicate records are available to add.");
+    console.log("Production was not changed and no archive was created.");
+    return;
   }
 
-  const candidate = buildCandidate(draft, production, summary.additions);
+  const candidate = buildCandidate(
+    draft,
+    production,
+    summary.selectedAdditions,
+  );
   const candidateDirectory = fs.mkdtempSync(
     path.join(os.tmpdir(), "amakudari-promote-"),
   );
@@ -542,10 +584,14 @@ function promote(options) {
   }
 
   console.log("Promotion completed.");
+  console.log(`Applied: ${summary.selectedAdditions.length}`);
   console.log(`Archive: ${path.relative(process.cwd(), archiveDirectory)}`);
   console.log(`Production records: ${candidate.records.length}`);
   console.log(`Production persons: ${candidate.persons.length}`);
   console.log(`Production corporations: ${candidate.corporations.length}`);
+  console.log("Run the remaining post-apply checks before committing:");
+  console.log("  npx.cmd tsc --noEmit");
+  console.log("  npm.cmd run build");
 }
 
 try {
