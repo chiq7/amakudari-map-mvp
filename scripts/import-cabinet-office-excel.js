@@ -11,6 +11,7 @@ const FIELD_ALIASES = {
   recordNumber: ["番号", "No.", "No"],
   personName: ["氏名", "名前"],
   originMinistry: [
+    "府省庁",
     "元府省庁",
     "府省庁名",
     "府省名",
@@ -18,13 +19,38 @@ const FIELD_ALIASES = {
     "出身府省庁",
     "離職時の府省庁",
   ],
-  titleAtRetirement: ["退職時役職", "離職時の官職", "離職時官職", "退職時の官職", "離職時の役職"],
+  titleAtRetirement: [
+    "退職時役職",
+    "退職時の役職",
+    "退職時の官職",
+    "離職時の官職",
+    "離職時官職",
+    "離職時の役職",
+    "官職",
+  ],
   retirementDate: ["退職日", "離職日", "離職年月日"],
-  reemploymentDate: ["再就職日", "再就職年月日"],
-  corporationName: ["再就職先法人名", "再就職先の名称", "再就職先名称", "再就職先"],
+  reemploymentDate: ["再就職日", "再就職年月日", "就職日"],
+  corporationName: ["再就職先法人名", "再就職先の名称", "再就職先名称", "再就職先", "法人名"],
   corporationType: ["法人種別", "法人区分", "再就職先の区分", "再就職先区分"],
   newPosition: ["再就職先役職", "再就職先における地位", "再就職先での役職", "再就職後の役職"],
+  publicationDate: ["公表日", "公表年月日"],
+  remarks: ["備考", "注記"],
 };
+
+const REQUIRED_COLUMN_FIELDS = [
+  { field: "personName", label: "氏名 / 名前" },
+  { field: "titleAtRetirement", label: "退職時役職 / 官職" },
+  { field: "corporationName", label: "再就職先 / 法人名" },
+  { field: "reemploymentDate", label: "再就職日 / 就職日" },
+];
+
+const REQUIRED_RECORD_FIELDS = [
+  { field: "personName", label: "氏名" },
+  { field: "originMinistry", label: "元府省庁" },
+  { field: "titleAtRetirement", label: "退職時役職" },
+  { field: "corporationName", label: "再就職先法人名" },
+  { field: "reemploymentDate", label: "再就職日" },
+];
 
 function usage() {
   console.error(
@@ -106,6 +132,10 @@ function cleanString(value) {
   return String(value).replace(/\r?\n/g, " ").replace(/\s+/g, " ").trim();
 }
 
+function readJson(filePath) {
+  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
+
 function normalizeHeader(value) {
   return cleanString(value)
     .normalize("NFKC")
@@ -172,6 +202,12 @@ function buildColumnMap(headerRow) {
   });
 
   return columnMap;
+}
+
+function findMissingRequiredColumns(columnMap) {
+  return REQUIRED_COLUMN_FIELDS.filter(
+    ({ field }) => columnMap[field] === undefined,
+  );
 }
 
 function pad(number) {
@@ -412,12 +448,20 @@ function convertRow(
   const reemploymentDateResult = parseDate(
     rowValue(row, columnMap, "reemploymentDate"),
   );
+  const publicationDateResult = parseDate(
+    rowValue(row, columnMap, "publicationDate"),
+  );
   const retirementDate = retirementDateResult.value;
   const reemploymentDate = reemploymentDateResult.value;
+  const recordPublishedDate = publishedDate || publicationDateResult.value;
+  const remarks = cleanString(rowValue(row, columnMap, "remarks"));
   const notes = [
     retirementDateResult.warning,
     reemploymentDateResult.warning,
+    publicationDateResult.warning,
   ].filter(Boolean);
+
+  if (remarks) notes.push(`備考: ${remarks}`);
 
   if (columnMap.retirementDate === undefined) {
     notes.push("Retirement date source column was not found.");
@@ -468,17 +512,25 @@ function convertRow(
     corporationType,
     newPosition,
     sourceTitle,
+    sourceName: sourceTitle,
     sourceId,
     sourceUrl,
-    publishedDate,
+    publishedDate: recordPublishedDate,
     flags: {
       nextDay: waitingDays === 0,
       within30Days:
         waitingDays !== null && waitingDays >= 0 && waitingDays <= 30,
     },
     status: "draft",
+    approved: false,
     notes,
   };
+}
+
+function findMissingRequiredRecordValues(record) {
+  return REQUIRED_RECORD_FIELDS.filter(
+    ({ field }) => !cleanString(record[field]),
+  );
 }
 
 function isDataRow(row, columnMap) {
@@ -505,6 +557,24 @@ function validateRecords(records) {
     if (!record.personName) errors.push(`records[${index}].personName is empty.`);
     if (!record.corporationName) {
       errors.push(`records[${index}].corporationName is empty.`);
+    }
+    if (!record.originMinistry) {
+      errors.push(`records[${index}].originMinistry is empty.`);
+    }
+    if (!record.titleAtRetirement) {
+      errors.push(`records[${index}].titleAtRetirement is empty.`);
+    }
+    if (!record.reemploymentDate) {
+      errors.push(`records[${index}].reemploymentDate is empty.`);
+    }
+    if (!record.sourceName) {
+      errors.push(`records[${index}].sourceName is empty.`);
+    }
+    if (record.status !== "draft") {
+      errors.push(`records[${index}].status must be draft.`);
+    }
+    if (record.approved !== false) {
+      errors.push(`records[${index}].approved must be false.`);
     }
     if (rawIds.has(record.rawId)) {
       errors.push(`records[${index}].rawId is duplicated.`);
@@ -594,21 +664,62 @@ function importExcel(filePath, options) {
 
   const { name: sheetName, rows, headerRowIndex } = selectedSheet;
   const columnMap = buildColumnMap(rows[headerRowIndex]);
+  const missingRequiredColumns = findMissingRequiredColumns(columnMap);
+  if (missingRequiredColumns.length > 0) {
+    const details = missingRequiredColumns
+      .map(
+        ({ field, label }) =>
+          `${label} (${FIELD_ALIASES[field].join(", ")})`,
+      )
+      .join("; ");
+    throw new Error(`Missing required Excel columns: ${details}`);
+  }
+
   const sourceTitle = configuredSourceTitle || path.basename(resolvedFilePath);
-  const records = rows
+  const dataRows = rows
     .slice(headerRowIndex + 1)
-    .filter((row) => isDataRow(row, columnMap))
-    .slice(0, limit ?? undefined)
-    .map((row) =>
-      convertRow(
-        row,
-        columnMap,
-        sourceTitle,
-        sourceId,
-        sourceUrl,
-        publishedDate,
-      ),
+    .filter((row) => isDataRow(row, columnMap));
+  const records = [];
+  const skippedRows = [];
+  const importedDedupeKeys = new Set();
+  let duplicateRowCount = 0;
+  let processedRowCount = 0;
+
+  for (
+    let index = 0;
+    index < dataRows.length && (limit === null || records.length < limit);
+    index += 1
+  ) {
+    const record = convertRow(
+      dataRows[index],
+      columnMap,
+      sourceTitle,
+      sourceId,
+      sourceUrl,
+      publishedDate,
     );
+    const missingValues = findMissingRequiredRecordValues(record);
+
+    processedRowCount += 1;
+    if (missingValues.length > 0) {
+      skippedRows.push({
+        row: headerRowIndex + index + 2,
+        missing: missingValues.map(({ label }) => label),
+      });
+      continue;
+    }
+    if (importedDedupeKeys.has(record.dedupeKey)) {
+      duplicateRowCount += 1;
+      skippedRows.push({
+        row: headerRowIndex + index + 2,
+        missing: ["Excel内の重複候補"],
+      });
+      continue;
+    }
+
+    importedDedupeKeys.add(record.dedupeKey);
+    records.push(record);
+  }
 
   if (records.length === 0) {
     throw new Error("No data rows were found below the detected header row.");
@@ -616,12 +727,32 @@ function importExcel(filePath, options) {
 
   validateRecords(records);
 
+  const productionRecordsPath = path.join(
+    process.cwd(),
+    "data",
+    "production",
+    "records.json",
+  );
+  const productionDedupeKeys = fs.existsSync(productionRecordsPath)
+    ? new Set(readJson(productionRecordsPath).map((record) => record.dedupeKey))
+    : new Set();
+  const productionDuplicateCount = records.filter((record) =>
+    productionDedupeKeys.has(record.dedupeKey),
+  ).length;
+  const duplicateCandidateCount =
+    duplicateRowCount + productionDuplicateCount;
+
   const today = localDateParts();
   const outputDocument = {
     sourceType: SOURCE_TYPE,
     status: "draft",
+    approved: false,
     createdAt: today.iso,
     limit: limit ?? records.length,
+    rowsRead: dataRows.length,
+    draftCount: records.length,
+    skippedCount: skippedRows.length,
+    duplicateCandidateCount,
     sources: sourceId
       ? [
           {
@@ -652,8 +783,24 @@ function importExcel(filePath, options) {
     "utf8",
   );
 
-  console.log(`Imported ${records.length} draft record(s) from sheet "${sheetName}".`);
-  console.log(`Output: ${path.relative(process.cwd(), outputPath)}`);
+  const remainingRowCount = Math.max(0, dataRows.length - processedRowCount);
+  console.log("Excel import completed.");
+  console.log(`Input file: ${resolvedFilePath}`);
+  console.log(`Sheet: ${sheetName}`);
+  console.log(`Rows read: ${dataRows.length}`);
+  console.log(`Draft records: ${records.length}`);
+  console.log(`Skipped rows: ${skippedRows.length}`);
+  console.log(`Duplicate candidates: ${duplicateCandidateCount}`);
+  for (const skipped of skippedRows) {
+    console.log(`  - Row ${skipped.row}: missing ${skipped.missing.join(", ")}`);
+  }
+  if (remainingRowCount > 0) {
+    console.log(`Rows not processed after reaching limit: ${remainingRowCount}`);
+  }
+  console.log(`Output file: ${path.relative(process.cwd(), outputPath)}`);
+  if (!sourceUrl) {
+    console.warn("Warning: --source-url was not provided; sourceUrl is empty.");
+  }
   if (limit !== null && records.length < limit) {
     console.warn(
       `Warning: requested ${limit} record(s), but only ${records.length} data row(s) were found.`,
