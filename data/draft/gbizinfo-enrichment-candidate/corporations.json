@@ -1,12 +1,12 @@
 {
   "sourceType": "gbizinfo-api-v2",
-  "status": "awaiting-api-token",
-  "createdAt": "2026-06-09",
-  "fetchedAt": null,
+  "status": "draft",
+  "createdAt": "2026-06-10",
+  "fetchedAt": "2026-06-10T02:17:11.108Z",
   "apiVersion": "v2",
   "eligibleCorporationCount": 87,
   "targetCount": 87,
-  "processedCount": 0,
+  "processedCount": 87,
   "recordFields": [
     "corporateNumber",
     "corporationSlug",
@@ -30,5 +30,1398 @@
     "certificationCount": 0,
     "licenseCount": 0
   },
-  "records": []
+  "records": [
+    {
+      "corporateNumber": "9012405001282",
+      "corporationSlug": "corporation-422fcd4b721a97db",
+      "corporationName": "国立大学法人一橋大学",
+      "officialName": "国立大学法人一橋大学",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9012405001282",
+      "fetchedAt": "2026-06-10T02:16:56.680Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6010005003495",
+      "corporationSlug": "corporation-83ba7ab290ca473c",
+      "corporationName": "一般社団法人日本資金決済業協会",
+      "officialName": "一般社団法人日本資金決済業協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010005003495",
+      "fetchedAt": "2026-06-10T02:16:56.819Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "3011105000996",
+      "corporationSlug": "corporation-8e026326c8c73f9b",
+      "corporationName": "有限責任あずさ監査法人",
+      "officialName": "有限責任あずさ監査法人",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3011105000996",
+      "fetchedAt": "2026-06-10T02:16:56.980Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "9010005018623",
+      "corporationSlug": "corporation-d128581eec5ff70e",
+      "corporationName": "一般財団法人全国農林漁業団体共済会",
+      "officialName": "一般財団法人全国農林漁業団体共済会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005018623",
+      "fetchedAt": "2026-06-10T02:16:57.139Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "5010001112697",
+      "corporationSlug": "corporation-f17458638467b979",
+      "corporationName": "日本郵政株式会社",
+      "officialName": "日本郵政株式会社",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001112697",
+      "fetchedAt": "2026-06-10T02:16:57.301Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6010001112696",
+      "corporationSlug": "corporation-62cd4d96eea932a7",
+      "corporationName": "株式会社かんぽ生命保険",
+      "officialName": "株式会社かんぽ生命保険",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010001112696",
+      "fetchedAt": "2026-06-10T02:16:57.438Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "2010005014868",
+      "corporationSlug": "corporation-2f9bb2f47094bead",
+      "corporationName": "一般社団法人日本インタラクティブ広告協会",
+      "officialName": "一般社団法人日本インタラクティブ広告協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005014868",
+      "fetchedAt": "2026-06-10T02:16:57.589Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "5030001129723",
+      "corporationSlug": "corporation-bf88da389e6bbbbd",
+      "corporationName": "株式会社スマートビジョンロジスティクス",
+      "officialName": "株式会社スマートビジョンロジスティクス",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5030001129723",
+      "fetchedAt": "2026-06-10T02:16:57.754Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "5011105000945",
+      "corporationSlug": "corporation-abd325e7edcf550f",
+      "corporationName": "学校法人東京理科大学",
+      "officialName": "学校法人東京理科大学",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5011105000945",
+      "fetchedAt": "2026-06-10T02:16:57.931Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "9021005007458",
+      "corporationSlug": "corporation-ccf1b357fdd4bac7",
+      "corporationName": "医療法人社団相光会",
+      "officialName": "医療法人社団相光会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9021005007458",
+      "fetchedAt": "2026-06-10T02:16:58.079Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "3010405001696",
+      "corporationSlug": "corporation-6d91bd2821b9ea71",
+      "corporationName": "社会福祉法人恩賜財団済生会",
+      "officialName": "社会福祉法人恩賜財団済生会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3010405001696",
+      "fetchedAt": "2026-06-10T02:16:58.238Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "4120001235595",
+      "corporationSlug": "corporation-c0e38542357088c1",
+      "corporationName": "パナソニックオペレーショナルエクセレンス株式会社",
+      "officialName": "パナソニックオペレーショナルエクセレンス株式会社",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4120001235595",
+      "fetchedAt": "2026-06-10T02:16:58.499Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "9010005015760",
+      "corporationSlug": "corporation-e666aa92add9aa73",
+      "corporationName": "アトム法律事務所弁護士法人",
+      "officialName": "アトム法律事務所弁護士法人",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005015760",
+      "fetchedAt": "2026-06-10T02:16:58.680Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "8120005024339",
+      "corporationSlug": "corporation-9a275eef566c170a",
+      "corporationName": "弁護士法人ウィステリア法律事務所",
+      "officialName": "弁護士法人ウィステリア法律事務所",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8120005024339",
+      "fetchedAt": "2026-06-10T02:16:58.848Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "4010005036720",
+      "corporationSlug": "corporation-d4d329708660c891",
+      "corporationName": "弁護士法人東京国際法律事務所",
+      "officialName": "弁護士法人東京国際法律事務所",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005036720",
+      "fetchedAt": "2026-06-10T02:16:59.017Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6010005021423",
+      "corporationSlug": "corporation-d70e5c64dcb5793a",
+      "corporationName": "弁護士法人森・濱田松本法律事務所",
+      "officialName": "弁護士法人森・濱田松本法律事務所",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010005021423",
+      "fetchedAt": "2026-06-10T02:16:59.179Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "3130001000082",
+      "corporationSlug": "corporation-597b59be862d6f97",
+      "corporationName": "アイフル株式会社",
+      "officialName": "アイフル株式会社",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3130001000082",
+      "fetchedAt": "2026-06-10T02:16:59.335Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "7011101105127",
+      "corporationSlug": "corporation-d56862c846b1031a",
+      "corporationName": "株式会社アガルートホールディングス",
+      "officialName": "株式会社アガルートホールディングス",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7011101105127",
+      "fetchedAt": "2026-06-10T02:16:59.480Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "2010405004477",
+      "corporationSlug": "corporation-63393aec6de8b34a",
+      "corporationName": "弁護士法人瓜生・糸賀法律事務所",
+      "officialName": "弁護士法人瓜生・糸賀法律事務所",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010405004477",
+      "fetchedAt": "2026-06-10T02:16:59.645Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "2010005024735",
+      "corporationSlug": "corporation-be04e0192b8e9695",
+      "corporationName": "弁護士法人シティユーワ法律事務所",
+      "officialName": "弁護士法人シティユーワ法律事務所",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005024735",
+      "fetchedAt": "2026-06-10T02:16:59.802Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "5120001235594",
+      "corporationSlug": "corporation-a23302a67802cb03",
+      "corporationName": "パナソニックインダストリー株式会社",
+      "officialName": "パナソニックインダストリー株式会社",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5120001235594",
+      "fetchedAt": "2026-06-10T02:16:59.968Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "7010005037708",
+      "corporationSlug": "corporation-1b34b2c2bdd61380",
+      "corporationName": "アイエイ弁護士法人",
+      "officialName": "アイエイ弁護士法人",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010005037708",
+      "fetchedAt": "2026-06-10T02:17:00.123Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "9180005019935",
+      "corporationSlug": "corporation-5d5eece61494fa6c",
+      "corporationName": "弁護士法人ブナの森法律事務所",
+      "officialName": "弁護士法人ブナの森法律事務所",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9180005019935",
+      "fetchedAt": "2026-06-10T02:17:00.307Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "9120005017184",
+      "corporationSlug": "corporation-c7cffa216a59b04f",
+      "corporationName": "弁護士法人響",
+      "officialName": "弁護士法人響",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9120005017184",
+      "fetchedAt": "2026-06-10T02:17:00.474Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "7120005010983",
+      "corporationSlug": "corporation-cd6a91ece0c971e2",
+      "corporationName": "弁護士法人第一法律事務所",
+      "officialName": "弁護士法人第一法律事務所",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7120005010983",
+      "fetchedAt": "2026-06-10T02:17:00.627Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6120001144720",
+      "corporationSlug": "corporation-0fef83885c4a0112",
+      "corporationName": "吉本興業ホールディングス株式会社",
+      "officialName": "吉本興業ホールディングス株式会社",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6120001144720",
+      "fetchedAt": "2026-06-10T02:17:00.788Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "4010005021094",
+      "corporationSlug": "corporation-87b2bac9c0b05551",
+      "corporationName": "渥美坂井法律事務所弁護士法人",
+      "officialName": "渥美坂井法律事務所弁護士法人",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005021094",
+      "fetchedAt": "2026-06-10T02:17:00.938Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "9011505000797",
+      "corporationSlug": "corporation-60809b45d97eee2c",
+      "corporationName": "更生保護法人日新協会",
+      "officialName": "更生保護法人日新協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9011505000797",
+      "fetchedAt": "2026-06-10T02:17:01.108Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "7010405010909",
+      "corporationSlug": "corporation-852d31eb77873884",
+      "corporationName": "弁護士法人西村あさひ法律事務所",
+      "officialName": "弁護士法人西村あさひ法律事務所",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010405010909",
+      "fetchedAt": "2026-06-10T02:17:01.257Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "5010001149426",
+      "corporationSlug": "corporation-19e8222871a2f704",
+      "corporationName": "株式会社リクルート",
+      "officialName": "株式会社リクルート",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001149426",
+      "fetchedAt": "2026-06-10T02:17:01.546Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "9020001133094",
+      "corporationSlug": "corporation-33db9318c3e1fa57",
+      "corporationName": "株式会社ユニバレオ",
+      "officialName": "株式会社ユニバレオ",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9020001133094",
+      "fetchedAt": "2026-06-10T02:17:01.704Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "9150005002893",
+      "corporationSlug": "corporation-bd1f52e49a0d4581",
+      "corporationName": "学校法人天理大学",
+      "officialName": "学校法人天理大学",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9150005002893",
+      "fetchedAt": "2026-06-10T02:17:01.858Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "8010001062097",
+      "corporationSlug": "corporation-da0285b9b6f3c143",
+      "corporationName": "日本酒類販売株式会社",
+      "officialName": "日本酒類販売株式会社",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010001062097",
+      "fetchedAt": "2026-06-10T02:17:02.038Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "2490001001293",
+      "corporationSlug": "corporation-a15aca39149090f1",
+      "corporationName": "株式会社四銀地域経済研究所",
+      "officialName": "株式会社四銀地域経済研究所",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2490001001293",
+      "fetchedAt": "2026-06-10T02:17:02.183Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "7490001000786",
+      "corporationSlug": "corporation-7e2865a91b29e89a",
+      "corporationName": "株式会社四国銀行",
+      "officialName": "株式会社四国銀行",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7490001000786",
+      "fetchedAt": "2026-06-10T02:17:02.339Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "8120005003359",
+      "corporationSlug": "corporation-a1a725b5f2afc38d",
+      "corporationName": "一般社団法人大阪府信用組合協会",
+      "officialName": "一般社団法人大阪府信用組合協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8120005003359",
+      "fetchedAt": "2026-06-10T02:17:02.488Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "3290005011341",
+      "corporationSlug": "corporation-8bedac202ab4bff4",
+      "corporationName": "大川信用金庫",
+      "officialName": "大川信用金庫",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3290005011341",
+      "fetchedAt": "2026-06-10T02:17:02.638Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "4080005006238",
+      "corporationSlug": "corporation-05ea94e1ee7315af",
+      "corporationName": "一般社団法人静岡県信用金庫協会",
+      "officialName": "一般社団法人静岡県信用金庫協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4080005006238",
+      "fetchedAt": "2026-06-10T02:17:02.788Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "2180005014505",
+      "corporationSlug": "corporation-4e67bf8c2cd447e7",
+      "corporationName": "一般社団法人東海地区信用金庫協会",
+      "officialName": "一般社団法人東海地区信用金庫協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2180005014505",
+      "fetchedAt": "2026-06-10T02:17:02.979Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "1180001038517",
+      "corporationSlug": "corporation-5801cf2c3b4f6ec1",
+      "corporationName": "株式会社東海信金ビジネス",
+      "officialName": "株式会社東海信金ビジネス",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1180001038517",
+      "fetchedAt": "2026-06-10T02:17:03.128Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "4160005006725",
+      "corporationSlug": "corporation-1f5c239de0b78cd8",
+      "corporationName": "滋賀中央信用金庫",
+      "officialName": "滋賀中央信用金庫",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4160005006725",
+      "fetchedAt": "2026-06-10T02:17:03.301Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "7340005001465",
+      "corporationSlug": "corporation-078b8e30ed17fd58",
+      "corporationName": "鹿児島相互信用金庫",
+      "officialName": "鹿児島相互信用金庫",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7340005001465",
+      "fetchedAt": "2026-06-10T02:17:03.443Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "4010005015996",
+      "corporationSlug": "corporation-5e8fc8079869ace3",
+      "corporationName": "一般社団法人第二種金融商品取引業協会",
+      "officialName": "一般社団法人第二種金融商品取引業協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005015996",
+      "fetchedAt": "2026-06-10T02:17:03.610Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "5150005003854",
+      "corporationSlug": "corporation-d94c98fbb46a432b",
+      "corporationName": "大和信用金庫",
+      "officialName": "大和信用金庫",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5150005003854",
+      "fetchedAt": "2026-06-10T02:17:03.771Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "7400605000174",
+      "corporationSlug": "corporation-5139b1f417c6c361",
+      "corporationName": "水沢信用金庫",
+      "officialName": "水沢信用金庫",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7400605000174",
+      "fetchedAt": "2026-06-10T02:17:03.943Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6370001004338",
+      "corporationSlug": "corporation-18351298ebe5922b",
+      "corporationName": "株式会社しんきん総合サービス",
+      "officialName": "株式会社しんきん総合サービス",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6370001004338",
+      "fetchedAt": "2026-06-10T02:17:04.080Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "8140005010881",
+      "corporationSlug": "corporation-f04cffb28be960f3",
+      "corporationName": "尼崎信用金庫",
+      "officialName": "尼崎信用金庫",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8140005010881",
+      "fetchedAt": "2026-06-10T02:17:04.254Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "8010005013006",
+      "corporationSlug": "corporation-0169181d8e040028",
+      "corporationName": "税理士法人チェスター",
+      "officialName": "税理士法人チェスター",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005013006",
+      "fetchedAt": "2026-06-10T02:17:04.423Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "1120005014569",
+      "corporationSlug": "corporation-bead0cc15a164ac9",
+      "corporationName": "公益社団法人旭納税協会",
+      "officialName": "公益社団法人旭納税協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1120005014569",
+      "fetchedAt": "2026-06-10T02:17:04.589Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "3140005010804",
+      "corporationSlug": "corporation-7f132a71d61c3d90",
+      "corporationName": "公益社団法人和田山納税協会",
+      "officialName": "公益社団法人和田山納税協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3140005010804",
+      "fetchedAt": "2026-06-10T02:17:04.959Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "3120005014534",
+      "corporationSlug": "corporation-78329eee5945eb13",
+      "corporationName": "公益社団法人枚方納税協会",
+      "officialName": "公益社団法人枚方納税協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3120005014534",
+      "fetchedAt": "2026-06-10T02:17:05.102Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "7120905003112",
+      "corporationSlug": "corporation-3fca79b7d66671aa",
+      "corporationName": "公益社団法人吹田納税協会",
+      "officialName": "公益社団法人吹田納税協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7120905003112",
+      "fetchedAt": "2026-06-10T02:17:05.498Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "1130005012373",
+      "corporationSlug": "corporation-fe5c27527a12c96f",
+      "corporationName": "公益社団法人下京納税協会",
+      "officialName": "公益社団法人下京納税協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1130005012373",
+      "fetchedAt": "2026-06-10T02:17:05.645Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "8140005007960",
+      "corporationSlug": "corporation-f314dc6387542035",
+      "corporationName": "公益社団法人相生納税協会",
+      "officialName": "公益社団法人相生納税協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8140005007960",
+      "fetchedAt": "2026-06-10T02:17:05.827Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "7122005002713",
+      "corporationSlug": "corporation-624e8db45952d725",
+      "corporationName": "公益社団法人東大阪納税協会",
+      "officialName": "公益社団法人東大阪納税協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7122005002713",
+      "fetchedAt": "2026-06-10T02:17:05.984Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "2140005005375",
+      "corporationSlug": "corporation-399f4748f1e88f0f",
+      "corporationName": "公益社団法人兵庫納税協会",
+      "officialName": "公益社団法人兵庫納税協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2140005005375",
+      "fetchedAt": "2026-06-10T02:17:06.128Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6160005007993",
+      "corporationSlug": "corporation-56c743871d87e006",
+      "corporationName": "公益社団法人今津納税協会",
+      "officialName": "公益社団法人今津納税協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6160005007993",
+      "fetchedAt": "2026-06-10T02:17:06.289Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "1011105001880",
+      "corporationSlug": "corporation-00a8ec66d925cefc",
+      "corporationName": "辻・本郷税理士法人",
+      "officialName": "辻・本郷税理士法人",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1011105001880",
+      "fetchedAt": "2026-06-10T02:17:06.438Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6180005007133",
+      "corporationSlug": "corporation-51629f45fe171057",
+      "corporationName": "税理士法人小島税理士オフィス",
+      "officialName": "税理士法人小島税理士オフィス",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6180005007133",
+      "fetchedAt": "2026-06-10T02:17:06.609Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "3120105004617",
+      "corporationSlug": "corporation-5f83a4a60101ded5",
+      "corporationName": "公益社団法人堺納税協会",
+      "officialName": "公益社団法人堺納税協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3120105004617",
+      "fetchedAt": "2026-06-10T02:17:06.747Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6290005009845",
+      "corporationSlug": "corporation-3ce293e3eb6f5b56",
+      "corporationName": "筑後信用金庫",
+      "officialName": "筑後信用金庫",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6290005009845",
+      "fetchedAt": "2026-06-10T02:17:06.932Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6210005005273",
+      "corporationSlug": "corporation-b709218686bcad4a",
+      "corporationName": "公立大学法人福井県立大学",
+      "officialName": "公立大学法人福井県立大学",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6210005005273",
+      "fetchedAt": "2026-06-10T02:17:07.074Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6360005004186",
+      "corporationSlug": "corporation-a7d5d36c642025a5",
+      "corporationName": "学校法人沖縄科学技術大学院大学学園",
+      "officialName": "学校法人沖縄科学技術大学院大学学園",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6360005004186",
+      "fetchedAt": "2026-06-10T02:17:07.248Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "8180005006604",
+      "corporationSlug": "corporation-c603b6dbb94eb60d",
+      "corporationName": "公立大学法人名古屋市立大学",
+      "officialName": "公立大学法人名古屋市立大学",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8180005006604",
+      "fetchedAt": "2026-06-10T02:17:07.408Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "8010005002339",
+      "corporationSlug": "corporation-1266b131bd4ed8aa",
+      "corporationName": "学校法人城西大学",
+      "officialName": "学校法人城西大学",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005002339",
+      "fetchedAt": "2026-06-10T02:17:07.569Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "1011105011401",
+      "corporationSlug": "corporation-4b5d536d1df51698",
+      "corporationName": "国立健康危機管理研究機構",
+      "officialName": "国立健康危機管理研究機構",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1011105011401",
+      "fetchedAt": "2026-06-10T02:17:07.719Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "3010005003201",
+      "corporationSlug": "corporation-3b7391ca417a3fec",
+      "corporationName": "一般社団法人全国木材組合連合会",
+      "officialName": "一般社団法人全国木材組合連合会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3010005003201",
+      "fetchedAt": "2026-06-10T02:17:07.880Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "2010005017342",
+      "corporationSlug": "corporation-e71d8d6350fbc74a",
+      "corporationName": "一般社団法人日本森林技術協会",
+      "officialName": "一般社団法人日本森林技術協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005017342",
+      "fetchedAt": "2026-06-10T02:17:08.048Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "1260005001776",
+      "corporationSlug": "corporation-786cf53338862538",
+      "corporationName": "学校法人加計学園",
+      "officialName": "学校法人加計学園",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1260005001776",
+      "fetchedAt": "2026-06-10T02:17:08.208Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "8010005004211",
+      "corporationSlug": "corporation-0797ac4c7725544f",
+      "corporationName": "一般財団法人日本木材総合情報センター",
+      "officialName": "一般財団法人日本木材総合情報センター",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005004211",
+      "fetchedAt": "2026-06-10T02:17:08.375Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "9010005016255",
+      "corporationSlug": "corporation-e9a10f20167a62e6",
+      "corporationName": "一般社団法人日本木材輸出振興協会",
+      "officialName": "一般社団法人日本木材輸出振興協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005016255",
+      "fetchedAt": "2026-06-10T02:17:08.529Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "5010605002253",
+      "corporationSlug": "corporation-f839081c87d5561e",
+      "corporationName": "公益財団法人日本住宅・木材技術センター",
+      "officialName": "公益財団法人日本住宅・木材技術センター",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010605002253",
+      "fetchedAt": "2026-06-10T02:17:08.688Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6010405002840",
+      "corporationSlug": "corporation-c1e234631f32ddb7",
+      "corporationName": "弁理士法人第一国際特許事務所",
+      "officialName": "弁理士法人第一国際特許事務所",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010405002840",
+      "fetchedAt": "2026-06-10T02:17:08.845Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "4120905002554",
+      "corporationSlug": "corporation-79b5373b65e3ff2f",
+      "corporationName": "国立大学法人大阪大学",
+      "officialName": "国立大学法人大阪大学",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4120905002554",
+      "fetchedAt": "2026-06-10T02:17:08.998Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "5010005007398",
+      "corporationSlug": "corporation-a57bf773653fc7f8",
+      "corporationName": "国立大学法人東京大学",
+      "officialName": "国立大学法人東京大学",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010005007398",
+      "fetchedAt": "2026-06-10T02:17:09.168Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "8010005031404",
+      "corporationSlug": "corporation-4c1ca410f9da3957",
+      "corporationName": "弁理士法人山王内外特許事務所",
+      "officialName": "弁理士法人山王内外特許事務所",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005031404",
+      "fetchedAt": "2026-06-10T02:17:09.328Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6290005001257",
+      "corporationSlug": "corporation-0519e1b60bee4e84",
+      "corporationName": "学校法人中村産業学園",
+      "officialName": "学校法人中村産業学園",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6290005001257",
+      "fetchedAt": "2026-06-10T02:17:09.479Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "5010405010514",
+      "corporationSlug": "corporation-1e27e65a50a8be26",
+      "corporationName": "一般財団法人日本船舶技術研究協会",
+      "officialName": "一般財団法人日本船舶技術研究協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010405010514",
+      "fetchedAt": "2026-06-10T02:17:09.668Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "4240002005853",
+      "corporationSlug": "corporation-9c275b909e54df61",
+      "corporationName": "広洋海運有限会社",
+      "officialName": "広洋海運有限会社",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4240002005853",
+      "fetchedAt": "2026-06-10T02:17:09.838Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "1010701022043",
+      "corporationSlug": "corporation-cfd7f487ee8992e1",
+      "corporationName": "コスモエコパワー株式会社",
+      "officialName": "コスモエコパワー株式会社",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010701022043",
+      "fetchedAt": "2026-06-10T02:17:09.999Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "2010005017549",
+      "corporationSlug": "corporation-777a212b2a2b1dfd",
+      "corporationName": "特定非営利活動法人ピースウィンズ・ジャパン",
+      "officialName": "特定非営利活動法人ピースウィンズ・ジャパン",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005017549",
+      "fetchedAt": "2026-06-10T02:17:10.146Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "9010005004144",
+      "corporationSlug": "corporation-8b694954b805ee30",
+      "corporationName": "公益財団法人日本船員雇用促進センター",
+      "officialName": "公益財団法人日本船員雇用促進センター",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005004144",
+      "fetchedAt": "2026-06-10T02:17:10.299Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "9050005005205",
+      "corporationSlug": "corporation-891463cf86adef3b",
+      "corporationName": "国立研究開発法人建築研究所",
+      "officialName": "国立研究開発法人建築研究所",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9050005005205",
+      "fetchedAt": "2026-06-10T02:17:10.458Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "4010005016680",
+      "corporationSlug": "corporation-cd59be9437edd994",
+      "corporationName": "一般財団法人日本舶用品検定協会",
+      "officialName": "一般財団法人日本舶用品検定協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005016680",
+      "fetchedAt": "2026-06-10T02:17:10.638Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "6120001184147",
+      "corporationSlug": "corporation-6e2ce329a271f2e0",
+      "corporationName": "スカイワークスフィルターソリューションズジャパン株式会社",
+      "officialName": "スカイワークスフィルターソリューションズジャパン株式会社",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6120001184147",
+      "fetchedAt": "2026-06-10T02:17:10.783Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "1010405009691",
+      "corporationSlug": "corporation-4efc1bbc3ae2410e",
+      "corporationName": "一般財団法人環境イノベーション情報機構",
+      "officialName": "一般財団法人環境イノベーション情報機構",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010405009691",
+      "fetchedAt": "2026-06-10T02:17:10.950Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "1010005004597",
+      "corporationSlug": "corporation-1b6f5678ee61cfd9",
+      "corporationName": "一般財団法人国民公園協会",
+      "officialName": "一般財団法人国民公園協会",
+      "subsidies": [],
+      "procurements": [],
+      "certifications": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010005004597",
+      "fetchedAt": "2026-06-10T02:17:11.108Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    }
+  ]
 }
