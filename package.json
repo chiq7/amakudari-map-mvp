@@ -10,6 +10,7 @@
     "validate:data": "node scripts/validate-data.js",
     "generate:content": "node scripts/generate-static-content.js",
     "import:excel": "node scripts/import-cabinet-office-excel.js",
+    "promote:draft": "node scripts/promote-draft-to-production.js",
     "build:pool": "node scripts/build-data-pool.js",
     "pick:pool": "node scripts/pick-from-pool.js",
     "generate:candidate": "node scripts/generate-production-candidate.js",
