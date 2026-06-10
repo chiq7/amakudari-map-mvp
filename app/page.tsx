@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { corporations, topics, totals } from "@/lib/static-content";
+import { corporations, rankingLists, topics, totals } from "@/lib/static-content";
 import { SearchBox, TagChip } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -19,55 +19,52 @@ const featuredCorporations = [
   corporations[1],
 ];
 
-const corporationDirectory = [
-  { name: "一般財団法人 公共政策総合研究所", count: 42, href: "/corporations/public-policy-research" },
-  { name: "株式会社 日本インフラ整備機構", count: 35, href: "/corporations/infrastructure-development" },
-  { name: "公益財団法人 国際技術交流協会", count: 28, href: "/corporations/international-technology-exchange" },
-  { name: "独立行政法人 都市再生機構", count: 24, href: "/corporations/urban-renaissance" },
-  { name: "日本電信電話株式会社", count: 18, href: "/corporations?keyword=日本電信電話" },
-  { name: "東日本旅客鉄道株式会社", count: 15, href: "/corporations?keyword=東日本旅客鉄道" },
-];
+const corporationDirectory = rankingLists.publicRecords.slice(0, 6).map((item) => ({
+  name: item.label,
+  count: item.value,
+  href: `/corporations/${item.corporationSlug}`,
+}));
 
 const rankingBlocks = [
   {
     title: "公表再就職者数",
     unit: "人",
     href: "/corporations?sort=publicRecords",
-    items: [
-      ["一般財団法人 公共政策総合研究所", 42, "/corporations/public-policy-research"],
-      ["株式会社 日本インフラ整備機構", 35, "/corporations/infrastructure-development"],
-      ["公益財団法人 国際技術交流協会", 28, "/corporations/international-technology-exchange"],
-    ],
+    items: rankingLists.publicRecords.slice(0, 3).map((item) => [
+      item.label,
+      item.value,
+      `/corporations/${item.corporationSlug}`,
+    ]),
   },
   {
     title: "退職翌日再就職件数",
     unit: "件",
     href: "/corporations?flag=nextDay",
-    items: [
-      ["株式会社 日本インフラ整備機構", 14, "/corporations/infrastructure-development"],
-      ["一般財団法人 公共政策総合研究所", 12, "/corporations/public-policy-research"],
-      ["公益財団法人 国際技術交流協会", 8, "/corporations/international-technology-exchange"],
-    ],
+    items: rankingLists.nextDay.slice(0, 3).map((item) => [
+      item.label,
+      item.value,
+      `/corporations/${item.corporationSlug}`,
+    ]),
   },
   {
     title: "30日以内再就職件数",
     unit: "件",
     href: "/corporations?flag=within30Days",
-    items: [
-      ["一般財団法人 公共政策総合研究所", 25, "/corporations/public-policy-research"],
-      ["株式会社 日本インフラ整備機構", 22, "/corporations/infrastructure-development"],
-      ["公益財団法人 国際技術交流協会", 15, "/corporations/international-technology-exchange"],
-    ],
+    items: rankingLists.within30Days.slice(0, 3).map((item) => [
+      item.label,
+      item.value,
+      `/corporations/${item.corporationSlug}`,
+    ]),
   },
   {
     title: "平均待機日数が短い法人",
     unit: "日",
     href: "/corporations?sort=shortestAverageWaitingDays",
-    items: [
-      ["株式会社 日本インフラ整備機構", 12, "/corporations/infrastructure-development"],
-      ["公益財団法人 国際技術交流協会", 32, "/corporations/international-technology-exchange"],
-      ["一般財団法人 公共政策総合研究所", 45, "/corporations/public-policy-research"],
-    ],
+    items: rankingLists.shortestAverageWaitingDays.slice(0, 3).map((item) => [
+      item.label,
+      item.value,
+      `/corporations/${item.corporationSlug}`,
+    ]),
   },
 ];
 
@@ -329,7 +326,7 @@ export default function Home() {
             >
               <span className="text-sm font-bold text-secondary">退職翌日再就職</span>
               <span className="text-right">
-                <strong className="text-lg font-bold text-primary">84</strong>
+                <strong className="text-lg font-bold text-primary">{totals.nextDayCorporations}</strong>
                 <span className="ml-1 text-sm font-bold text-on-surface-variant">件</span>
               </span>
             </Link>
@@ -339,7 +336,7 @@ export default function Home() {
             >
               <span className="text-sm font-bold text-secondary">30日以内再就職</span>
               <span className="text-right">
-                <strong className="text-lg font-bold text-primary">248</strong>
+                <strong className="text-lg font-bold text-primary">{totals.within30DaysCorporations}</strong>
                 <span className="ml-1 text-sm font-bold text-on-surface-variant">件</span>
               </span>
             </Link>
