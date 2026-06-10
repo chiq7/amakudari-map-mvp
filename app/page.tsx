@@ -14,9 +14,10 @@ const cutGroups = topics.map((topic) => ({
 }));
 
 const featuredCorporations = [
+  corporations.find((corporation) => corporation.slug === "corporation-luup") ??
+    corporations[0],
   corporations[0],
   corporations[2],
-  corporations[1],
 ];
 
 const corporationDirectory = rankingLists.publicRecords.slice(0, 6).map((item) => ({
@@ -171,7 +172,9 @@ export default function Home() {
         <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
           <div>
             <h2 className="text-2xl font-bold text-primary">注目の公表情報</h2>
-            <p className="mt-1 text-sm text-on-surface-variant">件数や待機日数の観点から、確認されることが多い法人を表示しています。</p>
+            <p className="mt-1 text-sm text-on-surface-variant">
+              公表資料や法人公式発表に基づき、確認されることが多い法人情報を表示しています。
+            </p>
           </div>
           <Link href="/corporations" className="text-sm font-bold text-secondary hover:underline">
             すべて見る
@@ -180,25 +183,50 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
           {featuredCorporations.map((corporation) => (
             <article key={corporation.slug} className="flex min-h-[260px] flex-col rounded-lg border border-outline-variant bg-surface-container-lowest p-5 shadow-sm">
-              <h3 className="text-lg font-bold text-primary">{corporation.name}</h3>
-              <dl className="mt-4 flex flex-col divide-y divide-outline-variant text-sm">
-                <div className="flex items-center justify-between gap-3 py-2">
-                  <dt className="text-on-surface-variant">公表再就職者数</dt>
-                  <dd className="font-bold text-secondary">{corporation.count}人</dd>
-                </div>
-                <div className="flex items-center justify-between gap-3 py-2">
-                  <dt className="text-on-surface-variant">最多出身省庁</dt>
-                  <dd className="font-bold text-primary">{corporation.topMinistry}</dd>
-                </div>
-                <div className="flex items-center justify-between gap-3 py-2">
-                  <dt className="text-on-surface-variant">退職翌日再就職件数</dt>
-                  <dd className="font-bold text-secondary">{corporation.nextDay}件</dd>
-                </div>
-                <div className="flex items-center justify-between gap-3 py-2">
-                  <dt className="text-on-surface-variant">30日以内再就職件数</dt>
-                  <dd className="font-bold text-secondary">{corporation.within30Days}件</dd>
-                </div>
-              </dl>
+              {corporation.slug === "corporation-luup" ? (
+                <>
+                  <p className="text-xs font-bold text-secondary">株式会社Luupの公表役員情報</p>
+                  <h3 className="mt-1 text-lg font-bold text-primary">株式会社Luup</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-on-surface-variant">
+                    電動マイクロモビリティのシェアリングサービス
+                  </p>
+                  <ul className="mt-4 space-y-2 text-sm leading-relaxed">
+                    <li>
+                      <span className="font-bold text-primary">樋口建史氏</span>
+                      ：監査役、元警視総監
+                    </li>
+                    <li>
+                      <span className="font-bold text-primary">國峯孝祐氏</span>
+                      ：監査役、弁護士・元経済産業省
+                    </li>
+                  </ul>
+                  <p className="mt-4 text-xs leading-relaxed text-on-surface-variant">
+                    出典：Luup公式発表 / Luup公式会社情報 / gBizINFO
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h3 className="text-lg font-bold text-primary">{corporation.name}</h3>
+                  <dl className="mt-4 flex flex-col divide-y divide-outline-variant text-sm">
+                    <div className="flex items-center justify-between gap-3 py-2">
+                      <dt className="text-on-surface-variant">公表再就職者数</dt>
+                      <dd className="font-bold text-secondary">{corporation.count}人</dd>
+                    </div>
+                    <div className="flex items-center justify-between gap-3 py-2">
+                      <dt className="text-on-surface-variant">最多出身省庁</dt>
+                      <dd className="font-bold text-primary">{corporation.topMinistry}</dd>
+                    </div>
+                    <div className="flex items-center justify-between gap-3 py-2">
+                      <dt className="text-on-surface-variant">退職翌日再就職件数</dt>
+                      <dd className="font-bold text-secondary">{corporation.nextDay}件</dd>
+                    </div>
+                    <div className="flex items-center justify-between gap-3 py-2">
+                      <dt className="text-on-surface-variant">30日以内再就職件数</dt>
+                      <dd className="font-bold text-secondary">{corporation.within30Days}件</dd>
+                    </div>
+                  </dl>
+                </>
+              )}
               <Link href={`/corporations/${corporation.slug}`} className="mt-auto pt-4 text-sm font-bold text-secondary hover:underline">
                 詳細を見る →
               </Link>
