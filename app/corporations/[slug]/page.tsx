@@ -1,7 +1,66 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import type { GbizInfoCollection } from "@/lib/types";
 import { Breadcrumb, HighlightStatCard, SourceLinkList, StatCard, TagChip } from "@/components/ui";
 import { corporations, getCorporation, persons, records, sources } from "@/lib/static-content";
+
+const numberFormatter = new Intl.NumberFormat("ja-JP");
+
+function formatNumber(value: number) {
+  return numberFormatter.format(value);
+}
+
+function formatCurrency(value: number) {
+  return `${formatNumber(value)}円`;
+}
+
+function PublicDataCollection({
+  title,
+  collection,
+  showAmount = false,
+}: {
+  title: string;
+  collection: GbizInfoCollection;
+  showAmount?: boolean;
+}) {
+  return (
+    <div className="rounded border border-outline-variant bg-surface-container-low p-4">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 className="font-bold text-primary">{title}</h3>
+        <p className="text-sm font-semibold text-on-surface-variant">
+          {formatNumber(collection.count)}件
+          {collection.totalAmount !== undefined
+            ? ` / 合計 ${formatCurrency(collection.totalAmount)}`
+            : ""}
+        </p>
+      </div>
+      <ul className="mt-3 space-y-3">
+        {collection.examples.map((example, index) => (
+          <li
+            key={`${example.title}-${index}`}
+            className="border-t border-outline-variant pt-3 first:border-t-0 first:pt-0"
+          >
+            <p className="text-sm font-semibold leading-relaxed">{example.title}</p>
+            <p className="mt-1 text-xs leading-relaxed text-on-surface-variant">
+              {[
+                example.date || example.applicationDate,
+                example.governmentDepartment,
+                example.registrationNumber
+                  ? `登録番号 ${example.registrationNumber}`
+                  : "",
+                showAmount && example.amount !== undefined
+                  ? formatCurrency(example.amount)
+                  : "",
+              ]
+                .filter(Boolean)
+                .join(" / ")}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export function generateStaticParams() {
   return corporations.map((corporation) => ({ slug: corporation.slug }));
@@ -137,6 +196,197 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
               </dd>
             </div>
           </dl>
+        </section>
+      )}
+
+      {corporation.gbizInfo && (
+        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <h2 className="text-xl font-bold text-primary">公的情報（gBizINFO）</h2>
+              <p className="mt-1 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
+                経済産業省 gBizINFO
+                で公開されている法人関連情報を、再就職情報とは独立した公表情報として整理しています。補助金・調達・認定等の情報は、特定の再就職との因果関係を示すものではありません。
+              </p>
+            </div>
+            <a
+              href={corporation.gbizInfo.sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+              data-analytics-event="source_link"
+              data-source-type="gbizinfo"
+              data-analytics-location="corporation_public_info"
+              className="shrink-0 text-sm font-semibold text-secondary hover:underline"
+            >
+              gBizINFOで確認
+            </a>
+          </div>
+
+          {(corporation.gbizInfo.businessSummary ||
+            corporation.gbizInfo.employeeNumber !== undefined ||
+            corporation.gbizInfo.capitalStock !== undefined ||
+            corporation.gbizInfo.establishmentDate ||
+            corporation.gbizInfo.representativeName) && (
+            <div className="mt-5 rounded border border-outline-variant bg-surface p-4">
+              <h3 className="font-bold text-primary">法人関連情報</h3>
+              {corporation.gbizInfo.businessSummary && (
+                <div className="mt-3">
+                  <p className="text-sm font-semibold text-on-surface-variant">事業概要</p>
+                  <p className="mt-1 text-sm leading-relaxed">
+                    {corporation.gbizInfo.businessSummary}
+                  </p>
+                </div>
+              )}
+              <dl className="mt-3 grid grid-cols-1 gap-x-8 gap-y-3 md:grid-cols-2">
+                {corporation.gbizInfo.employeeNumber !== undefined && (
+                  <div>
+                    <dt className="text-sm font-semibold text-on-surface-variant">
+                      従業員数
+                    </dt>
+                    <dd className="mt-1">{formatNumber(corporation.gbizInfo.employeeNumber)}人</dd>
+                  </div>
+                )}
+                {corporation.gbizInfo.capitalStock !== undefined && (
+                  <div>
+                    <dt className="text-sm font-semibold text-on-surface-variant">
+                      資本金
+                    </dt>
+                    <dd className="mt-1">{formatCurrency(corporation.gbizInfo.capitalStock)}</dd>
+                  </div>
+                )}
+                {corporation.gbizInfo.establishmentDate && (
+                  <div>
+                    <dt className="text-sm font-semibold text-on-surface-variant">
+                      設立日
+                    </dt>
+                    <dd className="mt-1">{corporation.gbizInfo.establishmentDate}</dd>
+                  </div>
+                )}
+                {corporation.gbizInfo.representativeName && (
+                  <div>
+                    <dt className="text-sm font-semibold text-on-surface-variant">
+                      代表者名
+                    </dt>
+                    <dd className="mt-1 break-words text-sm leading-relaxed">
+                      {corporation.gbizInfo.representativeName}
+                    </dd>
+                  </div>
+                )}
+              </dl>
+            </div>
+          )}
+
+          <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
+            {corporation.gbizInfo.subsidies && (
+              <PublicDataCollection
+                title="補助金"
+                collection={corporation.gbizInfo.subsidies}
+                showAmount
+              />
+            )}
+            {corporation.gbizInfo.procurements && (
+              <PublicDataCollection
+                title="調達"
+                collection={corporation.gbizInfo.procurements}
+                showAmount
+              />
+            )}
+            {corporation.gbizInfo.certifications && (
+              <PublicDataCollection
+                title="認定・届出"
+                collection={corporation.gbizInfo.certifications}
+              />
+            )}
+            {corporation.gbizInfo.awards && (
+              <PublicDataCollection
+                title="表彰"
+                collection={corporation.gbizInfo.awards}
+              />
+            )}
+            {corporation.gbizInfo.patents && (
+              <PublicDataCollection
+                title="特許"
+                collection={corporation.gbizInfo.patents}
+              />
+            )}
+          </div>
+
+          {corporation.gbizInfo.finance && (
+            <div className="mt-4 rounded border border-outline-variant bg-surface-container-low p-4">
+              <h3 className="font-bold text-primary">財務情報</h3>
+              {corporation.gbizInfo.finance.fiscalYear && (
+                <p className="mt-1 text-xs text-on-surface-variant">
+                  {corporation.gbizInfo.finance.fiscalYear}
+                </p>
+              )}
+              <dl className="mt-3 grid grid-cols-2 gap-3 md:grid-cols-4">
+                {[
+                  ["売上・営業収益等", corporation.gbizInfo.finance.latestPeriod?.revenue],
+                  ["経常損益", corporation.gbizInfo.finance.latestPeriod?.ordinaryIncome],
+                  ["当期純損益", corporation.gbizInfo.finance.latestPeriod?.netIncome],
+                  ["総資産", corporation.gbizInfo.finance.latestPeriod?.totalAssets],
+                ].map(([label, value]) =>
+                  typeof value === "number" ? (
+                    <div key={label}>
+                      <dt className="text-xs font-semibold text-on-surface-variant">{label}</dt>
+                      <dd className="mt-1 text-sm font-bold">{formatCurrency(value)}</dd>
+                    </div>
+                  ) : null,
+                )}
+              </dl>
+            </div>
+          )}
+
+          {corporation.gbizInfo.workplaceInfo && (
+            <div className="mt-4 rounded border border-outline-variant bg-surface-container-low p-4">
+              <h3 className="font-bold text-primary">職場情報</h3>
+              <dl className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-3">
+                {[
+                  [
+                    "平均勤続年数",
+                    corporation.gbizInfo.workplaceInfo.averageContinuousServiceYears,
+                    "年",
+                  ],
+                  [
+                    "男性の平均勤続年数",
+                    corporation.gbizInfo.workplaceInfo
+                      .averageContinuousServiceYearsMale,
+                    "年",
+                  ],
+                  [
+                    "女性の平均勤続年数",
+                    corporation.gbizInfo.workplaceInfo
+                      .averageContinuousServiceYearsFemale,
+                    "年",
+                  ],
+                  [
+                    "女性労働者比率",
+                    corporation.gbizInfo.workplaceInfo.femaleWorkersProportion,
+                    "%",
+                  ],
+                  [
+                    "月平均所定外労働時間",
+                    corporation.gbizInfo.workplaceInfo.monthlyAverageOvertimeHours,
+                    "時間",
+                  ],
+                ].map(([label, value, unit]) =>
+                  typeof value === "number" ? (
+                    <div key={label}>
+                      <dt className="text-xs font-semibold text-on-surface-variant">{label}</dt>
+                      <dd className="mt-1 text-sm font-bold">
+                        {formatNumber(value)}
+                        {unit}
+                      </dd>
+                    </div>
+                  ) : null,
+                )}
+              </dl>
+            </div>
+          )}
+
+          <p className="mt-4 text-xs text-on-surface-variant">
+            取得日: {corporation.gbizInfo.fetchedAt.slice(0, 10)}
+          </p>
         </section>
       )}
 

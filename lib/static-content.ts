@@ -45,6 +45,7 @@ export const corporations: Corporation[] = rawCorporations.map((corporation) => 
   relatedPersons: corporation.relatedPersons,
   sources: corporation.sources,
   basicInfo: corporation.basicInfo,
+  gbizInfo: corporation.gbizInfo,
 }));
 
 export const persons: Person[] = rawPersons.map((person) => {

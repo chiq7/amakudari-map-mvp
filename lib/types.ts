@@ -19,6 +19,7 @@ export interface CorporationData {
   sources: string[];
   topics: string[];
   basicInfo?: CorporationBasicInfo;
+  gbizInfo?: GbizInfo;
 }
 
 export interface CorporationBasicInfo {
@@ -29,6 +30,72 @@ export interface CorporationBasicInfo {
   city: string;
   sourceName: string;
   sourceUrl: string;
+}
+
+export interface GbizInfoExample {
+  title: string;
+  amount?: number;
+  date?: string;
+  governmentDepartment?: string;
+  category?: string;
+  registrationNumber?: string;
+  applicationDate?: string;
+  patentType?: string;
+}
+
+export interface GbizInfoCollection {
+  count: number;
+  totalAmount?: number;
+  examples: GbizInfoExample[];
+}
+
+export interface GbizFinance {
+  accountingStandards?: string;
+  fiscalYear?: string;
+  latestPeriod?: {
+    period?: string;
+    revenue?: number;
+    ordinaryIncome?: number;
+    netIncome?: number;
+    netAssets?: number;
+    totalAssets?: number;
+    employeeNumber?: number;
+  };
+}
+
+export interface GbizWorkplaceInfo {
+  averageContinuousServiceYears?: number;
+  averageContinuousServiceYearsMale?: number;
+  averageContinuousServiceYearsFemale?: number;
+  averageAge?: number;
+  monthlyAverageOvertimeHours?: number;
+  femaleWorkersProportion?: number;
+  femaleManagerCount?: number;
+  managerCount?: number;
+  femaleOfficerCount?: number;
+  officerCount?: number;
+  paternityLeaveEligible?: number;
+  maternityLeaveEligible?: number;
+  paternityLeaveAcquisitionCount?: number;
+  maternityLeaveAcquisitionCount?: number;
+}
+
+export interface GbizInfo {
+  businessSummary?: string;
+  employeeNumber?: number;
+  capitalStock?: number;
+  establishmentDate?: string;
+  representativeName?: string;
+  subsidies?: GbizInfoCollection;
+  procurements?: GbizInfoCollection;
+  certifications?: GbizInfoCollection;
+  awards?: GbizInfoCollection;
+  patents?: GbizInfoCollection;
+  finance?: GbizFinance;
+  workplaceInfo?: GbizWorkplaceInfo;
+  sourceName: string;
+  sourceUrl: string;
+  fetchedAt: string;
 }
 
 export interface PersonData {
@@ -131,6 +198,7 @@ export interface Corporation {
   relatedPersons: string[];
   sources: string[];
   basicInfo?: CorporationBasicInfo;
+  gbizInfo?: GbizInfo;
 }
 
 export interface Person {

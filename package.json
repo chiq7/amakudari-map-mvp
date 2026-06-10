@@ -19,7 +19,9 @@
     "validate:corporation-enrichment": "node scripts/validate-corporation-enrichment.js",
     "apply:corporation-enrichment": "node scripts/apply-corporation-enrichment.js",
     "enrich:gbizinfo": "node scripts/enrich-corporations-gbizinfo.js",
-    "validate:gbizinfo-enrichment": "node scripts/validate-gbizinfo-enrichment.js"
+    "validate:gbizinfo-enrichment": "node scripts/validate-gbizinfo-enrichment.js",
+    "apply:gbizinfo-enrichment": "node scripts/apply-gbizinfo-enrichment.js",
+    "validate:gbizinfo-production": "node scripts/validate-gbizinfo-production.js"
   },
   "dependencies": {
     "@next/third-parties": "^14.2.3",
