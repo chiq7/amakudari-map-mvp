@@ -15,6 +15,16 @@ production.
 
 ## 2. Review the draft
 
+Before approval, enrich corporation information and review ambiguous names:
+
+```powershell
+npm.cmd run enrich:corporations -- --file "data/draft/example.json" --dry-run --limit 30
+npm.cmd run enrich:corporations -- --file "data/draft/example.json" --apply --limit 30
+```
+
+Use the generated `.enriched.json` file for the remaining steps. See
+`docs/corporation-enrichment.md` for matching and review-needed rules.
+
 Check the source URL, person, former ministry and title, corporation, dates,
 and inferred values. Set `approved: true` only for records confirmed against
 the published source.
@@ -22,7 +32,7 @@ the published source.
 ## 3. Preview the promotion
 
 ```powershell
-npm.cmd run promote:draft -- --file "data/draft/example.json" --dry-run --limit 10
+npm.cmd run promote:draft -- --file "data/draft/example.enriched.json" --dry-run --limit 10
 ```
 
 Dry-run is the default. Without `--apply`, production files and archives are
@@ -32,7 +42,7 @@ counts. `--limit` defaults to 10 and accepts integers from 1 to 30.
 ## 4. Apply reviewed records
 
 ```powershell
-npm.cmd run promote:draft -- --file "data/draft/example.json" --apply --limit 10
+npm.cmd run promote:draft -- --file "data/draft/example.enriched.json" --apply --limit 10
 ```
 
 Before writing, the command validates a complete production candidate and

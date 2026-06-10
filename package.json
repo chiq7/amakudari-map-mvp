@@ -16,7 +16,7 @@
     "generate:candidate": "node scripts/generate-production-candidate.js",
     "validate:candidate": "node scripts/validate-production-candidate.js",
     "apply:candidate": "node scripts/apply-production-candidate.js",
-    "enrich:corporations": "node scripts/enrich-corporations-basic-info.js",
+    "enrich:corporations": "node scripts/enrich-corporations-from-gbizinfo.js",
     "validate:corporation-enrichment": "node scripts/validate-corporation-enrichment.js",
     "apply:corporation-enrichment": "node scripts/apply-corporation-enrichment.js",
     "enrich:gbizinfo": "node scripts/enrich-corporations-gbizinfo.js",

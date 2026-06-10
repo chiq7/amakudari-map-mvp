@@ -71,7 +71,7 @@ function parseArguments(argv) {
 }
 
 function readJson(filePath) {
-  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+  return JSON.parse(fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, ""));
 }
 
 function writeJson(directory, fileName, value) {
@@ -171,6 +171,47 @@ function loadProduction(productionDirectory) {
   return production;
 }
 
+function validateCorporationEnrichments(draft) {
+  if (draft.corporationEnrichments === undefined) return;
+  if (!Array.isArray(draft.corporationEnrichments)) {
+    throw new Error("Draft corporationEnrichments must contain an array.");
+  }
+  const sourceIds = new Set(
+    (draft.sources ?? []).map((source) => source?.id).filter(Boolean),
+  );
+  const seenNames = new Set();
+  draft.corporationEnrichments.forEach((enrichment, index) => {
+    const prefix = `corporationEnrichments[${index}]`;
+    for (const field of [
+      "corporationName",
+      "corporateNumber",
+      "officialName",
+      "registeredAddress",
+      "prefecture",
+      "city",
+      "sourceName",
+      "sourceUrl",
+      "sourceId",
+    ]) {
+      if (!clean(enrichment[field])) {
+        throw new Error(`${prefix}.${field} is required.`);
+      }
+    }
+    if (!/^\d{13}$/.test(enrichment.corporateNumber)) {
+      throw new Error(`${prefix}.corporateNumber must contain 13 digits.`);
+    }
+    if (!sourceIds.has(enrichment.sourceId)) {
+      throw new Error(`${prefix}.sourceId is not present in draft.sources.`);
+    }
+    if (seenNames.has(enrichment.corporationName)) {
+      throw new Error(
+        `Duplicate corporation enrichment: ${enrichment.corporationName}`,
+      );
+    }
+    seenNames.add(enrichment.corporationName);
+  });
+}
+
 function classifyDraft(draft, productionRecords, limit) {
   if (!Array.isArray(draft.records)) {
     throw new Error("Draft file must contain a records array.");
@@ -227,6 +268,12 @@ function classifyDraft(draft, productionRecords, limit) {
 }
 
 function buildCandidate(draft, production, additions) {
+  const enrichmentByCorporationName = new Map(
+    (draft.corporationEnrichments ?? []).map((enrichment) => [
+      enrichment.corporationName,
+      enrichment,
+    ]),
+  );
   const corporationByName = new Map(
     production.corporations.map((corporation) => [
       corporation.name,
@@ -338,9 +385,12 @@ function buildCandidate(draft, production, additions) {
   const recordCorporations = [...recordsByCorporation.entries()].map(
     ([corporationSlug, group]) => {
       const existing = existingCorporationBySlug.get(corporationSlug);
+      const enrichment = enrichmentByCorporationName.get(
+        group[0].corporationName,
+      );
       const topMinistry = mode(group.map((record) => record.fromMinistry));
       const waitingDays = group.map((record) => record.waitingDays);
-      return {
+      const corporation = {
         ...(existing ?? {
           slug: corporationSlug,
           name: group[0].corporationName,
@@ -372,6 +422,27 @@ function buildCandidate(draft, production, additions) {
         ],
         sources: [...new Set(group.map((record) => record.sourceId))],
       };
+      if (enrichment) {
+        corporation.basicInfo = {
+          corporateNumber: enrichment.corporateNumber,
+          officialName: enrichment.officialName,
+          registeredAddress: enrichment.registeredAddress,
+          prefecture: enrichment.prefecture,
+          city: enrichment.city,
+          sourceName: enrichment.sourceName,
+          sourceUrl: enrichment.sourceUrl,
+        };
+        if (enrichment.gbizInfo) corporation.gbizInfo = enrichment.gbizInfo;
+        corporation.sources = [
+          ...new Set([
+            ...corporation.sources,
+            ...(enrichment.sourceId ? [enrichment.sourceId] : []),
+          ]),
+        ];
+        corporation.prefecture =
+          enrichment.prefecture || corporation.prefecture;
+      }
+      return corporation;
     },
   );
   const recordCorporationSlugs = new Set(
@@ -496,6 +567,7 @@ function promote(options) {
     options.archiveRoot ?? path.join("data", "archive"),
   );
   const draft = readJson(draftPath);
+  validateCorporationEnrichments(draft);
   const production = loadProduction(productionDirectory);
   const summary = classifyDraft(draft, production.records, options.limit);
 
