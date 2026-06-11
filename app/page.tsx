@@ -1,6 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { corporations, rankingLists, topics, totals } from "@/lib/static-content";
+import {
+  corporations,
+  getCorporationPersonHighlights,
+  getSourceSummary,
+  rankingLists,
+  topics,
+  totals,
+} from "@/lib/static-content";
 import { SearchBox, TagChip } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -19,6 +26,21 @@ const featuredCorporations = [
   corporations[0],
   corporations[2],
 ];
+
+const featuredCorporationCards = featuredCorporations.map((corporation) => {
+  const highlights = getCorporationPersonHighlights(corporation);
+  const sourceIds = Array.from(
+    new Set([
+      ...corporation.sources,
+      ...highlights.people.flatMap((person) => person.sourceIds),
+    ]),
+  );
+  return {
+    corporation,
+    highlights,
+    sourceSummary: getSourceSummary(sourceIds),
+  };
+});
 
 const corporationDirectory = rankingLists.publicRecords.slice(0, 6).map((item) => ({
   name: item.label,
@@ -181,57 +203,97 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
-          {featuredCorporations.map((corporation) => (
-            <article key={corporation.slug} className="flex min-h-[260px] flex-col rounded-lg border border-outline-variant bg-surface-container-lowest p-5 shadow-sm">
-              {corporation.slug === "corporation-luup" ? (
-                <>
-                  <p className="text-xs font-bold text-secondary">株式会社Luupの公表役員情報</p>
-                  <h3 className="mt-1 text-lg font-bold text-primary">株式会社Luup</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-on-surface-variant">
-                    電動マイクロモビリティのシェアリングサービス
-                  </p>
-                  <ul className="mt-4 space-y-2 text-sm leading-relaxed">
-                    <li>
-                      <span className="font-bold text-primary">樋口建史氏</span>
-                      ：監査役、元警視総監
-                    </li>
-                    <li>
-                      <span className="font-bold text-primary">國峯孝祐氏</span>
-                      ：監査役、弁護士・元経済産業省
-                    </li>
-                  </ul>
-                  <p className="mt-4 text-xs leading-relaxed text-on-surface-variant">
-                    出典：Luup公式発表 / Luup公式会社情報 / gBizINFO
-                  </p>
-                </>
-              ) : (
-                <>
-                  <h3 className="text-lg font-bold text-primary">{corporation.name}</h3>
-                  <dl className="mt-4 flex flex-col divide-y divide-outline-variant text-sm">
-                    <div className="flex items-center justify-between gap-3 py-2">
-                      <dt className="text-on-surface-variant">公表再就職者数</dt>
-                      <dd className="font-bold text-secondary">{corporation.count}人</dd>
+          {featuredCorporationCards.map(
+            ({ corporation, highlights, sourceSummary }) => (
+              <article
+                key={corporation.slug}
+                className="flex min-h-[390px] flex-col rounded-lg border border-outline-variant bg-surface-container-lowest p-5 shadow-sm"
+              >
+                <p className="text-xs font-bold text-secondary">
+                  {highlights.kind === "public-officer"
+                    ? "公式発表に基づく役員情報"
+                    : "公表資料に基づく記録"}
+                </p>
+                <h3 className="mt-1 text-lg font-bold text-primary">{corporation.name}</h3>
+                <p className="mt-2 line-clamp-2 min-h-10 text-sm leading-relaxed text-on-surface-variant">
+                  {[
+                    corporation.description,
+                    corporation.type,
+                    corporation.region === "不明" ? "" : corporation.region,
+                  ]
+                    .filter(Boolean)
+                    .slice(0, corporation.description ? 1 : 2)
+                    .join(" / ")}
+                </p>
+
+                {highlights.people.length > 0 ? (
+                  <div className="mt-4 border-t border-outline-variant pt-4">
+                    <p className="text-xs font-bold text-on-surface-variant">注目情報</p>
+                    <div className="mt-2 space-y-3">
+                      {highlights.people.map((person) => (
+                        <div key={`${person.kind}-${person.slug}`} className="min-h-[58px]">
+                          <p className="line-clamp-1 text-sm font-bold text-primary">
+                            {person.name}
+                            <span className="font-normal text-on-surface-variant">
+                              {" "}→ {person.role}
+                            </span>
+                          </p>
+                          <p className="line-clamp-2 min-h-10 text-xs leading-relaxed text-on-surface-variant">
+                            {person.formerPosition || `元${person.formerOrganization}`}
+                          </p>
+                        </div>
+                      ))}
+                      {highlights.remaining > 0 && (
+                        <p className="text-xs font-semibold text-on-surface-variant">
+                          ほか{highlights.remaining}人
+                        </p>
+                      )}
                     </div>
-                    <div className="flex items-center justify-between gap-3 py-2">
-                      <dt className="text-on-surface-variant">最多出身省庁</dt>
-                      <dd className="font-bold text-primary">{corporation.topMinistry}</dd>
-                    </div>
-                    <div className="flex items-center justify-between gap-3 py-2">
-                      <dt className="text-on-surface-variant">退職翌日再就職件数</dt>
-                      <dd className="font-bold text-secondary">{corporation.nextDay}件</dd>
-                    </div>
-                    <div className="flex items-center justify-between gap-3 py-2">
-                      <dt className="text-on-surface-variant">30日以内再就職件数</dt>
-                      <dd className="font-bold text-secondary">{corporation.within30Days}件</dd>
-                    </div>
-                  </dl>
-                </>
-              )}
-              <Link href={`/corporations/${corporation.slug}`} className="mt-auto pt-4 text-sm font-bold text-secondary hover:underline">
-                詳細を見る →
-              </Link>
-            </article>
-          ))}
+                  </div>
+                ) : null}
+
+                <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 border-t border-outline-variant pt-4 text-xs">
+                  {highlights.kind === "public-officer" ? (
+                    <>
+                      <div>
+                        <dt className="text-on-surface-variant">公表役員プロフィール</dt>
+                        <dd className="mt-1 font-bold text-primary">{highlights.total}人</dd>
+                      </div>
+                      {corporation.gbizInfo?.employeeNumber !== undefined && (
+                        <div>
+                          <dt className="text-on-surface-variant">従業員数</dt>
+                          <dd className="mt-1 font-bold text-primary">
+                            {corporation.gbizInfo.employeeNumber.toLocaleString()}人
+                          </dd>
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      <div>
+                        <dt className="text-on-surface-variant">公表再就職者数</dt>
+                        <dd className="mt-1 font-bold text-primary">{corporation.count}人</dd>
+                      </div>
+                      <div>
+                        <dt className="text-on-surface-variant">最多出身省庁</dt>
+                        <dd className="mt-1 line-clamp-1 font-bold text-primary">{corporation.topMinistry}</dd>
+                      </div>
+                      <div>
+                        <dt className="text-on-surface-variant">30日以内再就職</dt>
+                        <dd className="mt-1 font-bold text-primary">{corporation.within30Days}件</dd>
+                      </div>
+                    </>
+                  )}
+                </dl>
+                <p className="mt-4 line-clamp-2 min-h-8 text-xs leading-relaxed text-on-surface-variant">
+                  出典：{sourceSummary || "公表資料"}
+                </p>
+                <Link href={`/corporations/${corporation.slug}`} className="mt-auto pt-4 text-sm font-bold text-secondary hover:underline">
+                  詳細を見る →
+                </Link>
+              </article>
+            ),
+          )}
         </div>
       </section>
 

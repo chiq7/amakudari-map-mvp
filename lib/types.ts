@@ -34,6 +34,24 @@ export interface PublicOfficerProfile {
   sourceIds: string[];
 }
 
+export interface CorporationPersonHighlight {
+  slug: string;
+  name: string;
+  role: string;
+  formerOrganization: string;
+  formerPosition: string;
+  href: string;
+  sourceIds: string[];
+  kind: "public-officer" | "reemployment-record";
+}
+
+export interface CorporationPersonHighlights {
+  kind: "public-officer" | "reemployment-record" | "none";
+  people: CorporationPersonHighlight[];
+  total: number;
+  remaining: number;
+}
+
 export interface CorporationBasicInfo {
   corporateNumber: string;
   officialName: string;

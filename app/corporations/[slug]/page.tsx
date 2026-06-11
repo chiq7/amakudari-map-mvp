@@ -2,7 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import type { GbizInfoCollection } from "@/lib/types";
 import { Breadcrumb, HighlightStatCard, SourceLinkList, StatCard, TagChip } from "@/components/ui";
-import { corporations, getCorporation, persons, records, sources } from "@/lib/static-content";
+import {
+  corporations,
+  getCorporation,
+  getCorporationPersonHighlights,
+  getSourceSummary,
+  persons,
+  records,
+  sources,
+} from "@/lib/static-content";
 
 const numberFormatter = new Intl.NumberFormat("ja-JP");
 
@@ -71,8 +79,27 @@ export function generateMetadata({
 }: {
   params: { slug: string };
 }): Metadata {
+  const corporation = getCorporation(params.slug);
+  const highlights = getCorporationPersonHighlights(corporation);
+  const peopleDescription = highlights.people
+    .map((person) => {
+      const former =
+        person.kind === "public-officer"
+          ? person.formerPosition
+          : `元${person.formerOrganization}`;
+      return `${person.name}（${person.role}、${former}）`;
+    })
+    .join("、");
+  const description =
+    highlights.kind === "public-officer"
+      ? `${corporation.name}の公表役員プロフィール。${peopleDescription}など、公式発表・gBizINFOに基づく公開情報を整理。`
+      : highlights.kind === "reemployment-record"
+        ? `${corporation.name}の公表再就職情報。${peopleDescription}など、国家公務員再就職状況の公表資料に基づく情報を整理。`
+        : `${corporation.name}の法人情報を、公表資料と公的法人情報に基づいて整理。`;
   return {
     alternates: { canonical: `/corporations/${params.slug}` },
+    description,
+    openGraph: { description },
   };
 }
 
@@ -80,6 +107,10 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
   const corporation = getCorporation(params.slug);
   const relatedPersons = persons.filter((person) => person.corporationSlug === corporation.slug);
   const relatedRecords = records.filter((record) => record.corporationSlug === corporation.slug);
+  const personHighlights = getCorporationPersonHighlights(corporation);
+  const highlightSourceSummary = getSourceSummary(
+    personHighlights.people.flatMap((person) => person.sourceIds),
+  );
   const ministryCounts = relatedRecords.reduce<Map<string, number>>((counts, record) => {
     counts.set(record.fromMinistry, (counts.get(record.fromMinistry) ?? 0) + 1);
     return counts;
@@ -143,13 +174,61 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
       <section className="flex flex-col gap-4">
         <div>
           <h1 className="text-3xl font-bold text-primary md:text-4xl">{corporation.name}</h1>
-          <p className="mt-2 text-base text-on-surface-variant">公表資料に基づく法人・人材情報</p>
+          <p className="mt-2 text-base text-on-surface-variant">
+            {corporation.description || "公表資料に基づく法人・人材情報"}
+          </p>
           <p className="mt-2 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
             {corporation.publicOfficers.length > 0
               ? `${corporation.name}について、公的法人情報と同社が公表している役員・経歴情報をもとに、法人情報および元行政機関出身者の就任情報を整理しています。表示内容は公開情報に基づく記録整理であり、違法性や責任を断定するものではありません。`
               : `このページでは、${corporation.name}に関する公表再就職記録を法人単位で整理し、元府省庁、再就職者数、再就職時期、出典資料を確認できるようにしています。表示内容は公表資料の記録を整理したものです。`}
           </p>
         </div>
+        {personHighlights.people.length > 0 && (
+          <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5 shadow-sm">
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <div>
+                <p className="text-xs font-bold text-secondary">
+                  {personHighlights.kind === "public-officer"
+                    ? "公式発表に基づく役員情報"
+                    : "公表資料に基づく再就職情報"}
+                </p>
+                <h2 className="mt-1 text-xl font-bold text-primary">
+                  {personHighlights.kind === "public-officer"
+                    ? `公表役員プロフィール ${personHighlights.total}人`
+                    : `公表再就職者 ${personHighlights.total}人`}
+                </h2>
+              </div>
+              {personHighlights.remaining > 0 && (
+                <p className="text-sm font-semibold text-on-surface-variant">
+                  ほか{personHighlights.remaining}人
+                </p>
+              )}
+            </div>
+            <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
+              {personHighlights.people.map((person) => (
+                <article
+                  key={`${person.kind}-${person.slug}`}
+                  className="rounded border border-outline-variant bg-surface p-4"
+                >
+                  <h3 className="text-lg font-bold text-primary">
+                    <Link href={person.href} className="hover:underline">
+                      {person.name}
+                    </Link>
+                  </h3>
+                  <p className="mt-1 text-sm font-semibold text-secondary">{person.role}</p>
+                  <p className="mt-2 line-clamp-2 min-h-10 text-sm leading-relaxed text-on-surface-variant">
+                    {person.formerPosition || `元${person.formerOrganization}`}
+                  </p>
+                </article>
+              ))}
+            </div>
+            {highlightSourceSummary && (
+              <p className="mt-3 text-xs text-on-surface-variant">
+                出典：{highlightSourceSummary}
+              </p>
+            )}
+          </div>
+        )}
         <div className="flex flex-wrap gap-2">
           {topMinistry && (
             <TagChip href={`/corporations?ministry=${encodeURIComponent(topMinistry.name)}`}>{topMinistry.name}</TagChip>
@@ -159,63 +238,129 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         </div>
       </section>
 
-      <section className="grid grid-cols-1 gap-4 md:grid-cols-4">
-        <StatCard label="公表再就職者数" value={relatedRecords.length} unit="人" />
-        <StatCard
-          label="最多出身省庁"
-          value={topMinistry ? `${topMinistry.name}（${topMinistry.count}人）` : "該当なし"}
-        />
-        <StatCard label="平均待機日数" value={averageWaitDays} unit="日" />
-        <HighlightStatCard label="退職翌日再就職" value={nextDayCount} unit="件" />
-      </section>
+      {relatedRecords.length > 0 ? (
+        <section className="grid grid-cols-1 gap-4 md:grid-cols-4">
+          <StatCard label="公表再就職者数" value={relatedRecords.length} unit="人" />
+          <StatCard
+            label="最多出身省庁"
+            value={topMinistry ? `${topMinistry.name}（${topMinistry.count}人）` : "該当なし"}
+          />
+          <StatCard label="平均待機日数" value={averageWaitDays} unit="日" />
+          <HighlightStatCard label="退職翌日再就職" value={nextDayCount} unit="件" />
+        </section>
+      ) : corporation.publicOfficers.length > 0 ? (
+        <p className="rounded border border-outline-variant bg-surface-container-low px-4 py-3 text-sm leading-relaxed text-on-surface-variant">
+          国家公務員再就職状況の公表における該当記録は確認されていません。このページでは、法人公式発表などに基づく公表役員プロフィールを表示しています。
+        </p>
+      ) : null}
 
-      {corporation.basicInfo && (
+      {(corporation.basicInfo || corporation.gbizInfo) && (
         <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
-          <h2 className="text-xl font-bold text-primary">法人基本情報</h2>
-          <p className="mt-1 text-sm text-on-surface-variant">
-            {corporation.basicInfo.sourceName}に基づく法人基本情報です。
+          <h2 className="text-xl font-bold text-primary">法人概要</h2>
+          <p className="mt-1 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
+            gBizINFO・法人番号公表サイト・法人公式発表などの公開情報を整理しています。再就職情報とは独立した公的法人情報です。
           </p>
+          {corporation.gbizInfo?.businessSummary && (
+            <div className="mt-5 rounded border border-outline-variant bg-surface p-4">
+              <p className="text-sm font-semibold text-on-surface-variant">事業概要</p>
+              <p className="mt-1 text-sm leading-relaxed">
+                {corporation.gbizInfo.businessSummary}
+              </p>
+            </div>
+          )}
           <dl className="mt-5 grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
-            {[
-              ["法人番号", corporation.basicInfo.corporateNumber],
-              ["正式名称", corporation.basicInfo.officialName],
-              ["所在地", corporation.basicInfo.registeredAddress],
-              ["都道府県", corporation.basicInfo.prefecture],
-              ["市区町村", corporation.basicInfo.city],
-            ].map(([label, value]) => (
-              <div key={label}>
-                <dt className="text-sm font-semibold text-on-surface-variant">{label}</dt>
-                <dd className="mt-1 text-base text-primary">{value}</dd>
+            {corporation.gbizInfo?.representativeName && (
+              <div>
+                <dt className="text-sm font-semibold text-on-surface-variant">代表者</dt>
+                <dd className="mt-1 text-base text-primary">
+                  {corporation.gbizInfo.representativeName}
+                </dd>
               </div>
-            ))}
-            <div>
-              <dt className="text-sm font-semibold text-on-surface-variant">出典</dt>
-              <dd className="mt-1">
+            )}
+            {corporation.gbizInfo?.employeeNumber !== undefined && (
+              <div>
+                <dt className="text-sm font-semibold text-on-surface-variant">従業員数</dt>
+                <dd className="mt-1 text-base text-primary">
+                  {formatNumber(corporation.gbizInfo.employeeNumber)}人
+                </dd>
+              </div>
+            )}
+            {corporation.gbizInfo?.establishmentDate && (
+              <div>
+                <dt className="text-sm font-semibold text-on-surface-variant">設立日</dt>
+                <dd className="mt-1 text-base text-primary">
+                  {corporation.gbizInfo.establishmentDate}
+                </dd>
+              </div>
+            )}
+            {corporation.gbizInfo?.capitalStock !== undefined && (
+              <div>
+                <dt className="text-sm font-semibold text-on-surface-variant">資本金</dt>
+                <dd className="mt-1 text-base text-primary">
+                  {formatCurrency(corporation.gbizInfo.capitalStock)}
+                </dd>
+              </div>
+            )}
+            {corporation.basicInfo &&
+              [
+                ["所在地", corporation.basicInfo.registeredAddress],
+                ["都道府県", corporation.basicInfo.prefecture],
+                ["市区町村", corporation.basicInfo.city],
+                ["法人番号", corporation.basicInfo.corporateNumber],
+                ["正式名称", corporation.basicInfo.officialName],
+              ].map(([label, value]) => (
+                <div key={label}>
+                  <dt className="text-sm font-semibold text-on-surface-variant">{label}</dt>
+                  <dd className="mt-1 text-base text-primary">{value}</dd>
+                </div>
+              ))}
+          </dl>
+          <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 border-t border-outline-variant pt-4 text-sm">
+            {corporation.basicInfo && (
+              <a
+                href={corporation.basicInfo.sourceUrl}
+                target="_blank"
+                rel="noreferrer"
+                data-analytics-event="source_link"
+                data-source-type="corporate_registry"
+                data-analytics-location="corporation_overview"
+                className="font-semibold text-secondary hover:underline"
+              >
+                出典：{corporation.basicInfo.sourceName}
+              </a>
+            )}
+            {corporation.gbizInfo &&
+              corporation.gbizInfo.sourceUrl !== corporation.basicInfo?.sourceUrl && (
                 <a
-                  href={corporation.basicInfo.sourceUrl}
+                  href={corporation.gbizInfo.sourceUrl}
                   target="_blank"
                   rel="noreferrer"
                   data-analytics-event="source_link"
-                  data-source-type="corporate_registry"
-                  data-analytics-location="corporation_basic_info"
+                  data-source-type="gbizinfo"
+                  data-analytics-location="corporation_overview"
                   className="font-semibold text-secondary hover:underline"
                 >
-                  {corporation.basicInfo.sourceName}
+                  出典：{corporation.gbizInfo.sourceName}
                 </a>
-              </dd>
-            </div>
-          </dl>
+              )}
+          </div>
         </section>
       )}
 
-      {corporation.gbizInfo && (
+      {corporation.gbizInfo &&
+        (corporation.gbizInfo.subsidies ||
+          corporation.gbizInfo.procurements ||
+          corporation.gbizInfo.certifications ||
+          corporation.gbizInfo.awards ||
+          corporation.gbizInfo.patents ||
+          corporation.gbizInfo.finance ||
+          corporation.gbizInfo.workplaceInfo) && (
         <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
-              <h2 className="text-xl font-bold text-primary">公的情報（gBizINFO）</h2>
+              <h2 className="text-xl font-bold text-primary">公的法人情報の詳細</h2>
               <p className="mt-1 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
-                経済産業省 gBizINFO
-                で公開されている法人関連情報を、再就職情報とは独立した公表情報として整理しています。補助金・調達・認定等の情報は、特定の再就職との因果関係を示すものではありません。
+                gBizINFOで公開されている補助金・調達・認定などの情報です。再就職情報とは独立した公的法人情報として表示しています。
               </p>
             </div>
             <a
@@ -231,61 +376,7 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
             </a>
           </div>
 
-          {(corporation.gbizInfo.businessSummary ||
-            corporation.gbizInfo.employeeNumber !== undefined ||
-            corporation.gbizInfo.capitalStock !== undefined ||
-            corporation.gbizInfo.establishmentDate ||
-            corporation.gbizInfo.representativeName) && (
-            <div className="mt-5 rounded border border-outline-variant bg-surface p-4">
-              <h3 className="font-bold text-primary">法人関連情報</h3>
-              {corporation.gbizInfo.businessSummary && (
-                <div className="mt-3">
-                  <p className="text-sm font-semibold text-on-surface-variant">事業概要</p>
-                  <p className="mt-1 text-sm leading-relaxed">
-                    {corporation.gbizInfo.businessSummary}
-                  </p>
-                </div>
-              )}
-              <dl className="mt-3 grid grid-cols-1 gap-x-8 gap-y-3 md:grid-cols-2">
-                {corporation.gbizInfo.employeeNumber !== undefined && (
-                  <div>
-                    <dt className="text-sm font-semibold text-on-surface-variant">
-                      従業員数
-                    </dt>
-                    <dd className="mt-1">{formatNumber(corporation.gbizInfo.employeeNumber)}人</dd>
-                  </div>
-                )}
-                {corporation.gbizInfo.capitalStock !== undefined && (
-                  <div>
-                    <dt className="text-sm font-semibold text-on-surface-variant">
-                      資本金
-                    </dt>
-                    <dd className="mt-1">{formatCurrency(corporation.gbizInfo.capitalStock)}</dd>
-                  </div>
-                )}
-                {corporation.gbizInfo.establishmentDate && (
-                  <div>
-                    <dt className="text-sm font-semibold text-on-surface-variant">
-                      設立日
-                    </dt>
-                    <dd className="mt-1">{corporation.gbizInfo.establishmentDate}</dd>
-                  </div>
-                )}
-                {corporation.gbizInfo.representativeName && (
-                  <div>
-                    <dt className="text-sm font-semibold text-on-surface-variant">
-                      代表者名
-                    </dt>
-                    <dd className="mt-1 break-words text-sm leading-relaxed">
-                      {corporation.gbizInfo.representativeName}
-                    </dd>
-                  </div>
-                )}
-              </dl>
-            </div>
-          )}
-
-          <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2">
             {corporation.gbizInfo.subsidies && (
               <PublicDataCollection
                 title="補助金"
@@ -464,19 +555,16 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
           </table>
         </div>
       </section>
-      ) : (
-        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
-          <h2 className="text-2xl font-bold text-primary">公表再就職記録</h2>
-          <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
-            現在、国家公務員の再就職状況公表資料に基づく記録は登録されていません。上記の公表役員情報は、法人の公式発表に基づくプロフィールとして区別して掲載しています。
-          </p>
-        </section>
-      )}
+      ) : corporation.publicOfficers.length === 0 ? (
+        <p className="text-sm leading-relaxed text-on-surface-variant">
+          国家公務員再就職状況の公表における該当記録は確認されていません。
+        </p>
+      ) : null}
 
-      <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
-          <h2 className="mb-4 text-xl font-bold text-primary">元省庁の内訳</h2>
-          {ministryBreakdown.length > 0 ? (
+      {relatedRecords.length > 0 && (
+        <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+            <h2 className="mb-4 text-xl font-bold text-primary">元省庁の内訳</h2>
             <div className="space-y-3">
               {ministryBreakdown.map((ministry) => (
                 <div key={ministry.name}>
@@ -493,30 +581,28 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
                 </div>
               ))}
             </div>
-          ) : (
-            <p className="text-sm text-on-surface-variant">集計対象の公表記録はありません。</p>
-          )}
-        </div>
-
-        <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
-          <h2 className="mb-4 text-xl font-bold text-primary">待機日数の分布</h2>
-          <div className="flex h-52 items-end justify-between gap-4 px-2 pt-6">
-            {waitDistribution.map((item) => (
-              <div key={item.label} className="flex flex-1 flex-col items-center gap-2">
-                <div className="flex h-36 w-full items-end">
-                  <div
-                    className="relative w-full rounded-t bg-secondary-container"
-                    style={{ height: `${(item.value / maxWaitDistributionCount) * 100}%` }}
-                  >
-                    <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-sm font-bold">{item.value}</span>
-                  </div>
-                </div>
-                <span className="text-center text-xs font-semibold text-on-surface-variant">{item.label}</span>
-              </div>
-            ))}
           </div>
-        </div>
-      </section>
+
+          <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+            <h2 className="mb-4 text-xl font-bold text-primary">待機日数の分布</h2>
+            <div className="flex h-52 items-end justify-between gap-4 px-2 pt-6">
+              {waitDistribution.map((item) => (
+                <div key={item.label} className="flex flex-1 flex-col items-center gap-2">
+                  <div className="flex h-36 w-full items-end">
+                    <div
+                      className="relative w-full rounded-t bg-secondary-container"
+                      style={{ height: `${(item.value / maxWaitDistributionCount) * 100}%` }}
+                    >
+                      <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-sm font-bold">{item.value}</span>
+                    </div>
+                  </div>
+                  <span className="text-center text-xs font-semibold text-on-surface-variant">{item.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
         <h2 className="mb-5 text-2xl font-bold text-primary">関連情報</h2>
@@ -538,9 +624,9 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
             <div>
               <h3 className="mb-2 text-sm font-bold text-on-surface-variant">関連省庁</h3>
               <div className="flex flex-wrap gap-2">
-                {ministryBreakdown.map((ministry) => (
-                  <TagChip key={ministry.name} href={`/corporations?ministry=${encodeURIComponent(ministry.name)}`}>
-                    {ministry.name}
+                {corporation.ministries.filter(Boolean).map((ministry) => (
+                  <TagChip key={ministry} href={`/corporations?ministry=${encodeURIComponent(ministry)}`}>
+                    {ministry}
                   </TagChip>
                 ))}
               </div>

@@ -7,6 +7,7 @@ import topicsData from "@/data/production/topics.json";
 import type {
   Corporation,
   CorporationData,
+  CorporationPersonHighlights,
   DataMeta,
   Person,
   PersonData,
@@ -102,6 +103,76 @@ export const persons: Person[] = rawPersons.map((person) => {
     tags: person.tags,
   };
 });
+
+export function getCorporationPersonHighlights(
+  corporation: Corporation,
+  limit = 2,
+): CorporationPersonHighlights {
+  const publicOfficerHighlights = corporation.publicOfficers
+    .filter((officer) => officer.name.trim())
+    .map((officer) => ({
+      slug: officer.slug,
+      name: officer.name,
+      role: officer.role,
+      formerOrganization: officer.formerOrganization,
+      formerPosition: officer.formerPosition,
+      href: `/public-officers/${officer.slug}`,
+      sourceIds: officer.sourceIds,
+      kind: "public-officer" as const,
+    }));
+
+  if (publicOfficerHighlights.length > 0) {
+    return {
+      kind: "public-officer",
+      people: publicOfficerHighlights.slice(0, limit),
+      total: publicOfficerHighlights.length,
+      remaining: Math.max(0, publicOfficerHighlights.length - limit),
+    };
+  }
+
+  const recordHighlights = records
+    .map((record, index) => ({ record, index }))
+    .filter(
+      ({ record }) =>
+        record.corporationSlug === corporation.slug && record.name.trim(),
+    )
+    .sort(
+      (left, right) =>
+        left.record.waitingDays - right.record.waitingDays ||
+        left.index - right.index,
+    )
+    .map(({ record }) => ({
+      slug: record.personSlug,
+      name: record.name,
+      role: record.newPosition,
+      formerOrganization: record.fromMinistry,
+      formerPosition: record.previousPosition,
+      href: `/persons/${record.personSlug}`,
+      sourceIds: [record.sourceId],
+      kind: "reemployment-record" as const,
+    }));
+
+  return {
+    kind: recordHighlights.length > 0 ? "reemployment-record" : "none",
+    people: recordHighlights.slice(0, limit),
+    total: recordHighlights.length,
+    remaining: Math.max(0, recordHighlights.length - limit),
+  };
+}
+
+export function getSourceSummary(sourceIds: string[], limit = 2) {
+  const labels = Array.from(
+    new Set(
+      sourceIds
+        .map((sourceId) => sourcesById.get(sourceId)?.publisher)
+        .filter((label): label is string => Boolean(label)),
+    ),
+  );
+  const visible = labels.slice(0, limit);
+  return labels.length > limit
+    ? `${visible.join(" / ")} ほか`
+    : visible.join(" / ");
+}
 
 function hydrateRanking(items: RankingItem[]): RankingDisplayItem[] {
   return items.flatMap((item) => {
