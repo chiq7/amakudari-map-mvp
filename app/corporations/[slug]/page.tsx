@@ -162,7 +162,7 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
   const relatedSources = sources.filter((source) => relatedSourceIds.has(source.id));
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-6">
       <Breadcrumb
         items={[
           { label: "TOP", href: "/" },
@@ -171,20 +171,20 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         ]}
       />
 
-      <section className="flex flex-col gap-4">
+      <section className="flex flex-col gap-3">
         <div>
           <h1 className="text-3xl font-bold text-primary md:text-4xl">{corporation.name}</h1>
-          <p className="mt-2 text-base text-on-surface-variant">
+          <p className="mt-1.5 text-base leading-snug text-on-surface-variant">
             {corporation.description || "公表資料に基づく法人・人材情報"}
           </p>
-          <p className="mt-2 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
+          <p className="mt-1.5 max-w-4xl text-sm leading-snug text-on-surface-variant">
             {corporation.publicOfficers.length > 0
               ? `${corporation.name}について、公的法人情報と同社が公表している役員・経歴情報をもとに、法人情報および元行政機関出身者の就任情報を整理しています。表示内容は公開情報に基づく記録整理であり、違法性や責任を断定するものではありません。`
               : `このページでは、${corporation.name}に関する公表再就職記録を法人単位で整理し、元府省庁、再就職者数、再就職時期、出典資料を確認できるようにしています。表示内容は公表資料の記録を整理したものです。`}
           </p>
         </div>
         {personHighlights.people.length > 0 && (
-          <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5 shadow-sm">
+          <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-sm">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <div>
                 <p className="text-xs font-bold text-secondary">
@@ -204,26 +204,26 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
                 </p>
               )}
             </div>
-            <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
+            <div className="mt-3 grid grid-cols-1 gap-2.5 md:grid-cols-2">
               {personHighlights.people.map((person) => (
                 <article
                   key={`${person.kind}-${person.slug}`}
-                  className="rounded border border-outline-variant bg-surface p-4"
+                  className="rounded border border-outline-variant bg-surface p-3.5"
                 >
                   <h3 className="text-lg font-bold text-primary">
                     <Link href={person.href} className="hover:underline">
                       {person.name}
                     </Link>
                   </h3>
-                  <p className="mt-1 text-sm font-semibold text-secondary">{person.role}</p>
-                  <p className="mt-2 line-clamp-2 min-h-10 text-sm leading-relaxed text-on-surface-variant">
+                  <p className="mt-0.5 text-sm font-semibold text-secondary">{person.role}</p>
+                  <p className="mt-1 line-clamp-2 min-h-9 text-sm leading-snug text-on-surface-variant">
                     {person.formerPosition || `元${person.formerOrganization}`}
                   </p>
                 </article>
               ))}
             </div>
             {highlightSourceSummary && (
-              <p className="mt-3 text-xs text-on-surface-variant">
+              <p className="mt-2 text-xs text-on-surface-variant">
                 出典：{highlightSourceSummary}
               </p>
             )}
@@ -249,30 +249,30 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
           <HighlightStatCard label="退職翌日再就職" value={nextDayCount} unit="件" />
         </section>
       ) : corporation.publicOfficers.length > 0 ? (
-        <p className="rounded border border-outline-variant bg-surface-container-low px-4 py-3 text-sm leading-relaxed text-on-surface-variant">
+        <p className="border-l-2 border-outline-variant px-3 py-1.5 text-xs leading-relaxed text-on-surface-variant">
           国家公務員再就職状況の公表における該当記録は確認されていません。このページでは、法人公式発表などに基づく公表役員プロフィールを表示しています。
         </p>
       ) : null}
 
       {(corporation.basicInfo || corporation.gbizInfo) && (
-        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
           <h2 className="text-xl font-bold text-primary">法人概要</h2>
           <p className="mt-1 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
             gBizINFO・法人番号公表サイト・法人公式発表などの公開情報を整理しています。再就職情報とは独立した公的法人情報です。
           </p>
           {corporation.gbizInfo?.businessSummary && (
-            <div className="mt-5 rounded border border-outline-variant bg-surface p-4">
+            <div className="mt-3 rounded border border-outline-variant bg-surface p-3">
               <p className="text-sm font-semibold text-on-surface-variant">事業概要</p>
               <p className="mt-1 text-sm leading-relaxed">
                 {corporation.gbizInfo.businessSummary}
               </p>
             </div>
           )}
-          <dl className="mt-5 grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
+          <dl className="mt-3 grid grid-cols-1 gap-x-6 gap-y-2.5 md:grid-cols-2">
             {corporation.gbizInfo?.representativeName && (
               <div>
                 <dt className="text-sm font-semibold text-on-surface-variant">代表者</dt>
-                <dd className="mt-1 text-base text-primary">
+                <dd className="mt-0.5 text-sm text-primary">
                   {corporation.gbizInfo.representativeName}
                 </dd>
               </div>
@@ -280,7 +280,7 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
             {corporation.gbizInfo?.employeeNumber !== undefined && (
               <div>
                 <dt className="text-sm font-semibold text-on-surface-variant">従業員数</dt>
-                <dd className="mt-1 text-base text-primary">
+                <dd className="mt-0.5 text-sm text-primary">
                   {formatNumber(corporation.gbizInfo.employeeNumber)}人
                 </dd>
               </div>
@@ -288,7 +288,7 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
             {corporation.gbizInfo?.establishmentDate && (
               <div>
                 <dt className="text-sm font-semibold text-on-surface-variant">設立日</dt>
-                <dd className="mt-1 text-base text-primary">
+                <dd className="mt-0.5 text-sm text-primary">
                   {corporation.gbizInfo.establishmentDate}
                 </dd>
               </div>
@@ -296,7 +296,7 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
             {corporation.gbizInfo?.capitalStock !== undefined && (
               <div>
                 <dt className="text-sm font-semibold text-on-surface-variant">資本金</dt>
-                <dd className="mt-1 text-base text-primary">
+                <dd className="mt-0.5 text-sm text-primary">
                   {formatCurrency(corporation.gbizInfo.capitalStock)}
                 </dd>
               </div>
@@ -311,11 +311,11 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
               ].map(([label, value]) => (
                 <div key={label}>
                   <dt className="text-sm font-semibold text-on-surface-variant">{label}</dt>
-                  <dd className="mt-1 text-base text-primary">{value}</dd>
+                  <dd className="mt-0.5 text-sm text-primary">{value}</dd>
                 </div>
               ))}
           </dl>
-          <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 border-t border-outline-variant pt-4 text-sm">
+          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 border-t border-outline-variant pt-3 text-sm">
             {corporation.basicInfo && (
               <a
                 href={corporation.basicInfo.sourceUrl}
@@ -355,7 +355,7 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
           corporation.gbizInfo.patents ||
           corporation.gbizInfo.finance ||
           corporation.gbizInfo.workplaceInfo) && (
-        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
               <h2 className="text-xl font-bold text-primary">公的法人情報の詳細</h2>
@@ -376,7 +376,7 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
             </a>
           </div>
 
-          <div className="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className="mt-3 grid grid-cols-1 gap-3 lg:grid-cols-2">
             {corporation.gbizInfo.subsidies && (
               <PublicDataCollection
                 title="補助金"
@@ -491,22 +491,22 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
       )}
 
       {corporation.publicOfficers.length > 0 && (
-        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
           <h2 className="text-2xl font-bold text-primary">公表役員情報</h2>
-          <p className="mt-2 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
+          <p className="mt-1.5 max-w-4xl text-sm leading-snug text-on-surface-variant">
             同社の公式発表・会社情報に掲載された元行政機関出身者の役員プロフィールです。国家公務員の再就職状況公表資料に基づく記録とは区別して表示しています。
           </p>
-          <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-2">
             {corporation.publicOfficers.map((officer) => (
-              <article key={officer.slug} className="rounded border border-outline-variant bg-surface p-4">
+              <article key={officer.slug} className="rounded border border-outline-variant bg-surface p-3">
                 <p className="text-sm font-semibold text-secondary">{officer.role}</p>
                 <h3 className="mt-1 text-xl font-bold text-primary">
                   <Link href={`/public-officers/${officer.slug}`} className="hover:underline">
                     {officer.name}
                   </Link>
                 </h3>
-                <p className="mt-2 text-sm font-semibold">{officer.formerPosition}</p>
-                <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{officer.profile}</p>
+                <p className="mt-1.5 text-sm font-semibold">{officer.formerPosition}</p>
+                <p className="mt-1.5 text-sm leading-snug text-on-surface-variant">{officer.profile}</p>
               </article>
             ))}
           </div>
@@ -604,10 +604,10 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         </section>
       )}
 
-      <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
-        <h2 className="mb-5 text-2xl font-bold text-primary">関連情報</h2>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <div className="space-y-5">
+      <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
+        <h2 className="mb-3 text-2xl font-bold text-primary">関連情報</h2>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className="space-y-3">
             <div>
               <h3 className="mb-2 text-sm font-bold text-on-surface-variant">関連話題</h3>
               <div className="flex flex-wrap gap-2">
@@ -640,21 +640,21 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
                 href: source.url,
               }))}
             />
-            <p className="mt-4 text-xs leading-relaxed text-on-surface-variant">
+            <p className="mt-3 text-xs leading-snug text-on-surface-variant">
               本ページは政府・各省庁等の公表資料に基づき、官民の人材移動を中立的に整理したものです。特定の因果関係や不適切性を断定・示すものではありません。
             </p>
           </div>
         </div>
       </section>
 
-      <section className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <section className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
         {[
           ["法人情報を詳しく見る", corporation.name, `/corporations/${corporation.slug}`],
           ["省庁別の集計を見る", `${topMinistry?.name ?? "省庁"}の再就職統計を見る`, `/corporations?ministry=${encodeURIComponent(topMinistry?.name ?? "")}`],
           ["待機日数から探す", "退職翌日再就職ランキングを見る", "/rankings"],
           ["事例を比較する", "類似の再就職事例を見る", `/corporations?ministry=${encodeURIComponent(topMinistry?.name ?? "")}&waitDays=0`],
         ].map(([label, title, href]) => (
-          <Link key={label} href={href} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4 hover:border-secondary">
+          <Link key={label} href={href} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-3 hover:border-secondary">
             <span className="text-sm font-semibold text-on-surface-variant">{label}</span>
             <p className="mt-1 font-bold text-primary">{title}</p>
           </Link>

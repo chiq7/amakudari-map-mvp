@@ -191,7 +191,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+        <div className="mb-3 flex flex-wrap items-end justify-between gap-3">
           <div>
             <h2 className="text-2xl font-bold text-primary">注目の公表情報</h2>
             <p className="mt-1 text-sm text-on-surface-variant">
@@ -202,12 +202,12 @@ export default function Home() {
             すべて見る
           </Link>
         </div>
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
           {featuredCorporationCards.map(
             ({ corporation, highlights, sourceSummary }) => (
               <article
                 key={corporation.slug}
-                className="flex min-h-[390px] flex-col rounded-lg border border-outline-variant bg-surface-container-lowest p-5 shadow-sm"
+                className="flex min-h-[330px] flex-col rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-sm"
               >
                 <p className="text-xs font-bold text-secondary">
                   {highlights.kind === "public-officer"
@@ -215,7 +215,7 @@ export default function Home() {
                     : "公表資料に基づく記録"}
                 </p>
                 <h3 className="mt-1 text-lg font-bold text-primary">{corporation.name}</h3>
-                <p className="mt-2 line-clamp-2 min-h-10 text-sm leading-relaxed text-on-surface-variant">
+                <p className="mt-1.5 line-clamp-2 min-h-9 text-sm leading-snug text-on-surface-variant">
                   {[
                     corporation.description,
                     corporation.type,
@@ -227,18 +227,18 @@ export default function Home() {
                 </p>
 
                 {highlights.people.length > 0 ? (
-                  <div className="mt-4 border-t border-outline-variant pt-4">
+                  <div className="mt-3 border-t border-outline-variant pt-3">
                     <p className="text-xs font-bold text-on-surface-variant">注目情報</p>
-                    <div className="mt-2 space-y-3">
+                    <div className="mt-1.5 space-y-2">
                       {highlights.people.map((person) => (
-                        <div key={`${person.kind}-${person.slug}`} className="min-h-[58px]">
+                        <div key={`${person.kind}-${person.slug}`} className="min-h-[50px]">
                           <p className="line-clamp-1 text-sm font-bold text-primary">
                             {person.name}
                             <span className="font-normal text-on-surface-variant">
                               {" "}→ {person.role}
                             </span>
                           </p>
-                          <p className="line-clamp-2 min-h-10 text-xs leading-relaxed text-on-surface-variant">
+                          <p className="line-clamp-2 min-h-8 text-xs leading-snug text-on-surface-variant">
                             {person.formerPosition || `元${person.formerOrganization}`}
                           </p>
                         </div>
@@ -252,17 +252,17 @@ export default function Home() {
                   </div>
                 ) : null}
 
-                <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 border-t border-outline-variant pt-4 text-xs">
+                <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-1.5 border-t border-outline-variant pt-3 text-xs">
                   {highlights.kind === "public-officer" ? (
                     <>
                       <div>
                         <dt className="text-on-surface-variant">公表役員プロフィール</dt>
-                        <dd className="mt-1 font-bold text-primary">{highlights.total}人</dd>
+                        <dd className="mt-0.5 font-bold text-primary">{highlights.total}人</dd>
                       </div>
                       {corporation.gbizInfo?.employeeNumber !== undefined && (
                         <div>
                           <dt className="text-on-surface-variant">従業員数</dt>
-                          <dd className="mt-1 font-bold text-primary">
+                          <dd className="mt-0.5 font-bold text-primary">
                             {corporation.gbizInfo.employeeNumber.toLocaleString()}人
                           </dd>
                         </div>
@@ -272,23 +272,23 @@ export default function Home() {
                     <>
                       <div>
                         <dt className="text-on-surface-variant">公表再就職者数</dt>
-                        <dd className="mt-1 font-bold text-primary">{corporation.count}人</dd>
+                        <dd className="mt-0.5 font-bold text-primary">{corporation.count}人</dd>
                       </div>
                       <div>
                         <dt className="text-on-surface-variant">最多出身省庁</dt>
-                        <dd className="mt-1 line-clamp-1 font-bold text-primary">{corporation.topMinistry}</dd>
+                        <dd className="mt-0.5 line-clamp-1 font-bold text-primary">{corporation.topMinistry}</dd>
                       </div>
                       <div>
                         <dt className="text-on-surface-variant">30日以内再就職</dt>
-                        <dd className="mt-1 font-bold text-primary">{corporation.within30Days}件</dd>
+                        <dd className="mt-0.5 font-bold text-primary">{corporation.within30Days}件</dd>
                       </div>
                     </>
                   )}
                 </dl>
-                <p className="mt-4 line-clamp-2 min-h-8 text-xs leading-relaxed text-on-surface-variant">
+                <p className="mt-3 line-clamp-2 min-h-7 text-xs leading-snug text-on-surface-variant">
                   出典：{sourceSummary || "公表資料"}
                 </p>
-                <Link href={`/corporations/${corporation.slug}`} className="mt-auto pt-4 text-sm font-bold text-secondary hover:underline">
+                <Link href={`/corporations/${corporation.slug}`} className="mt-auto pt-2.5 text-sm font-bold text-secondary hover:underline">
                   詳細を見る →
                 </Link>
               </article>
