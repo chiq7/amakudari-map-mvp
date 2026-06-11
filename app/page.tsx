@@ -42,6 +42,13 @@ const featuredCorporationCards = featuredCorporations.map((corporation) => {
   };
 });
 
+function getFormerPositionLabels(value: string) {
+  return value
+    .split(/[、,]/)
+    .map((label) => label.trim())
+    .filter(Boolean);
+}
+
 const corporationDirectory = rankingLists.publicRecords.slice(0, 6).map((item) => ({
   name: item.label,
   count: item.value,
@@ -231,16 +238,25 @@ export default function Home() {
                     <p className="text-xs font-bold text-on-surface-variant">注目情報</p>
                     <div className="mt-1.5 space-y-2">
                       {highlights.people.map((person) => (
-                        <div key={`${person.kind}-${person.slug}`} className="min-h-[50px]">
-                          <p className="line-clamp-1 text-sm font-bold text-primary">
+                        <div key={`${person.kind}-${person.slug}`} className="min-h-[54px]">
+                          <p className="line-clamp-1 text-base font-bold leading-tight text-primary">
                             {person.name}
-                            <span className="font-normal text-on-surface-variant">
-                              {" "}→ {person.role}
-                            </span>
                           </p>
-                          <p className="line-clamp-2 min-h-8 text-xs leading-snug text-on-surface-variant">
-                            {person.formerPosition || `元${person.formerOrganization}`}
+                          <p className="mt-0.5 line-clamp-1 text-xs font-medium text-on-surface-variant">
+                            {person.role}
                           </p>
+                          <div className="mt-1 flex flex-wrap gap-1">
+                            {getFormerPositionLabels(
+                              person.formerPosition || `元${person.formerOrganization}`,
+                            ).map((label) => (
+                              <span
+                                key={label}
+                                className="inline-flex max-w-full rounded border border-outline-variant bg-surface-container-low px-1.5 py-0.5 text-xs font-semibold leading-tight text-primary"
+                              >
+                                <span className="line-clamp-2">{label}</span>
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       ))}
                       {highlights.remaining > 0 && (

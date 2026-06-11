@@ -22,6 +22,13 @@ function formatCurrency(value: number) {
   return `${formatNumber(value)}円`;
 }
 
+function getFormerPositionLabels(value: string) {
+  return value
+    .split(/[、,]/)
+    .map((label) => label.trim())
+    .filter(Boolean);
+}
+
 function PublicDataCollection({
   title,
   collection,
@@ -210,15 +217,26 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
                   key={`${person.kind}-${person.slug}`}
                   className="rounded border border-outline-variant bg-surface p-3.5"
                 >
-                  <h3 className="text-lg font-bold text-primary">
+                  <h3 className="text-xl font-bold leading-tight text-primary">
                     <Link href={person.href} className="hover:underline">
                       {person.name}
                     </Link>
                   </h3>
-                  <p className="mt-0.5 text-sm font-semibold text-secondary">{person.role}</p>
-                  <p className="mt-1 line-clamp-2 min-h-9 text-sm leading-snug text-on-surface-variant">
-                    {person.formerPosition || `元${person.formerOrganization}`}
+                  <p className="mt-1 text-sm font-medium text-on-surface-variant">
+                    {person.role}
                   </p>
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    {getFormerPositionLabels(
+                      person.formerPosition || `元${person.formerOrganization}`,
+                    ).map((label) => (
+                      <span
+                        key={label}
+                        className="inline-flex max-w-full rounded border border-outline-variant bg-surface-container-low px-2 py-1 text-sm font-semibold leading-tight text-primary"
+                      >
+                        <span className="line-clamp-2">{label}</span>
+                      </span>
+                    ))}
+                  </div>
                 </article>
               ))}
             </div>
@@ -499,13 +517,24 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
           <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-2">
             {corporation.publicOfficers.map((officer) => (
               <article key={officer.slug} className="rounded border border-outline-variant bg-surface p-3">
-                <p className="text-sm font-semibold text-secondary">{officer.role}</p>
-                <h3 className="mt-1 text-xl font-bold text-primary">
+                <h3 className="text-xl font-bold leading-tight text-primary">
                   <Link href={`/public-officers/${officer.slug}`} className="hover:underline">
                     {officer.name}
                   </Link>
                 </h3>
-                <p className="mt-1.5 text-sm font-semibold">{officer.formerPosition}</p>
+                <p className="mt-1 text-sm font-medium text-on-surface-variant">
+                  {officer.role}
+                </p>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {getFormerPositionLabels(officer.formerPosition).map((label) => (
+                    <span
+                      key={label}
+                      className="inline-flex rounded border border-outline-variant bg-surface-container-low px-2 py-1 text-sm font-semibold leading-tight text-primary"
+                    >
+                      {label}
+                    </span>
+                  ))}
+                </div>
                 <p className="mt-1.5 text-sm leading-snug text-on-surface-variant">{officer.profile}</p>
               </article>
             ))}
