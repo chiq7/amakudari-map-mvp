@@ -1,6 +1,8 @@
 [
   {
-    "person_slug": "person-706e15081556fe4f",
+    "rawId": "f920c974ef9f317db710c9b9e3f382fc0bcae8f5424dae767c4a2ec3ab6c9108",
+    "dedupeKey": "3ba25e0ebf15a3ca18265756ec615829582bc860f1700446dc594079e75be03b",
+    "personSlug": "person-706e15081556fe4f",
     "name": "金子 直行",
     "fromMinistry": "内閣官房",
     "previousPosition": "内閣官房内閣情報調査室内閣参事官補佐（内閣官房内閣情報調査室内閣参事官）",
@@ -10,17 +12,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "内閣官房",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-2e2a5504f9e7cedb",
+    "rawId": "19acb14fe62dc62887a7f0e957921969db69626a22de3e8f5fa72fb5e05aab88",
+    "dedupeKey": "87bab46e8a189e7757b0ecafe71268f4741a4d69bcec00ace18fad4b51e79505",
+    "personSlug": "person-2e2a5504f9e7cedb",
     "name": "東 寛朗",
     "fromMinistry": "人事院",
     "previousPosition": "人事院事務総局調査職",
@@ -30,17 +28,13 @@
     "retirementDate": "2024-12-31",
     "reemploymentDate": "2025-01-01",
     "waitingDays": 1,
-    "tags": [
-      "人事院",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-cb9ecf95b8330edd",
+    "rawId": "2ac25bbfbc70a13bfef88ad37fe6f83b8441ff58534021e74f3faf131dded40d",
+    "dedupeKey": "24e254830f8846e33a13ea0deb62a7b8b2a89e92ad9038dcb0d8d3a4fccbe1d1",
+    "personSlug": "person-cb9ecf95b8330edd",
     "name": "上野 有子",
     "fromMinistry": "内閣府",
     "previousPosition": "内閣府大臣官房審議官（経済財政分析担当）",
@@ -50,17 +44,13 @@
     "retirementDate": "2024-07-31",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 1,
-    "tags": [
-      "内閣府",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-923c8eb18236e4ae",
+    "rawId": "86d2ed6e8d47e855483156aae3a3df8794e3ebe9a046d0390b7463d5201f6701",
+    "dedupeKey": "b5d2c7f772a9ae54eee10d5522c62f7449dd19f436075309357db657b48bf2fd",
+    "personSlug": "person-923c8eb18236e4ae",
     "name": "石井 一正",
     "fromMinistry": "内閣府",
     "previousPosition": "内閣府政策統括官（経済財政運営担当）付参事官（産業・雇用担当）付企画官 併任 政策統括官（経済財政運営担当）付参事官（企画担当）付企画官 併任 政策統括官（経済財政分析担当）付参事官（総括担当）付調査官 併任 政策統括官（経済財政分析担当）付参事官（企画担当）付調査官",
@@ -70,17 +60,13 @@
     "retirementDate": "2024-08-31",
     "reemploymentDate": "2024-09-01",
     "waitingDays": 1,
-    "tags": [
-      "内閣府",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-62ca83dc9175d7a5",
+    "rawId": "4b10e7f734e8715543d43fec6f9dd233e8839381150481388f954491bafe6d11",
+    "dedupeKey": "432fa7d26765e2965040031ac64074ece5772db5310636a95e265d815c4c848f",
+    "personSlug": "person-62ca83dc9175d7a5",
     "name": "香城 尚子",
     "fromMinistry": "公正取引委員会",
     "previousPosition": "公正取引委員会事務総局官房人事課企画官",
@@ -90,17 +76,13 @@
     "retirementDate": "2024-06-30",
     "reemploymentDate": "2024-07-01",
     "waitingDays": 1,
-    "tags": [
-      "公正取引委員会",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-9665ec2c44bc6bd3",
+    "rawId": "36826f662fe101819f2261b5cacf41546d2c559162087c9ec9f6dc98036a5844",
+    "dedupeKey": "28a393466637250cea0a650e53bb7e9d449dc1a47262bfb2e27d2a16cee56ed5",
+    "personSlug": "person-9665ec2c44bc6bd3",
     "name": "棚瀬 誠",
     "fromMinistry": "警察庁",
     "previousPosition": "警察庁サイバー警察局サイバー捜査課長",
@@ -110,17 +92,13 @@
     "retirementDate": "2024-12-16",
     "reemploymentDate": "2024-12-17",
     "waitingDays": 1,
-    "tags": [
-      "警察庁",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-d87a1385b2397845",
+    "rawId": "c0474a246613c6e3389748b72653d831754a7c1328ab52f6c7db7e9c317b741a",
+    "dedupeKey": "f37b70716ac61a74436b6b42436c5f81be31cfe36849b6ebd8d124062a35a2e8",
+    "personSlug": "person-d87a1385b2397845",
     "name": "那須 修",
     "fromMinistry": "警察庁",
     "previousPosition": "関東管区警察学校長",
@@ -130,17 +108,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "警察庁",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-e686f8d6ee993bed",
+    "rawId": "614b8c909e216732dfad7824f6db0811129c0ba894f5f809caaa564e3b805e99",
+    "dedupeKey": "3c4483ae01b3718d4cf5462b2db3ce016ca1dae603a210a45c1e10d2d968529b",
+    "personSlug": "person-e686f8d6ee993bed",
     "name": "家根田 正美",
     "fromMinistry": "金融庁",
     "previousPosition": "金融庁企画市場局総務課信用機構企画室長 兼 企画市場局総務課銀行法制管理官",
@@ -150,17 +124,13 @@
     "retirementDate": "2024-06-30",
     "reemploymentDate": "2024-07-16",
     "waitingDays": 16,
-    "tags": [
-      "金融庁",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-053139775cdd784f",
+    "rawId": "0406cefbb8863dd9a7afed018c2e5e562d0db5205896eb828dfc623314d8699c",
+    "dedupeKey": "e977a939df5ecb643eedff8963882775c8011d830ffaeb2609ddc984a980b8e3",
+    "personSlug": "person-053139775cdd784f",
     "name": "野村 俊之",
     "fromMinistry": "金融庁",
     "previousPosition": "金融庁総合政策局検査監理官 兼 総合政策局リスク分析総括課検査監督モニター管理官",
@@ -170,17 +140,13 @@
     "retirementDate": "2024-07-12",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 20,
-    "tags": [
-      "金融庁",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-db7620c558034204",
+    "rawId": "d924dd2e7599ec2c4ba0c5253cb9f13645b4a48060b9842b2748ced3107098d8",
+    "dedupeKey": "ba029312b9581d8be6397f4f643b5f082c67049fb827849dcb7a299d05d5296a",
+    "personSlug": "person-db7620c558034204",
     "name": "河原 美和子",
     "fromMinistry": "金融庁",
     "previousPosition": "金融庁総合政策局秘書課情報化技術支援室上席技術支援専門官",
@@ -190,16 +156,13 @@
     "retirementDate": "2024-07-31",
     "reemploymentDate": "2024-09-01",
     "waitingDays": 32,
-    "tags": [
-      "金融庁",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-9dab5daa7a4a2e55",
+    "rawId": "f6171b33d60ab2d155d88f557c6deb22ec08013f2aa365a9e2fc028e20783750",
+    "dedupeKey": "07daa874f9053805478aea7e1bbd2fd071e79de8e5276112a8d5437e2c6e3199",
+    "personSlug": "person-9dab5daa7a4a2e55",
     "name": "高橋 幹夫",
     "fromMinistry": "金融庁",
     "previousPosition": "金融庁総合政策局リスク分析総括課金融証券検査官 兼 監督局銀行第一課課付",
@@ -209,17 +172,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "金融庁",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-cdc91df0d85498cb",
+    "rawId": "8423961f016599ccd923de3944ea2901d49407f70daf7081da4f07bbc0a0c707",
+    "dedupeKey": "dba787480c3b6c0a0e32898e25f5d06824462f0e0febfd0d1e8ee119cadf1597",
+    "personSlug": "person-cdc91df0d85498cb",
     "name": "志田 太郎",
     "fromMinistry": "デジタル庁",
     "previousPosition": "デジタル庁統括官付参事官",
@@ -229,17 +188,13 @@
     "retirementDate": "2024-06-30",
     "reemploymentDate": "2024-07-01",
     "waitingDays": 1,
-    "tags": [
-      "デジタル庁",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-3faad66bf6fdb81c",
+    "rawId": "877ef7c949e1bcdfa8e553ea35753967e1a36aefbeb41526156524eac9cd68fb",
+    "dedupeKey": "f2b50db9d7357c123e59cbece887618425aaeb39bfb05589173a09009435b06b",
+    "personSlug": "person-3faad66bf6fdb81c",
     "name": "三好 哲也",
     "fromMinistry": "デジタル庁",
     "previousPosition": "デジタル庁統括官付参事官付企画官",
@@ -249,17 +204,13 @@
     "retirementDate": "2024-07-31",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 1,
-    "tags": [
-      "デジタル庁",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-64f7c8753be0c8ba",
+    "rawId": "1d4891a36aa2fd6d7b3f64c698e7412179b56447eee49a805b6b0cf784711bdc",
+    "dedupeKey": "93c5800d54b9daad71466baae1083b5bdc22edeb69d9a870d93935f3bbf17030",
+    "personSlug": "person-64f7c8753be0c8ba",
     "name": "早瀬 千善",
     "fromMinistry": "デジタル庁",
     "previousPosition": "デジタル庁統括官付審議官",
@@ -269,17 +220,13 @@
     "retirementDate": "2024-08-31",
     "reemploymentDate": "2024-09-01",
     "waitingDays": 1,
-    "tags": [
-      "デジタル庁",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-e41be88b50fbcafe",
+    "rawId": "7466ae59a790b90b3e77755b529c79e81ce1a1e71e92d5c43e837e1ae1ca8746",
+    "dedupeKey": "38c4c2b950c03cb0443207507da57eebe564e213584eed1cf17d6b00c1b35b42",
+    "personSlug": "person-e41be88b50fbcafe",
     "name": "岡﨑 一人",
     "fromMinistry": "総務省",
     "previousPosition": "総務省国際戦略局付",
@@ -289,17 +236,13 @@
     "retirementDate": "2024-07-16",
     "reemploymentDate": "2024-07-17",
     "waitingDays": 1,
-    "tags": [
-      "総務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-72497c8c82f2bb49",
+    "rawId": "f81f6ddcfd334d294c24e658554e812543bf42cec54c66c5e375e6250b8c9abd",
+    "dedupeKey": "053e2cf6355d3168c152fbf6e3ee9f14963e39168b8855317249bc5f787719c3",
+    "personSlug": "person-72497c8c82f2bb49",
     "name": "横田 宗親",
     "fromMinistry": "総務省",
     "previousPosition": "総務省自治税務局固定資産税課固定資産鑑定官",
@@ -309,17 +252,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "総務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-8521aa4d1743ba3a",
+    "rawId": "bd1620b0bb383cf912cde7de660c876c5e285c7c7ccff5cfb47024fb8bb8f4b1",
+    "dedupeKey": "66da157bdac1c0d595324384267c058fe21a37b8077c4d656cab5ff737dc89b7",
+    "personSlug": "person-8521aa4d1743ba3a",
     "name": "細川 直史",
     "fromMinistry": "総務省",
     "previousPosition": "消防庁消防大学校消防研究センター研究統括官",
@@ -329,17 +268,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "総務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-0b07a8cdad2d9c89",
+    "rawId": "3bd81be55020b04449190536264ad4e91180948bd520d21aafba3a66ad0531e4",
+    "dedupeKey": "1b32931c9a3009dd17256c577407c028f148d114dcf9b5f9025e0058d5175f3b",
+    "personSlug": "person-0b07a8cdad2d9c89",
     "name": "吉村 浩",
     "fromMinistry": "法務省",
     "previousPosition": "横浜刑務所医務部長",
@@ -349,17 +284,29 @@
     "retirementDate": "2024-05-31",
     "reemploymentDate": "2024-06-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-cc6a2f8f41ab876e",
+    "rawId": "49ebaa9f3d37c36172f82e5e59ea700ea60577bf07a195dfb4721bc61ecc18b6",
+    "dedupeKey": "37788fd1b1fab51a2a9594dcaa71c11f06fa93be90019c1190a7e1a9bb6f1a74",
+    "personSlug": "person-0b07a8cdad2d9c89",
+    "name": "吉村 浩",
+    "fromMinistry": "法務省",
+    "previousPosition": "横浜刑務所医務部長",
+    "corporationSlug": "corporation-6d91bd2821b9ea71",
+    "corporationName": "社会福祉法人恩賜財団済生会",
+    "newPosition": "横浜市南部病院非常勤職員",
+    "retirementDate": "2024-05-31",
+    "reemploymentDate": "2024-06-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
+  },
+  {
+    "rawId": "79b81732b3fc209c110565e824d878a0708156329bb58360ee184535abfdee8b",
+    "dedupeKey": "72f9bb08ea13f135fbd2545026966253508564ea365a812b677f9d3ad07aa67a",
+    "personSlug": "person-cc6a2f8f41ab876e",
     "name": "冨山 裕美",
     "fromMinistry": "法務省",
     "previousPosition": "千葉地方検察庁検事",
@@ -369,17 +316,13 @@
     "retirementDate": "2024-06-30",
     "reemploymentDate": "2024-07-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-f204d7332eee03f6",
+    "rawId": "6be1d26942b87cae55a5afae1ca27e85a049287dd4ada9cde4a04854f90aa662",
+    "dedupeKey": "18fdd983e129190ff7acfdc2e62460bf410fa27ee02a1e5f5f59bfb07beb7bbc",
+    "personSlug": "person-f204d7332eee03f6",
     "name": "山崎 喜一郎",
     "fromMinistry": "法務省",
     "previousPosition": "青森地方検察庁八戸支部検事",
@@ -389,16 +332,13 @@
     "retirementDate": "2024-06-30",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 32,
-    "tags": [
-      "法務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-9565d81c26f38b53",
+    "rawId": "b8d140ba105f0d666b0b206bb1446152124bb7b14f08fb945a3efb468ccf6548",
+    "dedupeKey": "796e825beb4ef1593e87ca4610b211851e8f6326fdefd4c2024f44827d6d2236",
+    "personSlug": "person-9565d81c26f38b53",
     "name": "升田 雅己",
     "fromMinistry": "法務省",
     "previousPosition": "大阪地方検察庁検事",
@@ -408,17 +348,13 @@
     "retirementDate": "2024-07-31",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-112624443738f6aa",
+    "rawId": "d32340f560b7e3b6c84308be8b80a1b4e4b1e877b703141e27109a5baf003a81",
+    "dedupeKey": "a8d99be801243b1af8dbfaf66ed4a7ef61b1f01971f4beac9df83e7bb9320fa1",
+    "personSlug": "person-112624443738f6aa",
     "name": "大竹 将之",
     "fromMinistry": "法務省",
     "previousPosition": "横浜地方検察庁検事",
@@ -428,17 +364,13 @@
     "retirementDate": "2024-08-12",
     "reemploymentDate": "2024-08-13",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-8d7ccb8e21ce6055",
+    "rawId": "4659242e4c3d736675aa595e42df0fcb9d8713a30963850987da3e3b8055f482",
+    "dedupeKey": "8ebbeedbcf8aea7d5502377acf70efbcbd021504c6cc037cd68f43c8a5f8b5da",
+    "personSlug": "person-8d7ccb8e21ce6055",
     "name": "板根 靖奈",
     "fromMinistry": "法務省",
     "previousPosition": "大阪地方検察庁検事",
@@ -448,17 +380,13 @@
     "retirementDate": "2024-08-31",
     "reemploymentDate": "2024-09-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-4d034b8efbd1829a",
+    "rawId": "a5a67fc255fe836a9e1060785505021dcf64b8081d537f0c2e57aae4f2652fdc",
+    "dedupeKey": "2373bcf0e95707f60bbf1110d4b35b9f5e96e0c931ec69d31e1d5f7c76ca36a5",
+    "personSlug": "person-4d034b8efbd1829a",
     "name": "園田 恭子",
     "fromMinistry": "法務省",
     "previousPosition": "大阪地方検察庁検事",
@@ -468,17 +396,13 @@
     "retirementDate": "2024-09-30",
     "reemploymentDate": "2024-10-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-afb7e6639841d67f",
+    "rawId": "3c55caa2a127c4dae044c902fcc359e5ab928d522c94b1cf3c867581e2f37bd4",
+    "dedupeKey": "30af2d795efef4288414301bba1a0e166569a55d53b1cb084172e1bcfbeb42bc",
+    "personSlug": "person-afb7e6639841d67f",
     "name": "髙間 裕貴",
     "fromMinistry": "法務省",
     "previousPosition": "東京地方検察庁検事 併任 法務省刑事局付",
@@ -488,17 +412,13 @@
     "retirementDate": "2024-09-30",
     "reemploymentDate": "2024-10-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-97ef572373447d76",
+    "rawId": "09fa3527c6669fcca9e3c3866ce90a149fc556663e7acd140d5f8a6dd92732f7",
+    "dedupeKey": "185811b2fe1340920bf5132f41a817cf48f8711114aedbbb8a34b5bbd3c86c5d",
+    "personSlug": "person-97ef572373447d76",
     "name": "喜多田 有香",
     "fromMinistry": "法務省",
     "previousPosition": "大阪地方検察庁検事",
@@ -508,16 +428,13 @@
     "retirementDate": "2024-12-31",
     "reemploymentDate": "2025-02-10",
     "waitingDays": 41,
-    "tags": [
-      "法務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-851f3d75b6097c83",
+    "rawId": "c284489035cf6028d6a3ced5a32307e84c2bed7a64a6ee5e29074498df2927e5",
+    "dedupeKey": "c78eeacd1351f67840687f69aec2ad77892ebeaca9b9e9dce3738fd7fca5f9ba",
+    "personSlug": "person-851f3d75b6097c83",
     "name": "高梨 未央",
     "fromMinistry": "法務省",
     "previousPosition": "東京地方検察庁立川支部検事",
@@ -527,17 +444,13 @@
     "retirementDate": "2024-12-31",
     "reemploymentDate": "2025-01-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-8ed9d19601aa2f80",
+    "rawId": "b5384611ffaac9c8de45321fd66479e3e5945c6ba789aa37170c132e49a4bec7",
+    "dedupeKey": "04720778441935b6a18344d35a3627e2e5a5e4d296475c2d22ed8a6ae5b331d9",
+    "personSlug": "person-8ed9d19601aa2f80",
     "name": "渡邊 信一郎",
     "fromMinistry": "法務省",
     "previousPosition": "千葉地方検察庁検事",
@@ -547,17 +460,13 @@
     "retirementDate": "2024-12-31",
     "reemploymentDate": "2025-01-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-0ff2b9b3df40c8fc",
+    "rawId": "f8302923aef4d775231c8b0244086395d703097ba648b32c17fbfd1eea8d0421",
+    "dedupeKey": "ded62747ae7148374db8435991f5add565733cb4e04a8b9e674c31852bc7e797",
+    "personSlug": "person-0ff2b9b3df40c8fc",
     "name": "村澤 文子",
     "fromMinistry": "法務省",
     "previousPosition": "さいたま地方検察庁検事",
@@ -567,17 +476,13 @@
     "retirementDate": "2025-01-31",
     "reemploymentDate": "2025-02-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-1aec845e53eb60da",
+    "rawId": "92ee2ca3b097ec20627747715c2213088f39c19297c17cf433772e4f77a061b8",
+    "dedupeKey": "a497b443f0b6ede625c7e1877fb76c4fadd83a6bfc43eb02bf5db4b2476881b8",
+    "personSlug": "person-1aec845e53eb60da",
     "name": "寺嶋 高志",
     "fromMinistry": "法務省",
     "previousPosition": "東京地方検察庁検事 併任 法務省刑事局付",
@@ -587,17 +492,13 @@
     "retirementDate": "2025-02-28",
     "reemploymentDate": "2025-03-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-19c93a7e237fc310",
+    "rawId": "bc2fbd713e2cec3b3fadec7f101bd6db564f660e869d114748e9509e4f78d9d9",
+    "dedupeKey": "e05f676741eb670e238288f11567ea342bd7025a27f459d4209a924565dab1e4",
+    "personSlug": "person-19c93a7e237fc310",
     "name": "池田 曉子",
     "fromMinistry": "法務省",
     "previousPosition": "東京地方検察庁検事",
@@ -607,16 +508,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-05-01",
     "waitingDays": 31,
-    "tags": [
-      "法務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-c79332c4d9fcee95",
+    "rawId": "da68e050aa925bb6bc584c222de0ee79563ccde32bb5ebd738b7ccc1888d2b82",
+    "dedupeKey": "2ac5bcf30405dcf2e0ee3ca197cb9a309ef9d61ccfcd7fba2aefcd3eb21a68ba",
+    "personSlug": "person-c79332c4d9fcee95",
     "name": "江平 博",
     "fromMinistry": "法務省",
     "previousPosition": "最高検察庁事務局長",
@@ -626,16 +524,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-05-01",
     "waitingDays": 31,
-    "tags": [
-      "法務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-029f43f32f511ef8",
+    "rawId": "03bc592c1013d4aac66b73b02071093a416036835f90db8deb24fdb69b973c5c",
+    "dedupeKey": "d96a3852234fc9c385a2422c53dc5bc3b2cf02eb6f1e5b2f1a12503a5b86d35d",
+    "personSlug": "person-029f43f32f511ef8",
     "name": "梶川 和香",
     "fromMinistry": "法務省",
     "previousPosition": "名古屋地方検察庁検事",
@@ -645,17 +540,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-549d21f13a3a98e1",
+    "rawId": "3aa364281d524aefb41ca79f7a2aeba477a29c7508f06f9fa75a46ac8d42f8c0",
+    "dedupeKey": "49ad04d7520e78c0e9148ca8322e3d1f9ae782debb6b43f761e6c03221d6f95d",
+    "personSlug": "person-549d21f13a3a98e1",
     "name": "河喜多 寛治",
     "fromMinistry": "法務省",
     "previousPosition": "大阪拘置所分類部長",
@@ -665,17 +556,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-343dfd91902e7bbe",
+    "rawId": "64fb81243341a355b1613e45b1c046ffdfc662b0090cb1628aa9e759e9ef9dd0",
+    "dedupeKey": "bc767ddd7d1395fd0fbce369938c54d9246b40d0a9888469481040551fb3278b",
+    "personSlug": "person-343dfd91902e7bbe",
     "name": "古泉 伸彦",
     "fromMinistry": "法務省",
     "previousPosition": "東京地方検察庁立川支部検事",
@@ -685,17 +572,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-08e5732317e54aee",
+    "rawId": "9ad00fa7b25d9ea898161a3c203655356ad6aaea7540fe7393e0fd5cd6a2852e",
+    "dedupeKey": "528d87870f3ca872859b7ac60d5711fc79332cc70a528fd587a01a78c1c202a8",
+    "personSlug": "person-08e5732317e54aee",
     "name": "仙波 周太郎",
     "fromMinistry": "法務省",
     "previousPosition": "盛岡地方検察庁検事",
@@ -705,17 +588,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-f612744616ca40af",
+    "rawId": "d3f339477aad4cf014ec586484b88a845ec151bd935515f17f620d940cdbfa1a",
+    "dedupeKey": "dcdac8601a533942cc105467c1f99547934ab67fef742dfc9f431ea1d2879d20",
+    "personSlug": "person-f612744616ca40af",
     "name": "䑓 孝一",
     "fromMinistry": "法務省",
     "previousPosition": "東京高等検察庁事務局長",
@@ -725,17 +604,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-11",
     "waitingDays": 11,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-1e0478d13919de9e",
+    "rawId": "82ad8fcee6bc455bdbd254d9783814e7aa6584b0fe8347150983745e7c04f9cc",
+    "dedupeKey": "72b41ca1257e4d5c03070f5ba98b90d762425100b2c64af5bba4e05085d8e4bc",
+    "personSlug": "person-1e0478d13919de9e",
     "name": "中村 裕史",
     "fromMinistry": "法務省",
     "previousPosition": "那覇地方検察庁検事",
@@ -745,17 +620,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-a6afe31a6700afe3",
+    "rawId": "e553543a017813eab2facfd66d326db0407442def102736e41ff37f1c6e57c26",
+    "dedupeKey": "dc4ea5c7973c4fdb1332d069d1507058994c1939d4de044ae1fa45def17ea2bf",
+    "personSlug": "person-a6afe31a6700afe3",
     "name": "福島 利充",
     "fromMinistry": "法務省",
     "previousPosition": "大阪拘置所処遇部長",
@@ -765,17 +636,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-04",
     "waitingDays": 4,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-568e86e4efa15928",
+    "rawId": "6686ee97d78dc37c796bbfea68f3d5305c0e4fc1a07ff07b050f53b2c3e6572f",
+    "dedupeKey": "7ab87003f93cb596eaa39d98964109404cc695aff91fa0b82983dd2fd184f491",
+    "personSlug": "person-568e86e4efa15928",
     "name": "渕上 康幸",
     "fromMinistry": "法務省",
     "previousPosition": "京都少年鑑別所長",
@@ -785,17 +652,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-84cc2a9aa89f278f",
+    "rawId": "0c7821e4ea8621528c677cedf17587370f81b2374205536b2b25cb1dd8987648",
+    "dedupeKey": "6e01f5c17589344d55db87578e1382d1b9d554ed3f22d19c4d99430c7d9dad96",
+    "personSlug": "person-84cc2a9aa89f278f",
     "name": "松間 辰吉",
     "fromMinistry": "法務省",
     "previousPosition": "奈良地方検察庁検事",
@@ -805,17 +668,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-149e0dbd98810e8f",
+    "rawId": "307507b4c752807a6fad6390efb942ea817efc9df2adc2363d0e3c619c60bd6d",
+    "dedupeKey": "d92bda56649a2c086af2ec0f7010e0f562ca4b4a0e016b7d24127989f63b9f4e",
+    "personSlug": "person-149e0dbd98810e8f",
     "name": "森野 菜雄",
     "fromMinistry": "法務省",
     "previousPosition": "広島地方検察庁検事",
@@ -825,17 +684,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-cd3a95d268ab2ff3",
+    "rawId": "5fc081aa0c1bf305cd129fe1d1a0d15def8ff72f1ad509298f6df379c8e0758e",
+    "dedupeKey": "8295305fc0ae14c99cc7c26166264e64a2a6e6e42df30c88d2e7f58b8726f645",
+    "personSlug": "person-cd3a95d268ab2ff3",
     "name": "山口 智史",
     "fromMinistry": "法務省",
     "previousPosition": "水戸地方検察庁検事",
@@ -845,17 +700,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-e01abfa892f4ab21",
+    "rawId": "fdf0c33175a16c254f2ee07c6b8d6624e0ac2b542095a845f2bc8d91784cbb61",
+    "dedupeKey": "3440131b9769e486233ae064f4c3861030c67fa09ff8b2bf7a9416a568abb89e",
+    "personSlug": "person-e01abfa892f4ab21",
     "name": "吉村 幸司",
     "fromMinistry": "法務省",
     "previousPosition": "府中刑務所国際対策室長",
@@ -865,17 +716,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-3a2638e68ae3a773",
+    "rawId": "7f427f7a569358de9c4b8d752bdcf62dbc4709cb47157c4d7e2158cea1d9ed51",
+    "dedupeKey": "500de06f3e7ff157f26ca703de14076449ed1393fe5b7dd9df22fedf4436c88e",
+    "personSlug": "person-3a2638e68ae3a773",
     "name": "山地 秀樹",
     "fromMinistry": "外務省",
     "previousPosition": "外務省大臣官房儀典外国公館室長",
@@ -885,17 +732,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "外務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-6928ccaac10a336f",
+    "rawId": "64ae1f9308986c5307d3c9524d04c7dc6ba71e3de2ebcfec6ccc90803ff336ce",
+    "dedupeKey": "46ae3f57ffd834872b04e2ef04c39dc53b3629a4a78c452d155f796e31be4faa",
+    "personSlug": "person-6928ccaac10a336f",
     "name": "辻 庄市",
     "fromMinistry": "財務省",
     "previousPosition": "財務省大臣官房付",
@@ -905,16 +748,13 @@
     "retirementDate": "2024-04-01",
     "reemploymentDate": "2024-06-27",
     "waitingDays": 87,
-    "tags": [
-      "財務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-297876842834090a",
+    "rawId": "c085f44a42460373b256bec6aaf588df6c36522381be6753136972c96eafbee2",
+    "dedupeKey": "9e27f7ccc4f746ffeab1ece983b2727ee2fbb4a1a4abdd2acc1d52bc6888d19d",
+    "personSlug": "person-297876842834090a",
     "name": "岩井 俊介",
     "fromMinistry": "財務省",
     "previousPosition": "財務総合政策研究所資料情報部長",
@@ -924,17 +764,29 @@
     "retirementDate": "2024-06-30",
     "reemploymentDate": "2024-07-01",
     "waitingDays": 1,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-edefd9521ef9986f",
+    "rawId": "e4e73520f2e4895c276da8be78b601faff98abc17c93a88da2e2439473d61169",
+    "dedupeKey": "b51a64b82920b94ab7d6a6c9c27bc7a0b52c99672d863370b6c77065815f178d",
+    "personSlug": "person-297876842834090a",
+    "name": "岩井 俊介",
+    "fromMinistry": "財務省",
+    "previousPosition": "財務総合政策研究所資料情報部長",
+    "corporationSlug": "corporation-7e2865a91b29e89a",
+    "corporationName": "株式会社四国銀行",
+    "newPosition": "地域振興部アドバイザー",
+    "retirementDate": "2024-06-30",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
+  },
+  {
+    "rawId": "8149c6062dcafc8137c5b3e3844fb1f458b12efbe808743e00814d28ddbb7f6d",
+    "dedupeKey": "42f35b5809ecb9b91b161db8257dc333bb4ed32d1153dbedacfbed296773d853",
+    "personSlug": "person-edefd9521ef9986f",
     "name": "明石 勝哉",
     "fromMinistry": "財務省",
     "previousPosition": "近畿財務局総務部部付",
@@ -944,17 +796,13 @@
     "retirementDate": "2024-07-01",
     "reemploymentDate": "2024-07-02",
     "waitingDays": 1,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-c233ec070e9e3295",
+    "rawId": "25ff9ab4dc2db494294eb225813e0c98bb26319723aacb353ca0db6f297c3b24",
+    "dedupeKey": "cb06cad62319e753e93ef3795ea005c606ba5c484ce4019abefed878c5c09b77",
+    "personSlug": "person-c233ec070e9e3295",
     "name": "大渕 伸也",
     "fromMinistry": "財務省",
     "previousPosition": "福岡財務支局金融商品取引所監理官",
@@ -964,17 +812,13 @@
     "retirementDate": "2024-07-01",
     "reemploymentDate": "2024-07-08",
     "waitingDays": 7,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-ce695800a1017a8b",
+    "rawId": "9a470ba1268fff80bd4ee40568c6fb43e6886d514302c4406d37a4f86867f885",
+    "dedupeKey": "5e0e9e009e0761cede4a5c28937ef0010f9fc4dad36669042955e365493f879f",
+    "personSlug": "person-ce695800a1017a8b",
     "name": "小柳津 博",
     "fromMinistry": "財務省",
     "previousPosition": "近畿財務局金融安定監理官",
@@ -984,17 +828,13 @@
     "retirementDate": "2024-07-01",
     "reemploymentDate": "2024-07-16",
     "waitingDays": 15,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-d80f3ef323954844",
+    "rawId": "be3bdf3feb297eb44bb1b8ff08fccf2774cba72a362d84ec385cf9fcc0bbe318",
+    "dedupeKey": "1bd83f2ac0349924a3f5c62994f66d1222308396beeee30753f5dbf9404e383e",
+    "personSlug": "person-d80f3ef323954844",
     "name": "斎藤 誉",
     "fromMinistry": "財務省",
     "previousPosition": "東海財務局総務部次長",
@@ -1004,16 +844,29 @@
     "retirementDate": "2024-07-01",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 31,
-    "tags": [
-      "財務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-7efbf76f12ceed27",
+    "rawId": "1ff6669b447fed1b46dea7f727beb4eb0d04dc386243b88a3985b3f81604c64c",
+    "dedupeKey": "c8723ded5bcdecab3ba518e275fa0a5702c8308d71a1613ef04ae0060dd069eb",
+    "personSlug": "person-d80f3ef323954844",
+    "name": "斎藤 誉",
+    "fromMinistry": "財務省",
+    "previousPosition": "東海財務局総務部次長",
+    "corporationSlug": "corporation-5801cf2c3b4f6ec1",
+    "corporationName": "株式会社東海信金ビジネス",
+    "newPosition": "顧問",
+    "retirementDate": "2024-07-01",
+    "reemploymentDate": "2024-08-01",
+    "waitingDays": 31,
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
+  },
+  {
+    "rawId": "0184f2cfe39a0c630709f570c4f4b9a4f6e7440ba7dfec62603d38e0d0aa5ae6",
+    "dedupeKey": "29c637a5e3fca376dadd039127a7a9488824274270fec80828722787115f861b",
+    "personSlug": "person-7efbf76f12ceed27",
     "name": "阪井 重雄",
     "fromMinistry": "財務省",
     "previousPosition": "近畿財務局総務部部付",
@@ -1023,16 +876,13 @@
     "retirementDate": "2024-07-01",
     "reemploymentDate": "2024-10-01",
     "waitingDays": 92,
-    "tags": [
-      "財務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-1fe2a555bac89b41",
+    "rawId": "b9890fc7acb47156b08e912d86f3dea73ebd31ce55e876fc5a0c0ae6844dd2d2",
+    "dedupeKey": "07b709d8d1c38b962f6a3881103a577e37f9a61e29cc0aa3286f3c5853511dd3",
+    "personSlug": "person-1fe2a555bac89b41",
     "name": "新屋敷 隆",
     "fromMinistry": "財務省",
     "previousPosition": "九州財務局大分財務事務所長",
@@ -1042,16 +892,13 @@
     "retirementDate": "2024-07-01",
     "reemploymentDate": "2024-10-01",
     "waitingDays": 92,
-    "tags": [
-      "財務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-e727ac2caae8248f",
+    "rawId": "098a63121d04042f54bbccffabc60af454a055d596cf4905f4f2532cf9a14e8d",
+    "dedupeKey": "773c0849f8feb82f6841c58c52c72f637922cbda398c9c34469cde4168ea6c65",
+    "personSlug": "person-e727ac2caae8248f",
     "name": "鈴木 徹",
     "fromMinistry": "財務省",
     "previousPosition": "財務省大臣官房付",
@@ -1061,16 +908,13 @@
     "retirementDate": "2024-07-01",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 31,
-    "tags": [
-      "財務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-ad5220869337b8e9",
+    "rawId": "4629a393e001a265cd3bea65c9a7a269572381af5b616f1717bbfc9a8eb768af",
+    "dedupeKey": "a03e0a9ec7d70a71dfbeaeda31c510364154c55c46a337ca5d3ee9476f67bb37",
+    "personSlug": "person-ad5220869337b8e9",
     "name": "谷上 弘",
     "fromMinistry": "財務省",
     "previousPosition": "近畿財務局総務部次長",
@@ -1080,17 +924,13 @@
     "retirementDate": "2024-07-01",
     "reemploymentDate": "2024-07-02",
     "waitingDays": 1,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-febe125c78c09889",
+    "rawId": "ddad76aa7090024835a9bf3ea343d4d62c6c9d373f9185b4479ebdc3dcc05637",
+    "dedupeKey": "0b997f014132eaf99028278b0eac342c5ffab99fd420fd709e5f85e20ba24ae8",
+    "personSlug": "person-febe125c78c09889",
     "name": "八重樫 敦",
     "fromMinistry": "財務省",
     "previousPosition": "東北財務局総務部部付",
@@ -1100,16 +940,13 @@
     "retirementDate": "2024-07-01",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 31,
-    "tags": [
-      "財務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-75306da63fc1706e",
+    "rawId": "c3d92b4709b29b6a1c8c62a604bea215215e36f01859f1855bbd9ffcedf5b322",
+    "dedupeKey": "e5fdf571fb373385677ead6cd77d16c977f4535b2e1b1ad7302bdc6b300c6f6e",
+    "personSlug": "person-75306da63fc1706e",
     "name": "山方 淳",
     "fromMinistry": "財務省",
     "previousPosition": "東北財務局理財部次長",
@@ -1119,17 +956,13 @@
     "retirementDate": "2024-07-01",
     "reemploymentDate": "2024-07-11",
     "waitingDays": 10,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-f3d183f6005d88ed",
+    "rawId": "712e288f98739dbf0890df99a758b3635018533551449feaf3c1c04d5d38bde0",
+    "dedupeKey": "66fce4c40f56cd5faac3e15249d623bee78f516e28a59c9caf821c01e4ade07e",
+    "personSlug": "person-f3d183f6005d88ed",
     "name": "山口 清光",
     "fromMinistry": "財務省",
     "previousPosition": "近畿財務局京都財務事務所長",
@@ -1139,17 +972,13 @@
     "retirementDate": "2024-07-01",
     "reemploymentDate": "2024-07-02",
     "waitingDays": 1,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-c59906a89ec3c9eb",
+    "rawId": "34dd68c19f8dc4537509adc7f7886e28351254e9dcf78e4ddeca96ed22b125a2",
+    "dedupeKey": "82fca3d57a2076f8d3c5af55ba4b9fc2a05c5c31ff96455e732ce50d0006fc4f",
+    "personSlug": "person-c59906a89ec3c9eb",
     "name": "飯田 隆一",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁東京国税局課税第一部国税訟務官室長",
@@ -1159,17 +988,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-07-11",
     "waitingDays": 1,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-7ff9e86e6274a511",
+    "rawId": "acb9d23b30ba2e78a2ded9d70f1e99e3248b176a4256ce24ca3d8316552df4ee",
+    "dedupeKey": "40f24fb8605f201b22be829ba20131db01b9720edb05f22b8c046dc54875fc11",
+    "personSlug": "person-7ff9e86e6274a511",
     "name": "大田 信二",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁大阪国税局天王寺税務署長",
@@ -1179,17 +1004,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 22,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-a5401bd76cb2f162",
+    "rawId": "7611c79e0685d37b931a9910a5bbec68b48c352505d044cbc4803bec7bbfebfb",
+    "dedupeKey": "4cce5e75196c52256ebb9ac45a0ade79ab4a440bb81b5d93184694a93592e88e",
+    "personSlug": "person-a5401bd76cb2f162",
     "name": "川端 正晃",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁大阪国税局阿倍野税務署長",
@@ -1199,17 +1020,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 22,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-e23c924e72027b1a",
+    "rawId": "0d8e980f7f8a3206bed4f4403574b2d21b3ba1af0d3e33a1ef34569df24a0c52",
+    "dedupeKey": "048ef41826439a956b9e89527f6b296df15af14fca5bcb5e29d657d8ac7f97ee",
+    "personSlug": "person-e23c924e72027b1a",
     "name": "岸本 哲郎",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁大阪国税局大津税務署長",
@@ -1219,17 +1036,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 22,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-13da649584e6f464",
+    "rawId": "2dab7219f81713b0bb631269b6e5e02fa7dad2706932dec3763f3f329655eb29",
+    "dedupeKey": "9e00443e449c6d2300d05bf527d825f36af4f67c2ebed973335a95751ed0d972",
+    "personSlug": "person-13da649584e6f464",
     "name": "鴫谷 卓郎",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁大阪国税局西宮税務署長",
@@ -1239,17 +1052,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 22,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-4adf7b6b40a3c29a",
+    "rawId": "a1d99c20e859c031ebb15a312b74565197f62f1cb5b90513c3d5b78b98fd2957",
+    "dedupeKey": "2694318ef2272d31302189da6d70b625060f9282c27767042e1798b1054468f6",
+    "personSlug": "person-4adf7b6b40a3c29a",
     "name": "野原 久照",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁大阪国税局南税務署長",
@@ -1259,17 +1068,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 22,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-eb0a0bbcf7aeeab2",
+    "rawId": "e3a3e8b7e3f6630663354700b1a1349aa9045025c2f7cdc2a71c93787e7bbd6a",
+    "dedupeKey": "9116757e492e96f6f4e5179148267485de2953958b2df460f25452b57f42ddb4",
+    "personSlug": "person-eb0a0bbcf7aeeab2",
     "name": "野平 雄二",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁大阪国税局龍野税務署長",
@@ -1279,17 +1084,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 22,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-1c803ae1b9007261",
+    "rawId": "63870788781ee07fdb696d03211f6fbdc41e2144c80e959fbde03e13edc1a0b9",
+    "dedupeKey": "6243ba9c19cf1424cf68d0030d083186e780e87f056b975c0aa2bcdca24fade7",
+    "personSlug": "person-1c803ae1b9007261",
     "name": "野村 浩一",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁大阪国税局東税務署長",
@@ -1299,16 +1100,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-09-01",
     "waitingDays": 53,
-    "tags": [
-      "財務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-f72ad9f7262ae41e",
+    "rawId": "abb13b7efd171ebd5a7e257c8f21708dacb3e89debdb2af7ab1f313e9f3b6987",
+    "dedupeKey": "11e34ba7f0602d2a332dee913c491ca6d88c1333934057fe0fe4eee29e92165b",
+    "personSlug": "person-f72ad9f7262ae41e",
     "name": "漢 昭弘",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁東京国税局課税第二部長",
@@ -1318,17 +1116,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 22,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-e71d3d0774126a36",
+    "rawId": "053c8f842c5cadcbe940003ff85fde0208e3888a1444207e84310a2ac9e0a736",
+    "dedupeKey": "0ab68c0a9df4b3f5cd44004ed9fd70e16ef647227d35d83691e3f3b51179849c",
+    "personSlug": "person-e71d3d0774126a36",
     "name": "平江 誠也",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁大阪国税局豊能税務署長",
@@ -1338,17 +1132,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-08-05",
     "waitingDays": 26,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-5a24e3679daf2fe9",
+    "rawId": "4c96cd1b6864939036fb75f669506058b2d96873762741a178c33dfe6e82a0e4",
+    "dedupeKey": "6baf9bee7d9ad97759f490dba37696711289374bf8d908d507cbf859de3e7ded",
+    "personSlug": "person-5a24e3679daf2fe9",
     "name": "松浦 剛",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁大阪国税局宇治税務署長",
@@ -1358,16 +1148,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-09-01",
     "waitingDays": 53,
-    "tags": [
-      "財務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-e778d7707969b0f1",
+    "rawId": "db135299156f0a08cbd3b765d836b03cbd50fe740a728f90db3b3694eb51329b",
+    "dedupeKey": "4cd7273b42bd6a005a1088aa81539dbd9602651dea7357829c12346a74cfa44e",
+    "personSlug": "person-e778d7707969b0f1",
     "name": "本塚 浩二",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁金沢国税局金沢税務署長",
@@ -1377,16 +1164,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-08-16",
     "waitingDays": 37,
-    "tags": [
-      "財務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-56d1e8650d8b7267",
+    "rawId": "9f12184b5683c22afc8ab36e277a8b35d9ea14bf94c20b1c3f373fbb3594db72",
+    "dedupeKey": "92e29486b2daef660358e1cb57ae99b4d2ee05b5af53033ac4ff92fb397b8431",
+    "personSlug": "person-56d1e8650d8b7267",
     "name": "矢澤 昇",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁名古屋国税局豊田税務署長",
@@ -1396,16 +1180,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-08-26",
     "waitingDays": 47,
-    "tags": [
-      "財務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-e7e10811195861a1",
+    "rawId": "d2674f526c38eee7d76a9b6cfbcfade5aa8385ea00577e799aaa2e80796596a0",
+    "dedupeKey": "3be8427558a89e519046ad39d4b1a8d23f03c0c02d771b0a0e977fa5f156440e",
+    "personSlug": "person-e7e10811195861a1",
     "name": "山﨑 義久",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁大阪国税局課税第一部長",
@@ -1415,17 +1196,13 @@
     "retirementDate": "2024-07-10",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 22,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-7558feb270f067cb",
+    "rawId": "5e72c1da3d9b540a25f1257c9fc45d260a8c8dec8e53ce7425fdf7430ee88cba",
+    "dedupeKey": "1319e67a2d526808311cd2d35a1ce9fc35404abc0f8b7bec2e91b90be5d72e89",
+    "personSlug": "person-7558feb270f067cb",
     "name": "松林 聡",
     "fromMinistry": "財務省",
     "previousPosition": "福岡財務支局金融商品取引所監理官",
@@ -1435,17 +1212,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-d67853153d541578",
+    "rawId": "70bccb6187df6a95e832da18c4c637cf14415ca62ff2e9f299e397ba40624a1c",
+    "dedupeKey": "d40a343b61eff9346e76d32b9e3b7c778ee1f0981019939be5df61edbc0700eb",
+    "personSlug": "person-d67853153d541578",
     "name": "村松 洋介",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁長官官房付",
@@ -1455,17 +1228,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-5a2fddf7233f571f",
+    "rawId": "536e7a423dbb61948f9f699a8cb6867589e584747ecae6c10291f330d0ced07b",
+    "dedupeKey": "c81e090bff59b4ff0d9b9390a6948c8febace993424edb83ab8cc1fb702f0cd0",
+    "personSlug": "person-5a2fddf7233f571f",
     "name": "大山 真未",
     "fromMinistry": "文部科学省",
     "previousPosition": "科学技術・学術政策研究所長",
@@ -1475,17 +1244,13 @@
     "retirementDate": "2024-06-25",
     "reemploymentDate": "2024-06-27",
     "waitingDays": 2,
-    "tags": [
-      "文部科学省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-2cf1c9c5e837c90e",
+    "rawId": "a7471cddd17d9168a500353323164ffadc1dea5376181c8c913d01b2a69dc679",
+    "dedupeKey": "9809f4a05ef6eba0782aa3dcb0520317acf88f7b9d00edc11116ed02c05fba56",
+    "personSlug": "person-2cf1c9c5e837c90e",
     "name": "小桐間 徳",
     "fromMinistry": "文部科学省",
     "previousPosition": "文部科学省大臣官房付",
@@ -1495,17 +1260,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "文部科学省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-a67c5a1a2157c2c8",
+    "rawId": "4f43a47ed420dc00f6fc766c0ac67055067e7066fdf74c187b8dd61c67925d1c",
+    "dedupeKey": "fc89a622b1641773b8c569d8f21850939a7de91240ff591be0ec17a265fa05d7",
+    "personSlug": "person-a67c5a1a2157c2c8",
     "name": "浦上 裕子",
     "fromMinistry": "厚生労働省",
     "previousPosition": "国立障害者リハビリテーションセンター病院第三診療部長",
@@ -1515,17 +1276,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "厚生労働省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-973251d0142d6454",
+    "rawId": "445d35078255b404a926b6f295df56b68e29c3374a304e4fc7c807c8549bdc65",
+    "dedupeKey": "de850927bd52cd3a3c8d7f49159d227f95fe8f12f8702c74441ed97e206ded3e",
+    "personSlug": "person-973251d0142d6454",
     "name": "大森 豊緑",
     "fromMinistry": "厚生労働省",
     "previousPosition": "横浜検疫所長",
@@ -1535,17 +1292,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "厚生労働省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-dbc2ed2451153b4c",
+    "rawId": "89cbfe690ab6cc3d81a96e5e13d661759228d8a8db352b1d914e2465370d04ec",
+    "dedupeKey": "10b08a1fb8b942a0f1fbce9dfa63a9b65f6760a2343a98a998feb7637e0644ab",
+    "personSlug": "person-dbc2ed2451153b4c",
     "name": "小島 克久",
     "fromMinistry": "厚生労働省",
     "previousPosition": "国立社会保障・人口問題研究所副所長",
@@ -1555,17 +1308,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "厚生労働省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-148d60ac8f750887",
+    "rawId": "3d7b14fd5bbcbcbf5a13aea95ec71ff806911b8537ebca04e70c7fdd94ba2c63",
+    "dedupeKey": "b375d2613e5f2b4b62b57cafbd9b32ce1faccdaf81682ab43f59e9e545b65571",
+    "personSlug": "person-148d60ac8f750887",
     "name": "竹島 義隆",
     "fromMinistry": "厚生労働省",
     "previousPosition": "国立駿河療養所副所長",
@@ -1575,17 +1324,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "厚生労働省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-70dd151b5c4a77f3",
+    "rawId": "f0cf2ec6fb8b8b862ac13a90075b7049697276e6bed6368b144f4e1b193018eb",
+    "dedupeKey": "766e7be5356e1a761e5ab1ac9616cfbe9f5a0998bf5b5abddf301034ce7f8f18",
+    "personSlug": "person-70dd151b5c4a77f3",
     "name": "俣野 哲朗",
     "fromMinistry": "厚生労働省",
     "previousPosition": "国立感染症研究所副所長",
@@ -1595,17 +1340,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "厚生労働省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-59d10f48d9e7a9ae",
+    "rawId": "8a66615a0a268d5db94246e1cf4a3d32543b2b1f581b23acd39e7de32d72f85a",
+    "dedupeKey": "108cc9aaf2dda710889282cf28b641523e515ad83dd9c551a651405b362598db",
+    "personSlug": "person-59d10f48d9e7a9ae",
     "name": "脇田 隆字",
     "fromMinistry": "厚生労働省",
     "previousPosition": "国立感染症研究所長",
@@ -1615,17 +1356,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "厚生労働省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-98172b7ea2f2528f",
+    "rawId": "07d2bb8af89e24c73667b08fcaafe15c829fa0eb3f06bd14302070e8ada188a7",
+    "dedupeKey": "ebe4a5f36de3620ea045c8d4ec159d56a8fa972228005252c5a527357c850ae8",
+    "personSlug": "person-98172b7ea2f2528f",
     "name": "井上 康之",
     "fromMinistry": "農林水産省",
     "previousPosition": "九州森林管理局福岡森林管理署長",
@@ -1635,16 +1372,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-05-01",
     "waitingDays": 31,
-    "tags": [
-      "農林水産省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-670841032417813e",
+    "rawId": "9109a5f9df724202455d44c99eb566c0cc673694947f7dd17158fc262072544a",
+    "dedupeKey": "f6801431de6b3bde8e7416c415657ae5b263a08472357133a9dbcea1044e4269",
+    "personSlug": "person-670841032417813e",
     "name": "大倉 正彦",
     "fromMinistry": "農林水産省",
     "previousPosition": "東北森林管理局三八上北森林管理署長",
@@ -1654,17 +1388,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "農林水産省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-f8245ad60ecf8e97",
+    "rawId": "04f37fda1f6e4d2a9826b8611897e7aafc89b17d80ac1e91af75308ff31e6bb5",
+    "dedupeKey": "bb0269d3cf80280ebdc3fa26e4542fc448f9b6efb8e9f7f1d3cf501c1d6ad170",
+    "personSlug": "person-f8245ad60ecf8e97",
     "name": "小岩井 正博",
     "fromMinistry": "厚生労働省",
     "previousPosition": "動物検疫所神戸支所長",
@@ -1674,17 +1404,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "厚生労働省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-c6c5b895488e7aee",
+    "rawId": "7573e8e6fef378d422ad93382eb8d0ba7b78fd01de93d5106e501546ced74ba6",
+    "dedupeKey": "0c6840a5b00e0cd52fa63f53823255b02cae59b06f36c5a3ebfa058a0d13da4b",
+    "personSlug": "person-c6c5b895488e7aee",
     "name": "駒瀬 勉",
     "fromMinistry": "農林水産省",
     "previousPosition": "中部森林管理局岐阜森林管理署長",
@@ -1694,17 +1420,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "農林水産省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-344da3b532d61b2a",
+    "rawId": "a60903ff05d2f9a36e1b21cbb36d1ac3210145205b558ea94e09afd074382e16",
+    "dedupeKey": "1d5c105d7e8993922bde73200f7b0163ec2230216ca26839c319fb9645f336b9",
+    "personSlug": "person-344da3b532d61b2a",
     "name": "白石 健二",
     "fromMinistry": "農林水産省",
     "previousPosition": "中部森林管理局総務企画部長",
@@ -1714,17 +1436,29 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "農林水産省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-99c256667cbdc2eb",
+    "rawId": "4fec5f285dcf20a3a71da48929f91acb16a4f46dda4da2aa53e697eb1a0c4255",
+    "dedupeKey": "d0f6d8a5c3926a4b19a3a56b9201bdbf1575a95e209255d98edf95d6e566de16",
+    "personSlug": "person-344da3b532d61b2a",
+    "name": "白石 健二",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "中部森林管理局総務企画部長",
+    "corporationSlug": "corporation-e9a10f20167a62e6",
+    "corporationName": "一般社団法人日本木材輸出振興協会",
+    "newPosition": "総務課長",
+    "retirementDate": "2025-03-31",
+    "reemploymentDate": "2025-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
+  },
+  {
+    "rawId": "b5f416e69d20ca5259b3160a79a2f345a4717fa9ba07ecf03125adbfb70bf0a3",
+    "dedupeKey": "75a02cb22423d9096889cb37091d63fa8e77afc3c599feb2dec9cc157898f43d",
+    "personSlug": "person-99c256667cbdc2eb",
     "name": "畑 茂樹",
     "fromMinistry": "農林水産省",
     "previousPosition": "関東森林管理局次長",
@@ -1734,17 +1468,29 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "農林水産省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-6807ef034564d586",
+    "rawId": "23c693d86df0607ace9b272f7882826e17710f83756cd5046673a54553d95507",
+    "dedupeKey": "758bbc07708fcaddebef617c155f0ac1194b819036735b26d021a229abdbf44f",
+    "personSlug": "person-99c256667cbdc2eb",
+    "name": "畑 茂樹",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "関東森林管理局次長",
+    "corporationSlug": "corporation-e9a10f20167a62e6",
+    "corporationName": "一般社団法人日本木材輸出振興協会",
+    "newPosition": "事務局次長",
+    "retirementDate": "2025-03-31",
+    "reemploymentDate": "2025-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
+  },
+  {
+    "rawId": "16ef1735d12f2d8a3df6537742747247017bbc7ef2c09e6b78c27fbe17ff1879",
+    "dedupeKey": "13b498f3ed1834770181c1f3c30492b0b0f0e9619b1be62cdaa17cf224da2fa9",
+    "personSlug": "person-6807ef034564d586",
     "name": "松下 英之",
     "fromMinistry": "農林水産省",
     "previousPosition": "関東森林管理局利根沼田森林管理署長",
@@ -1754,17 +1500,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "農林水産省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-f1e17e96764e3afa",
+    "rawId": "734071304c400475da8e64605deb59a1f53c9b7e8341f04734b582cc55003a86",
+    "dedupeKey": "b6d898b928d7b52e08135bb4baa567a39011e5350432750fea7522c4efc63d88",
+    "personSlug": "person-f1e17e96764e3afa",
     "name": "森山 啓",
     "fromMinistry": "経済産業省",
     "previousPosition": "特許庁審判部審判長（第36部門長） 併任 審判部訟務室長",
@@ -1774,16 +1516,13 @@
     "retirementDate": "2024-04-01",
     "reemploymentDate": "2024-07-01",
     "waitingDays": 91,
-    "tags": [
-      "経済産業省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-2bb8dead49438581",
+    "rawId": "d4cfd73781a3f022825ddf19bb13666ab0adab648d25e9896394f1e5e03aa67f",
+    "dedupeKey": "9d5ecc6492c8814cd498a0d52c38cea0ae48a79a0b6310331b74749b09a21318",
+    "personSlug": "person-2bb8dead49438581",
     "name": "風間 喬平",
     "fromMinistry": "経済産業省",
     "previousPosition": "経済産業省電力・ガス取引監視等委員会事務局取引制度企画室付",
@@ -1793,17 +1532,13 @@
     "retirementDate": "2024-06-30",
     "reemploymentDate": "2024-07-01",
     "waitingDays": 1,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-0afde729a238ec95",
+    "rawId": "63099fd0cb4c1f9d9c56d0964db5593dcea7368fbb2db5a0a547f60a0830b60c",
+    "dedupeKey": "61c6e24c9f79783649995511454dcfe9454964933550504c82ad358a73c47cb8",
+    "personSlug": "person-0afde729a238ec95",
     "name": "三輪田 祐子",
     "fromMinistry": "経済産業省",
     "previousPosition": "経済産業省大臣官房付",
@@ -1813,17 +1548,13 @@
     "retirementDate": "2024-06-30",
     "reemploymentDate": "2024-07-01",
     "waitingDays": 1,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-52ff2a4059e36a01",
+    "rawId": "a2ee2ec20ae6104b832e80274016a703084a478bc3ad604740119bf408df6685",
+    "dedupeKey": "b380ca1b0d732bf739b5f71a499d82ea37fd1c4c72fd68e00908aa7d9e0b02e7",
+    "personSlug": "person-52ff2a4059e36a01",
     "name": "小野田 寛",
     "fromMinistry": "経済産業省",
     "previousPosition": "中小企業庁長官官房総務課訟務・債権管理室中小企業政策企画調整官",
@@ -1833,17 +1564,13 @@
     "retirementDate": "2024-07-31",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 1,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-073f3aab1b93ab27",
+    "rawId": "b4f3936fc176a714d4eb9ede6f6817f992b53f8456412f2dca5bd4dea89f9206",
+    "dedupeKey": "34c9ae7fccabb79d3526a28d2588901a138195929c92203f014b81f59cf87acd",
+    "personSlug": "person-073f3aab1b93ab27",
     "name": "瀧島 勇樹",
     "fromMinistry": "経済産業省",
     "previousPosition": "経済産業省大臣官房付",
@@ -1853,17 +1580,13 @@
     "retirementDate": "2024-07-31",
     "reemploymentDate": "2024-08-01",
     "waitingDays": 1,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-f266a8544b37d5b3",
+    "rawId": "6081a43a94413a4a76a4df674e3ae230d34418fd1722b50e978b5314b519dd2f",
+    "dedupeKey": "f33c45d26ee024db060ec7216bf0141575c01f6ebd7e709068bc0c98bc98e295",
+    "personSlug": "person-f266a8544b37d5b3",
     "name": "清水 茉莉",
     "fromMinistry": "経済産業省",
     "previousPosition": "経済産業省通商政策局通商機構部国際法務室長",
@@ -1873,17 +1596,13 @@
     "retirementDate": "2024-09-30",
     "reemploymentDate": "2024-10-01",
     "waitingDays": 1,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-ec89fec3c55c9ffb",
+    "rawId": "f1522f54cd33231b8679837f13e3aac5ae15cd3f4830e32d046beffdb73cb067",
+    "dedupeKey": "8f60a9a157bfdcca1fb639f183cd8ebd6922a3f7de26b0732323a59ba8231522",
+    "personSlug": "person-ec89fec3c55c9ffb",
     "name": "清水 茉莉",
     "fromMinistry": "経済産業省",
     "previousPosition": "経済産業省通商政策局国際経済部国際法務室長",
@@ -1893,17 +1612,13 @@
     "retirementDate": "2024-09-30",
     "reemploymentDate": "2024-10-01",
     "waitingDays": 1,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-acb29602c73d7e5b",
+    "rawId": "13a19f56385ae16e6cedf98bad79b82a18d48b6ba99f56ab48299872f8de0e85",
+    "dedupeKey": "ee834c67302f7c22ad1eb9429bd922bf8eb5bfdc28509028f8fe552108080d9d",
+    "personSlug": "person-acb29602c73d7e5b",
     "name": "樋口 宗彦",
     "fromMinistry": "経済産業省",
     "previousPosition": "特許庁審判部審判長（第4部門）",
@@ -1913,17 +1628,13 @@
     "retirementDate": "2024-12-31",
     "reemploymentDate": "2025-01-01",
     "waitingDays": 1,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-3cfaf1d714e2e67e",
+    "rawId": "6608566508224d4affb50dd6711c29d9fbc7f44a201aaafdf19544f14a01eb0d",
+    "dedupeKey": "74d4f4fe06949c9aad37d2a9c24adbf2d6edd2fbacc0989579980b60c2e392d1",
+    "personSlug": "person-3cfaf1d714e2e67e",
     "name": "野田 直史",
     "fromMinistry": "経済産業省",
     "previousPosition": "経済産業省商務情報政策局文化創造産業課海外需要開拓室長 併任 文化創造産業企画調整官",
@@ -1933,17 +1644,13 @@
     "retirementDate": "2025-01-31",
     "reemploymentDate": "2025-02-03",
     "waitingDays": 3,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-57a836248640e12b",
+    "rawId": "aae5397dbd97d1010cfb1fc8a30f9d1bf8e88486788fa1622c7589e9c02446e7",
+    "dedupeKey": "8d1cc3cbb30a72b6867e64c50b5125e48ce4764e873108165f90d6e975543007",
+    "personSlug": "person-57a836248640e12b",
     "name": "平田 実",
     "fromMinistry": "経済産業省",
     "previousPosition": "九州経済産業局産業部次長",
@@ -1953,17 +1660,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-db85a248caca4d8a",
+    "rawId": "c24e718272c4dfcb87e326f4d211f07ea4431caa235a7a07b1880a5333d13d2d",
+    "dedupeKey": "adc6703e353676235b9bde4102d9e25e80fb11c5eaad7cbd981a786622602c79",
+    "personSlug": "person-db85a248caca4d8a",
     "name": "小栁 康一",
     "fromMinistry": "国土交通省",
     "previousPosition": "国土交通省大臣官房運輸安全監理官付首席運輸安全調査官",
@@ -1973,17 +1676,13 @@
     "retirementDate": "2024-04-01",
     "reemploymentDate": "2024-04-02",
     "waitingDays": 1,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-257afb1d4c462565",
+    "rawId": "cb55744ba7285b4dab36eac2990ecd78faa66e9bf856fede856be51a7aa5527b",
+    "dedupeKey": "566fab93c48377682c5777ce7a8190fa35ea29e20e544ad3759f65f21eeb9f92",
+    "personSlug": "person-257afb1d4c462565",
     "name": "厂原 隆俊",
     "fromMinistry": "国土交通省",
     "previousPosition": "海上保安庁函館海上保安部巡視船つがる運用司令長",
@@ -1993,17 +1692,13 @@
     "retirementDate": "2024-05-31",
     "reemploymentDate": "2024-06-01",
     "waitingDays": 1,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-98a53d3cbf8b48f1",
+    "rawId": "2b40c9c690c8c4411cf5faa56fbe337d5e00e545d0134af677cecd84e2dbf947",
+    "dedupeKey": "22bd02687132a6c35692b53205790c7b2868ab826ad735ee40c7b95ce93dde20",
+    "personSlug": "person-98a53d3cbf8b48f1",
     "name": "森 裕貴",
     "fromMinistry": "国土交通省",
     "previousPosition": "国土交通省海事局安全政策課船舶安全基準室長",
@@ -2013,17 +1708,13 @@
     "retirementDate": "2024-06-30",
     "reemploymentDate": "2024-07-01",
     "waitingDays": 1,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-ef083461a80e6fc5",
+    "rawId": "f995872e5813d8a030d601d2f9e653a8f34a85c93a5bc6539d618d4071ce2c26",
+    "dedupeKey": "f7b48b161815b8210b56f7b612421d5b1fbc31ff68678548a10bc22ae448c2dd",
+    "personSlug": "person-ef083461a80e6fc5",
     "name": "経沢 謙治",
     "fromMinistry": "国土交通省",
     "previousPosition": "運輸安全委員会事務局神戸事務所統括地方事故調査官",
@@ -2033,17 +1724,13 @@
     "retirementDate": "2024-09-30",
     "reemploymentDate": "2024-10-01",
     "waitingDays": 1,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-6619eb63147fd9a5",
+    "rawId": "1812676be4fa97176148a91be27e9cca4490210900d444c11fafc0c30eb8438f",
+    "dedupeKey": "fe162d2142624fd674396bb4231c68a119a33ac41f866bf1d626c4f7d561ba4f",
+    "personSlug": "person-6619eb63147fd9a5",
     "name": "明渡 俊樹",
     "fromMinistry": "国土交通省",
     "previousPosition": "海上保安庁伏木海上保安部巡視船やひこ業務管理官",
@@ -2053,17 +1740,13 @@
     "retirementDate": "2025-01-31",
     "reemploymentDate": "2025-02-05",
     "waitingDays": 5,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-f5b54a35d61c4754",
+    "rawId": "e65f3b133a5e9bb67ec7090a14a04bf1b2f7bb16a9fb30d794161b92359abdbc",
+    "dedupeKey": "3f10a55860b7f6c7ae546c2c17ad348b1fa5326fa1eda69068a883fec80f1d25",
+    "personSlug": "person-f5b54a35d61c4754",
     "name": "杉谷 昭",
     "fromMinistry": "国土交通省",
     "previousPosition": "海難審判所首席理事官",
@@ -2073,16 +1756,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-05-01",
     "waitingDays": 31,
-    "tags": [
-      "国土交通省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-30b07eb66a4a0635",
+    "rawId": "89c28191ac8196de163811efed81652f041c3cb032d2e8e29afe8286f4b51915",
+    "dedupeKey": "cbd191aabff0a80b7150c4538e226d1ca9335487516856a239e761585be4ba66",
+    "personSlug": "person-30b07eb66a4a0635",
     "name": "長谷川 洋",
     "fromMinistry": "国土交通省",
     "previousPosition": "国土技術政策総合研究所建築研究部長",
@@ -2092,17 +1772,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-88decd449b26b1ea",
+    "rawId": "2aeb5046b66b4742f8506b63a39094eb5df4507e504af443b4842cb08de90e68",
+    "dedupeKey": "6fe0d5554edc86e6c601dd7a7c9337e5eec05f50bfba984ef71703b79ac06065",
+    "personSlug": "person-88decd449b26b1ea",
     "name": "藤田 健雄",
     "fromMinistry": "国土交通省",
     "previousPosition": "中部運輸局海上安全環境部首席海事技術専門官",
@@ -2112,17 +1788,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-e57ab4ebe27a4d32",
+    "rawId": "ef010510d2191c7211e8938a07e1ed675bcb0800a7f8a14e14c4a39dadeb8d86",
+    "dedupeKey": "c638667f46c0e66834363cae5d215fcb7e775865ffdc44b890759ef81b51ea37",
+    "personSlug": "person-e57ab4ebe27a4d32",
     "name": "今井 俊博",
     "fromMinistry": "原子力規制委員会",
     "previousPosition": "原子力規制委員会原子力規制庁長官官房監視情報課長",
@@ -2132,17 +1804,13 @@
     "retirementDate": "2024-06-30",
     "reemploymentDate": "2024-07-01",
     "waitingDays": 1,
-    "tags": [
-      "原子力規制委員会",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-18c8d0455dd86ce9",
+    "rawId": "fd77c5655bb98689086a0a368b7dde1e724dd2f748a7fdc21921fa4eb61fcba1",
+    "dedupeKey": "23c426e6d3a7fcf664d6351c5349e6b11c6f07763cc06585c72cbaa2735ab71c",
+    "personSlug": "person-18c8d0455dd86ce9",
     "name": "黒川 ひとみ",
     "fromMinistry": "環境省",
     "previousPosition": "環境省自然環境局総務課皇居外苑管理事務所長",
@@ -2152,17 +1820,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "環境省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-3ca782f71e9ca9d5",
+    "rawId": "45183bf1b80aa1d787d7024136588d723ac6240f00e1930d536737d640d97848",
+    "dedupeKey": "6f0c528053f26d3b9e3bf5bf70ed68e37277d4bfee9c8c6695f53a75ceca1a8a",
+    "personSlug": "person-3ca782f71e9ca9d5",
     "name": "小口 馨",
     "fromMinistry": "環境省",
     "previousPosition": "環境省大臣官房秘書課地方環境室長",
@@ -2172,17 +1836,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "環境省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-f597c3edd9e0df2b",
+    "rawId": "77e3946ec9b3ce7cd0cd1a6643623608d636c3d88a0d5af5f0eb1699628aff89",
+    "dedupeKey": "ea7e3a692a27fdad1d60f9d48c57fe4a0b4c062ba700f03579e5308511ba092a",
+    "personSlug": "person-f597c3edd9e0df2b",
     "name": "種瀬 治良",
     "fromMinistry": "環境省",
     "previousPosition": "環境省地球環境局地球温暖化対策課事業監理官 併任 地球環境局総務課地球温暖化対策事業監理室長 併任 大臣官房地域政策課地域脱炭素事業監理室長",
@@ -2192,17 +1852,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "環境省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-ed3290bc20f5a7c5",
+    "rawId": "39eff79e7f10184191b57a07b980abdff6c861c6efb2a4a713ccaee0cc842a2a",
+    "dedupeKey": "5a87323e48b48ab5ddac96ec226195331cc6439dfc4ae6b27b1d2c7884e97873",
+    "personSlug": "person-ed3290bc20f5a7c5",
     "name": "木村 敦",
     "fromMinistry": "総務省",
     "previousPosition": "独立行政法人統計センター理事",
@@ -2212,17 +1868,13 @@
     "retirementDate": "2025-03-31",
     "reemploymentDate": "2025-04-01",
     "waitingDays": 1,
-    "tags": [
-      "総務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-annual-2024"
-    ]
+    "sourceId": "cabinet-office-annual-2024",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou1-1_20250926.xlsx"
   },
   {
-    "person_slug": "person-ff4932e826c179e6",
+    "rawId": "d8459a4868028d3627e865b53aed583a69cc3436688af870f99339f05e074cb2",
+    "dedupeKey": "22ecb7348549a895967cfd09431adeaffa8b4b6d909ad22f3c7c7b34066d7aac",
+    "personSlug": "person-ff4932e826c179e6",
     "name": "萩野 覚",
     "fromMinistry": "内閣府",
     "previousPosition": "内閣府経済社会総合研究所上席主任研究官 併任 総務省統計委員会担当室長",
@@ -2232,17 +1884,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "内閣府",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-976d95e664e0913e",
+    "rawId": "b4474de703b05d101a2b42666c363e907fb130e14504596b9b974271d049efd2",
+    "dedupeKey": "b792a5d8c0fe138e87b4ceab08d2bcb46fdcf6912d4524509563a1b5e25c2b23",
+    "personSlug": "person-976d95e664e0913e",
     "name": "岡部 正勝",
     "fromMinistry": "警察庁",
     "previousPosition": "警察庁長官官房付",
@@ -2252,17 +1900,13 @@
     "retirementDate": "2024-03-29",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 3,
-    "tags": [
-      "警察庁",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-03e039ba52b769c0",
+    "rawId": "d97f0fda7ea0156ff39fcbec7d7095253bc0bf93669763922348a68591f04605",
+    "dedupeKey": "4740a04af7c62be575b67d46548dd31dcae36464e25380dc78c41a24ee2b7fc8",
+    "personSlug": "person-03e039ba52b769c0",
     "name": "廣井 真",
     "fromMinistry": "カジノ管理委員会",
     "previousPosition": "カジノ管理委員会事務局監督調査部財務監督課課長補佐",
@@ -2272,17 +1916,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "カジノ管理委員会",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-f1a2828fdf10c657",
+    "rawId": "60d24c2450e3c3287213a47bcd3067daea25a96212c7b19125232655ce2ad87e",
+    "dedupeKey": "77aeb51dbf6b038d9236bd63e31679528a38cc33a1a5a54b05a23499f8edd603",
+    "personSlug": "person-f1a2828fdf10c657",
     "name": "髙津戸 朱子",
     "fromMinistry": "金融庁",
     "previousPosition": "金融庁審判官 兼 総合政策局総務課 兼 総合政策局監察官 兼 総合政策局総合政策課金融行政モニターサポートスタッフ 兼 企画市場局総務課リーガル・アドバイザー 兼 監督局総務課",
@@ -2292,16 +1932,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-05-01",
     "waitingDays": 31,
-    "tags": [
-      "金融庁",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-0b79eaacb7785fca",
+    "rawId": "a3b89a66257facc2f6a1e5762527e15a95b2105b87f8b7c8e26b730e9c0f9bb1",
+    "dedupeKey": "55fd8e15d5e94a491cf5fd45a861bfdab3615b61cb0f9f67569098059ac976a3",
+    "personSlug": "person-0b79eaacb7785fca",
     "name": "河尻 恵",
     "fromMinistry": "法務省",
     "previousPosition": "国立武蔵野学院長",
@@ -2311,17 +1948,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-adcc75994f20a4bc",
+    "rawId": "e0a0ab5985133ad1d6de2c1ebe693255207014b725de4b7cae58b54eff2f76b6",
+    "dedupeKey": "2b152e95d208f3604fc06a4946deffcf0a5dc56f9380c640a7452f4989c0c634",
+    "personSlug": "person-adcc75994f20a4bc",
     "name": "大塲 玲子",
     "fromMinistry": "法務省",
     "previousPosition": "関東地方更生保護委員会委員長",
@@ -2331,16 +1964,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-06-03",
     "waitingDays": 64,
-    "tags": [
-      "法務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-7892a65f1d6035fa",
+    "rawId": "87ef3a2040104cbc8874f391211b1460cbe985ba160bbc7057be82e57119a0cf",
+    "dedupeKey": "3325d6679ad2b96f5e57805481a316acbf813b1bbc07769c65603b41d9cff49d",
+    "personSlug": "person-7892a65f1d6035fa",
     "name": "長内 直樹",
     "fromMinistry": "法務省",
     "previousPosition": "長岡区検察庁副検事",
@@ -2350,17 +1980,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-f804ff4466358e56",
+    "rawId": "c1e64b22006e797cd047d4b5e7cbf41a38ba63cd510928097976b3d52d891d45",
+    "dedupeKey": "5c9a5066a9b2b4386b01f301ba9d5f37b4325193c3b2946c0548841b04b1b2e0",
+    "personSlug": "person-f804ff4466358e56",
     "name": "齊藤 哲也",
     "fromMinistry": "法務省",
     "previousPosition": "岡山少年鑑別所長",
@@ -2370,17 +1996,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-a0d961d9ba8087ab",
+    "rawId": "3d7e51f6d72074f8e8140b165a72d94fdecec8cb9474550f74b2ab515cc373e5",
+    "dedupeKey": "c6c5f9ff1745866d6b7bca3b9eab3392825ff30a0d5c02933835b0f44604d33b",
+    "personSlug": "person-a0d961d9ba8087ab",
     "name": "齋藤 亮太",
     "fromMinistry": "法務省",
     "previousPosition": "千葉地方検察庁検事",
@@ -2390,17 +2012,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-8e1ee8141dca0216",
+    "rawId": "415d23ff6b18f5b6491e9e52927336bb43692314c2134a61f76449930f2e7773",
+    "dedupeKey": "5f51a10bf64c5acfe8e67e82f1da543645b7b275b81cfbdca1fd729573bd2927",
+    "personSlug": "person-8e1ee8141dca0216",
     "name": "武田 智博",
     "fromMinistry": "法務省",
     "previousPosition": "高松刑務所医務部長",
@@ -2410,17 +2028,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-23aeb5340c368dba",
+    "rawId": "e262f34e04ed2dc27eeb4aed1be1d78f0d6908ceed2e8033e4a1663287dcae86",
+    "dedupeKey": "1a526291905202f66bdeeeeeb08ba094d7f44a51be0cb665b336c5da2e9327d8",
+    "personSlug": "person-23aeb5340c368dba",
     "name": "中田 学司",
     "fromMinistry": "法務省",
     "previousPosition": "名古屋刑務所長",
@@ -2430,17 +2044,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-08",
     "waitingDays": 8,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-56ac010dc7f3b284",
+    "rawId": "791241b551266d359d550d255dd28a1b288434cb22c2942da9a97b831bc64179",
+    "dedupeKey": "9416997fbfeb505cb7bf3330d598eee27b4d1615d640f0e5030479e5566112f6",
+    "personSlug": "person-56ac010dc7f3b284",
     "name": "畑 尚登",
     "fromMinistry": "法務省",
     "previousPosition": "東京地方検察庁検事",
@@ -2450,16 +2060,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-06-01",
     "waitingDays": 62,
-    "tags": [
-      "法務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-56247396a000c772",
+    "rawId": "005d2571421b3ef29300793e2118b4b7d8f43b8a6552d80af9698a6e65c25c59",
+    "dedupeKey": "3698c93ea7300fe867f9de8b757689da6f424214e9237ae295a4db02ab277cc7",
+    "personSlug": "person-56247396a000c772",
     "name": "花見 佳澄",
     "fromMinistry": "法務省",
     "previousPosition": "東京地方検察庁立川支部検事",
@@ -2469,17 +2076,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-39d1a749245cd6bb",
+    "rawId": "b8fb0f273c7c7780b94eb51c7355299f1019c8d4c7e0726096312967aff2ae3f",
+    "dedupeKey": "bd0ece9b91f7396a6a686e78e87aa4edca058e11601ed762206ae68d047c1762",
+    "personSlug": "person-39d1a749245cd6bb",
     "name": "福永 晋哉",
     "fromMinistry": "法務省",
     "previousPosition": "名古屋刑務所分類審議室長",
@@ -2489,17 +2092,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "法務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-979c821616cd60a0",
+    "rawId": "dc2a11c9d9feba3ee4eb8d1943f48a7c88ad5aa94f2fbfe49bd1a70bd78ff31d",
+    "dedupeKey": "8e1d9df782e0c012ffd1599ba63cb44bdecd8350c40aae60df260d1f67f292c9",
+    "personSlug": "person-979c821616cd60a0",
     "name": "井上 浩",
     "fromMinistry": "財務省",
     "previousPosition": "関東財務局総務部長",
@@ -2509,16 +2108,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-05-01",
     "waitingDays": 31,
-    "tags": [
-      "財務省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-9f33be49c8959f2e",
+    "rawId": "a4b94c4607bf5723802d5f4f847d3ff11d3a3ae5c9cd7b0aec1d1cb4717f1a5f",
+    "dedupeKey": "d07545cf3ae562726fb0185fd31ef72d6af2c7c195b5f4e9c69b86460add9947",
+    "personSlug": "person-9f33be49c8959f2e",
     "name": "大西 淳也",
     "fromMinistry": "財務省",
     "previousPosition": "財務省大臣官房付",
@@ -2528,17 +2124,29 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-2030660e3cb1f3c9",
+    "rawId": "2c8fada76d968aa91d671ed4677ca3f578a5cc8a89875508e975d153a9d4736e",
+    "dedupeKey": "e9e2976c72b078ff9e00fe2bdc85d48fb1e8c5ec5f11dc3f55c284ddee9eddb3",
+    "personSlug": "person-9f33be49c8959f2e",
+    "name": "大西 淳也",
+    "fromMinistry": "財務省",
+    "previousPosition": "財務省大臣官房付",
+    "corporationSlug": "corporation-7e0ddafb39edd01e",
+    "corporationName": "学校法人津田塾大学",
+    "newPosition": "津田塾大学総合政策学部総合政策学科教授",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "e50b4a06130059a6be9c06d4d77eba443c956389ce14e042f621f8dc6378603e",
+    "dedupeKey": "87823869090ab6a237693524cb65968d550386a9913a60518faf8fea7aff8bac",
+    "personSlug": "person-2030660e3cb1f3c9",
     "name": "棚瀨 順哉",
     "fromMinistry": "財務省",
     "previousPosition": "財務省国際局為替市場課資金管理専門官",
@@ -2548,17 +2156,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-676dc9b61f1ace5b",
+    "rawId": "b127ec78af42de869936a0441e0d8f4b82d24592f5bb873f3c0b0d28609be0eb",
+    "dedupeKey": "fc00ec2953bab2bff4b5da85cdbd5d8d82ee2d8b670b4073d271b438032a434a",
+    "personSlug": "person-676dc9b61f1ace5b",
     "name": "團野 正浩",
     "fromMinistry": "財務省",
     "previousPosition": "国税庁長官官房付",
@@ -2568,17 +2172,13 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "財務省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   },
   {
-    "person_slug": "person-287ba3b5dd4b3d82",
+    "rawId": "0dd0ac37551c39d6447dc5974ca8c76806d34428fbc282aa148c51a2b5ca5690",
+    "dedupeKey": "3e8879290fd4d730c752fa513fafb4c2707cbc7ce6b3721b6b95ba758dd2f9e3",
+    "personSlug": "person-287ba3b5dd4b3d82",
     "name": "石田 有記",
     "fromMinistry": "文部科学省",
     "previousPosition": "文部科学省初等中等教育局教育課程課教育課程企画室長",
@@ -2588,412 +2188,7 @@
     "retirementDate": "2024-03-31",
     "reemploymentDate": "2024-04-01",
     "waitingDays": 1,
-    "tags": [
-      "文部科学省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-b14a2349e05a9a96",
-    "name": "森 政之",
-    "fromMinistry": "文部科学省",
-    "previousPosition": "文部科学省大臣官房文教施設企画・防災部技術参事官",
-    "corporationSlug": "corporation-72fe61de5a1337fb",
-    "corporationName": "学校法人芝浦工業大学",
-    "newPosition": "芝浦工業大学SIT総合研究所特任教授",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "文部科学省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-b07de53d79db2cf5",
-    "name": "工藤 由起子",
-    "fromMinistry": "厚生労働省",
-    "previousPosition": "国立医薬品食品衛生研究所衛生微生物部長",
-    "corporationSlug": "corporation-8ab0441d1a645daf",
-    "corporationName": "学校法人星薬科大学",
-    "newPosition": "星薬科大学薬学部微生物学教室教授",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "厚生労働省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-e65794fb916caf87",
-    "name": "黒田 誠",
-    "fromMinistry": "厚生労働省",
-    "previousPosition": "国立感染症研究所病原体ゲノム解析研究センター長",
-    "corporationSlug": "corporation-62903ceaff7fdb5f",
-    "corporationName": "学校法人銀杏学園",
-    "newPosition": "熊本保健科学大学保健科学部医学検査学科教授",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "厚生労働省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-f45b61fe69067793",
-    "name": "伊藤 武徳",
-    "fromMinistry": "農林水産省",
-    "previousPosition": "関東森林管理局下越森林管理署長",
-    "corporationSlug": "corporation-31c26df36b7edc4d",
-    "corporationName": "日本林業土木株式会社",
-    "newPosition": "前橋出張所長",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "農林水産省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-3fcad259ea22751b",
-    "name": "乾 光一",
-    "fromMinistry": "農林水産省",
-    "previousPosition": "東北森林管理局総務企画部長",
-    "corporationSlug": "corporation-31c26df36b7edc4d",
-    "corporationName": "日本林業土木株式会社",
-    "newPosition": "本社総務部部長 兼 営業部次長 兼 技術部次長",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "農林水産省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-22572d510db934af",
-    "name": "木村 敏宏",
-    "fromMinistry": "農林水産省",
-    "previousPosition": "中部森林管理局北信森林管理署長",
-    "corporationSlug": "corporation-31c26df36b7edc4d",
-    "corporationName": "日本林業土木株式会社",
-    "newPosition": "長野出張所長",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-15",
-    "waitingDays": 15,
-    "tags": [
-      "農林水産省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-1aedcce28a907a03",
-    "name": "十二 康典",
-    "fromMinistry": "農林水産省",
-    "previousPosition": "農林水産省輸出・国際局輸出企画課輸出連携推進調査官",
-    "corporationSlug": "corporation-1b9ba40fde5710ba",
-    "corporationName": "PwCコンサルティング合同会社",
-    "newPosition": "マネージャー",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "農林水産省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-ebced8f1cf1824c1",
-    "name": "德川 浩一",
-    "fromMinistry": "農林水産省",
-    "previousPosition": "関東森林管理局日光森林管理署長",
-    "corporationSlug": "corporation-0797ac4c7725544f",
-    "corporationName": "一般財団法人日本木材総合情報センター",
-    "newPosition": "参与（業務）",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-05-01",
-    "waitingDays": 31,
-    "tags": [
-      "農林水産省",
-      "再就職情報"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-a5d380addd4692b2",
-    "name": "中島 勇雄",
-    "fromMinistry": "農林水産省",
-    "previousPosition": "関東森林管理局会津森林管理署長",
-    "corporationSlug": "corporation-81c3fcc25b413224",
-    "corporationName": "新電力開発株式会社",
-    "newPosition": "山林管理本部長",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "農林水産省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-db74cadc42fad7a9",
-    "name": "原嶋 広行",
-    "fromMinistry": "農林水産省",
-    "previousPosition": "北海道森林管理局総務企画部長",
-    "corporationSlug": "corporation-75ba42f9809bd194",
-    "corporationName": "公益社団法人国土緑化推進機構",
-    "newPosition": "募金企画部調査役",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "農林水産省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-20f78c2b38029801",
-    "name": "坂本 和英",
-    "fromMinistry": "経済産業省",
-    "previousPosition": "経済産業省近畿経済産業局資源エネルギー環境部電源開発調整官",
-    "corporationSlug": "corporation-b8b9a5244fc2c303",
-    "corporationName": "公益財団法人尼崎地域産業活性化機構",
-    "newPosition": "参与",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-fbac66dd4866ccb1",
-    "name": "前川 慎喜",
-    "fromMinistry": "経済産業省",
-    "previousPosition": "特許庁審判部審判長（第5部門）",
-    "corporationSlug": "corporation-5405333ff055e943",
-    "corporationName": "国立大学法人北海道国立大学機構",
-    "newPosition": "北海道国立大学機構本部産学官金連携統合情報センター特任教授",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-dd70c6183e126551",
-    "name": "山崎 知巳",
-    "fromMinistry": "経済産業省",
-    "previousPosition": "経済産業省大臣官房付",
-    "corporationSlug": "corporation-a57bf773653fc7f8",
-    "corporationName": "国立大学法人東京大学",
-    "newPosition": "東京大学産学協創推進本部副本部長",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-dfa49fb899dc87ca",
-    "name": "吉倉 秀和",
-    "fromMinistry": "経済産業省",
-    "previousPosition": "経済産業省商務情報政策局商務・サービスグループサービス政策課スポーツ産業室長",
-    "corporationSlug": "corporation-4e354125e2661635",
-    "corporationName": "学校法人大阪成蹊学園",
-    "newPosition": "びわこ成蹊スポーツ大学スポーツ学部専任教員（准教授）",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "経済産業省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-7625b740722fc4f7",
-    "name": "鈴木 雅晴",
-    "fromMinistry": "国土交通省",
-    "previousPosition": "中部運輸局海上安全環境部首席船舶検査官",
-    "corporationSlug": "corporation-cd59be9437edd994",
-    "corporationName": "一般財団法人日本舶用品検定協会",
-    "newPosition": "検定検査員",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-d94111b4b4da884f",
-    "name": "竹本 康祐",
-    "fromMinistry": "国土交通省",
-    "previousPosition": "中国運輸局海上安全環境部調整官",
-    "corporationSlug": "corporation-cd59be9437edd994",
-    "corporationName": "一般財団法人日本舶用品検定協会",
-    "newPosition": "検定検査員",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-6c5cea877e62065c",
-    "name": "東川 直正",
-    "fromMinistry": "国土交通省",
-    "previousPosition": "国土交通省大臣官房付",
-    "corporationSlug": "corporation-42bf2032ce0e4d77",
-    "corporationName": "公益社団法人2025年日本国際博覧会協会",
-    "newPosition": "理事・副事務総長",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-ea35169abdb178fb",
-    "name": "中村 昌巨",
-    "fromMinistry": "国土交通省",
-    "previousPosition": "海上保安庁第七管区海上保安本部総務部情報管理官",
-    "corporationSlug": "corporation-5b0eb1cef266c981",
-    "corporationName": "第一警備保障株式会社",
-    "newPosition": "一般社員（係長級）",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-663314416028f1c2",
-    "name": "八木 正人",
-    "fromMinistry": "国土交通省",
-    "previousPosition": "神戸運輸監理部総務企画部長",
-    "corporationSlug": "corporation-6d82e9d535288b14",
-    "corporationName": "一般財団法人神戸港湾福利厚生協会",
-    "newPosition": "総務部長",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
-  },
-  {
-    "person_slug": "person-37fa0eb8859d5f87",
-    "name": "山西 光一",
-    "fromMinistry": "国土交通省",
-    "previousPosition": "国土交通省大臣官房総務課公文書監理・情報公開室長",
-    "corporationSlug": "corporation-8010f222a03f4e28",
-    "corporationName": "公益財団法人交通エコロジー・モビリティ財団",
-    "newPosition": "総務部長",
-    "retirementDate": "2024-03-31",
-    "reemploymentDate": "2024-04-01",
-    "waitingDays": 1,
-    "tags": [
-      "国土交通省",
-      "再就職情報",
-      "30日以内"
-    ],
-    "sources": [
-      "cabinet-office-106-25-1-r05-files4"
-    ]
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]

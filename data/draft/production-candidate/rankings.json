@@ -1,15 +1,31 @@
 {
   "totals": {
-    "publicRecords": 137,
-    "corporations": 132,
+    "publicRecords": 157,
+    "corporations": 146,
     "nextDayCorporations": 0,
-    "within30DaysCorporations": 109
+    "within30DaysCorporations": 123
   },
   "rankings": {
     "publicRecords": [
       {
         "corporationSlug": "corporation-0797ac4c7725544f",
+        "value": 4
+      },
+      {
+        "corporationSlug": "corporation-a57bf773653fc7f8",
         "value": 3
+      },
+      {
+        "corporationSlug": "corporation-cd59be9437edd994",
+        "value": 3
+      },
+      {
+        "corporationSlug": "corporation-31c26df36b7edc4d",
+        "value": 3
+      },
+      {
+        "corporationSlug": "corporation-1b9ba40fde5710ba",
+        "value": 2
       },
       {
         "corporationSlug": "corporation-4b5d536d1df51698",
@@ -17,10 +33,6 @@
       },
       {
         "corporationSlug": "corporation-e9a10f20167a62e6",
-        "value": 2
-      },
-      {
-        "corporationSlug": "corporation-a57bf773653fc7f8",
         "value": 2
       },
       {
@@ -57,10 +69,6 @@
       },
       {
         "corporationSlug": "corporation-8e026326c8c73f9b",
-        "value": 1
-      },
-      {
-        "corporationSlug": "corporation-1b9ba40fde5710ba",
         "value": 1
       },
       {
@@ -436,10 +444,6 @@
         "value": 1
       },
       {
-        "corporationSlug": "corporation-cd59be9437edd994",
-        "value": 1
-      },
-      {
         "corporationSlug": "corporation-6e2ce329a271f2e0",
         "value": 1
       },
@@ -533,6 +537,54 @@
       },
       {
         "corporationSlug": "corporation-690523a33e388965",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-72fe61de5a1337fb",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8ab0441d1a645daf",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-62903ceaff7fdb5f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-81c3fcc25b413224",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-75ba42f9809bd194",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-b8b9a5244fc2c303",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5405333ff055e943",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-4e354125e2661635",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-42bf2032ce0e4d77",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5b0eb1cef266c981",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-6d82e9d535288b14",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8010f222a03f4e28",
         "value": 1
       }
     ],
@@ -1064,6 +1116,58 @@
       {
         "corporationSlug": "corporation-690523a33e388965",
         "value": 0
+      },
+      {
+        "corporationSlug": "corporation-72fe61de5a1337fb",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-8ab0441d1a645daf",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-62903ceaff7fdb5f",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-31c26df36b7edc4d",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-81c3fcc25b413224",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-75ba42f9809bd194",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-b8b9a5244fc2c303",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-5405333ff055e943",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-4e354125e2661635",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-42bf2032ce0e4d77",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-5b0eb1cef266c981",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-6d82e9d535288b14",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-8010f222a03f4e28",
+        "value": 0
       }
     ],
     "within30Days": [
@@ -1072,15 +1176,23 @@
         "value": 3
       },
       {
+        "corporationSlug": "corporation-a57bf773653fc7f8",
+        "value": 3
+      },
+      {
+        "corporationSlug": "corporation-cd59be9437edd994",
+        "value": 3
+      },
+      {
+        "corporationSlug": "corporation-31c26df36b7edc4d",
+        "value": 3
+      },
+      {
         "corporationSlug": "corporation-4b5d536d1df51698",
         "value": 2
       },
       {
         "corporationSlug": "corporation-e9a10f20167a62e6",
-        "value": 2
-      },
-      {
-        "corporationSlug": "corporation-a57bf773653fc7f8",
         "value": 2
       },
       {
@@ -1117,6 +1229,10 @@
       },
       {
         "corporationSlug": "corporation-8e026326c8c73f9b",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-1b9ba40fde5710ba",
         "value": 1
       },
       {
@@ -1420,10 +1536,6 @@
         "value": 1
       },
       {
-        "corporationSlug": "corporation-cd59be9437edd994",
-        "value": 1
-      },
-      {
         "corporationSlug": "corporation-6e2ce329a271f2e0",
         "value": 1
       },
@@ -1504,8 +1616,52 @@
         "value": 1
       },
       {
-        "corporationSlug": "corporation-1b9ba40fde5710ba",
-        "value": 0
+        "corporationSlug": "corporation-72fe61de5a1337fb",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8ab0441d1a645daf",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-62903ceaff7fdb5f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-81c3fcc25b413224",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-75ba42f9809bd194",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-b8b9a5244fc2c303",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5405333ff055e943",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-4e354125e2661635",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-42bf2032ce0e4d77",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5b0eb1cef266c981",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-6d82e9d535288b14",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8010f222a03f4e28",
+        "value": 1
       },
       {
         "corporationSlug": "corporation-e666aa92add9aa73",
@@ -1810,10 +1966,6 @@
         "value": 1
       },
       {
-        "corporationSlug": "corporation-0797ac4c7725544f",
-        "value": 1
-      },
-      {
         "corporationSlug": "corporation-e9a10f20167a62e6",
         "value": 1
       },
@@ -1950,6 +2102,54 @@
         "value": 1
       },
       {
+        "corporationSlug": "corporation-72fe61de5a1337fb",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8ab0441d1a645daf",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-62903ceaff7fdb5f",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-81c3fcc25b413224",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-75ba42f9809bd194",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-b8b9a5244fc2c303",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5405333ff055e943",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-4e354125e2661635",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-42bf2032ce0e4d77",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-5b0eb1cef266c981",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-6d82e9d535288b14",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-8010f222a03f4e28",
+        "value": 1
+      },
+      {
         "corporationSlug": "corporation-1588636ec0d018b8",
         "value": 2
       },
@@ -1970,12 +2170,20 @@
         "value": 5
       },
       {
+        "corporationSlug": "corporation-31c26df36b7edc4d",
+        "value": 6
+      },
+      {
         "corporationSlug": "corporation-8bedac202ab4bff4",
         "value": 7
       },
       {
         "corporationSlug": "corporation-c025bf19956ce7e6",
         "value": 8
+      },
+      {
+        "corporationSlug": "corporation-0797ac4c7725544f",
+        "value": 9
       },
       {
         "corporationSlug": "corporation-18351298ebe5922b",
@@ -1992,6 +2200,10 @@
       {
         "corporationSlug": "corporation-83ba7ab290ca473c",
         "value": 16
+      },
+      {
+        "corporationSlug": "corporation-1b9ba40fde5710ba",
+        "value": 17
       },
       {
         "corporationSlug": "corporation-8e026326c8c73f9b",
@@ -2072,10 +2284,6 @@
       {
         "corporationSlug": "corporation-eb156c9e81e60f92",
         "value": 31
-      },
-      {
-        "corporationSlug": "corporation-1b9ba40fde5710ba",
-        "value": 32
       },
       {
         "corporationSlug": "corporation-e666aa92add9aa73",

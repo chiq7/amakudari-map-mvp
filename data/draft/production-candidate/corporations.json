@@ -234,18 +234,20 @@
       "count": 1
     },
     "counts": {
-      "publicRecords": 1,
+      "publicRecords": 2,
       "nextDay": 0,
-      "within30Days": 0
+      "within30Days": 1
     },
     "waitingDays": {
-      "average": 32
+      "average": 17
     },
     "relatedPersons": [
-      "person-db7620c558034204"
+      "person-db7620c558034204",
+      "person-1aedcce28a907a03"
     ],
     "sources": [
-      "cabinet-office-annual-2024"
+      "cabinet-office-annual-2024",
+      "cabinet-office-106-25-1-r05-files4"
     ],
     "topics": []
   },
@@ -2182,23 +2184,25 @@
     "prefecture": "不明",
     "ministry": {
       "name": "農林水産省",
-      "count": 3
+      "count": 4
     },
     "counts": {
-      "publicRecords": 3,
+      "publicRecords": 4,
       "nextDay": 0,
       "within30Days": 3
     },
     "waitingDays": {
-      "average": 1
+      "average": 9
     },
     "relatedPersons": [
       "person-c6c5b895488e7aee",
       "person-344da3b532d61b2a",
-      "person-99c256667cbdc2eb"
+      "person-99c256667cbdc2eb",
+      "person-ebced8f1cf1824c1"
     ],
     "sources": [
-      "cabinet-office-annual-2024"
+      "cabinet-office-annual-2024",
+      "cabinet-office-106-25-1-r05-files4"
     ],
     "topics": []
   },
@@ -2410,19 +2414,20 @@
     "prefecture": "不明",
     "ministry": {
       "name": "経済産業省",
-      "count": 1
+      "count": 2
     },
     "counts": {
-      "publicRecords": 2,
+      "publicRecords": 3,
       "nextDay": 0,
-      "within30Days": 2
+      "within30Days": 3
     },
     "waitingDays": {
       "average": 1
     },
     "relatedPersons": [
       "person-ec89fec3c55c9ffb",
-      "person-9f33be49c8959f2e"
+      "person-9f33be49c8959f2e",
+      "person-dd70c6183e126551"
     ],
     "sources": [
       "cabinet-office-annual-2024",
@@ -2687,21 +2692,24 @@
     "prefecture": "不明",
     "ministry": {
       "name": "国土交通省",
-      "count": 1
+      "count": 3
     },
     "counts": {
-      "publicRecords": 1,
+      "publicRecords": 3,
       "nextDay": 0,
-      "within30Days": 1
+      "within30Days": 3
     },
     "waitingDays": {
       "average": 1
     },
     "relatedPersons": [
-      "person-88decd449b26b1ea"
+      "person-88decd449b26b1ea",
+      "person-7625b740722fc4f7",
+      "person-d94111b4b4da884f"
     ],
     "sources": [
-      "cabinet-office-annual-2024"
+      "cabinet-office-annual-2024",
+      "cabinet-office-106-25-1-r05-files4"
     ],
     "topics": []
   },
@@ -3304,5 +3312,412 @@
       "cabinet-office-106-25-1-r05-files4"
     ],
     "topics": []
+  },
+  {
+    "slug": "corporation-72fe61de5a1337fb",
+    "name": "学校法人芝浦工業大学",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "文部科学省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-b14a2349e05a9a96"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-8ab0441d1a645daf",
+    "name": "学校法人星薬科大学",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "厚生労働省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-b07de53d79db2cf5"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-62903ceaff7fdb5f",
+    "name": "学校法人銀杏学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "厚生労働省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-e65794fb916caf87"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-31c26df36b7edc4d",
+    "name": "日本林業土木株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "農林水産省",
+      "count": 3
+    },
+    "counts": {
+      "publicRecords": 3,
+      "nextDay": 0,
+      "within30Days": 3
+    },
+    "waitingDays": {
+      "average": 6
+    },
+    "relatedPersons": [
+      "person-f45b61fe69067793",
+      "person-3fcad259ea22751b",
+      "person-22572d510db934af"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-81c3fcc25b413224",
+    "name": "新電力開発株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "農林水産省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-a5d380addd4692b2"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-75ba42f9809bd194",
+    "name": "公益社団法人国土緑化推進機構",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "農林水産省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-db74cadc42fad7a9"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-b8b9a5244fc2c303",
+    "name": "公益財団法人尼崎地域産業活性化機構",
+    "type": "公益財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-20f78c2b38029801"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-5405333ff055e943",
+    "name": "国立大学法人北海道国立大学機構",
+    "type": "国立大学法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-fbac66dd4866ccb1"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-4e354125e2661635",
+    "name": "学校法人大阪成蹊学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-dfa49fb899dc87ca"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-42bf2032ce0e4d77",
+    "name": "公益社団法人2025年日本国際博覧会協会",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-6c5cea877e62065c"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-5b0eb1cef266c981",
+    "name": "第一警備保障株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-ea35169abdb178fb"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-6d82e9d535288b14",
+    "name": "一般財団法人神戸港湾福利厚生協会",
+    "type": "一般財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-663314416028f1c2"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-8010f222a03f4e28",
+    "name": "公益財団法人交通エコロジー・モビリティ財団",
+    "type": "公益財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-37fa0eb8859d5f87"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-luup",
+    "name": "株式会社Luup",
+    "aliases": [
+      "株式会社Ｌｕｕｐ",
+      "LUUP",
+      "Luup",
+      "ループ"
+    ],
+    "type": "株式会社",
+    "prefecture": "東京都",
+    "ministry": {
+      "name": "警察庁",
+      "count": 0
+    },
+    "counts": {
+      "publicRecords": 0,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 0
+    },
+    "relatedPersons": [],
+    "sources": [
+      "gbizinfo-luup",
+      "luup-management-structure-20241016",
+      "luup-company-profile"
+    ],
+    "topics": [
+      "ライドシェア",
+      "モビリティ",
+      "電動キックボード",
+      "電動マイクロモビリティ"
+    ],
+    "basicInfo": {
+      "corporateNumber": "1011001123515",
+      "officialName": "株式会社Ｌｕｕｐ",
+      "registeredAddress": "東京都品川区西五反田８丁目９番５号ＦＯＲＥＣＡＳＴ五反田ＷＥＳＴ７階",
+      "prefecture": "東京都",
+      "city": "品川区",
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1011001123515"
+    },
+    "gbizInfo": {
+      "businessSummary": "電動マイクロモビリティのシェアリングサービス提供",
+      "employeeNumber": 128,
+      "establishmentDate": "2018-07-30",
+      "representativeName": "代表取締役 岡井 大輝",
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1011001123515",
+      "fetchedAt": "2026-06-11"
+    },
+    "publicOfficers": [
+      {
+        "slug": "person-public-631f5638307eb6aa",
+        "name": "樋口 建史",
+        "role": "監査役",
+        "formerOrganization": "警察庁",
+        "formerPosition": "元警視総監",
+        "profile": "警視総監、ミャンマー駐箚特命全権大使など行政機関で要職を務めたほか、複数企業で社外役員や顧問を歴任した経歴が、株式会社Luupの公式会社情報に掲載されています。",
+        "sourceIds": [
+          "luup-management-structure-20241016",
+          "luup-company-profile"
+        ]
+      },
+      {
+        "slug": "person-public-5cba53619b92884a",
+        "name": "國峯 孝祐",
+        "role": "監査役",
+        "formerOrganization": "経済産業省",
+        "formerPosition": "元経済産業省、弁護士",
+        "profile": "8年間の経済産業省勤務後に弁護士となり、2017年に國峯法律事務所を設立した経歴が、株式会社Luupの公式会社情報に掲載されています。",
+        "sourceIds": [
+          "luup-management-structure-20241016",
+          "luup-company-profile"
+        ]
+      }
+    ]
   }
 ]
