@@ -10,6 +10,59 @@ const FILE_NAMES = [
   "meta.json",
   "sources.json",
 ];
+const PAGE_LASTMOD_FILE = "page-lastmod.json";
+
+function recordsBySlug(records, field) {
+  return new Map(records.map((record) => [record[field], record]));
+}
+
+function changedSlugs(beforeRecords, afterRecords, field) {
+  const before = recordsBySlug(beforeRecords, field);
+  const after = recordsBySlug(afterRecords, field);
+  const slugs = new Set([...before.keys(), ...after.keys()]);
+
+  return [...slugs].filter(
+    (slug) => JSON.stringify(before.get(slug)) !== JSON.stringify(after.get(slug)),
+  );
+}
+
+function updatePageLastmod(productionDirectory, before, after) {
+  const pageLastmodPath = path.join(productionDirectory, PAGE_LASTMOD_FILE);
+  const existing = fs.existsSync(pageLastmodPath) ? readJson(pageLastmodPath) : {};
+  const pages = { ...(existing.pages ?? {}) };
+  const updatedAt = new Date().toISOString();
+  const changedPersons = changedSlugs(before.persons, after.persons, "person_slug");
+  const changedCorporations = changedSlugs(
+    before.corporations,
+    after.corporations,
+    "slug",
+  );
+  const hasDatasetChange =
+    JSON.stringify(before.records) !== JSON.stringify(after.records) ||
+    changedPersons.length > 0 ||
+    changedCorporations.length > 0;
+
+  if (hasDatasetChange) {
+    for (const pathname of [
+      "/",
+      "/rankings",
+      "/corporations",
+      "/persons",
+      "/organizations",
+    ]) {
+      pages[pathname] = updatedAt;
+    }
+  }
+  for (const slug of changedPersons) pages[`/persons/${slug}`] = updatedAt;
+  for (const slug of changedCorporations) {
+    pages[`/corporations/${slug}`] = updatedAt;
+  }
+
+  fs.writeFileSync(
+    pageLastmodPath,
+    `${JSON.stringify({ version: 1, pages }, null, 2)}\n`,
+  );
+}
 
 function parseArguments(argv) {
   const options = {};
@@ -143,12 +196,26 @@ function applyCandidate(options) {
       path.join(archiveDirectory, fileName),
     );
   }
+  const pageLastmodPath = path.join(productionDirectory, PAGE_LASTMOD_FILE);
+  if (fs.existsSync(pageLastmodPath)) {
+    fs.copyFileSync(pageLastmodPath, path.join(archiveDirectory, PAGE_LASTMOD_FILE));
+  }
+  const before = {
+    records: readJson(path.join(productionDirectory, "records.json")),
+    persons: readJson(path.join(productionDirectory, "persons.json")),
+    corporations: readJson(path.join(productionDirectory, "corporations.json")),
+  };
   for (const fileName of FILE_NAMES) {
     fs.copyFileSync(
       path.join(candidateDirectory, fileName),
       path.join(productionDirectory, fileName),
     );
   }
+  updatePageLastmod(productionDirectory, before, {
+    records: readJson(path.join(productionDirectory, "records.json")),
+    persons: readJson(path.join(productionDirectory, "persons.json")),
+    corporations: readJson(path.join(productionDirectory, "corporations.json")),
+  });
 
   console.log("Production candidate applied.");
   console.log(`- archive: ${path.relative(rootDirectory, archiveDirectory)}`);

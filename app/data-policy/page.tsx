@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { DataNotice } from "@/components/ui";
+import InformationProvisionForm from "@/components/InformationProvisionForm";
 
 export default function DataPolicyPage() {
   return (
@@ -107,8 +108,9 @@ export default function DataPolicyPage() {
       <section id="contact" className="rounded-lg border border-outline-variant bg-surface-container-low p-6 text-center">
         <h2 className="mb-3 text-2xl font-bold text-primary">掲載内容の修正・お問い合わせ</h2>
         <p className="mx-auto max-w-2xl text-sm leading-relaxed text-on-surface-variant">
-          事実と異なるデータが表示されている場合や、情報の削除依頼等は、一次資料のURLを添えてお問い合わせください。MVP段階では専用フォーム未実装のため、本項を問い合わせ先の仮置きとしています。
+          事実と異なるデータが表示されている場合や、情報の削除依頼等は、一次資料のURLと確認日を添えてお知らせください。内容は一次資料に基づいて確認し、根拠が不十分な情報は掲載・更新しません。
         </p>
+        <InformationProvisionForm />
       </section>
 
       <section>

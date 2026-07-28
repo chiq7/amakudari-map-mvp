@@ -45,6 +45,7 @@ function validateData() {
     "topics.json",
     "records.json",
     "meta.json",
+    "page-lastmod.json",
   ];
 
   for (const fileName of requiredFiles) {
@@ -64,12 +65,30 @@ function validateData() {
   const meta = readJson("meta.json");
   const sources = readJson("sources.json");
   const topics = readJson("topics.json");
+  const pageLastmod = readJson("page-lastmod.json");
 
   if (!Array.isArray(corporations)) errors.push("corporations.json must contain an array.");
   if (!Array.isArray(persons)) errors.push("persons.json must contain an array.");
   if (!Array.isArray(records)) errors.push("records.json must contain an array.");
   if (!Array.isArray(sources)) errors.push("sources.json must contain an array.");
   if (!Array.isArray(topics)) errors.push("topics.json must contain an array.");
+  if (
+    !pageLastmod ||
+    typeof pageLastmod !== "object" ||
+    typeof pageLastmod.pages !== "object" ||
+    Array.isArray(pageLastmod.pages)
+  ) {
+    errors.push("page-lastmod.json must contain a pages object.");
+  } else {
+    for (const [pathname, value] of Object.entries(pageLastmod.pages)) {
+      if (!pathname.startsWith("/")) {
+        errors.push(`page-lastmod.json path must start with /: ${pathname}`);
+      }
+      if (typeof value !== "string" || Number.isNaN(new Date(value).getTime())) {
+        errors.push(`page-lastmod.json has an invalid date for: ${pathname}`);
+      }
+    }
+  }
 
   if (errors.length > 0) {
     return errors;
