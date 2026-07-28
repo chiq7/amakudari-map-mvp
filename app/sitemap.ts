@@ -1,15 +1,10 @@
 import type { MetadataRoute } from "next";
 import organizationsData from "@/public/data/organizations.json";
-import topicsData from "@/public/data/topics.json";
 import { corporations, persons, publicOfficers } from "@/lib/static-content";
 import { canonicalUrl } from "@/lib/seo";
 
 type OrganizationRecord = {
   organization_slug: string;
-};
-
-type TopicRecord = {
-  topic_slug: string;
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -19,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/corporations",
     "/persons",
     "/organizations",
-    "/topics",
     "/data-policy",
     "/about",
   ];
@@ -41,9 +35,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: canonicalUrl(
         `/organizations/${organization.organization_slug}`,
       ),
-    })),
-    ...(topicsData as TopicRecord[]).map((topic) => ({
-      url: canonicalUrl(`/topics/${topic.topic_slug}`),
     })),
   ];
 }

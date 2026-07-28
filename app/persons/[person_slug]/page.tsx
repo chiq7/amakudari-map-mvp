@@ -12,8 +12,20 @@ export function generateMetadata({
 }: {
   params: { person_slug: string };
 }): Metadata {
+  const person = getPerson(params.person_slug);
+  const title = `${person.name}氏の公表再就職情報`;
+  const description = `${person.name}氏の${person.ministry}における官職と、${person.corporationName}への再就職に関する公表資料を整理しています。`;
   return {
+    title,
+    description,
     alternates: { canonical: `/persons/${params.person_slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `/persons/${params.person_slug}`,
+      images: ["/ogp.png"],
+    },
+    twitter: { title, description, images: ["/ogp.png"] },
   };
 }
 

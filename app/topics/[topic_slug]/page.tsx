@@ -26,6 +26,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     return {
         alternates: { canonical: `/topics/${params.topic_slug}` },
+        robots: { index: false, follow: true },
     };
 }
 

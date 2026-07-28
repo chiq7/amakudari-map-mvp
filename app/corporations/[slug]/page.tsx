@@ -103,10 +103,18 @@ export function generateMetadata({
       : highlights.kind === "reemployment-record"
         ? `${corporation.name}の公表再就職情報。${peopleDescription}など、国家公務員再就職状況の公表資料に基づく情報を整理。`
         : `${corporation.name}の法人情報を、公表資料と公的法人情報に基づいて整理。`;
+  const title = `${corporation.name}の公表再就職情報`;
   return {
+    title,
     alternates: { canonical: `/corporations/${params.slug}` },
     description,
-    openGraph: { description },
+    openGraph: {
+      title,
+      description,
+      url: `/corporations/${params.slug}`,
+      images: ["/ogp.png"],
+    },
+    twitter: { title, description, images: ["/ogp.png"] },
   };
 }
 

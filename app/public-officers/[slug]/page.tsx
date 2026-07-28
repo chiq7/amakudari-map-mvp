@@ -10,9 +10,16 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const officer = getPublicOfficer(params.slug);
+  const title = officer ? `${officer.name}氏の公表役員プロフィール` : "公表役員プロフィール";
+  const description = officer
+    ? `${officer.corporationName}が公表している${officer.name}氏の役員・経歴情報を、出典とあわせて整理しています。`
+    : "法人の公表情報に基づく役員プロフィールです。";
   return {
-    title: officer ? `${officer.name}氏の公表役員プロフィール` : "公表役員プロフィール",
+    title,
+    description,
     alternates: { canonical: `/public-officers/${params.slug}` },
+    openGraph: { title, description, url: `/public-officers/${params.slug}`, images: ["/ogp.png"] },
+    twitter: { title, description, images: ["/ogp.png"] },
   };
 }
 

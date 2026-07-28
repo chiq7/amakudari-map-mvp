@@ -11,6 +11,9 @@ import {
 import { SearchBox, TagChip } from "@/components/ui";
 
 export const metadata: Metadata = {
+  title: "天下りマップ｜公式資料から見る官民人材移動データベース",
+  description:
+    "政府・各省庁等の公表資料に基づく再就職情報を、法人・省庁・待機日数・地域から検索・閲覧できるデータベースです。",
   alternates: { canonical: "/" },
 };
 
@@ -157,8 +160,22 @@ function StatTile({
 }
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "天下りマップ",
+    url: "https://amakudari.jp/",
+    description:
+      "政府・各省庁等の公表資料に基づく再就職情報を検索・閲覧できるデータベースです。",
+    inLanguage: "ja-JP",
+  };
+
   return (
     <div className="flex flex-col gap-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <section
         className="mx-auto flex max-w-5xl flex-col items-center gap-5 py-4 text-center md:py-6"
         data-analytics-location="home_hero"
