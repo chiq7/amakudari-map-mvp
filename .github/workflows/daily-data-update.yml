@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: daily-data-update
@@ -19,6 +18,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: master
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -70,23 +71,15 @@ jobs:
         if: steps.pick.outputs.picked_count != '0'
         run: npm run build
 
-      - name: Prepare pull request metadata
+      - name: Commit verified production update
         if: steps.pick.outputs.picked_count != '0'
-        id: metadata
-        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
-
-      - name: Create pull request
-        if: steps.pick.outputs.picked_count != '0'
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: automation/daily-data-update
-          delete-branch: true
-          commit-message: "chore: daily data update ${{ steps.pick.outputs.picked_count }} record"
-          title: "chore: daily data update ${{ steps.metadata.outputs.date }} (${{ steps.pick.outputs.picked_count }} record)"
-          body: |
-            Automated low-risk daily data update. This pull request only contains records from the committed, pre-validated public-source pool and must remain unpublished if the source or validation is insufficient.
-
-            - Added records: ${{ steps.pick.outputs.picked_count }}
-            - Source: committed Cabinet Office 106-25-1 data pool
-            - Validation: candidate, production data, TypeScript, and build
+        run: |
+          git config user.name "amakudari-map automation"
+          git config user.email "amakudari-map-automation@users.noreply.github.com"
+          git add data/production data/pool/unreleased_records.json
+          if git diff --cached --quiet; then
+            echo "No verified production change to publish."
+            exit 0
+          fi
+          git commit -m "chore: publish daily verified data update (${{ steps.pick.outputs.picked_count }} record)"
+          git push origin HEAD:master
