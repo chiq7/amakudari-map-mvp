@@ -27,6 +27,18 @@
 
 `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` と `NEXT_PUBLIC_BING_SITE_VERIFICATION` は、ビルド時にそれぞれ `google-site-verification` と `msvalidate.01` のメタタグとして出力されます。値はリポジトリにコミットしません。
 
+## 4. IndexNow
+
+Vercel の対象デプロイが **Ready** になってから、追加・更新・削除した URL だけを通知します。
+
+```powershell
+npm.cmd run notify:indexnow -- --url /ministries/finance --url /corporations/corporation-example
+```
+
+複数 URL はテキストファイルに1行ずつ記載して `--file changed-urls.txt` でも送信できます。`--dry-run` を付けると送信対象だけを確認します。全ページを繰り返し送信せず、完全な検出経路は sitemap.xml に任せます。
+
+IndexNow の所有権確認用キーは、ルートで公開するテキストファイルです。キーとファイル名は一致させ、変更しないでください。
+
 ## 補足
 
 サイトマップ送信や URL 検査はクロール・インデックス登録を保証するものではありません。登録状況は Google Search Console と Bing Webmaster Tools で確認してください。
