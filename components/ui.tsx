@@ -104,21 +104,45 @@ export function Breadcrumb({
 }: {
   items: Array<{ label: string; href?: string }>;
 }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.label,
+      ...(item.href
+        ? { item: new URL(item.href, "https://amakudari.jp").toString() }
+        : {}),
+    })),
+  };
+
   return (
-    <nav className="flex flex-wrap items-center gap-2 text-[13px] font-semibold text-on-surface-variant">
-      {items.map((item, index) => (
-        <span key={`${item.label}-${index}`} className="flex items-center gap-2">
-          {index > 0 ? <span aria-hidden="true">/</span> : null}
-          {item.href ? (
-            <Link href={item.href} className="hover:text-secondary">
-              {item.label}
-            </Link>
-          ) : (
-            <span className="text-on-surface">{item.label}</span>
-          )}
-        </span>
-      ))}
-    </nav>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
+      <nav
+        aria-label="パンくずリスト"
+        className="flex flex-wrap items-center gap-2 text-[13px] font-semibold text-on-surface-variant"
+      >
+        {items.map((item, index) => (
+          <span key={`${item.label}-${index}`} className="flex items-center gap-2">
+            {index > 0 ? <span aria-hidden="true">/</span> : null}
+            {item.href ? (
+              <Link href={item.href} className="hover:text-secondary">
+                {item.label}
+              </Link>
+            ) : (
+              <span className="text-on-surface">{item.label}</span>
+            )}
+          </span>
+        ))}
+      </nav>
+    </>
   );
 }
 

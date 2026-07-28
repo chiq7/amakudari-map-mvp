@@ -1,8 +1,8 @@
-name: Daily data update
+name: Daily low-risk data update
 
 on:
   schedule:
-    - cron: "17 20 * * *"
+    - cron: "0 21 * * *"
   workflow_dispatch:
 
 permissions:
@@ -29,9 +29,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Pick 20 unreleased records
+      - name: Pick one pre-validated unreleased record
         id: pick
-        run: npm run pick:pool -- --count 20
+        run: npm run pick:pool -- --count 1
 
       - name: Generate merged production candidate
         if: steps.pick.outputs.picked_count != '0'
@@ -78,10 +78,10 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: automation/daily-data-update
           delete-branch: true
-          commit-message: "chore: daily data update ${{ steps.pick.outputs.picked_count }} records"
-          title: "chore: daily data update ${{ steps.metadata.outputs.date }} (${{ steps.pick.outputs.picked_count }} records)"
+          commit-message: "chore: daily data update ${{ steps.pick.outputs.picked_count }} record"
+          title: "chore: daily data update ${{ steps.metadata.outputs.date }} (${{ steps.pick.outputs.picked_count }} record)"
           body: |
-            Automated daily data update.
+            Automated low-risk daily data update. This pull request only contains records from the committed, pre-validated public-source pool and must remain unpublished if the source or validation is insufficient.
 
             - Added records: ${{ steps.pick.outputs.picked_count }}
             - Source: committed Cabinet Office 106-25-1 data pool

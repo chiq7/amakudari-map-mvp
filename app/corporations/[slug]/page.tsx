@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import type { GbizInfoCollection } from "@/lib/types";
 import { Breadcrumb, HighlightStatCard, SourceLinkList, StatCard, TagChip } from "@/components/ui";
+import ShareButton from "@/components/ShareButton";
 import {
   corporations,
   getCorporation,
@@ -187,16 +188,19 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
       />
 
       <section className="flex flex-col gap-3">
-        <div>
-          <h1 className="text-3xl font-bold text-primary md:text-4xl">{corporation.name}</h1>
-          <p className="mt-1.5 text-base leading-snug text-on-surface-variant">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h1 className="text-3xl font-bold text-primary md:text-4xl">{corporation.name}</h1>
+            <p className="mt-1.5 text-base leading-snug text-on-surface-variant">
             {corporation.description || "公表資料に基づく法人・人材情報"}
-          </p>
-          <p className="mt-1.5 max-w-4xl text-sm leading-snug text-on-surface-variant">
+            </p>
+            <p className="mt-1.5 max-w-4xl text-sm leading-snug text-on-surface-variant">
             {corporation.publicOfficers.length > 0
               ? `${corporation.name}について、公的法人情報と同社が公表している役員・経歴情報をもとに、法人情報および元行政機関出身者の就任情報を整理しています。表示内容は公開情報に基づく記録整理であり、違法性や責任を断定するものではありません。`
               : `このページでは、${corporation.name}に関する公表再就職記録を法人単位で整理し、元府省庁、再就職者数、再就職時期、出典資料を確認できるようにしています。表示内容は公表資料の記録を整理したものです。`}
-          </p>
+            </p>
+          </div>
+          <ShareButton title={`${corporation.name}の公表再就職情報 | 天下りマップ`} />
         </div>
         {personHighlights.people.length > 0 && (
           <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-sm">

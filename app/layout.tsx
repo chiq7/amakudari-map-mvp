@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import AnalyticsListener from "@/components/AnalyticsListener";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
@@ -51,7 +53,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID?.trim();
+  const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
 
   return (
     <html lang="ja">
@@ -62,8 +64,10 @@ export default function RootLayout({
           {children}
         </main>
         <SiteFooter />
+        <Analytics />
+        <SpeedInsights />
       </body>
-      {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
+      {googleAnalyticsId ? <GoogleAnalytics gaId={googleAnalyticsId} /> : null}
     </html>
   );
 }

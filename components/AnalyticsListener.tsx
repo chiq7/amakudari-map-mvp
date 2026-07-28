@@ -30,6 +30,17 @@ export default function AnalyticsListener() {
   const router = useRouter();
 
   useEffect(() => {
+    const pageType = getPageType(pathname);
+    const detailEventByPageType: Partial<Record<string, string>> = {
+      person_detail: "view_person_detail",
+      corporation_detail: "view_corporation_detail",
+      organization_detail: "view_organization_detail",
+    };
+    const detailEvent = detailEventByPageType[pageType];
+    if (detailEvent) {
+      trackEvent(detailEvent, { page_type: pageType });
+    }
+
     function handleClick(event: MouseEvent) {
       const target = event.target;
       if (!(target instanceof Element)) return;
@@ -60,8 +71,35 @@ export default function AnalyticsListener() {
         });
       }
 
+      if (anchor.dataset.analyticsEvent === "contact_link") {
+        trackEvent("click_contact_link", { location });
+      }
+
       const url = new URL(anchor.href, window.location.origin);
       if (url.origin !== window.location.origin) return;
+
+      const filterKeys = [
+        "ministry",
+        "type",
+        "region",
+        "flag",
+        "tag",
+        "topic",
+        "position",
+        "waitDays",
+        "sort",
+        "nextDay",
+      ];
+      const activeFilterCount = filterKeys.filter((key) =>
+        url.searchParams.has(key),
+      ).length;
+      if (url.pathname === "/corporations" && activeFilterCount > 0) {
+        trackEvent("filter_use", {
+          from_page_type: getPageType(pathname),
+          filter_count: activeFilterCount,
+          location,
+        });
+      }
 
       trackEvent("click_internal_link", {
         link_type: anchor.dataset.linkType ?? getLinkType(url.pathname),

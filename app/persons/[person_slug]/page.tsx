@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Breadcrumb, SourceLinkList, StatCard, TagChip } from "@/components/ui";
+import ShareButton from "@/components/ShareButton";
 import { getPerson, persons } from "@/lib/static-content";
 
 export function generateStaticParams() {
@@ -46,8 +47,13 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
       />
 
       <section>
-        <h1 className="text-3xl font-bold text-primary md:text-4xl">{person.name} 氏の公表再就職情報</h1>
-        <p className="mt-2 text-base text-on-surface-variant">政府・各省庁等の公表資料に基づく再就職情報</p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h1 className="text-3xl font-bold text-primary md:text-4xl">{person.name} 氏の公表再就職情報</h1>
+            <p className="mt-2 text-base text-on-surface-variant">政府・各省庁等の公表資料に基づく再就職情報</p>
+          </div>
+          <ShareButton title={`${person.name}氏の公表再就職情報 | 天下りマップ`} />
+        </div>
       </section>
 
       <section className="rounded-lg border border-outline-variant bg-surface-container-low p-4">

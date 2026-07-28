@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb, SourceLinkList, TagChip } from "@/components/ui";
+import ShareButton from "@/components/ShareButton";
 import { getPublicOfficer, publicOfficers, sources } from "@/lib/static-content";
 
 export function generateStaticParams() {
@@ -40,12 +41,15 @@ export default function PublicOfficerPage({ params }: { params: { slug: string }
         ]}
       />
 
-      <section>
-        <p className="text-sm font-semibold text-secondary">公表役員プロフィール</p>
-        <h1 className="mt-1 text-3xl font-bold text-primary md:text-4xl">{officer.name} 氏</h1>
-        <p className="mt-2 text-base text-on-surface-variant">
-          {officer.corporationName}が公表している役員・経歴情報
-        </p>
+      <section className="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <p className="text-sm font-semibold text-secondary">公表役員プロフィール</p>
+          <h1 className="mt-1 text-3xl font-bold text-primary md:text-4xl">{officer.name} 氏</h1>
+          <p className="mt-2 text-base text-on-surface-variant">
+            {officer.corporationName}が公表している役員・経歴情報
+          </p>
+        </div>
+        <ShareButton title={`${officer.name}氏の公表役員プロフィール | 天下りマップ`} />
       </section>
 
       <section className="rounded-lg border border-outline-variant bg-surface-container-low p-4">

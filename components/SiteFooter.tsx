@@ -19,6 +19,8 @@ export default function SiteFooter() {
             <Link
               key={link.label}
               href={link.href}
+              data-analytics-event={link.href.includes("#contact") ? "contact_link" : undefined}
+              data-analytics-location="site_footer"
               className="text-[13px] font-semibold text-on-surface-variant transition-colors hover:text-secondary"
             >
               {link.label}

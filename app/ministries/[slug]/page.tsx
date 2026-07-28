@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { Breadcrumb } from "@/components/ui";
+import ShareButton from "@/components/ShareButton";
 import { corporations, persons } from "@/lib/static-content";
 import { ministryPages } from "@/lib/ministry-pages";
 
@@ -20,10 +22,15 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const ministry = getMinistry(params.slug);
   if (!ministry) return {};
 
+  const title = `${ministry.name}の天下り先一覧`;
+  const description = `${ministry.name}出身者に関する公表再就職情報を、再就職先法人・件数・待機日数とともに一覧で確認できます。政府公表資料に基づくデータベースです。`;
+
   return {
-    title: `${ministry.name}の天下り先一覧`,
-    description: `${ministry.name}出身者に関する公表再就職情報を、再就職先法人・件数・待機日数とともに一覧で確認できます。政府公表資料に基づくデータベースです。`,
+    title,
+    description,
     alternates: { canonical: `/ministries/${ministry.slug}` },
+    openGraph: { title, description, url: `/ministries/${ministry.slug}`, images: ["/ogp.png"] },
+    twitter: { title, description, images: ["/ogp.png"] },
   };
 }
 
@@ -48,15 +55,25 @@ export default function MinistryPage({ params }: PageProps) {
 
   return (
     <div className="flex flex-col gap-8">
-      <section className="mx-auto max-w-4xl text-center">
-        <p className="text-sm font-bold text-secondary">省庁別の公表再就職情報</p>
-        <h1 className="mt-2 text-3xl font-bold text-primary md:text-4xl">
-          {ministry.name}の天下り先一覧
-        </h1>
-        <p className="mt-3 text-base leading-relaxed text-on-surface-variant">
-          政府公表資料に記載された{ministry.name}出身者の再就職情報を、再就職先法人ごとに整理しています。
-          掲載内容は公表資料の記録であり、個人・法人・省庁の適法性や妥当性を評価するものではありません。
-        </p>
+      <Breadcrumb
+        items={[
+          { label: "TOP", href: "/" },
+          { label: "省庁別一覧", href: "/corporations" },
+          { label: ministry.name },
+        ]}
+      />
+      <section className="mx-auto flex max-w-4xl flex-wrap items-start justify-between gap-3 text-center">
+        <div className="min-w-0 flex-1">
+          <p className="text-sm font-bold text-secondary">省庁別の公表再就職情報</p>
+          <h1 className="mt-2 text-3xl font-bold text-primary md:text-4xl">
+            {ministry.name}の天下り先一覧
+          </h1>
+          <p className="mt-3 text-base leading-relaxed text-on-surface-variant">
+            政府公表資料に記載された{ministry.name}出身者の再就職情報を、再就職先法人ごとに整理しています。
+            掲載内容は公表資料の記録であり、個人・法人・省庁の適法性や妥当性を評価するものではありません。
+          </p>
+        </div>
+        <ShareButton title={`${ministry.name}の天下り先一覧 | 天下りマップ`} />
       </section>
 
       <section className="grid grid-cols-1 gap-4 md:grid-cols-3">

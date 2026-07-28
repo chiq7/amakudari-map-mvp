@@ -3,6 +3,7 @@
 
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { Breadcrumb } from '@/components/ui';
 
 export async function generateStaticParams() {
     const fs = require('fs');
@@ -22,9 +23,15 @@ async function getOrganization(slug: string) {
 
 export async function generateMetadata({ params }: { params: { organization_slug: string } }) {
     const org = await getOrganization(params.organization_slug);
+    if (!org) return {} satisfies Metadata;
+    const title = `${org.再就職先名称}の関連情報`;
+    const description = `${org.再就職先名称}について、公表資料に基づく再就職者数、待機日数、主な役職・業務内容を整理しています。`;
     return {
-        title: `${org?.再就職先名称}の関連情報`,
+        title,
+        description,
         alternates: { canonical: `/organizations/${params.organization_slug}` },
+        openGraph: { title, description, url: `/organizations/${params.organization_slug}`, images: ['/ogp.png'] },
+        twitter: { title, description, images: ['/ogp.png'] },
     } satisfies Metadata;
 }
 
@@ -37,6 +44,11 @@ export default async function OrganizationPage({ params }: { params: { organizat
 
     return (
         <div>
+            <Breadcrumb items={[
+                { label: 'TOP', href: '/' },
+                { label: '組織一覧', href: '/organizations' },
+                { label: org.再就職先名称 },
+            ]} />
             <h1 className="text-4xl font-bold mb-2">{org.再就職先名称}</h1>
             <p className="text-gray-400">公表資料に基づく官民人材移動の関連情報</p>
 

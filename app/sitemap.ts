@@ -29,23 +29,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: canonicalUrl(`/ministries/${ministry.slug}`),
       ...(dataLastModified ? { lastModified: dataLastModified } : {}),
     })),
+    // Detail records do not yet have a trustworthy per-page modification date.
+    // Omitting lastModified is more accurate than repeating a dataset-wide date.
     ...corporations.map((corporation) => ({
       url: canonicalUrl(`/corporations/${corporation.slug}`),
-      ...(dataLastModified ? { lastModified: dataLastModified } : {}),
     })),
     ...persons.map((person) => ({
       url: canonicalUrl(`/persons/${person.slug}`),
-      ...(dataLastModified ? { lastModified: dataLastModified } : {}),
     })),
     ...publicOfficers.map((officer) => ({
       url: canonicalUrl(`/public-officers/${officer.slug}`),
-      ...(dataLastModified ? { lastModified: dataLastModified } : {}),
     })),
     ...(organizationsData as OrganizationRecord[]).map((organization) => ({
       url: canonicalUrl(
         `/organizations/${organization.organization_slug}`,
       ),
-      ...(dataLastModified ? { lastModified: dataLastModified } : {}),
     })),
   ];
 }
