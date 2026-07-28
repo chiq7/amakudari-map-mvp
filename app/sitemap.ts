@@ -4,6 +4,7 @@ import organizationsData from "@/public/data/organizations.json";
 import { corporations, persons, publicOfficers } from "@/lib/static-content";
 import { canonicalUrl } from "@/lib/seo";
 import { ministryPages } from "@/lib/ministry-pages";
+import { newsArticles } from "@/lib/news";
 
 type OrganizationRecord = {
   organization_slug: string;
@@ -23,15 +24,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/data-policy",
     "/about",
   ];
+  const latestNewsModified = newsArticles
+    .map((article) => toLastModified(article.dateModified))
+    .filter((date): date is Date => Boolean(date))
+    .sort((left, right) => right.getTime() - left.getTime())[0];
 
   return [
     ...staticPaths.map((pathname) => ({
       url: canonicalUrl(pathname),
       ...lastModifiedFor(pathname),
     })),
+    {
+      url: canonicalUrl("/news"),
+      ...(latestNewsModified ? { lastModified: latestNewsModified } : {}),
+    },
     ...ministryPages.map((ministry) => ({
       url: canonicalUrl(`/ministries/${ministry.slug}`),
       ...lastModifiedFor(`/ministries/${ministry.slug}`),
+    })),
+    ...newsArticles.map((article) => ({
+      url: canonicalUrl(`/news/${article.slug}`),
+      ...(toLastModified(article.dateModified)
+        ? { lastModified: toLastModified(article.dateModified) }
+        : lastModifiedFor(`/news/${article.slug}`)),
     })),
     ...corporations.map((corporation) => ({
       url: canonicalUrl(`/corporations/${corporation.slug}`),

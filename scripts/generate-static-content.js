@@ -15,6 +15,9 @@ const records = readJson("records.json");
 const meta = readJson("meta.json");
 const sources = readJson("sources.json");
 const topics = readJson("topics.json");
+const news = JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), "data", "news", "articles.json"), "utf8"),
+);
 
 console.log("Production static content source files loaded:");
 console.log(`- corporations: ${corporations.length}`);
@@ -25,6 +28,7 @@ console.log(`- meta.productionRecordCount: ${meta.productionRecordCount ?? "n/a"
 console.log(`- meta.lastUpdated: ${meta.lastUpdated ?? "n/a"}`);
 console.log(`- sources: ${sources.length}`);
 console.log(`- topic groups: ${topics.length}`);
+console.log(`- news articles: ${news.length}`);
 console.log("");
 console.log("No generated files were written.");
 console.log("Run `npm run validate:data` before using updated data.");

@@ -30,6 +30,8 @@ export function getPageType(pathname: string) {
   if (/^\/organizations\/[^/]+$/.test(pathname)) return "organization_detail";
   if (pathname === "/topics") return "topics_index";
   if (/^\/topics\/[^/]+$/.test(pathname)) return "topic_detail";
+  if (pathname === "/news") return "news_index";
+  if (/^\/news\/[^/]+$/.test(pathname)) return "news_article";
   if (pathname === "/data-policy") return "data_policy";
   if (pathname === "/search") return "search";
   if (pathname === "/about") return "about";

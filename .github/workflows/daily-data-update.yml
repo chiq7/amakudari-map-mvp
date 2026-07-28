@@ -54,6 +54,10 @@ jobs:
         if: steps.pick.outputs.picked_count != '0'
         run: npm run validate:data
 
+      - name: Validate news content
+        if: steps.pick.outputs.picked_count != '0'
+        run: npm run validate:news
+
       - name: Generate content check
         if: steps.pick.outputs.picked_count != '0'
         run: npm run generate:content

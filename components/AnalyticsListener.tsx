@@ -35,6 +35,7 @@ export default function AnalyticsListener() {
       person_detail: "view_person_detail",
       corporation_detail: "view_corporation_detail",
       organization_detail: "view_organization_detail",
+      news_article: "view_news_article",
     };
     const detailEvent = detailEventByPageType[pageType];
     if (detailEvent) {

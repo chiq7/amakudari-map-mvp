@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "validate:data": "node scripts/validate-data.js",
+    "validate:news": "node scripts/validate-news.js",
     "generate:content": "node scripts/generate-static-content.js",
     "import:excel": "node scripts/import-cabinet-office-excel.js",
     "promote:draft": "node scripts/promote-draft-to-production.js",
