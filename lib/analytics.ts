@@ -2,12 +2,7 @@ export type AnalyticsValue = string | number | boolean | null | undefined;
 export type AnalyticsParams = Record<string, AnalyticsValue>;
 
 type AnalyticsWindow = Window & {
-  dataLayer?: Array<Record<string, AnalyticsValue> | IArguments>;
-  gtag?: (
-    command: "event",
-    eventName: string,
-    params: Record<string, AnalyticsValue>,
-  ) => void;
+  dataLayer?: unknown[];
 };
 
 export function trackEvent(eventName: string, params: AnalyticsParams = {}) {
@@ -20,17 +15,8 @@ export function trackEvent(eventName: string, params: AnalyticsParams = {}) {
     Object.entries(params).filter(([, value]) => value !== undefined),
   );
 
-  if (typeof analyticsWindow.gtag === "function") {
-    analyticsWindow.gtag("event", eventName, safeParams);
-    return;
-  }
-
-  if (!Array.isArray(analyticsWindow.dataLayer)) return;
-
-  analyticsWindow.dataLayer.push({
-    event: eventName,
-    ...safeParams,
-  });
+  const dataLayer = analyticsWindow.dataLayer ?? (analyticsWindow.dataLayer = []);
+  dataLayer.push(["event", eventName, safeParams]);
 }
 
 export function getPageType(pathname: string) {
