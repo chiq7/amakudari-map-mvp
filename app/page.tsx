@@ -9,9 +9,10 @@ import {
   totals,
 } from "@/lib/static-content";
 import { SearchBox, TagChip } from "@/components/ui";
+import { getMinistryPath } from "@/lib/ministry-pages";
 
 export const metadata: Metadata = {
-  title: "天下りマップ｜公式資料から見る官民人材移動データベース",
+  title: "天下り先一覧｜公式資料から見る官民人材移動データベース",
   description:
     "政府・各省庁等の公表資料に基づく再就職情報を、法人・省庁・待機日数・地域から検索・閲覧できるデータベースです。",
   alternates: { canonical: "/" },
@@ -182,7 +183,7 @@ export default function Home() {
       >
         <div>
           <h1 className="text-4xl font-bold tracking-normal text-primary md:text-5xl">
-            公式資料から見る、官民人材移動データベース
+            天下り先一覧を、公式資料から確認
           </h1>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-on-surface-variant md:text-lg">
             政府・各省庁等が公表する再就職関連資料をもとに、法人・省庁・待機日数・地域などの切り口から検索しやすく整理しています。
@@ -477,7 +478,11 @@ export default function Home() {
                 {group.links.map(([label, count]) => (
                   <Link
                     key={label}
-                    href={`/corporations?${group.queryKey}=${encodeURIComponent(String(label))}`}
+                    href={
+                      group.queryKey === "ministry"
+                        ? getMinistryPath(String(label))
+                        : `/corporations?${group.queryKey}=${encodeURIComponent(String(label))}`
+                    }
                     className="flex items-center justify-between rounded border border-outline-variant bg-surface-container-low px-3 py-2 hover:border-secondary"
                   >
                     <span className="text-sm font-semibold">{label}</span>

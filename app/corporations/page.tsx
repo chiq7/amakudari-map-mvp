@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { corporations, totals } from "@/lib/static-content";
+import { getMinistryPath } from "@/lib/ministry-pages";
 import { HighlightStatCard, SearchBox, StatCard, TagChip } from "@/components/ui";
 import type { Corporation } from "@/lib/types";
 
@@ -355,7 +356,7 @@ function CorporationsContent() {
             <p className="mt-1 text-sm text-on-surface-variant">省庁ごとに、主な再就職先法人を確認できます。</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {ministryLinks.map((label) => (
-                <TagChip key={label} href={`/corporations?ministry=${encodeURIComponent(label)}`}>
+                <TagChip key={label} href={getMinistryPath(label)}>
                   {label}
                 </TagChip>
               ))}
