@@ -2596,5 +2596,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-b14a2349e05a9a96",
+    "name": "森 政之",
+    "fromMinistry": "文部科学省",
+    "previousPosition": "文部科学省大臣官房文教施設企画・防災部技術参事官",
+    "corporationSlug": "corporation-72fe61de5a1337fb",
+    "corporationName": "学校法人芝浦工業大学",
+    "newPosition": "芝浦工業大学SIT総合研究所特任教授",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "文部科学省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]

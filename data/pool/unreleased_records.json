@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 32,
+  "remainingCount": 31,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "76c938cf693bfd2e538da1bf20cc5f2e14ae7c5f5f5e110bc47b403c4ae98dca",
-      "dedupeKey": "9e7f4ca549d13c8077a9264d72bcd99a549a503a5724b62554a6cd4511cafcf5",
-      "personName": "森 政之",
-      "originMinistry": "文部科学省",
-      "titleAtRetirement": "文部科学省大臣官房文教施設企画・防災部技術参事官",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "学校法人芝浦工業大学",
-      "corporationType": "学校法人",
-      "newPosition": "芝浦工業大学SIT総合研究所特任教授",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "3d54f62ba2f6bda275090141f9b1441f9cf2d115725f73f25943920e3f0f7027",
       "dedupeKey": "c1c589e0e4da0d5c3d6e42e73bb223e8926bee2bc30e93114d13deb7e87ddb86",

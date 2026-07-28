@@ -2190,5 +2190,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "76c938cf693bfd2e538da1bf20cc5f2e14ae7c5f5f5e110bc47b403c4ae98dca",
+    "dedupeKey": "9e7f4ca549d13c8077a9264d72bcd99a549a503a5724b62554a6cd4511cafcf5",
+    "personSlug": "person-b14a2349e05a9a96",
+    "name": "森 政之",
+    "fromMinistry": "文部科学省",
+    "previousPosition": "文部科学省大臣官房文教施設企画・防災部技術参事官",
+    "corporationSlug": "corporation-72fe61de5a1337fb",
+    "corporationName": "学校法人芝浦工業大学",
+    "newPosition": "芝浦工業大学SIT総合研究所特任教授",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]
