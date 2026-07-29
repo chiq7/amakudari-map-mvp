@@ -2206,5 +2206,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "3d54f62ba2f6bda275090141f9b1441f9cf2d115725f73f25943920e3f0f7027",
+    "dedupeKey": "c1c589e0e4da0d5c3d6e42e73bb223e8926bee2bc30e93114d13deb7e87ddb86",
+    "personSlug": "person-b07de53d79db2cf5",
+    "name": "工藤 由起子",
+    "fromMinistry": "厚生労働省",
+    "previousPosition": "国立医薬品食品衛生研究所衛生微生物部長",
+    "corporationSlug": "corporation-8ab0441d1a645daf",
+    "corporationName": "学校法人星薬科大学",
+    "newPosition": "星薬科大学薬学部微生物学教室教授",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]

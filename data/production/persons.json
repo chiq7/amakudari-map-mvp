@@ -2616,5 +2616,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-b07de53d79db2cf5",
+    "name": "工藤 由起子",
+    "fromMinistry": "厚生労働省",
+    "previousPosition": "国立医薬品食品衛生研究所衛生微生物部長",
+    "corporationSlug": "corporation-8ab0441d1a645daf",
+    "corporationName": "学校法人星薬科大学",
+    "newPosition": "星薬科大学薬学部微生物学教室教授",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "厚生労働省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]
