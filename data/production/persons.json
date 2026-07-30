@@ -2636,5 +2636,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-e65794fb916caf87",
+    "name": "黒田 誠",
+    "fromMinistry": "厚生労働省",
+    "previousPosition": "国立感染症研究所病原体ゲノム解析研究センター長",
+    "corporationSlug": "corporation-62903ceaff7fdb5f",
+    "corporationName": "学校法人銀杏学園",
+    "newPosition": "熊本保健科学大学保健科学部医学検査学科教授",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "厚生労働省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]

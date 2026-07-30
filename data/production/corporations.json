@@ -3356,6 +3356,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-62903ceaff7fdb5f",
+    "name": "学校法人銀杏学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "厚生労働省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-e65794fb916caf87"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

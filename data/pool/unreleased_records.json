@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 30,
+  "remainingCount": 29,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "8d30fb07b91cf53e3f6c9354958ebec206eed4610b05175ff2ced61e181fa62a",
-      "dedupeKey": "a5d319ab349ba153a25891461963bb35fb0b9f74cec12c440077ba7daab7740e",
-      "personName": "黒田 誠",
-      "originMinistry": "厚生労働省",
-      "titleAtRetirement": "国立感染症研究所病原体ゲノム解析研究センター長",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "学校法人銀杏学園",
-      "corporationType": "学校法人",
-      "newPosition": "熊本保健科学大学保健科学部医学検査学科教授",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "8526f84938bffc31999b407e9dc9f93f748afefa3694f33a1048e40d36517ec6",
       "dedupeKey": "5d79b4c4bab5d515817714c60587bdb25b1bf7156ae4c6d1e9da8cd831b628a0",
