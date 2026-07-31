@@ -2656,5 +2656,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-f45b61fe69067793",
+    "name": "伊藤 武徳",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "関東森林管理局下越森林管理署長",
+    "corporationSlug": "corporation-31c26df36b7edc4d",
+    "corporationName": "日本林業土木株式会社",
+    "newPosition": "前橋出張所長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "農林水産省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]

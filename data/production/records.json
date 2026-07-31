@@ -2238,5 +2238,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "8526f84938bffc31999b407e9dc9f93f748afefa3694f33a1048e40d36517ec6",
+    "dedupeKey": "5d79b4c4bab5d515817714c60587bdb25b1bf7156ae4c6d1e9da8cd831b628a0",
+    "personSlug": "person-f45b61fe69067793",
+    "name": "伊藤 武徳",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "関東森林管理局下越森林管理署長",
+    "corporationSlug": "corporation-31c26df36b7edc4d",
+    "corporationName": "日本林業土木株式会社",
+    "newPosition": "前橋出張所長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]

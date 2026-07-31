@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 29,
+  "remainingCount": 28,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "8526f84938bffc31999b407e9dc9f93f748afefa3694f33a1048e40d36517ec6",
-      "dedupeKey": "5d79b4c4bab5d515817714c60587bdb25b1bf7156ae4c6d1e9da8cd831b628a0",
-      "personName": "伊藤 武徳",
-      "originMinistry": "農林水産省",
-      "titleAtRetirement": "関東森林管理局下越森林管理署長",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "日本林業土木株式会社",
-      "corporationType": "営利法人",
-      "newPosition": "前橋出張所長",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "24db03f6caf83b4283fe7060f536c3e5fb99bdad4b0fa85ae52dae022a584fef",
       "dedupeKey": "12a086e42c94c4bbeb01babe683ef574b4b707f7b2288a3f104a4644f08cb4f8",
