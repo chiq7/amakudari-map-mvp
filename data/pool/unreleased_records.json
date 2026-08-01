@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 28,
+  "remainingCount": 27,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "24db03f6caf83b4283fe7060f536c3e5fb99bdad4b0fa85ae52dae022a584fef",
-      "dedupeKey": "12a086e42c94c4bbeb01babe683ef574b4b707f7b2288a3f104a4644f08cb4f8",
-      "personName": "乾 光一",
-      "originMinistry": "農林水産省",
-      "titleAtRetirement": "東北森林管理局総務企画部長",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "日本林業土木株式会社",
-      "corporationType": "営利法人",
-      "newPosition": "本社総務部部長 兼 営業部次長 兼 技術部次長",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "4069bc6890635c64e8600676c747fa94bee479a7a1caad64b67aebbec9440bd7",
       "dedupeKey": "cce5c0da24b0766acc754c43c5ddd85ff47401ae947a1a2fd4de06f1c5e4792c",

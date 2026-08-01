@@ -2676,5 +2676,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-3fcad259ea22751b",
+    "name": "乾 光一",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "東北森林管理局総務企画部長",
+    "corporationSlug": "corporation-31c26df36b7edc4d",
+    "corporationName": "日本林業土木株式会社",
+    "newPosition": "本社総務部部長 兼 営業部次長 兼 技術部次長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "農林水産省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]

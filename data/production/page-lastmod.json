@@ -2,11 +2,11 @@
   "version": 1,
   "pages": {
     "/data-policy": "2026-07-28T18:25:27+09:00",
-    "/": "2026-07-31T22:11:09.209Z",
-    "/rankings": "2026-07-31T22:11:09.209Z",
-    "/corporations": "2026-07-31T22:11:09.209Z",
-    "/persons": "2026-07-31T22:11:09.209Z",
-    "/organizations": "2026-07-31T22:11:09.209Z",
+    "/": "2026-08-01T22:03:20.667Z",
+    "/rankings": "2026-08-01T22:03:20.667Z",
+    "/corporations": "2026-08-01T22:03:20.667Z",
+    "/persons": "2026-08-01T22:03:20.667Z",
+    "/organizations": "2026-08-01T22:03:20.667Z",
     "/persons/person-b14a2349e05a9a96": "2026-07-28T22:11:43.541Z",
     "/corporations/corporation-422fcd4b721a97db": "2026-07-28T22:11:43.541Z",
     "/corporations/corporation-83ba7ab290ca473c": "2026-07-28T22:11:43.541Z",
@@ -101,6 +101,7 @@
     "/persons/person-e65794fb916caf87": "2026-07-30T22:13:18.606Z",
     "/corporations/corporation-62903ceaff7fdb5f": "2026-07-30T22:13:18.606Z",
     "/persons/person-f45b61fe69067793": "2026-07-31T22:11:09.209Z",
-    "/corporations/corporation-31c26df36b7edc4d": "2026-07-31T22:11:09.209Z"
+    "/corporations/corporation-31c26df36b7edc4d": "2026-08-01T22:03:20.667Z",
+    "/persons/person-3fcad259ea22751b": "2026-08-01T22:03:20.667Z"
   }
 }

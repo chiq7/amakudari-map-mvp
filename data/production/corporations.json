@@ -3387,18 +3387,19 @@
     "prefecture": "不明",
     "ministry": {
       "name": "農林水産省",
-      "count": 1
+      "count": 2
     },
     "counts": {
-      "publicRecords": 1,
+      "publicRecords": 2,
       "nextDay": 0,
-      "within30Days": 1
+      "within30Days": 2
     },
     "waitingDays": {
       "average": 1
     },
     "relatedPersons": [
-      "person-f45b61fe69067793"
+      "person-f45b61fe69067793",
+      "person-3fcad259ea22751b"
     ],
     "sources": [
       "cabinet-office-106-25-1-r05-files4"

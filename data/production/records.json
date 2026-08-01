@@ -2254,5 +2254,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "24db03f6caf83b4283fe7060f536c3e5fb99bdad4b0fa85ae52dae022a584fef",
+    "dedupeKey": "12a086e42c94c4bbeb01babe683ef574b4b707f7b2288a3f104a4644f08cb4f8",
+    "personSlug": "person-3fcad259ea22751b",
+    "name": "乾 光一",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "東北森林管理局総務企画部長",
+    "corporationSlug": "corporation-31c26df36b7edc4d",
+    "corporationName": "日本林業土木株式会社",
+    "newPosition": "本社総務部部長 兼 営業部次長 兼 技術部次長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]
