@@ -24,7 +24,9 @@
     "validate:gbizinfo-enrichment": "node scripts/validate-gbizinfo-enrichment.js",
     "apply:gbizinfo-enrichment": "node scripts/apply-gbizinfo-enrichment.js",
     "validate:gbizinfo-production": "node scripts/validate-gbizinfo-production.js",
-    "notify:indexnow": "node scripts/notify-indexnow.js"
+    "notify:indexnow": "node scripts/notify-indexnow.js",
+    "generate:social-queue": "node scripts/generate-social-queue.js",
+    "validate:social-queue": "node scripts/validate-social-queue.js"
   },
   "dependencies": {
     "@next/third-parties": "^14.2.3",

@@ -55,6 +55,14 @@ jobs:
         if: steps.pick.outputs.picked_count != '0'
         run: npm run validate:data
 
+      - name: Generate review-only social content queue
+        if: steps.pick.outputs.picked_count != '0'
+        run: npm run generate:social-queue -- --input data/draft/pending/daily-pick.json --limit 1
+
+      - name: Validate social content queue
+        if: steps.pick.outputs.picked_count != '0'
+        run: npm run validate:social-queue
+
       - name: Validate news content
         if: steps.pick.outputs.picked_count != '0'
         run: npm run validate:news
@@ -76,7 +84,7 @@ jobs:
         run: |
           git config user.name "amakudari-map automation"
           git config user.email "amakudari-map-automation@users.noreply.github.com"
-          git add data/production data/pool/unreleased_records.json
+          git add data/production data/pool/unreleased_records.json data/social
           if git diff --cached --quiet; then
             echo "No verified production change to publish."
             exit 0
