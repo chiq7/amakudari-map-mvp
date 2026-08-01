@@ -25,7 +25,7 @@
     "apply:gbizinfo-enrichment": "node scripts/apply-gbizinfo-enrichment.js",
     "validate:gbizinfo-production": "node scripts/validate-gbizinfo-production.js",
     "notify:indexnow": "node scripts/notify-indexnow.js",
-    "generate:social-queue": "node scripts/generate-social-queue.js",
+    "sync:social-queue": "node scripts/generate-social-queue.js",
     "validate:social-queue": "node scripts/validate-social-queue.js"
   },
   "dependencies": {

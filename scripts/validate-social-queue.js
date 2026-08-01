@@ -41,7 +41,10 @@
       assert(!ids.has(entry.id), `Duplicate queue entry: ${entry.id}`);
       ids.add(entry.id);
       assert(entry.status === "要確認", `${entry.id} must remain 要確認.`);
-      assert(entry.siteUrl?.startsWith("https://amakudari.jp/persons/"), `${entry.id} has an invalid person URL.`);
+      assert(
+        /^https:\/\/amakudari\.jp\/(persons|corporations|news|ministries|topics|rankings)(\/|$)/.test(entry.siteUrl ?? ""),
+        `${entry.id} has an invalid public site URL.`,
+      );
       assert(entry.source?.url?.startsWith("https://"), `${entry.id} needs an HTTPS source URL.`);
       assert(Array.isArray(entry.x?.thread) && entry.x.thread.length === 2, `${entry.id} needs a two-post X thread.`);
       for (const post of entry.x.thread) {
