@@ -2270,5 +2270,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "4069bc6890635c64e8600676c747fa94bee479a7a1caad64b67aebbec9440bd7",
+    "dedupeKey": "cce5c0da24b0766acc754c43c5ddd85ff47401ae947a1a2fd4de06f1c5e4792c",
+    "personSlug": "person-22572d510db934af",
+    "name": "木村 敏宏",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "中部森林管理局北信森林管理署長",
+    "corporationSlug": "corporation-31c26df36b7edc4d",
+    "corporationName": "日本林業土木株式会社",
+    "newPosition": "長野出張所長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-15",
+    "waitingDays": 15,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]

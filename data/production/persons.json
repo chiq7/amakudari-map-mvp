@@ -2696,5 +2696,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-22572d510db934af",
+    "name": "木村 敏宏",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "中部森林管理局北信森林管理署長",
+    "corporationSlug": "corporation-31c26df36b7edc4d",
+    "corporationName": "日本林業土木株式会社",
+    "newPosition": "長野出張所長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-15",
+    "waitingDays": 15,
+    "tags": [
+      "農林水産省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]
