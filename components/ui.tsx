@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { ArrowRightIcon, DocumentIcon, SearchIcon } from "@/components/icons";
 
 type ClassName = {
   className?: string;
@@ -7,11 +8,13 @@ type ClassName = {
 
 export function SearchBox({
   action = "/search",
-  placeholder = "法人名・省庁名・業務内容で検索",
+  placeholder = "人名・法人名・省庁名を入力",
+  buttonLabel = "検索する",
   className = "",
 }: {
   action?: string;
   placeholder?: string;
+  buttonLabel?: string;
 } & ClassName) {
   return (
     <form
@@ -23,13 +26,25 @@ export function SearchBox({
       <label className="sr-only" htmlFor="keyword-search">
         キーワード検索
       </label>
-      <input
-        id="keyword-search"
-        name="keyword"
-        type="search"
-        placeholder={placeholder}
-        className="w-full rounded-lg border border-outline-variant bg-surface-container-lowest px-4 py-3 text-base text-on-surface outline-none transition placeholder:text-on-surface-variant focus:border-secondary focus:ring-2 focus:ring-secondary/20"
-      />
+      <div className="flex w-full flex-col gap-2 rounded-2xl border border-outline-variant bg-white p-2 shadow-card sm:flex-row sm:items-center">
+        <div className="relative min-w-0 flex-1">
+          <SearchIcon className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant" size={20} />
+          <input
+            id="keyword-search"
+            name="keyword"
+            type="search"
+            placeholder={placeholder}
+            className="h-12 w-full rounded-xl border-0 bg-transparent pl-11 pr-3 text-base font-medium text-on-surface outline-none placeholder:font-normal placeholder:text-on-surface-variant focus:ring-0"
+          />
+        </div>
+        <button
+          type="submit"
+          className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-secondary px-5 text-sm font-bold text-white transition hover:bg-primary"
+        >
+          {buttonLabel}
+          <ArrowRightIcon size={17} />
+        </button>
+      </div>
     </form>
   );
 }
@@ -45,10 +60,10 @@ export function StatCard({
   unit?: string;
 } & ClassName) {
   return (
-    <div className={`rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-sm ${className}`}>
-      <p className="mb-1 text-sm text-on-surface-variant">{label}</p>
+    <div className={`rounded-2xl bg-surface-container-lowest p-5 shadow-card ring-1 ring-outline-variant/70 ${className}`}>
+      <p className="mb-2 text-xs font-bold tracking-[0.04em] text-on-surface-variant">{label}</p>
       <div className="flex items-baseline gap-1">
-        <span className="text-2xl font-bold text-primary">{value}</span>
+        <span className="text-3xl font-extrabold tracking-tight text-primary">{value}</span>
         {unit ? <span className="text-sm font-semibold text-on-surface-variant">{unit}</span> : null}
       </div>
     </div>
@@ -70,7 +85,7 @@ export function HighlightStatCard({
       label={label}
       value={value}
       unit={unit}
-      className={`border-secondary/30 bg-secondary-fixed text-on-secondary-fixed ${className}`}
+      className={`bg-secondary-fixed text-on-secondary-fixed ring-secondary/20 ${className}`}
     />
   );
 }
@@ -85,10 +100,10 @@ export function TagChip({
   active?: boolean;
 }) {
   const classes = [
-    "inline-flex items-center rounded border px-3 py-1 text-[13px] font-semibold transition-colors",
+    "inline-flex min-h-8 items-center rounded-full border px-3 py-1 text-[13px] font-bold transition-colors",
     active
-      ? "border-secondary bg-secondary-fixed text-secondary"
-      : "border-outline-variant bg-surface-container-high text-on-surface-variant hover:border-secondary hover:text-secondary",
+      ? "border-secondary/30 bg-secondary-fixed text-secondary"
+      : "border-outline-variant bg-white text-on-surface-variant hover:border-secondary/40 hover:bg-secondary-fixed hover:text-secondary",
   ].join(" ");
 
   if (!href) return <span className={classes}>{children}</span>;
@@ -127,7 +142,7 @@ export function Breadcrumb({
       />
       <nav
         aria-label="パンくずリスト"
-        className="flex flex-wrap items-center gap-2 text-[13px] font-semibold text-on-surface-variant"
+        className="flex flex-wrap items-center gap-2 text-xs font-semibold text-on-surface-variant"
       >
         {items.map((item, index) => (
           <span key={`${item.label}-${index}`} className="flex items-center gap-2">
@@ -148,8 +163,9 @@ export function Breadcrumb({
 
 export function DataNotice({ children, className = "" }: { children: ReactNode } & ClassName) {
   return (
-    <div className={`rounded-lg border border-outline-variant bg-surface-container-low p-4 text-sm leading-relaxed text-on-surface-variant ${className}`}>
-      {children}
+    <div className={`flex gap-3 rounded-2xl bg-surface-container-low p-4 text-sm leading-7 text-on-surface-variant ring-1 ring-outline-variant/70 ${className}`}>
+      <DocumentIcon className="mt-1 shrink-0 text-secondary" size={19} />
+      <div>{children}</div>
     </div>
   );
 }
@@ -169,11 +185,11 @@ export function RankingCard({
 }) {
   return (
     <section
-      className="rounded-lg border border-outline-variant bg-surface-container-lowest"
+      className="overflow-hidden rounded-2xl bg-surface-container-lowest shadow-card ring-1 ring-outline-variant/70"
       data-analytics-location="ranking_card"
     >
-      <div className="border-b border-outline-variant px-4 py-3">
-        <h2 className="text-lg font-bold text-primary">{title}</h2>
+      <div className="border-b border-outline-variant/80 px-5 py-4">
+        <h2 className="text-lg font-extrabold text-primary">{title}</h2>
       </div>
       <ol className="divide-y divide-outline-variant">
         {items.map((item, index) => (
@@ -181,10 +197,10 @@ export function RankingCard({
             <Link
               href={item.href ?? href}
               data-ranking-type={rankingType}
-              className="flex items-center justify-between gap-4 px-4 py-3 transition-colors hover:bg-surface-container-low"
+              className="flex min-h-14 items-center justify-between gap-4 px-5 py-3 transition-colors hover:bg-surface-container-low"
             >
               <span className="min-w-0 truncate text-sm font-semibold text-on-surface">
-                <span className="mr-3 inline-block w-5 text-center font-bold text-outline">{index + 1}</span>
+                <span className="mr-3 inline-flex h-6 w-6 items-center justify-center rounded-full bg-surface-container text-xs font-extrabold text-primary">{index + 1}</span>
                 {item.label}
               </span>
               <span className="shrink-0 text-sm text-on-surface-variant">
@@ -194,7 +210,7 @@ export function RankingCard({
           </li>
         ))}
       </ol>
-      <div className="border-t border-outline-variant px-4 py-3 text-right">
+      <div className="border-t border-outline-variant/80 px-5 py-4 text-right">
         <Link
           href={href}
           data-ranking-type={rankingType}

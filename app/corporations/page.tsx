@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { corporations, totals } from "@/lib/static-content";
 import { getMinistryPath } from "@/lib/ministry-pages";
 import { HighlightStatCard, SearchBox, StatCard, TagChip } from "@/components/ui";
+import { ArrowRightIcon, BuildingIcon } from "@/components/icons";
 import type { Corporation } from "@/lib/types";
 
 const ministryLinks = ["警察庁", "国土交通省", "経済産業省", "厚生労働省", "防衛省"];
@@ -257,7 +258,7 @@ function CorporationsContent() {
       ) : null}
 
       {!isFiltered ? (
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-4">
+        <section className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           <StatCard label="受け入れ法人" value={totals.corporations.toLocaleString()} unit="法人" />
           <StatCard label="公表再就職者数" value={totals.publicRecords.toLocaleString()} unit="人" />
           <HighlightStatCard label="退職翌日再就職あり" value={totals.nextDayCorporations} unit="法人" />
@@ -276,7 +277,48 @@ function CorporationsContent() {
           件数は公表資料に含まれる再就職記録を法人単位で集計したものです。最多出身省庁や待機日数とあわせて、絞り込み結果の傾向を確認できます。
         </p>
         {filteredCorporations.length > 0 ? (
-          <div className="overflow-x-auto rounded-lg border border-outline-variant bg-surface-container-lowest">
+          <>
+          <div className="grid gap-3 md:hidden">
+            {filteredCorporations.map((corporation) => (
+              <Link
+                key={corporation.slug}
+                href={`/corporations/${corporation.slug}`}
+                className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-outline-variant/70"
+              >
+                <div className="flex items-start gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-secondary-fixed text-secondary">
+                    <BuildingIcon size={20} />
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs font-bold text-on-surface-variant">{corporation.type}・{corporation.region}</p>
+                    <h3 className="mt-1 text-base font-extrabold leading-6 text-primary">{corporation.name}</h3>
+                  </div>
+                </div>
+                <dl className="mt-4 grid grid-cols-2 gap-3 rounded-xl bg-surface-container-low p-3 text-sm">
+                  <div>
+                    <dt className="text-xs font-semibold text-on-surface-variant">公表再就職者</dt>
+                    <dd className="mt-1 font-extrabold text-primary">{corporation.count}人</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold text-on-surface-variant">主な出身省庁</dt>
+                    <dd className="mt-1 truncate font-extrabold text-primary">{corporation.topMinistry}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold text-on-surface-variant">30日以内</dt>
+                    <dd className="mt-1 font-extrabold text-primary">{corporation.within30Days}件</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold text-on-surface-variant">平均待機日数</dt>
+                    <dd className="mt-1 font-extrabold text-primary">{corporation.averageWaitDays}日</dd>
+                  </div>
+                </dl>
+                <span className="mt-4 flex items-center justify-between text-sm font-bold text-secondary">
+                  詳細と出典を見る <ArrowRightIcon size={17} />
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="hidden overflow-x-auto rounded-2xl bg-surface-container-lowest shadow-card ring-1 ring-outline-variant/70 md:block">
             <table className="w-full min-w-[840px] text-left">
             <thead className="border-b border-outline-variant bg-surface-container-low">
               <tr>
@@ -322,6 +364,7 @@ function CorporationsContent() {
             </tbody>
           </table>
           </div>
+          </>
         ) : (
           <div className="rounded-lg border border-outline-variant bg-surface-container-lowest px-6 py-10 text-center">
             <p className="font-bold text-primary">該当する法人データはまだありません。</p>

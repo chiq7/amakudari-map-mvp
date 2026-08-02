@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Breadcrumb, SourceLinkList, StatCard, TagChip } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
-import { getPerson, persons } from "@/lib/static-content";
+import { getCorporation, getPerson, persons, sources } from "@/lib/static-content";
 
 export function generateStaticParams() {
   return persons.map((person) => ({ person_slug: person.slug }));
@@ -32,8 +32,13 @@ export function generateMetadata({
 
 export default function PersonDetailPage({ params }: { params: { person_slug: string } }) {
   const person = getPerson(params.person_slug);
-  const [corporationType, ...corporationNameParts] = person.corporationName.split(" ");
-  const corporationDisplayName = corporationNameParts.join(" ");
+  const corporation = getCorporation(person.corporationSlug);
+  const sourceLinks = person.sourceIds.flatMap((sourceId) => {
+    const source = sources.find((item) => item.id === sourceId);
+    return source
+      ? [{ label: `${source.publisher}：${source.title}`, href: source.url }]
+      : [];
+  });
 
   return (
     <div className="flex flex-col gap-8">
@@ -67,8 +72,8 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
         <StatCard label="離職時官職" value={person.formerPosition} />
         <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-sm">
           <p className="mb-1 text-sm text-on-surface-variant">再就職先</p>
-          <p className="text-sm font-semibold text-on-surface-variant">{corporationType}</p>
-          <p className="mt-1 text-xl font-bold text-primary">{corporationDisplayName}</p>
+          <p className="text-sm font-semibold text-on-surface-variant">{corporation.type}</p>
+          <p className="mt-1 text-xl font-bold text-primary">{person.corporationName}</p>
         </div>
         <div className="flex items-center justify-between gap-4 rounded-lg border border-secondary/30 bg-secondary-fixed p-4 shadow-sm">
           <p className="text-sm text-on-surface-variant">待機日数</p>
@@ -100,7 +105,7 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
             </div>
             <p className="text-sm font-bold text-secondary">待機期間 {person.waitDays}日</p>
             <p className="mt-1 text-xs text-on-surface-variant">
-              {person.waitDays === 0 ? "離職翌日の再就職として整理" : "公表日付に基づき算出"}
+              {person.waitDays === 0 ? "離職日と再就職日が同日" : "公表日付に基づき算出"}
             </p>
           </div>
 
@@ -123,27 +128,26 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
       <section>
         <h2 className="mb-2 text-sm font-bold text-on-surface-variant">関連タグ</h2>
         <div className="flex flex-wrap gap-2">
-          <TagChip href={`/corporations?ministry=${encodeURIComponent(person.ministry)}`}>国土交通省</TagChip>
-          <TagChip href="/corporations?nextDay=true" active={person.waitDays === 0}>
-            退職翌日再就職
-          </TagChip>
-          <TagChip href="/corporations?type=一般財団法人">一般財団法人</TagChip>
-          <TagChip href="/corporations?region=東京都">東京都</TagChip>
-          <TagChip href={`/corporations?position=${encodeURIComponent(person.newPosition)}`}>専務理事</TagChip>
-          <TagChip href="/corporations?position=管理職">管理職</TagChip>
-          <TagChip href="/corporations?tag=再就職情報">再就職情報</TagChip>
+          <TagChip href={`/corporations?ministry=${encodeURIComponent(person.ministry)}`}>{person.ministry}</TagChip>
+          <TagChip href={`/corporations?type=${encodeURIComponent(corporation.type)}`}>{corporation.type}</TagChip>
+          {corporation.region && corporation.region !== "不明" ? (
+            <TagChip href={`/corporations?region=${encodeURIComponent(corporation.region)}`}>{corporation.region}</TagChip>
+          ) : null}
+          {person.waitDays === 0 ? (
+            <TagChip href="/corporations?flag=nextDay" active>
+              離職日と再就職日が同日
+            </TagChip>
+          ) : null}
+          {person.tags.filter((tag) => tag !== person.ministry).slice(0, 3).map((tag) => (
+            <TagChip key={tag} href={`/corporations?tag=${encodeURIComponent(tag)}`}>{tag}</TagChip>
+          ))}
         </div>
       </section>
 
       <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
           <h2 className="mb-4 text-xl font-bold text-primary">出典・公表資料</h2>
-          <SourceLinkList
-            links={[
-              { label: person.source, href: "https://www.cas.go.jp/" },
-              { label: "国土交通省：退職公務員の再就職状況報告", href: "https://www.mlit.go.jp/" },
-            ]}
-          />
+          <SourceLinkList links={sourceLinks} />
           <p className="mt-4 text-xs leading-relaxed text-on-surface-variant">
             本ページに記載されている情報は、公的資料に基づき機械的に整理したものです。掲載されている個人の資質や再就職の正当性について評価を行うものではありません。
           </p>
@@ -155,12 +159,12 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
               法人情報を詳しく見る
             </Link>
             <Link href={`/corporations?ministry=${encodeURIComponent(person.ministry)}`} className="font-semibold text-secondary hover:underline">
-              国土交通省の再就職統計を見る
+              {person.ministry}の関連記録を見る
             </Link>
             <Link href="/rankings" className="font-semibold text-secondary hover:underline">
               ランキングを見る
             </Link>
-            <Link href={`/corporations?ministry=${encodeURIComponent(person.ministry)}&waitDays=0`} className="font-semibold text-secondary hover:underline">
+            <Link href={`/corporations?ministry=${encodeURIComponent(person.ministry)}&sort=waitDays`} className="font-semibold text-secondary hover:underline">
               類似の再就職事例を見る
             </Link>
             <Link href="/data-policy" className="font-semibold text-secondary hover:underline">

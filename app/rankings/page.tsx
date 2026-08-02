@@ -53,83 +53,11 @@ export default function RankingsPage() {
           ["30日以内再就職", "離職日から30日以内の再就職記録を集計しています。"],
           ["平均待機日数", "法人ごとの離職日から再就職日までの日数の平均です。"],
         ].map(([title, description]) => (
-          <div key={title} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
-            <h2 className="font-bold text-primary">{title}</h2>
+          <div key={title} className="rounded-2xl bg-surface-container-lowest p-5 shadow-card ring-1 ring-outline-variant/70">
+            <h2 className="font-extrabold text-primary">{title}</h2>
             <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{description}</p>
           </div>
         ))}
-      </section>
-
-      <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-3">
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
-            <span className="shrink-0 text-sm font-semibold text-on-surface-variant">絞り込み:</span>
-            <div className="grid flex-1 grid-cols-1 gap-2 sm:grid-cols-3">
-              <label>
-                <span className="sr-only">省庁で絞り込む</span>
-                <select
-                  defaultValue=""
-                  className="h-9 w-full rounded border border-outline-variant bg-surface px-2 text-sm text-on-surface-variant"
-                >
-                  <option value="">すべての省庁</option>
-                  <option>国土交通省</option>
-                  <option>経済産業省</option>
-                  <option>総務省</option>
-                  <option>内閣府</option>
-                </select>
-              </label>
-              <label>
-                <span className="sr-only">法人種別で絞り込む</span>
-                <select
-                  defaultValue=""
-                  className="h-9 w-full rounded border border-outline-variant bg-surface px-2 text-sm text-on-surface-variant"
-                >
-                  <option value="">すべての法人種別</option>
-                  <option>公益法人</option>
-                  <option>独立行政法人</option>
-                  <option>一般財団法人</option>
-                  <option>株式会社</option>
-                </select>
-              </label>
-              <label>
-                <span className="sr-only">地域で絞り込む</span>
-                <select
-                  defaultValue=""
-                  className="h-9 w-full rounded border border-outline-variant bg-surface px-2 text-sm text-on-surface-variant"
-                >
-                  <option value="">すべての地域</option>
-                  <option>東京都</option>
-                  <option>関東地方</option>
-                  <option>大阪府</option>
-                  <option>近畿地方</option>
-                </select>
-              </label>
-            </div>
-            <label className="relative w-full lg:w-56">
-              <span className="sr-only">キーワード検索</span>
-              <input
-                type="search"
-                placeholder="キーワード検索"
-                className="h-9 w-full rounded border border-outline-variant bg-surface px-3 text-sm text-on-surface placeholder:text-on-surface-variant"
-              />
-            </label>
-          </div>
-          <div className="grid grid-cols-2 gap-2 border-t border-outline-variant pt-3 md:grid-cols-4">
-            {["公表再就職者数", "退職翌日再就職", "30日以内再就職", "平均待機日数"].map((label, index) => (
-              <button
-                key={label}
-                type="button"
-                className={`min-h-10 rounded border px-3 py-2 text-sm font-semibold ${
-                  index === 0
-                    ? "border-secondary/40 bg-secondary-fixed text-secondary"
-                    : "border-outline-variant bg-surface text-on-surface-variant"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        </div>
       </section>
 
       <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">

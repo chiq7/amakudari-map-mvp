@@ -5,32 +5,37 @@ import {
   getCorporationPersonHighlights,
   getSourceSummary,
   meta,
-  rankingLists,
+  persons,
   topics,
   totals,
 } from "@/lib/static-content";
-import { SearchBox, TagChip } from "@/components/ui";
+import { newsArticles } from "@/lib/news";
+import { SearchBox } from "@/components/ui";
+import {
+  ArrowRightIcon,
+  BuildingIcon,
+  CheckIcon,
+  DocumentIcon,
+  MinistryIcon,
+  NewsIcon,
+  PersonIcon,
+} from "@/components/icons";
 import { getMinistryPath } from "@/lib/ministry-pages";
 
 export const metadata: Metadata = {
-  title: "天下り先一覧｜公式資料から見る官民人材移動データベース",
+  title: "天下りマップ｜官民の人材移動を公表資料からたどる",
   description:
-    "政府・各省庁等の公表資料に基づく再就職情報を、法人・省庁・待機日数・地域から検索・閲覧できるデータベースです。",
+    "政府・各省庁等が公表する再就職情報を、人・法人・省庁・時系列から確認できるデータベースです。出典と確認日を掲載しています。",
   alternates: { canonical: "/" },
 };
 
-const cutGroups = topics.map((topic) => ({
-  title: topic.label,
-  queryKey: topic.queryKey,
-  links: topic.items.slice(0, 5).map((label) => ({ label })),
-}));
-
 const featuredCorporations = [
-  corporations.find((corporation) => corporation.slug === "corporation-luup") ??
-    corporations[0],
+  corporations.find((corporation) => corporation.slug === "corporation-luup") ?? corporations[0],
   corporations[0],
   corporations[2],
-];
+].filter((corporation, index, list) =>
+  corporation && list.findIndex((item) => item?.slug === corporation.slug) === index,
+);
 
 const featuredCorporationCards = featuredCorporations.map((corporation) => {
   const highlights = getCorporationPersonHighlights(corporation);
@@ -47,121 +52,50 @@ const featuredCorporationCards = featuredCorporations.map((corporation) => {
   };
 });
 
-function getFormerPositionLabels(value: string) {
-  return value
-    .split(/[、,]/)
-    .map((label) => label.trim())
-    .filter(Boolean);
+const ministryTopic = topics.find((topic) => topic.queryKey === "ministry");
+const featuredMinistries = (ministryTopic?.items ?? [
+  "国土交通省",
+  "経済産業省",
+  "厚生労働省",
+  "総務省",
+  "警察庁",
+  "内閣府",
+]).slice(0, 6);
+
+function formatDate(value: string) {
+  return value.replace(/-/g, ".");
 }
 
-const corporationDirectory = rankingLists.publicRecords.slice(0, 6).map((item) => ({
-  name: item.label,
-  count: item.value,
-  href: `/corporations/${item.corporationSlug}`,
-}));
-
-const rankingBlocks = [
-  {
-    title: "公表再就職者数",
-    unit: "人",
-    href: "/corporations?sort=publicRecords",
-    items: rankingLists.publicRecords.slice(0, 3).map((item) => [
-      item.label,
-      item.value,
-      `/corporations/${item.corporationSlug}`,
-    ]),
-  },
-  {
-    title: "退職翌日再就職件数",
-    unit: "件",
-    href: "/corporations?flag=nextDay",
-    items: rankingLists.nextDay.slice(0, 3).map((item) => [
-      item.label,
-      item.value,
-      `/corporations/${item.corporationSlug}`,
-    ]),
-  },
-  {
-    title: "30日以内再就職件数",
-    unit: "件",
-    href: "/corporations?flag=within30Days",
-    items: rankingLists.within30Days.slice(0, 3).map((item) => [
-      item.label,
-      item.value,
-      `/corporations/${item.corporationSlug}`,
-    ]),
-  },
-  {
-    title: "平均待機日数が短い法人",
-    unit: "日",
-    href: "/corporations?sort=shortestAverageWaitingDays",
-    items: rankingLists.shortestAverageWaitingDays.slice(0, 3).map((item) => [
-      item.label,
-      item.value,
-      `/corporations/${item.corporationSlug}`,
-    ]),
-  },
-];
-
-const aggregateGroups = [
-  {
-    title: "省庁別集計",
-    links: [
-      ["国土交通省", 124],
-      ["経済産業省", 98],
-      ["厚生労働省", 85],
-      ["財務省", 72],
-      ["警察庁", 45],
-      ["農林水産省", 38],
-    ],
-    queryKey: "ministry",
-  },
-  {
-    title: "業務内容別集計",
-    links: [
-      ["IT・通信", 156],
-      ["建設・不動産", 142],
-      ["医療・福祉", 118],
-      ["金融・保険", 94],
-      ["製造", 82],
-      ["運輸・物流", 64],
-    ],
-    queryKey: "tag",
-  },
-];
-
-function StatTile({
-  label,
-  value,
-  unit,
-  accent = false,
+function SectionHeading({
+  eyebrow,
+  title,
+  description,
 }: {
-  label: string;
-  value: string;
-  unit: string;
-  accent?: boolean;
+  eyebrow: string;
+  title: string;
+  description?: string;
 }) {
   return (
-    <div
-      className={[
-        "flex min-h-[132px] flex-col justify-between rounded-lg border p-5 shadow-sm",
-        accent
-          ? "border-secondary/30 bg-secondary-fixed"
-          : "border-outline-variant bg-surface-container-lowest",
-      ].join(" ")}
-    >
-      <p className="text-sm font-semibold text-on-surface-variant">{label}</p>
-      <div className="flex items-baseline gap-1">
-        <span className={accent ? "text-4xl font-bold text-secondary" : "text-4xl font-bold text-primary"}>
-          {value}
-        </span>
-        <span className="text-sm font-bold text-on-surface-variant">{unit}</span>
-      </div>
+    <div className="max-w-2xl">
+      <p className="text-xs font-extrabold tracking-[0.14em] text-secondary">{eyebrow}</p>
+      <h2 className="mt-2 text-balance text-2xl font-extrabold tracking-tight text-primary md:text-3xl">
+        {title}
+      </h2>
+      {description ? (
+        <p className="mt-3 text-pretty text-sm leading-7 text-on-surface-variant md:text-base">
+          {description}
+        </p>
+      ) : null}
     </div>
   );
 }
 
 export default function Home() {
+  const samplePerson = persons[0];
+  const sampleCorporation = corporations.find(
+    (corporation) => corporation.slug === samplePerson?.corporationSlug,
+  );
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -170,7 +104,7 @@ export default function Home() {
         name: "天下りマップ",
         url: "https://amakudari.jp/",
         description:
-          "政府・各省庁等の公表資料に基づく再就職情報を検索・閲覧できるデータベースです。",
+          "政府・各省庁等の公表資料に基づく再就職情報を、人・法人・省庁から確認できるデータベースです。",
         inLanguage: "ja-JP",
         potentialAction: {
           "@type": "SearchAction",
@@ -186,376 +120,344 @@ export default function Home() {
           "政府・各省庁等の公表資料をもとに、再就職先法人、出身省庁、待機日数などを検索・閲覧できるよう整理したデータセットです。",
         inLanguage: "ja-JP",
         dateModified: meta.lastUpdated,
-        creator: {
-          "@type": "Organization",
-          name: "天下りマップ",
-          url: "https://amakudari.jp/",
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "天下りマップ",
-          url: "https://amakudari.jp/",
-        },
+        creator: { "@type": "Organization", name: "天下りマップ", url: "https://amakudari.jp/" },
+        publisher: { "@type": "Organization", name: "天下りマップ", url: "https://amakudari.jp/" },
         license: {
           "@type": "CreativeWork",
           name: "天下りマップ データ利用条件（2026年8月2日版）",
           url: "https://amakudari.jp/data-policy#dataset-license",
         },
         variableMeasured: [
-          {
-            "@type": "PropertyValue",
-            name: "公表再就職情報",
-            value: totals.publicRecords,
-            unitText: "件",
-          },
-          {
-            "@type": "PropertyValue",
-            name: "受け入れ法人",
-            value: totals.corporations,
-            unitText: "法人",
-          },
+          { "@type": "PropertyValue", name: "公表再就職情報", value: totals.publicRecords, unitText: "件" },
+          { "@type": "PropertyValue", name: "受け入れ法人", value: totals.corporations, unitText: "法人" },
         ],
       },
     ],
   };
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-20 md:gap-28">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
+
       <section
-        className="mx-auto flex max-w-5xl flex-col items-center gap-5 py-4 text-center md:py-6"
+        className="relative overflow-hidden rounded-3xl bg-primary px-5 py-8 text-white shadow-soft sm:px-8 md:px-12 md:py-12 lg:grid lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-12 lg:px-14 lg:py-16"
         data-analytics-location="home_hero"
       >
-        <div>
-          <h1 className="text-4xl font-bold tracking-normal text-primary md:text-5xl">
-            天下り先一覧を、公式資料から確認
-          </h1>
-          <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-on-surface-variant md:text-lg">
-            政府・各省庁等が公表する再就職関連資料をもとに、法人・省庁・待機日数・地域などの切り口から検索しやすく整理しています。
+        <div className="absolute -right-20 -top-24 h-80 w-80 rounded-full border border-white/10" aria-hidden="true" />
+        <div className="absolute -right-6 -top-10 h-52 w-52 rounded-full border border-white/10" aria-hidden="true" />
+
+        <div className="relative z-10">
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-3 py-1.5 text-xs font-bold tracking-[0.08em] text-white/80">
+            <DocumentIcon size={16} />
+            政府・省庁等の一次資料を整理
           </p>
-        </div>
-        <SearchBox className="w-full max-w-2xl" />
-        <div className="flex flex-wrap justify-center gap-2">
-          <Link
-            href="/corporations"
-            data-experiment-id="analytics-phase-1"
-            data-cta-name="browse_corporations"
-            className="rounded bg-primary px-5 py-2 text-sm font-bold text-white"
-          >
-            法人を検索
-          </Link>
-          <Link href="/rankings" className="rounded border border-outline-variant px-5 py-2 text-sm font-bold text-on-surface">
-            ランキング
-          </Link>
-          <Link href="/data-policy" className="rounded border border-outline-variant px-5 py-2 text-sm font-bold text-on-surface">
-            データ方針
-          </Link>
-        </div>
-      </section>
+          <h1 className="mt-6 text-balance text-[34px] font-extrabold leading-[1.25] tracking-[-0.035em] sm:text-5xl md:text-[56px] md:leading-[1.18]">
+            官民の人の動きを、
+            <span className="block text-[#a9e4d3]">公表資料からたどる。</span>
+          </h1>
+          <p className="mt-6 max-w-2xl text-pretty text-base leading-8 text-white/78 md:text-lg">
+            誰が、どの省庁から、どの法人へ移ったのか。公表された再就職情報を、人・法人・省庁のつながりと時系列で確認できます。
+          </p>
 
-      <section className="grid grid-cols-1 gap-4 md:grid-cols-4">
-        <StatTile label="公表再就職情報" value={totals.publicRecords.toLocaleString()} unit="件" />
-        <StatTile label="受け入れ法人" value={totals.corporations.toLocaleString()} unit="法人" />
-        <StatTile label="退職翌日再就職" value={totals.nextDayCorporations.toLocaleString()} unit="件" accent />
-        <StatTile label="30日以内再就職" value={totals.within30DaysCorporations.toLocaleString()} unit="件" />
-      </section>
+          <SearchBox className="mt-7 max-w-2xl text-on-surface" />
+          <p className="mt-3 text-xs leading-5 text-white/58">
+            例：氏名、法人名、国土交通省、役職名
+          </p>
 
-      <section>
-        <div className="mb-3 flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <h2 className="text-2xl font-bold text-primary">注目の公表情報</h2>
-            <p className="mt-1 text-sm text-on-surface-variant">
-              公表資料や法人公式発表に基づき、確認されることが多い法人情報を表示しています。
-            </p>
+          <div className="mt-7 flex flex-wrap gap-x-5 gap-y-3 text-sm font-bold">
+            <Link href="/persons" className="inline-flex items-center gap-2 text-white/88 transition hover:text-white">
+              <PersonIcon size={18} /> 人から探す <ArrowRightIcon size={15} />
+            </Link>
+            <Link href="/corporations" className="inline-flex items-center gap-2 text-white/88 transition hover:text-white">
+              <BuildingIcon size={18} /> 法人から探す <ArrowRightIcon size={15} />
+            </Link>
+            <Link href="/topics" className="inline-flex items-center gap-2 text-white/88 transition hover:text-white">
+              <MinistryIcon size={18} /> 省庁から探す <ArrowRightIcon size={15} />
+            </Link>
           </div>
-          <Link href="/corporations" className="text-sm font-bold text-secondary hover:underline">
-            すべて見る
-          </Link>
         </div>
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-          {featuredCorporationCards.map(
-            ({ corporation, highlights, sourceSummary }) => (
-              <article
-                key={corporation.slug}
-                className="flex min-h-[330px] flex-col rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-sm"
-              >
-                <p className="text-xs font-bold text-secondary">
-                  {highlights.kind === "public-officer"
-                    ? "公式発表に基づく役員情報"
-                    : "公表資料に基づく記録"}
-                </p>
-                <h3 className="mt-1 text-lg font-bold text-primary">{corporation.name}</h3>
-                <p className="mt-1.5 line-clamp-2 min-h-9 text-sm leading-snug text-on-surface-variant">
-                  {[
-                    corporation.description,
-                    corporation.type,
-                    corporation.region === "不明" ? "" : corporation.region,
-                  ]
-                    .filter(Boolean)
-                    .slice(0, corporation.description ? 1 : 2)
-                    .join(" / ")}
-                </p>
 
-                {highlights.people.length > 0 ? (
-                  <div className="mt-3 border-t border-outline-variant pt-3">
-                    <p className="text-xs font-bold text-on-surface-variant">注目情報</p>
-                    <div className="mt-1.5 space-y-2">
-                      {highlights.people.map((person) => (
-                        <div key={`${person.kind}-${person.slug}`} className="min-h-[54px]">
-                          <p className="line-clamp-1 text-base font-bold leading-tight text-primary">
-                            {person.name}
-                          </p>
-                          <p className="mt-0.5 line-clamp-1 text-xs font-medium text-on-surface-variant">
-                            {person.role}
-                          </p>
-                          <div className="mt-1 flex flex-wrap gap-1">
-                            {getFormerPositionLabels(
-                              person.formerPosition || `元${person.formerOrganization}`,
-                            ).map((label) => (
-                              <span
-                                key={label}
-                                className="inline-flex max-w-full rounded border border-outline-variant bg-surface-container-low px-1.5 py-0.5 text-xs font-semibold leading-tight text-primary"
-                              >
-                                <span className="line-clamp-2">{label}</span>
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                      {highlights.remaining > 0 && (
-                        <p className="text-xs font-semibold text-on-surface-variant">
-                          ほか{highlights.remaining}人
-                        </p>
-                      )}
+        {samplePerson ? (
+          <div className="relative z-10 mt-10 lg:mt-0">
+            <div className="rounded-3xl border border-white/12 bg-white/[0.07] p-4 backdrop-blur md:p-5">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-xs font-bold tracking-[0.1em] text-white/50">公表資料上の移動例</p>
+                  <p className="mt-1 text-sm font-bold text-white/86">組織・人・法人を1本につなぐ</p>
+                </div>
+                <span className="rounded-full bg-[#a9e4d3] px-3 py-1 text-xs font-extrabold text-primary">出典あり</span>
+              </div>
+
+              <div className="mt-5 space-y-2.5">
+                <div className="rounded-2xl bg-white p-4 text-on-surface shadow-card">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-surface-container-low text-primary">
+                      <MinistryIcon size={21} />
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-[11px] font-bold text-on-surface-variant">出身省庁</p>
+                      <p className="truncate font-extrabold text-primary">{samplePerson.ministry}</p>
                     </div>
                   </div>
-                ) : null}
-
-                <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-1.5 border-t border-outline-variant pt-3 text-xs">
-                  {highlights.kind === "public-officer" ? (
-                    <>
-                      <div>
-                        <dt className="text-on-surface-variant">公表役員プロフィール</dt>
-                        <dd className="mt-0.5 font-bold text-primary">{highlights.total}人</dd>
-                      </div>
-                      {corporation.gbizInfo?.employeeNumber !== undefined && (
-                        <div>
-                          <dt className="text-on-surface-variant">従業員数</dt>
-                          <dd className="mt-0.5 font-bold text-primary">
-                            {corporation.gbizInfo.employeeNumber.toLocaleString()}人
-                          </dd>
-                        </div>
-                      )}
-                    </>
-                  ) : (
-                    <>
-                      <div>
-                        <dt className="text-on-surface-variant">公表再就職者数</dt>
-                        <dd className="mt-0.5 font-bold text-primary">{corporation.count}人</dd>
-                      </div>
-                      <div>
-                        <dt className="text-on-surface-variant">最多出身省庁</dt>
-                        <dd className="mt-0.5 line-clamp-1 font-bold text-primary">{corporation.topMinistry}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-on-surface-variant">30日以内再就職</dt>
-                        <dd className="mt-0.5 font-bold text-primary">{corporation.within30Days}件</dd>
-                      </div>
-                    </>
-                  )}
-                </dl>
-                <p className="mt-3 line-clamp-2 min-h-7 text-xs leading-snug text-on-surface-variant">
-                  出典：{sourceSummary || "公表資料"}
-                </p>
-                <Link href={`/corporations/${corporation.slug}`} className="mt-auto pt-2.5 text-sm font-bold text-secondary hover:underline">
-                  詳細を見る →
+                </div>
+                <div className="ml-5 h-5 border-l-2 border-dashed border-white/28" aria-hidden="true" />
+                <Link href={`/persons/${samplePerson.slug}`} className="block rounded-2xl bg-[#d8f1e8] p-4 text-on-surface transition hover:bg-[#c5e9dd]">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-secondary">
+                      <PersonIcon size={21} />
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-[11px] font-bold text-on-surface-variant">公表された人物</p>
+                      <p className="truncate font-extrabold text-primary">{samplePerson.name}</p>
+                      <p className="mt-0.5 truncate text-xs text-on-surface-variant">{samplePerson.formerPosition}</p>
+                    </div>
+                  </div>
                 </Link>
-              </article>
-            ),
-          )}
-        </div>
-      </section>
-
-      <section>
-        <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <h2 className="text-2xl font-bold text-primary">ランキングから探す</h2>
-            <p className="mt-1 text-sm text-on-surface-variant">主要指標ごとの上位法人を一覧できます。</p>
-          </div>
-          <Link href="/rankings" className="text-sm font-bold text-secondary hover:underline">
-            ランキング一覧へ
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-4">
-          {rankingBlocks.map((block, blockIndex) => (
-            <section key={block.title} className="rounded-lg border border-outline-variant bg-surface-container-lowest shadow-sm">
-              <div className="border-b border-outline-variant px-4 py-3">
-                <h3 className="font-bold text-primary">{block.title}</h3>
-              </div>
-              <ol className="divide-y divide-outline-variant">
-                {block.items.map(([label, value, href], index) => (
-                  <li key={label}>
-                    <Link
-                      href={String(href)}
-                      data-ranking-type={
-                        [
-                          "public_records",
-                          "next_day",
-                          "within_30_days",
-                          "shortest_average_wait",
-                        ][blockIndex]
-                      }
-                      data-analytics-location="home_ranking_card"
-                      className="flex items-center justify-between gap-3 px-4 py-3 hover:bg-surface-container-low"
-                    >
-                      <span className="min-w-0 truncate text-sm font-semibold">
-                        <span className="mr-2 text-outline">{index + 1}</span>
-                        {label}
-                      </span>
-                      <span className="shrink-0 text-sm text-on-surface-variant">
-                        <strong className="text-lg text-primary">{value}</strong>{block.unit}
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ol>
-              <div className="border-t border-outline-variant px-4 py-3 text-right">
-                <Link href={block.href} className="text-sm font-bold text-secondary hover:underline">
-                  もっと見る
+                <div className="ml-5 flex h-6 items-center gap-3 border-l-2 border-dashed border-white/28 pl-4 text-[11px] font-bold text-white/62">
+                  退職から再就職まで {samplePerson.waitDays}日
+                </div>
+                <Link href={`/corporations/${samplePerson.corporationSlug}`} className="block rounded-2xl bg-white p-4 text-on-surface shadow-card transition hover:bg-surface-container-low">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent-soft text-accent">
+                      <BuildingIcon size={21} />
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-[11px] font-bold text-on-surface-variant">再就職先</p>
+                      <p className="truncate font-extrabold text-primary">{samplePerson.corporationName}</p>
+                      <p className="mt-0.5 truncate text-xs text-on-surface-variant">{samplePerson.newPosition}</p>
+                    </div>
+                  </div>
                 </Link>
               </div>
-            </section>
-          ))}
-        </div>
+              <p className="mt-4 text-xs leading-5 text-white/52">
+                出典：{sampleCorporation ? getSourceSummary(sampleCorporation.sources) : samplePerson.source}
+              </p>
+            </div>
+          </div>
+        ) : null}
       </section>
 
-      <section className="grid grid-cols-1 gap-5 rounded-lg border border-outline-variant bg-surface-container-lowest p-5 lg:grid-cols-[0.8fr_1.2fr]">
-        <div className="flex flex-col justify-between gap-4">
-          <div>
-            <h2 className="text-2xl font-bold text-primary">法人名から探す</h2>
-            <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
-              公表資料に記載された受け入れ法人を、法人名や公表再就職者数から確認できます。法人詳細では出身省庁や待機日数の内訳も確認できます。
-            </p>
-          </div>
-          <Link href="/corporations" className="w-fit rounded bg-primary px-5 py-2 text-sm font-bold text-white">
-            すべての法人を見る
-          </Link>
+      <section aria-labelledby="data-summary-title">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <SectionHeading
+            eyebrow="CURRENT DATA"
+            title="いま確認できる公表データ"
+            description="件数は公表資料に含まれる記録を整理したものです。数字だけで評価せず、各詳細ページの出典と日付をあわせて確認できます。"
+          />
+          <p className="text-xs font-semibold text-on-surface-variant">データ更新日 {formatDate(meta.lastUpdated)}</p>
         </div>
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-          {corporationDirectory.map((corporation) => (
-            <Link
-              key={corporation.name}
-              href={corporation.href}
-              className="flex items-center justify-between gap-3 rounded border border-outline-variant bg-surface-container-low px-4 py-3 hover:border-secondary"
+        <h2 id="data-summary-title" className="sr-only">データ概要</h2>
+        <dl className="mt-7 grid grid-cols-2 overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-outline-variant/70 lg:grid-cols-4">
+          {[
+            ["公表された再就職記録", totals.publicRecords.toLocaleString(), "件"],
+            ["再就職先として掲載", totals.corporations.toLocaleString(), "法人"],
+            ["30日以内の再就職", totals.within30DaysCorporations.toLocaleString(), "件"],
+            ["人物ページ", meta.personCount.toLocaleString(), "人"],
+          ].map(([label, value, unit], index) => (
+            <div
+              key={label}
+              className={`p-5 md:p-7 ${index % 2 === 0 ? "border-r border-outline-variant/70" : ""} ${index < 2 ? "border-b border-outline-variant/70 lg:border-b-0" : ""} ${index === 1 ? "lg:border-r" : ""} ${index === 2 ? "lg:border-r" : ""}`}
             >
-              <span className="min-w-0 truncate text-sm font-bold text-primary">{corporation.name}</span>
-              <span className="shrink-0 text-sm font-semibold text-on-surface-variant">{corporation.count}人</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
-        <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <h2 className="text-2xl font-bold text-primary">話題のタグ</h2>
-            <p className="mt-1 text-sm text-on-surface-variant">
-              省庁・業界・法人種別・テーマ別に、公表情報をたどれます。
-            </p>
-          </div>
-          <Link href="/corporations" className="text-sm font-bold text-secondary hover:underline">
-            すべての切り口を見る →
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5">
-          {cutGroups.map((group) => (
-            <div key={group.title}>
-              <h3 className="mb-2 text-xs font-bold text-on-surface-variant">{group.title}</h3>
-              <div className="flex flex-wrap gap-2">
-                {group.links.map((link) => (
-                  <TagChip
-                    key={link.label}
-                    href={`/corporations?${group.queryKey}=${encodeURIComponent(link.label)}`}
-                  >
-                    {link.label}
-                  </TagChip>
-                ))}
-              </div>
+              <dt className="text-xs font-bold leading-5 text-on-surface-variant">{label}</dt>
+              <dd className="mt-3 flex items-baseline gap-1 text-primary">
+                <span className="text-3xl font-extrabold tracking-tight md:text-4xl">{value}</span>
+                <span className="text-xs font-bold text-on-surface-variant">{unit}</span>
+              </dd>
             </div>
           ))}
-        </div>
-
-        <div className="mt-4 border-t border-outline-variant pt-3">
-          <p className="mb-2 text-xs font-bold text-on-surface-variant">注目指標</p>
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-            <Link
-              href="/corporations?flag=nextDay"
-              className="flex items-center justify-between rounded border border-secondary/20 bg-secondary-fixed/50 px-3 py-2 hover:border-secondary"
-            >
-              <span className="text-sm font-bold text-secondary">退職翌日再就職</span>
-              <span className="text-right">
-                <strong className="text-lg font-bold text-primary">{totals.nextDayCorporations}</strong>
-                <span className="ml-1 text-sm font-bold text-on-surface-variant">件</span>
-              </span>
-            </Link>
-            <Link
-              href="/corporations?flag=within30Days"
-              className="flex items-center justify-between rounded border border-secondary/20 bg-secondary-fixed/50 px-3 py-2 hover:border-secondary"
-            >
-              <span className="text-sm font-bold text-secondary">30日以内再就職</span>
-              <span className="text-right">
-                <strong className="text-lg font-bold text-primary">{totals.within30DaysCorporations}</strong>
-                <span className="ml-1 text-sm font-bold text-on-surface-variant">件</span>
-              </span>
-            </Link>
-          </div>
-        </div>
+        </dl>
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-bold text-primary">集計データから探す</h2>
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-          {aggregateGroups.map((group) => (
-            <section key={group.title} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5 shadow-sm">
-              <h3 className="mb-3 text-lg font-bold text-primary">{group.title}</h3>
-              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                {group.links.map(([label, count]) => (
-                  <Link
-                    key={label}
-                    href={
-                      group.queryKey === "ministry"
-                        ? getMinistryPath(String(label))
-                        : `/corporations?${group.queryKey}=${encodeURIComponent(String(label))}`
-                    }
-                    className="flex items-center justify-between rounded border border-outline-variant bg-surface-container-low px-3 py-2 hover:border-secondary"
-                  >
-                    <span className="text-sm font-semibold">{label}</span>
-                    <span className="font-mono text-sm text-on-surface-variant">{count}</span>
-                  </Link>
-                ))}
+        <SectionHeading
+          eyebrow="START HERE"
+          title="知りたい入口から、まっすぐ探せます"
+          description="専門用語が分からなくても大丈夫です。名前、法人、省庁のどこからでも関連する公表記録へたどれます。"
+        />
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          {[
+            {
+              href: "/persons",
+              icon: <PersonIcon size={26} />,
+              number: "01",
+              title: "人から探す",
+              description: "氏名から、離職時の所属・役職、再就職先、待機日数を確認します。",
+              example: "氏名・役職で検索",
+            },
+            {
+              href: "/corporations",
+              icon: <BuildingIcon size={26} />,
+              number: "02",
+              title: "法人から探す",
+              description: "法人ごとに、公表された人物、出身省庁、時系列と出典を確認します。",
+              example: "法人名・法人種別で検索",
+            },
+            {
+              href: "/topics",
+              icon: <MinistryIcon size={26} />,
+              number: "03",
+              title: "省庁・テーマから探す",
+              description: "出身省庁や業界テーマから、関連する法人と人物を横断して見ます。",
+              example: "省庁・業界で絞り込み",
+            },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group flex min-h-[270px] flex-col rounded-3xl bg-white p-6 shadow-card ring-1 ring-outline-variant/70 transition hover:-translate-y-1 hover:shadow-soft hover:ring-secondary/30 md:p-7"
+            >
+              <div className="flex items-center justify-between">
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary-fixed text-secondary">
+                  {item.icon}
+                </span>
+                <span className="text-xs font-extrabold tracking-[0.14em] text-outline">{item.number}</span>
               </div>
-            </section>
+              <h3 className="mt-7 text-2xl font-extrabold text-primary">{item.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-on-surface-variant">{item.description}</p>
+              <div className="mt-auto flex items-center justify-between border-t border-outline-variant/70 pt-5 text-sm font-bold text-secondary">
+                <span>{item.example}</span>
+                <ArrowRightIcon className="transition-transform group-hover:translate-x-1" size={18} />
+              </div>
+            </Link>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl rounded-lg border border-outline-variant bg-surface-container-low p-7 text-center">
-        <h2 className="bg-transparent text-2xl font-bold text-primary">天下りマップとは</h2>
-        <p className="mx-auto mt-3 max-w-3xl text-sm leading-relaxed text-on-surface-variant">
-          天下りマップは、政府・各省庁等が公表する再就職関連資料をもとに、官民の人材移動を検索しやすく整理したデータベースです。法人別・個人別の記録や、件数・待機日数によるランキングを確認できます。
-        </p>
-        <p className="mx-auto mt-3 max-w-3xl text-sm leading-relaxed text-on-surface-variant">
-          ランキングや待機日数は、公表内容を比較しやすくするための指標です。本サイトは適法性や妥当性を独自に判定するものではなく、特定の個人・法人・省庁への評価を目的としません。
-        </p>
-        <Link href="/data-policy" className="mt-5 inline-block rounded bg-primary px-6 py-2 text-sm font-bold text-white">
-          データ方針を見る
-        </Link>
+      <section>
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <SectionHeading
+            eyebrow="PUBLIC RECORDS"
+            title="公表情報を、つながりで見る"
+            description="各カードから人物・法人・出典資料へ進めます。"
+          />
+          <Link href="/corporations" className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-secondary hover:underline">
+            法人一覧を見る <ArrowRightIcon size={17} />
+          </Link>
+        </div>
+        <div className="mt-8 grid gap-4 lg:grid-cols-3">
+          {featuredCorporationCards.map(({ corporation, highlights, sourceSummary }) => (
+            <article key={corporation.slug} className="flex flex-col rounded-3xl bg-white p-6 shadow-card ring-1 ring-outline-variant/70">
+              <div className="flex items-center justify-between gap-3">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-container-low px-3 py-1 text-xs font-bold text-on-surface-variant">
+                  <BuildingIcon size={14} /> {corporation.type}
+                </span>
+                <span className="text-xs font-bold text-on-surface-variant">{corporation.region}</span>
+              </div>
+              <h3 className="mt-5 text-xl font-extrabold leading-snug text-primary">{corporation.name}</h3>
+              <p className="mt-2 line-clamp-2 min-h-12 text-sm leading-6 text-on-surface-variant">
+                {corporation.description || `${corporation.topMinistry}に関連する公表再就職情報を掲載しています。`}
+              </p>
+
+              <div className="mt-5 rounded-2xl bg-surface-container-low p-4">
+                <p className="text-[11px] font-extrabold tracking-[0.08em] text-on-surface-variant">
+                  {highlights.kind === "public-officer" ? "公表役員プロフィール" : "公表再就職記録"}
+                </p>
+                {highlights.people[0] ? (
+                  <div className="mt-3 flex items-start gap-3">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-secondary">
+                      <PersonIcon size={18} />
+                    </span>
+                    <div className="min-w-0">
+                      <p className="truncate font-extrabold text-primary">{highlights.people[0].name}</p>
+                      <p className="mt-0.5 line-clamp-2 text-xs leading-5 text-on-surface-variant">
+                        {highlights.people[0].formerOrganization} → {highlights.people[0].role}
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <p className="mt-2 text-sm text-on-surface-variant">関連する公表記録を詳細ページで確認できます。</p>
+                )}
+              </div>
+
+              <p className="mt-4 text-xs leading-5 text-on-surface-variant">出典：{sourceSummary || "公表資料"}</p>
+              <Link href={`/corporations/${corporation.slug}`} className="mt-5 inline-flex items-center justify-between border-t border-outline-variant/70 pt-4 text-sm font-bold text-secondary">
+                詳細と出典を見る <ArrowRightIcon size={17} />
+              </Link>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="grid gap-8 rounded-3xl bg-[#eaf2ed] p-6 md:p-9 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+        <div>
+          <SectionHeading
+            eyebrow="BROWSE BY MINISTRY"
+            title="省庁から関係をたどる"
+            description="省庁ごとに、公表資料に記載された主な再就職先法人と人物を確認できます。"
+          />
+          <Link href="/topics" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-secondary hover:underline">
+            すべての省庁・テーマを見る <ArrowRightIcon size={17} />
+          </Link>
+        </div>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {featuredMinistries.map((ministry) => (
+            <Link
+              key={ministry}
+              href={getMinistryPath(ministry)}
+              className="group flex min-h-16 items-center justify-between gap-3 rounded-2xl bg-white px-4 py-3 font-bold text-primary shadow-sm ring-1 ring-outline-variant/50 transition hover:ring-secondary/30"
+            >
+              <span className="flex items-center gap-3">
+                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-secondary-fixed text-secondary">
+                  <MinistryIcon size={18} />
+                </span>
+                {ministry}
+              </span>
+              <ArrowRightIcon className="text-outline transition group-hover:translate-x-1 group-hover:text-secondary" size={16} />
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {newsArticles.length > 0 ? (
+        <section>
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+            <SectionHeading
+              eyebrow="NEWS & EXPLAINERS"
+              title="一次資料から読むニュース・解説"
+              description="再就職制度や行政の動きを、確認できた事実と確認できないことに分けて整理します。"
+            />
+            <Link href="/news" className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-secondary hover:underline">
+              ニュース一覧を見る <ArrowRightIcon size={17} />
+            </Link>
+          </div>
+          <div className="mt-8 divide-y divide-outline-variant overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-outline-variant/70">
+            {newsArticles.slice(0, 3).map((article) => (
+              <article key={article.slug}>
+                <Link href={`/news/${article.slug}`} className="group grid gap-4 p-5 transition hover:bg-surface-container-low sm:grid-cols-[150px_1fr_auto] sm:items-center md:p-6">
+                  <div className="flex items-center gap-2 text-xs font-bold text-on-surface-variant sm:block">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary-fixed px-2.5 py-1 text-secondary">
+                      <NewsIcon size={14} /> {article.kind}
+                    </span>
+                    <time className="sm:mt-2 sm:block" dateTime={article.datePublished}>{formatDate(article.datePublished)}</time>
+                  </div>
+                  <div>
+                    <h3 className="text-balance text-base font-extrabold leading-7 text-primary md:text-lg">{article.title}</h3>
+                    <p className="mt-1 line-clamp-2 text-sm leading-6 text-on-surface-variant">{article.description}</p>
+                  </div>
+                  <ArrowRightIcon className="hidden text-outline transition group-hover:translate-x-1 group-hover:text-secondary sm:block" size={19} />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      <section className="grid gap-8 border-y border-outline-variant py-10 md:grid-cols-[0.9fr_1.1fr] md:items-center md:py-12">
+        <div>
+          <p className="text-xs font-extrabold tracking-[0.14em] text-secondary">HOW TO READ</p>
+          <h2 className="mt-2 text-balance text-2xl font-extrabold text-primary md:text-3xl">数字より先に、出典を見る。</h2>
+        </div>
+        <div className="space-y-3 text-sm leading-7 text-on-surface-variant">
+          <p className="flex items-start gap-3"><CheckIcon className="mt-1 shrink-0 text-secondary" size={18} />すべての重要な記録に、公表元と確認日を掲載します。</p>
+          <p className="flex items-start gap-3"><CheckIcon className="mt-1 shrink-0 text-secondary" size={18} />公表資料で確認できる事実と、資料だけでは判断できないことを分けます。</p>
+          <p className="flex items-start gap-3"><CheckIcon className="mt-1 shrink-0 text-secondary" size={18} />ランキングは件数の整理であり、違法性や妥当性を判定するものではありません。</p>
+          <Link href="/data-policy" className="inline-flex items-center gap-2 pt-2 font-bold text-secondary hover:underline">
+            データ方針を確認する <ArrowRightIcon size={17} />
+          </Link>
+        </div>
       </section>
     </div>
   );
