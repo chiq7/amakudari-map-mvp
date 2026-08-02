@@ -53,6 +53,21 @@ export default function DataPolicyPage() {
         </p>
       </section>
 
+      <section id="dataset-license" className="rounded-lg border border-outline-variant bg-surface-container-lowest p-6">
+        <h2 className="mb-3 text-2xl font-bold text-primary">データ利用条件</h2>
+        <div className="space-y-3 leading-relaxed text-on-surface-variant">
+          <p>
+            天下りマップが行ったデータの選択・構成・集計は、出典として「天下りマップ」と当該一次資料のURLを明記することを条件に、引用・再利用できます。再利用したデータに編集・加工を加えた場合は、その旨も分かるようにしてください。
+          </p>
+          <p>
+            この条件は、内閣官房や各省庁等が公表した原資料の著作権、利用条件その他の権利を変更するものではありません。原資料そのものを転載・再配布する場合は、必ず各公開元が示す利用条件を確認してください。
+          </p>
+          <p>
+            人物・法人・組織に関する情報は、一次資料の確認範囲を超えて断定したり、誹謗中傷や違法行為の示唆に用いたりしないでください。最終更新日：2026年8月2日。
+          </p>
+        </div>
+      </section>
+
       <section id="fields">
         <h2 className="mb-4 text-2xl font-bold text-primary">表示項目と抽出ルール</h2>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-4">

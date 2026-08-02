@@ -186,6 +186,21 @@ export default function Home() {
           "政府・各省庁等の公表資料をもとに、再就職先法人、出身省庁、待機日数などを検索・閲覧できるよう整理したデータセットです。",
         inLanguage: "ja-JP",
         dateModified: meta.lastUpdated,
+        creator: {
+          "@type": "Organization",
+          name: "天下りマップ",
+          url: "https://amakudari.jp/",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "天下りマップ",
+          url: "https://amakudari.jp/",
+        },
+        license: {
+          "@type": "CreativeWork",
+          name: "天下りマップ データ利用条件（2026年8月2日版）",
+          url: "https://amakudari.jp/data-policy#dataset-license",
+        },
         variableMeasured: [
           {
             "@type": "PropertyValue",
