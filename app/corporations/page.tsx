@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { corporations, totals } from "@/lib/static-content";
 import { getMinistryPath } from "@/lib/ministry-pages";
@@ -147,6 +147,7 @@ function getActiveFilters({
 
 function CorporationsContent() {
   const searchParams = useSearchParams();
+  const [showAll, setShowAll] = useState(false);
   const ministry = searchParams.get("ministry")?.trim() ?? "";
   const type = searchParams.get("type")?.trim() ?? "";
   const area =
@@ -207,6 +208,10 @@ function CorporationsContent() {
     });
 
   const isFiltered = activeFilters.length > 0;
+  const initialLimit = 20;
+  const visibleCorporations =
+    isFiltered || showAll ? filteredCorporations : filteredCorporations.slice(0, initialLimit);
+  const hiddenCount = filteredCorporations.length - visibleCorporations.length;
 
   return (
     <div className="flex flex-col gap-8">
@@ -273,7 +278,7 @@ function CorporationsContent() {
         <div className="flex flex-wrap items-end justify-between gap-3">
           <h2 className="text-2xl font-bold text-primary">法人一覧</h2>
           <p className="text-base font-bold text-primary">
-            全 {totals.corporations}件中 {filteredCorporations.length}件を表示
+            全 {totals.corporations}件中 {visibleCorporations.length}件を表示
           </p>
         </div>
         <p className="text-sm leading-relaxed text-on-surface-variant">
@@ -282,7 +287,7 @@ function CorporationsContent() {
         {filteredCorporations.length > 0 ? (
           <>
           <div className="grid gap-3 md:hidden">
-            {filteredCorporations.map((corporation) => (
+            {visibleCorporations.map((corporation) => (
               <Link
                 key={corporation.slug}
                 href={`/corporations/${corporation.slug}`}
@@ -336,7 +341,7 @@ function CorporationsContent() {
               </tr>
             </thead>
             <tbody className="divide-y divide-outline-variant">
-              {filteredCorporations.map((corporation) => (
+              {visibleCorporations.map((corporation) => (
                 <tr key={corporation.slug} className="hover:bg-surface-container-low">
                   <td className="px-4 py-4 font-bold text-primary">
                     {corporation.name}
@@ -369,6 +374,20 @@ function CorporationsContent() {
             </tbody>
           </table>
           </div>
+          {hiddenCount > 0 ? (
+            <div className="border-t border-outline-variant pt-5 text-center">
+              <p className="text-sm text-on-surface-variant">
+                最初の{initialLimit}法人を表示しています。法人名が分かる場合は上の検索が便利です。
+              </p>
+              <button
+                type="button"
+                onClick={() => setShowAll(true)}
+                className="mt-3 min-h-11 border border-primary bg-white px-6 text-sm font-bold text-primary transition hover:bg-surface-container-low"
+              >
+                残り{hiddenCount}法人をすべて表示
+              </button>
+            </div>
+          ) : null}
           </>
         ) : (
           <div className="rounded-lg border border-outline-variant bg-surface-container-lowest px-6 py-10 text-center">

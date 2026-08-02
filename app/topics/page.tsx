@@ -74,7 +74,7 @@ export default function TopicsPage() {
                 >
                   <span>{theme}</span>
                   <span className="flex items-center gap-3 text-xs text-on-surface-variant">
-                    {topicSlug ? "解説あり" : "関連記録"}
+                    {topicSlug ? "専用ページ" : "関連記録"}
                     <ArrowRightIcon className="text-outline transition group-hover:translate-x-1 group-hover:text-secondary" size={17} />
                   </span>
                 </Link>

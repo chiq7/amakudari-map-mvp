@@ -39,6 +39,20 @@ function formatDate(value: string) {
   return value.replace(/-/g, ".");
 }
 
+function ArticleTitle({ title }: { title: string }) {
+  const parts = title.split("天下りマップ");
+  return (
+    <>
+      {parts.map((part, index) => (
+        <span key={`${part}-${index}`}>
+          {index > 0 ? <span className="whitespace-nowrap">天下りマップ</span> : null}
+          {part}
+        </span>
+      ))}
+    </>
+  );
+}
+
 export default function NewsArticlePage({ params }: { params: { slug: string } }) {
   const article = getNewsArticle(params.slug);
   if (!article) notFound();
@@ -89,7 +103,9 @@ export default function NewsArticlePage({ params }: { params: { slug: string } }
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
             <TagChip>{article.kind}</TagChip>
-            <h1 className="mt-4 text-3xl font-bold leading-tight text-primary md:text-4xl">{article.title}</h1>
+            <h1 className="mt-4 text-3xl font-bold leading-tight text-primary md:text-4xl">
+              <ArticleTitle title={article.title} />
+            </h1>
           </div>
           <ShareButton title={`${article.title} | 天下りマップ`} />
         </div>

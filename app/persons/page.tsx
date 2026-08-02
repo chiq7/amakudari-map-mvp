@@ -41,7 +41,7 @@ export default function PersonsPage() {
           <div>
             <h2 className="text-2xl font-extrabold text-primary">省庁別の人物一覧</h2>
             <p className="mt-2 text-sm leading-6 text-on-surface-variant">
-              省庁名を選ぶと、その区分まで移動します。各人物の官職と出典資料もあわせて確認してください。
+              省庁名を選び、必要な区分だけ開いて確認できます。氏名が分かる場合は上の検索が最短です。
             </p>
           </div>
           <p className="shrink-0 text-sm font-bold text-on-surface-variant">
@@ -51,26 +51,25 @@ export default function PersonsPage() {
 
         <nav
           aria-label="省庁別の人物一覧へ移動"
-          className="sticky top-[118px] z-30 -mx-4 mt-5 flex gap-2 overflow-x-auto border-y border-outline-variant bg-background/95 px-4 py-3 backdrop-blur md:-mx-8 md:px-8 lg:top-[68px]"
+          className="mt-5 grid grid-cols-2 gap-px border border-outline-variant bg-outline-variant sm:grid-cols-3 lg:grid-cols-4"
         >
           {ministryGroups.map((group) => (
             <a
               key={group.id}
               href={`#${group.id}`}
-              className="inline-flex min-h-10 shrink-0 items-center gap-2 border border-outline-variant bg-white px-3 text-xs font-bold text-primary transition hover:border-secondary hover:text-secondary"
+              className="flex min-h-12 items-center justify-between gap-2 bg-white px-3 py-2 text-xs font-bold text-primary transition hover:bg-secondary-fixed hover:text-secondary"
             >
-              {group.ministry}
+              <span>{group.ministry}</span>
               <span className="text-on-surface-variant">{group.people.length}</span>
             </a>
           ))}
         </nav>
 
         <div className="mt-6 space-y-4">
-          {ministryGroups.map((group, groupIndex) => (
+          {ministryGroups.map((group) => (
             <details
               key={group.id}
               id={group.id}
-              open={groupIndex < 2}
               className="group scroll-mt-44 border border-outline-variant bg-surface-container-lowest lg:scroll-mt-28"
             >
               <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 border-l-4 border-secondary bg-surface-container-low px-4 py-3 [&::-webkit-details-marker]:hidden">

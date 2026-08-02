@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/organizations",
+      "destination": "/corporations",
+      "permanent": true
+    },
+    {
+      "source": "/organizations/:path*",
+      "destination": "/corporations",
+      "permanent": true
+    }
+  ]
+}
