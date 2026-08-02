@@ -1,11 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import {
   corporations,
   getCorporationPersonHighlights,
   getSourceSummary,
   meta,
-  persons,
   topics,
   totals,
 } from "@/lib/static-content";
@@ -91,11 +91,6 @@ function SectionHeading({
 }
 
 export default function Home() {
-  const samplePerson = persons[0];
-  const sampleCorporation = corporations.find(
-    (corporation) => corporation.slug === samplePerson?.corporationSlug,
-  );
-
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -143,109 +138,79 @@ export default function Home() {
       />
 
       <section
-        className="relative overflow-hidden rounded-3xl bg-primary px-5 py-8 text-white shadow-soft sm:px-8 md:px-12 md:py-12 lg:grid lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-12 lg:px-14 lg:py-16"
+        className="relative overflow-hidden rounded-3xl bg-[#eee6da] shadow-soft ring-1 ring-[#dfd4c5] lg:grid lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch"
         data-analytics-location="home_hero"
       >
-        <div className="absolute -right-20 -top-24 h-80 w-80 rounded-full border border-white/10" aria-hidden="true" />
-        <div className="absolute -right-6 -top-10 h-52 w-52 rounded-full border border-white/10" aria-hidden="true" />
-
-        <div className="relative z-10">
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-3 py-1.5 text-xs font-bold tracking-[0.08em] text-white/80">
+        <div className="relative z-10 flex flex-col justify-center px-5 py-8 sm:px-8 md:px-12 md:py-12 lg:px-14 lg:py-16">
+          <p className="inline-flex w-fit items-center gap-2 border-b-2 border-accent pb-2 text-xs font-extrabold tracking-[0.1em] text-primary">
             <DocumentIcon size={16} />
-            政府・省庁等の一次資料を整理
+            PUBLIC RECORDS, VISUALIZED
           </p>
-          <h1 className="mt-6 text-balance text-[34px] font-extrabold leading-[1.25] tracking-[-0.035em] sm:text-5xl md:text-[56px] md:leading-[1.18]">
-            官民の人の動きを、
-            <span className="block text-[#a9e4d3]">公表資料からたどる。</span>
+          <h1 className="mt-6 text-balance text-[34px] font-extrabold leading-[1.25] tracking-[-0.035em] sm:text-[42px] md:leading-[1.22] xl:text-[46px]">
+            <span className="block">官民の人の動きを、</span>
+            <span className="block text-accent">公表資料からたどる。</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-pretty text-base leading-8 text-white/78 md:text-lg">
-            誰が、どの省庁から、どの法人へ移ったのか。公表された再就職情報を、人・法人・省庁のつながりと時系列で確認できます。
+          <p className="mt-5 max-w-xl text-pretty text-base font-medium leading-8 text-on-surface-variant md:text-lg">
+            誰が、どこから、どこへ。公表された再就職情報を一本の線で確認できます。
           </p>
 
-          <SearchBox className="mt-7 max-w-2xl text-on-surface" />
-          <p className="mt-3 text-xs leading-5 text-white/58">
-            例：氏名、法人名、国土交通省、役職名
-          </p>
+          <figure className="mt-6 overflow-hidden rounded-2xl bg-[#f6f0e6] ring-1 ring-[#dfd4c5] lg:hidden">
+            <div className="relative aspect-[3/2] w-full">
+              <Image
+                src="/images/relationship-editorial-v1.webp"
+                alt="省庁から人物、法人への移動と、それを裏付ける公表資料の関係図"
+                fill
+                priority
+                unoptimized
+                sizes="100vw"
+                className="object-contain object-center"
+              />
+            </div>
+            <figcaption className="flex items-center justify-between gap-2 border-t border-[#dfd4c5] bg-white/80 px-3 py-2 text-[11px] font-bold text-primary">
+              <span>省庁 → 人物 → 法人</span>
+              <span className="text-secondary">公表資料で照合</span>
+            </figcaption>
+          </figure>
 
-          <div className="mt-7 flex flex-wrap gap-x-5 gap-y-3 text-sm font-bold">
-            <Link href="/persons" className="inline-flex items-center gap-2 text-white/88 transition hover:text-white">
+          <SearchBox className="mt-7 max-w-xl" />
+
+          <div className="mt-6 flex flex-wrap gap-2 text-sm font-bold">
+            <Link href="/persons" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-4 text-primary shadow-sm transition hover:-translate-y-0.5">
               <PersonIcon size={18} /> 人から探す <ArrowRightIcon size={15} />
             </Link>
-            <Link href="/corporations" className="inline-flex items-center gap-2 text-white/88 transition hover:text-white">
+            <Link href="/corporations" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-4 text-primary shadow-sm transition hover:-translate-y-0.5">
               <BuildingIcon size={18} /> 法人から探す <ArrowRightIcon size={15} />
             </Link>
-            <Link href="/topics" className="inline-flex items-center gap-2 text-white/88 transition hover:text-white">
+            <Link href="/topics" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-4 text-primary shadow-sm transition hover:-translate-y-0.5">
               <MinistryIcon size={18} /> 省庁から探す <ArrowRightIcon size={15} />
             </Link>
           </div>
         </div>
 
-        {samplePerson ? (
-          <div className="relative z-10 mt-10 lg:mt-0">
-            <div className="rounded-3xl border border-white/12 bg-white/[0.07] p-4 backdrop-blur md:p-5">
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-xs font-bold tracking-[0.1em] text-white/50">公表資料上の移動例</p>
-                  <p className="mt-1 text-sm font-bold text-white/86">組織・人・法人を1本につなぐ</p>
-                </div>
-                <span className="rounded-full bg-[#a9e4d3] px-3 py-1 text-xs font-extrabold text-primary">出典あり</span>
-              </div>
-
-              <div className="mt-5 space-y-2.5">
-                <div className="rounded-2xl bg-white p-4 text-on-surface shadow-card">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-surface-container-low text-primary">
-                      <MinistryIcon size={21} />
-                    </span>
-                    <div className="min-w-0">
-                      <p className="text-[11px] font-bold text-on-surface-variant">出身省庁</p>
-                      <p className="truncate font-extrabold text-primary">{samplePerson.ministry}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="ml-5 h-5 border-l-2 border-dashed border-white/28" aria-hidden="true" />
-                <Link href={`/persons/${samplePerson.slug}`} className="block rounded-2xl bg-[#d8f1e8] p-4 text-on-surface transition hover:bg-[#c5e9dd]">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-secondary">
-                      <PersonIcon size={21} />
-                    </span>
-                    <div className="min-w-0">
-                      <p className="text-[11px] font-bold text-on-surface-variant">公表された人物</p>
-                      <p className="truncate font-extrabold text-primary">{samplePerson.name}</p>
-                      <p className="mt-0.5 truncate text-xs text-on-surface-variant">{samplePerson.formerPosition}</p>
-                    </div>
-                  </div>
-                </Link>
-                <div className="ml-5 flex h-6 items-center gap-3 border-l-2 border-dashed border-white/28 pl-4 text-[11px] font-bold text-white/62">
-                  退職から再就職まで {samplePerson.waitDays}日
-                </div>
-                <Link href={`/corporations/${samplePerson.corporationSlug}`} className="block rounded-2xl bg-white p-4 text-on-surface shadow-card transition hover:bg-surface-container-low">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent-soft text-accent">
-                      <BuildingIcon size={21} />
-                    </span>
-                    <div className="min-w-0">
-                      <p className="text-[11px] font-bold text-on-surface-variant">再就職先</p>
-                      <p className="truncate font-extrabold text-primary">{samplePerson.corporationName}</p>
-                      <p className="mt-0.5 truncate text-xs text-on-surface-variant">{samplePerson.newPosition}</p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-              <p className="mt-4 text-xs leading-5 text-white/52">
-                出典：{sampleCorporation ? getSourceSummary(sampleCorporation.sources) : samplePerson.source}
-              </p>
-            </div>
+        <figure className="relative hidden min-w-0 border-l border-[#dfd4c5] bg-[#f6f0e6] lg:block">
+          <div className="relative aspect-[3/2] min-h-[290px] w-full lg:aspect-auto lg:h-full lg:min-h-[520px]">
+            <Image
+              src="/images/relationship-editorial-v1.webp"
+              alt="省庁から人物、法人への移動と、それを裏付ける公表資料の関係図"
+              fill
+              priority
+              unoptimized
+              sizes="(max-width: 1024px) 100vw, 58vw"
+              className="object-contain object-center"
+            />
           </div>
-        ) : null}
+          <figcaption className="absolute bottom-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2 rounded-xl bg-white/90 px-3 py-2 text-[11px] font-bold text-primary shadow-sm backdrop-blur md:bottom-5 md:left-5 md:right-5 md:px-4 md:py-3 md:text-xs">
+            <span>省庁 → 人物 → 法人</span>
+            <span className="text-secondary">公表資料で照合</span>
+          </figcaption>
+        </figure>
       </section>
 
       <section aria-labelledby="data-summary-title">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow="CURRENT DATA"
-            title="いま確認できる公表データ"
-            description="件数は公表資料に含まれる記録を整理したものです。数字だけで評価せず、各詳細ページの出典と日付をあわせて確認できます。"
+            title="公表データをひと目で"
           />
           <p className="text-xs font-semibold text-on-surface-variant">データ更新日 {formatDate(meta.lastUpdated)}</p>
         </div>
@@ -275,7 +240,6 @@ export default function Home() {
         <SectionHeading
           eyebrow="START HERE"
           title="知りたい入口から、まっすぐ探せます"
-          description="専門用語が分からなくても大丈夫です。名前、法人、省庁のどこからでも関連する公表記録へたどれます。"
         />
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {[
@@ -284,41 +248,43 @@ export default function Home() {
               icon: <PersonIcon size={26} />,
               number: "01",
               title: "人から探す",
-              description: "氏名から、離職時の所属・役職、再就職先、待機日数を確認します。",
-              example: "氏名・役職で検索",
+              flow: "氏名 → 経歴 → 再就職先",
+              tone: "bg-[#e9edf8]",
+              iconTone: "bg-secondary text-white",
             },
             {
               href: "/corporations",
               icon: <BuildingIcon size={26} />,
               number: "02",
               title: "法人から探す",
-              description: "法人ごとに、公表された人物、出身省庁、時系列と出典を確認します。",
-              example: "法人名・法人種別で検索",
+              flow: "法人 → 人物 → 出身省庁",
+              tone: "bg-[#f7e7e1]",
+              iconTone: "bg-accent text-white",
             },
             {
               href: "/topics",
               icon: <MinistryIcon size={26} />,
               number: "03",
               title: "省庁・テーマから探す",
-              description: "出身省庁や業界テーマから、関連する法人と人物を横断して見ます。",
-              example: "省庁・業界で絞り込み",
+              flow: "省庁 → 人物 → 法人",
+              tone: "bg-[#f1e3c8]",
+              iconTone: "bg-primary text-white",
             },
           ].map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="group flex min-h-[270px] flex-col rounded-3xl bg-white p-6 shadow-card ring-1 ring-outline-variant/70 transition hover:-translate-y-1 hover:shadow-soft hover:ring-secondary/30 md:p-7"
+              className={`group flex min-h-[210px] flex-col rounded-3xl p-6 shadow-card ring-1 ring-outline-variant/70 transition hover:-translate-y-1 hover:shadow-soft md:p-7 ${item.tone}`}
             >
               <div className="flex items-center justify-between">
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary-fixed text-secondary">
+                <span className={`flex h-16 w-16 items-center justify-center rounded-full ${item.iconTone}`}>
                   {item.icon}
                 </span>
-                <span className="text-xs font-extrabold tracking-[0.14em] text-outline">{item.number}</span>
+                <span className="font-mono text-sm font-extrabold tracking-[0.14em] text-on-surface-variant">{item.number}</span>
               </div>
-              <h3 className="mt-7 text-2xl font-extrabold text-primary">{item.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-on-surface-variant">{item.description}</p>
-              <div className="mt-auto flex items-center justify-between border-t border-outline-variant/70 pt-5 text-sm font-bold text-secondary">
-                <span>{item.example}</span>
+              <h3 className="mt-6 text-xl font-extrabold text-primary md:text-2xl">{item.title}</h3>
+              <div className="mt-auto flex items-center justify-between pt-5 text-sm font-bold text-primary">
+                <span>{item.flow}</span>
                 <ArrowRightIcon className="transition-transform group-hover:translate-x-1" size={18} />
               </div>
             </Link>
@@ -331,7 +297,6 @@ export default function Home() {
           <SectionHeading
             eyebrow="PUBLIC RECORDS"
             title="公表情報を、つながりで見る"
-            description="各カードから人物・法人・出典資料へ進めます。"
           />
           <Link href="/corporations" className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-secondary hover:underline">
             法人一覧を見る <ArrowRightIcon size={17} />
@@ -347,10 +312,6 @@ export default function Home() {
                 <span className="text-xs font-bold text-on-surface-variant">{corporation.region}</span>
               </div>
               <h3 className="mt-5 text-xl font-extrabold leading-snug text-primary">{corporation.name}</h3>
-              <p className="mt-2 line-clamp-2 min-h-12 text-sm leading-6 text-on-surface-variant">
-                {corporation.description || `${corporation.topMinistry}に関連する公表再就職情報を掲載しています。`}
-              </p>
-
               <div className="mt-5 rounded-2xl bg-surface-container-low p-4">
                 <p className="text-[11px] font-extrabold tracking-[0.08em] text-on-surface-variant">
                   {highlights.kind === "public-officer" ? "公表役員プロフィール" : "公表再就職記録"}
@@ -381,12 +342,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-8 rounded-3xl bg-[#eaf2ed] p-6 md:p-9 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+      <section className="grid gap-8 rounded-3xl bg-[#e9edf8] p-6 md:p-9 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
         <div>
           <SectionHeading
             eyebrow="BROWSE BY MINISTRY"
             title="省庁から関係をたどる"
-            description="省庁ごとに、公表資料に記載された主な再就職先法人と人物を確認できます。"
           />
           <Link href="/topics" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-secondary hover:underline">
             すべての省庁・テーマを見る <ArrowRightIcon size={17} />
@@ -417,7 +377,6 @@ export default function Home() {
             <SectionHeading
               eyebrow="NEWS & EXPLAINERS"
               title="一次資料から読むニュース・解説"
-              description="再就職制度や行政の動きを、確認できた事実と確認できないことに分けて整理します。"
             />
             <Link href="/news" className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-secondary hover:underline">
               ニュース一覧を見る <ArrowRightIcon size={17} />

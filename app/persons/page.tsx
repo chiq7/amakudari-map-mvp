@@ -8,7 +8,7 @@ export default function PersonsPage() {
     <div className="flex flex-col gap-10">
       <section className="grid gap-7 rounded-3xl bg-primary px-5 py-8 text-white md:px-9 md:py-10 lg:grid-cols-[1fr_0.9fr] lg:items-end">
         <div>
-          <p className="text-xs font-extrabold tracking-[0.14em] text-[#a9e4d3]">PEOPLE</p>
+          <p className="text-xs font-extrabold tracking-[0.14em] text-[#f2b2a8]">PEOPLE</p>
           <h1 className="mt-3 text-balance text-3xl font-extrabold tracking-tight md:text-4xl">人から公表記録を探す</h1>
           <p className="mt-4 max-w-2xl text-pretty text-sm leading-7 text-white/72 md:text-base">
             氏名から、離職時の所属・役職、再就職先、退職から再就職までの日数と出典を確認できます。

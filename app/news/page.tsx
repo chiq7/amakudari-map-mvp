@@ -33,7 +33,7 @@ export default function NewsIndexPage() {
       <Breadcrumb items={[{ label: "TOP", href: "/" }, { label: "ニュース・解説" }]} />
 
       <section className="rounded-3xl bg-primary px-6 py-9 text-white md:px-10 md:py-12">
-        <p className="text-xs font-extrabold tracking-[0.14em] text-[#a9e4d3]">NEWS & EXPLAINERS</p>
+        <p className="text-xs font-extrabold tracking-[0.14em] text-[#f2b2a8]">NEWS & EXPLAINERS</p>
         <h1 className="mt-3 text-balance text-3xl font-extrabold tracking-tight md:text-4xl">公表資料から読むニュース・解説</h1>
         <p className="mt-5 max-w-3xl text-pretty leading-8 text-white/72">
           政治・行政ニュースのうち、再就職、公的法人、監督官庁、制度、国会質疑に直接関係し、一次資料で確認できる内容だけを扱います。報道の転載や、根拠のない人物・法人評価は行いません。
