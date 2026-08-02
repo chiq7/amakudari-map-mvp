@@ -1,5 +1,6 @@
 import { rankingLists } from "@/lib/static-content";
-import { DataNotice, RankingCard, TagChip } from "@/components/ui";
+import { DataNotice, TagChip } from "@/components/ui";
+import RankingExplorer, { type ComparisonGroup } from "@/components/RankingExplorer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,13 +15,6 @@ const linkGroups = [
     links: ["国土交通省", "経済産業省", "総務省", "内閣府"].map((label) => ({
       label,
       href: `/corporations?ministry=${encodeURIComponent(label)}`,
-    })),
-  },
-  {
-    title: "地域別に見る",
-    links: ["東京都", "関東地方", "大阪府", "近畿地方"].map((label) => ({
-      label,
-      href: `/corporations?region=${encodeURIComponent(label)}`,
     })),
   },
   {
@@ -41,6 +35,35 @@ const linkGroups = [
 
 export default function RankingsPage() {
   const nextDayItems = rankingLists.nextDay.filter((item) => item.value > 0);
+  const comparisonGroups: ComparisonGroup[] = [
+    {
+      id: "public_records",
+      label: "複数の公表記録",
+      title: "公表記録が複数ある法人",
+      description: "1件のみの法人を大量に並べず、2件以上の記録がある法人だけを比較します。",
+      unit: "人",
+      items: rankingLists.publicRecords.filter((item) => item.value > 1),
+    },
+    {
+      id: "within_30_days",
+      label: "30日以内が複数",
+      title: "30日以内の記録が複数ある法人",
+      description: "30日以内の記録が2件以上ある法人だけを表示し、差がある部分に絞っています。",
+      unit: "件",
+      items: rankingLists.within30Days.filter((item) => item.value > 1),
+    },
+    {
+      id: "waiting_days",
+      label: "待機日数の差",
+      title: "平均待機日数に差がある法人",
+      description: "大半を占める平均1日の法人を除き、平均待機日数が2日以上の法人を長い順に比較します。",
+      unit: "日",
+      items: rankingLists.shortestAverageWaitingDays
+        .filter((item) => item.value > 1)
+        .sort((left, right) => right.value - left.value)
+        .slice(0, 12),
+    },
+  ];
 
   return (
     <div className="flex flex-col gap-10">
@@ -86,86 +109,21 @@ export default function RankingsPage() {
           <p className="text-xs font-bold text-on-surface-variant">各行から出典付き詳細へ移動できます</p>
         </div>
         {nextDayItems.length === 0 ? (
-          <div className="mb-6 border-l-4 border-outline bg-surface-container-low px-4 py-3 text-sm text-on-surface-variant">
-            <strong className="text-primary">退職翌日の再就職記録：</strong> 現在の公開データに該当する記録はありません。
-          </div>
+          <DataNotice className="mb-6 border-l-accent bg-accent/10">
+            <strong className="block text-primary">退職翌日の再就職記録は0件でした</strong>
+            現在の公開データでは比較対象がないため、この指標のランキングは表示していません。
+          </DataNotice>
         ) : null}
-        <nav
-          aria-label="ランキング内の移動"
-          className="sticky top-[118px] z-20 mb-5 flex gap-2 overflow-x-auto border-y border-outline-variant bg-background/95 py-3 backdrop-blur lg:top-[68px]"
-        >
-          {[
-            ["#ranking-public-records", "公表記録数"],
-            ...(nextDayItems.length > 0 ? [["#ranking-next-day", "退職翌日"]] : []),
-            ["#ranking-within-30-days", "30日以内"],
-            ["#ranking-shortest-wait", "平均待機日数"],
-          ].map(([href, label]) => (
-            <a key={href} href={href} className="inline-flex min-h-10 shrink-0 items-center border border-outline-variant bg-white px-3 text-xs font-bold text-primary hover:border-secondary hover:text-secondary">
-              {label}
-            </a>
-          ))}
-        </nav>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <div id="ranking-public-records" className="scroll-mt-44 lg:scroll-mt-28">
-          <RankingCard
-            title="公表記録数が多い法人（上位20）"
-            unit="人"
-            rankingType="public_records"
-            items={rankingLists.publicRecords.slice(0, 20).map((item) => ({
-              label: item.label,
-              value: item.value,
-              href: `/corporations/${item.corporationSlug}`,
-            }))}
-          />
-        </div>
-        {nextDayItems.length > 0 ? (
-          <div id="ranking-next-day" className="scroll-mt-44 lg:scroll-mt-28">
-            <RankingCard
-              title="退職翌日の再就職記録（上位20）"
-              unit="件"
-              rankingType="next_day"
-              items={nextDayItems.slice(0, 20).map((item) => ({
-                label: item.label,
-                value: item.value,
-                href: `/corporations/${item.corporationSlug}`,
-              }))}
-            />
-          </div>
-        ) : null}
-        <div id="ranking-within-30-days" className="scroll-mt-44 lg:scroll-mt-28">
-          <RankingCard
-            title="30日以内の再就職記録（上位20）"
-            unit="件"
-            rankingType="within_30_days"
-            items={rankingLists.within30Days.slice(0, 20).map((item) => ({
-              label: item.label,
-              value: item.value,
-              href: `/corporations/${item.corporationSlug}`,
-            }))}
-          />
-        </div>
-        <div id="ranking-shortest-wait" className="scroll-mt-44 lg:scroll-mt-28">
-          <RankingCard
-            title="平均待機日数が短い法人（上位20）"
-            unit="日"
-            rankingType="shortest_average_wait"
-            items={rankingLists.shortestAverageWaitingDays.slice(0, 20).map((item) => ({
-              label: item.label,
-              value: item.value,
-              href: `/corporations/${item.corporationSlug}`,
-            }))}
-          />
-        </div>
-        </div>
+        <RankingExplorer groups={comparisonGroups} />
       </section>
 
       <section className="border-t border-outline-variant pt-7">
         <h2 className="mb-4 text-2xl font-bold text-primary">別の切り口で絞り込む</h2>
-        <div className="grid grid-cols-1 border border-outline-variant bg-surface-container-lowest sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 border border-outline-variant bg-surface-container-lowest sm:grid-cols-3">
           {linkGroups.map((group) => (
             <div
               key={group.title}
-              className="border-b border-outline-variant p-4 last:border-b-0 sm:odd:border-r sm:[&:nth-last-child(-n+2)]:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0"
+              className="border-b border-outline-variant p-4 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0"
             >
               <h3 className="mb-2 text-sm font-bold text-primary">{group.title}</h3>
               <div className="flex flex-wrap gap-2">

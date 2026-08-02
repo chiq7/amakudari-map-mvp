@@ -1,14 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import type { GbizInfoCollection } from "@/lib/types";
+import type { GbizInfoCollection, Person } from "@/lib/types";
 import CorporationBusinessContext from "@/components/CorporationBusinessContext";
-import { Breadcrumb, HighlightStatCard, SourceLinkList, StatCard, TagChip } from "@/components/ui";
+import { Breadcrumb, DataNotice, HighlightStatCard, SourceLinkList, StatCard, TagChip } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import {
   corporations,
   getCorporation,
   getCorporationPersonHighlights,
-  getSourceSummary,
   persons,
   records,
   sources,
@@ -79,6 +78,82 @@ function PublicDataCollection({
   );
 }
 
+function ReemploymentRecordList({ relatedPersons }: { relatedPersons: Person[] }) {
+  return (
+    <section className="border-t-4 border-primary bg-surface-container-lowest shadow-card ring-1 ring-outline-variant/70">
+      <div className="flex flex-wrap items-end justify-between gap-3 border-b border-outline-variant px-5 py-5 md:px-6">
+        <div>
+          <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">確認できた人物記録</p>
+          <h2 className="mt-1 text-2xl font-extrabold text-primary">公表再就職記録</h2>
+        </div>
+        <p className="text-sm font-bold text-on-surface-variant">
+          {relatedPersons.length === 1 ? "確認できる記録は1件です" : `${relatedPersons.length}件の記録`}
+        </p>
+      </div>
+
+      <div className="grid gap-3 p-4 md:hidden">
+        {relatedPersons.map((person) => (
+          <article key={person.slug} className="border border-outline-variant bg-white p-4">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-xs font-bold text-on-surface-variant">{person.ministry}</p>
+                <h3 className="mt-1 text-xl font-extrabold text-primary">
+                  <Link href={`/persons/${person.slug}`} className="hover:underline">{person.name}</Link>
+                </h3>
+              </div>
+              <span className="shrink-0 border border-secondary/20 bg-secondary-fixed px-2 py-1 text-xs font-extrabold text-secondary">
+                待機 {person.waitDays}日
+              </span>
+            </div>
+            <dl className="mt-4 grid gap-3 border-t border-outline-variant pt-4 text-sm">
+              <div>
+                <dt className="text-xs font-bold text-on-surface-variant">離職時官職</dt>
+                <dd className="mt-1 font-semibold leading-6 text-primary">{person.formerPosition}</dd>
+              </div>
+              <div>
+                <dt className="text-xs font-bold text-on-surface-variant">再就職先での地位</dt>
+                <dd className="mt-1 font-semibold leading-6 text-primary">{person.newPosition}</dd>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div><dt className="text-xs font-bold text-on-surface-variant">離職日</dt><dd className="mt-1 font-mono">{person.retiredAt}</dd></div>
+                <div><dt className="text-xs font-bold text-on-surface-variant">再就職日</dt><dd className="mt-1 font-mono">{person.reemployedAt}</dd></div>
+              </div>
+            </dl>
+            <p className="mt-4 border-t border-outline-variant pt-3 text-xs leading-5 text-on-surface-variant">出典：{person.source}</p>
+          </article>
+        ))}
+      </div>
+
+      <div className="hidden overflow-x-auto md:block">
+        <table className="w-full min-w-[900px] text-left">
+          <thead className="bg-surface-container-low">
+            <tr>
+              <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">氏名</th>
+              <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">元省庁・離職時官職</th>
+              <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">再就職先での地位</th>
+              <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">離職日 → 再就職日</th>
+              <th className="px-4 py-3 text-center text-sm font-semibold text-on-surface-variant">待機日数</th>
+              <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">出典</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-outline-variant">
+            {relatedPersons.map((person) => (
+              <tr key={person.slug} className="align-top hover:bg-surface-container-low">
+                <td className="px-4 py-4 font-bold"><Link href={`/persons/${person.slug}`} className="text-secondary hover:underline">{person.name}</Link></td>
+                <td className="px-4 py-4 text-sm"><strong className="block text-primary">{person.ministry}</strong><span className="mt-1 block leading-6 text-on-surface-variant">{person.formerPosition}</span></td>
+                <td className="px-4 py-4 text-sm leading-6">{person.newPosition}</td>
+                <td className="px-4 py-4 font-mono text-sm"><span className="block">{person.retiredAt}</span><span className="block text-on-surface-variant">→ {person.reemployedAt}</span></td>
+                <td className="px-4 py-4 text-center"><span className="inline-flex border border-secondary/20 bg-secondary-fixed px-2 py-1 text-sm font-bold text-secondary">{person.waitDays}日</span></td>
+                <td className="max-w-[240px] px-4 py-4 text-xs leading-5 text-on-surface-variant">{person.source}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
 export function generateStaticParams() {
   return corporations.map((corporation) => ({ slug: corporation.slug }));
 }
@@ -124,10 +199,6 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
   const corporation = getCorporation(params.slug);
   const relatedPersons = persons.filter((person) => person.corporationSlug === corporation.slug);
   const relatedRecords = records.filter((record) => record.corporationSlug === corporation.slug);
-  const personHighlights = getCorporationPersonHighlights(corporation);
-  const highlightSourceSummary = getSourceSummary(
-    personHighlights.people.flatMap((person) => person.sourceIds),
-  );
   const ministryCounts = relatedRecords.reduce<Map<string, number>>((counts, record) => {
     counts.set(record.fromMinistry, (counts.get(record.fromMinistry) ?? 0) + 1);
     return counts;
@@ -145,6 +216,9 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         ) / 10
       : 0;
   const nextDayCount = relatedRecords.filter((record) => record.waitingDays === 0).length;
+  const minimumWaitDays = relatedRecords.length > 0
+    ? Math.min(...relatedRecords.map((record) => record.waitingDays))
+    : 0;
   const waitDistribution = [
     {
       label: "退職翌日",
@@ -177,13 +251,6 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
     ...corporation.publicOfficers.flatMap((officer) => officer.sourceIds),
   ]);
   const relatedSources = sources.filter((source) => relatedSourceIds.has(source.id));
-  const highlightedPeople = personHighlights.people.map((person) => `${person.name}氏`).join("、");
-  const highlightedOrganizations = Array.from(
-    new Set(personHighlights.people.map((person) => person.formerOrganization).filter(Boolean)),
-  ).join("・");
-  const connectionDescription = personHighlights.people.length > 0
-    ? `${highlightedPeople}について、${highlightedOrganizations || "行政機関"}での経歴と、${corporation.name}での役職・再就職情報が公表されています。`
-    : `${corporation.name}について、現在の公開データでは人物との接点を示す公表記録を確認できていません。`;
 
   return (
     <div className="flex flex-col gap-6">
@@ -200,96 +267,50 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
           <div>
             <h1 className="text-3xl font-bold text-primary md:text-4xl">{corporation.name}</h1>
             <p className="mt-2 max-w-3xl text-sm leading-7 text-on-surface-variant md:text-base">
-              法人の業務内容と、公表された人物・役職・出身組織を出典付きで確認できます。
+              法人の業務と、公表された人物・役職・出身組織を確認できます。
             </p>
           </div>
           <ShareButton title={`${corporation.name}の公表再就職情報 | 天下りマップ`} />
         </div>
-        <CorporationBusinessContext
-          corporation={corporation}
-          connection={connectionDescription}
-        />
-        {personHighlights.people.length > 0 && (
-          <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-sm">
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <div>
-                <p className="text-xs font-bold text-secondary">
-                  {personHighlights.kind === "public-officer"
-                    ? "公式発表に基づく役員情報"
-                    : "公表資料に基づく再就職情報"}
-                </p>
-                <h2 className="mt-1 text-xl font-bold text-primary">
-                  {personHighlights.kind === "public-officer"
-                    ? `公表役員プロフィール ${personHighlights.total}人`
-                    : `公表再就職者 ${personHighlights.total}人`}
-                </h2>
-              </div>
-              {personHighlights.remaining > 0 && (
-                <p className="text-sm font-semibold text-on-surface-variant">
-                  ほか{personHighlights.remaining}人
-                </p>
-              )}
-            </div>
-            <div className="mt-3 grid grid-cols-1 gap-2.5 md:grid-cols-2">
-              {personHighlights.people.map((person) => (
-                <article
-                  key={`${person.kind}-${person.slug}`}
-                  className="rounded border border-outline-variant bg-surface p-3.5"
-                >
-                  <h3 className="text-xl font-bold leading-tight text-primary">
-                    <Link href={person.href} className="hover:underline">
-                      {person.name}
-                    </Link>
-                  </h3>
-                  <p className="mt-1 text-sm font-medium text-on-surface-variant">
-                    {person.role}
-                  </p>
-                  <div className="mt-2 flex flex-wrap gap-1.5">
-                    {getFormerPositionLabels(
-                      person.formerPosition || `元${person.formerOrganization}`,
-                    ).map((label) => (
-                      <span
-                        key={label}
-                        className="inline-flex max-w-full rounded border border-outline-variant bg-surface-container-low px-2 py-1 text-sm font-semibold leading-tight text-primary"
-                      >
-                        <span className="line-clamp-2">{label}</span>
-                      </span>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-            {highlightSourceSummary && (
-              <p className="mt-2 text-xs text-on-surface-variant">
-                出典：{highlightSourceSummary}
-              </p>
-            )}
-          </div>
-        )}
         <div className="flex flex-wrap gap-2">
           {topMinistry && (
             <TagChip href={`/corporations?ministry=${encodeURIComponent(topMinistry.name)}`}>{topMinistry.name}</TagChip>
           )}
           <TagChip href={`/corporations?type=${encodeURIComponent(corporation.type)}`}>{corporation.type}</TagChip>
-          <TagChip href={`/corporations?region=${encodeURIComponent(corporation.region)}`}>{corporation.region}</TagChip>
+          {corporation.region !== "不明" ? (
+            <TagChip href={`/corporations?region=${encodeURIComponent(corporation.region)}`}>{corporation.region}</TagChip>
+          ) : null}
         </div>
       </section>
 
       {relatedRecords.length > 0 ? (
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-4">
+        <section aria-label="法人の再就職記録サマリー" className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           <StatCard label="公表再就職者数" value={relatedRecords.length} unit="人" />
           <StatCard
             label="最多出身省庁"
             value={topMinistry ? `${topMinistry.name}（${topMinistry.count}人）` : "該当なし"}
           />
           <StatCard label="平均待機日数" value={averageWaitDays} unit="日" />
-          <HighlightStatCard label="退職翌日再就職" value={nextDayCount} unit="件" />
+          {nextDayCount > 0 ? (
+            <HighlightStatCard label="退職翌日再就職" value={nextDayCount} unit="件" />
+          ) : (
+            <StatCard label="最短待機日数" value={minimumWaitDays} unit="日" />
+          )}
         </section>
       ) : corporation.publicOfficers.length > 0 ? (
-        <p className="border-l-2 border-outline-variant px-3 py-1.5 text-xs leading-relaxed text-on-surface-variant">
+        <DataNotice>
           国家公務員再就職状況の公表における該当記録は確認されていません。このページでは、法人公式発表などに基づく公表役員プロフィールを表示しています。
-        </p>
+        </DataNotice>
       ) : null}
+
+      <CorporationBusinessContext
+        corporation={corporation}
+        recordCount={relatedRecords.length}
+        publicOfficerCount={corporation.publicOfficers.length}
+        sourceCount={relatedSources.length}
+      />
+
+      {relatedPersons.length > 0 ? <ReemploymentRecordList relatedPersons={relatedPersons} /> : null}
 
       {(corporation.basicInfo || corporation.gbizInfo) && (
         <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
@@ -553,55 +574,7 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         </section>
       )}
 
-      {relatedPersons.length > 0 ? (
-      <section className="flex flex-col gap-4">
-        <h2 className="text-2xl font-bold text-primary">公表再就職者一覧</h2>
-        <div className="overflow-x-auto rounded-lg border border-outline-variant bg-surface-container-lowest">
-          <table className="w-full min-w-[900px] text-left">
-            <thead className="border-b border-outline-variant bg-surface-container-low">
-              <tr>
-                <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">元省庁</th>
-                <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">離職時官職</th>
-                <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">氏名</th>
-                <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">再就職先での地位</th>
-                <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">離職日</th>
-                <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">再就職日</th>
-                <th className="px-4 py-3 text-center text-sm font-semibold text-on-surface-variant">待機日数</th>
-                <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">出典</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-outline-variant">
-              {relatedPersons.map((person) => (
-                <tr key={person.slug} className="hover:bg-surface-container-low">
-                  <td className="px-4 py-4 text-sm">{person.ministry}</td>
-                  <td className="px-4 py-4 text-sm">{person.formerPosition}</td>
-                  <td className="px-4 py-4 text-sm font-bold">
-                    <Link href={`/persons/${person.slug}`} className="text-secondary hover:underline">
-                      {person.name}
-                    </Link>
-                  </td>
-                  <td className="px-4 py-4 text-sm">{person.newPosition}</td>
-                  <td className="px-4 py-4 font-mono text-sm">{person.retiredAt}</td>
-                  <td className="px-4 py-4 font-mono text-sm">{person.reemployedAt}</td>
-                  <td className="px-4 py-4 text-center">
-                    <span className={person.waitDays === 0 ? "rounded-full bg-secondary-fixed px-3 py-1 text-sm font-bold text-secondary" : "text-sm"}>
-                      {person.waitDays}
-                    </span>
-                  </td>
-                  <td className="px-4 py-4 text-sm text-on-surface-variant">{person.source}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-      ) : corporation.publicOfficers.length === 0 ? (
-        <p className="text-sm leading-relaxed text-on-surface-variant">
-          国家公務員再就職状況の公表における該当記録は確認されていません。
-        </p>
-      ) : null}
-
-      {relatedRecords.length > 0 && (
+      {relatedRecords.length > 1 && (
         <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
             <h2 className="mb-4 text-xl font-bold text-primary">元省庁の内訳</h2>
@@ -687,12 +660,11 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         </div>
       </section>
 
-      <section className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
+      <section className="grid grid-cols-1 gap-3 md:grid-cols-3">
         {[
-          ["法人情報を詳しく見る", corporation.name, `/corporations/${corporation.slug}`],
           ["省庁別の集計を見る", `${topMinistry?.name ?? "省庁"}の再就職統計を見る`, `/corporations?ministry=${encodeURIComponent(topMinistry?.name ?? "")}`],
-          ["待機日数から探す", "退職翌日再就職ランキングを見る", "/rankings"],
-          ["事例を比較する", "類似の再就職事例を見る", `/corporations?ministry=${encodeURIComponent(topMinistry?.name ?? "")}&waitDays=0`],
+          ["集計から比較する", "待機日数の比較を見る", "/rankings"],
+          ["同じ省庁から探す", "関連する法人を一覧で見る", `/corporations?ministry=${encodeURIComponent(topMinistry?.name ?? "")}`],
         ].map(([label, title, href]) => (
           <Link key={label} href={href} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-3 hover:border-secondary">
             <span className="text-sm font-semibold text-on-surface-variant">{label}</span>

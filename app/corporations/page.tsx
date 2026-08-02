@@ -5,14 +5,12 @@ import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { corporations, totals } from "@/lib/static-content";
 import { getMinistryPath } from "@/lib/ministry-pages";
-import { HighlightStatCard, SearchBox, StatCard, TagChip } from "@/components/ui";
+import { DataNotice, HighlightStatCard, SearchBox, StatCard, TagChip } from "@/components/ui";
 import { ArrowRightIcon, BuildingIcon } from "@/components/icons";
 import type { Corporation } from "@/lib/types";
 
 const ministryLinks = ["警察庁", "国土交通省", "経済産業省", "厚生労働省", "防衛省"];
 const typeLinks = ["独立行政法人", "公益財団法人", "一般財団法人", "公益社団法人", "株式会社"];
-const regionLinks = ["東京都", "関東地方", "大阪府", "近畿地方", "愛知県", "福岡県"];
-
 const areaPrefectures: Record<string, string[]> = {
   関東地方: ["茨城県", "栃木県", "群馬県", "埼玉県", "千葉県", "東京都", "神奈川県"],
   近畿地方: ["三重県", "滋賀県", "京都府", "大阪府", "兵庫県", "奈良県", "和歌山県"],
@@ -218,7 +216,7 @@ function CorporationsContent() {
           公表資料に記載された受け入れ法人について、再就職者数、元府省庁、再就職時期を確認できます。
         </p>
         <p className="mt-1 text-sm leading-relaxed text-on-surface-variant">
-          省庁、法人種別、地域、退職翌日、30日以内などの条件で絞り込めます。
+          省庁、法人種別、30日以内の再就職記録などの条件で絞り込めます。
         </p>
       </section>
 
@@ -227,10 +225,9 @@ function CorporationsContent() {
         <div className="flex flex-wrap gap-2">
           <TagChip href="/corporations?ministry=警察庁" active={ministry === "警察庁"}>警察庁</TagChip>
           <TagChip href="/corporations?type=一般財団法人" active={type === "一般財団法人"}>一般財団法人</TagChip>
-          <TagChip href="/corporations?area=東京都" active={area === "東京都"}>東京都</TagChip>
-          <TagChip href="/corporations?flag=nextDay" active={flag === "nextDay"}>
-            退職翌日再就職あり
-          </TagChip>
+          {totals.nextDayCorporations > 0 ? (
+            <TagChip href="/corporations?flag=nextDay" active={flag === "nextDay"}>退職翌日再就職あり</TagChip>
+          ) : null}
           <TagChip href="/corporations?flag=within30Days" active={flag === "within30Days"}>30日以内再就職あり</TagChip>
         </div>
       </section>
@@ -258,12 +255,18 @@ function CorporationsContent() {
       ) : null}
 
       {!isFiltered ? (
-        <section className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+        <section className="grid grid-cols-1 gap-3 sm:grid-cols-3 md:gap-4">
           <StatCard label="受け入れ法人" value={totals.corporations.toLocaleString()} unit="法人" />
           <StatCard label="公表再就職者数" value={totals.publicRecords.toLocaleString()} unit="人" />
-          <HighlightStatCard label="退職翌日再就職あり" value={totals.nextDayCorporations} unit="法人" />
           <HighlightStatCard label="30日以内再就職あり" value={totals.within30DaysCorporations} unit="法人" />
         </section>
+      ) : null}
+
+      {!isFiltered && totals.nextDayCorporations === 0 ? (
+        <DataNotice>
+          <strong className="text-primary">退職翌日の再就職記録は0件です。</strong>
+          現在の公開データでは該当法人がないため、一覧の列や絞り込み条件には表示していません。
+        </DataNotice>
       ) : null}
 
       <section className="flex flex-col gap-4">
@@ -290,11 +293,13 @@ function CorporationsContent() {
                     <BuildingIcon size={20} />
                   </span>
                   <div className="min-w-0 flex-1">
-                    <p className="text-xs font-bold text-on-surface-variant">{corporation.type}・{corporation.region}</p>
+                    <p className="text-xs font-bold text-on-surface-variant">
+                      {corporation.type}{corporation.region !== "不明" ? `・${corporation.region}` : ""}
+                    </p>
                     <h3 className="mt-1 text-base font-extrabold leading-6 text-primary">{corporation.name}</h3>
                   </div>
                 </div>
-                <dl className="mt-4 grid grid-cols-2 gap-3 rounded-xl bg-surface-container-low p-3 text-sm">
+                <dl className="mt-4 grid grid-cols-2 gap-3 border-y border-outline-variant py-3 text-sm">
                   <div>
                     <dt className="text-xs font-semibold text-on-surface-variant">公表再就職者</dt>
                     <dd className="mt-1 font-extrabold text-primary">{corporation.count}人</dd>
@@ -304,14 +309,15 @@ function CorporationsContent() {
                     <dd className="mt-1 truncate font-extrabold text-primary">{corporation.topMinistry}</dd>
                   </div>
                   <div>
-                    <dt className="text-xs font-semibold text-on-surface-variant">30日以内</dt>
-                    <dd className="mt-1 font-extrabold text-primary">{corporation.within30Days}件</dd>
-                  </div>
-                  <div>
                     <dt className="text-xs font-semibold text-on-surface-variant">平均待機日数</dt>
                     <dd className="mt-1 font-extrabold text-primary">{corporation.averageWaitDays}日</dd>
                   </div>
                 </dl>
+                {corporation.within30Days > 1 ? (
+                  <p className="mt-3 inline-flex border border-accent/20 bg-accent/10 px-2 py-1 text-xs font-bold text-accent">
+                    30日以内の記録が複数（{corporation.within30Days}件）
+                  </p>
+                ) : null}
                 <span className="mt-4 flex items-center justify-between text-sm font-bold text-secondary">
                   詳細と出典を見る <ArrowRightIcon size={17} />
                 </span>
@@ -319,22 +325,27 @@ function CorporationsContent() {
             ))}
           </div>
           <div className="hidden overflow-x-auto rounded-2xl bg-surface-container-lowest shadow-card ring-1 ring-outline-variant/70 md:block">
-            <table className="w-full min-w-[840px] text-left">
+            <table className="w-full min-w-[700px] text-left">
             <thead className="border-b border-outline-variant bg-surface-container-low">
               <tr>
                 <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">法人名</th>
                 <th className="px-4 py-3 text-center text-sm font-semibold text-on-surface-variant">再就職者数</th>
                 <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">最多出身省庁</th>
-                <th className="px-4 py-3 text-center text-sm font-semibold text-on-surface-variant">退職翌日</th>
-                <th className="px-4 py-3 text-center text-sm font-semibold text-on-surface-variant">30日以内</th>
-                <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">所在地域</th>
+                <th className="px-4 py-3 text-center text-sm font-semibold text-on-surface-variant">平均待機日数</th>
                 <th className="px-4 py-3" />
               </tr>
             </thead>
             <tbody className="divide-y divide-outline-variant">
               {filteredCorporations.map((corporation) => (
                 <tr key={corporation.slug} className="hover:bg-surface-container-low">
-                  <td className="px-4 py-4 font-bold text-primary">{corporation.name}</td>
+                  <td className="px-4 py-4 font-bold text-primary">
+                    {corporation.name}
+                    {corporation.within30Days > 1 ? (
+                      <span className="mt-1 block w-fit border border-accent/20 bg-accent/10 px-2 py-0.5 text-[11px] font-bold text-accent">
+                        30日以内が複数
+                      </span>
+                    ) : null}
+                  </td>
                   <td className="px-4 py-4 text-center font-semibold">{corporation.count}人</td>
                   <td className="px-4 py-4 text-sm text-on-surface-variant">
                     <span
@@ -347,13 +358,7 @@ function CorporationsContent() {
                       {corporation.topMinistry}
                     </span>
                   </td>
-                  <td className="px-4 py-4 text-center">
-                    <span className="rounded-full bg-secondary-fixed px-2 py-1 text-sm font-bold text-secondary">
-                      {corporation.nextDay}件
-                    </span>
-                  </td>
-                  <td className="px-4 py-4 text-center text-sm font-semibold text-secondary">{corporation.within30Days}件</td>
-                  <td className="px-4 py-4 text-sm text-on-surface-variant">{corporation.region}</td>
+                  <td className="px-4 py-4 text-center text-sm font-semibold text-primary">{corporation.averageWaitDays}日</td>
                   <td className="px-4 py-4 text-right">
                     <Link href={`/corporations/${corporation.slug}`} className="text-sm font-bold text-secondary hover:underline">
                       詳細を見る
@@ -376,14 +381,7 @@ function CorporationsContent() {
       <section className="flex flex-col gap-8 border-t border-outline-variant pt-8">
         <h2 className="text-2xl font-bold text-primary">関連する切り口から探す</h2>
 
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <Link href="/corporations?flag=nextDay" className="flex items-center justify-between gap-4 rounded-lg border border-secondary/30 bg-secondary-fixed p-5 hover:border-secondary">
-            <h3 className="text-xl font-bold text-primary">退職翌日再就職がある法人</h3>
-            <p className="flex shrink-0 items-baseline gap-1 text-on-surface">
-              <span className="text-3xl font-bold">{totals.nextDayCorporations}</span>
-              <span className="text-sm font-semibold">法人</span>
-            </p>
-          </Link>
+        <section>
           <Link href="/corporations?flag=within30Days" className="flex items-center justify-between gap-4 rounded-lg border border-secondary/30 bg-secondary-fixed p-5 hover:border-secondary">
             <h3 className="text-xl font-bold text-primary">30日以内再就職がある法人</h3>
             <p className="flex shrink-0 items-baseline gap-1 text-on-surface">
@@ -423,7 +421,9 @@ function CorporationsContent() {
             <div className="mt-4 divide-y divide-outline-variant rounded border border-outline-variant">
               {[
                 ["公表再就職者数ランキング", "/corporations?sort=publicRecords"],
-                ["退職翌日再就職件数ランキング", "/corporations?flag=nextDay"],
+                ...(totals.nextDayCorporations > 0
+                  ? [["退職翌日再就職件数ランキング", "/corporations?flag=nextDay"]]
+                  : []),
                 ["30日以内再就職ランキング", "/corporations?flag=within30Days"],
                 ["平均待機日数が短い法人", "/corporations?sort=shortestAverageWaitingDays"],
               ].map(([label, href]) => (
@@ -434,17 +434,6 @@ function CorporationsContent() {
             </div>
           </section>
 
-          <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
-            <h3 className="text-xl font-bold text-primary">地域から探す</h3>
-            <p className="mt-1 text-sm text-on-surface-variant">法人所在地ベースで、地域ごとの受け入れ法人を確認できます。</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {regionLinks.map((label) => (
-                <TagChip key={label} href={`/corporations?area=${encodeURIComponent(label)}`}>
-                  {label}
-                </TagChip>
-              ))}
-            </div>
-          </section>
         </div>
 
         <section className="rounded-lg border border-outline-variant bg-surface-container-low p-6 text-center">

@@ -30,10 +30,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
+const explainerCorporation = corporations.find((corporation) => corporation.slug === "corporation-luup");
+const recordRichCorporations = [...corporations]
+  .filter((corporation) => corporation.slug !== explainerCorporation?.slug && corporation.count > 1)
+  .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name, "ja"));
 const featuredCorporations = [
-  corporations.find((corporation) => corporation.slug === "corporation-luup") ?? corporations[0],
-  corporations[0],
-  corporations[2],
+  explainerCorporation ?? recordRichCorporations[0] ?? corporations[0],
+  ...recordRichCorporations.slice(0, 2),
 ].filter((corporation, index, list) =>
   corporation && list.findIndex((item) => item?.slug === corporation.slug) === index,
 );
@@ -50,6 +53,10 @@ const featuredCorporationCards = featuredCorporations.map((corporation) => {
     corporation,
     highlights,
     sourceSummary: getSourceSummary(sourceIds),
+    selectionReason:
+      corporation.slug === explainerCorporation?.slug
+        ? "最新の解説とつながる法人"
+        : `公表記録が複数（${corporation.count}人）`,
   };
 });
 
@@ -61,7 +68,13 @@ const featuredMinistries = (ministryTopic?.items ?? [
   "総務省",
   "警察庁",
   "内閣府",
-]).slice(0, 6);
+])
+  .map((name) => ({
+    name,
+    corporationCount: corporations.filter((corporation) => corporation.ministries.includes(name)).length,
+  }))
+  .filter((ministry) => ministry.corporationCount > 0)
+  .slice(0, 6);
 
 function formatDate(value: string) {
   return value.replace(/-/g, ".");
@@ -387,20 +400,22 @@ export default function Home() {
           <SectionHeading
             eyebrow="PUBLIC RECORDS"
             title="公表情報を、つながりで見る"
+            description="最新の解説に関連する法人と、公表記録が複数ある法人を選んでいます。"
           />
           <Link href="/corporations" className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-secondary hover:underline">
             法人一覧を見る <ArrowRightIcon size={17} />
           </Link>
         </div>
         <div className="mt-8 grid gap-4 lg:grid-cols-3">
-          {featuredCorporationCards.map(({ corporation, highlights, sourceSummary }) => (
+          {featuredCorporationCards.map(({ corporation, highlights, sourceSummary, selectionReason }) => (
             <article key={corporation.slug} className="flex flex-col rounded-3xl bg-white p-6 shadow-card ring-1 ring-outline-variant/70">
               <div className="flex items-center justify-between gap-3">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-container-low px-3 py-1 text-xs font-bold text-on-surface-variant">
                   <BuildingIcon size={14} /> {corporation.type}
                 </span>
-                <span className="text-xs font-bold text-on-surface-variant">{corporation.region}</span>
+                {corporation.region !== "不明" ? <span className="text-xs font-bold text-on-surface-variant">{corporation.region}</span> : null}
               </div>
+              <p className="mt-4 border-l-2 border-accent pl-3 text-xs font-extrabold text-accent">{selectionReason}</p>
               <h3 className="mt-5 text-xl font-extrabold leading-snug text-primary">{corporation.name}</h3>
               <div className="mt-5 rounded-2xl bg-surface-container-low p-4">
                 <p className="text-[11px] font-extrabold tracking-[0.08em] text-on-surface-variant">
@@ -445,35 +460,38 @@ export default function Home() {
         <div className="grid gap-2 sm:grid-cols-2">
           {featuredMinistries.map((ministry) => (
             <Link
-              key={ministry}
-              href={getMinistryPath(ministry)}
+              key={ministry.name}
+              href={getMinistryPath(ministry.name)}
               className="group flex min-h-16 items-center justify-between gap-3 rounded-2xl bg-white px-4 py-3 font-bold text-primary shadow-sm ring-1 ring-outline-variant/50 transition hover:ring-secondary/30"
             >
               <span className="flex items-center gap-3">
                 <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-secondary-fixed text-secondary">
                   <MinistryIcon size={18} />
                 </span>
-                {ministry}
+                {ministry.name}
               </span>
-              <ArrowRightIcon className="text-outline transition group-hover:translate-x-1 group-hover:text-secondary" size={16} />
+              <span className="flex shrink-0 items-center gap-3">
+                <span className="text-xs font-bold text-on-surface-variant">
+                  {ministry.corporationCount}法人
+                </span>
+                <ArrowRightIcon className="text-outline transition group-hover:translate-x-1 group-hover:text-secondary" size={16} />
+              </span>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="grid gap-8 border-y border-outline-variant py-10 md:grid-cols-[0.9fr_1.1fr] md:items-center md:py-12">
-        <div>
-          <p className="text-xs font-extrabold tracking-[0.14em] text-secondary">HOW TO READ</p>
-          <h2 className="mt-2 text-balance text-2xl font-extrabold text-primary md:text-3xl">数字より先に、出典を見る。</h2>
+      <section className="flex flex-col gap-5 border-y border-outline-variant bg-surface-container-low px-5 py-8 sm:flex-row sm:items-center sm:justify-between md:px-8">
+        <div className="max-w-3xl">
+          <p className="text-xs font-extrabold tracking-[0.14em] text-secondary">このサイトの読み方</p>
+          <h2 className="mt-2 text-balance text-xl font-extrabold text-primary md:text-2xl">数字は評価ではなく、公表資料への入口です。</h2>
+          <p className="mt-2 text-sm leading-7 text-on-surface-variant">
+            確認できた事実と、資料だけでは判断できないことを分けて表示しています。
+          </p>
         </div>
-        <div className="space-y-3 text-sm leading-7 text-on-surface-variant">
-          <p className="flex items-start gap-3"><CheckIcon className="mt-1 shrink-0 text-secondary" size={18} />すべての重要な記録に、公表元と確認日を掲載します。</p>
-          <p className="flex items-start gap-3"><CheckIcon className="mt-1 shrink-0 text-secondary" size={18} />公表資料で確認できる事実と、資料だけでは判断できないことを分けます。</p>
-          <p className="flex items-start gap-3"><CheckIcon className="mt-1 shrink-0 text-secondary" size={18} />ランキングは件数の整理であり、違法性や妥当性を判定するものではありません。</p>
-          <Link href="/data-policy" className="inline-flex items-center gap-2 pt-2 font-bold text-secondary hover:underline">
-            データ方針を確認する <ArrowRightIcon size={17} />
-          </Link>
-        </div>
+        <Link href="/data-policy" className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 border border-primary bg-white px-4 text-sm font-bold text-primary transition hover:bg-primary hover:text-white">
+          データ方針を見る <ArrowRightIcon size={17} />
+        </Link>
       </section>
     </div>
   );
