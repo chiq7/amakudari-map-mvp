@@ -11,6 +11,7 @@ import {
 } from "@/lib/static-content";
 import { newsArticles } from "@/lib/news";
 import { SearchBox } from "@/components/ui";
+import DiscoveryRouteVisual from "@/components/DiscoveryRouteVisual";
 import {
   ArrowRightIcon,
   BuildingIcon,
@@ -324,7 +325,7 @@ export default function Home() {
         </dl>
       </section>
 
-      <section>
+      <section id="start-here" className="scroll-mt-28">
         <SectionHeading
           eyebrow="START HERE"
           title="知りたい入口から、まっすぐ探せます"
@@ -333,46 +334,47 @@ export default function Home() {
           {[
             {
               href: "/persons",
-              icon: <PersonIcon size={26} />,
               number: "01",
               title: "人から探す",
-              flow: "氏名 → 経歴 → 再就職先",
+              description: "氏名から経歴資料を確認し、再就職先をたどる",
+              route: "person" as const,
               tone: "bg-[#e9edf8]",
-              iconTone: "bg-secondary text-white",
+              diagramTone: "text-secondary",
             },
             {
               href: "/corporations",
-              icon: <BuildingIcon size={26} />,
               number: "02",
               title: "法人から探す",
-              flow: "法人 → 人物 → 出身省庁",
+              description: "法人から公表人物を確認し、出身省庁をたどる",
+              route: "corporation" as const,
               tone: "bg-[#f7e7e1]",
-              iconTone: "bg-accent text-white",
+              diagramTone: "text-accent",
             },
             {
               href: "/topics",
-              icon: <MinistryIcon size={26} />,
               number: "03",
               title: "省庁・テーマから探す",
-              flow: "省庁 → 人物 → 法人",
+              description: "省庁から公表人物を確認し、関係法人をたどる",
+              route: "ministry" as const,
               tone: "bg-[#f1e3c8]",
-              iconTone: "bg-primary text-white",
+              diagramTone: "text-primary",
             },
           ].map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`group flex min-h-[210px] flex-col rounded-3xl p-6 shadow-card ring-1 ring-outline-variant/70 transition hover:-translate-y-1 hover:shadow-soft md:p-7 ${item.tone}`}
+              className={`group relative flex min-h-[250px] flex-col overflow-hidden rounded-2xl border border-outline-variant/70 p-5 transition hover:-translate-y-1 hover:border-primary/30 hover:shadow-soft md:p-6 ${item.tone}`}
             >
-              <div className="flex items-center justify-between">
-                <span className={`flex h-16 w-16 items-center justify-center rounded-full ${item.iconTone}`}>
-                  {item.icon}
-                </span>
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-xl font-extrabold text-primary md:text-2xl">{item.title}</h3>
                 <span className="font-mono text-sm font-extrabold tracking-[0.14em] text-on-surface-variant">{item.number}</span>
               </div>
-              <h3 className="mt-6 text-xl font-extrabold text-primary md:text-2xl">{item.title}</h3>
-              <div className="mt-auto flex items-center justify-between pt-5 text-sm font-bold text-primary">
-                <span>{item.flow}</span>
+              <div className={item.diagramTone}>
+                <DiscoveryRouteVisual variant={item.route} />
+              </div>
+              <span className="sr-only">{item.description}</span>
+              <div className="mt-auto flex items-center justify-between pt-4 text-sm font-bold text-primary">
+                <span>一覧を見る</span>
                 <ArrowRightIcon className="transition-transform group-hover:translate-x-1" size={18} />
               </div>
             </Link>
