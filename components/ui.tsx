@@ -163,10 +163,10 @@ export function Breadcrumb({
 
 export function DataNotice({ children, className = "" }: { children: ReactNode } & ClassName) {
   return (
-    <div className={`flex gap-3 rounded-2xl bg-surface-container-low p-4 text-sm leading-7 text-on-surface-variant ring-1 ring-outline-variant/70 ${className}`}>
+    <aside className={`flex gap-3 border-l-4 border-secondary bg-secondary-fixed/45 px-4 py-3 text-sm leading-7 text-on-surface-variant ${className}`}>
       <DocumentIcon className="mt-1 shrink-0 text-secondary" size={19} />
       <div>{children}</div>
-    </div>
+    </aside>
   );
 }
 
@@ -174,7 +174,7 @@ export function RankingCard({
   title,
   items,
   unit = "件",
-  href = "/rankings",
+  href,
   rankingType = "general",
 }: {
   title: string;
@@ -185,22 +185,26 @@ export function RankingCard({
 }) {
   return (
     <section
-      className="overflow-hidden rounded-2xl bg-surface-container-lowest shadow-card ring-1 ring-outline-variant/70"
+      className="overflow-hidden border border-outline-variant border-t-4 border-t-primary bg-surface-container-lowest"
       data-analytics-location="ranking_card"
     >
-      <div className="border-b border-outline-variant/80 px-5 py-4">
-        <h2 className="text-lg font-extrabold text-primary">{title}</h2>
+      <div className="border-b border-outline-variant/80 bg-surface-container-low px-5 py-4">
+        <h3 className="text-lg font-extrabold text-primary">{title}</h3>
       </div>
       <ol className="divide-y divide-outline-variant">
-        {items.map((item, index) => (
+        {items.length === 0 ? (
+          <li className="px-5 py-8 text-sm leading-6 text-on-surface-variant">
+            現在の公開データに、該当する記録はありません。
+          </li>
+        ) : items.map((item, index) => (
           <li key={`${item.label}-${index}`}>
             <Link
-              href={item.href ?? href}
+              href={item.href ?? href ?? "/corporations"}
               data-ranking-type={rankingType}
               className="flex min-h-14 items-center justify-between gap-4 px-5 py-3 transition-colors hover:bg-surface-container-low"
             >
               <span className="min-w-0 truncate text-sm font-semibold text-on-surface">
-                <span className="mr-3 inline-flex h-6 w-6 items-center justify-center rounded-full bg-surface-container text-xs font-extrabold text-primary">{index + 1}</span>
+                <span className="mr-3 inline-flex h-6 w-6 items-center justify-center rounded-sm bg-surface-container text-xs font-extrabold text-primary">{index + 1}</span>
                 {item.label}
               </span>
               <span className="shrink-0 text-sm text-on-surface-variant">
@@ -210,7 +214,7 @@ export function RankingCard({
           </li>
         ))}
       </ol>
-      <div className="border-t border-outline-variant/80 px-5 py-4 text-right">
+      {href ? <div className="border-t border-outline-variant/80 px-5 py-4 text-right">
         <Link
           href={href}
           data-ranking-type={rankingType}
@@ -218,7 +222,7 @@ export function RankingCard({
         >
           詳細ランキングを見る
         </Link>
-      </div>
+      </div> : null}
     </section>
   );
 }

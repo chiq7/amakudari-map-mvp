@@ -29,49 +29,56 @@ function formatDate(value: string) {
 
 export default function NewsIndexPage() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-10">
       <Breadcrumb items={[{ label: "TOP", href: "/" }, { label: "ニュース・解説" }]} />
 
-      <section className="rounded-3xl bg-primary px-6 py-9 text-white md:px-10 md:py-12">
-        <p className="text-xs font-extrabold tracking-[0.14em] text-[#f2b2a8]">NEWS & EXPLAINERS</p>
-        <h1 className="mt-3 text-balance text-3xl font-extrabold tracking-tight md:text-4xl">公表資料から読むニュース・解説</h1>
-        <p className="mt-5 max-w-3xl text-pretty leading-8 text-white/72">
+      <section className="border-b-2 border-primary pb-8 pt-2">
+        <p className="text-xs font-extrabold tracking-[0.14em] text-accent">NEWS & EXPLAINERS</p>
+        <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-primary md:text-4xl">
+          <span className="block md:inline">公表資料から読む</span>
+          <span className="block md:ml-2 md:inline">ニュース・解説</span>
+        </h1>
+        <p className="mt-5 max-w-3xl text-pretty leading-8 text-on-surface-variant">
           政治・行政ニュースのうち、再就職、公的法人、監督官庁、制度、国会質疑に直接関係し、一次資料で確認できる内容だけを扱います。報道の転載や、根拠のない人物・法人評価は行いません。
         </p>
       </section>
 
-      <section className="rounded-2xl bg-secondary-fixed/60 p-5 text-sm leading-relaxed text-on-surface-variant ring-1 ring-secondary/15">
-        <h2 className="font-bold text-primary">掲載基準</h2>
+      <aside className="border-l-4 border-accent bg-accent-soft/55 py-3 pl-5 pr-4 text-sm leading-relaxed text-on-surface-variant">
+        <h2 className="font-bold text-primary">掲載基準（補足）</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li>一次資料のURLと確認日を記事内に残します。</li>
           <li>確認できた事実と、資料だけでは確認できない事項を分けます。</li>
           <li>新しい事実が不足する日は、既存の有望ページを深く更新します。</li>
         </ul>
-      </section>
+      </aside>
 
-      <section className="grid gap-4">
+      <section aria-labelledby="article-list-title">
+        <div className="mb-4 flex items-end justify-between gap-4">
+          <h2 id="article-list-title" className="text-2xl font-extrabold text-primary">解説記事</h2>
+          <p className="text-sm font-bold text-on-surface-variant">{newsArticles.length}件</p>
+        </div>
+        <div className="divide-y divide-outline-variant border-y border-outline-variant">
         {newsArticles.map((article) => (
-          <article key={article.slug} className="rounded-2xl bg-surface-container-lowest p-6 shadow-card ring-1 ring-outline-variant/70">
-            <div className="flex flex-wrap items-center gap-3 text-sm text-on-surface-variant">
-              <TagChip>{article.kind}</TagChip>
-              <time dateTime={article.datePublished}>{formatDate(article.datePublished)}</time>
-            </div>
-            <h2 className="mt-4 text-balance text-xl font-extrabold leading-8 text-primary md:text-2xl">
-              <Link href={`/news/${article.slug}`} className="hover:text-secondary hover:underline">
-                {article.title}
-              </Link>
-            </h2>
-            <p className="mt-3 leading-relaxed text-on-surface-variant">{article.description}</p>
-            <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
-              <p className="text-sm text-on-surface-variant">
+          <article key={article.slug} className="bg-white/55">
+            <Link href={`/news/${article.slug}`} className="group grid gap-5 px-1 py-6 transition hover:bg-white md:grid-cols-[150px_1fr_auto] md:items-start md:px-5">
+              <div className="flex flex-wrap items-center gap-3 text-sm text-on-surface-variant md:block">
+                <TagChip>{article.kind}</TagChip>
+                <time className="md:mt-3 md:block" dateTime={article.datePublished}>{formatDate(article.datePublished)}</time>
+              </div>
+              <div>
+                <h3 className="text-balance text-xl font-extrabold leading-8 text-primary transition group-hover:text-secondary md:text-2xl">
+                  {article.title}
+                </h3>
+                <p className="mt-3 leading-relaxed text-on-surface-variant">{article.description}</p>
+                <p className="mt-4 text-sm text-on-surface-variant">
                 一次資料：{article.sources.filter((source) => source.kind === "一次資料").length}件 / 最終確認 {formatDate(article.sources[0].checkedAt)}
-              </p>
-              <Link href={`/news/${article.slug}`} className="text-sm font-bold text-secondary hover:underline">
-                解説を読む →
-              </Link>
-            </div>
+                </p>
+              </div>
+              <span className="mt-1 text-sm font-bold text-secondary">解説を読む →</span>
+            </Link>
           </article>
         ))}
+        </div>
       </section>
     </div>
   );

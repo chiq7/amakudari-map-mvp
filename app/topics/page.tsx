@@ -1,25 +1,92 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import { ArrowRightIcon, MinistryIcon, NewsIcon } from "@/components/icons";
+import { topics as topicGroups } from "@/lib/static-content";
+import { getMinistryPath } from "@/lib/ministry-pages";
+import topicPagesData from "@/public/data/topics.json";
 
-// app/topics/page.tsx
-import Link from 'next/link';
+export const metadata: Metadata = {
+  title: "省庁・テーマから探す",
+  description: "省庁や行政テーマから、関連する人物・法人の公表記録を探せます。",
+  alternates: { canonical: "/topics" },
+};
 
-async function getTopics() {
-    const fs = require('fs');
-    const path = require('path');
-    return JSON.parse(fs.readFileSync(path.join(process.cwd(), 'public/data/topics.json'), 'utf8'));
-}
+type TopicPage = {
+  topic_slug: string;
+  title: string;
+};
 
-export default async function TopicsPage() {
-    const topics = await getTopics();
-    return (
-        <div>
-            <h1 className="text-4xl font-bold mb-6">話題から探す</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {topics.map((topic: any) => (
-                    <Link key={topic.topic_slug} href={`/topics/${topic.topic_slug}`} className="block bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition">
-                        <h2 className="text-xl font-bold">{topic.title}</h2>
-                    </Link>
-                ))}
+export default function TopicsPage() {
+  const ministries = topicGroups.find((group) => group.category === "ministry")?.items ?? [];
+  const themeLabels = topicGroups.find((group) => group.category === "topic")?.items ?? [];
+  const publishedTopics = topicPagesData as TopicPage[];
+  const publishedByTitle = new Map(publishedTopics.map((topic) => [topic.title, topic.topic_slug]));
+
+  return (
+    <div className="flex flex-col gap-12">
+      <section className="border-b-2 border-primary pb-8">
+        <p className="text-xs font-extrabold tracking-[0.14em] text-accent">BROWSE</p>
+        <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-primary md:text-4xl">省庁・テーマから探す</h1>
+        <p className="mt-4 max-w-2xl text-sm leading-7 text-on-surface-variant md:text-base">
+          出身省庁または行政テーマを入口に、関連する人物と法人の公表記録へ進めます。
+        </p>
+      </section>
+
+      <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <section aria-labelledby="ministry-list-title">
+          <div className="mb-4 flex items-center gap-3">
+            <MinistryIcon className="text-secondary" size={24} />
+            <div>
+              <p className="text-xs font-bold text-on-surface-variant">所属から見る</p>
+              <h2 id="ministry-list-title" className="text-2xl font-extrabold text-primary">省庁</h2>
             </div>
-        </div>
-    );
+          </div>
+          <div className="divide-y divide-outline-variant border-y border-outline-variant">
+            {ministries.map((ministry) => (
+              <Link
+                key={ministry}
+                href={getMinistryPath(ministry)}
+                className="group flex min-h-14 items-center justify-between gap-4 bg-white/55 px-4 py-3 font-bold text-primary transition hover:bg-white"
+              >
+                <span>{ministry}</span>
+                <ArrowRightIcon className="text-outline transition group-hover:translate-x-1 group-hover:text-secondary" size={17} />
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section aria-labelledby="theme-list-title">
+          <div className="mb-4 flex items-center gap-3">
+            <NewsIcon className="text-accent" size={24} />
+            <div>
+              <p className="text-xs font-bold text-on-surface-variant">論点から見る</p>
+              <h2 id="theme-list-title" className="text-2xl font-extrabold text-primary">行政テーマ</h2>
+            </div>
+          </div>
+          <div className="divide-y divide-outline-variant border-y border-outline-variant">
+            {themeLabels.map((theme) => {
+              const topicSlug = publishedByTitle.get(theme);
+              return (
+                <Link
+                  key={theme}
+                  href={topicSlug ? `/topics/${topicSlug}` : `/corporations?topic=${encodeURIComponent(theme)}`}
+                  className="group flex min-h-14 items-center justify-between gap-4 bg-white/55 px-4 py-3 font-bold text-primary transition hover:bg-white"
+                >
+                  <span>{theme}</span>
+                  <span className="flex items-center gap-3 text-xs text-on-surface-variant">
+                    {topicSlug ? "解説あり" : "関連記録"}
+                    <ArrowRightIcon className="text-outline transition group-hover:translate-x-1 group-hover:text-secondary" size={17} />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      </div>
+
+      <aside className="border-l-4 border-accent bg-accent-soft/45 px-5 py-4 text-sm leading-7 text-on-surface-variant">
+        テーマ名は関係する記録を探すための入口です。テーマとの関連だけで、人物・法人への評価や因果関係を示すものではありません。
+      </aside>
+    </div>
+  );
 }
