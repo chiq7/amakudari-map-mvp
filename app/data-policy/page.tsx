@@ -53,7 +53,7 @@ export default function DataPolicyPage() {
         </p>
       </section>
 
-      <section id="dataset-license" className="rounded-lg border border-outline-variant bg-surface-container-lowest p-6">
+      <section id="dataset-license" className="scroll-mt-20 rounded-lg border border-outline-variant bg-surface-container-lowest p-6">
         <h2 className="mb-3 text-2xl font-bold text-primary">データ利用条件</h2>
         <div className="space-y-3 leading-relaxed text-on-surface-variant">
           <p>
