@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb, SourceLinkList, TagChip } from "@/components/ui";
+import CorporationBusinessContext from "@/components/CorporationBusinessContext";
 import ShareButton from "@/components/ShareButton";
-import { getPublicOfficer, publicOfficers, sources } from "@/lib/static-content";
+import { getCorporation, getPublicOfficer, publicOfficers, sources } from "@/lib/static-content";
 
 export function generateStaticParams() {
   return publicOfficers.map((officer) => ({ slug: officer.slug }));
@@ -28,6 +29,7 @@ export default function PublicOfficerPage({ params }: { params: { slug: string }
   const officer = getPublicOfficer(params.slug);
   if (!officer) notFound();
 
+  const corporation = getCorporation(officer.corporationSlug);
   const relatedSources = sources.filter((source) => officer.sourceIds.includes(source.id));
 
   return (
@@ -58,6 +60,11 @@ export default function PublicOfficerPage({ params }: { params: { slug: string }
         </p>
       </section>
 
+      <CorporationBusinessContext
+        corporation={corporation}
+        connection={`${officer.name}氏について、${officer.formerOrganization}での経歴と、${officer.corporationName}の「${officer.role}」への就任が法人公式情報で公表されています。`}
+      />
+
       <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {[
           ["元行政機関", officer.formerOrganization],
@@ -78,8 +85,11 @@ export default function PublicOfficerPage({ params }: { params: { slug: string }
           <TagChip href={`/corporations?ministry=${encodeURIComponent(officer.formerOrganization)}`}>
             {officer.formerOrganization}
           </TagChip>
-          <TagChip href="/corporations?tag=モビリティ">モビリティ</TagChip>
-          <TagChip href="/corporations?tag=電動キックボード">電動キックボード</TagChip>
+          {corporation.topics.slice(0, 3).map((topic) => (
+            <TagChip key={topic} href={`/corporations?topic=${encodeURIComponent(topic)}`}>
+              {topic}
+            </TagChip>
+          ))}
         </div>
       </section>
 

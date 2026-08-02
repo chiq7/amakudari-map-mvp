@@ -90,6 +90,92 @@ function SectionHeading({
   );
 }
 
+function ExplainerSection() {
+  const [featuredArticle, ...otherArticles] = newsArticles;
+
+  if (!featuredArticle) {
+    return null;
+  }
+
+  return (
+    <section aria-labelledby="featured-explainer-title" className="border-y border-outline-variant py-10 md:py-14">
+      <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+        <SectionHeading
+          eyebrow="PUBLIC RECORDS EXPLAINED"
+          title="記録の背景まで読む"
+          description="人がどこへ移ったかだけでなく、法人の業務、元の役職、制度上の接点を一次資料から整理します。"
+        />
+        <Link
+          href="/news"
+          className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 border border-secondary bg-secondary px-4 text-sm font-bold text-white transition hover:bg-primary"
+        >
+          解説をすべて見る <ArrowRightIcon size={17} />
+        </Link>
+      </div>
+
+      <article className="mt-7 overflow-hidden border border-outline-variant bg-white shadow-card">
+        <div className="grid lg:grid-cols-[180px_1fr_320px]">
+          <div className="flex flex-row items-center justify-between gap-3 bg-primary px-5 py-4 text-white lg:flex-col lg:items-start lg:justify-start lg:px-6 lg:py-7">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold tracking-[0.08em]">
+              <NewsIcon size={16} /> {featuredArticle.kind}
+            </span>
+            <time className="text-xs text-white/70 lg:mt-auto" dateTime={featuredArticle.datePublished}>
+              {formatDate(featuredArticle.datePublished)}
+            </time>
+          </div>
+
+          <div className="p-5 md:p-7">
+            <p className="text-xs font-extrabold text-secondary">最新の解説</p>
+            <h2 id="featured-explainer-title" className="mt-2 text-balance text-xl font-extrabold leading-8 text-primary md:text-2xl">
+              {featuredArticle.title}
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-on-surface-variant">{featuredArticle.description}</p>
+            <Link
+              href={`/news/${featuredArticle.slug}`}
+              className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 border border-primary px-4 text-sm font-bold text-primary transition hover:bg-primary hover:text-white"
+            >
+              この解説を読む <ArrowRightIcon size={17} />
+            </Link>
+          </div>
+
+          <aside className="border-t border-outline-variant bg-surface-container-low p-5 lg:border-l lg:border-t-0 lg:p-7" aria-label="記事で確認できること">
+            <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">この記事で確認できること</p>
+            <ul className="mt-4 space-y-3">
+              {featuredArticle.verifiedFacts.slice(0, 2).map((fact) => (
+                <li key={fact.title} className="flex gap-3 text-sm font-bold leading-6 text-primary">
+                  <CheckIcon className="mt-0.5 shrink-0 text-secondary" size={17} />
+                  <span>{fact.title}</span>
+                </li>
+              ))}
+            </ul>
+            {featuredArticle.notVerified[0] ? (
+              <p className="mt-5 border-l-2 border-outline pl-3 text-xs leading-6 text-on-surface-variant">
+                <strong className="text-primary">資料だけでは確認できない：</strong> {featuredArticle.notVerified[0]}
+              </p>
+            ) : null}
+          </aside>
+        </div>
+      </article>
+
+      {otherArticles.length > 0 ? (
+        <div className="mt-4 divide-y divide-outline-variant border-y border-outline-variant">
+          {otherArticles.slice(0, 2).map((article) => (
+            <Link
+              key={article.slug}
+              href={`/news/${article.slug}`}
+              className="group grid gap-2 py-4 sm:grid-cols-[120px_1fr_auto] sm:items-center"
+            >
+              <time className="text-xs font-bold text-on-surface-variant" dateTime={article.datePublished}>{formatDate(article.datePublished)}</time>
+              <span className="text-sm font-extrabold leading-6 text-primary">{article.title}</span>
+              <ArrowRightIcon className="hidden text-outline transition group-hover:translate-x-1 group-hover:text-secondary sm:block" size={17} />
+            </Link>
+          ))}
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
 export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -205,6 +291,8 @@ export default function Home() {
           </figcaption>
         </figure>
       </section>
+
+      <ExplainerSection />
 
       <section aria-labelledby="data-summary-title">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -370,39 +458,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {newsArticles.length > 0 ? (
-        <section>
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-            <SectionHeading
-              eyebrow="NEWS & EXPLAINERS"
-              title="一次資料から読むニュース・解説"
-            />
-            <Link href="/news" className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-secondary hover:underline">
-              ニュース一覧を見る <ArrowRightIcon size={17} />
-            </Link>
-          </div>
-          <div className="mt-8 divide-y divide-outline-variant overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-outline-variant/70">
-            {newsArticles.slice(0, 3).map((article) => (
-              <article key={article.slug}>
-                <Link href={`/news/${article.slug}`} className="group grid gap-4 p-5 transition hover:bg-surface-container-low sm:grid-cols-[150px_1fr_auto] sm:items-center md:p-6">
-                  <div className="flex items-center gap-2 text-xs font-bold text-on-surface-variant sm:block">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary-fixed px-2.5 py-1 text-secondary">
-                      <NewsIcon size={14} /> {article.kind}
-                    </span>
-                    <time className="sm:mt-2 sm:block" dateTime={article.datePublished}>{formatDate(article.datePublished)}</time>
-                  </div>
-                  <div>
-                    <h3 className="text-balance text-base font-extrabold leading-7 text-primary md:text-lg">{article.title}</h3>
-                    <p className="mt-1 line-clamp-2 text-sm leading-6 text-on-surface-variant">{article.description}</p>
-                  </div>
-                  <ArrowRightIcon className="hidden text-outline transition group-hover:translate-x-1 group-hover:text-secondary sm:block" size={19} />
-                </Link>
-              </article>
-            ))}
-          </div>
-        </section>
-      ) : null}
 
       <section className="grid gap-8 border-y border-outline-variant py-10 md:grid-cols-[0.9fr_1.1fr] md:items-center md:py-12">
         <div>

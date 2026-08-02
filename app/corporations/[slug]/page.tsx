@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { GbizInfoCollection } from "@/lib/types";
+import CorporationBusinessContext from "@/components/CorporationBusinessContext";
 import { Breadcrumb, HighlightStatCard, SourceLinkList, StatCard, TagChip } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import {
@@ -176,6 +177,13 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
     ...corporation.publicOfficers.flatMap((officer) => officer.sourceIds),
   ]);
   const relatedSources = sources.filter((source) => relatedSourceIds.has(source.id));
+  const highlightedPeople = personHighlights.people.map((person) => `${person.name}氏`).join("、");
+  const highlightedOrganizations = Array.from(
+    new Set(personHighlights.people.map((person) => person.formerOrganization).filter(Boolean)),
+  ).join("・");
+  const connectionDescription = personHighlights.people.length > 0
+    ? `${highlightedPeople}について、${highlightedOrganizations || "行政機関"}での経歴と、${corporation.name}での役職・再就職情報が公表されています。`
+    : `${corporation.name}について、現在の公開データでは人物との接点を示す公表記録を確認できていません。`;
 
   return (
     <div className="flex flex-col gap-6">
@@ -191,17 +199,16 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
             <h1 className="text-3xl font-bold text-primary md:text-4xl">{corporation.name}</h1>
-            <p className="mt-1.5 text-base leading-snug text-on-surface-variant">
-            {corporation.description || "公表資料に基づく法人・人材情報"}
-            </p>
-            <p className="mt-1.5 max-w-4xl text-sm leading-snug text-on-surface-variant">
-            {corporation.publicOfficers.length > 0
-              ? `${corporation.name}について、公的法人情報と同社が公表している役員・経歴情報をもとに、法人情報および元行政機関出身者の就任情報を整理しています。表示内容は公開情報に基づく記録整理であり、違法性や責任を断定するものではありません。`
-              : `このページでは、${corporation.name}に関する公表再就職記録を法人単位で整理し、元府省庁、再就職者数、再就職時期、出典資料を確認できるようにしています。表示内容は公表資料の記録を整理したものです。`}
+            <p className="mt-2 max-w-3xl text-sm leading-7 text-on-surface-variant md:text-base">
+              法人の業務内容と、公表された人物・役職・出身組織を出典付きで確認できます。
             </p>
           </div>
           <ShareButton title={`${corporation.name}の公表再就職情報 | 天下りマップ`} />
         </div>
+        <CorporationBusinessContext
+          corporation={corporation}
+          connection={connectionDescription}
+        />
         {personHighlights.people.length > 0 && (
           <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-sm">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -290,14 +297,6 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
           <p className="mt-1 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
             gBizINFO・法人番号公表サイト・法人公式発表などの公開情報を整理しています。再就職情報とは独立した公的法人情報です。
           </p>
-          {corporation.gbizInfo?.businessSummary && (
-            <div className="mt-3 rounded border border-outline-variant bg-surface p-3">
-              <p className="text-sm font-semibold text-on-surface-variant">事業概要</p>
-              <p className="mt-1 text-sm leading-relaxed">
-                {corporation.gbizInfo.businessSummary}
-              </p>
-            </div>
-          )}
           <dl className="mt-3 grid grid-cols-1 gap-x-6 gap-y-2.5 md:grid-cols-2">
             {corporation.gbizInfo?.representativeName && (
               <div>

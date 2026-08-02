@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Breadcrumb, SourceLinkList, StatCard, TagChip } from "@/components/ui";
+import CorporationBusinessContext from "@/components/CorporationBusinessContext";
 import ShareButton from "@/components/ShareButton";
 import { getCorporation, getPerson, persons, sources } from "@/lib/static-content";
 
@@ -66,6 +67,11 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
           本ページは公表資料に記載された氏名・官職・再就職先を整理したものです。同姓同名の別人が含まれる可能性があるため、人物の特定には出典資料もあわせて確認してください。個人への評価や違法性を断定するものではありません。
         </p>
       </section>
+
+      <CorporationBusinessContext
+        corporation={corporation}
+        connection={`${person.name}氏は、${person.ministry}で「${person.formerPosition}」を務めた後、${person.corporationName}の「${person.newPosition}」へ再就職した記録が公表されています。`}
+      />
 
       <section className="grid grid-cols-1 gap-4 md:grid-cols-4">
         <StatCard label="元省庁" value={person.ministry} />
