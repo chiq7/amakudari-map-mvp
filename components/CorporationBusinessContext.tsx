@@ -1,6 +1,16 @@
 import type { Corporation } from "@/lib/types";
 import { getCorporationEditorialContext } from "@/lib/corporation-contexts";
 
+function formatPublicSubsidyAmount(value: number) {
+  if (value >= 100_000_000) {
+    return `${(value / 100_000_000).toLocaleString("ja-JP", {
+      maximumFractionDigits: 1,
+    })}億円`;
+  }
+  if (value >= 10_000) return `${Math.round(value / 10_000).toLocaleString("ja-JP")}万円`;
+  return `${value.toLocaleString("ja-JP")}円`;
+}
+
 export default function CorporationBusinessContext({
   corporation,
   recordCount,
@@ -19,6 +29,7 @@ export default function CorporationBusinessContext({
     editorialContext?.business.officialWebsite || corporation.gbizInfo?.officialWebsite;
   const businessSummary =
     editorialContext?.business.summary || corporation.gbizInfo?.businessSummary || corporation.description;
+  const publicSubsidyTotal = corporation.gbizInfo?.subsidies?.totalAmount;
   const hasBusinessSummary = Boolean(businessSummary?.trim());
   const showSidePanel = recordCount !== undefined || Boolean(connection);
 
@@ -102,6 +113,9 @@ export default function CorporationBusinessContext({
                 ["公表役員", publicOfficerCount ?? 0, "人"],
                 ["再就職記録", recordCount, "件"],
                 ["出典資料", sourceCount ?? 0, "件"],
+                ...(publicSubsidyTotal !== undefined
+                  ? [["公表補助金額", formatPublicSubsidyAmount(publicSubsidyTotal), ""]]
+                  : []),
               ].map(([label, value, unit]) => (
                 <div key={label} className="border-b border-outline-variant pb-3 last:border-b-0">
                   <dt className="text-xs font-bold leading-4 text-on-surface-variant">{label}</dt>
