@@ -2716,5 +2716,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-1aedcce28a907a03",
+    "name": "十二 康典",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "農林水産省輸出・国際局輸出企画課輸出連携推進調査官",
+    "corporationSlug": "corporation-1b9ba40fde5710ba",
+    "corporationName": "PwCコンサルティング合同会社",
+    "newPosition": "マネージャー",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "農林水産省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]

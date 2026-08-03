@@ -72,97 +72,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9012405001282",
-      "officialName": "国立大学法人一橋大学",
-      "registeredAddress": "東京都国立市中２丁目１番地",
-      "prefecture": "東京都",
-      "city": "国立市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9012405001282"
-    },
-    "gbizInfo": {
-      "establishmentDate": "2004-04-01",
-      "representativeName": "学長 中野 聡",
-      "subsidies": {
-        "count": 41,
-        "totalAmount": 751925902,
-        "examples": [
-          {
-            "title": "大学等における修学の支援に関する法律による令和４事業年度授業料等減免費交付金",
-            "amount": 103400,
-            "date": "2023-02-17",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "（国立）長寿命化促進事業",
-            "amount": 0,
-            "date": "2022-12-15",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "大学等における修学の支援に関する法律による令和４事業年度授業料等減免費交付金",
-            "amount": 76027200,
-            "date": "2022-08-10",
-            "governmentDepartment": "文部科学省"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 2,
-        "totalAmount": 116946364,
-        "examples": [
-          {
-            "title": "匿名データの利用改善に向けた調査研究業務",
-            "amount": 3810000,
-            "date": "2016-10-27",
-            "governmentDepartment": "総務省"
-          },
-          {
-            "title": "エビデンスに基づく重要科学技術領域の調査分析",
-            "amount": 113136364,
-            "date": "2023-06-20",
-            "governmentDepartment": "内閣府"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：C",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 19,
-        "examples": [
-          {
-            "title": "情報処理装置、モデル構築方法及びモデル構築プログラム",
-            "registrationNumber": "7286121",
-            "applicationDate": "2022-09-20",
-            "patentType": "特許"
-          },
-          {
-            "title": "情報処理装置、情報処理方法及びプログラム",
-            "registrationNumber": "7146218",
-            "applicationDate": "2021-12-24",
-            "patentType": "特許"
-          },
-          {
-            "title": "料率算出装置、料率算出方法及び料率算出プログラム",
-            "registrationNumber": "6764178",
-            "applicationDate": "2020-04-17",
-            "patentType": "特許"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9012405001282",
-      "fetchedAt": "2026-08-03T01:30:32.725Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-e567a3b6d3515e87",
@@ -285,24 +195,9 @@
       "person-e686f8d6ee993bed"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-6010005003495"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6010005003495",
-      "officialName": "一般社団法人日本資金決済業協会",
-      "registeredAddress": "東京都千代田区九段南３丁目８番１１号飛栄九段ビル",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6010005003495"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010005003495",
-      "fetchedAt": "2026-08-03T01:32:30.061Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-8e026326c8c73f9b",
@@ -327,143 +222,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "3011105000996",
-      "officialName": "有限責任あずさ監査法人",
-      "registeredAddress": "東京都新宿区津久戸町１番２号",
-      "prefecture": "東京都",
-      "city": "新宿区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3011105000996"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "有限責任あずさ監査法人 公式サイト",
-        "url": "http://www.azsa.or.jp/"
-      },
-      "businessSummary": "会計監査",
-      "employeeNumber": 5239,
-      "establishmentDate": "1985-07-01",
-      "representativeName": "代表社員 菅野 雅子",
-      "subsidies": {
-        "count": 1,
-        "totalAmount": 13200000,
-        "examples": [
-          {
-            "title": "令和４年度洋上風力発電の導入拡大に向けた調査支援事業（洋上風力発電の導入拡大に向けた調査検討等支援業務）",
-            "amount": 13200000,
-            "date": "2022-08-09",
-            "governmentDepartment": "資源エネルギー庁"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 118,
-        "totalAmount": 2558528028,
-        "examples": [
-          {
-            "title": "２０２１年度産業サイバーセキュリティセンター中核人材育成プログラムの講習等実施業務（ビジネス・マネジメント分野）",
-            "amount": 26875200,
-            "date": "2021-07-30",
-            "governmentDepartment": "情報処理推進機構"
-          },
-          {
-            "title": "２０２０年度産業サイバーセキュリティセンター中核人材育成プログラムの講習等実施業務（ビジネス・マネジメント分野）",
-            "amount": 29062000,
-            "date": "2020-09-23",
-            "governmentDepartment": "情報処理推進機構"
-          },
-          {
-            "title": "２０２３年度中核人材育成プログラム（ビジネスマネジメント分野）の講習等実施業務",
-            "amount": 29958596,
-            "date": "2023-07-07",
-            "governmentDepartment": "情報処理推進機構"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 5,
-        "examples": [
-          {
-            "title": "ＤＸ認定制度",
-            "date": "2026-02-01",
-            "governmentDepartment": "経済産業省"
-          },
-          {
-            "title": "ＤＸ認定制度",
-            "date": "2024-02-01",
-            "governmentDepartment": "経済産業省"
-          },
-          {
-            "title": "ＤＸ認定制度",
-            "date": "2022-02-01",
-            "governmentDepartment": "経済産業省"
-          },
-          {
-            "title": "認定経営革新等支援機関",
-            "date": "2013-04-26",
-            "governmentDepartment": "経済産業省"
-          },
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：A",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "awards": {
-        "count": 3,
-        "examples": [
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０１５"
-          },
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０２０"
-          },
-          {
-            "title": "次世代育成支援対策推進法に基づく「プラチナくるみん」特例認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０２０"
-          }
-        ]
-      },
-      "patents": {
-        "count": 25,
-        "examples": [
-          {
-            "title": "情報処理装置、情報処理方法及びプログラム",
-            "registrationNumber": "7146218",
-            "applicationDate": "2021-12-24",
-            "patentType": "特許"
-          },
-          {
-            "title": "会計情報処理装置、会計情報処理方法及び会計情報処理プログラム",
-            "registrationNumber": "6667865",
-            "applicationDate": "2019-11-19",
-            "patentType": "特許"
-          },
-          {
-            "title": "ＡＺＳＡ Ｉｓａａｃ",
-            "registrationNumber": "6745106",
-            "applicationDate": "2023-07-31",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "femaleManagerCount": 427,
-        "managerCount": 2360,
-        "femaleOfficerCount": 76,
-        "officerCount": 805
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3011105000996",
-      "fetchedAt": "2026-08-03T01:30:33.830Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-1b9ba40fde5710ba",
@@ -475,18 +234,20 @@
       "count": 1
     },
     "counts": {
-      "publicRecords": 1,
+      "publicRecords": 2,
       "nextDay": 0,
-      "within30Days": 0
+      "within30Days": 1
     },
     "waitingDays": {
-      "average": 32
+      "average": 17
     },
     "relatedPersons": [
-      "person-db7620c558034204"
+      "person-db7620c558034204",
+      "person-1aedcce28a907a03"
     ],
     "sources": [
-      "cabinet-office-annual-2024"
+      "cabinet-office-annual-2024",
+      "cabinet-office-106-25-1-r05-files4"
     ],
     "topics": []
   },
@@ -511,24 +272,9 @@
       "person-9dab5daa7a4a2e55"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-9010005018623"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9010005018623",
-      "officialName": "一般財団法人全国農林漁業団体共済会",
-      "registeredAddress": "東京都千代田区大手町１丁目３番１号",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9010005018623"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005018623",
-      "fetchedAt": "2026-08-03T01:32:30.421Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-f17458638467b979",
@@ -553,115 +299,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5010001112697",
-      "officialName": "日本郵政株式会社",
-      "registeredAddress": "東京都千代田区大手町２丁目３番１号",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5010001112697"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "日本郵政株式会社 公式サイト",
-        "url": "http://www.japanpost.jp/"
-      },
-      "businessSummary": "グループ会社に対する経営管理及び病院経営",
-      "employeeNumber": 1553,
-      "capitalStock": 1750000000000,
-      "representativeName": "取締役兼代表執行役社長 根 岸 一 行",
-      "subsidies": {
-        "count": 5,
-        "totalAmount": 142883000,
-        "examples": [
-          {
-            "title": "国宝重要文化財文化財等保存整備事業",
-            "amount": 13762000,
-            "date": "2022-04-01",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "令和３年度（令和２年度からの繰越分）新型インフルエンザ流行期における発熱外来診療体制確保支援補助金（インフルエンザ流行期に備えた発熱患者の外来診療・検査体制確保事業）",
-            "amount": 21300000,
-            "date": "2021-06-10",
-            "governmentDepartment": "厚生労働省"
-          },
-          {
-            "title": "令和３年度（令和２年度からの繰越分）新型インフルエンザ流行期における発熱外来診療体制確保支援補助金（インフルエンザ流行期に備えた発熱患者の外来診療・検査体制確保事業）",
-            "amount": 806000,
-            "date": "2021-06-10",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "銀行持株会社免許",
-            "governmentDepartment": "金融庁"
-          }
-        ]
-      },
-      "awards": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０２６"
-          }
-        ]
-      },
-      "patents": {
-        "count": 1235,
-        "examples": [
-          {
-            "title": "アドレスコード管理のためのシステム、方法、プログラム、及びプログラムを記録した記録媒体",
-            "registrationNumber": "7242951",
-            "applicationDate": "2022-09-05",
-            "patentType": "特許"
-          },
-          {
-            "title": "郵便局＼ＰＯＳＴ ＯＦＦＩＣＥ",
-            "registrationNumber": "6800939",
-            "applicationDate": "2023-10-05",
-            "patentType": "商標"
-          },
-          {
-            "title": "ＰｏｓｔＢＭ",
-            "registrationNumber": "6800063",
-            "applicationDate": "2023-09-27",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "finance": {
-        "accountingStandards": "有価証券報告書を参照してください",
-        "fiscalYear": "第21期(自 2025年４月１日 至 2026年３月31日)",
-        "latestPeriod": {
-          "period": "4",
-          "revenue": 284688000000,
-          "ordinaryIncome": 217753000000,
-          "netIncome": 325460000000,
-          "netAssets": 5740721000000,
-          "totalAssets": 5848650000000,
-          "employeeNumber": 1994
-        }
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 20.4,
-        "averageContinuousServiceYearsFemale": 12.8,
-        "femaleWorkersProportion": 42.2,
-        "femaleManagerCount": 57,
-        "managerCount": 330
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001112697",
-      "fetchedAt": "2026-08-03T01:30:35.140Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-0a3ac944abcf469c",
@@ -711,126 +349,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6010001112696",
-      "officialName": "株式会社かんぽ生命保険",
-      "registeredAddress": "東京都千代田区大手町２丁目３番１号",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6010001112696"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "株式会社かんぽ生命保険 公式サイト",
-        "url": "https://www.jp-life.japanpost.jp/aboutus/csr/diversity/activities.html"
-      },
-      "businessSummary": "生命保険業",
-      "employeeNumber": 23231,
-      "capitalStock": 500000000000,
-      "representativeName": "取締役兼代表執行役社長 谷垣 邦夫",
-      "certifications": {
-        "count": 5,
-        "examples": [
-          {
-            "title": "スチュワードシップ・コードの受入れ表明をした機関投資家のリスト",
-            "governmentDepartment": "金融庁"
-          },
-          {
-            "title": "生命保険業免許",
-            "governmentDepartment": "金融庁"
-          },
-          {
-            "title": "ＤＸ認定制度",
-            "date": "2026-03-01",
-            "governmentDepartment": "経済産業省"
-          },
-          {
-            "title": "ＤＸ認定制度",
-            "date": "2024-03-01",
-            "governmentDepartment": "経済産業省"
-          },
-          {
-            "title": "ＤＸ認定制度",
-            "date": "2022-03-01",
-            "governmentDepartment": "経済産業省"
-          }
-        ]
-      },
-      "awards": {
-        "count": 4,
-        "examples": [
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０１３"
-          },
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０１５"
-          },
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０１９"
-          },
-          {
-            "title": "次世代育成支援対策推進法に基づく「プラチナくるみん」特例認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０１９"
-          }
-        ]
-      },
-      "patents": {
-        "count": 38,
-        "examples": [
-          {
-            "title": "かんくん",
-            "registrationNumber": "6734372",
-            "applicationDate": "2023-01-24",
-            "patentType": "商標"
-          },
-          {
-            "title": "くるみちゃん",
-            "registrationNumber": "6708185",
-            "applicationDate": "2022-12-02",
-            "patentType": "商標"
-          },
-          {
-            "title": "かぽちゃん",
-            "registrationNumber": "6708186",
-            "applicationDate": "2022-12-02",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "finance": {
-        "accountingStandards": "有価証券報告書を参照してください",
-        "fiscalYear": "第20期(自 2025年４月１日 至 2026年３月31日)",
-        "latestPeriod": {
-          "period": "4",
-          "ordinaryIncome": 355762000000,
-          "netIncome": 157885000000,
-          "netAssets": 2418743000000,
-          "totalAssets": 67174848000000,
-          "employeeNumber": 7545
-        }
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 18.2,
-        "averageContinuousServiceYearsFemale": 14.9,
-        "femaleWorkersProportion": 22,
-        "femaleManagerCount": 225,
-        "managerCount": 2118,
-        "femaleOfficerCount": 8,
-        "officerCount": 38
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010001112696",
-      "fetchedAt": "2026-08-03T01:30:35.752Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-2f9bb2f47094bead",
@@ -855,32 +374,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "2010005014868",
-      "officialName": "一般社団法人日本インタラクティブ広告協会",
-      "registeredAddress": "東京都中央区銀座７丁目１３番５号",
-      "prefecture": "東京都",
-      "city": "中央区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2010005014868"
-    },
-    "gbizInfo": {
-      "patents": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "§ｉ",
-            "registrationNumber": "5692744",
-            "applicationDate": "2014-03-25",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005014868",
-      "fetchedAt": "2026-08-03T01:30:36.285Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-bf88da389e6bbbbd",
@@ -905,44 +399,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5030001129723",
-      "officialName": "株式会社スマートビジョンロジスティクス",
-      "registeredAddress": "埼玉県秩父市道生町１番８号",
-      "prefecture": "埼玉県",
-      "city": "秩父市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5030001129723"
-    },
-    "gbizInfo": {
-      "patents": {
-        "count": 20,
-        "examples": [
-          {
-            "title": "ＤＹＮＡＴＥＣ",
-            "registrationNumber": "6301488",
-            "applicationDate": "2020-08-06",
-            "patentType": "商標"
-          },
-          {
-            "title": "スマートビジョンロジスティクス",
-            "registrationNumber": "6339243",
-            "applicationDate": "2019-12-20",
-            "patentType": "商標"
-          },
-          {
-            "title": "§ＳＶＬ",
-            "registrationNumber": "6339244",
-            "applicationDate": "2019-12-20",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5030001129723",
-      "fetchedAt": "2026-08-03T01:30:36.814Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-abd325e7edcf550f",
@@ -967,103 +424,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5011105000945",
-      "officialName": "学校法人東京理科大学",
-      "registeredAddress": "東京都新宿区神楽坂１丁目３番地",
-      "prefecture": "東京都",
-      "city": "新宿区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5011105000945"
-    },
-    "gbizInfo": {
-      "establishmentDate": "1915-05-26",
-      "representativeName": "理事長 浜本 隆之",
-      "subsidies": {
-        "count": 32,
-        "totalAmount": 489559837,
-        "examples": [
-          {
-            "title": "令和４年度 成長分野における即戦力人材輩出に向けたリカレント教育推進事業",
-            "amount": 10545000,
-            "date": "2023-08-10",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "令和４年度 成長分野における即戦力人材輩出に向けたリカレント教育推進事業",
-            "amount": 20905000,
-            "date": "2023-08-10",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "防災機能等強化緊急特別推進事業",
-            "amount": 20544000,
-            "date": "2023-07-18",
-            "governmentDepartment": "文部科学省"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 18,
-        "totalAmount": 1014228000,
-        "examples": [
-          {
-            "title": "次世代火力発電等技術開発次世代火力発電基盤技術開発石炭火力の負荷変動対応技術開発／ボイラクリープ疲労損傷の高精度余寿命診断技術開発",
-            "amount": 96600000,
-            "date": "2020-08-26",
-            "governmentDepartment": "国立研究開発法人新エネルギー・産業技術総合開発機構"
-          },
-          {
-            "title": "ムーンショット型研究開発事業／地球環境再生に向けた持続可能な資源循環を実現／冷熱を利用した大気中二酸化炭素直接回収の研究開発",
-            "amount": 51785000,
-            "date": "2020-10-23",
-            "governmentDepartment": "国立研究開発法人新エネルギー・産業技術総合開発機構"
-          },
-          {
-            "title": "ムーンショット型研究開発事業／地球環境再生に向けた持続可能な資源循環を実現／光スイッチ型海洋分解性の可食プラスチックの開発研究",
-            "amount": 38901000,
-            "date": "2020-10-29",
-            "governmentDepartment": "国立研究開発法人新エネルギー・産業技術総合開発機構"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：A",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 1411,
-        "examples": [
-          {
-            "title": "コンピュータプログラム、構造物異常判定装置及び構造物異常判定方法",
-            "registrationNumber": "7453654",
-            "applicationDate": "2023-05-12",
-            "patentType": "特許"
-          },
-          {
-            "title": "コンクリート中鉄筋の腐食箇所検出装置",
-            "registrationNumber": "7489047",
-            "applicationDate": "2022-03-31",
-            "patentType": "特許"
-          },
-          {
-            "title": "光触媒システム",
-            "registrationNumber": "7459154",
-            "applicationDate": "2022-03-04",
-            "patentType": "特許"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5011105000945",
-      "fetchedAt": "2026-08-03T01:30:37.639Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-ccf1b357fdd4bac7",
@@ -1088,46 +449,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9021005007458",
-      "officialName": "医療法人社団相光会",
-      "registeredAddress": "神奈川県横須賀市大矢部１丁目４番１６号",
-      "prefecture": "神奈川県",
-      "city": "横須賀市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9021005007458"
-    },
-    "gbizInfo": {
-      "businessSummary": "診療所及び介護老人保健施設、指定居宅介護支援事業及び指定居宅サービス事業",
-      "employeeNumber": 432,
-      "subsidies": {
-        "count": 2,
-        "totalAmount": 5284000,
-        "examples": [
-          {
-            "title": "令和３年度（令和２年度からの繰越分）インフルエンザ流行期における発熱外来診療体制確保支援補助金（インフルエンザ流行期に備えた発熱患者の外来診療・検査体制確保事業）",
-            "amount": 2649000,
-            "date": "2022-03-03",
-            "governmentDepartment": "厚生労働省"
-          },
-          {
-            "title": "令和２年度新型インフルエンザ流行期における発熱外来診療体制確保支援補助金（インフルエンザ流行期に備えた発熱患者の外来診療・検査体制確保事業）",
-            "amount": 2635000,
-            "date": "2021-03-10",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 12,
-        "averageContinuousServiceYearsFemale": 11,
-        "femaleWorkersProportion": 100
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9021005007458",
-      "fetchedAt": "2026-08-03T01:30:38.189Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-6d91bd2821b9ea71",
@@ -1152,104 +474,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "3010405001696",
-      "officialName": "社会福祉法人恩賜財団済生会",
-      "registeredAddress": "東京都港区三田１丁目４番２８号",
-      "prefecture": "東京都",
-      "city": "港区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3010405001696"
-    },
-    "gbizInfo": {
-      "employeeNumber": 49570,
-      "establishmentDate": "1911-05-30",
-      "representativeName": "理事長 炭谷 茂",
-      "subsidies": {
-        "count": 193,
-        "totalAmount": 5794981000,
-        "examples": [
-          {
-            "title": "令和２年度インフルエンザ流行期における新型コロナウイルス感染症疑い患者を受け入れる救急・周産期・小児医療機関体制確保事業補助金",
-            "amount": 22000000,
-            "date": "2023-03-29",
-            "governmentDepartment": "厚生労働省"
-          },
-          {
-            "title": "令和３年度（令和２年度からの繰越分）インフルエンザ流行期における発熱外来診療体制確保支援補助金（インフルエンザ流行期に備えた発熱患者の外来診療・検査体制確保事業実施医療機関支援事業）",
-            "amount": 1156000,
-            "date": "2023-03-20",
-            "governmentDepartment": "厚生労働省"
-          },
-          {
-            "title": "令和４年度新型コロナウイルス感染症患者等入院受入医療機関緊急支援事業補助金",
-            "amount": 18000000,
-            "date": "2023-02-17",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 6,
-        "totalAmount": 9087130,
-        "examples": [
-          {
-            "title": "令和５年度岡山刑務所職員定期健康診断及び特別定期健康診断委託業務",
-            "amount": 1245880,
-            "date": "2023-10-30",
-            "governmentDepartment": "法務省"
-          },
-          {
-            "title": "令和７年度静岡刑務所、駿府学園及び静岡少年鑑別所職員定期健康診断等業務委託",
-            "amount": 2245000,
-            "date": "2025-06-26",
-            "governmentDepartment": "法務省"
-          },
-          {
-            "title": "令和８年度静岡刑務所、駿府学園及び静岡少年鑑別所職員定期健康診断等業務委託",
-            "amount": 1794900,
-            "date": "2026-06-18",
-            "governmentDepartment": "法務省"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：A",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 20,
-        "examples": [
-          {
-            "title": "生物学的試料中の遊離ＡＩＭの免疫学的分析方法及び対象におけるＮＡＳＨの検出方法",
-            "registrationNumber": "7315968",
-            "applicationDate": "2020-01-30",
-            "patentType": "特許"
-          },
-          {
-            "title": "生物学的試料中の遊離ＡＩＭの免疫学的分析方法",
-            "registrationNumber": "7315966",
-            "applicationDate": "2020-01-30",
-            "patentType": "特許"
-          },
-          {
-            "title": "生物学的試料中の遊離ＡＩＭの免疫学的分析方法及び測定キット",
-            "registrationNumber": "7315967",
-            "applicationDate": "2020-01-30",
-            "patentType": "特許"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3010405001696",
-      "fetchedAt": "2026-08-03T01:30:38.757Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-c0e38542357088c1",
@@ -1274,22 +499,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "4120001235595",
-      "officialName": "パナソニックオペレーショナルエクセレンス株式会社",
-      "registeredAddress": "大阪府門真市大字門真１００６番地",
-      "prefecture": "大阪府",
-      "city": "門真市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4120001235595"
-    },
-    "gbizInfo": {
-      "employeeNumber": 5449,
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4120001235595",
-      "fetchedAt": "2026-08-03T01:30:39.315Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-e666aa92add9aa73",
@@ -1314,32 +524,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9010005015760",
-      "officialName": "アトム法律事務所弁護士法人",
-      "registeredAddress": "東京都千代田区永田町１丁目１１番２８号合人社東京永田町ビル９階",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9010005015760"
-    },
-    "gbizInfo": {
-      "patents": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "アトム法律事務所",
-            "registrationNumber": "6009904",
-            "applicationDate": "2017-04-18",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005015760",
-      "fetchedAt": "2026-08-03T01:30:39.864Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-9a275eef566c170a",
@@ -1362,24 +547,9 @@
       "person-9565d81c26f38b53"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-8120005024339"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8120005024339",
-      "officialName": "弁護士法人ウィステリア法律事務所",
-      "registeredAddress": "大阪府大阪市中央区南本町１丁目３番１７号南本町ＩＫビル３階",
-      "prefecture": "大阪府",
-      "city": "大阪市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8120005024339"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8120005024339",
-      "fetchedAt": "2026-08-03T01:32:30.777Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-d4d329708660c891",
@@ -1402,24 +572,9 @@
       "person-112624443738f6aa"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-4010005036720"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "4010005036720",
-      "officialName": "弁護士法人東京国際法律事務所",
-      "registeredAddress": "東京都港区赤坂１丁目１２番３２号アーク森ビル",
-      "prefecture": "東京都",
-      "city": "港区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4010005036720"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005036720",
-      "fetchedAt": "2026-08-03T01:32:30.913Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-d70e5c64dcb5793a",
@@ -1444,33 +599,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6010005021423",
-      "officialName": "弁護士法人森・濱田松本法律事務所",
-      "registeredAddress": "東京都千代田区丸の内２丁目６番１号丸の内パークビルディング",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6010005021423"
-    },
-    "gbizInfo": {
-      "procurements": {
-        "count": 1,
-        "totalAmount": 14058000,
-        "examples": [
-          {
-            "title": "令和５年度産業経済研究委託事業（職務給・ジョブ型人事制度の導入・運用に関する法的論点の整理、及び法的ガイダンス（案）の作成に関連する調査研究事業）",
-            "amount": 14058000,
-            "date": "2023-12-22",
-            "governmentDepartment": "情報処理推進機構"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010005021423",
-      "fetchedAt": "2026-08-03T01:30:41.485Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-597b59be862d6f97",
@@ -1495,91 +624,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "3130001000082",
-      "officialName": "アイフル株式会社",
-      "registeredAddress": "京都府京都市下京区烏丸通五条上る高砂町３８１－１",
-      "prefecture": "京都府",
-      "city": "京都市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3130001000082"
-    },
-    "gbizInfo": {
-      "businessSummary": "消費者金融業",
-      "employeeNumber": 3094,
-      "capitalStock": 94028000000,
-      "representativeName": "代表取締役社長 福 田 光 秀",
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "貸金業者登録",
-            "date": "2023-03-30",
-            "governmentDepartment": "金融庁"
-          }
-        ]
-      },
-      "awards": {
-        "count": 2,
-        "examples": [
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２００９"
-          },
-          {
-            "title": "次世代育成支援対策推進法に基づく「プラチナくるみん」特例認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０１９"
-          }
-        ]
-      },
-      "patents": {
-        "count": 32,
-        "examples": [
-          {
-            "title": "ユーザ装置及びプログラム",
-            "registrationNumber": "7389297",
-            "applicationDate": "2022-09-28",
-            "patentType": "特許"
-          },
-          {
-            "title": "情報処理装置の情報処理方法、情報処理装置、情報処理システム、及びプログラム",
-            "registrationNumber": "7288128",
-            "applicationDate": "2022-09-28",
-            "patentType": "特許"
-          },
-          {
-            "title": "ぽまめくん",
-            "registrationNumber": "6774267",
-            "applicationDate": "2023-07-06",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "finance": {
-        "accountingStandards": "有価証券報告書を参照してください",
-        "fiscalYear": "第49期(自 2025年４月１日 至 2026年３月31日)",
-        "latestPeriod": {
-          "period": "4",
-          "revenue": 83117000000,
-          "ordinaryIncome": 6748000000,
-          "netIncome": 7912000000,
-          "netAssets": 110096000000,
-          "totalAssets": 711185000000,
-          "employeeNumber": 1010
-        }
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 16.2,
-        "averageContinuousServiceYearsFemale": 10.8,
-        "femaleWorkersProportion": 35
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3130001000082",
-      "fetchedAt": "2026-08-03T01:30:42.063Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-36561f4cddba908f",
@@ -1629,32 +674,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "7011101105127",
-      "officialName": "株式会社アガルートホールディングス",
-      "registeredAddress": "東京都新宿区新小川町５番５号",
-      "prefecture": "東京都",
-      "city": "新宿区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7011101105127"
-    },
-    "gbizInfo": {
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "経営力向上計画認定",
-            "date": "2025-01-14",
-            "governmentDepartment": "経済産業省",
-            "category": "学術研究，専門・技術サービス業"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7011101105127",
-      "fetchedAt": "2026-08-03T01:30:42.615Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-63393aec6de8b34a",
@@ -1679,54 +699,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "2010405004477",
-      "officialName": "弁護士法人瓜生・糸賀法律事務所",
-      "registeredAddress": "東京都港区赤坂１丁目１２番３２号",
-      "prefecture": "東京都",
-      "city": "港区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2010405004477"
-    },
-    "gbizInfo": {
-      "establishmentDate": "2002-08-19",
-      "representativeName": "社員 瓜生 健太郎",
-      "certifications": {
-        "count": 2,
-        "examples": [
-          {
-            "title": "認定経営革新等支援機関",
-            "date": "2018-04-26",
-            "governmentDepartment": "経済産業省"
-          },
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：C",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 3,
-        "examples": [
-          {
-            "title": "記録が変更されていないことを証明するシステム",
-            "registrationNumber": "6935662",
-            "applicationDate": "2020-08-19",
-            "patentType": "特許"
-          },
-          {
-            "title": "暗号資産管理システム及び暗号資産管理方法",
-            "registrationNumber": "6651108",
-            "applicationDate": "2019-06-06",
-            "patentType": "特許"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010405004477",
-      "fetchedAt": "2026-08-03T01:30:43.224Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-be04e0192b8e9695",
@@ -1749,24 +722,9 @@
       "person-8ed9d19601aa2f80"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-2010005024735"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "2010005024735",
-      "officialName": "弁護士法人シティユーワ法律事務所",
-      "registeredAddress": "東京都千代田区丸の内２丁目２番２号",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2010005024735"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005024735",
-      "fetchedAt": "2026-08-03T01:32:31.237Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-6a0604f14df9f027",
@@ -1816,54 +774,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5120001235594",
-      "officialName": "パナソニックインダストリー株式会社",
-      "registeredAddress": "大阪府門真市大字門真１００６番地",
-      "prefecture": "大阪府",
-      "city": "門真市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5120001235594"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "パナソニックインダストリー株式会社 公式サイト",
-        "url": "https://www.panasonic.com/jp/industry/csr/dei/plan.html"
-      },
-      "businessSummary": "電気部品・電子部品・制御機器・電子材料等の開発・製造・販売",
-      "employeeNumber": 10650,
-      "procurements": {
-        "count": 1,
-        "totalAmount": 3000000,
-        "examples": [
-          {
-            "title": "匂いセンサに関する調査研究",
-            "amount": 3000000,
-            "date": "2022-06-21",
-            "governmentDepartment": "財務省"
-          }
-        ]
-      },
-      "awards": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０２５"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 20.2,
-        "averageContinuousServiceYearsFemale": 22.9,
-        "femaleWorkersProportion": 27.8
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5120001235594",
-      "fetchedAt": "2026-08-03T01:30:44.323Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-1b34b2c2bdd61380",
@@ -1886,24 +797,9 @@
       "person-19c93a7e237fc310"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-7010005037708"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "7010005037708",
-      "officialName": "アイエイ弁護士法人",
-      "registeredAddress": "東京都千代田区内幸町１丁目３番２号",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7010005037708"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010005037708",
-      "fetchedAt": "2026-08-03T01:32:31.558Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-97bdd6cbe8017306",
@@ -1951,24 +847,9 @@
       "person-029f43f32f511ef8"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-9180005019935"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9180005019935",
-      "officialName": "弁護士法人ブナの森法律事務所",
-      "registeredAddress": "愛知県名古屋市東区泉２丁目２７番１４号関電不動産高岳ビル３階",
-      "prefecture": "愛知県",
-      "city": "名古屋市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9180005019935"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9180005019935",
-      "fetchedAt": "2026-08-03T01:32:31.905Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-94971fb9c303f424",
@@ -2016,24 +897,9 @@
       "person-343dfd91902e7bbe"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-9120005017184"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9120005017184",
-      "officialName": "弁護士法人響",
-      "registeredAddress": "東京都新宿区北新宿２丁目２１番１号新宿フロントタワー１４階",
-      "prefecture": "東京都",
-      "city": "新宿区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9120005017184"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9120005017184",
-      "fetchedAt": "2026-08-03T01:32:32.203Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-cd6a91ece0c971e2",
@@ -2058,32 +924,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "7120005010983",
-      "officialName": "弁護士法人第一法律事務所",
-      "registeredAddress": "大阪府大阪市北区中之島２丁目２番７号",
-      "prefecture": "大阪府",
-      "city": "大阪市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7120005010983"
-    },
-    "gbizInfo": {
-      "establishmentDate": "2007-12-03",
-      "representativeName": "代表社員 福田 正",
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：C",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7120005010983",
-      "fetchedAt": "2026-08-03T01:30:46.464Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-0fef83885c4a0112",
@@ -2108,112 +949,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6120001144720",
-      "officialName": "吉本興業ホールディングス株式会社",
-      "registeredAddress": "大阪府大阪市中央区難波千日前１１番６号",
-      "prefecture": "大阪府",
-      "city": "大阪市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6120001144720"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "吉本興業ホールディングス株式会社 公式サイト",
-        "url": "https://www.yoshimoto.co.jp/policy/employer_actionplan/"
-      },
-      "businessSummary": "TV・ラジオ、ビデオ、CM、その他映像ソフトの企画、制作および販売",
-      "employeeNumber": 878,
-      "establishmentDate": "2009-04-22",
-      "representativeName": "代表取締役 岡本 昭彦",
-      "subsidies": {
-        "count": 5,
-        "totalAmount": 380539000,
-        "examples": [
-          {
-            "title": "令和４年度沖縄振興特定事業推進費補助金（吉本興業ホールディングス（株）・「島ぜんぶでおーきな祭」関連事業）",
-            "amount": 94999000,
-            "date": "2022-04-01",
-            "governmentDepartment": "内閣府"
-          },
-          {
-            "title": "令和２年度沖縄振興特定事業推進費補助金（吉本興業ホールディングス株式会社）",
-            "amount": 94999000,
-            "date": "2021-05-14",
-            "governmentDepartment": "内閣府"
-          },
-          {
-            "title": "令和３年度沖縄振興特定事業推進費補助金（吉本興業ホールディングス株式会社）",
-            "amount": 94999000,
-            "date": "2021-04-01",
-            "governmentDepartment": "内閣府"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 1,
-        "totalAmount": 539000000,
-        "examples": [
-          {
-            "title": "令和８年度政府広報テレビ（地上波放送）定時番組の制作・放送実施業務",
-            "amount": 539000000,
-            "date": "2026-01-14",
-            "governmentDepartment": "内閣府"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売：C 役務の提供等：C",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "awards": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "えるぼし－認定",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "patents": {
-        "count": 330,
-        "examples": [
-          {
-            "title": "ＦＡＮＹ Ｓｔｕｄｉｏ",
-            "registrationNumber": "6796469",
-            "applicationDate": "2023-04-18",
-            "patentType": "商標"
-          },
-          {
-            "title": "ドキュメンタル",
-            "registrationNumber": "6733429",
-            "applicationDate": "2023-02-02",
-            "patentType": "商標"
-          },
-          {
-            "title": "ＩＭＭ Ｔｈｅａｔｅｒ",
-            "registrationNumber": "6708846",
-            "applicationDate": "2023-01-10",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 13.9,
-        "averageContinuousServiceYearsFemale": 10.3,
-        "femaleManagerCount": 29,
-        "managerCount": 186
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6120001144720",
-      "fetchedAt": "2026-08-03T01:30:47.094Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-87b2bac9c0b05551",
@@ -2238,94 +974,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "4010005021094",
-      "officialName": "渥美坂井法律事務所弁護士法人",
-      "registeredAddress": "東京都千代田区内幸町２丁目２番２号富国生命ビル",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4010005021094"
-    },
-    "gbizInfo": {
-      "employeeNumber": 207,
-      "establishmentDate": "2013-06-25",
-      "representativeName": "代表社員 渥美 博夫",
-      "procurements": {
-        "count": 8,
-        "totalAmount": 72281720,
-        "examples": [
-          {
-            "title": "０５－００４９－００８５特定利用者情報の適正な取扱いに影響を及ぼすおそれのある外国の制度に関する調査の請負（訂正）",
-            "amount": 9669000,
-            "date": "2023-05-31",
-            "governmentDepartment": "総務省"
-          },
-          {
-            "title": "個人情報保護に関する海外動向調査",
-            "amount": 18000000,
-            "date": "2023-10-10",
-            "governmentDepartment": "個人情報保護委員会"
-          },
-          {
-            "title": "個人情報保護に関する諸外国法制度調査",
-            "amount": 9000000,
-            "date": "2024-02-07",
-            "governmentDepartment": "個人情報保護委員会"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：B",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "awards": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "えるぼし－認定",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "patents": {
-        "count": 30,
-        "examples": [
-          {
-            "title": "プロトタイプ＼政策研究所＼Ｐｏｌｉｃｙ Ｒｅｓｅａｒｃｈ Ｉｎｓｔｉｔｕｔｅ",
-            "registrationNumber": "6785087",
-            "applicationDate": "2023-08-24",
-            "patentType": "商標"
-          },
-          {
-            "title": "§ＡＰ",
-            "registrationNumber": "6802778",
-            "applicationDate": "2023-08-03",
-            "patentType": "商標"
-          },
-          {
-            "title": "渥美▲坂▼井律▲師▼事▲務▼▲所▼・外国法共同事▲業▼",
-            "registrationNumber": "6080946",
-            "applicationDate": "2018-01-12",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 5.8,
-        "averageContinuousServiceYearsFemale": 5.3,
-        "femaleWorkersProportion": 92
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005021094",
-      "fetchedAt": "2026-08-03T01:30:47.620Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-60809b45d97eee2c",
@@ -2348,24 +997,9 @@
       "person-a6afe31a6700afe3"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-9011505000797"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9011505000797",
-      "officialName": "更生保護法人日新協会",
-      "registeredAddress": "東京都荒川区東尾久２丁目３４番７号",
-      "prefecture": "東京都",
-      "city": "荒川区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9011505000797"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9011505000797",
-      "fetchedAt": "2026-08-03T01:32:32.249Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-8f36ecd2e8c591ce",
@@ -2413,24 +1047,9 @@
       "person-84cc2a9aa89f278f"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-7010405010909"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "7010405010909",
-      "officialName": "弁護士法人西村あさひ法律事務所",
-      "registeredAddress": "東京都千代田区大手町１丁目１番２号大手門タワー",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7010405010909"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010405010909",
-      "fetchedAt": "2026-08-03T01:32:32.573Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-cd40e7a107656d28",
@@ -2480,106 +1099,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5010001149426",
-      "officialName": "株式会社リクルート",
-      "registeredAddress": "東京都千代田区丸の内１丁目９番２号",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5010001149426"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "株式会社リクルート 公式サイト",
-        "url": "https://www.recruit.co.jp/people/inclusion/"
-      },
-      "businessSummary": "販促領域及び人材領域における、個人ユーザーと企業クライアントを結ぶマッチングプラットフォームや、企業クライアント向けのSaaS (Software as a Service) の提供。",
-      "employeeNumber": 11666,
-      "establishmentDate": "2012-10-01",
-      "representativeName": "代表取締役 牛田 圭一",
-      "procurements": {
-        "count": 17,
-        "totalAmount": 70540221936,
-        "examples": [
-          {
-            "title": "平成３０年度産業技術調査事業（国内外の人材流動化促進や研究成果の信頼性確保等に向けた大学・研究機関へのブロックチェーン技術の適用及びその標準獲得に関する調査）",
-            "amount": 18181476,
-            "date": "2018-07-30",
-            "governmentDepartment": "経済産業省"
-          },
-          {
-            "title": "合同企業説明会等への参加に係る業務",
-            "amount": 20000000,
-            "date": "2019-11-01",
-            "governmentDepartment": "警察庁"
-          },
-          {
-            "title": "令和６年度パルスサーベイクラウドサービス提供外",
-            "amount": 2268600,
-            "date": "2024-09-03",
-            "governmentDepartment": "国土交通省"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 2,
-        "examples": [
-          {
-            "title": "前払式支払手段（自家型）発行者届出",
-            "date": "2022-11-29",
-            "governmentDepartment": "金融庁"
-          },
-          {
-            "title": "物品の製造： 物品の販売：A 役務の提供等：A",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 892,
-        "examples": [
-          {
-            "title": "情報処理方法、プログラム、及び情報処理装置",
-            "registrationNumber": "7248717",
-            "applicationDate": "2021-02-12",
-            "patentType": "特許"
-          },
-          {
-            "title": "情報処理装置、情報処理方法およびプログラム",
-            "registrationNumber": "7438152",
-            "applicationDate": "2021-01-29",
-            "patentType": "特許"
-          },
-          {
-            "title": "情報処理装置、情報処理方法及び情報処理プログラム",
-            "registrationNumber": "7449798",
-            "applicationDate": "2020-07-07",
-            "patentType": "特許"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYears": 5.7,
-        "averageContinuousServiceYearsMale": 6.7,
-        "averageContinuousServiceYearsFemale": 7.4,
-        "averageAge": 35,
-        "monthlyAverageOvertimeHours": 31,
-        "femaleWorkersProportion": 52,
-        "femaleManagerCount": 409,
-        "managerCount": 1168,
-        "femaleOfficerCount": 3,
-        "officerCount": 9,
-        "paternityLeaveEligible": 366,
-        "maternityLeaveEligible": 397,
-        "paternityLeaveAcquisitionCount": 147,
-        "maternityLeaveAcquisitionCount": 363
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001149426",
-      "fetchedAt": "2026-08-03T01:30:49.404Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-33db9318c3e1fa57",
@@ -2604,38 +1124,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9020001133094",
-      "officialName": "株式会社ユニバレオ",
-      "registeredAddress": "神奈川県横浜市保土ケ谷区神戸町１０６番地",
-      "prefecture": "神奈川県",
-      "city": "横浜市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9020001133094"
-    },
-    "gbizInfo": {
-      "patents": {
-        "count": 2,
-        "examples": [
-          {
-            "title": "§ＣｕｒｉｏｕｓＯｎｌｉｎｅ",
-            "registrationNumber": "6709997",
-            "applicationDate": "2022-12-02",
-            "patentType": "商標"
-          },
-          {
-            "title": "Ｃｕｒｉｏｕｓ Ｏｎｌｉｎｅ",
-            "registrationNumber": "6648996",
-            "applicationDate": "2022-06-29",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9020001133094",
-      "fetchedAt": "2026-08-03T01:30:49.949Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-bd1f52e49a0d4581",
@@ -2660,50 +1149,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9150005002893",
-      "officialName": "学校法人天理大学",
-      "registeredAddress": "奈良県天理市守目堂町２１３番地の４",
-      "prefecture": "奈良県",
-      "city": "天理市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9150005002893"
-    },
-    "gbizInfo": {
-      "businessSummary": "教育・研究",
-      "employeeNumber": 652,
-      "subsidies": {
-        "count": 45,
-        "totalAmount": 995599000,
-        "examples": [
-          {
-            "title": "学校保健特別対策事業費補助金（学校等における感染症対策等支援事業）",
-            "amount": 140000,
-            "date": "2023-02-01",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "学校保健特別対策事業費補助金（学校等における感染症対策等支援事業）",
-            "amount": 100000,
-            "date": "2023-02-01",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "学校保健特別対策事業費補助金（学校等における感染症対策等支援事業）",
-            "amount": 200000,
-            "date": "2023-02-01",
-            "governmentDepartment": "文部科学省"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "femaleWorkersProportion": 67
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9150005002893",
-      "fetchedAt": "2026-08-03T01:30:50.461Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-da0285b9b6f3c143",
@@ -2728,105 +1174,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8010001062097",
-      "officialName": "日本酒類販売株式会社",
-      "registeredAddress": "東京都中央区新川１丁目２５番４号",
-      "prefecture": "東京都",
-      "city": "中央区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8010001062097"
-    },
-    "gbizInfo": {
-      "employeeNumber": 834,
-      "capitalStock": 4028000000,
-      "establishmentDate": "1949-07-01",
-      "representativeName": "代表取締役社長 倉本 隆",
-      "subsidies": {
-        "count": 2,
-        "totalAmount": 5786343,
-        "examples": [
-          {
-            "title": "新市場開拓支援事業",
-            "amount": 878004,
-            "date": "2023-03-20",
-            "governmentDepartment": "財務省"
-          },
-          {
-            "title": "新市場開拓支援事業",
-            "amount": 4908339,
-            "date": "2022-05-26",
-            "governmentDepartment": "財務省"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 1,
-        "totalAmount": 870000,
-        "examples": [
-          {
-            "title": "非常用備蓄食料品等購入契約",
-            "amount": 870000,
-            "date": "2022-12-23",
-            "governmentDepartment": "法務省"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売：A 役務の提供等：A",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 29,
-        "examples": [
-          {
-            "title": "ＣＲＡＦＴ＼ＣＡＳＫ",
-            "registrationNumber": "6770244",
-            "applicationDate": "2023-08-02",
-            "patentType": "商標"
-          },
-          {
-            "title": "酒粋＼シュスイ",
-            "registrationNumber": "6733712",
-            "applicationDate": "2023-04-07",
-            "patentType": "商標"
-          },
-          {
-            "title": "Ｗａｈｒｈｅｉｔ＼ヴァールハイト",
-            "registrationNumber": "6723115",
-            "applicationDate": "2023-03-29",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "finance": {
-        "accountingStandards": "有価証券報告書を参照してください",
-        "fiscalYear": "第77期（自 2025年４月１日 至 2026年３月31日）",
-        "latestPeriod": {
-          "period": "4",
-          "revenue": 489426000000,
-          "ordinaryIncome": 2317000000,
-          "netIncome": 1547000000,
-          "netAssets": 57620000000,
-          "totalAssets": 166470000000,
-          "employeeNumber": 748
-        }
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 22.4,
-        "averageContinuousServiceYearsFemale": 16.7,
-        "femaleWorkersProportion": 58.3
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010001062097",
-      "fetchedAt": "2026-08-03T01:30:50.990Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-a15aca39149090f1",
@@ -2851,30 +1199,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "2490001001293",
-      "officialName": "株式会社四銀地域経済研究所",
-      "registeredAddress": "高知県高知市菜園場町１番２１号",
-      "prefecture": "高知県",
-      "city": "高知市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2490001001293"
-    },
-    "gbizInfo": {
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "適格機関投資家等特例業務届出者",
-            "governmentDepartment": "金融庁"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2490001001293",
-      "fetchedAt": "2026-08-03T01:30:51.509Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-7e2865a91b29e89a",
@@ -2899,148 +1224,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "7490001000786",
-      "officialName": "株式会社四国銀行",
-      "registeredAddress": "高知県高知市南はりまや町１丁目１番１号",
-      "prefecture": "高知県",
-      "city": "高知市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7490001000786"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "株式会社四国銀行 公式サイト",
-        "url": "https://www.shikokubank.co.jp"
-      },
-      "businessSummary": "普通銀行業務",
-      "employeeNumber": 1841,
-      "capitalStock": 25000000000,
-      "representativeName": "取締役頭取 小 林 達 司",
-      "subsidies": {
-        "count": 32,
-        "totalAmount": 12338408,
-        "examples": [
-          {
-            "title": "令和４年度地域雇用創造利子補給金（地域活性化雇用創造プロジェクト）",
-            "amount": 172180,
-            "date": "2022-07-26",
-            "governmentDepartment": "厚生労働省"
-          },
-          {
-            "title": "令和４年度地域雇用創造利子補給金（地域活性化雇用創造プロジェクト）",
-            "amount": 574043,
-            "date": "2022-07-26",
-            "governmentDepartment": "厚生労働省"
-          },
-          {
-            "title": "令和４年度地域雇用創造利子補給金（地域活性化雇用創造プロジェクト）",
-            "amount": 541097,
-            "date": "2022-07-26",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 6,
-        "examples": [
-          {
-            "title": "銀行免許",
-            "governmentDepartment": "金融庁"
-          },
-          {
-            "title": "認定経営革新等支援機関",
-            "governmentDepartment": "経済産業省／金融庁"
-          },
-          {
-            "title": "銀行代理業者許可",
-            "governmentDepartment": "金融庁"
-          },
-          {
-            "title": "ＤＸ認定制度",
-            "date": "2026-03-01",
-            "governmentDepartment": "経済産業省"
-          },
-          {
-            "title": "ＤＸ認定制度",
-            "date": "2024-03-01",
-            "governmentDepartment": "経済産業省"
-          }
-        ]
-      },
-      "awards": {
-        "count": 4,
-        "examples": [
-          {
-            "title": "えるぼし－認定",
-            "governmentDepartment": "厚生労働省"
-          },
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０１８"
-          },
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０２０"
-          },
-          {
-            "title": "次世代育成支援対策推進法に基づく「プラチナくるみん」特例認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０２２"
-          }
-        ]
-      },
-      "patents": {
-        "count": 20,
-        "examples": [
-          {
-            "title": "しあわせを、大きくする。",
-            "registrationNumber": "6730147",
-            "applicationDate": "2023-02-17",
-            "patentType": "商標"
-          },
-          {
-            "title": "§ＳＨＩＫＯＫＵ ＡＬＬＩＡＮＣＥ",
-            "registrationNumber": "6005076",
-            "applicationDate": "2017-03-27",
-            "patentType": "商標"
-          },
-          {
-            "title": "四国アライアンス",
-            "registrationNumber": "6005077",
-            "applicationDate": "2017-03-27",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "finance": {
-        "accountingStandards": "有価証券報告書を参照してください",
-        "fiscalYear": "第212期(自 2025年４月１日 至 2026年３月31日)",
-        "latestPeriod": {
-          "period": "4",
-          "ordinaryIncome": 43433000000,
-          "netIncome": 7711000000,
-          "netAssets": 147848000000,
-          "totalAssets": 3627523000000,
-          "employeeNumber": 1247
-        }
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 19.4,
-        "averageContinuousServiceYearsFemale": 11.9,
-        "femaleWorkersProportion": 48.4,
-        "femaleManagerCount": 35,
-        "managerCount": 296,
-        "femaleOfficerCount": 2,
-        "officerCount": 11
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7490001000786",
-      "fetchedAt": "2026-08-03T01:30:52.069Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-a1a725b5f2afc38d",
@@ -3063,24 +1247,9 @@
       "person-edefd9521ef9986f"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-8120005003359"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8120005003359",
-      "officialName": "一般社団法人大阪府信用組合協会",
-      "registeredAddress": "大阪府大阪市中央区内本町２丁目３番９号",
-      "prefecture": "大阪府",
-      "city": "大阪市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8120005003359"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8120005003359",
-      "fetchedAt": "2026-08-03T01:32:32.907Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-8bedac202ab4bff4",
@@ -3105,31 +1274,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "3290005011341",
-      "officialName": "大川信用金庫",
-      "registeredAddress": "福岡県大川市大字榎津３０５番地の１",
-      "prefecture": "福岡県",
-      "city": "大川市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3290005011341"
-    },
-    "gbizInfo": {
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "登録金融機関登録",
-            "date": "2007-09-30",
-            "governmentDepartment": "金融庁"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3290005011341",
-      "fetchedAt": "2026-08-03T01:30:53.099Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-05ea94e1ee7315af",
@@ -3152,24 +1297,9 @@
       "person-ce695800a1017a8b"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-4080005006238"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "4080005006238",
-      "officialName": "一般社団法人静岡県信用金庫協会",
-      "registeredAddress": "静岡県静岡市葵区追手町３番１１号",
-      "prefecture": "静岡県",
-      "city": "静岡市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4080005006238"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4080005006238",
-      "fetchedAt": "2026-08-03T01:32:32.967Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-4e67bf8c2cd447e7",
@@ -3192,24 +1322,9 @@
       "person-d80f3ef323954844"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-2180005014505"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "2180005014505",
-      "officialName": "一般社団法人東海地区信用金庫協会",
-      "registeredAddress": "愛知県名古屋市東区葵１丁目２６番３号",
-      "prefecture": "愛知県",
-      "city": "名古屋市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2180005014505"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2180005014505",
-      "fetchedAt": "2026-08-03T01:32:33.022Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-5801cf2c3b4f6ec1",
@@ -3232,24 +1347,9 @@
       "person-d80f3ef323954844"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-1180001038517"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "1180001038517",
-      "officialName": "株式会社東海信金ビジネス",
-      "registeredAddress": "愛知県名古屋市中区錦２丁目１７番２１号",
-      "prefecture": "愛知県",
-      "city": "名古屋市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1180001038517"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1180001038517",
-      "fetchedAt": "2026-08-03T01:32:33.072Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-1f5c239de0b78cd8",
@@ -3274,69 +1374,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "4160005006725",
-      "officialName": "滋賀中央信用金庫",
-      "registeredAddress": "滋賀県近江八幡市桜宮町１９８番地",
-      "prefecture": "滋賀県",
-      "city": "近江八幡市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4160005006725"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "滋賀中央信用金庫 公式サイト",
-        "url": "http://www.shigachushin.jp"
-      },
-      "businessSummary": "信用金庫法に基づく金融業務",
-      "employeeNumber": 401,
-      "certifications": {
-        "count": 3,
-        "examples": [
-          {
-            "title": "認定経営革新等支援機関",
-            "governmentDepartment": "経済産業省／金融庁"
-          },
-          {
-            "title": "信託契約代理店登録",
-            "date": "2018-03-16",
-            "governmentDepartment": "金融庁"
-          },
-          {
-            "title": "登録金融機関登録",
-            "date": "2007-09-30",
-            "governmentDepartment": "金融庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 9,
-        "examples": [
-          {
-            "title": "おうみのくらし",
-            "registrationNumber": "6381851",
-            "applicationDate": "2020-04-21",
-            "patentType": "商標"
-          },
-          {
-            "title": "Ｒｅ：タウン",
-            "registrationNumber": "6155615",
-            "applicationDate": "2018-07-26",
-            "patentType": "商標"
-          },
-          {
-            "title": "はっぴーターン",
-            "registrationNumber": "6155613",
-            "applicationDate": "2018-07-26",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4160005006725",
-      "fetchedAt": "2026-08-03T01:30:55.264Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-078b8e30ed17fd58",
@@ -3361,112 +1399,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "7340005001465",
-      "officialName": "鹿児島相互信用金庫",
-      "registeredAddress": "鹿児島県鹿児島市泉町２番３号",
-      "prefecture": "鹿児島県",
-      "city": "鹿児島市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7340005001465"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "鹿児島相互信用金庫 公式サイト",
-        "url": "https://www.shinkin.co.jp/kasosin/"
-      },
-      "businessSummary": "信用金庫法に基づく金融業",
-      "employeeNumber": 547,
-      "subsidies": {
-        "count": 12,
-        "totalAmount": 8013658,
-        "examples": [
-          {
-            "title": "令和４年度特定有人国境離島地域事業活動支援利子補給金",
-            "amount": 92236,
-            "date": "2023-03-15",
-            "governmentDepartment": "内閣府"
-          },
-          {
-            "title": "令和４年度特定有人国境離島地域事業活動支援利子補給金",
-            "amount": 99565,
-            "date": "2022-10-04",
-            "governmentDepartment": "内閣府"
-          },
-          {
-            "title": "令和４年度地域雇用創造利子補給金（地域活性化雇用創造プロジェクト）",
-            "amount": 1526576,
-            "date": "2022-07-26",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 3,
-        "examples": [
-          {
-            "title": "認定経営革新等支援機関",
-            "governmentDepartment": "経済産業省／金融庁"
-          },
-          {
-            "title": "登録金融機関登録",
-            "date": "2007-09-30",
-            "governmentDepartment": "金融庁"
-          },
-          {
-            "title": "確定拠出年金運営管理機関登録",
-            "date": "2002-01-31",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "awards": {
-        "count": 3,
-        "examples": [
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２００７"
-          },
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２００９"
-          },
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０１７"
-          }
-        ]
-      },
-      "patents": {
-        "count": 4,
-        "examples": [
-          {
-            "title": "鹿児島相互信用金庫",
-            "registrationNumber": "6263832",
-            "applicationDate": "2019-07-12",
-            "patentType": "商標"
-          },
-          {
-            "title": "そうしん",
-            "registrationNumber": "6296420",
-            "applicationDate": "2019-07-12",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 19.6,
-        "averageContinuousServiceYearsFemale": 13.3,
-        "femaleWorkersProportion": 50
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7340005001465",
-      "fetchedAt": "2026-08-03T01:30:55.805Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-5e8fc8079869ace3",
@@ -3489,24 +1422,9 @@
       "person-e727ac2caae8248f"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-4010005015996"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "4010005015996",
-      "officialName": "一般社団法人第二種金融商品取引業協会",
-      "registeredAddress": "東京都中央区日本橋２丁目１１番２号",
-      "prefecture": "東京都",
-      "city": "中央区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4010005015996"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005015996",
-      "fetchedAt": "2026-08-03T01:32:33.111Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-d94c98fbb46a432b",
@@ -3531,58 +1449,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5150005003854",
-      "officialName": "大和信用金庫",
-      "registeredAddress": "奈良県桜井市大字桜井２８１番地の１１",
-      "prefecture": "奈良県",
-      "city": "桜井市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5150005003854"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "大和信用金庫 公式サイト",
-        "url": "https://www.yamato-shinkin.co.jp/"
-      },
-      "businessSummary": "預金、融資、為替、証券、国債・保険・投資信託窓口 販売、各種代理業務、ほか",
-      "employeeNumber": 341,
-      "certifications": {
-        "count": 2,
-        "examples": [
-          {
-            "title": "認定経営革新等支援機関",
-            "governmentDepartment": "経済産業省／金融庁"
-          },
-          {
-            "title": "登録金融機関登録",
-            "date": "2007-09-30",
-            "governmentDepartment": "金融庁"
-          }
-        ]
-      },
-      "awards": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "障害者雇用優良事業所の大臣表彰－表彰",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０１３"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 16,
-        "averageContinuousServiceYearsFemale": 12,
-        "femaleWorkersProportion": 62.5,
-        "femaleManagerCount": 29,
-        "managerCount": 121
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5150005003854",
-      "fetchedAt": "2026-08-03T01:30:56.855Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-5139b1f417c6c361",
@@ -3607,37 +1474,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "7400605000174",
-      "officialName": "水沢信用金庫",
-      "registeredAddress": "岩手県奥州市水沢字日高西７１番地１",
-      "prefecture": "岩手県",
-      "city": "奥州市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7400605000174"
-    },
-    "gbizInfo": {
-      "employeeNumber": 130,
-      "certifications": {
-        "count": 2,
-        "examples": [
-          {
-            "title": "信託契約代理店登録",
-            "date": "2019-06-11",
-            "governmentDepartment": "金融庁"
-          },
-          {
-            "title": "登録金融機関登録",
-            "date": "2007-09-30",
-            "governmentDepartment": "金融庁"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7400605000174",
-      "fetchedAt": "2026-08-03T01:30:57.357Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-18351298ebe5922b",
@@ -3660,24 +1497,9 @@
       "person-75306da63fc1706e"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-6370001004338"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6370001004338",
-      "officialName": "株式会社しんきん総合サービス",
-      "registeredAddress": "宮城県仙台市若林区河原町１丁目２番８号",
-      "prefecture": "宮城県",
-      "city": "仙台市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6370001004338"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6370001004338",
-      "fetchedAt": "2026-08-03T01:32:33.157Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-f04cffb28be960f3",
@@ -3702,86 +1524,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8140005010881",
-      "officialName": "尼崎信用金庫",
-      "registeredAddress": "兵庫県尼崎市開明町３丁目３０番地",
-      "prefecture": "兵庫県",
-      "city": "尼崎市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8140005010881"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "尼崎信用金庫 公式サイト",
-        "url": "https://www.amashin.co.jp"
-      },
-      "businessSummary": "金融業 保険保険 投資信託販売",
-      "employeeNumber": 1525,
-      "certifications": {
-        "count": 3,
-        "examples": [
-          {
-            "title": "認定経営革新等支援機関",
-            "governmentDepartment": "経済産業省／金融庁"
-          },
-          {
-            "title": "登録金融機関登録",
-            "date": "2007-09-30",
-            "governmentDepartment": "金融庁"
-          },
-          {
-            "title": "確定拠出年金運営管理機関登録",
-            "date": "2001-12-05",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "awards": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０１０"
-          }
-        ]
-      },
-      "patents": {
-        "count": 19,
-        "examples": [
-          {
-            "title": "あましんビジネスコンサルタント",
-            "registrationNumber": "6800948",
-            "applicationDate": "2023-10-16",
-            "patentType": "商標"
-          },
-          {
-            "title": "あましんソリューションコンサルタント",
-            "registrationNumber": "6800949",
-            "applicationDate": "2023-10-16",
-            "patentType": "商標"
-          },
-          {
-            "title": "あましんパーソナルコンサルタント",
-            "registrationNumber": "6800950",
-            "applicationDate": "2023-10-16",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 21.1,
-        "averageContinuousServiceYearsFemale": 12.8,
-        "femaleWorkersProportion": 55.4,
-        "femaleManagerCount": 11,
-        "managerCount": 256
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8140005010881",
-      "fetchedAt": "2026-08-03T01:30:58.440Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-0169181d8e040028",
@@ -3806,31 +1549,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8010005013006",
-      "officialName": "税理士法人チェスター",
-      "registeredAddress": "東京都中央区八重洲１丁目７－２０",
-      "prefecture": "東京都",
-      "city": "中央区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8010005013006"
-    },
-    "gbizInfo": {
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "認定経営革新等支援機関",
-            "date": "2018-02-28",
-            "governmentDepartment": "経済産業省"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005013006",
-      "fetchedAt": "2026-08-03T01:30:58.984Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-bead0cc15a164ac9",
@@ -3853,24 +1572,9 @@
       "person-7ff9e86e6274a511"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-1120005014569"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "1120005014569",
-      "officialName": "公益社団法人旭納税協会",
-      "registeredAddress": "大阪府大阪市旭区大宮１丁目２番２３号",
-      "prefecture": "大阪府",
-      "city": "大阪市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1120005014569"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1120005014569",
-      "fetchedAt": "2026-08-03T01:32:33.203Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-7f132a71d61c3d90",
@@ -3893,24 +1597,9 @@
       "person-a5401bd76cb2f162"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-3140005010804"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "3140005010804",
-      "officialName": "公益社団法人和田山納税協会",
-      "registeredAddress": "兵庫県朝来市和田山町和田山字村中２８４番地１",
-      "prefecture": "兵庫県",
-      "city": "朝来市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3140005010804"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3140005010804",
-      "fetchedAt": "2026-08-03T01:32:33.247Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-78329eee5945eb13",
@@ -3933,24 +1622,9 @@
       "person-e23c924e72027b1a"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-3120005014534"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "3120005014534",
-      "officialName": "公益社団法人枚方納税協会",
-      "registeredAddress": "大阪府枚方市大垣内町２丁目９番３号",
-      "prefecture": "大阪府",
-      "city": "枚方市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3120005014534"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3120005014534",
-      "fetchedAt": "2026-08-03T01:32:33.292Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-3fca79b7d66671aa",
@@ -3973,24 +1647,9 @@
       "person-13da649584e6f464"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-7120905003112"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "7120905003112",
-      "officialName": "公益社団法人吹田納税協会",
-      "registeredAddress": "大阪府吹田市朝日町３番３０１号",
-      "prefecture": "大阪府",
-      "city": "吹田市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7120905003112"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7120905003112",
-      "fetchedAt": "2026-08-03T01:32:33.340Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-fe5c27527a12c96f",
@@ -4013,24 +1672,9 @@
       "person-4adf7b6b40a3c29a"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-1130005012373"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "1130005012373",
-      "officialName": "公益社団法人下京納税協会",
-      "registeredAddress": "京都府京都市下京区間之町通五条下ル二丁目塗師屋町１２６番地",
-      "prefecture": "京都府",
-      "city": "京都市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1130005012373"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1130005012373",
-      "fetchedAt": "2026-08-03T01:32:33.391Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-f314dc6387542035",
@@ -4055,33 +1699,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8140005007960",
-      "officialName": "公益社団法人相生納税協会",
-      "registeredAddress": "兵庫県相生市那波本町６番１７号",
-      "prefecture": "兵庫県",
-      "city": "相生市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8140005007960"
-    },
-    "gbizInfo": {
-      "subsidies": {
-        "count": 1,
-        "totalAmount": 213000,
-        "examples": [
-          {
-            "title": "働き方改革推進支援助成金（テレワーク特例コース第２次）",
-            "amount": 213000,
-            "date": "2020-10-29",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8140005007960",
-      "fetchedAt": "2026-08-03T01:31:02.256Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-624e8db45952d725",
@@ -4106,33 +1724,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "7122005002713",
-      "officialName": "公益社団法人東大阪納税協会",
-      "registeredAddress": "大阪府東大阪市永和２丁目３番７号",
-      "prefecture": "大阪府",
-      "city": "東大阪市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7122005002713"
-    },
-    "gbizInfo": {
-      "subsidies": {
-        "count": 1,
-        "totalAmount": 210000,
-        "examples": [
-          {
-            "title": "働き方改革推進支援助成金（テレワーク特例コース第２次）",
-            "amount": 210000,
-            "date": "2020-10-26",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7122005002713",
-      "fetchedAt": "2026-08-03T01:31:02.770Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-9bfab7141e039e5c",
@@ -4180,24 +1772,9 @@
       "person-e71d3d0774126a36"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-2140005005375"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "2140005005375",
-      "officialName": "公益社団法人兵庫納税協会",
-      "registeredAddress": "兵庫県神戸市兵庫区水木通２丁目２番３号",
-      "prefecture": "兵庫県",
-      "city": "神戸市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2140005005375"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2140005005375",
-      "fetchedAt": "2026-08-03T01:32:33.722Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-56c743871d87e006",
@@ -4220,24 +1797,9 @@
       "person-5a24e3679daf2fe9"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-6160005007993"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6160005007993",
-      "officialName": "公益社団法人今津納税協会",
-      "registeredAddress": "滋賀県高島市新旭町旭１丁目１０番地１",
-      "prefecture": "滋賀県",
-      "city": "高島市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6160005007993"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6160005007993",
-      "fetchedAt": "2026-08-03T01:32:33.760Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-00a8ec66d925cefc",
@@ -4262,37 +1824,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "1011105001880",
-      "officialName": "辻・本郷税理士法人",
-      "registeredAddress": "東京都新宿区西新宿１丁目２５番１号新宿センタービル３１Ｆ",
-      "prefecture": "東京都",
-      "city": "新宿区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1011105001880"
-    },
-    "gbizInfo": {
-      "employeeNumber": 1988,
-      "establishmentDate": "2002-04-01",
-      "representativeName": "代表社員 桑木 小恵子",
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：A",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "femaleManagerCount": 127,
-        "managerCount": 487
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1011105001880",
-      "fetchedAt": "2026-08-03T01:31:04.711Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-51629f45fe171057",
@@ -4317,31 +1849,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6180005007133",
-      "officialName": "税理士法人小島税理士オフィス",
-      "registeredAddress": "愛知県名古屋市中区丸の内２丁目１８番１４号ＬＡＮＤＳＱＵＡＲＥＭＡＲＵＮＯＵＣＨＩ５階",
-      "prefecture": "愛知県",
-      "city": "名古屋市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6180005007133"
-    },
-    "gbizInfo": {
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "認定経営革新等支援機関",
-            "date": "2018-02-28",
-            "governmentDepartment": "経済産業省"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6180005007133",
-      "fetchedAt": "2026-08-03T01:31:05.266Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-5f83a4a60101ded5",
@@ -4364,24 +1872,9 @@
       "person-e7e10811195861a1"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-3120105004617"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "3120105004617",
-      "officialName": "公益社団法人堺納税協会",
-      "registeredAddress": "大阪府堺市堺区宿院町東４丁２番１０号",
-      "prefecture": "大阪府",
-      "city": "堺市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3120105004617"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3120105004617",
-      "fetchedAt": "2026-08-03T01:32:33.807Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-3ce293e3eb6f5b56",
@@ -4406,46 +1899,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6290005009845",
-      "officialName": "筑後信用金庫",
-      "registeredAddress": "福岡県久留米市東町３５番地の１０",
-      "prefecture": "福岡県",
-      "city": "久留米市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6290005009845"
-    },
-    "gbizInfo": {
-      "certifications": {
-        "count": 2,
-        "examples": [
-          {
-            "title": "認定経営革新等支援機関",
-            "governmentDepartment": "経済産業省／金融庁"
-          },
-          {
-            "title": "登録金融機関登録",
-            "date": "2007-09-30",
-            "governmentDepartment": "金融庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "筑後信用金庫",
-            "registrationNumber": "5783374",
-            "applicationDate": "2015-05-20",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6290005009845",
-      "fetchedAt": "2026-08-03T01:31:06.362Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-b709218686bcad4a",
@@ -4470,56 +1924,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6210005005273",
-      "officialName": "公立大学法人福井県立大学",
-      "registeredAddress": "福井県吉田郡永平寺町松岡兼定島第４号１番地１",
-      "prefecture": "福井県",
-      "city": "吉田郡永平寺町",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6210005005273"
-    },
-    "gbizInfo": {
-      "establishmentDate": "2007-04-01",
-      "representativeName": "理事長 窪田 裕行",
-      "subsidies": {
-        "count": 5,
-        "totalAmount": 457317,
-        "examples": [
-          {
-            "title": "教員講習開設事業費等補助金",
-            "amount": 100479,
-            "date": "2021-07-01",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "教員講習開設事業費等補助金",
-            "amount": 111390,
-            "date": "2020-07-01",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "教員講習開設事業費等補助金",
-            "amount": 97650,
-            "date": "2019-07-01",
-            "governmentDepartment": "文部科学省"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：B",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6210005005273",
-      "fetchedAt": "2026-08-03T01:31:06.878Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-1588636ec0d018b8",
@@ -4569,79 +1974,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6360005004186",
-      "officialName": "学校法人沖縄科学技術大学院大学学園",
-      "registeredAddress": "沖縄県国頭郡恩納村字谷茶１９１９番地１",
-      "prefecture": "沖縄県",
-      "city": "国頭郡恩納村",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6360005004186"
-    },
-    "gbizInfo": {
-      "establishmentDate": "2011-11-01",
-      "representativeName": "理事長 マルキデス カリン",
-      "subsidies": {
-        "count": 19,
-        "totalAmount": 63384048741,
-        "examples": [
-          {
-            "title": "地域中核・特色ある研究大学の連携による産学官連携・共同研究の施設整備事業",
-            "amount": 1980000000,
-            "date": "2023-05-31",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "令和４年度沖縄科学技術大学院大学学園補助金 追加交付に伴う負担増",
-            "amount": 111719000,
-            "date": "2023-02-20",
-            "governmentDepartment": "内閣府"
-          },
-          {
-            "title": "令和４年度沖縄科学技術大学院大学学園施設整備費補助金（インキュベータ施設整備）",
-            "amount": 1054372000,
-            "date": "2022-12-14",
-            "governmentDepartment": "内閣府"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：B",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 177,
-        "examples": [
-          {
-            "title": "ヒトの老化バイオマーカーとしての、唾液及び尿の代謝物の使用",
-            "registrationNumber": "7437767",
-            "applicationDate": "2019-04-23",
-            "patentType": "特許"
-          },
-          {
-            "title": "オリゴ糖Ｃ－グリコシド誘導体",
-            "registrationNumber": "7411233",
-            "applicationDate": "2019-03-22",
-            "patentType": "特許"
-          },
-          {
-            "title": "インタラクティブシミュレーションシステム、シミュレータ、インタラクティブシミュレーション方法、および、インタラクティブシミュレーションプログラム",
-            "registrationNumber": "7371848",
-            "applicationDate": "2019-03-07",
-            "patentType": "特許"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6360005004186",
-      "fetchedAt": "2026-08-03T01:31:07.470Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-ef880b69b1b05857",
@@ -4691,79 +2024,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8180005006604",
-      "officialName": "公立大学法人名古屋市立大学",
-      "registeredAddress": "愛知県名古屋市瑞穂区瑞穂町字川澄１番地１",
-      "prefecture": "愛知県",
-      "city": "名古屋市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8180005006604"
-    },
-    "gbizInfo": {
-      "subsidies": {
-        "count": 39,
-        "totalAmount": 1262858000,
-        "examples": [
-          {
-            "title": "地域の医療ニーズに対応した先進的な薬学教育に係る取組支援事業",
-            "amount": 8000000,
-            "date": "2023-08-14",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "Ｓｏｃｉｅｔｙ５．０に対応した高度技術人材育成事業",
-            "amount": 20503000,
-            "date": "2023-06-15",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "令和５年度慢性疼痛診療システム均てん化等事業費補助金",
-            "amount": 16231000,
-            "date": "2023-06-01",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "awards": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "令和２年度「障害者の生涯学習支援活動」に係る文部科学大臣表彰",
-            "date": "2020-12-08",
-            "governmentDepartment": "文部科学省",
-            "category": "功労者表彰"
-          }
-        ]
-      },
-      "patents": {
-        "count": 298,
-        "examples": [
-          {
-            "title": "Ｔ細胞性リンパ腫の指標の検出方法、及びその利用",
-            "registrationNumber": "7258224",
-            "applicationDate": "2021-01-07",
-            "patentType": "特許"
-          },
-          {
-            "title": "紫外線治療器",
-            "registrationNumber": "7125067",
-            "applicationDate": "2020-12-28",
-            "patentType": "特許"
-          },
-          {
-            "title": "紫外線治療器",
-            "registrationNumber": "7092314",
-            "applicationDate": "2020-12-14",
-            "patentType": "特許"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8180005006604",
-      "fetchedAt": "2026-08-03T01:31:08.078Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-1266b131bd4ed8aa",
@@ -4788,77 +2049,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8010005002339",
-      "officialName": "学校法人城西大学",
-      "registeredAddress": "東京都千代田区紀尾井町３番２６号",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8010005002339"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "学校法人城西大学 公式サイト",
-        "url": "http://www.josai.jp"
-      },
-      "businessSummary": "学校教育",
-      "employeeNumber": 1156,
-      "subsidies": {
-        "count": 8,
-        "totalAmount": 361728000,
-        "examples": [
-          {
-            "title": "令和４年度 成長分野における即戦力人材輩出に向けたリカレント教育推進事業",
-            "amount": 4771000,
-            "date": "2023-08-23",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "ウィズコロナ時代の新たな医療に対応できる医療人材養成事業",
-            "amount": 10000000,
-            "date": "2022-03-30",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "遠隔授業活用推進事業",
-            "amount": 9375000,
-            "date": "2021-03-01",
-            "governmentDepartment": "文部科学省"
-          }
-        ]
-      },
-      "patents": {
-        "count": 8,
-        "examples": [
-          {
-            "title": "ＪＩＵ",
-            "registrationNumber": "6768572",
-            "applicationDate": "2023-06-06",
-            "patentType": "商標"
-          },
-          {
-            "title": "§ＪＩＵ∞域学共創＼プロジェクト",
-            "registrationNumber": "6287990",
-            "applicationDate": "2019-08-22",
-            "patentType": "商標"
-          },
-          {
-            "title": "旅するオープンキャンパス",
-            "registrationNumber": "6273875",
-            "applicationDate": "2019-08-22",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "femaleWorkersProportion": 33
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005002339",
-      "fetchedAt": "2026-08-03T01:31:08.582Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-32034cb736d95fde",
@@ -4909,50 +2100,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "1011105011401",
-      "officialName": "国立健康危機管理研究機構",
-      "registeredAddress": "東京都新宿区戸山１丁目２１番１号",
-      "prefecture": "東京都",
-      "city": "新宿区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1011105011401"
-    },
-    "gbizInfo": {
-      "establishmentDate": "2025-04-01",
-      "representativeName": "理事長 國土 典宏",
-      "procurements": {
-        "count": 2,
-        "totalAmount": 24989005,
-        "examples": [
-          {
-            "title": "国立保健医療科学院 養成訓練 短期研修 新興再興感染症技術研修事業実施に関する業務一式",
-            "amount": 4089005,
-            "date": "2026-05-29",
-            "governmentDepartment": "厚生労働省"
-          },
-          {
-            "title": "予防・健康づくりや医療費適正化に資する医療の実態把握のためのＮＤＢを用いた分析等事業一式",
-            "amount": 20900000,
-            "date": "2026-04-15",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：D",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1011105011401",
-      "fetchedAt": "2026-08-03T01:31:09.110Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-3b7391ca417a3fec",
@@ -4977,80 +2125,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "3010005003201",
-      "officialName": "一般社団法人全国木材組合連合会",
-      "registeredAddress": "東京都千代田区一番町２５番地",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3010005003201"
-    },
-    "gbizInfo": {
-      "establishmentDate": "1956-07-24",
-      "representativeName": "代表理事 平方 宏",
-      "subsidies": {
-        "count": 30,
-        "totalAmount": 20024554000,
-        "examples": [
-          {
-            "title": "木材製品の消費拡大対策／ＪＡＳ構造材実証支援事業",
-            "amount": 800000000,
-            "date": "2024-02-09",
-            "governmentDepartment": "農林水産省"
-          },
-          {
-            "title": "花粉の少ない森林への転換促進緊急総合対策／スギ材の需要拡大対策／花粉症対策木材利用促進事業",
-            "amount": 300000000,
-            "date": "2024-02-09",
-            "governmentDepartment": "農林水産省"
-          },
-          {
-            "title": "森林・林業・木材産業グリーン成長総合対策／建築用木材供給・利用強化対策／森林を活かす都市の木造化等促進総合対策事業／大径化した原木等を活かした地域材による設計合理化等の技術開発・普及啓発",
-            "amount": 31500000,
-            "date": "2023-06-22",
-            "governmentDepartment": "林野庁"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 8,
-        "totalAmount": 109990454,
-        "examples": [
-          {
-            "title": "令和４年度木材産業労働安全活動促進事業のうち木材産業の安全コンサルタントによる安全診断・指導・調査分析事業（再公告）",
-            "amount": 9000000,
-            "date": "2022-07-29",
-            "governmentDepartment": "林野庁"
-          },
-          {
-            "title": "令和６年度木材産業における外国人材の受入れに関する委託事業",
-            "amount": 9054545,
-            "date": "2024-03-25",
-            "governmentDepartment": "林野庁"
-          },
-          {
-            "title": "令和７年度木材産業における外国人材の受入れに関する委託事業",
-            "amount": 40860909,
-            "date": "2025-03-14",
-            "governmentDepartment": "林野庁"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：C",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3010005003201",
-      "fetchedAt": "2026-08-03T01:31:09.628Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-e71d8d6350fbc74a",
@@ -5075,117 +2150,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "2010005017342",
-      "officialName": "一般社団法人日本森林技術協会",
-      "registeredAddress": "東京都千代田区六番町７番地",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2010005017342"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "一般社団法人日本森林技術協会 公式サイト",
-        "url": "http://www.jafta.or.jp"
-      },
-      "businessSummary": "林業、木材利用を含む森林に関する科学技術振興",
-      "employeeNumber": 137,
-      "establishmentDate": "1938-02-28",
-      "representativeName": "代表理事 小島 孝文",
-      "subsidies": {
-        "count": 13,
-        "totalAmount": 801427000,
-        "examples": [
-          {
-            "title": "花粉の少ない森林への転換促進緊急総合対策／スギ人工林の伐採・植替え等の加速化／花粉の少ない森林への転換促進事業",
-            "amount": 328000000,
-            "date": "2024-03-01",
-            "governmentDepartment": "農林水産省"
-          },
-          {
-            "title": "森林・林業・木材産業グリーン成長総合対策／木材需要の創出・輸出力強化対策／「地域内エコシステム」展開支援事業／「地域内エコシステム」モデル構築事業（実施計画策定支援）",
-            "amount": 33587000,
-            "date": "2023-05-10",
-            "governmentDepartment": "林野庁"
-          },
-          {
-            "title": "森林病害虫等被害対策技術調査／ナラ枯れ被害対策実態調査",
-            "amount": 10000000,
-            "date": "2023-05-10",
-            "governmentDepartment": "林野庁"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 285,
-        "totalAmount": 4029471110,
-        "examples": [
-          {
-            "title": "平成２７年度白山生態系維持回復事業に係る外来植物調査業務",
-            "amount": 4420000,
-            "date": "2015-06-10",
-            "governmentDepartment": "環境省"
-          },
-          {
-            "title": "平成２８年度大台ヶ原自然再生事業動物モニタリング業務",
-            "amount": 11100000,
-            "date": "2016-06-08",
-            "governmentDepartment": "環境省"
-          },
-          {
-            "title": "平成２９年度屋久島世界遺産科学委員会運営及び山岳部利用のあり方検討調査等業務",
-            "amount": 11025000,
-            "date": "2017-05-15",
-            "governmentDepartment": "環境省"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売：C 役務の提供等：C",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "awards": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "えるぼし－認定",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "patents": {
-        "count": 4,
-        "examples": [
-          {
-            "title": "もりったい",
-            "registrationNumber": "6092193",
-            "applicationDate": "2017-12-13",
-            "patentType": "商標"
-          },
-          {
-            "title": "ＪＡＦＴＡ",
-            "registrationNumber": "5795845",
-            "applicationDate": "2015-04-17",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "femaleWorkersProportion": 0,
-        "femaleOfficerCount": 0,
-        "officerCount": 5
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005017342",
-      "fetchedAt": "2026-08-03T01:31:10.224Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-786cf53338862538",
@@ -5210,91 +2175,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "1260005001776",
-      "officialName": "学校法人加計学園",
-      "registeredAddress": "岡山県岡山市北区理大町１番１号",
-      "prefecture": "岡山県",
-      "city": "岡山市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1260005001776"
-    },
-    "gbizInfo": {
-      "establishmentDate": "1961-09-26",
-      "representativeName": "理事長 加計 役",
-      "subsidies": {
-        "count": 37,
-        "totalAmount": 369319000,
-        "examples": [
-          {
-            "title": "防災機能等強化緊急特別推進事業",
-            "amount": 84286000,
-            "date": "2023-07-18",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "私立大学等経常費補助金（私立高等学校等経常費補助（広域の通信制教育の支援））",
-            "amount": 1911000,
-            "date": "2023-03-07",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "私立学校施設高度化推進事業費補助金",
-            "amount": 1127000,
-            "date": "2023-03-01",
-            "governmentDepartment": "文部科学省"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 1,
-        "totalAmount": 3999000,
-        "examples": [
-          {
-            "title": "ＮＥＤＯ先導研究プログラムエネルギー・環境新技術先導研究プログラム製造加熱プロセス熱流計測によるデジタルツイン高度化の研究開発",
-            "amount": 3999000,
-            "date": "2024-07-19",
-            "governmentDepartment": "国立研究開発法人新エネルギー・産業技術総合開発機構"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：A",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 188,
-        "examples": [
-          {
-            "title": "非ヒト動物、及びその使用",
-            "registrationNumber": "7458615",
-            "applicationDate": "2020-04-30",
-            "patentType": "特許"
-          },
-          {
-            "title": "内面被覆チューブ",
-            "registrationNumber": "7453637",
-            "applicationDate": "2020-03-03",
-            "patentType": "特許"
-          },
-          {
-            "title": "非接触給電システム",
-            "registrationNumber": "7378084",
-            "applicationDate": "2019-12-25",
-            "patentType": "特許"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1260005001776",
-      "fetchedAt": "2026-08-03T01:31:10.764Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-0797ac4c7725544f",
@@ -5321,57 +2202,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8010005004211",
-      "officialName": "一般財団法人日本木材総合情報センター",
-      "registeredAddress": "東京都文京区後楽１丁目７番１２号林友ビル内",
-      "prefecture": "東京都",
-      "city": "文京区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8010005004211"
-    },
-    "gbizInfo": {
-      "subsidies": {
-        "count": 5,
-        "totalAmount": 424228000,
-        "examples": [
-          {
-            "title": "森林・林業・木材産業グリーン成長総合対策／建築用木材供給・利用強化対策／建築用木材供給強化促進対策事業／マーケットインによる安定供給体制強化促進",
-            "amount": 50000000,
-            "date": "2022-05-12",
-            "governmentDepartment": "農林水産省"
-          },
-          {
-            "title": "林業成長産業化総合対策／木材産業・木造建築活性化対策／生産流通構造改革促進事業／低層建築物（住宅等）における効率的なサプライチェーンの構築支援",
-            "amount": 152583000,
-            "date": "2020-04-30",
-            "governmentDepartment": "農林水産省"
-          },
-          {
-            "title": "林業成長産業化総合対策／木材需要の創出・輸出力強化対策／高付加価値木材製品輸出促進事業／国内外における木造技術講習事業",
-            "amount": 27325000,
-            "date": "2020-04-27",
-            "governmentDepartment": "農林水産省"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 1,
-        "totalAmount": 22000000,
-        "examples": [
-          {
-            "title": "令和４年度建築用木材供給強化促進事業のうち需要変動に対応できる体制強化促進",
-            "amount": 22000000,
-            "date": "2022-04-27",
-            "governmentDepartment": "林野庁"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005004211",
-      "fetchedAt": "2026-08-03T01:31:11.245Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-e9a10f20167a62e6",
@@ -5397,45 +2228,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9010005016255",
-      "officialName": "一般社団法人日本木材輸出振興協会",
-      "registeredAddress": "東京都千代田区六番町７番地",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9010005016255"
-    },
-    "gbizInfo": {
-      "subsidies": {
-        "count": 17,
-        "totalAmount": 1536863700,
-        "examples": [
-          {
-            "title": "農林水産物・食品輸出促進緊急対策事業／マーケットイン輸出ビジネス拡大緊急支援事業／品目団体輸出力強化緊急支援事業",
-            "amount": 376705700,
-            "date": "2024-03-11",
-            "governmentDepartment": "農林水産省"
-          },
-          {
-            "title": "木材製品等の輸出支援対策事業／輸出先国のニーズに合わせた木材製品の開発支援事業",
-            "amount": 50000000,
-            "date": "2024-02-09",
-            "governmentDepartment": "農林水産省"
-          },
-          {
-            "title": "農林水産物・食品輸出促進対策事業／マーケットイン輸出ビジネス拡大支援事業／品目団体輸出力強化支援事業",
-            "amount": 176627000,
-            "date": "2023-05-23",
-            "governmentDepartment": "農林水産省"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005016255",
-      "fetchedAt": "2026-08-03T01:31:11.766Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-f839081c87d5561e",
@@ -5460,67 +2253,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5010605002253",
-      "officialName": "公益財団法人日本住宅・木材技術センター",
-      "registeredAddress": "東京都江東区新砂３丁目４番２号",
-      "prefecture": "東京都",
-      "city": "江東区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5010605002253"
-    },
-    "gbizInfo": {
-      "establishmentDate": "1977-11-24",
-      "representativeName": "代表理事 宮澤 俊輔",
-      "subsidies": {
-        "count": 17,
-        "totalAmount": 327030000,
-        "examples": [
-          {
-            "title": "森林・林業・木材産業グリーン成長総合対策／建築用木材供給・利用強化対策／ＣＬＴ・ＬＶＬ等の建築物への利用環境整備事業／ＣＬＴ・ＬＶＬ等を活用した建築物の低コスト化・検証等（中規模ビル）",
-            "amount": 17519000,
-            "date": "2023-05-09",
-            "governmentDepartment": "林野庁"
-          },
-          {
-            "title": "森林・林業・木材産業グリーン成長総合対策／建築用木材供給・利用強化対策／ＣＬＴ・ＬＶＬ等の建築物への利用環境整備事業／ＣＬＴ・ＬＶＬ等を活用した建築物の低コスト化・検証等（構造計算プログラム）",
-            "amount": 30000000,
-            "date": "2023-04-26",
-            "governmentDepartment": "林野庁"
-          },
-          {
-            "title": "森林・林業・木材産業グリーン成長総合対策／建築用木材供給・利用強化対策／ＣＬＴ・ＬＶＬ等の建築物への利用環境整備事業／ＣＬＴ建築物等の設計者等育成（構造設計指針案）",
-            "amount": 23425000,
-            "date": "2023-04-26",
-            "governmentDepartment": "林野庁"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：C",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 2,
-        "examples": [
-          {
-            "title": "環境配慮型建築材料",
-            "registrationNumber": "6803269",
-            "applicationDate": "2023-06-20",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010605002253",
-      "fetchedAt": "2026-08-03T01:31:12.297Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-c1e234631f32ddb7",
@@ -5543,24 +2276,9 @@
       "person-f1e17e96764e3afa"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-6010405002840"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6010405002840",
-      "officialName": "弁理士法人第一国際特許事務所",
-      "registeredAddress": "東京都千代田区神田須田町２丁目８番地２",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6010405002840"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010405002840",
-      "fetchedAt": "2026-08-03T01:32:34.791Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-67961c0304729668",
@@ -5685,103 +2403,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "4120905002554",
-      "officialName": "国立大学法人大阪大学",
-      "registeredAddress": "大阪府吹田市山田丘１番１号",
-      "prefecture": "大阪府",
-      "city": "吹田市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4120905002554"
-    },
-    "gbizInfo": {
-      "establishmentDate": "2004-04-01",
-      "representativeName": "学長 熊ノ郷 淳",
-      "subsidies": {
-        "count": 242,
-        "totalAmount": 18034123383,
-        "examples": [
-          {
-            "title": "令和６年度原子力人材育成等推進事業費補助金（原子力規制人材育成事業）",
-            "amount": 21977473,
-            "date": "2024-04-01",
-            "governmentDepartment": "原子力規制委員会"
-          },
-          {
-            "title": "令和６年度原子力人材育成等推進事業費補助金（原子力規制人材育成事業）",
-            "amount": 10106506,
-            "date": "2024-04-01",
-            "governmentDepartment": "原子力規制委員会"
-          },
-          {
-            "title": "共同利用・共同研究システム形成事業～学際領域展開ハブ形成プログラム～（ＲＩコラボラティブ学際領域展開プラットフォーム）",
-            "amount": 45000000,
-            "date": "2023-09-29",
-            "governmentDepartment": "文部科学省"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 80,
-        "totalAmount": 4451131900,
-        "examples": [
-          {
-            "title": "カーボンリサイクル実現を加速するバイオ由来製品生産技術の開発産業用物質生産システム実証微生物によるグリチルレチン酸および類縁体の生産システム実証",
-            "amount": 9098000,
-            "date": "2021-08-27",
-            "governmentDepartment": "国立研究開発法人新エネルギー・産業技術総合開発機構"
-          },
-          {
-            "title": "カーボンリサイクル・次世代火力発電等技術開発クリーンコール技術開発アンモニア混焼火力発電技術開発・実証事業要素研究／火力発電所でのＣＯ２フリ－アンモニア燃料利用拡大に向けた研究開発",
-            "amount": 52000000,
-            "date": "2021-06-28",
-            "governmentDepartment": "国立研究開発法人新エネルギー・産業技術総合開発機構"
-          },
-          {
-            "title": "戦略的基盤技術高度化支援事業（プロジェクト委託型） ＩｏＴ、ＡＩ等を活用した「超スマート社会」の実現のための技術 マイクロ波を利用した高純度金属ナノワイヤ製造プロセスの開発",
-            "amount": 7365600,
-            "date": "2017-05-30",
-            "governmentDepartment": "国立研究開発法人新エネルギー・産業技術総合開発機構"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：A",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 6353,
-        "examples": [
-          {
-            "title": "シイノトモシビタケ由来の発光関連遺伝子",
-            "registrationNumber": "7482563",
-            "applicationDate": "2023-06-21",
-            "patentType": "特許"
-          },
-          {
-            "title": "クルクミノイド含有口腔用組成物及び抗菌方法",
-            "registrationNumber": "7445908",
-            "applicationDate": "2023-05-09",
-            "patentType": "特許"
-          },
-          {
-            "title": "高分子化合物、有機半導体材料、および有機電子デバイス",
-            "registrationNumber": "7291360",
-            "applicationDate": "2022-12-09",
-            "patentType": "特許"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4120905002554",
-      "fetchedAt": "2026-08-03T01:31:14.076Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-a57bf773653fc7f8",
@@ -5808,126 +2430,7 @@
       "cabinet-office-annual-2024",
       "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5010005007398",
-      "officialName": "国立大学法人東京大学",
-      "registeredAddress": "東京都文京区本郷７丁目３番１号",
-      "prefecture": "東京都",
-      "city": "文京区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5010005007398"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "国立大学法人東京大学 公式サイト",
-        "url": "https://www.u-tokyo.ac.jp/kyodo-sankaku/ja/index.html"
-      },
-      "employeeNumber": 17423,
-      "establishmentDate": "2004-04-01",
-      "representativeName": "学長 藤井 輝夫",
-      "subsidies": {
-        "count": 357,
-        "totalAmount": 55432623254,
-        "examples": [
-          {
-            "title": "外交・安全保障調査研究事業費補助金",
-            "amount": 9978262,
-            "governmentDepartment": "外務省"
-          },
-          {
-            "title": "令和６年度原子力人材育成等推進事業費補助金（原子力規制人材育成事業）",
-            "amount": 15781892,
-            "date": "2024-04-01",
-            "governmentDepartment": "原子力規制委員会"
-          },
-          {
-            "title": "共同利用・共同研究システム形成事業～学際領域展開ハブ形成プログラム～（マルチスケール量子－古典生命インターフェース研究コンソーシアム）",
-            "amount": 47000000,
-            "date": "2023-09-29",
-            "governmentDepartment": "文部科学省"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 223,
-        "totalAmount": 18730750783,
-        "examples": [
-          {
-            "title": "高効率・高速処理を可能とするＡＩチップ・次世代コンピューティングの技術開発研究開発課題発掘のための先導調査研究ＲＩＳＣーＶシステム設計プラットフォームの研究開発",
-            "amount": 9908000,
-            "date": "2021-08-27",
-            "governmentDepartment": "国立研究開発法人新エネルギー・産業技術総合開発機構"
-          },
-          {
-            "title": "戦略的イノベーション創造プログラム（ＳＩＰ）第２期／自動運転（システムとサービスの拡張）自動運転による社会・経済に与えるインパクト評価と普及促進策に関する研究",
-            "amount": 24837000,
-            "date": "2021-08-25",
-            "governmentDepartment": "国立研究開発法人新エネルギー・産業技術総合開発機構"
-          },
-          {
-            "title": "ＮＥＤＯ先導研究プログラムエネルギー・環境新技術先導研究プログラム多様な走行環境に対応した自動運転車両及び安全性評価の研究開発",
-            "date": "2021-07-09",
-            "governmentDepartment": "国立研究開発法人新エネルギー・産業技術総合開発機構"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：A 物品の買受け：A",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "awards": {
-        "count": 2,
-        "examples": [
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２００９"
-          },
-          {
-            "title": "次世代育成支援対策推進法に基づく「くるみん」認定",
-            "governmentDepartment": "厚生労働省",
-            "category": "２０１６"
-          }
-        ]
-      },
-      "patents": {
-        "count": 6835,
-        "examples": [
-          {
-            "title": "血漿交換システム、及び血漿交換システムの制御方法",
-            "registrationNumber": "7458605",
-            "applicationDate": "2023-07-07",
-            "patentType": "特許"
-          },
-          {
-            "title": "カーボンナノチューブ成形体、電気化学的水分解用電極およびそれらの製造方法、電気化学的水分解装置",
-            "registrationNumber": "7377503",
-            "applicationDate": "2023-06-05",
-            "patentType": "特許"
-          },
-          {
-            "title": "評価支援装置、評価支援方法及びプログラム",
-            "registrationNumber": "7403782",
-            "applicationDate": "2023-05-19",
-            "patentType": "特許"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 14.2,
-        "averageContinuousServiceYearsFemale": 11.6,
-        "femaleWorkersProportion": 26.7
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010005007398",
-      "fetchedAt": "2026-08-03T01:31:15.180Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-4c1ca410f9da3957",
@@ -5950,24 +2453,9 @@
       "person-acb29602c73d7e5b"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-8010005031404"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8010005031404",
-      "officialName": "弁理士法人山王内外特許事務所",
-      "registeredAddress": "東京都千代田区永田町２丁目１２番４号赤坂山王センタービル５階",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8010005031404"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005031404",
-      "fetchedAt": "2026-08-03T01:32:35.903Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-d3dc8445587ebb41",
@@ -6017,80 +2505,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6290005001257",
-      "officialName": "学校法人中村産業学園",
-      "registeredAddress": "福岡県福岡市東区松香台２丁目３番１号",
-      "prefecture": "福岡県",
-      "city": "福岡市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6290005001257"
-    },
-    "gbizInfo": {
-      "subsidies": {
-        "count": 12,
-        "totalAmount": 215021997,
-        "examples": [
-          {
-            "title": "令和４年度 成長分野における即戦力人材輩出に向けたリカレント教育推進事業",
-            "amount": 8054997,
-            "date": "2023-08-10",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "研究設備",
-            "amount": 45760000,
-            "date": "2023-01-16",
-            "governmentDepartment": "文部科学省"
-          },
-          {
-            "title": "バリアフリー化",
-            "amount": 1643000,
-            "date": "2022-10-17",
-            "governmentDepartment": "文部科学省"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 1,
-        "totalAmount": 129038000,
-        "examples": [
-          {
-            "title": "次世代低ＧＷＰ冷媒の実用化に向けた高効率冷凍空調技術の開発家庭用空調等に適した低ＧＷＰ混合冷媒の開発及び評価低ＧＷＰ混合冷媒の熱物性・安全性・環境影響評価、対応機器の要素技術開発及びシステムの性能評価／低ＧＷＰ混合冷媒の特性評価",
-            "amount": 129038000,
-            "date": "2023-06-09",
-            "governmentDepartment": "国立研究開発法人新エネルギー・産業技術総合開発機構"
-          }
-        ]
-      },
-      "patents": {
-        "count": 35,
-        "examples": [
-          {
-            "title": "原反搬送装置",
-            "registrationNumber": "7448211",
-            "applicationDate": "2020-10-15",
-            "patentType": "特許"
-          },
-          {
-            "title": "鋼構造物のモデル変換装置および鋼構造物のモデル変換プログラム",
-            "registrationNumber": "7016086",
-            "applicationDate": "2020-02-18",
-            "patentType": "特許"
-          },
-          {
-            "title": "蛍光色素",
-            "registrationNumber": "7479660",
-            "applicationDate": "2019-09-04",
-            "patentType": "特許"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6290005001257",
-      "fetchedAt": "2026-08-03T01:31:16.290Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-1e27e65a50a8be26",
@@ -6115,44 +2530,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5010405010514",
-      "officialName": "一般財団法人日本船舶技術研究協会",
-      "registeredAddress": "東京都港区赤坂２丁目１０番９号",
-      "prefecture": "東京都",
-      "city": "港区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5010405010514"
-    },
-    "gbizInfo": {
-      "establishmentDate": "1978-12-07",
-      "representativeName": "代表理事 田中 誠一",
-      "subsidies": {
-        "count": 1,
-        "totalAmount": 9400000000,
-        "examples": [
-          {
-            "title": "ゼロエミッション船等の建造促進事業",
-            "amount": 9400000000,
-            "date": "2024-05-31",
-            "governmentDepartment": "環境省"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売： 役務の提供等：C",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010405010514",
-      "fetchedAt": "2026-08-03T01:31:16.841Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-9c275b909e54df61",
@@ -6175,24 +2553,9 @@
       "person-257afb1d4c462565"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-4240002005853"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "4240002005853",
-      "officialName": "広洋海運有限会社",
-      "registeredAddress": "広島県広島市南区宇品海岸２丁目１５番１７号",
-      "prefecture": "広島県",
-      "city": "広島市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4240002005853"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4240002005853",
-      "fetchedAt": "2026-08-03T01:32:36.339Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-cfd7f487ee8992e1",
@@ -6217,26 +2580,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "1010701022043",
-      "officialName": "コスモエコパワー株式会社",
-      "registeredAddress": "東京都品川区大崎１丁目６番１号ＴＯＣ大崎ビルディング",
-      "prefecture": "東京都",
-      "city": "品川区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1010701022043"
-    },
-    "gbizInfo": {
-      "businessSummary": "風力発電業",
-      "employeeNumber": 135,
-      "workplaceInfo": {
-        "femaleWorkersProportion": 14
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010701022043",
-      "fetchedAt": "2026-08-03T01:31:17.924Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-1f52916c5d7de408",
@@ -6286,55 +2630,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "2010005017549",
-      "officialName": "特定非営利活動法人ピースウィンズ・ジャパン",
-      "registeredAddress": "広島県神石郡神石高原町近田１１６１－２",
-      "prefecture": "広島県",
-      "city": "神石郡神石高原町",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2010005017549"
-    },
-    "gbizInfo": {
-      "establishmentDate": "1999-10-18",
-      "representativeName": "理事 大西 健丞",
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売：C 役務の提供等：C 物品の買受け：B",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 9,
-        "examples": [
-          {
-            "title": "ピースクラフツ",
-            "registrationNumber": "6018739",
-            "applicationDate": "2017-06-13",
-            "patentType": "商標"
-          },
-          {
-            "title": "ピースワンコ・ジャパン",
-            "registrationNumber": "5969696",
-            "applicationDate": "2016-07-19",
-            "patentType": "商標"
-          },
-          {
-            "title": "ピースワイルド",
-            "registrationNumber": "5917199",
-            "applicationDate": "2016-07-06",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005017549",
-      "fetchedAt": "2026-08-03T01:31:18.440Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-8b694954b805ee30",
@@ -6359,33 +2655,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9010005004144",
-      "officialName": "公益財団法人日本船員雇用促進センター",
-      "registeredAddress": "東京都中央区湊１丁目６番１１号",
-      "prefecture": "東京都",
-      "city": "中央区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9010005004144"
-    },
-    "gbizInfo": {
-      "subsidies": {
-        "count": 1,
-        "totalAmount": 93439000,
-        "examples": [
-          {
-            "title": "令和３年度船員雇用促進対策事業費補助金",
-            "amount": 93439000,
-            "date": "2021-08-10",
-            "governmentDepartment": "厚生労働省"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005004144",
-      "fetchedAt": "2026-08-03T01:31:18.976Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-891463cf86adef3b",
@@ -6410,62 +2680,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9050005005205",
-      "officialName": "国立研究開発法人建築研究所",
-      "registeredAddress": "茨城県つくば市立原１番地３",
-      "prefecture": "茨城県",
-      "city": "つくば市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9050005005205"
-    },
-    "gbizInfo": {
-      "subsidies": {
-        "count": 2,
-        "totalAmount": 17450000,
-        "examples": [
-          {
-            "title": "マンションストック長寿命化等モデル事業",
-            "amount": 14950000,
-            "date": "2022-04-13",
-            "governmentDepartment": "国土交通省"
-          },
-          {
-            "title": "令和２年度住宅市街地総合整備促進事業費補金",
-            "amount": 2500000,
-            "date": "2020-04-23",
-            "governmentDepartment": "国土交通省"
-          }
-        ]
-      },
-      "patents": {
-        "count": 49,
-        "examples": [
-          {
-            "title": "ドローン及びそれを用いた壁面点検システム",
-            "registrationNumber": "7007678",
-            "applicationDate": "2021-08-13",
-            "patentType": "特許"
-          },
-          {
-            "title": "ドローン及びそれを用いた壁面作業システム",
-            "registrationNumber": "7007679",
-            "applicationDate": "2021-08-13",
-            "patentType": "特許"
-          },
-          {
-            "title": "外壁点検システム",
-            "registrationNumber": "6877723",
-            "applicationDate": "2020-11-06",
-            "patentType": "特許"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9050005005205",
-      "fetchedAt": "2026-08-03T01:31:19.495Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-cd59be9437edd994",
@@ -6488,24 +2703,9 @@
       "person-88decd449b26b1ea"
     ],
     "sources": [
-      "cabinet-office-annual-2024",
-      "corporation-info-4010005016680"
+      "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "4010005016680",
-      "officialName": "一般財団法人日本舶用品検定協会",
-      "registeredAddress": "東京都千代田区紀尾井町３番３２号",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4010005016680"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005016680",
-      "fetchedAt": "2026-08-03T01:32:36.696Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-6e2ce329a271f2e0",
@@ -6530,44 +2730,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6120001184147",
-      "officialName": "スカイワークスフィルターソリューションズジャパン株式会社",
-      "registeredAddress": "大阪府大阪市住之江区平林北１丁目２－１５０",
-      "prefecture": "大阪府",
-      "city": "大阪市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6120001184147"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "スカイワークスフィルターソリューションズジャパン株式会社 公式サイト",
-        "url": "https://www.skyworksinc.com/ja-JP/Articles/SFSJ-Company-Introduction"
-      },
-      "businessSummary": "高性能フィルターの製造・開発",
-      "employeeNumber": 606,
-      "subsidies": {
-        "count": 1,
-        "totalAmount": 657657210,
-        "examples": [
-          {
-            "title": "令和３年度産業技術実用化開発事業費補助金（サプライチェーン上不可欠性の高い半導体の生産設備の脱炭素化・刷新事業費補助金）二次公募（スカイワークス）",
-            "amount": 657657210,
-            "date": "2022-06-16",
-            "governmentDepartment": "経済産業省"
-          }
-        ]
-      },
-      "workplaceInfo": {
-        "averageContinuousServiceYearsMale": 9.4,
-        "averageContinuousServiceYearsFemale": 7.8,
-        "femaleWorkersProportion": 17.5
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6120001184147",
-      "fetchedAt": "2026-08-03T01:31:20.561Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-4efc1bbc3ae2410e",
@@ -6592,80 +2755,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "1010405009691",
-      "officialName": "一般財団法人環境イノベーション情報機構",
-      "registeredAddress": "東京都千代田区神田東松下町３８番地",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1010405009691"
-    },
-    "gbizInfo": {
-      "establishmentDate": "1989-05-24",
-      "representativeName": "代表理事 小林 正明",
-      "subsidies": {
-        "count": 32,
-        "totalAmount": 106878550044,
-        "examples": [
-          {
-            "title": "地域レジリエンス・脱炭素化を同時実現する公共施設への自立・分散型エネルギー設備等導入推進事業",
-            "amount": 2000000000,
-            "date": "2024-04-01",
-            "governmentDepartment": "環境省"
-          },
-          {
-            "title": "地域レジリエンス・脱炭素化を同時実現する公共施設への自立・分散型エネルギー設備等導入推進事業",
-            "amount": 1999686000,
-            "date": "2023-04-03",
-            "governmentDepartment": "環境省"
-          },
-          {
-            "title": "ナッジ手法の社会的実装促進事業",
-            "amount": 66000000,
-            "date": "2022-04-01",
-            "governmentDepartment": "環境省"
-          }
-        ]
-      },
-      "procurements": {
-        "count": 5,
-        "totalAmount": 80837180,
-        "examples": [
-          {
-            "title": "平成２８年度平成２８年度「環境教育推進室ホームページ」等運用・更新等業務［総合評価落札方式］",
-            "amount": 11000000,
-            "date": "2016-03-31",
-            "governmentDepartment": "環境省"
-          },
-          {
-            "title": "令和５年度地域脱炭素移行・再エネ推進交付金等に係る執行事務支援等委託業務【総合評価落札方式】",
-            "amount": 8930000,
-            "date": "2023-05-16",
-            "governmentDepartment": "環境省"
-          },
-          {
-            "title": "令和７年度地域脱炭素推進交付金等に係る執行事務支援等委託業務【総合評価落札方式】",
-            "amount": 19480000,
-            "date": "2025-03-14",
-            "governmentDepartment": "環境省"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売：A 役務の提供等：A",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010405009691",
-      "fetchedAt": "2026-08-03T01:31:21.071Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-ed9bb6fc87f2cfe5",
@@ -6715,67 +2805,7 @@
     "sources": [
       "cabinet-office-annual-2024"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "1010005004597",
-      "officialName": "一般財団法人国民公園協会",
-      "registeredAddress": "東京都千代田区皇居外苑１番１号",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1010005004597"
-    },
-    "gbizInfo": {
-      "establishmentDate": "1982-08-01",
-      "representativeName": "代表理事 杉山 博孝",
-      "procurements": {
-        "count": 3,
-        "totalAmount": 1137457000,
-        "examples": [
-          {
-            "title": "環境省皇居外苑の維持管理業務［総合評価落札方式］",
-            "amount": 608727000,
-            "date": "2025-05-12",
-            "governmentDepartment": "環境省"
-          },
-          {
-            "title": "環境省京都御苑の維持管理業務",
-            "amount": 255730000,
-            "date": "2023-02-07",
-            "governmentDepartment": "環境省"
-          },
-          {
-            "title": "環境省京都御苑の維持管理業務",
-            "amount": 273000000,
-            "date": "2026-01-20",
-            "governmentDepartment": "環境省"
-          }
-        ]
-      },
-      "certifications": {
-        "count": 1,
-        "examples": [
-          {
-            "title": "物品の製造： 物品の販売：C 役務の提供等：C",
-            "governmentDepartment": "デジタル庁"
-          }
-        ]
-      },
-      "patents": {
-        "count": 2,
-        "examples": [
-          {
-            "title": "皇薫",
-            "registrationNumber": "6278980",
-            "applicationDate": "2019-07-17",
-            "patentType": "商標"
-          }
-        ]
-      },
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010005004597",
-      "fetchedAt": "2026-08-03T01:31:21.623Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-877203d3508dc695",
@@ -6823,24 +2853,9 @@
       "person-ff4932e826c179e6"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-8040005013606"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8040005013606",
-      "officialName": "学校法人廣池学園",
-      "registeredAddress": "千葉県柏市光ケ丘２丁目１番１号",
-      "prefecture": "千葉県",
-      "city": "柏市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8040005013606"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8040005013606",
-      "fetchedAt": "2026-08-03T01:32:37.518Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-9f6d08b38820e0a0",
@@ -6863,26 +2878,9 @@
       "person-976d95e664e0913e"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-5130005004301"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5130005004301",
-      "officialName": "学校法人京都産業大学",
-      "registeredAddress": "京都府京都市北区上賀茂本山",
-      "prefecture": "京都府",
-      "city": "京都市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5130005004301"
-    },
-    "gbizInfo": {
-      "establishmentDate": "1965-02-13",
-      "representativeName": "理事長 山田 啓二",
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5130005004301",
-      "fetchedAt": "2026-08-03T01:32:37.853Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-c0c04a1a1c5aac07",
@@ -6955,30 +2953,9 @@
       "person-0b79eaacb7785fca"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-4180005011830"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "4180005011830",
-      "officialName": "学校法人日本福祉大学",
-      "registeredAddress": "愛知県知多郡美浜町大字奥田字会下前３５番６",
-      "prefecture": "愛知県",
-      "city": "知多郡美浜町",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4180005011830"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "学校法人日本福祉大学 公式サイト",
-        "url": "http://www.n-fukushi.ac.jp/"
-      },
-      "businessSummary": "日本福祉大学大学院 日本福祉大学 日本福祉大学付属高等学校 日本福祉大学中央福祉専門学校 日本福祉大学付属クリニックさくら",
-      "employeeNumber": 456,
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4180005011830",
-      "fetchedAt": "2026-08-03T01:32:38.836Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-0de7c6f8b13ced91",
@@ -7001,24 +2978,9 @@
       "person-adcc75994f20a4bc"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-9011005009959"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9011005009959",
-      "officialName": "一般社団法人日本更生保護女性連盟",
-      "registeredAddress": "東京都渋谷区千駄ヶ谷５丁目１０番９号",
-      "prefecture": "東京都",
-      "city": "渋谷区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9011005009959"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9011005009959",
-      "fetchedAt": "2026-08-03T01:32:39.238Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-1ffc5d01f15475f8",
@@ -7066,24 +3028,9 @@
       "person-f804ff4466358e56"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-6320005002689"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6320005002689",
-      "officialName": "学校法人別府大学",
-      "registeredAddress": "大分県別府市大字北石垣８２番地",
-      "prefecture": "大分県",
-      "city": "別府市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6320005002689"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6320005002689",
-      "fetchedAt": "2026-08-03T01:32:39.919Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-35bfb3eeff7140df",
@@ -7106,24 +3053,9 @@
       "person-a0d961d9ba8087ab"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-2010005030989"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "2010005030989",
-      "officialName": "弁護士法人三浦法律事務所",
-      "registeredAddress": "東京都千代田区大手町１丁目５番１号大手町ファーストスクエアイーストタワー３階",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2010005030989"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005030989",
-      "fetchedAt": "2026-08-03T01:32:40.313Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-af2d1e7e05a20dba",
@@ -7146,28 +3078,9 @@
       "person-8e1ee8141dca0216"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-6040005003798"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "6040005003798",
-      "officialName": "独立行政法人地域医療機能推進機構",
-      "registeredAddress": "東京都港区高輪３丁目２２番１２号",
-      "prefecture": "東京都",
-      "city": "港区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6040005003798"
-    },
-    "gbizInfo": {
-      "businessSummary": "病院",
-      "employeeNumber": 230,
-      "establishmentDate": "2005-10-01",
-      "representativeName": "理事長 山本 修一",
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6040005003798",
-      "fetchedAt": "2026-08-03T01:32:40.659Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-c025bf19956ce7e6",
@@ -7190,26 +3103,9 @@
       "person-23aeb5340c368dba"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-7012405000088"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "7012405000088",
-      "officialName": "社会福祉法人安立園",
-      "registeredAddress": "東京都府中市晴見町１丁目１３番地５",
-      "prefecture": "東京都",
-      "city": "府中市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7012405000088"
-    },
-    "gbizInfo": {
-      "businessSummary": "（1）第１種社会福祉事業 （イ）養護老人ホーム （ロ）特別養護老人ホーム (２) 第２種社会福祉事業 (イ)保育所 (ロ)一時預かり事業 (ハ)老人デイサービスセンター (ニ)老人居宅介護等事業 (ホ)老人短期入所事業",
-      "employeeNumber": 242,
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7012405000088",
-      "fetchedAt": "2026-08-03T01:32:41.001Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-185b3a35ad2eb790",
@@ -7232,26 +3128,9 @@
       "person-56ac010dc7f3b284"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-7120005008400"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "7120005008400",
-      "officialName": "弁護士法人御堂筋法律事務所",
-      "registeredAddress": "大阪府大阪市中央区南船場４丁目３番１１号大阪豊田ビル",
-      "prefecture": "大阪府",
-      "city": "大阪市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7120005008400"
-    },
-    "gbizInfo": {
-      "establishmentDate": "2002-12-18",
-      "representativeName": "代表社員 植村 公彦",
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7120005008400",
-      "fetchedAt": "2026-08-03T01:32:41.348Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-9a5f13b06911e809",
@@ -7299,24 +3178,9 @@
       "person-39d1a749245cd6bb"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-8310005001062"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8310005001062",
-      "officialName": "学校法人玉木学園",
-      "registeredAddress": "長崎県長崎市愛宕１丁目３７番１号",
-      "prefecture": "長崎県",
-      "city": "長崎市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8310005001062"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8310005001062",
-      "fetchedAt": "2026-08-03T01:32:41.970Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-eb156c9e81e60f92",
@@ -7339,30 +3203,9 @@
       "person-979c821616cd60a0"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-4030005012141"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "4030005012141",
-      "officialName": "青木信用金庫",
-      "registeredAddress": "埼玉県川口市中青木２丁目１３番２１号",
-      "prefecture": "埼玉県",
-      "city": "川口市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4030005012141"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "青木信用金庫 公式サイト",
-        "url": "http://www.shinkin.co.jp/aoshin/"
-      },
-      "businessSummary": "信用金庫法に基づく金融業",
-      "employeeNumber": 608,
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4030005012141",
-      "fetchedAt": "2026-08-03T01:32:42.302Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-7e0ddafb39edd01e",
@@ -7385,25 +3228,9 @@
       "person-9f33be49c8959f2e"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-2012705000073"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "2012705000073",
-      "officialName": "学校法人津田塾大学",
-      "registeredAddress": "東京都小平市津田町２丁目１番１号",
-      "prefecture": "東京都",
-      "city": "小平市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2012705000073"
-    },
-    "gbizInfo": {
-      "employeeNumber": 700,
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2012705000073",
-      "fetchedAt": "2026-08-03T01:32:42.658Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-d911857977692e63",
@@ -7451,28 +3278,9 @@
       "person-676dc9b61f1ace5b"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-8120005004778"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "8120005004778",
-      "officialName": "学校法人常翔学園",
-      "registeredAddress": "大阪府大阪市旭区大宮５丁目１６番１号",
-      "prefecture": "大阪府",
-      "city": "大阪市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8120005004778"
-    },
-    "gbizInfo": {
-      "businessSummary": "教育、研究",
-      "employeeNumber": 1760,
-      "establishmentDate": "1926-04-06",
-      "representativeName": "理事長 西村 泰志",
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8120005004778",
-      "fetchedAt": "2026-08-03T01:32:43.288Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-690523a33e388965",
@@ -7495,27 +3303,9 @@
       "person-287ba3b5dd4b3d82"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-5010905000774"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5010905000774",
-      "officialName": "学校法人日本体育大学",
-      "registeredAddress": "東京都世田谷区深沢７丁目１番１号",
-      "prefecture": "東京都",
-      "city": "世田谷区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5010905000774"
-    },
-    "gbizInfo": {
-      "employeeNumber": 527,
-      "establishmentDate": "1940-04-01",
-      "representativeName": "理事長 松浪 健四郎",
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010905000774",
-      "fetchedAt": "2026-08-03T01:32:43.675Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-72fe61de5a1337fb",
@@ -7538,29 +3328,9 @@
       "person-b14a2349e05a9a96"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-5010605001676"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5010605001676",
-      "officialName": "学校法人芝浦工業大学",
-      "registeredAddress": "東京都江東区豊洲３丁目７番５号",
-      "prefecture": "東京都",
-      "city": "江東区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5010605001676"
-    },
-    "gbizInfo": {
-      "officialWebsite": {
-        "label": "学校法人芝浦工業大学 公式サイト",
-        "url": "https://www.shibaura-it.ac.jp/about/gender-equality/"
-      },
-      "employeeNumber": 682,
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010605001676",
-      "fetchedAt": "2026-08-03T01:32:44.089Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-8ab0441d1a645daf",
@@ -7583,26 +3353,9 @@
       "person-b07de53d79db2cf5"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-5010705000413"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5010705000413",
-      "officialName": "学校法人星薬科大学",
-      "registeredAddress": "東京都品川区荏原２丁目４番４１号",
-      "prefecture": "東京都",
-      "city": "品川区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5010705000413"
-    },
-    "gbizInfo": {
-      "establishmentDate": "1941-04-18",
-      "representativeName": "理事長 大谷 卓男",
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010705000413",
-      "fetchedAt": "2026-08-03T01:32:44.443Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-62903ceaff7fdb5f",
@@ -7625,24 +3378,9 @@
       "person-e65794fb916caf87"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-5330005001393"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "5330005001393",
-      "officialName": "学校法人銀杏学園",
-      "registeredAddress": "熊本県熊本市北区和泉町亀の甲３２５番地",
-      "prefecture": "熊本県",
-      "city": "熊本市",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5330005001393"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5330005001393",
-      "fetchedAt": "2026-08-03T01:32:44.793Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-31c26df36b7edc4d",
@@ -7667,24 +3405,9 @@
       "person-22572d510db934af"
     ],
     "sources": [
-      "cabinet-office-106-25-1-r05-files4",
-      "corporation-info-9010001033931"
+      "cabinet-office-106-25-1-r05-files4"
     ],
-    "topics": [],
-    "basicInfo": {
-      "corporateNumber": "9010001033931",
-      "officialName": "日本林業土木株式会社",
-      "registeredAddress": "東京都千代田区永田町２丁目１４番２号",
-      "prefecture": "東京都",
-      "city": "千代田区",
-      "sourceName": "国税庁法人番号公表サイト",
-      "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9010001033931"
-    },
-    "gbizInfo": {
-      "sourceName": "gBizINFO",
-      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010001033931",
-      "fetchedAt": "2026-08-03T01:32:45.132Z"
-    }
+    "topics": []
   },
   {
     "slug": "corporation-luup",

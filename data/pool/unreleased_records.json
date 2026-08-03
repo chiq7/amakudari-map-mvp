@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 26,
+  "remainingCount": 25,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "bb1c27050c6661e359b2ac1c30a7309c8e6b1f9766a45bb9ad0c2883bb362294",
-      "dedupeKey": "dc306acc058edd2f7fcf3782b3ac595ee908be47894651646a1f89e254069f93",
-      "personName": "十二 康典",
-      "originMinistry": "農林水産省",
-      "titleAtRetirement": "農林水産省輸出・国際局輸出企画課輸出連携推進調査官",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "PwCコンサルティング合同会社",
-      "corporationType": "営利法人",
-      "newPosition": "マネージャー",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "b5a943757a3549148160d9d3f653fe7f87e99078c8fb1dd0738489021da41d02",
       "dedupeKey": "cbde21419ddeaddd6ae50a5c1adc2ea886c3440dbea47890e729772a3acaa68f",

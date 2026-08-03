@@ -2286,5 +2286,21 @@
     "waitingDays": 15,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "bb1c27050c6661e359b2ac1c30a7309c8e6b1f9766a45bb9ad0c2883bb362294",
+    "dedupeKey": "dc306acc058edd2f7fcf3782b3ac595ee908be47894651646a1f89e254069f93",
+    "personSlug": "person-1aedcce28a907a03",
+    "name": "十二 康典",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "農林水産省輸出・国際局輸出企画課輸出連携推進調査官",
+    "corporationSlug": "corporation-1b9ba40fde5710ba",
+    "corporationName": "PwCコンサルティング合同会社",
+    "newPosition": "マネージャー",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]
