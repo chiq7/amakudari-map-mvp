@@ -135,15 +135,15 @@ export default function CorporationBusinessContext({
       {editorialContext?.regulatoryTouchpoints.length ? (
         <div className="border-t border-outline-variant bg-secondary-fixed/20 p-5 md:p-7">
           <div className="max-w-3xl">
-            <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">会社の仕事 × 元の行政領域</p>
-            <h2 className="mt-2 text-xl font-extrabold text-primary">この人事記録を読むとき、どこを見ればいい？</h2>
+            <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">制度上の接点</p>
+            <h2 className="mt-2 text-xl font-extrabold text-primary">この会社の仕事と、元の行政領域はどこで交わる？</h2>
             {connection ? (
               <p className="mt-3 border-l-4 border-secondary bg-white px-4 py-3 text-sm font-bold leading-7 text-primary">
                 公表された動き：{connection}
               </p>
             ) : null}
             <p className="mt-2 text-sm leading-7 text-on-surface-variant">
-              法人の仕事と、元の行政機関が扱う制度・予算・許認可などが重なる場所を整理しています。ここを見ると、公開資料で次に確認すべき資料の入口が分かります。
+              法人の仕事と、元の行政機関が扱う制度・予算・許認可などが重なる場所を整理しています。ここを見ると、天下りの記録を単なる人名一覧ではなく、仕事との関係として読めます。
             </p>
           </div>
           <div className="mt-5 grid gap-px overflow-hidden border border-secondary/20 bg-secondary/20 md:grid-cols-2">
