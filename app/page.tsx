@@ -308,8 +308,6 @@ export default function Home() {
         </figure>
       </section>
 
-      <ExplainerSection />
-
       <section aria-labelledby="data-summary-title">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
@@ -482,6 +480,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <ExplainerSection />
 
       <section className="flex flex-col gap-5 border-y border-outline-variant bg-surface-container-low px-5 py-8 sm:flex-row sm:items-center sm:justify-between md:px-8">
         <div className="max-w-3xl">
