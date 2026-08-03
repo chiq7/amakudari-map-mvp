@@ -135,18 +135,23 @@ export default function CorporationBusinessContext({
       {editorialContext?.regulatoryTouchpoints.length ? (
         <div className="border-t border-outline-variant bg-secondary-fixed/20 p-5 md:p-7">
           <div className="max-w-3xl">
-            <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">事業から確認できる行政との関係</p>
-            <h2 className="mt-2 text-xl font-extrabold text-primary">どこが制度上の接点になる？</h2>
+            <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">会社の仕事 × 元の行政領域</p>
+            <h2 className="mt-2 text-xl font-extrabold text-primary">この人事記録を読むとき、どこを見ればいい？</h2>
+            {connection ? (
+              <p className="mt-3 border-l-4 border-secondary bg-white px-4 py-3 text-sm font-bold leading-7 text-primary">
+                公表された動き：{connection}
+              </p>
+            ) : null}
             <p className="mt-2 text-sm leading-7 text-on-surface-variant">
-              人脈や働きかけの推測ではなく、事業を運営するうえで関係する制度と所管を整理しています。
+              法人の仕事と、元の行政機関が扱う制度・予算・許認可などが重なる場所を整理しています。ここを見ると、公開資料で次に確認すべき資料の入口が分かります。
             </p>
           </div>
           <div className="mt-5 grid gap-px overflow-hidden border border-secondary/20 bg-secondary/20 md:grid-cols-2">
             {editorialContext.regulatoryTouchpoints.map((touchpoint) => (
               <article key={`${touchpoint.agency}-${touchpoint.area}`} className="bg-white p-5">
-                <p className="text-xs font-extrabold text-secondary">{touchpoint.agency}</p>
-                <h3 className="mt-1 text-base font-extrabold text-primary">{touchpoint.area}</h3>
-                <p className="mt-3 text-sm leading-7 text-on-surface-variant">{touchpoint.description}</p>
+                <p className="text-xs font-extrabold text-secondary">行政側：{touchpoint.agency}</p>
+                <h3 className="mt-1 text-base font-extrabold text-primary">重なる仕事：{touchpoint.area}</h3>
+                <p className="mt-3 text-sm leading-7 text-on-surface-variant"><span className="font-extrabold text-primary">見るポイント：</span>{touchpoint.description}</p>
                 <a
                   href={touchpoint.sourceUrl}
                   target="_blank"
@@ -161,21 +166,9 @@ export default function CorporationBusinessContext({
               </article>
             ))}
           </div>
-          <div className="mt-4 border-l-4 border-outline bg-white/70 px-4 py-3">
-            <p className="text-xs font-extrabold text-primary">公表資料だけでは確認できないこと</p>
-            <ul className="mt-2 space-y-1 text-xs leading-6 text-on-surface-variant">
-              {editorialContext.limitations.map((limitation) => (
-                <li key={limitation}>・{limitation}</li>
-              ))}
-            </ul>
-          </div>
           <p className="mt-3 text-right text-xs text-on-surface-variant">確認日：{editorialContext.checkedAt}</p>
         </div>
-      ) : (
-        <p className="border-t border-outline-variant bg-surface-container-low px-5 py-4 text-xs leading-6 text-on-surface-variant md:px-7">
-          業務内容と人事の因果関係、採用理由、政策への影響は、公表資料で直接確認できない限り断定しません。
-        </p>
-      )}
+      ) : null}
     </section>
   );
 }

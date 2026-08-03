@@ -317,6 +317,13 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
     ...corporation.publicOfficers.flatMap((officer) => officer.sourceIds),
   ]);
   const relatedSources = sources.filter((source) => relatedSourceIds.has(source.id));
+  const publicMovement = relatedPersons
+    .slice(0, 2)
+    .map(
+      (person) =>
+        `${person.name}氏が${person.ministry}の「${person.formerPosition}」から${person.newPosition}として再就職`,
+    )
+    .join("。 ");
 
   return (
     <div className="flex flex-col gap-6">
@@ -378,6 +385,7 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         recordCount={relatedRecords.length}
         publicOfficerCount={corporation.publicOfficers.length}
         sourceCount={relatedSources.length}
+        connection={publicMovement || undefined}
       />
 
       {relatedPersons.length > 0 ? <ReemploymentRecordList relatedPersons={relatedPersons} /> : null}

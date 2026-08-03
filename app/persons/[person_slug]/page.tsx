@@ -124,7 +124,10 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
         </div>
       </section>
 
-      <CorporationBusinessContext corporation={corporation} />
+      <CorporationBusinessContext
+        corporation={corporation}
+        connection={`${person.name}氏が${person.ministry}の「${person.formerPosition}」から、${person.newPosition}として${corporation.name}へ再就職した記録が公表されています。`}
+      />
 
       <section className="border-l-4 border-outline bg-surface-container-low px-4 py-3">
         <p className="text-sm leading-relaxed text-on-surface-variant">
