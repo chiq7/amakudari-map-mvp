@@ -36,6 +36,8 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
   const person = getPerson(params.person_slug);
   const corporation = getCorporation(person.corporationSlug);
   const corporationContext = getCorporationEditorialContext(person.corporationSlug);
+  const corporationWebsite =
+    corporationContext?.business.officialWebsite || corporation.gbizInfo?.officialWebsite;
   const sourceLinks = person.sourceIds.flatMap((sourceId) => {
     const source = sources.find((item) => item.id === sourceId);
     return source
@@ -105,9 +107,9 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
             <div className="my-4 border-t border-outline-variant" />
             <p className="text-sm font-bold text-on-surface-variant">再就職後の役職</p>
             <p className="mt-1 text-base font-semibold leading-7 text-primary">{person.newPosition}</p>
-            {corporationContext ? (
+            {corporationWebsite ? (
               <a
-                href={corporationContext.business.officialWebsite.url}
+                href={corporationWebsite.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-analytics-event="source_link"
@@ -115,7 +117,7 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
                 data-analytics-location="person_reemployment_flow"
                 className="mt-4 inline-flex min-h-11 items-center bg-primary px-4 text-sm font-extrabold text-white hover:bg-primary/90"
               >
-                法人公式サイトを見る ↗
+                法人公式ページを見る ↗
               </a>
             ) : null}
           </div>

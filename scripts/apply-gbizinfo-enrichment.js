@@ -217,7 +217,17 @@ function normalizeWorkplaceInfo(workplaceInfo) {
 }
 
 function normalizeRecord(record) {
+  const officialWebsiteUrl = cleanString(record.basicInfo?.companyUrl);
   const normalized = compactObject([
+    [
+      "officialWebsite",
+      officialWebsiteUrl
+        ? {
+            label: `${cleanString(record.officialName) || cleanString(record.corporationName)} 公式サイト`,
+            url: officialWebsiteUrl,
+          }
+        : undefined,
+    ],
     ["businessSummary", cleanString(record.businessSummary)],
     ["employeeNumber", finiteNumber(record.employeeNumber)],
     ["capitalStock", finiteNumber(record.capitalStock)],

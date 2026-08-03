@@ -94,5 +94,381 @@
     "url": "https://www.mlit.go.jp/jidosha/jidosha_fr7_000058.html",
     "publishedAt": "",
     "memo": "車両の保安基準、性能等確認制度、関係事業者向けガイドラインの公式案内"
+  },
+  {
+    "id": "corporation-info-6010005003495",
+    "title": "一般社団法人日本資金決済業協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010005003495",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-9010005018623",
+    "title": "一般財団法人全国農林漁業団体共済会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005018623",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-8120005024339",
+    "title": "弁護士法人ウィステリア法律事務所 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8120005024339",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-4010005036720",
+    "title": "弁護士法人東京国際法律事務所 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005036720",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-2010005024735",
+    "title": "弁護士法人シティユーワ法律事務所 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005024735",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-7010005037708",
+    "title": "アイエイ弁護士法人 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010005037708",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-9180005019935",
+    "title": "弁護士法人ブナの森法律事務所 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9180005019935",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-9120005017184",
+    "title": "弁護士法人響 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9120005017184",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-9011505000797",
+    "title": "更生保護法人日新協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9011505000797",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-7010405010909",
+    "title": "弁護士法人西村あさひ法律事務所 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010405010909",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-8120005003359",
+    "title": "一般社団法人大阪府信用組合協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8120005003359",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-4080005006238",
+    "title": "一般社団法人静岡県信用金庫協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4080005006238",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-2180005014505",
+    "title": "一般社団法人東海地区信用金庫協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2180005014505",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-1180001038517",
+    "title": "株式会社東海信金ビジネス 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1180001038517",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-4010005015996",
+    "title": "一般社団法人第二種金融商品取引業協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005015996",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-6370001004338",
+    "title": "株式会社しんきん総合サービス 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6370001004338",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-1120005014569",
+    "title": "公益社団法人旭納税協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1120005014569",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-3140005010804",
+    "title": "公益社団法人和田山納税協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3140005010804",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-3120005014534",
+    "title": "公益社団法人枚方納税協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3120005014534",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-7120905003112",
+    "title": "公益社団法人吹田納税協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7120905003112",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-1130005012373",
+    "title": "公益社団法人下京納税協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1130005012373",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-2140005005375",
+    "title": "公益社団法人兵庫納税協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2140005005375",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-6160005007993",
+    "title": "公益社団法人今津納税協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6160005007993",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-3120105004617",
+    "title": "公益社団法人堺納税協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3120105004617",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-6010405002840",
+    "title": "弁理士法人第一国際特許事務所 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010405002840",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-6010005021423",
+    "title": "弁護士法人森・濱田松本法律事務所 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010005021423",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-8010005031404",
+    "title": "弁理士法人山王内外特許事務所 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005031404",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-4240002005853",
+    "title": "広洋海運有限会社 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4240002005853",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-4010005016680",
+    "title": "一般財団法人日本舶用品検定協会 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005016680",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-8040005013606",
+    "title": "学校法人廣池学園 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8040005013606",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-5130005004301",
+    "title": "学校法人京都産業大学 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5130005004301",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-4180005011830",
+    "title": "学校法人日本福祉大学 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4180005011830",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-9011005009959",
+    "title": "一般社団法人日本更生保護女性連盟 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9011005009959",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-6320005002689",
+    "title": "学校法人別府大学 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6320005002689",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-2010005030989",
+    "title": "弁護士法人三浦法律事務所 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005030989",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-6040005003798",
+    "title": "独立行政法人地域医療機能推進機構 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6040005003798",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-7012405000088",
+    "title": "社会福祉法人安立園 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7012405000088",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-7120005008400",
+    "title": "弁護士法人御堂筋法律事務所 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7120005008400",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-8310005001062",
+    "title": "学校法人玉木学園 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8310005001062",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-4030005012141",
+    "title": "青木信用金庫 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4030005012141",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-2012705000073",
+    "title": "学校法人津田塾大学 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2012705000073",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-8120005004778",
+    "title": "学校法人常翔学園 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8120005004778",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-5010905000774",
+    "title": "学校法人日本体育大学 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010905000774",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-5010605001676",
+    "title": "学校法人芝浦工業大学 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010605001676",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-5010705000413",
+    "title": "学校法人星薬科大学 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010705000413",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-5330005001393",
+    "title": "学校法人銀杏学園 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5330005001393",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
+  },
+  {
+    "id": "corporation-info-9010001033931",
+    "title": "日本林業土木株式会社 法人情報",
+    "publisher": "gBizINFO",
+    "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010001033931",
+    "publishedAt": "",
+    "memo": "法人番号・所在地・法人プロフィールの公開情報"
   }
 ]

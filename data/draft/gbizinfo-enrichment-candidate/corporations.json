@@ -2,12 +2,12 @@
   "sourceType": "gbizinfo-api-v2",
   "schemaVersion": 2,
   "status": "draft",
-  "createdAt": "2026-06-10",
-  "fetchedAt": "2026-06-10T09:32:33.272Z",
+  "createdAt": "2026-08-03",
+  "fetchedAt": "2026-08-03T01:31:22.146Z",
   "apiVersion": "v2",
-  "eligibleCorporationCount": 87,
-  "targetCount": 87,
-  "processedCount": 87,
+  "eligibleCorporationCount": 88,
+  "targetCount": 88,
+  "processedCount": 88,
   "recordFields": [
     "corporateNumber",
     "corporationSlug",
@@ -33,24 +33,24 @@
     "notes"
   ],
   "summary": {
-    "total": 87,
-    "basicInfoCount": 87,
-    "businessSummaryCount": 18,
-    "employeeNumberCount": 25,
+    "total": 88,
+    "basicInfoCount": 88,
+    "businessSummaryCount": 19,
+    "employeeNumberCount": 26,
     "capitalStockCount": 5,
-    "establishmentDateCount": 24,
-    "certificationCorporationCount": 39,
+    "establishmentDateCount": 25,
+    "certificationCorporationCount": 40,
     "awardCorporationCount": 14,
     "financeCorporationCount": 5,
-    "patentCorporationCount": 33,
+    "patentCorporationCount": 34,
     "procurementCorporationCount": 20,
     "subsidyCorporationCount": 31,
-    "workplaceInfoCount": 21,
+    "workplaceInfoCount": 22,
     "noUsefulDataCount": 0,
-    "certificationCount": 63,
+    "certificationCount": 64,
     "awardCount": 26,
-    "patentCount": 18101,
-    "procurementCount": 771,
+    "patentCount": 18139,
+    "procurementCount": 782,
     "subsidyCount": 1210,
     "licenseCount": 0
   },
@@ -702,7 +702,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9012405001282",
-      "fetchedAt": "2026-06-10T09:31:44.009Z",
+      "fetchedAt": "2026-08-03T01:30:32.725Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -746,7 +746,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010005003495",
-      "fetchedAt": "2026-06-10T09:31:44.696Z",
+      "fetchedAt": "2026-08-03T01:30:33.251Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -1388,6 +1388,20 @@
           "note": null
         },
         {
+          "date_of_order": "2026-07-03T00:00:00+09:00",
+          "title": "令和８年度ＤＸ推進支援業務",
+          "amount": 19000000,
+          "government_departments": "個人情報保護委員会",
+          "note": null
+        },
+        {
+          "date_of_order": "2026-07-14T00:00:00+09:00",
+          "title": "令和７年度補正中小企業活性化・事業承継総合緊急支援事業（再生型Ｍ＆Ａ促進に向けた支援策の検討等に係る調査事業）",
+          "amount": 31004460,
+          "government_departments": "経済産業省",
+          "note": null
+        },
+        {
           "date_of_order": "2019-11-07T00:00:00+09:00",
           "title": "２０１９事業年度国立研究開発法人新エネルギー・産業技術総合開発機構会計監査業務",
           "amount": 22000000,
@@ -1588,6 +1602,20 @@
           "title": "令和８年度経済産業政策関係調査事業（会計執行実務等に関する課題分析調査）",
           "amount": 20263350,
           "government_departments": "経済産業省",
+          "note": null
+        },
+        {
+          "date_of_order": "2026-06-15T00:00:00+09:00",
+          "title": "分娩取扱施設における医療やサービスの実態調査に係る業務一式",
+          "amount": 16000000,
+          "government_departments": "厚生労働省",
+          "note": null
+        },
+        {
+          "date_of_order": "2026-06-22T00:00:00+09:00",
+          "title": "大規模国際イベントを支える事業者等におけるセキュリティ管理態勢の強化に係る調査・支援業務（令和８年度）",
+          "amount": 20000000,
+          "government_departments": "内閣官房",
           "note": null
         },
         {
@@ -2051,7 +2079,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3011105000996",
-      "fetchedAt": "2026-06-10T09:31:45.388Z",
+      "fetchedAt": "2026-08-03T01:30:33.830Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -2095,7 +2123,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005018623",
-      "fetchedAt": "2026-06-10T09:31:46.529Z",
+      "fetchedAt": "2026-08-03T01:30:34.385Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -2123,9 +2151,9 @@
       },
       "businessSummary": "グループ会社に対する経営管理及び病院経営",
       "employeeNumber": 1553,
-      "capitalStock": 3500000000000,
+      "capitalStock": 1750000000000,
       "establishmentDate": "",
-      "representativeName": "取締役兼代表執行役社長　　増　田　寬　也 （注）2025年６月25日開催予定の定時株主総会の議案（決議事項）      として、「取締役13名選任の件」を提案しており、当該議案が      承認可決されますと、以下のとおりとなる予定です。      取締役兼代表執行役社長　　根　岸　一　行",
+      "representativeName": "取締役兼代表執行役社長　　根　岸　一　行 ",
       "workplaceInfo": {
         "base_infos": {
           "average_continuous_service_years_type": "正社員",
@@ -2171,37 +2199,10 @@
       ],
       "finance": {
         "accounting_standards": "有価証券報告書を参照してください",
-        "fiscal_year_cover_page": "第20期(自　2024年４月１日　至　2025年３月31日)",
+        "fiscal_year_cover_page": "第21期(自　2025年４月１日　至　2026年３月31日)",
         "management_index": [
           {
             "period": "4",
-            "net_sales_summary_of_business_results": null,
-            "net_sales_summary_of_business_results_unit_ref": null,
-            "operating_revenue1_summary_of_business_results": 167933000000,
-            "operating_revenue1_summary_of_business_results_unit_ref": "JPY",
-            "operating_revenue2_summary_of_business_results": null,
-            "operating_revenue2_summary_of_business_results_unit_ref": null,
-            "gross_operating_revenue_summary_of_business_results": null,
-            "gross_operating_revenue_summary_of_business_results_unit_ref": null,
-            "ordinary_income_summary_of_business_results": null,
-            "ordinary_income_summary_of_business_results_unit_ref": null,
-            "net_premiums_written_summary_of_business_results_ins": null,
-            "net_premiums_written_summary_of_business_results_ins_unit_ref": null,
-            "ordinary_income_loss_summary_of_business_results": 114800000000,
-            "ordinary_income_loss_summary_of_business_results_unit_ref": "JPY",
-            "net_income_loss_summary_of_business_results": -2129989000000,
-            "net_income_loss_summary_of_business_results_unit_ref": "JPY",
-            "capital_stock_summary_of_business_results": 3500000000000,
-            "capital_stock_summary_of_business_results_unit_ref": "JPY",
-            "net_assets_summary_of_business_results": 5912969000000,
-            "net_assets_summary_of_business_results_unit_ref": "JPY",
-            "total_assets_summary_of_business_results": 5997547000000,
-            "total_assets_summary_of_business_results_unit_ref": "JPY",
-            "number_of_employees": 2039,
-            "number_of_employees_unit_ref": "pure"
-          },
-          {
-            "period": "3",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": 284688000000,
@@ -2228,7 +2229,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "2",
+            "period": "3",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": 257559000000,
@@ -2255,7 +2256,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "1",
+            "period": "2",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": 219644000000,
@@ -2282,7 +2283,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "0",
+            "period": "1",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": 207244000000,
@@ -2307,48 +2308,75 @@
             "total_assets_summary_of_business_results_unit_ref": "JPY",
             "number_of_employees": 1235,
             "number_of_employees_unit_ref": "pure"
+          },
+          {
+            "period": "0",
+            "net_sales_summary_of_business_results": null,
+            "net_sales_summary_of_business_results_unit_ref": null,
+            "operating_revenue1_summary_of_business_results": 199391000000,
+            "operating_revenue1_summary_of_business_results_unit_ref": "JPY",
+            "operating_revenue2_summary_of_business_results": null,
+            "operating_revenue2_summary_of_business_results_unit_ref": null,
+            "gross_operating_revenue_summary_of_business_results": null,
+            "gross_operating_revenue_summary_of_business_results_unit_ref": null,
+            "ordinary_income_summary_of_business_results": null,
+            "ordinary_income_summary_of_business_results_unit_ref": null,
+            "net_premiums_written_summary_of_business_results_ins": null,
+            "net_premiums_written_summary_of_business_results_ins_unit_ref": null,
+            "ordinary_income_loss_summary_of_business_results": 138021000000,
+            "ordinary_income_loss_summary_of_business_results_unit_ref": "JPY",
+            "net_income_loss_summary_of_business_results": 177362000000,
+            "net_income_loss_summary_of_business_results_unit_ref": "JPY",
+            "capital_stock_summary_of_business_results": 1750000000000,
+            "capital_stock_summary_of_business_results_unit_ref": "JPY",
+            "net_assets_summary_of_business_results": 4737530000000,
+            "net_assets_summary_of_business_results_unit_ref": "JPY",
+            "total_assets_summary_of_business_results": 5956296000000,
+            "total_assets_summary_of_business_results_unit_ref": "JPY",
+            "number_of_employees": 1261,
+            "number_of_employees_unit_ref": "pure"
           }
         ],
         "major_shareholders": [
           {
+            "name_major_shareholders": "STATE STREET BANK AND TRUST COMPANY 505225（常任代理人　株式会社みずほ銀行決済営業部）",
+            "shareholding_ratio": 0.0056
+          },
+          {
+            "name_major_shareholders": "ゴールドマン・サックス証券株式会社 ＢＮＹＭ(常任代理人　株式会社三菱ＵＦＪ銀行）",
+            "shareholding_ratio": 0.0056
+          },
+          {
             "name_major_shareholders": "JPモルガン証券株式会社",
-            "shareholding_ratio": 0.0061
+            "shareholding_ratio": 0.0073
           },
           {
             "name_major_shareholders": "STATE STREET BANK AND TRUST COMPANY 505103（常任代理人　株式会社みずほ銀行決済営業部）",
-            "shareholding_ratio": 0.0086
-          },
-          {
-            "name_major_shareholders": "ＳＭＢＣ日興証券株式会社",
-            "shareholding_ratio": 0.0087
+            "shareholding_ratio": 0.0082
           },
           {
             "name_major_shareholders": "JP MORGAN CHASE BANK 385781（常任代理人　株式会社みずほ銀行決済営業部）",
-            "shareholding_ratio": 0.0089
+            "shareholding_ratio": 0.0086
           },
           {
             "name_major_shareholders": "STATE STREET BANK AND TRUST COMPANY 505001（常任代理人　株式会社みずほ銀行決済営業部）",
-            "shareholding_ratio": 0.0117
-          },
-          {
-            "name_major_shareholders": "STATE STREET BANK WEST CLIENT - TREATY 505234（常任代理人　株式会社みずほ銀行決済営業部）",
-            "shareholding_ratio": 0.0136
-          },
-          {
-            "name_major_shareholders": "日本郵政社員持株会",
-            "shareholding_ratio": 0.0315
+            "shareholding_ratio": 0.0121
           },
           {
             "name_major_shareholders": "株式会社日本カストディ銀行（信託口）",
-            "shareholding_ratio": 0.0339
+            "shareholding_ratio": 0.0263
+          },
+          {
+            "name_major_shareholders": "日本郵政社員持株会",
+            "shareholding_ratio": 0.0332
           },
           {
             "name_major_shareholders": "日本マスタートラスト信託銀行株式会社（信託口）",
-            "shareholding_ratio": 0.106
+            "shareholding_ratio": 0.0942
           },
           {
             "name_major_shareholders": "財務大臣",
-            "shareholding_ratio": 0.388
+            "shareholding_ratio": 0.3805
           }
         ]
       },
@@ -19693,7 +19721,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001112697",
-      "fetchedAt": "2026-06-10T09:31:47.599Z",
+      "fetchedAt": "2026-08-03T01:30:35.140Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -19727,19 +19755,19 @@
       "workplaceInfo": {
         "base_infos": {
           "average_continuous_service_years_type": "正社員",
-          "average_continuous_service_years_Male": 20.1,
-          "average_continuous_service_years_Female": 15.1,
+          "average_continuous_service_years_Male": 18.2,
+          "average_continuous_service_years_Female": 14.9,
           "average_continuous_service_years": null,
           "average_age": null,
           "month_average_predetermined_overtime_hours": null
         },
         "women_activity_infos": {
           "female_workers_proportion_type": "その他",
-          "female_workers_proportion": 29.3,
-          "female_share_of_manager": 205,
-          "gender_total_of_manager": 2066,
-          "female_share_of_officers": 9,
-          "gender_total_of_officers": 32
+          "female_workers_proportion": 22,
+          "female_share_of_manager": 225,
+          "gender_total_of_manager": 2118,
+          "female_share_of_officers": 8,
+          "gender_total_of_officers": 38
         },
         "compatibility_of_childcare_and_work": {
           "number_of_paternity_leave": null,
@@ -19821,37 +19849,10 @@
       ],
       "finance": {
         "accounting_standards": "有価証券報告書を参照してください",
-        "fiscal_year_cover_page": "第19期(自　2024年４月１日　至　2025年３月31日)",
+        "fiscal_year_cover_page": "第20期(自　2025年４月１日　至　2026年３月31日)",
         "management_index": [
           {
             "period": "4",
-            "net_sales_summary_of_business_results": null,
-            "net_sales_summary_of_business_results_unit_ref": null,
-            "operating_revenue1_summary_of_business_results": null,
-            "operating_revenue1_summary_of_business_results_unit_ref": null,
-            "operating_revenue2_summary_of_business_results": null,
-            "operating_revenue2_summary_of_business_results_unit_ref": null,
-            "gross_operating_revenue_summary_of_business_results": null,
-            "gross_operating_revenue_summary_of_business_results_unit_ref": null,
-            "ordinary_income_summary_of_business_results": null,
-            "ordinary_income_summary_of_business_results_unit_ref": null,
-            "net_premiums_written_summary_of_business_results_ins": null,
-            "net_premiums_written_summary_of_business_results_ins_unit_ref": null,
-            "ordinary_income_loss_summary_of_business_results": 345022000000,
-            "ordinary_income_loss_summary_of_business_results_unit_ref": "JPY",
-            "net_income_loss_summary_of_business_results": 165586000000,
-            "net_income_loss_summary_of_business_results_unit_ref": "JPY",
-            "capital_stock_summary_of_business_results": 500000000000,
-            "capital_stock_summary_of_business_results_unit_ref": "JPY",
-            "net_assets_summary_of_business_results": 2838638000000,
-            "net_assets_summary_of_business_results_unit_ref": "JPY",
-            "total_assets_summary_of_business_results": 70173857000000,
-            "total_assets_summary_of_business_results_unit_ref": "JPY",
-            "number_of_employees": 7645,
-            "number_of_employees_unit_ref": "pure"
-          },
-          {
-            "period": "3",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": null,
@@ -19878,7 +19879,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "2",
+            "period": "3",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": null,
@@ -19905,7 +19906,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "1",
+            "period": "2",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": null,
@@ -19932,7 +19933,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "0",
+            "period": "1",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": null,
@@ -19957,48 +19958,75 @@
             "total_assets_summary_of_business_results_unit_ref": "JPY",
             "number_of_employees": 17952,
             "number_of_employees_unit_ref": "pure"
+          },
+          {
+            "period": "0",
+            "net_sales_summary_of_business_results": null,
+            "net_sales_summary_of_business_results_unit_ref": null,
+            "operating_revenue1_summary_of_business_results": null,
+            "operating_revenue1_summary_of_business_results_unit_ref": null,
+            "operating_revenue2_summary_of_business_results": null,
+            "operating_revenue2_summary_of_business_results_unit_ref": null,
+            "gross_operating_revenue_summary_of_business_results": null,
+            "gross_operating_revenue_summary_of_business_results_unit_ref": null,
+            "ordinary_income_summary_of_business_results": null,
+            "ordinary_income_summary_of_business_results_unit_ref": null,
+            "net_premiums_written_summary_of_business_results_ins": null,
+            "net_premiums_written_summary_of_business_results_ins_unit_ref": null,
+            "ordinary_income_loss_summary_of_business_results": 273247000000,
+            "ordinary_income_loss_summary_of_business_results_unit_ref": "JPY",
+            "net_income_loss_summary_of_business_results": 170197000000,
+            "net_income_loss_summary_of_business_results_unit_ref": "JPY",
+            "capital_stock_summary_of_business_results": 500000000000,
+            "capital_stock_summary_of_business_results_unit_ref": "JPY",
+            "net_assets_summary_of_business_results": 4143459000000,
+            "net_assets_summary_of_business_results_unit_ref": "JPY",
+            "total_assets_summary_of_business_results": 58450779000000,
+            "total_assets_summary_of_business_results_unit_ref": "JPY",
+            "number_of_employees": 17706,
+            "number_of_employees_unit_ref": "pure"
           }
         ],
         "major_shareholders": [
           {
-            "name_major_shareholders": "JP MORGAN CHASE BANK 385781(常任代理人　株式会社みずほ銀行決済営業部)",
-            "shareholding_ratio": 0.007
+            "name_major_shareholders": "BNYM AS AGT/CLTS 10 PERCENT(常任代理人　株式会社三菱UFJ銀行)",
+            "shareholding_ratio": 0.0057
           },
           {
             "name_major_shareholders": "STATE STREET BANK AND TRUST COMPANY 505103(常任代理人　株式会社みずほ銀行決済営業部)",
-            "shareholding_ratio": 0.0084
+            "shareholding_ratio": 0.0059
+          },
+          {
+            "name_major_shareholders": "JP MORGAN CHASE BANK 385781(常任代理人　株式会社みずほ銀行決済営業部)",
+            "shareholding_ratio": 0.0071
+          },
+          {
+            "name_major_shareholders": "THE BANK OF NEW YORK, TREATY JASDEC ACCOUNT(常任代理人　株式会社三菱UFJ銀行)",
+            "shareholding_ratio": 0.0073
           },
           {
             "name_major_shareholders": "かんぽ生命保険社員持株会",
-            "shareholding_ratio": 0.009
+            "shareholding_ratio": 0.0095
           },
           {
-            "name_major_shareholders": "STATE STREET BANK WEST CLIENT - TREATY 505234(常任代理人　株式会社みずほ銀行決済営業部)",
-            "shareholding_ratio": 0.0098
-          },
-          {
-            "name_major_shareholders": "JPモルガン証券株式会社",
-            "shareholding_ratio": 0.0103
-          },
-          {
-            "name_major_shareholders": "CGML PB CLIENT ACCOUNT/COLLATERAL(常任代理人　シティバンク、エヌ・エイ東京支店)",
-            "shareholding_ratio": 0.012
+            "name_major_shareholders": "NOMURA CUSTODY NOMINEES LIMITED OMNIBUS-FULLY PAID (CASHPB）(常任代理人　野村證券株式会社)",
+            "shareholding_ratio": 0.0135
           },
           {
             "name_major_shareholders": "STATE STREET BANK AND TRUST COMPANY 505001(常任代理人　株式会社みずほ銀行決済営業部)",
-            "shareholding_ratio": 0.019
+            "shareholding_ratio": 0.0293
           },
           {
             "name_major_shareholders": "株式会社日本カストディ銀行（信託口）",
-            "shareholding_ratio": 0.0327
+            "shareholding_ratio": 0.0418
           },
           {
             "name_major_shareholders": "日本マスタートラスト信託銀行株式会社（信託口）",
-            "shareholding_ratio": 0.088
+            "shareholding_ratio": 0.085
           },
           {
             "name_major_shareholders": "日本郵政株式会社",
-            "shareholding_ratio": 0.4984
+            "shareholding_ratio": 0.4975
           }
         ]
       },
@@ -20541,7 +20569,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010001112696",
-      "fetchedAt": "2026-06-10T09:31:48.143Z",
+      "fetchedAt": "2026-08-03T01:30:35.752Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -20600,7 +20628,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005014868",
-      "fetchedAt": "2026-06-10T09:31:48.663Z",
+      "fetchedAt": "2026-08-03T01:30:36.285Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -20925,7 +20953,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5030001129723",
-      "fetchedAt": "2026-06-10T09:31:49.208Z",
+      "fetchedAt": "2026-08-03T01:30:36.814Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -46710,7 +46738,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5011105000945",
-      "fetchedAt": "2026-06-10T09:31:49.858Z",
+      "fetchedAt": "2026-08-03T01:30:37.639Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -46794,7 +46822,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9021005007458",
-      "fetchedAt": "2026-06-10T09:31:50.344Z",
+      "fetchedAt": "2026-08-03T01:30:38.189Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -47205,6 +47233,13 @@
           "date_of_order": "2025-06-26T00:00:00+09:00",
           "title": "令和７年度静岡刑務所、駿府学園及び静岡少年鑑別所職員定期健康診断等業務委託",
           "amount": 2245000,
+          "government_departments": "法務省",
+          "note": null
+        },
+        {
+          "date_of_order": "2026-06-18T00:00:00+09:00",
+          "title": "令和８年度静岡刑務所、駿府学園及び静岡少年鑑別所職員定期健康診断等業務委託",
+          "amount": 1794900,
           "government_departments": "法務省",
           "note": null
         },
@@ -48586,7 +48621,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3010405001696",
-      "fetchedAt": "2026-06-10T09:31:51.033Z",
+      "fetchedAt": "2026-08-03T01:30:38.757Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -48655,7 +48690,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4120001235595",
-      "fetchedAt": "2026-06-10T09:31:51.554Z",
+      "fetchedAt": "2026-08-03T01:30:39.315Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -48714,7 +48749,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005015760",
-      "fetchedAt": "2026-06-10T09:31:52.023Z",
+      "fetchedAt": "2026-08-03T01:30:39.864Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -48758,7 +48793,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8120005024339",
-      "fetchedAt": "2026-06-10T09:31:52.518Z",
+      "fetchedAt": "2026-08-03T01:30:40.384Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -48802,7 +48837,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005036720",
-      "fetchedAt": "2026-06-10T09:31:53.049Z",
+      "fetchedAt": "2026-08-03T01:30:40.943Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -48854,7 +48889,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010005021423",
-      "fetchedAt": "2026-06-10T09:31:53.579Z",
+      "fetchedAt": "2026-08-03T01:30:41.485Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -48888,15 +48923,15 @@
       "workplaceInfo": {
         "base_infos": {
           "average_continuous_service_years_type": "正社員",
-          "average_continuous_service_years_Male": 16.1,
-          "average_continuous_service_years_Female": 10.3,
+          "average_continuous_service_years_Male": 16.2,
+          "average_continuous_service_years_Female": 10.8,
           "average_continuous_service_years": null,
           "average_age": null,
           "month_average_predetermined_overtime_hours": null
         },
         "women_activity_infos": {
           "female_workers_proportion_type": "正社員",
-          "female_workers_proportion": 40,
+          "female_workers_proportion": 35,
           "female_share_of_manager": null,
           "gender_total_of_manager": null,
           "female_share_of_officers": null,
@@ -48938,37 +48973,10 @@
       ],
       "finance": {
         "accounting_standards": "有価証券報告書を参照してください",
-        "fiscal_year_cover_page": "第48期(自　2024年４月１日　至　2025年３月31日)",
+        "fiscal_year_cover_page": "第49期(自　2025年４月１日　至　2026年３月31日)",
         "management_index": [
           {
             "period": "4",
-            "net_sales_summary_of_business_results": null,
-            "net_sales_summary_of_business_results_unit_ref": null,
-            "operating_revenue1_summary_of_business_results": 78826000000,
-            "operating_revenue1_summary_of_business_results_unit_ref": "JPY",
-            "operating_revenue2_summary_of_business_results": null,
-            "operating_revenue2_summary_of_business_results_unit_ref": null,
-            "gross_operating_revenue_summary_of_business_results": null,
-            "gross_operating_revenue_summary_of_business_results_unit_ref": null,
-            "ordinary_income_summary_of_business_results": null,
-            "ordinary_income_summary_of_business_results_unit_ref": null,
-            "net_premiums_written_summary_of_business_results_ins": null,
-            "net_premiums_written_summary_of_business_results_ins_unit_ref": null,
-            "ordinary_income_loss_summary_of_business_results": 11973000000,
-            "ordinary_income_loss_summary_of_business_results_unit_ref": "JPY",
-            "net_income_loss_summary_of_business_results": 9583000000,
-            "net_income_loss_summary_of_business_results_unit_ref": "JPY",
-            "capital_stock_summary_of_business_results": 94028000000,
-            "capital_stock_summary_of_business_results_unit_ref": "JPY",
-            "net_assets_summary_of_business_results": 102655000000,
-            "net_assets_summary_of_business_results_unit_ref": "JPY",
-            "total_assets_summary_of_business_results": 638868000000,
-            "total_assets_summary_of_business_results_unit_ref": "JPY",
-            "number_of_employees": 1012,
-            "number_of_employees_unit_ref": "pure"
-          },
-          {
-            "period": "3",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": 83117000000,
@@ -48995,7 +49003,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "2",
+            "period": "3",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": 88449000000,
@@ -49022,7 +49030,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "1",
+            "period": "2",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": 103867000000,
@@ -49049,7 +49057,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "0",
+            "period": "1",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": 110158000000,
@@ -49074,40 +49082,67 @@
             "total_assets_summary_of_business_results_unit_ref": "JPY",
             "number_of_employees": 1265,
             "number_of_employees_unit_ref": "pure"
+          },
+          {
+            "period": "0",
+            "net_sales_summary_of_business_results": null,
+            "net_sales_summary_of_business_results_unit_ref": null,
+            "operating_revenue1_summary_of_business_results": 121762000000,
+            "operating_revenue1_summary_of_business_results_unit_ref": "JPY",
+            "operating_revenue2_summary_of_business_results": null,
+            "operating_revenue2_summary_of_business_results_unit_ref": null,
+            "gross_operating_revenue_summary_of_business_results": null,
+            "gross_operating_revenue_summary_of_business_results_unit_ref": null,
+            "ordinary_income_summary_of_business_results": null,
+            "ordinary_income_summary_of_business_results_unit_ref": null,
+            "net_premiums_written_summary_of_business_results_ins": null,
+            "net_premiums_written_summary_of_business_results_ins_unit_ref": null,
+            "ordinary_income_loss_summary_of_business_results": 30937000000,
+            "ordinary_income_loss_summary_of_business_results_unit_ref": "JPY",
+            "net_income_loss_summary_of_business_results": 23101000000,
+            "net_income_loss_summary_of_business_results_unit_ref": "JPY",
+            "capital_stock_summary_of_business_results": 94028000000,
+            "capital_stock_summary_of_business_results_unit_ref": "JPY",
+            "net_assets_summary_of_business_results": 201684000000,
+            "net_assets_summary_of_business_results_unit_ref": "JPY",
+            "total_assets_summary_of_business_results": 1323923000000,
+            "total_assets_summary_of_business_results_unit_ref": "JPY",
+            "number_of_employees": 1276,
+            "number_of_employees_unit_ref": "pure"
           }
         ],
         "major_shareholders": [
           {
-            "name_major_shareholders": "BOFAS INC SEGREGATION ACCOUNT（常任代理人　ＢＯＦＡ証券株式会社）",
-            "shareholding_ratio": 0.0108
-          },
-          {
             "name_major_shareholders": "MLI FOR CLIENT GENERAL OMNI NON COLLATERAL NON TREATY-PB（常任代理人　ＢＯＦＡ証券株式会社）",
-            "shareholding_ratio": 0.0126
-          },
-          {
-            "name_major_shareholders": "MSCO CUSTOMER SECURITIES（常任代理人　モルガン・スタンレーＭＵＦＧ証券株式会社） ",
-            "shareholding_ratio": 0.0144
+            "shareholding_ratio": 0.0143
           },
           {
             "name_major_shareholders": "株式会社日本カストディ銀行（信託口）",
-            "shareholding_ratio": 0.0227
+            "shareholding_ratio": 0.0203
           },
           {
-            "name_major_shareholders": "MSIP CLIENT SECURITIES（常任代理人　モルガン・スタンレーＭＵＦＧ証券株式会社） ",
-            "shareholding_ratio": 0.0308
+            "name_major_shareholders": "BARCLAYS CAPITAL SECURITIES LIMITED （常任代理人　バークレイズ証券株式会社） ",
+            "shareholding_ratio": 0.0206
           },
           {
-            "name_major_shareholders": "JP MORGAN CHASE BANK 385632 （常任代理人　株式会社みずほ銀行決済営業部）  ",
-            "shareholding_ratio": 0.0435
+            "name_major_shareholders": "MSIP CLIENT SECURITIES（常任代理人　モルガン・スタンレーＭＵＦＧ証券株式会社）",
+            "shareholding_ratio": 0.0267
+          },
+          {
+            "name_major_shareholders": "THE CHASE MANHATTAN BANK, N. A. LONDONSECS LENDINGOMNIBUS ACCOUNT（常任代理人　株式会社みずほ銀行決済営業部）",
+            "shareholding_ratio": 0.027
+          },
+          {
+            "name_major_shareholders": "BOFAS INC SEGREGATION ACCOUNT（常任代理人　ＢＯＦＡ証券株式会社）",
+            "shareholding_ratio": 0.0289
           },
           {
             "name_major_shareholders": "株式会社丸高",
-            "shareholding_ratio": 0.0513
+            "shareholding_ratio": 0.0512
           },
           {
             "name_major_shareholders": "日本マスタートラスト信託銀行株式会社（信託口）",
-            "shareholding_ratio": 0.0897
+            "shareholding_ratio": 0.0845
           },
           {
             "name_major_shareholders": "福田　光秀",
@@ -49115,7 +49150,7 @@
           },
           {
             "name_major_shareholders": "株式会社ＡＭＧ",
-            "shareholding_ratio": 0.198
+            "shareholding_ratio": 0.1979
           }
         ]
       },
@@ -49586,7 +49621,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3130001000082",
-      "fetchedAt": "2026-06-10T09:31:54.105Z",
+      "fetchedAt": "2026-08-03T01:30:42.063Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -49638,7 +49673,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7011101105127",
-      "fetchedAt": "2026-06-10T09:31:54.636Z",
+      "fetchedAt": "2026-08-03T01:30:42.615Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -49757,7 +49792,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010405004477",
-      "fetchedAt": "2026-06-10T09:31:55.135Z",
+      "fetchedAt": "2026-08-03T01:30:43.224Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -49801,7 +49836,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005024735",
-      "fetchedAt": "2026-06-10T09:31:55.750Z",
+      "fetchedAt": "2026-08-03T01:30:43.755Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -49835,15 +49870,15 @@
       "workplaceInfo": {
         "base_infos": {
           "average_continuous_service_years_type": "その他",
-          "average_continuous_service_years_Male": 19.4,
-          "average_continuous_service_years_Female": 21.3,
+          "average_continuous_service_years_Male": 20.2,
+          "average_continuous_service_years_Female": 22.9,
           "average_continuous_service_years": null,
           "average_age": null,
           "month_average_predetermined_overtime_hours": null
         },
         "women_activity_infos": {
           "female_workers_proportion_type": "その他",
-          "female_workers_proportion": 21.1,
+          "female_workers_proportion": 27.8,
           "female_share_of_manager": null,
           "gender_total_of_manager": null,
           "female_share_of_officers": null,
@@ -49887,7 +49922,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5120001235594",
-      "fetchedAt": "2026-06-10T09:31:56.355Z",
+      "fetchedAt": "2026-08-03T01:30:44.323Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -49931,7 +49966,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010005037708",
-      "fetchedAt": "2026-06-10T09:31:56.912Z",
+      "fetchedAt": "2026-08-03T01:30:44.835Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -49975,7 +50010,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9180005019935",
-      "fetchedAt": "2026-06-10T09:31:57.411Z",
+      "fetchedAt": "2026-08-03T01:30:45.359Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -50019,7 +50054,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9120005017184",
-      "fetchedAt": "2026-06-10T09:31:57.908Z",
+      "fetchedAt": "2026-08-03T01:30:45.905Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -50073,7 +50108,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7120005010983",
-      "fetchedAt": "2026-06-10T09:31:58.418Z",
+      "fetchedAt": "2026-08-03T01:30:46.464Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -54837,7 +54872,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6120001144720",
-      "fetchedAt": "2026-06-10T09:31:58.938Z",
+      "fetchedAt": "2026-08-03T01:30:47.094Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -55405,7 +55440,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005021094",
-      "fetchedAt": "2026-06-10T09:31:59.448Z",
+      "fetchedAt": "2026-08-03T01:30:47.620Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -55449,7 +55484,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9011505000797",
-      "fetchedAt": "2026-06-10T09:31:59.950Z",
+      "fetchedAt": "2026-08-03T01:30:48.153Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -55461,7 +55496,7 @@
       "officialName": "弁護士法人西村あさひ法律事務所",
       "basicInfo": {
         "name": "弁護士法人西村あさひ法律事務所",
-        "nameEn": "",
+        "nameEn": "Nishimura & Asahi LPC",
         "kana": "ニシムラアサヒホウリツジムショ",
         "location": "東京都千代田区大手町１丁目１番２号大手門タワー",
         "postalCode": "1000004",
@@ -55493,7 +55528,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010405010909",
-      "fetchedAt": "2026-06-10T09:32:00.419Z",
+      "fetchedAt": "2026-08-03T01:30:48.715Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -55527,32 +55562,32 @@
         "foundingYear": null
       },
       "businessSummary": "販促領域及び人材領域における、個人ユーザーと企業クライアントを結ぶマッチングプラットフォームや、企業クライアント向けのSaaS (Software as a Service) の提供。",
-      "employeeNumber": 13070,
+      "employeeNumber": 11666,
       "capitalStock": null,
       "establishmentDate": "2012-10-01",
       "representativeName": "代表取締役　牛田　圭一",
       "workplaceInfo": {
         "base_infos": {
           "average_continuous_service_years_type": "その他",
-          "average_continuous_service_years_Male": null,
-          "average_continuous_service_years_Female": 6.6,
-          "average_continuous_service_years": 6,
-          "average_age": 34.2,
-          "month_average_predetermined_overtime_hours": 33
+          "average_continuous_service_years_Male": 6.7,
+          "average_continuous_service_years_Female": 7.4,
+          "average_continuous_service_years": 5.7,
+          "average_age": 35,
+          "month_average_predetermined_overtime_hours": 31
         },
         "women_activity_infos": {
           "female_workers_proportion_type": "その他",
-          "female_workers_proportion": 44,
-          "female_share_of_manager": 436,
-          "gender_total_of_manager": 1288,
+          "female_workers_proportion": 52,
+          "female_share_of_manager": 409,
+          "gender_total_of_manager": 1168,
           "female_share_of_officers": 3,
           "gender_total_of_officers": 9
         },
         "compatibility_of_childcare_and_work": {
-          "number_of_paternity_leave": 607,
-          "number_of_maternity_leave": 553,
-          "paternity_leave_acquisition_num": 141,
-          "maternity_leave_acquisition_num": 471
+          "number_of_paternity_leave": 366,
+          "number_of_maternity_leave": 397,
+          "paternity_leave_acquisition_num": 147,
+          "maternity_leave_acquisition_num": 363
         }
       },
       "certifications": [
@@ -70133,7 +70168,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001149426",
-      "fetchedAt": "2026-06-10T09:32:01.108Z",
+      "fetchedAt": "2026-08-03T01:30:49.404Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -70206,7 +70241,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9020001133094",
-      "fetchedAt": "2026-06-10T09:32:01.624Z",
+      "fetchedAt": "2026-08-03T01:30:49.949Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -70591,7 +70626,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9150005002893",
-      "fetchedAt": "2026-06-10T09:32:02.134Z",
+      "fetchedAt": "2026-08-03T01:30:50.461Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -70661,37 +70696,10 @@
       "awards": [],
       "finance": {
         "accounting_standards": "有価証券報告書を参照してください",
-        "fiscal_year_cover_page": "第76期（自　2024年４月１日　至　2025年３月31日）",
+        "fiscal_year_cover_page": "第77期（自　2025年４月１日　至　2026年３月31日）",
         "management_index": [
           {
             "period": "4",
-            "net_sales_summary_of_business_results": 495176000000,
-            "net_sales_summary_of_business_results_unit_ref": "JPY",
-            "operating_revenue1_summary_of_business_results": null,
-            "operating_revenue1_summary_of_business_results_unit_ref": null,
-            "operating_revenue2_summary_of_business_results": null,
-            "operating_revenue2_summary_of_business_results_unit_ref": null,
-            "gross_operating_revenue_summary_of_business_results": null,
-            "gross_operating_revenue_summary_of_business_results_unit_ref": null,
-            "ordinary_income_summary_of_business_results": null,
-            "ordinary_income_summary_of_business_results_unit_ref": null,
-            "net_premiums_written_summary_of_business_results_ins": null,
-            "net_premiums_written_summary_of_business_results_ins_unit_ref": null,
-            "ordinary_income_loss_summary_of_business_results": 2206000000,
-            "ordinary_income_loss_summary_of_business_results_unit_ref": "JPY",
-            "net_income_loss_summary_of_business_results": 1422000000,
-            "net_income_loss_summary_of_business_results_unit_ref": "JPY",
-            "capital_stock_summary_of_business_results": 4028000000,
-            "capital_stock_summary_of_business_results_unit_ref": "JPY",
-            "net_assets_summary_of_business_results": 56504000000,
-            "net_assets_summary_of_business_results_unit_ref": "JPY",
-            "total_assets_summary_of_business_results": 161151000000,
-            "total_assets_summary_of_business_results_unit_ref": "JPY",
-            "number_of_employees": 755,
-            "number_of_employees_unit_ref": "pure"
-          },
-          {
-            "period": "3",
             "net_sales_summary_of_business_results": 489426000000,
             "net_sales_summary_of_business_results_unit_ref": "JPY",
             "operating_revenue1_summary_of_business_results": null,
@@ -70718,7 +70726,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "2",
+            "period": "3",
             "net_sales_summary_of_business_results": 523564000000,
             "net_sales_summary_of_business_results_unit_ref": "JPY",
             "operating_revenue1_summary_of_business_results": null,
@@ -70745,7 +70753,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "1",
+            "period": "2",
             "net_sales_summary_of_business_results": 553934000000,
             "net_sales_summary_of_business_results_unit_ref": "JPY",
             "operating_revenue1_summary_of_business_results": null,
@@ -70772,7 +70780,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "0",
+            "period": "1",
             "net_sales_summary_of_business_results": 577793000000,
             "net_sales_summary_of_business_results_unit_ref": "JPY",
             "operating_revenue1_summary_of_business_results": null,
@@ -70797,6 +70805,33 @@
             "total_assets_summary_of_business_results_unit_ref": "JPY",
             "number_of_employees": 700,
             "number_of_employees_unit_ref": "pure"
+          },
+          {
+            "period": "0",
+            "net_sales_summary_of_business_results": 571524000000,
+            "net_sales_summary_of_business_results_unit_ref": "JPY",
+            "operating_revenue1_summary_of_business_results": null,
+            "operating_revenue1_summary_of_business_results_unit_ref": null,
+            "operating_revenue2_summary_of_business_results": null,
+            "operating_revenue2_summary_of_business_results_unit_ref": null,
+            "gross_operating_revenue_summary_of_business_results": null,
+            "gross_operating_revenue_summary_of_business_results_unit_ref": null,
+            "ordinary_income_summary_of_business_results": null,
+            "ordinary_income_summary_of_business_results_unit_ref": null,
+            "net_premiums_written_summary_of_business_results_ins": null,
+            "net_premiums_written_summary_of_business_results_ins_unit_ref": null,
+            "ordinary_income_loss_summary_of_business_results": 5886000000,
+            "ordinary_income_loss_summary_of_business_results_unit_ref": "JPY",
+            "net_income_loss_summary_of_business_results": 4357000000,
+            "net_income_loss_summary_of_business_results_unit_ref": "JPY",
+            "capital_stock_summary_of_business_results": 4028000000,
+            "capital_stock_summary_of_business_results_unit_ref": "JPY",
+            "net_assets_summary_of_business_results": 71690000000,
+            "net_assets_summary_of_business_results_unit_ref": "JPY",
+            "total_assets_summary_of_business_results": 192740000000,
+            "total_assets_summary_of_business_results_unit_ref": "JPY",
+            "number_of_employees": 698,
+            "number_of_employees_unit_ref": "pure"
           }
         ],
         "major_shareholders": [
@@ -70817,10 +70852,6 @@
             "shareholding_ratio": 0.0378
           },
           {
-            "name_major_shareholders": "日酒販グループ従業員持株会",
-            "shareholding_ratio": 0.0425
-          },
-          {
             "name_major_shareholders": "宝酒造株式会社",
             "shareholding_ratio": 0.0428
           },
@@ -70835,6 +70866,10 @@
           {
             "name_major_shareholders": "株式会社三菱ＵＦＪ銀行",
             "shareholding_ratio": 0.0464
+          },
+          {
+            "name_major_shareholders": "日酒販グループ従業員持株会",
+            "shareholding_ratio": 0.0465
           },
           {
             "name_major_shareholders": "株式会社みずほ銀行",
@@ -71278,7 +71313,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010001062097",
-      "fetchedAt": "2026-06-10T09:32:02.633Z",
+      "fetchedAt": "2026-08-03T01:30:50.990Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -71330,7 +71365,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2490001001293",
-      "fetchedAt": "2026-06-10T09:32:03.085Z",
+      "fetchedAt": "2026-08-03T01:30:51.509Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -71357,26 +71392,26 @@
         "foundingYear": null
       },
       "businessSummary": "普通銀行業務",
-      "employeeNumber": 1846,
+      "employeeNumber": 1841,
       "capitalStock": 25000000000,
       "establishmentDate": "",
       "representativeName": "取締役頭取    小  林  達  司",
       "workplaceInfo": {
         "base_infos": {
           "average_continuous_service_years_type": "その他",
-          "average_continuous_service_years_Male": 18.4,
-          "average_continuous_service_years_Female": 10.7,
+          "average_continuous_service_years_Male": 19.4,
+          "average_continuous_service_years_Female": 11.9,
           "average_continuous_service_years": null,
           "average_age": null,
           "month_average_predetermined_overtime_hours": null
         },
         "women_activity_infos": {
           "female_workers_proportion_type": "その他",
-          "female_workers_proportion": 35.1,
-          "female_share_of_manager": 33,
-          "gender_total_of_manager": 289,
+          "female_workers_proportion": 48.4,
+          "female_share_of_manager": 35,
+          "gender_total_of_manager": 296,
           "female_share_of_officers": 2,
-          "gender_total_of_officers": 12
+          "gender_total_of_officers": 11
         },
         "compatibility_of_childcare_and_work": {
           "number_of_paternity_leave": null,
@@ -71465,37 +71500,10 @@
       ],
       "finance": {
         "accounting_standards": "有価証券報告書を参照してください",
-        "fiscal_year_cover_page": "第211期(自  2024年４月１日  至  2025年３月31日)",
+        "fiscal_year_cover_page": "第212期(自  2025年４月１日  至  2026年３月31日)",
         "management_index": [
           {
             "period": "4",
-            "net_sales_summary_of_business_results": null,
-            "net_sales_summary_of_business_results_unit_ref": null,
-            "operating_revenue1_summary_of_business_results": null,
-            "operating_revenue1_summary_of_business_results_unit_ref": null,
-            "operating_revenue2_summary_of_business_results": null,
-            "operating_revenue2_summary_of_business_results_unit_ref": null,
-            "gross_operating_revenue_summary_of_business_results": null,
-            "gross_operating_revenue_summary_of_business_results_unit_ref": null,
-            "ordinary_income_summary_of_business_results": 41483000000,
-            "ordinary_income_summary_of_business_results_unit_ref": "JPY",
-            "net_premiums_written_summary_of_business_results_ins": null,
-            "net_premiums_written_summary_of_business_results_ins_unit_ref": null,
-            "ordinary_income_loss_summary_of_business_results": 9169000000,
-            "ordinary_income_loss_summary_of_business_results_unit_ref": "JPY",
-            "net_income_loss_summary_of_business_results": 6525000000,
-            "net_income_loss_summary_of_business_results_unit_ref": "JPY",
-            "capital_stock_summary_of_business_results": 25000000000,
-            "capital_stock_summary_of_business_results_unit_ref": "JPY",
-            "net_assets_summary_of_business_results": 152401000000,
-            "net_assets_summary_of_business_results_unit_ref": "JPY",
-            "total_assets_summary_of_business_results": 3326734000000,
-            "total_assets_summary_of_business_results_unit_ref": "JPY",
-            "number_of_employees": 1294,
-            "number_of_employees_unit_ref": "pure"
-          },
-          {
-            "period": "3",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": null,
@@ -71522,7 +71530,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "2",
+            "period": "3",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": null,
@@ -71549,7 +71557,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "1",
+            "period": "2",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": null,
@@ -71576,7 +71584,7 @@
             "number_of_employees_unit_ref": "pure"
           },
           {
-            "period": "0",
+            "period": "1",
             "net_sales_summary_of_business_results": null,
             "net_sales_summary_of_business_results_unit_ref": null,
             "operating_revenue1_summary_of_business_results": null,
@@ -71601,24 +71609,51 @@
             "total_assets_summary_of_business_results_unit_ref": "JPY",
             "number_of_employees": 1239,
             "number_of_employees_unit_ref": "pure"
+          },
+          {
+            "period": "0",
+            "net_sales_summary_of_business_results": null,
+            "net_sales_summary_of_business_results_unit_ref": null,
+            "operating_revenue1_summary_of_business_results": null,
+            "operating_revenue1_summary_of_business_results_unit_ref": null,
+            "operating_revenue2_summary_of_business_results": null,
+            "operating_revenue2_summary_of_business_results_unit_ref": null,
+            "gross_operating_revenue_summary_of_business_results": null,
+            "gross_operating_revenue_summary_of_business_results_unit_ref": null,
+            "ordinary_income_summary_of_business_results": 68239000000,
+            "ordinary_income_summary_of_business_results_unit_ref": "JPY",
+            "net_premiums_written_summary_of_business_results_ins": null,
+            "net_premiums_written_summary_of_business_results_ins_unit_ref": null,
+            "ordinary_income_loss_summary_of_business_results": 13164000000,
+            "ordinary_income_loss_summary_of_business_results_unit_ref": "JPY",
+            "net_income_loss_summary_of_business_results": 8036000000,
+            "net_income_loss_summary_of_business_results_unit_ref": "JPY",
+            "capital_stock_summary_of_business_results": 25000000000,
+            "capital_stock_summary_of_business_results_unit_ref": "JPY",
+            "net_assets_summary_of_business_results": 168490000000,
+            "net_assets_summary_of_business_results_unit_ref": "JPY",
+            "total_assets_summary_of_business_results": 3483952000000,
+            "total_assets_summary_of_business_results_unit_ref": "JPY",
+            "number_of_employees": 1239,
+            "number_of_employees_unit_ref": "pure"
           }
         ],
         "major_shareholders": [
           {
-            "name_major_shareholders": "損害保険ジャパン株式会社",
-            "shareholding_ratio": 0.0099
+            "name_major_shareholders": "住友生命保険相互会社",
+            "shareholding_ratio": 0.0098
           },
           {
-            "name_major_shareholders": "四銀総合リース株式会社",
-            "shareholding_ratio": 0.0112
+            "name_major_shareholders": "STATE STREET BANK AND TRUST COMPANY505223(常任代理人　株式会社みずほ銀行決済営業部)",
+            "shareholding_ratio": 0.0101
+          },
+          {
+            "name_major_shareholders": "モルガン・スタンレーMUFG証券株式会社",
+            "shareholding_ratio": 0.0109
           },
           {
             "name_major_shareholders": "JP MORGAN CHASE BANK 385781(常任代理人　株式会社みずほ銀行決済営業部)",
-            "shareholding_ratio": 0.0115
-          },
-          {
-            "name_major_shareholders": "宮本　雅史",
-            "shareholding_ratio": 0.0122
+            "shareholding_ratio": 0.0121
           },
           {
             "name_major_shareholders": "日本生命保険相互会社",
@@ -71626,7 +71661,7 @@
           },
           {
             "name_major_shareholders": "四国銀行従業員持株会",
-            "shareholding_ratio": 0.0235
+            "shareholding_ratio": 0.0231
           },
           {
             "name_major_shareholders": "日亜化学工業株式会社",
@@ -71638,11 +71673,11 @@
           },
           {
             "name_major_shareholders": "株式会社日本カストディ銀行(信託口)",
-            "shareholding_ratio": 0.0551
+            "shareholding_ratio": 0.0477
           },
           {
             "name_major_shareholders": "日本マスタートラスト信託銀行株式会社(信託口)",
-            "shareholding_ratio": 0.0897
+            "shareholding_ratio": 0.0899
           }
         ]
       },
@@ -72158,7 +72193,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7490001000786",
-      "fetchedAt": "2026-06-10T09:32:03.556Z",
+      "fetchedAt": "2026-08-03T01:30:52.069Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -72202,7 +72237,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8120005003359",
-      "fetchedAt": "2026-06-10T09:32:04.049Z",
+      "fetchedAt": "2026-08-03T01:30:52.584Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -72254,7 +72289,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3290005011341",
-      "fetchedAt": "2026-06-10T09:32:04.562Z",
+      "fetchedAt": "2026-08-03T01:30:53.099Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -72298,7 +72333,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4080005006238",
-      "fetchedAt": "2026-06-10T09:32:05.045Z",
+      "fetchedAt": "2026-08-03T01:30:53.640Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -72342,7 +72377,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2180005014505",
-      "fetchedAt": "2026-06-10T09:32:05.531Z",
+      "fetchedAt": "2026-08-03T01:30:54.200Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -72386,7 +72421,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1180001038517",
-      "fetchedAt": "2026-06-10T09:32:06.172Z",
+      "fetchedAt": "2026-08-03T01:30:54.710Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -72604,7 +72639,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4160005006725",
-      "fetchedAt": "2026-06-10T09:32:06.700Z",
+      "fetchedAt": "2026-08-03T01:30:55.264Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -72638,15 +72673,15 @@
       "workplaceInfo": {
         "base_infos": {
           "average_continuous_service_years_type": "その他",
-          "average_continuous_service_years_Male": 19.5,
-          "average_continuous_service_years_Female": 13.8,
+          "average_continuous_service_years_Male": 19.6,
+          "average_continuous_service_years_Female": 13.3,
           "average_continuous_service_years": null,
           "average_age": null,
           "month_average_predetermined_overtime_hours": null
         },
         "women_activity_infos": {
           "female_workers_proportion_type": "その他",
-          "female_workers_proportion": 47.6,
+          "female_workers_proportion": 50,
           "female_share_of_manager": null,
           "gender_total_of_manager": null,
           "female_share_of_officers": null,
@@ -72862,7 +72897,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7340005001465",
-      "fetchedAt": "2026-06-10T09:32:07.224Z",
+      "fetchedAt": "2026-08-03T01:30:55.805Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -72906,7 +72941,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005015996",
-      "fetchedAt": "2026-06-10T09:32:07.697Z",
+      "fetchedAt": "2026-08-03T01:30:56.334Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -72999,7 +73034,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5150005003854",
-      "fetchedAt": "2026-06-10T09:32:08.189Z",
+      "fetchedAt": "2026-08-03T01:30:56.855Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73026,7 +73061,7 @@
         "foundingYear": null
       },
       "businessSummary": "",
-      "employeeNumber": 120,
+      "employeeNumber": 130,
       "capitalStock": null,
       "establishmentDate": "",
       "representativeName": "",
@@ -73083,7 +73118,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7400605000174",
-      "fetchedAt": "2026-06-10T09:32:08.697Z",
+      "fetchedAt": "2026-08-03T01:30:57.357Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73127,7 +73162,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6370001004338",
-      "fetchedAt": "2026-06-10T09:32:09.249Z",
+      "fetchedAt": "2026-08-03T01:30:57.893Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73494,7 +73529,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8140005010881",
-      "fetchedAt": "2026-06-10T09:32:09.734Z",
+      "fetchedAt": "2026-08-03T01:30:58.440Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73546,7 +73581,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005013006",
-      "fetchedAt": "2026-06-10T09:32:10.289Z",
+      "fetchedAt": "2026-08-03T01:30:58.984Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73590,7 +73625,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1120005014569",
-      "fetchedAt": "2026-06-10T09:32:11.103Z",
+      "fetchedAt": "2026-08-03T01:30:59.516Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73634,7 +73669,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3140005010804",
-      "fetchedAt": "2026-06-10T09:32:11.887Z",
+      "fetchedAt": "2026-08-03T01:31:00.043Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73678,7 +73713,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3120005014534",
-      "fetchedAt": "2026-06-10T09:32:12.384Z",
+      "fetchedAt": "2026-08-03T01:31:00.603Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73722,7 +73757,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7120905003112",
-      "fetchedAt": "2026-06-10T09:32:12.842Z",
+      "fetchedAt": "2026-08-03T01:31:01.169Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73766,7 +73801,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1130005012373",
-      "fetchedAt": "2026-06-10T09:32:13.394Z",
+      "fetchedAt": "2026-08-03T01:31:01.700Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73818,7 +73853,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8140005007960",
-      "fetchedAt": "2026-06-10T09:32:13.877Z",
+      "fetchedAt": "2026-08-03T01:31:02.256Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73870,7 +73905,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7122005002713",
-      "fetchedAt": "2026-06-10T09:32:14.343Z",
+      "fetchedAt": "2026-08-03T01:31:02.770Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73914,7 +73949,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2140005005375",
-      "fetchedAt": "2026-06-10T09:32:14.874Z",
+      "fetchedAt": "2026-08-03T01:31:03.285Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -73958,7 +73993,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6160005007993",
-      "fetchedAt": "2026-06-10T09:32:15.372Z",
+      "fetchedAt": "2026-08-03T01:31:04.154Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -74040,7 +74075,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1011105001880",
-      "fetchedAt": "2026-06-10T09:32:16.053Z",
+      "fetchedAt": "2026-08-03T01:31:04.711Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -74092,7 +74127,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6180005007133",
-      "fetchedAt": "2026-06-10T09:32:16.892Z",
+      "fetchedAt": "2026-08-03T01:31:05.266Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -74136,7 +74171,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3120105004617",
-      "fetchedAt": "2026-06-10T09:32:17.506Z",
+      "fetchedAt": "2026-08-03T01:31:05.821Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -74210,7 +74245,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6290005009845",
-      "fetchedAt": "2026-06-10T09:32:18.006Z",
+      "fetchedAt": "2026-08-03T01:31:06.362Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -74301,7 +74336,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6210005005273",
-      "fetchedAt": "2026-06-10T09:32:18.542Z",
+      "fetchedAt": "2026-08-03T01:31:06.878Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -77656,7 +77691,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6360005004186",
-      "fetchedAt": "2026-06-10T09:32:19.082Z",
+      "fetchedAt": "2026-08-03T01:31:07.470Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -83344,7 +83379,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8180005006604",
-      "fetchedAt": "2026-06-10T09:32:19.620Z",
+      "fetchedAt": "2026-08-03T01:31:08.078Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -83386,9 +83421,9 @@
         },
         "women_activity_infos": {
           "female_workers_proportion_type": "その他",
-          "female_workers_proportion": 44,
-          "female_share_of_manager": 30,
-          "gender_total_of_manager": 95,
+          "female_workers_proportion": 33,
+          "female_share_of_manager": null,
+          "gender_total_of_manager": null,
           "female_share_of_officers": null,
           "gender_total_of_officers": null
         },
@@ -83583,7 +83618,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005002339",
-      "fetchedAt": "2026-06-10T09:32:20.179Z",
+      "fetchedAt": "2026-08-03T01:31:08.582Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -83652,7 +83687,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1011105011401",
-      "fetchedAt": "2026-06-10T09:32:20.854Z",
+      "fetchedAt": "2026-08-03T01:31:09.110Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -83682,7 +83717,7 @@
       "employeeNumber": null,
       "capitalStock": null,
       "establishmentDate": "1956-07-24",
-      "representativeName": "代表理事　菅野　康則",
+      "representativeName": "代表理事　平方　宏",
       "workplaceInfo": {},
       "certifications": [
         {
@@ -83741,6 +83776,13 @@
           "date_of_order": "2023-04-25T00:00:00+09:00",
           "title": "令和５年度外国人材の受入れに向けた条件整備等に関する委託事業",
           "amount": 9084091,
+          "government_departments": "林野庁",
+          "note": null
+        },
+        {
+          "date_of_order": "2026-06-26T00:00:00+09:00",
+          "title": "令和８年度木材産業における外国人材の受入れに関する委託事業",
+          "amount": 17727273,
           "government_departments": "林野庁",
           "note": null
         },
@@ -83967,7 +84009,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3010005003201",
-      "fetchedAt": "2026-06-10T09:32:21.464Z",
+      "fetchedAt": "2026-08-03T01:31:09.628Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -84541,6 +84583,13 @@
           "title": "令和８年度那須平成の森モニタリング等調査業務",
           "amount": 4770000,
           "government_departments": "環境省",
+          "note": null
+        },
+        {
+          "date_of_order": "2026-06-12T00:00:00+09:00",
+          "title": "令和８年度帰還困難区域等における森林施業等実証事業",
+          "amount": 26000000,
+          "government_departments": "林野庁",
           "note": null
         },
         {
@@ -85559,6 +85608,27 @@
           "note": null
         },
         {
+          "date_of_order": "2026-06-12T00:00:00+09:00",
+          "title": "令和８年度避難指示解除区域等における森林施業等実証事業（植栽木等調査）",
+          "amount": 54000000,
+          "government_departments": "林野庁",
+          "note": null
+        },
+        {
+          "date_of_order": "2026-06-24T00:00:00+09:00",
+          "title": "令和８年度屋久島国立公園花之江河流水分散対策等検討業務",
+          "amount": 4600000,
+          "government_departments": "環境省",
+          "note": null
+        },
+        {
+          "date_of_order": "2026-07-08T00:00:00+09:00",
+          "title": "令和８年度屋久島世界自然遺産地域における順応的管理保全方策等検討業務",
+          "amount": 5200000,
+          "government_departments": "環境省",
+          "note": null
+        },
+        {
           "date_of_order": "2016-03-28T00:00:00+09:00",
           "title": "平成２８年度沖縄県八重山地域におけるオオヒキガエル等外来生物防除事業（西表島地域）業務",
           "amount": 5980000,
@@ -86180,7 +86250,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005017342",
-      "fetchedAt": "2026-06-10T09:32:22.014Z",
+      "fetchedAt": "2026-08-03T01:31:10.224Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -89847,7 +89917,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1260005001776",
-      "fetchedAt": "2026-06-10T09:32:22.517Z",
+      "fetchedAt": "2026-08-03T01:31:10.764Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -89935,7 +90005,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005004211",
-      "fetchedAt": "2026-06-10T09:32:22.994Z",
+      "fetchedAt": "2026-08-03T01:31:11.245Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -90099,7 +90169,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005016255",
-      "fetchedAt": "2026-06-10T09:32:23.472Z",
+      "fetchedAt": "2026-08-03T01:31:11.766Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -90304,7 +90374,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010605002253",
-      "fetchedAt": "2026-06-10T09:32:23.969Z",
+      "fetchedAt": "2026-08-03T01:31:12.297Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -90348,7 +90418,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010405002840",
-      "fetchedAt": "2026-06-10T09:32:24.457Z",
+      "fetchedAt": "2026-08-03T01:31:12.802Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -206366,7 +206436,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4120905002554",
-      "fetchedAt": "2026-06-10T09:32:25.685Z",
+      "fetchedAt": "2026-08-03T01:31:14.076Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -206403,7 +206473,7 @@
       "workplaceInfo": {
         "base_infos": {
           "average_continuous_service_years_type": "その他",
-          "average_continuous_service_years_Male": 14.3,
+          "average_continuous_service_years_Male": 14.2,
           "average_continuous_service_years_Female": 11.6,
           "average_continuous_service_years": null,
           "average_age": null,
@@ -206411,7 +206481,7 @@
         },
         "women_activity_infos": {
           "female_workers_proportion_type": "その他",
-          "female_workers_proportion": 25.4,
+          "female_workers_proportion": 26.7,
           "female_share_of_manager": null,
           "gender_total_of_manager": null,
           "female_share_of_officers": null,
@@ -328814,13 +328884,6 @@
           "note": null
         },
         {
-          "date_of_order": "2020-05-01T00:00:00+09:00",
-          "title": "人流データ等を活用した新型コロナウイルス感染防止を目的とした分析支援及び助言業務",
-          "amount": 3300000,
-          "government_departments": "情報処理推進機構",
-          "note": null
-        },
-        {
           "date_of_order": "2018-07-01T00:00:00+09:00",
           "title": "２０１８年度産業サイバーセキュリティセンター中核人材育成プログラム［プライマリーコース・ベーシックコース］に関する設計・検証等業務（ＩＴセキュリティ分野）",
           "amount": 59878403,
@@ -328961,9 +329024,23 @@
           "note": null
         },
         {
+          "date_of_order": "2020-05-01T00:00:00+09:00",
+          "title": "人流データ等を活用した新型コロナウイルス感染防止を目的とした分析支援及び助言業務",
+          "amount": 3300000,
+          "government_departments": "情報処理推進機構",
+          "note": null
+        },
+        {
           "date_of_order": "2020-07-28T00:00:00+09:00",
           "title": "ＮＥＤＯ先導研究プログラム新産業創出新技術先導研究プログラムデジタル駆動化学による機能性化学品製造プロセスの新基盤構築―高速遷移状態解析による合成経路探索と実証―",
           "amount": 4743000,
+          "government_departments": "国立研究開発法人新エネルギー・産業技術総合開発機構",
+          "note": null
+        },
+        {
+          "date_of_order": "2020-10-19T00:00:00+09:00",
+          "title": "海洋生分解性プラスチックの社会実装に向けた技術開発事業／海洋生分解性に係る評価手法の確立／",
+          "amount": 59766000,
           "government_departments": "国立研究開発法人新エネルギー・産業技術総合開発機構",
           "note": null
         },
@@ -328978,13 +329055,6 @@
           "date_of_order": "2020-09-25T00:00:00+09:00",
           "title": "燃料電池等利用の飛躍的拡大に向けた共通課題解決型産学官連携研究開発事業／共通課題解決型基盤技術開発／長寿命化・高性能化達成のための設計シミュレーターの開発",
           "amount": 28431000,
-          "government_departments": "国立研究開発法人新エネルギー・産業技術総合開発機構",
-          "note": null
-        },
-        {
-          "date_of_order": "2020-10-19T00:00:00+09:00",
-          "title": "海洋生分解性プラスチックの社会実装に向けた技術開発事業／海洋生分解性に係る評価手法の確立／",
-          "amount": 59766000,
           "government_departments": "国立研究開発法人新エネルギー・産業技術総合開発機構",
           "note": null
         },
@@ -329542,6 +329612,13 @@
           "note": null
         },
         {
+          "date_of_order": "2026-07-10T00:00:00+09:00",
+          "title": "【規制庁】令和８年度原子力施設等防災対策等委託費（火災影響評価自動化システムの高度化）事業",
+          "amount": 9545000,
+          "government_departments": "原子力安全庁",
+          "note": null
+        },
+        {
           "date_of_order": "2021-08-11T00:00:00+09:00",
           "title": "燃料電池等利用の飛躍的拡大に向けた共通課題解決型産学官連携研究開発事業水素利用等高度化先端技術開発革新的低コスト燃料電池自動車用高圧水素容器の健全性を保証するための非破壊検査，オンラインモニタリング，損傷許容技術の開発",
           "amount": 6355000,
@@ -330049,7 +330126,7 @@
         },
         {
           "date_of_approval": "2023-02-17",
-          "title": "（本郷）総合研究棟改修（工学系）",
+          "title": "（駒場Ⅰ）講義棟改修",
           "amount": "0",
           "target": null,
           "government_departments": "文部科学省"
@@ -330070,7 +330147,7 @@
         },
         {
           "date_of_approval": "2023-02-17",
-          "title": "（駒場Ⅰ）講義棟改修",
+          "title": "（本郷）総合研究棟改修（工学系）",
           "amount": "0",
           "target": null,
           "government_departments": "文部科学省"
@@ -330637,15 +330714,15 @@
         },
         {
           "date_of_approval": "2021-04-01",
-          "title": "研究大学強化促進事業",
-          "amount": "221400000",
+          "title": "ハイパーカミオカンデ計画",
+          "amount": "70000000",
           "target": null,
           "government_departments": "文部科学省"
         },
         {
           "date_of_approval": "2021-04-01",
-          "title": "ハイパーカミオカンデ計画",
-          "amount": "70000000",
+          "title": "研究大学強化促進事業",
+          "amount": "221400000",
           "target": null,
           "government_departments": "文部科学省"
         },
@@ -332389,7 +332466,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010005007398",
-      "fetchedAt": "2026-06-10T09:32:26.975Z",
+      "fetchedAt": "2026-08-03T01:31:15.180Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -332433,7 +332510,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010005031404",
-      "fetchedAt": "2026-06-10T09:32:27.470Z",
+      "fetchedAt": "2026-08-03T01:31:15.707Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -333201,7 +333278,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6290005001257",
-      "fetchedAt": "2026-06-10T09:32:28.019Z",
+      "fetchedAt": "2026-08-03T01:31:16.290Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -333263,7 +333340,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010405010514",
-      "fetchedAt": "2026-06-10T09:32:28.462Z",
+      "fetchedAt": "2026-08-03T01:31:16.841Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -333307,7 +333384,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4240002005853",
-      "fetchedAt": "2026-06-10T09:32:28.924Z",
+      "fetchedAt": "2026-08-03T01:31:17.366Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -333376,7 +333453,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010701022043",
-      "fetchedAt": "2026-06-10T09:32:29.406Z",
+      "fetchedAt": "2026-08-03T01:31:17.924Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -333560,7 +333637,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010005017549",
-      "fetchedAt": "2026-06-10T09:32:29.874Z",
+      "fetchedAt": "2026-08-03T01:31:18.440Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -333612,7 +333689,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010005004144",
-      "fetchedAt": "2026-06-10T09:32:30.349Z",
+      "fetchedAt": "2026-08-03T01:31:18.976Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -334554,7 +334631,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9050005005205",
-      "fetchedAt": "2026-06-10T09:32:31.045Z",
+      "fetchedAt": "2026-08-03T01:31:19.495Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -334598,7 +334675,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010005016680",
-      "fetchedAt": "2026-06-10T09:32:31.638Z",
+      "fetchedAt": "2026-08-03T01:31:20.021Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -334675,7 +334752,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6120001184147",
-      "fetchedAt": "2026-06-10T09:32:32.232Z",
+      "fetchedAt": "2026-08-03T01:31:20.561Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -335005,7 +335082,7 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010405009691",
-      "fetchedAt": "2026-06-10T09:32:32.764Z",
+      "fetchedAt": "2026-08-03T01:31:21.071Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]
@@ -335114,7 +335191,717 @@
       "licenses": [],
       "sourceName": "gBizINFO",
       "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010005004597",
-      "fetchedAt": "2026-06-10T09:32:33.272Z",
+      "fetchedAt": "2026-08-03T01:31:21.623Z",
+      "notes": [
+        "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
+      ]
+    },
+    {
+      "corporateNumber": "1011001123515",
+      "corporationSlug": "corporation-luup",
+      "corporationName": "株式会社Luup",
+      "officialName": "株式会社Ｌｕｕｐ",
+      "basicInfo": {
+        "name": "株式会社Ｌｕｕｐ",
+        "nameEn": "",
+        "kana": "ループ",
+        "location": "東京都品川区西五反田８丁目９番５号ＦＯＲＥＣＡＳＴ五反田ＷＥＳＴ７階",
+        "postalCode": "1410031",
+        "kind": "301",
+        "status": "-",
+        "companyUrl": "",
+        "industry": [
+          "R"
+        ],
+        "businessItems": [
+          "301",
+          "303",
+          "306",
+          "308",
+          "310",
+          "311",
+          "315"
+        ],
+        "qualificationGrade": "、、B、",
+        "foundingYear": null
+      },
+      "businessSummary": "電動マイクロモビリティのシェアリングサービス提供",
+      "employeeNumber": 128,
+      "capitalStock": null,
+      "establishmentDate": "2018-07-30",
+      "representativeName": "代表取締役　岡井　大輝",
+      "workplaceInfo": {
+        "base_infos": {
+          "average_continuous_service_years_type": null,
+          "average_continuous_service_years_Male": null,
+          "average_continuous_service_years_Female": null,
+          "average_continuous_service_years": null,
+          "average_age": null,
+          "month_average_predetermined_overtime_hours": null
+        },
+        "women_activity_infos": {
+          "female_workers_proportion_type": null,
+          "female_workers_proportion": null,
+          "female_share_of_manager": 1,
+          "gender_total_of_manager": 10,
+          "female_share_of_officers": null,
+          "gender_total_of_officers": null
+        },
+        "compatibility_of_childcare_and_work": {
+          "number_of_paternity_leave": null,
+          "number_of_maternity_leave": null,
+          "paternity_leave_acquisition_num": null,
+          "maternity_leave_acquisition_num": null
+        }
+      },
+      "certifications": [
+        {
+          "date_of_approval": null,
+          "title": "物品の製造：\n物品の販売：\n役務の提供等：B",
+          "target": null,
+          "government_departments": "デジタル庁",
+          "category": null
+        }
+      ],
+      "awards": [],
+      "finance": {
+        "accounting_standards": null,
+        "fiscal_year_cover_page": null,
+        "management_index": [],
+        "major_shareholders": []
+      },
+      "patents": [
+        {
+          "patent_type": "特許",
+          "registration_number": "7239213",
+          "application_date": "2021-12-01",
+          "classifications": [
+            {
+              "コード値": "B60Q 1/50 Z",
+              "コード名": "FI分類",
+              "日本語": "車両一般"
+            },
+            {
+              "コード値": "5H125",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "移動体、システム、プログラム及び情報処理方法",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "7410595",
+          "application_date": "2021-12-01",
+          "classifications": [
+            {
+              "コード値": "B60L 3/08 M",
+              "コード名": "FI分類",
+              "日本語": "車両一般"
+            },
+            {
+              "コード値": "5H125",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "移動体、プログラム及び情報処理方法",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "7410595",
+          "application_date": "2021-12-01",
+          "classifications": [
+            {
+              "コード値": "G16Y 40/30",
+              "コード名": "FI分類",
+              "日本語": "特定の用途分野に特に適合した情報通信技術［ＩＣＴ］"
+            },
+            {
+              "コード値": "5H125",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "移動体、プログラム及び情報処理方法",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "7410595",
+          "application_date": "2021-12-01",
+          "classifications": [
+            {
+              "コード値": "B60Q 1/54",
+              "コード名": "FI分類",
+              "日本語": "車両一般"
+            },
+            {
+              "コード値": "5H125",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "移動体、プログラム及び情報処理方法",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "7410595",
+          "application_date": "2021-12-01",
+          "classifications": [
+            {
+              "コード値": "B60L 3/00 N",
+              "コード名": "FI分類",
+              "日本語": "車両一般"
+            },
+            {
+              "コード値": "5H125",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "移動体、プログラム及び情報処理方法",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "7410595",
+          "application_date": "2021-12-01",
+          "classifications": [
+            {
+              "コード値": "B60L 15/20 Z",
+              "コード名": "FI分類",
+              "日本語": "車両一般"
+            },
+            {
+              "コード値": "5H125",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "移動体、プログラム及び情報処理方法",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "7410595",
+          "application_date": "2021-12-01",
+          "classifications": [
+            {
+              "コード値": "G16Y 10/40",
+              "コード名": "FI分類",
+              "日本語": "特定の用途分野に特に適合した情報通信技術［ＩＣＴ］"
+            },
+            {
+              "コード値": "5H125",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "移動体、プログラム及び情報処理方法",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6810492",
+          "application_date": "2020-05-12",
+          "classifications": [
+            {
+              "コード値": "G08G 1/00 Z",
+              "コード名": "FI分類",
+              "日本語": "信号"
+            },
+            {
+              "コード値": "5H181",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6803100",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G06Q 50/10",
+              "コード名": "FI分類",
+              "日本語": "計算または計数"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6785021",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G08G 1/14 A",
+              "コード名": "FI分類",
+              "日本語": "信号"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6781494",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G08G 1/123 A",
+              "コード名": "FI分類",
+              "日本語": "信号"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6803100",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "H02J 13/00 301 A",
+              "コード名": "FI分類",
+              "日本語": "電力の発電，変換，配電"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6781494",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G06Q 50/10",
+              "コード名": "FI分類",
+              "日本語": "計算または計数"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6781493",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G06Q 50/10",
+              "コード名": "FI分類",
+              "日本語": "計算または計数"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6781493",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G06Q 30/04",
+              "コード名": "FI分類",
+              "日本語": "計算または計数"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6781494",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G06Q 30/06 350",
+              "コード名": "FI分類",
+              "日本語": "計算または計数"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6803100",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G06Q 30/06 350",
+              "コード名": "FI分類",
+              "日本語": "計算または計数"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6785021",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G06Q 50/10",
+              "コード名": "FI分類",
+              "日本語": "計算または計数"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "7307492",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G06Q 50/30",
+              "コード名": "FI分類",
+              "日本語": "計算または計数"
+            },
+            {
+              "コード値": "3D115",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "移動体、方法、システム及びプログラム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6781493",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G08G 1/14 A",
+              "コード名": "FI分類",
+              "日本語": "信号"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6781493",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G06Q 30/06 350",
+              "コード名": "FI分類",
+              "日本語": "計算または計数"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6803100",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "H04M 11/00 302",
+              "コード名": "FI分類",
+              "日本語": "電気通信技術"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "特許",
+          "registration_number": "6785021",
+          "application_date": "2020-05-11",
+          "classifications": [
+            {
+              "コード値": "G06Q 30/06 350",
+              "コード名": "FI分類",
+              "日本語": "計算または計数"
+            },
+            {
+              "コード値": "5L049",
+              "コード名": "Fターム-テーマコード"
+            }
+          ],
+          "title": "運用支援システム",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6688053",
+          "application_date": "2022-02-01",
+          "classifications": [
+            {
+              "コード値": "36",
+              "コード名": "類",
+              "日本語": "金融、保険及び不動産の取引"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6688053",
+          "application_date": "2022-02-01",
+          "classifications": [
+            {
+              "コード値": "39",
+              "コード名": "類",
+              "日本語": "輸送、こん包及び保管並びに旅行の手配"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6637518",
+          "application_date": "2022-02-01",
+          "classifications": [
+            {
+              "コード値": "36",
+              "コード名": "類",
+              "日本語": "金融、保険及び不動産の取引"
+            }
+          ],
+          "title": "駅前化",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6688053",
+          "application_date": "2022-02-01",
+          "classifications": [
+            {
+              "コード値": "09",
+              "コード名": "類",
+              "日本語": "科学用、航海用、測量用、写真用、音響用、映像用、計量用、信号用、検査用、救命用、教育用、計算用又は情報処理用の機械器具、光学式の機械器具及び電気の伝導用、電気回路の開閉用、変圧用、蓄電用、電圧調整用又は電気制御用の機械器具"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6637526",
+          "application_date": "2022-02-01",
+          "classifications": [
+            {
+              "コード値": "42",
+              "コード名": "類",
+              "日本語": "科学技術又は産業に関する調査研究及び設計並びに電子計算機又はソフトウェアの設計及び開発"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6688052",
+          "application_date": "2022-02-01",
+          "classifications": [
+            {
+              "コード値": "09",
+              "コード名": "類",
+              "日本語": "科学用、航海用、測量用、写真用、音響用、映像用、計量用、信号用、検査用、救命用、教育用、計算用又は情報処理用の機械器具、光学式の機械器具及び電気の伝導用、電気回路の開閉用、変圧用、蓄電用、電圧調整用又は電気制御用の機械器具"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6688052",
+          "application_date": "2022-02-01",
+          "classifications": [
+            {
+              "コード値": "36",
+              "コード名": "類",
+              "日本語": "金融、保険及び不動産の取引"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6637526",
+          "application_date": "2022-02-01",
+          "classifications": [
+            {
+              "コード値": "37",
+              "コード名": "類",
+              "日本語": "建設、設置工事及び修理"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6688052",
+          "application_date": "2022-02-01",
+          "classifications": [
+            {
+              "コード値": "39",
+              "コード名": "類",
+              "日本語": "輸送、こん包及び保管並びに旅行の手配"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6637526",
+          "application_date": "2022-02-01",
+          "classifications": [
+            {
+              "コード値": "12",
+              "コード名": "類",
+              "日本語": "乗物その他移動用の装置"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6233256",
+          "application_date": "2019-12-15",
+          "classifications": [
+            {
+              "コード値": "39",
+              "コード名": "類",
+              "日本語": "輸送、こん包及び保管並びに旅行の手配"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6233256",
+          "application_date": "2019-12-15",
+          "classifications": [
+            {
+              "コード値": "36",
+              "コード名": "類",
+              "日本語": "金融、保険及び不動産の取引"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6234131",
+          "application_date": "2019-12-15",
+          "classifications": [
+            {
+              "コード値": "09",
+              "コード名": "類",
+              "日本語": "科学用、航海用、測量用、写真用、音響用、映像用、計量用、信号用、検査用、救命用、教育用、計算用又は情報処理用の機械器具、光学式の機械器具及び電気の伝導用、電気回路の開閉用、変圧用、蓄電用、電圧調整用又は電気制御用の機械器具"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6233245",
+          "application_date": "2018-11-27",
+          "classifications": [
+            {
+              "コード値": "36",
+              "コード名": "類",
+              "日本語": "金融、保険及び不動産の取引"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        },
+        {
+          "patent_type": "商標",
+          "registration_number": "6233245",
+          "application_date": "2018-11-27",
+          "classifications": [
+            {
+              "コード値": "39",
+              "コード名": "類",
+              "日本語": "輸送、こん包及び保管並びに旅行の手配"
+            }
+          ],
+          "title": "ＬＵＵＰ",
+          "url": null
+        }
+      ],
+      "procurements": [],
+      "subsidies": [],
+      "licenses": [],
+      "sourceName": "gBizINFO",
+      "sourceUrl": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1011001123515",
+      "fetchedAt": "2026-08-03T01:31:22.146Z",
       "notes": [
         "gBizINFO v2には独立した許認可項目がないため、届出・認定情報はcertificationsに保存し、licensesは空配列としています。"
       ]

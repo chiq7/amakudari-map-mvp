@@ -450,8 +450,18 @@ function compactObject(entries) {
 function normalizeGbizInfo(info, corporateNumber, fallback) {
   if (!info && fallback) return fallback;
   if (!info) return undefined;
+  const officialWebsiteUrl = clean(info.company_url);
   return {
     ...compactObject([
+      [
+        "officialWebsite",
+        officialWebsiteUrl
+          ? {
+              label: `${clean(info.name) || fallback?.officialName || "法人"} 公式サイト`,
+              url: officialWebsiteUrl,
+            }
+          : undefined,
+      ],
       ["businessSummary", clean(info.business_summary)],
       ["employeeNumber", finiteNumber(info.employee_number)],
       ["capitalStock", finiteNumber(info.capital_stock)],

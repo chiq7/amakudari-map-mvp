@@ -111,6 +111,10 @@ export interface GbizWorkplaceInfo {
 }
 
 export interface GbizInfo {
+  officialWebsite?: {
+    label: string;
+    url: string;
+  };
   businessSummary?: string;
   employeeNumber?: number;
   capitalStock?: number;

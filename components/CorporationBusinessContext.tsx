@@ -15,16 +15,10 @@ export default function CorporationBusinessContext({
   connection?: string;
 }) {
   const editorialContext = getCorporationEditorialContext(corporation.slug);
+  const officialWebsite =
+    editorialContext?.business.officialWebsite || corporation.gbizInfo?.officialWebsite;
   const businessSummary =
     editorialContext?.business.summary || corporation.gbizInfo?.businessSummary || corporation.description;
-  const sourceUrl =
-    editorialContext?.business.officialWebsite.url ||
-    corporation.gbizInfo?.sourceUrl ||
-    corporation.basicInfo?.sourceUrl;
-  const sourceName =
-    editorialContext?.business.officialWebsite.label ||
-    corporation.gbizInfo?.sourceName ||
-    corporation.basicInfo?.sourceName;
   const hasBusinessSummary = Boolean(businessSummary?.trim());
   const showSidePanel = recordCount !== undefined || Boolean(connection);
 
@@ -47,25 +41,55 @@ export default function CorporationBusinessContext({
             </>
           ) : (
             <>
-              <h2 className="mt-2 text-2xl font-extrabold text-primary">{corporation.name}</h2>
+              <h2 className="mt-2 text-2xl font-extrabold text-primary">公的データで確認できる法人情報</h2>
               <p className="mt-3 max-w-3xl text-sm leading-7 text-on-surface-variant">
-                法人公式サイトと公的データを照合できた業務情報から順次掲載しています。再就職記録の内容は、この業務情報とは分けて公表資料から確認できます。
+                {corporation.basicInfo
+                  ? `${corporation.basicInfo.officialName}（法人番号 ${corporation.basicInfo.corporateNumber}）として登録されていることを確認できます。`
+                  : "法人名と再就職記録は公表資料で確認できます。"}
+                業務内容は、法人公式または公的データで確認できた範囲だけを追加します。
               </p>
             </>
           )}
-          {sourceUrl ? (
+          <div className="mt-5 flex flex-wrap gap-3">
+            {officialWebsite ? (
+              <a
+                href={officialWebsite.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-analytics-event="source_link"
+                data-source-type="official_website"
+                data-analytics-location="corporation_business"
+                className="inline-flex min-h-11 items-center bg-primary px-5 text-sm font-extrabold text-white transition hover:bg-primary/90"
+              >
+                法人公式ページを見る ↗
+              </a>
+            ) : null}
+            {corporation.gbizInfo?.sourceUrl ? (
+              <a
+                href={corporation.gbizInfo.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-analytics-event="source_link"
+                data-source-type="corporate_registry"
+                data-analytics-location="corporation_business"
+                className="inline-flex min-h-11 items-center border border-outline bg-white px-5 text-sm font-extrabold text-primary transition hover:bg-surface-container-low"
+              >
+                gBizINFOの法人情報を見る ↗
+              </a>
+            ) : corporation.basicInfo?.sourceUrl ? (
             <a
-              href={sourceUrl}
+              href={corporation.basicInfo.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
               data-analytics-event="source_link"
-              data-source-type={editorialContext ? "official_website" : "corporate_registry"}
+              data-source-type="corporate_registry"
               data-analytics-location="corporation_business"
-              className="mt-5 inline-flex min-h-11 items-center bg-primary px-5 text-sm font-extrabold text-white transition hover:bg-primary/90"
+              className="inline-flex min-h-11 items-center border border-outline bg-white px-5 text-sm font-extrabold text-primary transition hover:bg-surface-container-low"
             >
-              {sourceName || "法人情報の出典"}を見る ↗
+              国税庁の法人情報を見る ↗
             </a>
-          ) : null}
+            ) : null}
+          </div>
         </div>
 
         {showSidePanel ? <aside className="border-t border-outline-variant bg-surface-container-low p-5 md:border-l md:border-t-0 md:p-7">

@@ -1,0 +1,636 @@
+{
+  "sourceType": "corporation-enrichment-review",
+  "status": "review-needed",
+  "createdAt": "2026-08-03",
+  "records": [
+    {
+      "inputCorporationName": "日本電気株式会社",
+      "normalizedName": "日本電気",
+      "status": "review-needed",
+      "reason": "multiple-candidates",
+      "candidates": [
+        {
+          "corporateNumber": "2030001060724",
+          "officialName": "埼玉日本電気株式会社",
+          "registeredAddress": "神奈川県川崎市中原区下沼部１７５３番地",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2030001060724"
+        },
+        {
+          "corporateNumber": "3100001020827",
+          "officialName": "長野日本電気株式会社",
+          "registeredAddress": "神奈川県川崎市中原区下沼部１７５３番地",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3100001020827"
+        },
+        {
+          "corporateNumber": "7010401022916",
+          "officialName": "日本電気株式会社",
+          "registeredAddress": "東京都港区芝５丁目７番１号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7010401022916"
+        },
+        {
+          "corporateNumber": "8290801032247",
+          "officialName": "日本電気株式会社",
+          "registeredAddress": "福岡県北九州市小倉南区西貫１丁目４番２１号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8290801032247"
+        },
+        {
+          "corporateNumber": "9090001008208",
+          "officialName": "山梨日本電気株式会社",
+          "registeredAddress": "山梨県大月市大月町真木７４７番地",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9090001008208"
+        }
+      ],
+      "suggestedAction": "候補の法人番号・所在地・法人格を一次資料で確認してください。"
+    },
+    {
+      "inputCorporationName": "Mercer Japan Ltd.",
+      "normalizedName": "MERCERJAPANLTD",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "UBS SuMi TRUSTウェルス・マネジメント株式会社",
+      "normalizedName": "UBSSUMITRUSTウェルスマネジメント",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "医療用医薬品製造販売業公正取引協議会",
+      "normalizedName": "医療用医薬品製造販売業公正取引協議会",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "株式会社CONNECT",
+      "normalizedName": "CONNECT",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "学校法人国士舘",
+      "normalizedName": "国士舘",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "PwCコンサルティング合同会社",
+      "normalizedName": "PWCコンサルティング",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "株式会社SHIFT",
+      "normalizedName": "SHIFT",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "八雲法律事務所",
+      "normalizedName": "八雲法律事務所",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "株式会社NSD",
+      "normalizedName": "NSD",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "株式会社ONODERA USER RUN",
+      "normalizedName": "ONODERAUSERRUN",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "学校法人光華女子学園",
+      "normalizedName": "光華女子学園",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "学校法人花園学園",
+      "normalizedName": "花園学園",
+      "status": "review-needed",
+      "reason": "multiple-candidates",
+      "candidates": [
+        {
+          "corporateNumber": "1180005009539",
+          "officialName": "学校法人花園学園",
+          "registeredAddress": "愛知県一宮市木曽川町黒田字宝光寺３７番地",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1180005009539"
+        },
+        {
+          "corporateNumber": "2021005008553",
+          "officialName": "学校法人花園学園",
+          "registeredAddress": "神奈川県三浦市向ケ崎町１１番１号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2021005008553"
+        },
+        {
+          "corporateNumber": "3290805003075",
+          "officialName": "学校法人花園学園",
+          "registeredAddress": "福岡県北九州市門司区風師４丁目３番２５号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3290805003075"
+        },
+        {
+          "corporateNumber": "3360005003827",
+          "officialName": "学校法人花園学園",
+          "registeredAddress": "沖縄県宮古島市平良字東仲宗根６１７番地の６",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3360005003827"
+        },
+        {
+          "corporateNumber": "5070005000819",
+          "officialName": "学校法人花園学園",
+          "registeredAddress": "群馬県前橋市元総社町１３７２番地の１",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5070005000819"
+        },
+        {
+          "corporateNumber": "7500005000938",
+          "officialName": "学校法人花園学園",
+          "registeredAddress": "愛媛県松山市御幸１丁目２６７番地",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7500005000938"
+        },
+        {
+          "corporateNumber": "8080005003256",
+          "officialName": "学校法人花園学園",
+          "registeredAddress": "静岡県静岡市清水区南岡町３番８号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8080005003256"
+        },
+        {
+          "corporateNumber": "9130005004264",
+          "officialName": "学校法人花園学園",
+          "registeredAddress": "京都府京都市中京区西ノ京壺ノ内町８番地の１",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9130005004264"
+        }
+      ],
+      "suggestedAction": "候補の法人番号・所在地・法人格を一次資料で確認してください。"
+    },
+    {
+      "inputCorporationName": "株式会社大創産業",
+      "normalizedName": "大創産業",
+      "status": "review-needed",
+      "reason": "multiple-candidates",
+      "candidates": [
+        {
+          "corporateNumber": "5360001001956",
+          "officialName": "株式会社大創産業",
+          "registeredAddress": "沖縄県那覇市おもろまち４丁目６番８号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5360001001956"
+        },
+        {
+          "corporateNumber": "7240001022681",
+          "officialName": "株式会社大創産業",
+          "registeredAddress": "広島県東広島市西条吉行東１丁目４番１４号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7240001022681"
+        }
+      ],
+      "suggestedAction": "候補の法人番号・所在地・法人格を一次資料で確認してください。"
+    },
+    {
+      "inputCorporationName": "かがやき税理士法人",
+      "normalizedName": "かがやき税理士法人",
+      "status": "review-needed",
+      "reason": "multiple-candidates",
+      "candidates": [
+        {
+          "corporateNumber": "1180305004628",
+          "officialName": "かがやき税理士法人",
+          "registeredAddress": "神奈川県川崎市麻生区万福寺１丁目１番１号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1180305004628"
+        },
+        {
+          "corporateNumber": "8160005001367",
+          "officialName": "かがやき税理士法人",
+          "registeredAddress": "滋賀県大津市大萱１丁目１７番５号本郷第２ビル５階",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8160005001367"
+        }
+      ],
+      "suggestedAction": "候補の法人番号・所在地・法人格を一次資料で確認してください。"
+    },
+    {
+      "inputCorporationName": "株式会社ウィザス",
+      "normalizedName": "ウィザス",
+      "status": "review-needed",
+      "reason": "multiple-candidates",
+      "candidates": [
+        {
+          "corporateNumber": "3010601057600",
+          "officialName": "株式会社ウィザス",
+          "registeredAddress": "東京都墨田区京島３丁目１番１２号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3010601057600"
+        },
+        {
+          "corporateNumber": "7040001142905",
+          "officialName": "株式会社ウィザス",
+          "registeredAddress": "千葉県船橋市薬円台４丁目２４番２－７０１号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7040001142905"
+        },
+        {
+          "corporateNumber": "9120001076820",
+          "officialName": "株式会社ウィザス",
+          "registeredAddress": "大阪府大阪市中央区備後町３丁目６番２号ＫＦセンタービル",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9120001076820"
+        },
+        {
+          "corporateNumber": "1120001203687",
+          "officialName": "株式会社ウィザスイーライフ",
+          "registeredAddress": "大阪府大阪市中央区備後町３丁目６番２号ＫＦセンタービル",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1120001203687"
+        },
+        {
+          "corporateNumber": "4010001191874",
+          "officialName": "株式会社ウィザスグローバルソリューションズ",
+          "registeredAddress": "東京都千代田区紀尾井町３番３２号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4010001191874"
+        }
+      ],
+      "suggestedAction": "候補の法人番号・所在地・法人格を一次資料で確認してください。"
+    },
+    {
+      "inputCorporationName": "医療法人社団東光会戸田中央リハビリテーション病院",
+      "normalizedName": "東光会戸田中央リハビリテーション病院",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "医療法人社団あしたば会富士在宅診療所",
+      "normalizedName": "あしたば会富士在宅診療所",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "トヨタ自動車株式会社",
+      "normalizedName": "トヨタ自動車",
+      "status": "review-needed",
+      "reason": "multiple-candidates",
+      "candidates": [
+        {
+          "corporateNumber": "9180001059935",
+          "officialName": "愛知トヨタ自動車株式会社",
+          "registeredAddress": "愛知県名古屋市昭和区高辻町６番８号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9180001059935"
+        },
+        {
+          "corporateNumber": "9420001000213",
+          "officialName": "青森トヨタ自動車株式会社",
+          "registeredAddress": "青森県青森市合浦２丁目１９番２３号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9420001000213"
+        },
+        {
+          "corporateNumber": "6410001000514",
+          "officialName": "秋田トヨタ自動車株式会社",
+          "registeredAddress": "秋田県秋田市泉中央２丁目１番３号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6410001000514"
+        },
+        {
+          "corporateNumber": "4450001000264",
+          "officialName": "旭川トヨタ自動車株式会社",
+          "registeredAddress": "北海道旭川市四条通２丁目",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4450001000264"
+        },
+        {
+          "corporateNumber": "4100001011809",
+          "officialName": "飯山トヨタ自動車株式会社",
+          "registeredAddress": "長野県飯山市大字静間字小屋解１２３番地１",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4100001011809"
+        },
+        {
+          "corporateNumber": "2220001000990",
+          "officialName": "石川トヨタ自動車株式会社",
+          "registeredAddress": "石川県金沢市御影町３番１号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2220001000990"
+        },
+        {
+          "corporateNumber": "3050001000280",
+          "officialName": "茨城トヨタ自動車株式会社",
+          "registeredAddress": "茨城県水戸市泉町２丁目３番２４号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3050001000280"
+        },
+        {
+          "corporateNumber": "7100001021466",
+          "officialName": "伊北トヨタ自動車株式会社",
+          "registeredAddress": "長野県上伊那郡箕輪町大字中箕輪字北原１４６５番地１",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7100001021466"
+        },
+        {
+          "corporateNumber": "5400001000193",
+          "officialName": "岩手トヨタ自動車株式会社",
+          "registeredAddress": "岩手県盛岡市上堂４丁目１２番１１号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5400001000193"
+        },
+        {
+          "corporateNumber": "2500001000806",
+          "officialName": "愛媛トヨタ自動車株式会社",
+          "registeredAddress": "愛媛県松山市宮田町１０９番地の１",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2500001000806"
+        }
+      ],
+      "suggestedAction": "候補の法人番号・所在地・法人格を一次資料で確認してください。"
+    },
+    {
+      "inputCorporationName": "株式会社ツガミ",
+      "normalizedName": "ツガミ",
+      "status": "review-needed",
+      "reason": "multiple-candidates",
+      "candidates": [
+        {
+          "corporateNumber": "3010001101264",
+          "officialName": "株式会社ツガミ",
+          "registeredAddress": "東京都中央区日本橋富沢町１２番２０号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3010001101264"
+        },
+        {
+          "corporateNumber": "5011001013720",
+          "officialName": "株式会社ツガミ",
+          "registeredAddress": "東京都渋谷区広尾１丁目１１番２号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5011001013720"
+        },
+        {
+          "corporateNumber": "4110001022879",
+          "officialName": "株式会社ツガミ総合サービス",
+          "registeredAddress": "新潟県長岡市東蔵王１丁目１番１号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4110001022879"
+        },
+        {
+          "corporateNumber": "3020001076704",
+          "officialName": "株式会社ツガミマシナリー",
+          "registeredAddress": "神奈川県川崎市川崎区浅田３丁目１番２０号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3020001076704"
+        }
+      ],
+      "suggestedAction": "候補の法人番号・所在地・法人格を一次資料で確認してください。"
+    },
+    {
+      "inputCorporationName": "READYFOR株式会社",
+      "normalizedName": "READYFOR",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "マツダ株式会社",
+      "normalizedName": "マツダ",
+      "status": "review-needed",
+      "reason": "multiple-candidates",
+      "candidates": [
+        {
+          "corporateNumber": "2180001033541",
+          "officialName": "愛知マツダ株式会社",
+          "registeredAddress": "愛知県名古屋市瑞穂区二野町３番１８号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2180001033541"
+        },
+        {
+          "corporateNumber": "8190001003050",
+          "officialName": "インテリアハウスマツダ株式会社",
+          "registeredAddress": "三重県津市北丸之内７４番地",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=8190001003050"
+        },
+        {
+          "corporateNumber": "9200001017080",
+          "officialName": "太田マツダ株式会社",
+          "registeredAddress": "岐阜県美濃加茂市深田町３丁目１番８号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9200001017080"
+        },
+        {
+          "corporateNumber": "3450001012145",
+          "officialName": "カンパニー・マツダ株式会社",
+          "registeredAddress": "北海道旭川市豊岡三条２丁目２番２３号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3450001012145"
+        },
+        {
+          "corporateNumber": "4180301010916",
+          "officialName": "蒲郡マツダ株式会社",
+          "registeredAddress": "愛知県蒲郡市旭町３番３号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4180301010916"
+        },
+        {
+          "corporateNumber": "1170001011433",
+          "officialName": "紀州マツダ株式会社",
+          "registeredAddress": "和歌山県新宮市緑ケ丘１丁目７番１１号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1170001011433"
+        },
+        {
+          "corporateNumber": "9200001011926",
+          "officialName": "岐阜マツダ株式会社",
+          "registeredAddress": "岐阜県羽島郡岐南町上印食７丁目１６１番地",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9200001011926"
+        },
+        {
+          "corporateNumber": "9180001082607",
+          "officialName": "倉地マツダ株式会社",
+          "registeredAddress": "愛知県一宮市公園通６丁目１７番地",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9180001082607"
+        },
+        {
+          "corporateNumber": "9080001004868",
+          "officialName": "静岡マツダ株式会社",
+          "registeredAddress": "静岡県静岡市駿河区国吉田１丁目２０番２８号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9080001004868"
+        },
+        {
+          "corporateNumber": "1470001012293",
+          "officialName": "小豆島マツダ株式会社",
+          "registeredAddress": "香川県小豆郡小豆島町安田甲１４４番地の１５３",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1470001012293"
+        }
+      ],
+      "suggestedAction": "候補の法人番号・所在地・法人格を一次資料で確認してください。"
+    },
+    {
+      "inputCorporationName": "西播商事株式会社",
+      "normalizedName": "西播商事",
+      "status": "review-needed",
+      "reason": "multiple-candidates",
+      "candidates": [
+        {
+          "corporateNumber": "2140001039352",
+          "officialName": "西播商事株式会社",
+          "registeredAddress": "兵庫県たつの市龍野町富永３８８番地の３",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2140001039352"
+        },
+        {
+          "corporateNumber": "5140001063250",
+          "officialName": "西播商事株式会社",
+          "registeredAddress": "兵庫県姫路市飾磨区中島字宝来３０６７番地の８",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5140001063250"
+        }
+      ],
+      "suggestedAction": "候補の法人番号・所在地・法人格を一次資料で確認してください。"
+    },
+    {
+      "inputCorporationName": "公益財団法人廃棄物・3R研究財団",
+      "normalizedName": "廃棄物3R研究財団",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "エヌ・ティ・ティ・インターネット株式会社",
+      "normalizedName": "エヌティティインターネット",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "PwC Japan有限責任監査法人",
+      "normalizedName": "PWCJAPAN有限責任",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "株式会社小松製作所",
+      "normalizedName": "小松製作所",
+      "status": "review-needed",
+      "reason": "multiple-candidates",
+      "candidates": [
+        {
+          "corporateNumber": "1010401010455",
+          "officialName": "株式会社小松製作所",
+          "registeredAddress": "東京都港区海岸１丁目２番２０号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1010401010455"
+        },
+        {
+          "corporateNumber": "1013101000107",
+          "officialName": "株式会社小松製作所",
+          "registeredAddress": "東京都福生市武蔵野台１丁目２４番地６号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1013101000107"
+        },
+        {
+          "corporateNumber": "1013201002135",
+          "officialName": "株式会社小松製作所",
+          "registeredAddress": "東京都目黒区東山１丁目１２番１３号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1013201002135"
+        },
+        {
+          "corporateNumber": "1040001132985",
+          "officialName": "株式会社小松製作所",
+          "registeredAddress": "千葉県白井市中９８番地の１１",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1040001132985"
+        },
+        {
+          "corporateNumber": "1120101032061",
+          "officialName": "株式会社小松製作所",
+          "registeredAddress": "大阪府羽曳野市野９８番地の３",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=1120101032061"
+        },
+        {
+          "corporateNumber": "2030001039735",
+          "officialName": "株式会社小松製作所",
+          "registeredAddress": "埼玉県草加市新里町１０９１番地",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2030001039735"
+        },
+        {
+          "corporateNumber": "2110001012403",
+          "officialName": "株式会社小松製作所",
+          "registeredAddress": "新潟県阿賀野市小松９９０番地",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=2110001012403"
+        },
+        {
+          "corporateNumber": "3122001002514",
+          "officialName": "株式会社小松製作所",
+          "registeredAddress": "大阪府東大阪市加納４丁目１３番３号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3122001002514"
+        },
+        {
+          "corporateNumber": "5011501006455",
+          "officialName": "株式会社小松製作所",
+          "registeredAddress": "東京都荒川区荒川５丁目３４番１号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5011501006455"
+        },
+        {
+          "corporateNumber": "5100001018299",
+          "officialName": "株式会社小松製作所",
+          "registeredAddress": "長野県諏訪市湖岸通り２丁目３番１４号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5100001018299"
+        }
+      ],
+      "suggestedAction": "候補の法人番号・所在地・法人格を一次資料で確認してください。"
+    },
+    {
+      "inputCorporationName": "学校法人亀井学園",
+      "normalizedName": "亀井学園",
+      "status": "review-needed",
+      "reason": "multiple-candidates",
+      "candidates": [
+        {
+          "corporateNumber": "3040005002844",
+          "officialName": "学校法人亀井学園",
+          "registeredAddress": "千葉県船橋市西船２丁目１０番７号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3040005002844"
+        },
+        {
+          "corporateNumber": "4020005002143",
+          "officialName": "学校法人亀井学園",
+          "registeredAddress": "神奈川県横浜市鶴見区北寺尾６丁目１１番９号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4020005002143"
+        },
+        {
+          "corporateNumber": "7070005000809",
+          "officialName": "学校法人亀井学園",
+          "registeredAddress": "群馬県前橋市粕川町女渕４４６番地４",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7070005000809"
+        },
+        {
+          "corporateNumber": "7390005002483",
+          "officialName": "学校法人亀井学園",
+          "registeredAddress": "山形県上山市旭町３丁目１番２３号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=7390005002483"
+        },
+        {
+          "corporateNumber": "9011705000498",
+          "officialName": "学校法人亀井学園",
+          "registeredAddress": "東京都江戸川区清新町１丁目４番１７号",
+          "sourceUrl": "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=9011705000498"
+        }
+      ],
+      "suggestedAction": "候補の法人番号・所在地・法人格を一次資料で確認してください。"
+    },
+    {
+      "inputCorporationName": "マルハニチロ株式会社",
+      "normalizedName": "マルハニチロ",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    },
+    {
+      "inputCorporationName": "JPモルガン・チェ―ス銀行",
+      "normalizedName": "JPモルガンチェ―ス銀行",
+      "status": "not-found",
+      "reason": "no-candidate",
+      "candidates": [],
+      "suggestedAction": "法人名の正式表記または別の公開ソースを確認してください。"
+    }
+  ]
+}

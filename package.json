@@ -24,6 +24,7 @@
     "validate:gbizinfo-enrichment": "node scripts/validate-gbizinfo-enrichment.js",
     "apply:gbizinfo-enrichment": "node scripts/apply-gbizinfo-enrichment.js",
     "validate:gbizinfo-production": "node scripts/validate-gbizinfo-production.js",
+    "audit:corporation-profiles": "node scripts/audit-corporation-profiles.js",
     "notify:indexnow": "node scripts/notify-indexnow.js",
     "sync:social-queue": "node scripts/generate-social-queue.js",
     "validate:social-queue": "node scripts/validate-social-queue.js"

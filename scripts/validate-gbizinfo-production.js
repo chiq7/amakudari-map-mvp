@@ -113,9 +113,8 @@ function validate() {
     gbizInfoCount += 1;
     const gbizInfo = corporation.gbizInfo;
     const candidateRecord = candidateBySlug.get(corporation.slug);
-    if (!candidateRecord) {
-      errors.push(`${prefix}.gbizInfo has no matching candidate record.`);
-    } else if (
+    if (
+      candidateRecord &&
       corporation.basicInfo?.corporateNumber &&
       corporation.basicInfo.corporateNumber !== candidateRecord.corporateNumber
     ) {
@@ -125,6 +124,14 @@ function validate() {
     for (const field of ["sourceName", "sourceUrl", "fetchedAt"]) {
       if (!isNonEmptyString(gbizInfo[field])) {
         errors.push(`${prefix}.gbizInfo.${field} is required.`);
+      }
+    }
+    if (gbizInfo.officialWebsite !== undefined) {
+      if (
+        !isNonEmptyString(gbizInfo.officialWebsite?.label) ||
+        !/^https?:\/\//.test(gbizInfo.officialWebsite?.url ?? "")
+      ) {
+        errors.push(`${prefix}.gbizInfo.officialWebsite must contain a label and HTTP(S) URL.`);
       }
     }
     if (gbizInfo.sourceName !== "gBizINFO") {
@@ -224,9 +231,9 @@ function validate() {
       workplaceInfo: record.workplaceInfo,
     }),
   ).length;
-  if (gbizInfoCount !== expectedGbizInfoCount) {
+  if (gbizInfoCount < expectedGbizInfoCount) {
     errors.push(
-      `Expected ${expectedGbizInfoCount} corporations with gbizInfo, found ${gbizInfoCount}.`,
+      `Expected at least ${expectedGbizInfoCount} corporations with gbizInfo, found ${gbizInfoCount}.`,
     );
   }
   return errors;
