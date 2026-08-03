@@ -133,8 +133,8 @@ function ExplainerSection() {
             <span className="inline-flex items-center gap-2 text-xs font-extrabold tracking-[0.08em]">
               <NewsIcon size={16} /> {featuredArticle.kind}
             </span>
-            <time className="text-xs text-white/70 lg:mt-auto" dateTime={featuredArticle.datePublished}>
-              {formatDate(featuredArticle.datePublished)}
+            <time className="text-xs text-white/70 lg:mt-auto" dateTime={featuredArticle.dateModified}>
+              {featuredArticle.dateModified !== featuredArticle.datePublished ? "更新 " : ""}{formatDate(featuredArticle.dateModified)}
             </time>
           </div>
 
@@ -179,7 +179,9 @@ function ExplainerSection() {
               href={`/news/${article.slug}`}
               className="group grid gap-2 py-4 sm:grid-cols-[120px_1fr_auto] sm:items-center"
             >
-              <time className="text-xs font-bold text-on-surface-variant" dateTime={article.datePublished}>{formatDate(article.datePublished)}</time>
+              <time className="text-xs font-bold text-on-surface-variant" dateTime={article.dateModified}>
+                {article.dateModified !== article.datePublished ? "更新 " : ""}{formatDate(article.dateModified)}
+              </time>
               <span className="text-sm font-extrabold leading-6 text-primary">{article.title}</span>
               <ArrowRightIcon className="hidden text-outline transition group-hover:translate-x-1 group-hover:text-secondary sm:block" size={17} />
             </Link>

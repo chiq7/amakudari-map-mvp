@@ -63,7 +63,9 @@ export default function NewsIndexPage() {
             <Link href={`/news/${article.slug}`} className="group grid gap-5 px-1 py-6 transition hover:bg-white md:grid-cols-[150px_1fr_auto] md:items-start md:px-5">
               <div className="flex flex-wrap items-center gap-3 text-sm text-on-surface-variant md:block">
                 <TagChip>{article.kind}</TagChip>
-                <time className="md:mt-3 md:block" dateTime={article.datePublished}>{formatDate(article.datePublished)}</time>
+                <time className="md:mt-3 md:block" dateTime={article.dateModified}>
+                  {article.dateModified !== article.datePublished ? "更新 " : ""}{formatDate(article.dateModified)}
+                </time>
               </div>
               <div>
                 <h3 className="text-balance text-xl font-extrabold leading-8 text-primary transition group-hover:text-secondary md:text-2xl">

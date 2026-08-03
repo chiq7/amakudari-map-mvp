@@ -27,7 +27,9 @@ export type NewsArticle = {
 };
 
 export const newsArticles = (newsData as NewsArticle[]).sort(
-  (left, right) => right.datePublished.localeCompare(left.datePublished),
+  (left, right) =>
+    right.dateModified.localeCompare(left.dateModified) ||
+    right.datePublished.localeCompare(left.datePublished),
 );
 
 export function getNewsArticle(slug: string) {
