@@ -1,5 +1,34 @@
 [
   {
+    "corporationSlug": "corporation-8e026326c8c73f9b",
+    "checkedAt": "2026-08-03",
+    "business": {
+      "summary": "有限責任あずさ監査法人は、企業や学校法人などの財務情報が会計ルールに沿っているかを第三者として確認する、監査・保証業務を中心に行う専門法人です。",
+      "details": [
+        "主な仕事は、会社法や金融商品取引法などに基づく監査証明業務です。企業などが公表する財務情報を、独立した立場から確認します。",
+        "監査に加えて、財務会計、内部統制、ESG、規制対応、IT・デジタル分野、スタートアップ支援などのアドバイザリー業務も案内しています。",
+        "金融、テクノロジー、パブリックなど、業種ごとの監査事業部を置く体制を公表しています。"
+      ],
+      "officialWebsite": {
+        "label": "有限責任あずさ監査法人 法人概要",
+        "url": "https://kpmg.com/jp/ja/about/azsa/corporate-profile.html"
+      }
+    },
+    "regulatoryTouchpoints": [
+      {
+        "agency": "金融庁",
+        "area": "上場会社などの監査をめぐる制度",
+        "description": "監査法人の業務には、会社法や金融商品取引法に基づく監査など、財務情報の信頼性に関する制度が関係します。掲載した人物の経歴や就任理由、個別の監査判断との因果関係を示すものではありません。",
+        "sourceTitle": "金融商品取引法監査制度の概要",
+        "sourceUrl": "https://www.fsa.go.jp/policy/kessan/index.html"
+      }
+    ],
+    "limitations": [
+      "掲載した再就職記録だけから、個別の監査業務、顧客、案件への関与は確認できません。",
+      "人物の採用理由や、金融庁での職務経験と法人の業務との因果関係は確認できません。"
+    ]
+  },
+  {
     "corporationSlug": "corporation-luup",
     "checkedAt": "2026-08-03",
     "business": {
