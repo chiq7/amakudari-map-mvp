@@ -6,6 +6,7 @@ const exploreLinks = [
   { href: "/corporations", label: "法人から探す" },
   { href: "/topics", label: "省庁・テーマから探す" },
   { href: "/news", label: "ニュース・解説" },
+  { href: "/retirement-estimator", label: "退職手当の目安" },
 ];
 
 const policyLinks = [

@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/persons",
     "/data-policy",
     "/about",
+    "/retirement-estimator",
   ];
   const latestNewsModified = newsArticles
     .map((article) => toLastModified(article.dateModified))
