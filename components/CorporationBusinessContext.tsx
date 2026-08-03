@@ -26,10 +26,11 @@ export default function CorporationBusinessContext({
     corporation.gbizInfo?.sourceName ||
     corporation.basicInfo?.sourceName;
   const hasBusinessSummary = Boolean(businessSummary?.trim());
+  const showSidePanel = recordCount !== undefined || Boolean(connection);
 
   return (
     <section className="overflow-hidden border border-outline-variant border-t-4 border-t-accent bg-surface-container-lowest">
-      <div className="grid md:grid-cols-[1.25fr_0.75fr]">
+      <div className={showSidePanel ? "grid md:grid-cols-[1.25fr_0.75fr]" : "grid"}>
         <div className="p-5 md:p-7">
           <p className="text-xs font-extrabold tracking-[0.08em] text-accent">会社の仕事を先に理解する</p>
           {hasBusinessSummary ? (
@@ -45,15 +46,12 @@ export default function CorporationBusinessContext({
               ) : null}
             </>
           ) : (
-            <div className="mt-3 border-l-4 border-outline bg-surface-container-low px-4 py-3">
-              <p className="text-xs font-extrabold text-on-surface-variant">業務概要は確認中</p>
-              <h2 className="mt-1 text-lg font-extrabold leading-7 text-primary">
-                公的データから具体的な業務内容を確認できていません
-              </h2>
-              <p className="mt-2 text-sm leading-6 text-on-surface-variant">
-                これは業務情報の未整備を示す表示です。下に掲載する人物・再就職記録の確認状況とは分けて扱っています。
+            <>
+              <h2 className="mt-2 text-2xl font-extrabold text-primary">{corporation.name}</h2>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-on-surface-variant">
+                法人公式サイトと公的データを照合できた業務情報から順次掲載しています。再就職記録の内容は、この業務情報とは分けて公表資料から確認できます。
               </p>
-            </div>
+            </>
           )}
           {sourceUrl ? (
             <a
@@ -70,7 +68,7 @@ export default function CorporationBusinessContext({
           ) : null}
         </div>
 
-        <aside className="border-t border-outline-variant bg-surface-container-low p-5 md:border-l md:border-t-0 md:p-7">
+        {showSidePanel ? <aside className="border-t border-outline-variant bg-surface-container-low p-5 md:border-l md:border-t-0 md:p-7">
           <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">
             {recordCount !== undefined ? "このページで確認できる数" : "公表資料で確認できる接点"}
           </p>
@@ -93,7 +91,7 @@ export default function CorporationBusinessContext({
           ) : (
             <p className="mt-3 text-sm font-medium leading-7 text-primary">{connection}</p>
           )}
-        </aside>
+        </aside> : null}
       </div>
 
       {editorialContext?.regulatoryTouchpoints.length ? (

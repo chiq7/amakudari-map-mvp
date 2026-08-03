@@ -1,8 +1,9 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Breadcrumb, SourceLinkList, StatCard, TagChip } from "@/components/ui";
+import { Breadcrumb, SourceLinkList, TagChip } from "@/components/ui";
 import CorporationBusinessContext from "@/components/CorporationBusinessContext";
 import ShareButton from "@/components/ShareButton";
+import { getCorporationEditorialContext } from "@/lib/corporation-contexts";
 import { getCorporation, getPerson, persons, sources } from "@/lib/static-content";
 
 export function generateStaticParams() {
@@ -34,6 +35,7 @@ export function generateMetadata({
 export default function PersonDetailPage({ params }: { params: { person_slug: string } }) {
   const person = getPerson(params.person_slug);
   const corporation = getCorporation(person.corporationSlug);
+  const corporationContext = getCorporationEditorialContext(person.corporationSlug);
   const sourceLinks = person.sourceIds.flatMap((sourceId) => {
     const source = sources.find((item) => item.id === sourceId);
     return source
@@ -62,73 +64,70 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
         </div>
       </section>
 
-      <section className="rounded-lg border border-outline-variant bg-surface-container-low p-4">
-        <p className="text-sm leading-relaxed text-on-surface-variant">
-          本ページは公表資料に記載された氏名・官職・再就職先を整理したものです。同姓同名の別人が含まれる可能性があるため、人物の特定には出典資料もあわせて確認してください。個人への評価や違法性を断定するものではありません。
-        </p>
-      </section>
-
-      <CorporationBusinessContext
-        corporation={corporation}
-        connection={`${person.name}氏は、${person.ministry}で「${person.formerPosition}」を務めた後、${person.corporationName}の「${person.newPosition}」へ再就職した記録が公表されています。`}
-      />
-
-      <section className="grid grid-cols-1 gap-4 md:grid-cols-4">
-        <StatCard label="元省庁" value={person.ministry} />
-        <StatCard label="離職時官職" value={person.formerPosition} />
-        <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-sm">
-          <p className="mb-1 text-sm text-on-surface-variant">再就職先</p>
-          <p className="text-sm font-semibold text-on-surface-variant">{corporation.type}</p>
-          <p className="mt-1 text-xl font-bold text-primary">{person.corporationName}</p>
-        </div>
-        <div className="flex items-center justify-between gap-4 rounded-lg border border-secondary/30 bg-secondary-fixed p-4 shadow-sm">
-          <p className="text-sm text-on-surface-variant">待機日数</p>
-          <p className="flex shrink-0 items-baseline gap-1 text-primary">
-            <span className="text-4xl font-bold">{person.waitDays}</span>
-            <span className="text-sm font-semibold text-on-surface-variant">日</span>
-          </p>
-        </div>
-      </section>
-
-      <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-6">
-        <h2 className="mb-6 text-2xl font-bold text-primary">再就職プロフィール・フロー</h2>
+      <section aria-labelledby="reemployment-flow-heading" className="border-y-4 border-primary bg-surface-container-lowest px-5 py-6 md:px-8 md:py-8">
+        <p className="text-xs font-extrabold tracking-[0.12em] text-secondary">公表資料で確認できる移動</p>
+        <h2 id="reemployment-flow-heading" className="mt-2 text-2xl font-extrabold text-primary md:text-3xl">
+          どこから、どこへ移った？
+        </h2>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
-          <div className="rounded-lg border border-outline-variant bg-surface-container-low p-5">
+          <div className="mt-1 border-l-4 border-on-surface-variant bg-surface-container-low p-5 lg:mt-5">
             <div className="mb-4 flex flex-wrap items-center gap-2">
-              <span className="rounded bg-on-surface-variant px-2 py-1 text-sm font-semibold text-surface">離職時</span>
+              <span className="bg-on-surface-variant px-2 py-1 text-sm font-semibold text-surface">離職前</span>
               <span className="font-mono text-sm text-on-surface-variant">{person.retiredAt} 離職</span>
             </div>
-            <p className="text-sm text-on-surface-variant">所属省庁</p>
-            <p className="mt-1 text-lg font-bold">{person.ministry}</p>
+            <p className="text-sm font-bold text-on-surface-variant">所属</p>
+            <p className="mt-1 text-2xl font-extrabold text-primary">{person.ministry}</p>
             <div className="my-4 border-t border-outline-variant" />
-            <p className="text-sm text-on-surface-variant">役職名</p>
-            <p className="mt-1">{person.formerPosition}</p>
+            <p className="text-sm font-bold text-on-surface-variant">離職時の役職</p>
+            <p className="mt-1 text-base font-semibold leading-7 text-primary">{person.formerPosition}</p>
           </div>
 
-          <div className="rounded-lg border border-secondary/20 bg-surface-container-lowest p-4 text-center shadow-sm">
-            <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-secondary-container text-lg font-bold text-on-secondary">
-              →
+          <div className="text-center">
+            <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center bg-secondary text-lg font-bold text-on-secondary">
+              <span className="lg:hidden">↓</span>
+              <span className="hidden lg:inline">→</span>
             </div>
-            <p className="text-sm font-bold text-secondary">待機期間 {person.waitDays}日</p>
+            <p className="text-sm font-extrabold text-secondary">待機 {person.waitDays}日</p>
             <p className="mt-1 text-xs text-on-surface-variant">
               {person.waitDays === 0 ? "離職日と再就職日が同日" : "公表日付に基づき算出"}
             </p>
           </div>
 
-          <div className="rounded-lg border border-outline-variant bg-surface-container-low p-5">
+          <div className="border-l-4 border-secondary bg-secondary-fixed/30 p-5 lg:mt-5">
             <div className="mb-4 flex flex-wrap items-center gap-2">
-              <span className="rounded bg-secondary px-2 py-1 text-sm font-semibold text-on-secondary">再就職先</span>
+              <span className="bg-secondary px-2 py-1 text-sm font-semibold text-on-secondary">再就職後</span>
               <span className="font-mono text-sm text-on-surface-variant">{person.reemployedAt} 就任</span>
             </div>
-            <p className="text-sm text-on-surface-variant">法人名</p>
-            <Link href={`/corporations/${person.corporationSlug}`} className="mt-1 block text-lg font-bold text-secondary hover:underline">
+            <p className="text-sm font-bold text-on-surface-variant">再就職先</p>
+            <Link href={`/corporations/${person.corporationSlug}`} className="mt-1 block text-2xl font-extrabold leading-tight text-secondary hover:underline">
               {person.corporationName}
             </Link>
             <div className="my-4 border-t border-outline-variant" />
-            <p className="text-sm text-on-surface-variant">役職名</p>
-            <p className="mt-1">{person.newPosition}</p>
+            <p className="text-sm font-bold text-on-surface-variant">再就職後の役職</p>
+            <p className="mt-1 text-base font-semibold leading-7 text-primary">{person.newPosition}</p>
+            {corporationContext ? (
+              <a
+                href={corporationContext.business.officialWebsite.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-analytics-event="source_link"
+                data-source-type="official_website"
+                data-analytics-location="person_reemployment_flow"
+                className="mt-4 inline-flex min-h-11 items-center bg-primary px-4 text-sm font-extrabold text-white hover:bg-primary/90"
+              >
+                法人公式サイトを見る ↗
+              </a>
+            ) : null}
           </div>
         </div>
+      </section>
+
+      <CorporationBusinessContext corporation={corporation} />
+
+      <section className="border-l-4 border-outline bg-surface-container-low px-4 py-3">
+        <p className="text-sm leading-relaxed text-on-surface-variant">
+          本ページは公表資料に記載された氏名・官職・再就職先を整理したものです。同姓同名の別人が含まれる可能性があるため、人物の特定には出典資料もあわせて確認してください。個人への評価や違法性を断定するものではありません。
+        </p>
       </section>
 
       <section>
