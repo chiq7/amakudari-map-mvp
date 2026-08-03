@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import type { GbizInfoCollection, Person } from "@/lib/types";
+import type { Corporation, GbizInfoCollection, Person } from "@/lib/types";
 import CorporationBusinessContext from "@/components/CorporationBusinessContext";
 import { Breadcrumb, DataNotice, HighlightStatCard, SourceLinkList, StatCard, TagChip } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
@@ -154,6 +154,68 @@ function ReemploymentRecordList({ relatedPersons }: { relatedPersons: Person[] }
   );
 }
 
+function PublicOfficerSection({ corporation }: { corporation: Corporation }) {
+  if (corporation.publicOfficers.length === 0) return null;
+
+  return (
+    <section className="border border-secondary/30 border-t-4 border-t-secondary bg-secondary-fixed/30 shadow-card">
+      <div className="border-b border-secondary/20 px-5 py-5 md:px-7 md:py-6">
+        <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">このページの中心情報</p>
+        <div className="mt-2 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h2 className="text-2xl font-extrabold text-primary md:text-3xl">公表役員情報</h2>
+            <p className="mt-2 max-w-3xl text-sm leading-7 text-on-surface-variant">
+              法人公式の役員紹介・発表で確認できた、行政機関での経歴を持つ役員です。再就職状況の公表記録とは分けて掲載しています。
+            </p>
+          </div>
+          <p className="text-sm font-extrabold text-secondary">{corporation.publicOfficers.length}人を確認</p>
+        </div>
+      </div>
+
+      <div className="grid gap-px bg-secondary/20 md:grid-cols-2">
+        {corporation.publicOfficers.map((officer) => (
+          <article key={officer.slug} className="bg-white p-5 md:p-6">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs font-bold text-on-surface-variant">{officer.formerOrganization}での経歴</p>
+                <h3 className="mt-1 text-2xl font-extrabold leading-tight text-primary">
+                  <Link href={`/public-officers/${officer.slug}`} className="hover:underline">
+                    {officer.name}
+                  </Link>
+                </h3>
+              </div>
+              <span className="shrink-0 bg-secondary px-3 py-1.5 text-xs font-extrabold text-white">
+                現在 {officer.role}
+              </span>
+            </div>
+
+            <div className="mt-4 border-l-2 border-secondary pl-4">
+              <p className="text-xs font-bold text-on-surface-variant">公表された主な経歴</p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {getFormerPositionLabels(officer.formerPosition).map((label) => (
+                  <span
+                    key={label}
+                    className="inline-flex border border-outline-variant bg-surface-container-low px-2.5 py-1 text-sm font-bold text-primary"
+                  >
+                    {label}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <p className="mt-4 text-sm leading-7 text-on-surface-variant">{officer.profile}</p>
+            <Link
+              href={`/public-officers/${officer.slug}`}
+              className="mt-4 inline-flex min-h-11 items-center border-b-2 border-secondary text-sm font-extrabold text-secondary hover:border-primary hover:text-primary"
+            >
+              人物詳細と出典を見る →
+            </Link>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export function generateStaticParams() {
   return corporations.map((corporation) => ({ slug: corporation.slug }));
 }
@@ -180,7 +242,10 @@ export function generateMetadata({
       : highlights.kind === "reemployment-record"
         ? `${corporation.name}の公表再就職情報。${peopleDescription}など、国家公務員再就職状況の公表資料に基づく情報を整理。`
         : `${corporation.name}の法人情報を、公表資料と公的法人情報に基づいて整理。`;
-  const title = `${corporation.name}の公表再就職情報`;
+  const title =
+    highlights.kind === "public-officer"
+      ? `${corporation.name}の公表役員情報・行政出身者`
+      : `${corporation.name}の公表再就職情報`;
   return {
     title,
     alternates: { canonical: `/corporations/${params.slug}` },
@@ -207,6 +272,7 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
     .map(([name, count]) => ({ name, count }))
     .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name, "ja"));
   const topMinistry = ministryBreakdown[0];
+  const primaryMinistry = topMinistry?.name ?? corporation.ministries.find(Boolean) ?? "";
   const averageWaitDays =
     relatedRecords.length > 0
       ? Math.round(
@@ -297,9 +363,13 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
             <StatCard label="最短待機日数" value={minimumWaitDays} unit="日" />
           )}
         </section>
-      ) : corporation.publicOfficers.length > 0 ? (
+      ) : null}
+
+      <PublicOfficerSection corporation={corporation} />
+
+      {relatedRecords.length === 0 && corporation.publicOfficers.length > 0 ? (
         <DataNotice>
-          国家公務員再就職状況の公表における該当記録は確認されていません。このページでは、法人公式発表などに基づく公表役員プロフィールを表示しています。
+          この{corporation.publicOfficers.length}人は法人公式の役員情報で確認した人物です。国家公務員再就職状況の公表資料にある「再就職記録」とは区別して掲載しています。
         </DataNotice>
       ) : null}
 
@@ -540,40 +610,6 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
         </section>
       )}
 
-      {corporation.publicOfficers.length > 0 && (
-        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
-          <h2 className="text-2xl font-bold text-primary">公表役員情報</h2>
-          <p className="mt-1.5 max-w-4xl text-sm leading-snug text-on-surface-variant">
-            同社の公式発表・会社情報に掲載された元行政機関出身者の役員プロフィールです。国家公務員の再就職状況公表資料に基づく記録とは区別して表示しています。
-          </p>
-          <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-2">
-            {corporation.publicOfficers.map((officer) => (
-              <article key={officer.slug} className="rounded border border-outline-variant bg-surface p-3">
-                <h3 className="text-xl font-bold leading-tight text-primary">
-                  <Link href={`/public-officers/${officer.slug}`} className="hover:underline">
-                    {officer.name}
-                  </Link>
-                </h3>
-                <p className="mt-1 text-sm font-medium text-on-surface-variant">
-                  {officer.role}
-                </p>
-                <div className="mt-2 flex flex-wrap gap-1.5">
-                  {getFormerPositionLabels(officer.formerPosition).map((label) => (
-                    <span
-                      key={label}
-                      className="inline-flex rounded border border-outline-variant bg-surface-container-low px-2 py-1 text-sm font-semibold leading-tight text-primary"
-                    >
-                      {label}
-                    </span>
-                  ))}
-                </div>
-                <p className="mt-1.5 text-sm leading-snug text-on-surface-variant">{officer.profile}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
-
       {relatedRecords.length > 1 && (
         <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
@@ -662,9 +698,9 @@ export default function CorporationDetailPage({ params }: { params: { slug: stri
 
       <section className="grid grid-cols-1 gap-3 md:grid-cols-3">
         {[
-          ["省庁別の集計を見る", `${topMinistry?.name ?? "省庁"}の再就職統計を見る`, `/corporations?ministry=${encodeURIComponent(topMinistry?.name ?? "")}`],
+          ["省庁別の集計を見る", `${primaryMinistry || "省庁"}の関連法人を見る`, primaryMinistry ? `/corporations?ministry=${encodeURIComponent(primaryMinistry)}` : "/corporations"],
           ["集計から比較する", "待機日数の比較を見る", "/rankings"],
-          ["同じ省庁から探す", "関連する法人を一覧で見る", `/corporations?ministry=${encodeURIComponent(topMinistry?.name ?? "")}`],
+          ["同じ省庁から探す", "関連する法人を一覧で見る", primaryMinistry ? `/corporations?ministry=${encodeURIComponent(primaryMinistry)}` : "/corporations"],
         ].map(([label, title, href]) => (
           <Link key={label} href={href} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-3 hover:border-secondary">
             <span className="text-sm font-semibold text-on-surface-variant">{label}</span>

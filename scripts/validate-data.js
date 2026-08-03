@@ -3,6 +3,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const productionDirectory = path.join(process.cwd(), "data", "production");
+const editorialDirectory = path.join(process.cwd(), "data", "editorial");
 
 function readJson(fileName) {
   const filePath = path.join(productionDirectory, fileName);
@@ -11,6 +12,10 @@ function readJson(fileName) {
 
 function fileExists(fileName) {
   return fs.existsSync(path.join(productionDirectory, fileName));
+}
+
+function readEditorialJson(fileName) {
+  return JSON.parse(fs.readFileSync(path.join(editorialDirectory, fileName), "utf8"));
 }
 
 function isNonEmptyString(value) {
@@ -66,12 +71,16 @@ function validateData() {
   const sources = readJson("sources.json");
   const topics = readJson("topics.json");
   const pageLastmod = readJson("page-lastmod.json");
+  const corporationContexts = readEditorialJson("corporation-contexts.json");
 
   if (!Array.isArray(corporations)) errors.push("corporations.json must contain an array.");
   if (!Array.isArray(persons)) errors.push("persons.json must contain an array.");
   if (!Array.isArray(records)) errors.push("records.json must contain an array.");
   if (!Array.isArray(sources)) errors.push("sources.json must contain an array.");
   if (!Array.isArray(topics)) errors.push("topics.json must contain an array.");
+  if (!Array.isArray(corporationContexts)) {
+    errors.push("data/editorial/corporation-contexts.json must contain an array.");
+  }
   if (
     !pageLastmod ||
     typeof pageLastmod !== "object" ||
@@ -210,6 +219,55 @@ function validateData() {
   for (const slug of findDuplicates(publicOfficerSlugs)) {
     errors.push(`Duplicate public officer slug: ${slug}`);
   }
+
+  const contextSlugs = corporationContexts.map((context) => context.corporationSlug);
+  for (const slug of findDuplicates(contextSlugs)) {
+    errors.push(`Duplicate corporation editorial context: ${slug}`);
+  }
+  corporationContexts.forEach((context, index) => {
+    const prefix = `data/editorial/corporation-contexts.json[${index}]`;
+    if (!corporationSlugSet.has(context.corporationSlug)) {
+      errors.push(`${prefix}.corporationSlug references unknown corporation: ${context.corporationSlug}`);
+    }
+    for (const [field, value] of [
+      ["corporationSlug", context.corporationSlug],
+      ["checkedAt", context.checkedAt],
+      ["business.summary", context.business?.summary],
+      ["business.officialWebsite.label", context.business?.officialWebsite?.label],
+      ["business.officialWebsite.url", context.business?.officialWebsite?.url],
+    ]) {
+      if (!isNonEmptyString(value)) errors.push(`${prefix}.${field} is required.`);
+    }
+    if (!/^https:\/\//.test(context.business?.officialWebsite?.url ?? "")) {
+      errors.push(`${prefix}.business.officialWebsite.url must be an HTTPS URL.`);
+    }
+    if (!Array.isArray(context.business?.details) || context.business.details.length === 0) {
+      errors.push(`${prefix}.business.details must contain at least one item.`);
+    }
+    if (!Array.isArray(context.regulatoryTouchpoints) || context.regulatoryTouchpoints.length === 0) {
+      errors.push(`${prefix}.regulatoryTouchpoints must contain at least one item.`);
+    } else {
+      context.regulatoryTouchpoints.forEach((touchpoint, touchpointIndex) => {
+        for (const [field, value] of [
+          ["agency", touchpoint.agency],
+          ["area", touchpoint.area],
+          ["description", touchpoint.description],
+          ["sourceTitle", touchpoint.sourceTitle],
+          ["sourceUrl", touchpoint.sourceUrl],
+        ]) {
+          if (!isNonEmptyString(value)) {
+            errors.push(`${prefix}.regulatoryTouchpoints[${touchpointIndex}].${field} is required.`);
+          }
+        }
+        if (!/^https:\/\//.test(touchpoint.sourceUrl ?? "")) {
+          errors.push(`${prefix}.regulatoryTouchpoints[${touchpointIndex}].sourceUrl must be an HTTPS URL.`);
+        }
+      });
+    }
+    if (!Array.isArray(context.limitations) || context.limitations.length === 0) {
+      errors.push(`${prefix}.limitations must contain at least one item.`);
+    }
+  });
 
   persons.forEach((person, index) => {
     const prefix = `persons.json[${index}]`;

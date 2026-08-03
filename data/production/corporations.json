@@ -3434,7 +3434,9 @@
     "sources": [
       "gbizinfo-luup",
       "luup-management-structure-20241016",
-      "luup-company-profile"
+      "luup-company-profile",
+      "npa-tokuteikogata-traffic-rules",
+      "mlit-tokuteikogata-vehicle-standards"
     ],
     "topics": [
       "ライドシェア",
@@ -3479,7 +3481,7 @@
         "role": "監査役",
         "formerOrganization": "経済産業省",
         "formerPosition": "元経済産業省、弁護士",
-        "profile": "8年間の経済産業省勤務後に弁護士となり、2017年に國峯法律事務所を設立した経歴が、株式会社Luupの公式会社情報に掲載されています。",
+      "profile": "8年間の経済産業省勤務後に弁護士となり、2017年に國峯法律事務所を設立。主に政府の規制対応の助言を行っていると、株式会社Luupの公式会社情報に掲載されています。",
         "sourceIds": [
           "luup-management-structure-20241016",
           "luup-company-profile"

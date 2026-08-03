@@ -78,5 +78,21 @@
     "url": "https://luup.sc/company/",
     "publishedAt": "",
     "memo": "役員氏名、役職、公開プロフィールを掲載する公式会社情報"
+  },
+  {
+    "id": "npa-tokuteikogata-traffic-rules",
+    "title": "特定小型原動機付自転車に関する交通ルール等について",
+    "publisher": "警察庁",
+    "url": "https://www.npa.go.jp/bureau/traffic/anzen/tokuteikogata.html",
+    "publishedAt": "",
+    "memo": "特定小型原動機付自転車の区分、通行方法、安全利用などの公式案内"
+  },
+  {
+    "id": "mlit-tokuteikogata-vehicle-standards",
+    "title": "特定小型原動機付自転車について",
+    "publisher": "国土交通省",
+    "url": "https://www.mlit.go.jp/jidosha/jidosha_fr7_000058.html",
+    "publishedAt": "",
+    "memo": "車両の保安基準、性能等確認制度、関係事業者向けガイドラインの公式案内"
   }
 ]

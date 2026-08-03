@@ -1,0 +1,37 @@
+[
+  {
+    "corporationSlug": "corporation-luup",
+    "checkedAt": "2026-08-03",
+    "business": {
+      "summary": "株式会社Luupは、電動キックボードと電動アシスト自転車を、街なかのポートから借りて別のポートへ返せるシェアリングサービス「LUUP」を提供しています。",
+      "details": [
+        "スマートフォンのアプリで車両を借り、短距離の移動に使う交通サービスです。",
+        "同社は電動・小型・一人乗りのモビリティを扱い、移動手段と街なかのポート網を運営しています。"
+      ],
+      "officialWebsite": {
+        "label": "株式会社Luup 公式サイト",
+        "url": "https://luup.sc/company/"
+      }
+    },
+    "regulatoryTouchpoints": [
+      {
+        "agency": "警察庁",
+        "area": "公道での交通ルールと安全利用",
+        "description": "LUUPが扱う電動キックボードのうち、特定小型原動機付自転車に当たる車両には、道路交通法に基づく通行方法、年齢制限、交通違反などのルールが適用されます。",
+        "sourceTitle": "特定小型原動機付自転車に関する交通ルール等について",
+        "sourceUrl": "https://www.npa.go.jp/bureau/traffic/anzen/tokuteikogata.html"
+      },
+      {
+        "agency": "国土交通省",
+        "area": "車両の保安基準と性能等確認制度",
+        "description": "特定小型原動機付自転車には、最高速度や車体寸法などの保安基準があり、国土交通省が性能等確認制度を案内しています。シェアリング事業者向けの交通安全対策ガイドラインも関係機関と作成されています。",
+        "sourceTitle": "特定小型原動機付自転車について",
+        "sourceUrl": "https://www.mlit.go.jp/jidosha/jidosha_fr7_000058.html"
+      }
+    ],
+    "limitations": [
+      "役員の採用理由や社内での担当範囲は、掲載した公表資料だけでは確認できません。",
+      "個人が行政機関へ働きかけた事実や、制度変更へ影響した因果関係は確認できません。"
+    ]
+  }
+]

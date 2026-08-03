@@ -237,6 +237,27 @@ export interface Corporation {
   publicOfficers: PublicOfficerProfile[];
 }
 
+export interface CorporationEditorialContext {
+  corporationSlug: string;
+  checkedAt: string;
+  business: {
+    summary: string;
+    details: string[];
+    officialWebsite: {
+      label: string;
+      url: string;
+    };
+  };
+  regulatoryTouchpoints: Array<{
+    agency: string;
+    area: string;
+    description: string;
+    sourceTitle: string;
+    sourceUrl: string;
+  }>;
+  limitations: string[];
+}
+
 export interface Person {
   slug: string;
   name: string;
