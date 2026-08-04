@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 25,
+  "remainingCount": 24,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "b5a943757a3549148160d9d3f653fe7f87e99078c8fb1dd0738489021da41d02",
-      "dedupeKey": "cbde21419ddeaddd6ae50a5c1adc2ea886c3440dbea47890e729772a3acaa68f",
-      "personName": "德川 浩一",
-      "originMinistry": "農林水産省",
-      "titleAtRetirement": "関東森林管理局日光森林管理署長",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-05-01",
-      "waitingDays": 31,
-      "corporationName": "一般財団法人日本木材総合情報センター",
-      "corporationType": "一般財団法人",
-      "newPosition": "参与（業務）",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "167b9523a4ed083305574af3db5d6daf1805e3d33495f5782c6d2c57e61bcb8e",
       "dedupeKey": "3f06e1da80b3608b6bf0c373ae319167d37a8eb38d5e4b2821626481642e712c",

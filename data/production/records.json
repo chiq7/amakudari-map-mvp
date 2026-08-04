@@ -2302,5 +2302,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "b5a943757a3549148160d9d3f653fe7f87e99078c8fb1dd0738489021da41d02",
+    "dedupeKey": "cbde21419ddeaddd6ae50a5c1adc2ea886c3440dbea47890e729772a3acaa68f",
+    "personSlug": "person-ebced8f1cf1824c1",
+    "name": "德川 浩一",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "関東森林管理局日光森林管理署長",
+    "corporationSlug": "corporation-0797ac4c7725544f",
+    "corporationName": "一般財団法人日本木材総合情報センター",
+    "newPosition": "参与（業務）",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-05-01",
+    "waitingDays": 31,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]

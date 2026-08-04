@@ -2184,23 +2184,25 @@
     "prefecture": "不明",
     "ministry": {
       "name": "農林水産省",
-      "count": 3
+      "count": 4
     },
     "counts": {
-      "publicRecords": 3,
+      "publicRecords": 4,
       "nextDay": 0,
       "within30Days": 3
     },
     "waitingDays": {
-      "average": 1
+      "average": 9
     },
     "relatedPersons": [
       "person-c6c5b895488e7aee",
       "person-344da3b532d61b2a",
-      "person-99c256667cbdc2eb"
+      "person-99c256667cbdc2eb",
+      "person-ebced8f1cf1824c1"
     ],
     "sources": [
-      "cabinet-office-annual-2024"
+      "cabinet-office-annual-2024",
+      "cabinet-office-106-25-1-r05-files4"
     ],
     "topics": []
   },

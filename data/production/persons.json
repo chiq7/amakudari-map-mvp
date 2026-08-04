@@ -2736,5 +2736,24 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-ebced8f1cf1824c1",
+    "name": "德川 浩一",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "関東森林管理局日光森林管理署長",
+    "corporationSlug": "corporation-0797ac4c7725544f",
+    "corporationName": "一般財団法人日本木材総合情報センター",
+    "newPosition": "参与（業務）",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-05-01",
+    "waitingDays": 31,
+    "tags": [
+      "農林水産省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]
