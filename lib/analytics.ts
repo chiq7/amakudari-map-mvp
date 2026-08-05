@@ -3,6 +3,7 @@ export type AnalyticsParams = Record<string, AnalyticsValue>;
 
 type AnalyticsWindow = Window & {
   dataLayer?: unknown[];
+  gtag?: (command: "event", eventName: string, params: AnalyticsParams) => void;
 };
 
 export function trackEvent(eventName: string, params: AnalyticsParams = {}) {
@@ -15,8 +16,21 @@ export function trackEvent(eventName: string, params: AnalyticsParams = {}) {
     Object.entries(params).filter(([, value]) => value !== undefined),
   );
 
+  // GoogleAnalytics sets `gtag` after the base tag has loaded. Calling it is
+  // important: pushing a plain array into dataLayer does not invoke gtag's
+  // argument handling, so GA4 never receives the custom event.
+  if (typeof analyticsWindow.gtag === "function") {
+    analyticsWindow.gtag("event", eventName, safeParams);
+    return;
+  }
+
+  // Preserve events made during the short period before the GA script loads.
+  // The official gtag queue expects an Arguments-like value.
   const dataLayer = analyticsWindow.dataLayer ?? (analyticsWindow.dataLayer = []);
-  dataLayer.push(["event", eventName, safeParams]);
+  function queueGtagEvent(..._args: unknown[]) {
+    dataLayer.push(arguments);
+  }
+  queueGtagEvent("event", eventName, safeParams);
 }
 
 export function getPageType(pathname: string) {

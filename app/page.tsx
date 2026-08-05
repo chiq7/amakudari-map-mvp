@@ -61,14 +61,19 @@ const featuredCorporationCards = featuredCorporations.map((corporation) => {
 });
 
 const ministryTopic = topics.find((topic) => topic.queryKey === "ministry");
-const featuredMinistries = (ministryTopic?.items ?? [
+const ministryItems = ministryTopic?.items ?? [
   "国土交通省",
   "経済産業省",
   "厚生労働省",
   "総務省",
   "警察庁",
   "内閣府",
-])
+];
+const featuredMinistries = [
+  "財務省",
+  "国土交通省",
+  ...ministryItems.filter((name) => name !== "財務省" && name !== "国土交通省"),
+]
   .map((name) => ({
     name,
     corporationCount: corporations.filter((corporation) => corporation.ministries.includes(name)).length,
