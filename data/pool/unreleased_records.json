@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 24,
+  "remainingCount": 23,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "167b9523a4ed083305574af3db5d6daf1805e3d33495f5782c6d2c57e61bcb8e",
-      "dedupeKey": "3f06e1da80b3608b6bf0c373ae319167d37a8eb38d5e4b2821626481642e712c",
-      "personName": "中島 勇雄",
-      "originMinistry": "農林水産省",
-      "titleAtRetirement": "関東森林管理局会津森林管理署長",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "新電力開発株式会社",
-      "corporationType": "営利法人",
-      "newPosition": "山林管理本部長",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "17ee430b000620ea250481c90fd6780af971c111df9ab95791ad0fcc9b67390e",
       "dedupeKey": "3639e455212426ddd5c98d61735d077b17907bb8dfe2f56c31b8c39161494aba",

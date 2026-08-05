@@ -2755,5 +2755,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-a5d380addd4692b2",
+    "name": "中島 勇雄",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "関東森林管理局会津森林管理署長",
+    "corporationSlug": "corporation-81c3fcc25b413224",
+    "corporationName": "新電力開発株式会社",
+    "newPosition": "山林管理本部長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "農林水産省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]
