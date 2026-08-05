@@ -5,6 +5,7 @@ import { Breadcrumb } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import { corporations, persons } from "@/lib/static-content";
 import { ministryPages } from "@/lib/ministry-pages";
+import { newsArticles } from "@/lib/news";
 
 type PageProps = {
   params: { slug: string };
@@ -53,6 +54,18 @@ export default function MinistryPage({ params }: PageProps) {
     .sort((left, right) => right.people.length - left.people.length);
   const totalNextDay = matchingPeople.filter((person) => person.waitDays === 0).length;
   const totalWithin30Days = matchingPeople.filter((person) => person.waitDays <= 30).length;
+  const relatedMinistries = ministryPages
+    .filter((candidate) => candidate.slug !== ministry.slug)
+    .sort((left, right) => {
+      const priority = ["finance", "mlit"];
+      const leftPriority = priority.indexOf(left.slug);
+      const rightPriority = priority.indexOf(right.slug);
+      return (leftPriority === -1 ? priority.length : leftPriority) - (rightPriority === -1 ? priority.length : rightPriority);
+    })
+    .slice(0, 4);
+  const disclosureGuide = newsArticles.find(
+    (article) => article.slug === "how-to-read-national-public-servant-reemployment-disclosure-2025",
+  );
 
   return (
     <div className="flex flex-col gap-8">
@@ -71,7 +84,7 @@ export default function MinistryPage({ params }: PageProps) {
           </h1>
           <p className="mt-3 text-base leading-relaxed text-on-surface-variant">
             政府公表資料に記載された{ministry.name}出身者の再就職情報を、再就職先法人ごとに整理しています。
-            掲載内容は公表資料の記録であり、個人・法人・省庁の適法性や妥当性を評価するものではありません。
+            現在の公開データでは{matchingPeople.length}人・{matchingCorporations.length}法人の記録を確認できます。掲載内容は公表資料の記録であり、個人・法人・省庁の適法性や妥当性を評価するものではありません。
           </p>
         </div>
         <ShareButton title={`${ministry.name}の天下り先一覧 | 天下りマップ`} />
@@ -183,6 +196,35 @@ export default function MinistryPage({ params }: PageProps) {
           </table>
         </div>
       </section>
+
+      <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+        <h2 className="text-xl font-bold text-primary">ほかの省庁の天下り先一覧を見る</h2>
+        <p className="mt-1 text-sm leading-relaxed text-on-surface-variant">同じ形式で、出身省庁ごとの公表再就職情報を確認できます。</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {relatedMinistries.map((candidate) => (
+            <Link
+              key={candidate.slug}
+              href={`/ministries/${candidate.slug}`}
+              className="rounded-full border border-secondary bg-white px-3 py-2 text-sm font-bold text-secondary hover:bg-secondary-fixed"
+            >
+              {candidate.name}の天下り先一覧
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {disclosureGuide ? (
+        <section className="rounded-lg border border-secondary/25 bg-secondary-fixed/40 p-5">
+          <p className="text-xs font-bold tracking-[0.08em] text-secondary">PUBLIC RECORDS EXPLAINED</p>
+          <h2 className="mt-2 text-xl font-bold text-primary">公表資料の読み方も確認する</h2>
+          <p className="mt-1 text-sm leading-relaxed text-on-surface-variant">
+            この一覧で確認できる範囲と、資料だけでは判断できない事項を解説しています。
+          </p>
+          <Link href={`/news/${disclosureGuide.slug}`} className="mt-4 inline-flex text-sm font-bold text-secondary hover:underline">
+            {disclosureGuide.title} →
+          </Link>
+        </section>
+      ) : null}
 
       <section className="rounded-lg border border-outline-variant bg-surface-container-low p-6">
         <h2 className="text-xl font-bold text-primary">データについて</h2>
