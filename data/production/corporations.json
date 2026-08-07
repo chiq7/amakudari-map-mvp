@@ -3462,6 +3462,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-b8b9a5244fc2c303",
+    "name": "公益財団法人尼崎地域産業活性化機構",
+    "type": "公益財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-20f78c2b38029801"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 22,
+  "remainingCount": 21,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "b6fc825507c7f3f1c1efdb55ee875d606f4cae64542c8ad8e5bd1a26f7bbdec4",
-      "dedupeKey": "907e06cd51efb7835dad6c5bb42f42ce6e4adfc8bee60d28428127e63e74ede9",
-      "personName": "坂本 和英",
-      "originMinistry": "経済産業省",
-      "titleAtRetirement": "経済産業省近畿経済産業局資源エネルギー環境部電源開発調整官",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "公益財団法人尼崎地域産業活性化機構",
-      "corporationType": "公益財団法人",
-      "newPosition": "参与",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "a99b049fb05473aa0bdfe01641a584af3a57e79ccbc5ed5f9a7943b02541da66",
       "dedupeKey": "0cca94c315730e011056ea50e6f2eb8db8b574b9e6b627e62dded4ef1571cd73",

@@ -2795,5 +2795,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-20f78c2b38029801",
+    "name": "坂本 和英",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省近畿経済産業局資源エネルギー環境部電源開発調整官",
+    "corporationSlug": "corporation-b8b9a5244fc2c303",
+    "corporationName": "公益財団法人尼崎地域産業活性化機構",
+    "newPosition": "参与",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "経済産業省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]

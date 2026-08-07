@@ -2350,5 +2350,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "b6fc825507c7f3f1c1efdb55ee875d606f4cae64542c8ad8e5bd1a26f7bbdec4",
+    "dedupeKey": "907e06cd51efb7835dad6c5bb42f42ce6e4adfc8bee60d28428127e63e74ede9",
+    "personSlug": "person-20f78c2b38029801",
+    "name": "坂本 和英",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省近畿経済産業局資源エネルギー環境部電源開発調整官",
+    "corporationSlug": "corporation-b8b9a5244fc2c303",
+    "corporationName": "公益財団法人尼崎地域産業活性化機構",
+    "newPosition": "参与",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]
