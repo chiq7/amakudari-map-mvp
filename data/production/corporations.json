@@ -3437,6 +3437,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-75ba42f9809bd194",
+    "name": "公益社団法人国土緑化推進機構",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "農林水産省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-db74cadc42fad7a9"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

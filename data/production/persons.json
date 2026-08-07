@@ -2775,5 +2775,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-db74cadc42fad7a9",
+    "name": "原嶋 広行",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "北海道森林管理局総務企画部長",
+    "corporationSlug": "corporation-75ba42f9809bd194",
+    "corporationName": "公益社団法人国土緑化推進機構",
+    "newPosition": "募金企画部調査役",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "農林水産省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]
