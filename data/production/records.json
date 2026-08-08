@@ -2366,5 +2366,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "a99b049fb05473aa0bdfe01641a584af3a57e79ccbc5ed5f9a7943b02541da66",
+    "dedupeKey": "0cca94c315730e011056ea50e6f2eb8db8b574b9e6b627e62dded4ef1571cd73",
+    "personSlug": "person-fbac66dd4866ccb1",
+    "name": "前川 慎喜",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "特許庁審判部審判長（第5部門）",
+    "corporationSlug": "corporation-5405333ff055e943",
+    "corporationName": "国立大学法人北海道国立大学機構",
+    "newPosition": "北海道国立大学機構本部産学官金連携統合情報センター特任教授",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]

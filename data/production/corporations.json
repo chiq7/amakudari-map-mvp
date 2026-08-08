@@ -3487,6 +3487,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-5405333ff055e943",
+    "name": "国立大学法人北海道国立大学機構",
+    "type": "国立大学法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-fbac66dd4866ccb1"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

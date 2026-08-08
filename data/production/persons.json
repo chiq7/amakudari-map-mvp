@@ -2815,5 +2815,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-fbac66dd4866ccb1",
+    "name": "前川 慎喜",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "特許庁審判部審判長（第5部門）",
+    "corporationSlug": "corporation-5405333ff055e943",
+    "corporationName": "国立大学法人北海道国立大学機構",
+    "newPosition": "北海道国立大学機構本部産学官金連携統合情報センター特任教授",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "経済産業省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]
