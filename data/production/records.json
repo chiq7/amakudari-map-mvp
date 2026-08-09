@@ -2382,5 +2382,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "c4d5f0929efa288807652fc0a3b745f3cdabd63f067f1c3856f4ad70ffdd5047",
+    "dedupeKey": "22a57373809fe892d196a0fc44b5cec59e49813206bef9bc2e99420b580129ed",
+    "personSlug": "person-dd70c6183e126551",
+    "name": "山崎 知巳",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省大臣官房付",
+    "corporationSlug": "corporation-a57bf773653fc7f8",
+    "corporationName": "国立大学法人東京大学",
+    "newPosition": "東京大学産学協創推進本部副本部長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]

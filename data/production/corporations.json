@@ -2414,19 +2414,20 @@
     "prefecture": "不明",
     "ministry": {
       "name": "経済産業省",
-      "count": 1
+      "count": 2
     },
     "counts": {
-      "publicRecords": 2,
+      "publicRecords": 3,
       "nextDay": 0,
-      "within30Days": 2
+      "within30Days": 3
     },
     "waitingDays": {
       "average": 1
     },
     "relatedPersons": [
       "person-ec89fec3c55c9ffb",
-      "person-9f33be49c8959f2e"
+      "person-9f33be49c8959f2e",
+      "person-dd70c6183e126551"
     ],
     "sources": [
       "cabinet-office-annual-2024",
