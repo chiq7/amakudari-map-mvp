@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 19,
+  "remainingCount": 18,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "ee0b901cde90d0c495b8977fa9c8ac0780e322bd9ae26ec61f001b77263d51ca",
-      "dedupeKey": "508246afd939beeb8ee775a0f3bc78be83157249876e89a1921fee45b7dd87fa",
-      "personName": "吉倉 秀和",
-      "originMinistry": "経済産業省",
-      "titleAtRetirement": "経済産業省商務情報政策局商務・サービスグループサービス政策課スポーツ産業室長",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "学校法人大阪成蹊学園",
-      "corporationType": "学校法人",
-      "newPosition": "びわこ成蹊スポーツ大学スポーツ学部専任教員（准教授）",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "22ed9a59efce2c222fcd3ead1ee8a3505d5d3d9d71ee93110875db9f1d8507fe",
       "dedupeKey": "c536cb0c292083d0a1f0d6a20304afa7b164cbe0183b3a9c64407fff0065798b",

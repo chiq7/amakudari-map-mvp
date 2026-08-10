@@ -2398,5 +2398,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "ee0b901cde90d0c495b8977fa9c8ac0780e322bd9ae26ec61f001b77263d51ca",
+    "dedupeKey": "508246afd939beeb8ee775a0f3bc78be83157249876e89a1921fee45b7dd87fa",
+    "personSlug": "person-dfa49fb899dc87ca",
+    "name": "吉倉 秀和",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省商務情報政策局商務・サービスグループサービス政策課スポーツ産業室長",
+    "corporationSlug": "corporation-4e354125e2661635",
+    "corporationName": "学校法人大阪成蹊学園",
+    "newPosition": "びわこ成蹊スポーツ大学スポーツ学部専任教員（准教授）",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]
