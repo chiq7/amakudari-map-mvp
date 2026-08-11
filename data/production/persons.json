@@ -2875,5 +2875,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-7625b740722fc4f7",
+    "name": "鈴木 雅晴",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "中部運輸局海上安全環境部首席船舶検査官",
+    "corporationSlug": "corporation-cd59be9437edd994",
+    "corporationName": "一般財団法人日本舶用品検定協会",
+    "newPosition": "検定検査員",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "国土交通省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]

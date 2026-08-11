@@ -2692,21 +2692,23 @@
     "prefecture": "不明",
     "ministry": {
       "name": "国土交通省",
-      "count": 1
+      "count": 2
     },
     "counts": {
-      "publicRecords": 1,
+      "publicRecords": 2,
       "nextDay": 0,
-      "within30Days": 1
+      "within30Days": 2
     },
     "waitingDays": {
       "average": 1
     },
     "relatedPersons": [
-      "person-88decd449b26b1ea"
+      "person-88decd449b26b1ea",
+      "person-7625b740722fc4f7"
     ],
     "sources": [
-      "cabinet-office-annual-2024"
+      "cabinet-office-annual-2024",
+      "cabinet-office-106-25-1-r05-files4"
     ],
     "topics": []
   },

@@ -2414,5 +2414,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "22ed9a59efce2c222fcd3ead1ee8a3505d5d3d9d71ee93110875db9f1d8507fe",
+    "dedupeKey": "c536cb0c292083d0a1f0d6a20304afa7b164cbe0183b3a9c64407fff0065798b",
+    "personSlug": "person-7625b740722fc4f7",
+    "name": "鈴木 雅晴",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "中部運輸局海上安全環境部首席船舶検査官",
+    "corporationSlug": "corporation-cd59be9437edd994",
+    "corporationName": "一般財団法人日本舶用品検定協会",
+    "newPosition": "検定検査員",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]
