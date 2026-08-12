@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 17,
+  "remainingCount": 16,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "bcf8bc3b1fdbacdf8c40ee5fff3e7cde0a64111d5d0dd6399a61b35cdcd7caa9",
-      "dedupeKey": "464b3a796028442de3b7f36fa03aff87bc70aa580022d166d65c2e4fcff09554",
-      "personName": "竹本 康祐",
-      "originMinistry": "国土交通省",
-      "titleAtRetirement": "中国運輸局海上安全環境部調整官",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "一般財団法人日本舶用品検定協会",
-      "corporationType": "一般財団法人",
-      "newPosition": "検定検査員",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "466342e01aa38aa0f6e137b90e3b6b2260a173f985000a0e788d615be5bdadfd",
       "dedupeKey": "d0c634350f175f6a265675756b50a4d7305f5143f131da80841d4109ea835532",

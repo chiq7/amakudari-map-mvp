@@ -2895,5 +2895,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-d94111b4b4da884f",
+    "name": "竹本 康祐",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "中国運輸局海上安全環境部調整官",
+    "corporationSlug": "corporation-cd59be9437edd994",
+    "corporationName": "一般財団法人日本舶用品検定協会",
+    "newPosition": "検定検査員",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "国土交通省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]

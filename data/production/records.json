@@ -2430,5 +2430,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "bcf8bc3b1fdbacdf8c40ee5fff3e7cde0a64111d5d0dd6399a61b35cdcd7caa9",
+    "dedupeKey": "464b3a796028442de3b7f36fa03aff87bc70aa580022d166d65c2e4fcff09554",
+    "personSlug": "person-d94111b4b4da884f",
+    "name": "竹本 康祐",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "中国運輸局海上安全環境部調整官",
+    "corporationSlug": "corporation-cd59be9437edd994",
+    "corporationName": "一般財団法人日本舶用品検定協会",
+    "newPosition": "検定検査員",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]
