@@ -3541,6 +3541,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-42bf2032ce0e4d77",
+    "name": "公益社団法人2025年日本国際博覧会協会",
+    "type": "公益社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-6c5cea877e62065c"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

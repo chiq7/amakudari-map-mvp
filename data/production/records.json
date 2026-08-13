@@ -2446,5 +2446,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "466342e01aa38aa0f6e137b90e3b6b2260a173f985000a0e788d615be5bdadfd",
+    "dedupeKey": "d0c634350f175f6a265675756b50a4d7305f5143f131da80841d4109ea835532",
+    "personSlug": "person-6c5cea877e62065c",
+    "name": "東川 直正",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "国土交通省大臣官房付",
+    "corporationSlug": "corporation-42bf2032ce0e4d77",
+    "corporationName": "公益社団法人2025年日本国際博覧会協会",
+    "newPosition": "理事・副事務総長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]
