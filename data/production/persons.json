@@ -2935,5 +2935,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-ea35169abdb178fb",
+    "name": "中村 昌巨",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "海上保安庁第七管区海上保安本部総務部情報管理官",
+    "corporationSlug": "corporation-5b0eb1cef266c981",
+    "corporationName": "第一警備保障株式会社",
+    "newPosition": "一般社員（係長級）",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "国土交通省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]

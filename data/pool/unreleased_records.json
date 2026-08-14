@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 15,
+  "remainingCount": 14,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "5481d35e78a32cd043e3792802fda962d6d6046f775cbc437f7e45fa321dfa11",
-      "dedupeKey": "501bf4c45840bf77adf28d0f5968618ae194a093aa26b11478a1dd2863057be7",
-      "personName": "中村 昌巨",
-      "originMinistry": "国土交通省",
-      "titleAtRetirement": "海上保安庁第七管区海上保安本部総務部情報管理官",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "第一警備保障株式会社",
-      "corporationType": "営利法人",
-      "newPosition": "一般社員（係長級）",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "c46879ecc5bc1de2ff21c39866966572aad6619316684a4b717da060324cf2dd",
       "dedupeKey": "ef54cd1df4b445ed4a5a90b2c84efdf5e0e172bf053813d106f63ea7b5696f68",
