@@ -3591,6 +3591,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-6d82e9d535288b14",
+    "name": "一般財団法人神戸港湾福利厚生協会",
+    "type": "一般財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-663314416028f1c2"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

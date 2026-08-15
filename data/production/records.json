@@ -2478,5 +2478,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "c46879ecc5bc1de2ff21c39866966572aad6619316684a4b717da060324cf2dd",
+    "dedupeKey": "ef54cd1df4b445ed4a5a90b2c84efdf5e0e172bf053813d106f63ea7b5696f68",
+    "personSlug": "person-663314416028f1c2",
+    "name": "八木 正人",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "神戸運輸監理部総務企画部長",
+    "corporationSlug": "corporation-6d82e9d535288b14",
+    "corporationName": "一般財団法人神戸港湾福利厚生協会",
+    "newPosition": "総務部長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]

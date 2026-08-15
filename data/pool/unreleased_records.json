@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 14,
+  "remainingCount": 13,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "c46879ecc5bc1de2ff21c39866966572aad6619316684a4b717da060324cf2dd",
-      "dedupeKey": "ef54cd1df4b445ed4a5a90b2c84efdf5e0e172bf053813d106f63ea7b5696f68",
-      "personName": "八木 正人",
-      "originMinistry": "国土交通省",
-      "titleAtRetirement": "神戸運輸監理部総務企画部長",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "一般財団法人神戸港湾福利厚生協会",
-      "corporationType": "一般財団法人",
-      "newPosition": "総務部長",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "b8a412afb94a126aaab5888534a4a69580244372578cc0ce9517201f776af1c8",
       "dedupeKey": "86346fd129215dd97f58a4ecdf9eb27c192f8d346d9bb4d4461a013530b02c35",
