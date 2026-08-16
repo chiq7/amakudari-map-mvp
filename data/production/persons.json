@@ -2975,5 +2975,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-37fa0eb8859d5f87",
+    "name": "山西 光一",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "国土交通省大臣官房総務課公文書監理・情報公開室長",
+    "corporationSlug": "corporation-8010f222a03f4e28",
+    "corporationName": "公益財団法人交通エコロジー・モビリティ財団",
+    "newPosition": "総務部長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "国土交通省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]

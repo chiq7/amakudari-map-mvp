@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 13,
+  "remainingCount": 12,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "b8a412afb94a126aaab5888534a4a69580244372578cc0ce9517201f776af1c8",
-      "dedupeKey": "86346fd129215dd97f58a4ecdf9eb27c192f8d346d9bb4d4461a013530b02c35",
-      "personName": "山西 光一",
-      "originMinistry": "国土交通省",
-      "titleAtRetirement": "国土交通省大臣官房総務課公文書監理・情報公開室長",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "公益財団法人交通エコロジー・モビリティ財団",
-      "corporationType": "公益財団法人",
-      "newPosition": "総務部長",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "32c20423bd44d7e30fb087b241450aa39480f5879f593a1820dc86b2f630f85f",
       "dedupeKey": "dc430fd11e11a60444f23b91c95201b4bf6bc5885ea74de1e3a2a1633e835c56",
