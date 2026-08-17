@@ -2873,15 +2873,16 @@
       "count": 1
     },
     "counts": {
-      "publicRecords": 1,
+      "publicRecords": 2,
       "nextDay": 0,
-      "within30Days": 1
+      "within30Days": 2
     },
     "waitingDays": {
-      "average": 3
+      "average": 2
     },
     "relatedPersons": [
-      "person-976d95e664e0913e"
+      "person-976d95e664e0913e",
+      "person-292848e16ac12068"
     ],
     "sources": [
       "cabinet-office-106-25-1-r05-files4"

@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 12,
+  "remainingCount": 11,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "32c20423bd44d7e30fb087b241450aa39480f5879f593a1820dc86b2f630f85f",
-      "dedupeKey": "dc430fd11e11a60444f23b91c95201b4bf6bc5885ea74de1e3a2a1633e835c56",
-      "personName": "要藤 正任",
-      "originMinistry": "国土交通省",
-      "titleAtRetirement": "国土交通省大臣官房付",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "学校法人京都産業大学",
-      "corporationType": "学校法人",
-      "newPosition": "京都産業大学経済学部教授",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "78fd6ebf952a634e6fc4c71a06c8ac65644b23812cdb87f7b3bec01decedf7ad",
       "dedupeKey": "44c452cd541e3ce812ed0d52cc6fa9e5467464b6dec454369075ebec7d207a8e",
