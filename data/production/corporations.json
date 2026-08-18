@@ -3642,6 +3642,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-231c6a557e6efa3a",
+    "name": "学校法人江戸川学園",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "環境省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-fbd40ef435d8c8fc"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

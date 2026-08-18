@@ -3015,5 +3015,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-fbd40ef435d8c8fc",
+    "name": "奥山 正樹",
+    "fromMinistry": "環境省",
+    "previousPosition": "環境省大臣官房付",
+    "corporationSlug": "corporation-231c6a557e6efa3a",
+    "corporationName": "学校法人江戸川学園",
+    "newPosition": "江戸川大学社会学部専任教員（教授）",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "環境省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]

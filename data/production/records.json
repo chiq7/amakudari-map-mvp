@@ -2526,5 +2526,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "78fd6ebf952a634e6fc4c71a06c8ac65644b23812cdb87f7b3bec01decedf7ad",
+    "dedupeKey": "44c452cd541e3ce812ed0d52cc6fa9e5467464b6dec454369075ebec7d207a8e",
+    "personSlug": "person-fbd40ef435d8c8fc",
+    "name": "奥山 正樹",
+    "fromMinistry": "環境省",
+    "previousPosition": "環境省大臣官房付",
+    "corporationSlug": "corporation-231c6a557e6efa3a",
+    "corporationName": "学校法人江戸川学園",
+    "newPosition": "江戸川大学社会学部専任教員（教授）",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]
