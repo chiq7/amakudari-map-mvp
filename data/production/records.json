@@ -2542,5 +2542,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "01f456aa2ab09d4d030e03a5958a6875548395afda9d6e2643e6eed535789fdc",
+    "dedupeKey": "1389a4cf1dd89ba5bc7a7abc1f202b144ae9f4f41c8c3e068bc0574bcfec228c",
+    "personSlug": "person-5eb98710cc3fb2d0",
+    "name": "中村 邦彦",
+    "fromMinistry": "環境省",
+    "previousPosition": "環境省自然環境局総務課皇居外苑管理事務所長",
+    "corporationSlug": "corporation-550fa22483ab0a2b",
+    "corporationName": "一般社団法人地域循環共生社会連携協会",
+    "newPosition": "事務局次長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r05-files4",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
   }
 ]

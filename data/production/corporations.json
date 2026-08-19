@@ -3667,6 +3667,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-550fa22483ab0a2b",
+    "name": "一般社団法人地域循環共生社会連携協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "環境省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-5eb98710cc3fb2d0"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

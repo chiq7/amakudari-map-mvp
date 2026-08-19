@@ -3035,5 +3035,25 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-5eb98710cc3fb2d0",
+    "name": "中村 邦彦",
+    "fromMinistry": "環境省",
+    "previousPosition": "環境省自然環境局総務課皇居外苑管理事務所長",
+    "corporationSlug": "corporation-550fa22483ab0a2b",
+    "corporationName": "一般社団法人地域循環共生社会連携協会",
+    "newPosition": "事務局次長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "tags": [
+      "環境省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r05-files4"
+    ]
   }
 ]

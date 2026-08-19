@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 10,
+  "remainingCount": 9,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "01f456aa2ab09d4d030e03a5958a6875548395afda9d6e2643e6eed535789fdc",
-      "dedupeKey": "1389a4cf1dd89ba5bc7a7abc1f202b144ae9f4f41c8c3e068bc0574bcfec228c",
-      "personName": "中村 邦彦",
-      "originMinistry": "環境省",
-      "titleAtRetirement": "環境省自然環境局総務課皇居外苑管理事務所長",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "一般社団法人地域循環共生社会連携協会",
-      "corporationType": "一般社団法人",
-      "newPosition": "事務局次長",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和6年1月1日～3月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r05-files4",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "4826f4437d9e96da816fc585a411768597ec0b07bdc7ee1e2aaace12f3de6dc8",
       "dedupeKey": "b88e035a0354059b4f325e51e29b0b4fb7771c92a398974d92a2c84cc6618e80",
