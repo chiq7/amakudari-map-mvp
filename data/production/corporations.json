@@ -3692,6 +3692,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-84098e841d556f53",
+    "name": "学校法人白鷗大学",
+    "type": "学校法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "公正取引委員会",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 80
+    },
+    "relatedPersons": [
+      "person-09098bdd7c485ee8"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

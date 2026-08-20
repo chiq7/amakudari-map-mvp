@@ -2558,5 +2558,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-106-25-1-r05-files4",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r05/files4/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "4826f4437d9e96da816fc585a411768597ec0b07bdc7ee1e2aaace12f3de6dc8",
+    "dedupeKey": "b88e035a0354059b4f325e51e29b0b4fb7771c92a398974d92a2c84cc6618e80",
+    "personSlug": "person-09098bdd7c485ee8",
+    "name": "田辺 治",
+    "fromMinistry": "公正取引委員会",
+    "previousPosition": "公正取引委員会事務総局審査局長",
+    "corporationSlug": "corporation-84098e841d556f53",
+    "corporationName": "学校法人白鷗大学",
+    "newPosition": "白鷗大学法学部専任教授",
+    "retirementDate": "2024-01-12",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 80,
+    "sourceId": "cabinet-office-106-25-1-r06-files",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx"
   }
 ]

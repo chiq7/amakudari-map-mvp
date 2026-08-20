@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 9,
+  "remainingCount": 8,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "4826f4437d9e96da816fc585a411768597ec0b07bdc7ee1e2aaace12f3de6dc8",
-      "dedupeKey": "b88e035a0354059b4f325e51e29b0b4fb7771c92a398974d92a2c84cc6618e80",
-      "personName": "田辺 治",
-      "originMinistry": "公正取引委員会",
-      "titleAtRetirement": "公正取引委員会事務総局審査局長",
-      "retirementDate": "2024-01-12",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 80,
-      "corporationName": "学校法人白鷗大学",
-      "corporationType": "学校法人",
-      "newPosition": "白鷗大学法学部専任教授",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r06-files",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "f32ba0fd2240e6a76ce5b3816b9cb3ba079708b2c6e8a077a61113e2a6f0129a",
       "dedupeKey": "758ce86524254d365a73d8228fe114ee0518a4b5f7b273a7473221408e714321",

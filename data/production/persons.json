@@ -3055,5 +3055,24 @@
     "sources": [
       "cabinet-office-106-25-1-r05-files4"
     ]
+  },
+  {
+    "person_slug": "person-09098bdd7c485ee8",
+    "name": "田辺 治",
+    "fromMinistry": "公正取引委員会",
+    "previousPosition": "公正取引委員会事務総局審査局長",
+    "corporationSlug": "corporation-84098e841d556f53",
+    "corporationName": "学校法人白鷗大学",
+    "newPosition": "白鷗大学法学部専任教授",
+    "retirementDate": "2024-01-12",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 80,
+    "tags": [
+      "公正取引委員会",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ]
   }
 ]
