@@ -24,9 +24,9 @@ import {
 import { getMinistryPath } from "@/lib/ministry-pages";
 
 export const metadata: Metadata = {
-  title: "天下りマップ｜官民の人材移動を公表資料からたどる",
+  title: "天下り先・企業一覧を公表資料から探す｜天下りマップ",
   description:
-    "政府・各省庁等が公表する再就職情報を、人・法人・省庁・時系列から確認できるデータベースです。出典と確認日を掲載しています。",
+    "官僚・国家公務員の天下り先企業や法人を、財務省・国土交通省・警察庁などの省庁別、人物別に検索できます。政府公表の再就職情報と一次資料を掲載しています。",
   alternates: { canonical: "/" },
 };
 
@@ -258,7 +258,7 @@ export default function Home() {
             <span className="block text-accent">公表資料からたどる。</span>
           </h1>
           <p className="mt-5 max-w-xl text-pretty text-base font-medium leading-8 text-on-surface-variant md:text-lg">
-            誰が、どこから、どこへ。公表された再就職情報を一本の線で確認できます。
+            官僚・国家公務員の天下り先企業や法人を、誰が、どこから、どこへ移ったか一本の線で確認できます。
           </p>
 
           <figure className="mt-6 overflow-hidden rounded-2xl bg-[#f6f0e6] ring-1 ring-[#dfd4c5] lg:hidden">

@@ -13,7 +13,11 @@ export function trackEvent(eventName: string, params: AnalyticsParams = {}) {
 
   const analyticsWindow = window as AnalyticsWindow;
   const safeParams = Object.fromEntries(
-    Object.entries(params).filter(([, value]) => value !== undefined),
+    Object.entries({
+      page_location: window.location.href,
+      page_path: `${window.location.pathname}${window.location.search}`,
+      ...params,
+    }).filter(([, value]) => value !== undefined),
   );
 
   // GoogleAnalytics sets `gtag` after the base tag has loaded. Calling it is
@@ -31,6 +35,43 @@ export function trackEvent(eventName: string, params: AnalyticsParams = {}) {
     dataLayer.push(arguments);
   }
   queueGtagEvent("event", eventName, safeParams);
+}
+
+/**
+ * Page-open events must not run before GA4's base configuration. If a custom
+ * event becomes the first event in a session, GA4 can report an empty landing
+ * page. Click events still use trackEvent directly so a fast navigation does
+ * not discard them.
+ */
+export function trackPageEventWhenReady(
+  eventName: string,
+  params: AnalyticsParams = {},
+) {
+  if (typeof window === "undefined") return () => undefined;
+
+  let cancelled = false;
+  let attempts = 0;
+  let timer: number | undefined;
+
+  const send = () => {
+    if (cancelled) return;
+
+    const analyticsWindow = window as AnalyticsWindow;
+    if (typeof analyticsWindow.gtag === "function") {
+      trackEvent(eventName, params);
+      return;
+    }
+
+    attempts += 1;
+    if (attempts < 20) timer = window.setTimeout(send, 250);
+  };
+
+  send();
+
+  return () => {
+    cancelled = true;
+    if (timer !== undefined) window.clearTimeout(timer);
+  };
 }
 
 export function getPageType(pathname: string) {

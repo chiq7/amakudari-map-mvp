@@ -2,7 +2,12 @@
 
 import { useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { getLinkType, getPageType, trackEvent } from "@/lib/analytics";
+import {
+  getLinkType,
+  getPageType,
+  trackEvent,
+  trackPageEventWhenReady,
+} from "@/lib/analytics";
 
 function getLocation(element: Element) {
   return (
@@ -38,9 +43,9 @@ export default function AnalyticsListener() {
       news_article: "view_news_article",
     };
     const detailEvent = detailEventByPageType[pageType];
-    if (detailEvent) {
-      trackEvent(detailEvent, { page_type: pageType });
-    }
+    const cancelDetailEvent = detailEvent
+      ? trackPageEventWhenReady(detailEvent, { page_type: pageType })
+      : () => undefined;
 
     function handleClick(event: MouseEvent) {
       const target = event.target;
@@ -135,6 +140,7 @@ export default function AnalyticsListener() {
     document.addEventListener("click", handleClick);
     document.addEventListener("submit", handleSubmit);
     return () => {
+      cancelDetailEvent();
       document.removeEventListener("click", handleClick);
       document.removeEventListener("submit", handleSubmit);
     };

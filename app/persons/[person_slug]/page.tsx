@@ -16,8 +16,8 @@ export function generateMetadata({
   params: { person_slug: string };
 }): Metadata {
   const person = getPerson(params.person_slug);
-  const title = `${person.name}氏の公表再就職情報`;
-  const description = `${person.name}氏の${person.ministry}における官職と、${person.corporationName}への再就職に関する公表資料を整理しています。`;
+  const title = `${person.name}氏｜${person.ministry}から${person.corporationName}への再就職`;
+  const description = `${person.name}氏が${person.ministry}の「${person.formerPosition}」を離職し、${person.corporationName}の「${person.newPosition}」へ再就職した公表記録、日付、法人の業務、一次資料を整理しています。`;
   return {
     title,
     description,
@@ -60,7 +60,9 @@ export default function PersonDetailPage({ params }: { params: { person_slug: st
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
             <h1 className="text-3xl font-bold text-primary md:text-4xl">{person.name} 氏の公表再就職情報</h1>
-            <p className="mt-2 text-base text-on-surface-variant">政府・各省庁等の公表資料に基づく再就職情報</p>
+            <p className="mt-2 text-base leading-7 text-on-surface-variant">
+              {person.ministry}の「{person.formerPosition}」から、{person.corporationName}の「{person.newPosition}」へ移った公表記録です。
+            </p>
           </div>
           <ShareButton title={`${person.name}氏の公表再就職情報 | 天下りマップ`} />
         </div>

@@ -4,6 +4,8 @@ export const ministryPages = [
   { slug: "mhlw", name: "厚生労働省" },
   { slug: "meti", name: "経済産業省" },
   { slug: "maff", name: "農林水産省" },
+  { slug: "npa", name: "警察庁" },
+  { slug: "mic", name: "総務省" },
 ] as const;
 
 export function getMinistryPath(name: string) {

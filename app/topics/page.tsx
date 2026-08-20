@@ -14,13 +14,23 @@ export const metadata: Metadata = {
 type TopicPage = {
   topic_slug: string;
   title: string;
+  description?: string;
+  caution_text?: string;
 };
 
 export default function TopicsPage() {
   const ministries = topicGroups.find((group) => group.category === "ministry")?.items ?? [];
   const themeLabels = topicGroups.find((group) => group.category === "topic")?.items ?? [];
   const publishedTopics = topicPagesData as TopicPage[];
-  const publishedByTitle = new Map(publishedTopics.map((topic) => [topic.title, topic.topic_slug]));
+  const publishedByTitle = new Map(
+    publishedTopics
+      .filter(
+        (topic) =>
+          Boolean(topic.description && topic.description !== "...") &&
+          Boolean(topic.caution_text && topic.caution_text !== "..."),
+      )
+      .map((topic) => [topic.title, topic.topic_slug]),
+  );
 
   return (
     <div className="flex flex-col gap-12">

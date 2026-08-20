@@ -41,13 +41,20 @@ export default function CorporationsPage() {
         ))}
       </dl>
 
-      <nav aria-label="よく見られる省庁の一覧" className="flex flex-wrap justify-center gap-3">
-        <Link href="/ministries/finance" className="rounded-full border border-secondary bg-white px-4 py-2 text-sm font-bold text-secondary hover:bg-secondary-fixed">
-          財務省の天下り先一覧を見る
-        </Link>
-        <Link href="/ministries/mlit" className="rounded-full border border-secondary bg-white px-4 py-2 text-sm font-bold text-secondary hover:bg-secondary-fixed">
-          国土交通省の天下り先一覧を見る
-        </Link>
+      <nav aria-label="よく見られる省庁の一覧" className="border-y border-outline-variant py-5">
+        <p className="text-center text-sm font-bold text-on-surface-variant">出身省庁から天下り先の企業・法人を探す</p>
+        <div className="mt-3 flex flex-wrap justify-center gap-3">
+          {[
+            ["財務省", "/ministries/finance"],
+            ["国土交通省", "/ministries/mlit"],
+            ["警察庁", "/ministries/npa"],
+            ["総務省", "/ministries/mic"],
+          ].map(([label, href]) => (
+            <Link key={href} href={href} className="inline-flex min-h-11 items-center border border-secondary bg-white px-4 text-sm font-bold text-secondary hover:bg-secondary-fixed">
+              {label}の天下り先一覧 →
+            </Link>
+          ))}
+        </div>
       </nav>
 
       <section id="featured-corporations-directory" aria-labelledby="featured-corporations-title" className="rounded-2xl bg-surface-container-lowest p-5 shadow-card ring-1 ring-outline-variant/70 md:p-7">
