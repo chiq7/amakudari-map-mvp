@@ -10,11 +10,12 @@ export function generateStaticParams() {
   return persons.map((person) => ({ person_slug: person.slug }));
 }
 
-export function generateMetadata({
-  params,
-}: {
-  params: { person_slug: string };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ person_slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const person = getPerson(params.person_slug);
   const title = `${person.name}氏｜${person.ministry}から${person.corporationName}への再就職`;
   const description = `${person.name}氏が${person.ministry}の「${person.formerPosition}」を離職し、${person.corporationName}の「${person.newPosition}」へ再就職した公表記録、日付、法人の業務、一次資料を整理しています。`;
@@ -32,7 +33,8 @@ export function generateMetadata({
   };
 }
 
-export default function PersonDetailPage({ params }: { params: { person_slug: string } }) {
+export default async function PersonDetailPage(props: { params: Promise<{ person_slug: string }> }) {
+  const params = await props.params;
   const person = getPerson(params.person_slug);
   const corporation = getCorporation(person.corporationSlug);
   const corporationContext = getCorporationEditorialContext(person.corporationSlug);

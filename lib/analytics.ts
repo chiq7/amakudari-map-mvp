@@ -31,7 +31,8 @@ export function trackEvent(eventName: string, params: AnalyticsParams = {}) {
   // Preserve events made during the short period before the GA script loads.
   // The official gtag queue expects an Arguments-like value.
   const dataLayer = analyticsWindow.dataLayer ?? (analyticsWindow.dataLayer = []);
-  function queueGtagEvent(..._args: unknown[]) {
+  function queueGtagEvent(...queuedArgs: unknown[]) {
+    void queuedArgs;
     dataLayer.push(arguments);
   }
   queueGtagEvent("event", eventName, safeParams);

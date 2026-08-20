@@ -148,7 +148,8 @@ function getActiveFilters({
 function CorporationsContent() {
   const searchParams = useSearchParams();
   const requestedShowAll = searchParams.get("show") === "all";
-  const [showAll, setShowAll] = useState(requestedShowAll);
+  const [expanded, setExpanded] = useState(false);
+  const showAll = requestedShowAll || expanded;
   const ministry = searchParams.get("ministry")?.trim() ?? "";
   const type = searchParams.get("type")?.trim() ?? "";
   const area =
@@ -171,10 +172,6 @@ function CorporationsContent() {
   const keyword = searchParams.get("keyword")?.trim() ?? "";
   const activeFilters = getActiveFilters({ ministry, type, area, flag, tag, keyword, sort });
   const primaryFilter = activeFilters[0];
-
-  useEffect(() => {
-    setShowAll(requestedShowAll);
-  }, [requestedShowAll]);
 
   const filteredCorporations = corporations
     .filter((corporation) => !ministry || corporation.ministries.includes(ministry))
@@ -376,7 +373,7 @@ function CorporationsContent() {
               </p>
               <button
                 type="button"
-                onClick={() => setShowAll(true)}
+                onClick={() => setExpanded(true)}
                 className="mt-3 min-h-11 border border-primary bg-white px-6 text-sm font-bold text-primary transition hover:bg-surface-container-low"
               >
                 残り{hiddenCount}法人をすべて表示

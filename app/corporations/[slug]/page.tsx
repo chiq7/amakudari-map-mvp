@@ -220,11 +220,12 @@ export function generateStaticParams() {
   return corporations.map((corporation) => ({ slug: corporation.slug }));
 }
 
-export function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ slug: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const corporation = getCorporation(params.slug);
   const highlights = getCorporationPersonHighlights(corporation);
   const peopleDescription = highlights.people
@@ -260,7 +261,8 @@ export function generateMetadata({
   };
 }
 
-export default function CorporationDetailPage({ params }: { params: { slug: string } }) {
+export default async function CorporationDetailPage(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const corporation = getCorporation(params.slug);
   const relatedPersons = persons.filter((person) => person.corporationSlug === corporation.slug);
   const relatedRecords = records.filter((record) => record.corporationSlug === corporation.slug);

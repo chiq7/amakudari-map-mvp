@@ -2,7 +2,6 @@
 
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { trackEvent } from "@/lib/analytics";
 import { ArrowRightIcon, BuildingIcon, MinistryIcon, PersonIcon, SearchIcon } from "@/components/icons";
 import personsData from "@/data/production/persons.json";
@@ -24,7 +23,6 @@ type SearchOrganization = {
 };
 
 function SearchContent() {
-  const searchParams = useSearchParams();
   const [query, setQuery] = useState("");
   const lastTrackedQuery = useRef("");
   const persons: SearchPerson[] = useMemo(
@@ -49,16 +47,14 @@ function SearchContent() {
   );
 
   useEffect(() => {
-    const urlQuery = searchParams.get("keyword")?.trim();
-    if (urlQuery) {
-      setQuery(urlQuery);
-      return;
-    }
-    const storedQuery = sessionStorage.getItem("amakudari:search-query");
-    if (!storedQuery) return;
-    sessionStorage.removeItem("amakudari:search-query");
-    setQuery(storedQuery);
-  }, [searchParams]);
+    const urlQuery = new URLSearchParams(window.location.search)
+      .get("keyword")
+      ?.trim();
+    if (!urlQuery) return;
+
+    const timer = window.setTimeout(() => setQuery(urlQuery), 0);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   const results = useMemo(() => {
     if (query.trim().length <= 1) return { persons: [], organizations: [] };

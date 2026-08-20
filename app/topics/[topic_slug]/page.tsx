@@ -18,7 +18,8 @@ export function generateStaticParams() {
   return topicPages.map((topic) => ({ topic_slug: topic.topic_slug }));
 }
 
-export function generateMetadata({ params }: { params: { topic_slug: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ topic_slug: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const topic = topicPages.find((item) => item.topic_slug === params.topic_slug);
   return {
     title: topic ? `${topic.title}に関連する公表記録` : "テーマ別公表記録",
@@ -27,7 +28,8 @@ export function generateMetadata({ params }: { params: { topic_slug: string } })
   };
 }
 
-export default function TopicDetailPage({ params }: { params: { topic_slug: string } }) {
+export default async function TopicDetailPage(props: { params: Promise<{ topic_slug: string }> }) {
+  const params = await props.params;
   const topic = topicPages.find((item) => item.topic_slug === params.topic_slug);
 
   if (!topic) return <p>テーマが見つかりませんでした。</p>;

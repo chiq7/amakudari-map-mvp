@@ -10,7 +10,8 @@ export function generateStaticParams() {
   return publicOfficers.map((officer) => ({ slug: officer.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const officer = getPublicOfficer(params.slug);
   const title = officer ? `${officer.name}氏の公表役員プロフィール` : "公表役員プロフィール";
   const description = officer
@@ -25,7 +26,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function PublicOfficerPage({ params }: { params: { slug: string } }) {
+export default async function PublicOfficerPage(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const officer = getPublicOfficer(params.slug);
   if (!officer) notFound();
 

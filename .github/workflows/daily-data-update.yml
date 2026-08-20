@@ -65,7 +65,7 @@ jobs:
 
       - name: Type check
         if: steps.pick.outputs.picked_count != '0'
-        run: npx tsc --noEmit
+        run: npm run typecheck
 
       - name: Build
         if: steps.pick.outputs.picked_count != '0'

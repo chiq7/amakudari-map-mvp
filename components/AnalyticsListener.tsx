@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import {
   getLinkType,
   getPageType,
@@ -32,7 +32,6 @@ function getSourceType(anchor: HTMLAnchorElement) {
 
 export default function AnalyticsListener() {
   const pathname = usePathname();
-  const router = useRouter();
 
   useEffect(() => {
     const pageType = getPageType(pathname);
@@ -132,9 +131,9 @@ export default function AnalyticsListener() {
       if (!query) return;
 
       event.preventDefault();
-      sessionStorage.setItem("amakudari:search-query", query);
       const destination = new URL(form.action, window.location.origin);
-      router.push(destination.pathname);
+      destination.searchParams.set("keyword", query);
+      window.location.assign(destination.href);
     }
 
     document.addEventListener("click", handleClick);
@@ -144,7 +143,7 @@ export default function AnalyticsListener() {
       document.removeEventListener("click", handleClick);
       document.removeEventListener("submit", handleSubmit);
     };
-  }, [pathname, router]);
+  }, [pathname]);
 
   return null;
 }

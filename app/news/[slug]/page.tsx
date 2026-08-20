@@ -10,7 +10,8 @@ export function generateStaticParams() {
   return newsArticles.map((article) => ({ slug: article.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const article = getNewsArticle(params.slug);
   if (!article) return {};
 
@@ -53,7 +54,8 @@ function ArticleTitle({ title }: { title: string }) {
   );
 }
 
-export default function NewsArticlePage({ params }: { params: { slug: string } }) {
+export default async function NewsArticlePage(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const article = getNewsArticle(params.slug);
   if (!article) notFound();
 

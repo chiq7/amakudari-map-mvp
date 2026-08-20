@@ -8,7 +8,7 @@ import { ministryPages } from "@/lib/ministry-pages";
 import { newsArticles } from "@/lib/news";
 
 type PageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 function getMinistry(slug: string) {
@@ -19,7 +19,8 @@ export function generateStaticParams() {
   return ministryPages.map(({ slug }) => ({ slug }));
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
+export async function generateMetadata(props: PageProps): Promise<Metadata> {
+  const params = await props.params;
   const ministry = getMinistry(params.slug);
   if (!ministry) return {};
 
@@ -35,7 +36,8 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-export default function MinistryPage({ params }: PageProps) {
+export default async function MinistryPage(props: PageProps) {
+  const params = await props.params;
   const ministry = getMinistry(params.slug);
   if (!ministry) notFound();
 

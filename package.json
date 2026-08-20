@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
+    "typecheck": "next typegen && tsc --noEmit",
     "validate:data": "node scripts/validate-data.js",
     "validate:news": "node scripts/validate-news.js",
     "generate:content": "node scripts/generate-static-content.js",
@@ -30,24 +31,24 @@
     "validate:social-queue": "node scripts/validate-social-queue.js"
   },
   "dependencies": {
-    "@next/third-parties": "^14.2.3",
+    "@next/third-parties": "16.3.1",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "lucide-react": "^1.28.0",
-    "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18",
-    "xlsx": "^0.18.5"
+    "next": "16.3.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
     "autoprefixer": "^10.5.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3",
-    "postcss": "^8.5.15",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.1",
+    "postcss": "8.5.26",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   }
 }
