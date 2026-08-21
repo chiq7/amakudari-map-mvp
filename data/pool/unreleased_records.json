@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 8,
+  "remainingCount": 7,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "f32ba0fd2240e6a76ce5b3816b9cb3ba079708b2c6e8a077a61113e2a6f0129a",
-      "dedupeKey": "758ce86524254d365a73d8228fe114ee0518a4b5f7b273a7473221408e714321",
-      "personName": "杉 俊弘",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "警察庁交通局交通指導課長",
-      "retirementDate": "2024-01-26",
-      "reemploymentDate": "2024-02-28",
-      "waitingDays": 33,
-      "corporationName": "ファーストブラザーズ株式会社",
-      "corporationType": "営利法人",
-      "newPosition": "常勤監査役",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r06-files",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "3b004284f9d0e387a2a283c840e24654b04bfa27f0bb85820c5feaa086330aa7",
       "dedupeKey": "e9370b7652140ccddd3889f380870e8e89526228ec4f4f7f261ea12c841a993a",

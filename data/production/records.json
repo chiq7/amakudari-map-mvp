@@ -2574,5 +2574,21 @@
     "waitingDays": 80,
     "sourceId": "cabinet-office-106-25-1-r06-files",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "f32ba0fd2240e6a76ce5b3816b9cb3ba079708b2c6e8a077a61113e2a6f0129a",
+    "dedupeKey": "758ce86524254d365a73d8228fe114ee0518a4b5f7b273a7473221408e714321",
+    "personSlug": "person-837e967dd4cf1da9",
+    "name": "杉 俊弘",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁交通局交通指導課長",
+    "corporationSlug": "corporation-8908dc1648a672be",
+    "corporationName": "ファーストブラザーズ株式会社",
+    "newPosition": "常勤監査役",
+    "retirementDate": "2024-01-26",
+    "reemploymentDate": "2024-02-28",
+    "waitingDays": 33,
+    "sourceId": "cabinet-office-106-25-1-r06-files",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx"
   }
 ]

@@ -3074,5 +3074,24 @@
     "sources": [
       "cabinet-office-106-25-1-r06-files"
     ]
+  },
+  {
+    "person_slug": "person-837e967dd4cf1da9",
+    "name": "杉 俊弘",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁交通局交通指導課長",
+    "corporationSlug": "corporation-8908dc1648a672be",
+    "corporationName": "ファーストブラザーズ株式会社",
+    "newPosition": "常勤監査役",
+    "retirementDate": "2024-01-26",
+    "reemploymentDate": "2024-02-28",
+    "waitingDays": 33,
+    "tags": [
+      "警察庁",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ]
   }
 ]
