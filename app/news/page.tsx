@@ -39,18 +39,9 @@ export default function NewsIndexPage() {
           <span className="block md:ml-2 md:inline">ニュース・解説</span>
         </h1>
         <p className="mt-5 max-w-3xl text-pretty leading-8 text-on-surface-variant">
-          政治・行政ニュースのうち、再就職、公的法人、監督官庁、制度、国会質疑に直接関係し、一次資料で確認できる内容だけを扱います。報道の転載や、根拠のない人物・法人評価は行いません。
+          再就職、公的法人、監督官庁、制度、国会質疑を、人物・法人・省庁のつながりから読み解きます。
         </p>
       </section>
-
-      <aside className="border-l-4 border-accent bg-accent-soft/55 py-3 pl-5 pr-4 text-sm leading-relaxed text-on-surface-variant">
-        <h2 className="font-bold text-primary">掲載基準（補足）</h2>
-        <ul className="mt-3 list-disc space-y-1 pl-5">
-          <li>一次資料のURLと確認日を記事内に残します。</li>
-          <li>確認できた事実と、資料だけでは確認できない事項を分けます。</li>
-          <li>新しい事実が不足する日は、既存の有望ページを深く更新します。</li>
-        </ul>
-      </aside>
 
       <section aria-labelledby="article-list-title">
         <div className="mb-4 flex items-end justify-between gap-4">
@@ -72,9 +63,6 @@ export default function NewsIndexPage() {
                   {article.title}
                 </h3>
                 <p className="mt-3 leading-relaxed text-on-surface-variant">{article.description}</p>
-                <p className="mt-4 text-sm text-on-surface-variant">
-                一次資料：{article.sources.filter((source) => source.kind === "一次資料").length}件 / 最終確認 {formatDate(article.sources[0].checkedAt)}
-                </p>
               </div>
               <span className="mt-1 text-sm font-bold text-secondary">解説を読む →</span>
             </Link>

@@ -84,9 +84,6 @@ export default function RankingsPage() {
           </span>
         </summary>
         <div className="border-t border-outline-variant p-4">
-          <DataNotice className="mb-4">
-            件数や日付を比較しやすくした集計です。特定の評価や判断を示すものではありません。
-          </DataNotice>
           <dl className="grid gap-x-8 gap-y-4 md:grid-cols-2">
             {[
               ["公表再就職者数", "公表資料に含まれる再就職記録の件数"],
@@ -106,7 +103,7 @@ export default function RankingsPage() {
       <section aria-labelledby="aggregate-result-title">
         <div className="mb-5 flex items-end justify-between gap-4">
           <h2 id="aggregate-result-title" className="text-2xl font-extrabold text-primary">法人別の集計結果</h2>
-          <p className="text-xs font-bold text-on-surface-variant">各行から出典付き詳細へ移動できます</p>
+          <p className="text-xs font-bold text-on-surface-variant">各行から法人詳細へ移動できます</p>
         </div>
         {nextDayItems.length === 0 ? (
           <DataNotice className="mb-6 border-l-accent bg-accent/10">

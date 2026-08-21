@@ -264,9 +264,6 @@ function validateData() {
         }
       });
     }
-    if (!Array.isArray(context.limitations) || context.limitations.length === 0) {
-      errors.push(`${prefix}.limitations must contain at least one item.`);
-    }
   });
 
   persons.forEach((person, index) => {

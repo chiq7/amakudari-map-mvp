@@ -6,7 +6,7 @@ import { corporations, totals } from "@/lib/static-content";
 export const metadata: Metadata = {
   title: "天下り先の法人一覧｜公表再就職情報を法人から探す",
   description:
-    "政府・各省庁等の公表資料に記載された再就職先法人を一覧で確認できます。法人ごとの公表記録数、主な出身省庁、出典を掲載しています。",
+    "政府・各省庁等の公表資料に記載された再就職先法人を一覧で確認できます。法人ごとの公表記録数と主な出身省庁を整理しています。",
   alternates: { canonical: "/corporations" },
 };
 
@@ -21,8 +21,7 @@ export default function CorporationsPage() {
         <p className="text-sm font-bold text-secondary">PUBLIC REEMPLOYMENT RECORDS</p>
         <h1 className="mt-2 text-3xl font-bold text-primary md:text-4xl">天下り先の法人一覧</h1>
         <p className="mt-3 text-base leading-relaxed text-on-surface-variant">
-          公表資料に記載された受け入れ法人を、再就職者数・主な出身省庁・出典とあわせて確認できます。
-          人物や法人への評価ではなく、公表記録を探すための一覧です。
+          公表資料に記載された受け入れ法人を、再就職者数と主な出身省庁から探せます。
         </p>
       </section>
 
@@ -61,7 +60,7 @@ export default function CorporationsPage() {
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
             <h2 id="featured-corporations-title" className="text-2xl font-bold text-primary">公表記録数が多い法人</h2>
-            <p className="mt-1 text-sm leading-relaxed text-on-surface-variant">まずは主要な法人から、人物・出身省庁・一次資料を確認できます。</p>
+            <p className="mt-1 text-sm leading-relaxed text-on-surface-variant">まずは主要な法人から、人物・出身省庁・業務内容をたどれます。</p>
           </div>
           <Link href="/corporations?show=all#corporation-search-tools" className="text-sm font-bold text-secondary hover:underline">
             すべての法人を検索・絞り込む →

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import type { Corporation, GbizInfoCollection, Person } from "@/lib/types";
 import CorporationBusinessContext from "@/components/CorporationBusinessContext";
-import { Breadcrumb, DataNotice, HighlightStatCard, SourceLinkList, StatCard, TagChip } from "@/components/ui";
+import { Breadcrumb, DataNotice, HighlightStatCard, StatCard, TagChip } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import {
   corporations,
@@ -10,7 +10,6 @@ import {
   getCorporationPersonHighlights,
   persons,
   records,
-  sources,
 } from "@/lib/static-content";
 
 const numberFormatter = new Intl.NumberFormat("ja-JP");
@@ -119,7 +118,6 @@ function ReemploymentRecordList({ relatedPersons }: { relatedPersons: Person[] }
                 <div><dt className="text-xs font-bold text-on-surface-variant">再就職日</dt><dd className="mt-1 font-mono">{person.reemployedAt}</dd></div>
               </div>
             </dl>
-            <p className="mt-4 border-t border-outline-variant pt-3 text-xs leading-5 text-on-surface-variant">出典：{person.source}</p>
           </article>
         ))}
       </div>
@@ -133,7 +131,6 @@ function ReemploymentRecordList({ relatedPersons }: { relatedPersons: Person[] }
               <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">再就職先での地位</th>
               <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">離職日 → 再就職日</th>
               <th className="px-4 py-3 text-center text-sm font-semibold text-on-surface-variant">待機日数</th>
-              <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">出典</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-outline-variant">
@@ -144,7 +141,6 @@ function ReemploymentRecordList({ relatedPersons }: { relatedPersons: Person[] }
                 <td className="px-4 py-4 text-sm leading-6">{person.newPosition}</td>
                 <td className="px-4 py-4 font-mono text-sm"><span className="block">{person.retiredAt}</span><span className="block text-on-surface-variant">→ {person.reemployedAt}</span></td>
                 <td className="px-4 py-4 text-center"><span className="inline-flex border border-secondary/20 bg-secondary-fixed px-2 py-1 text-sm font-bold text-secondary">{person.waitDays}日</span></td>
-                <td className="max-w-[240px] px-4 py-4 text-xs leading-5 text-on-surface-variant">{person.source}</td>
               </tr>
             ))}
           </tbody>
@@ -207,7 +203,7 @@ function PublicOfficerSection({ corporation }: { corporation: Corporation }) {
               href={`/public-officers/${officer.slug}`}
               className="mt-4 inline-flex min-h-11 items-center border-b-2 border-secondary text-sm font-extrabold text-secondary hover:border-primary hover:text-primary"
             >
-              人物詳細と出典を見る →
+              人物詳細を見る →
             </Link>
           </article>
         ))}
@@ -313,12 +309,6 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
     1,
     ...waitDistribution.map((item) => item.value),
   );
-  const relatedSourceIds = new Set([
-    ...corporation.sources,
-    ...relatedRecords.map((record) => record.sourceId),
-    ...corporation.publicOfficers.flatMap((officer) => officer.sourceIds),
-  ]);
-  const relatedSources = sources.filter((source) => relatedSourceIds.has(source.id));
   const publicMovement = relatedPersons
     .slice(0, 2)
     .map(
@@ -386,7 +376,6 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
         corporation={corporation}
         recordCount={relatedRecords.length}
         publicOfficerCount={corporation.publicOfficers.length}
-        sourceCount={relatedSources.length}
         connection={publicMovement || undefined}
       />
 
@@ -445,35 +434,6 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
                 </div>
               ))}
           </dl>
-          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 border-t border-outline-variant pt-3 text-sm">
-            {corporation.basicInfo && (
-              <a
-                href={corporation.basicInfo.sourceUrl}
-                target="_blank"
-                rel="noreferrer"
-                data-analytics-event="source_link"
-                data-source-type="corporate_registry"
-                data-analytics-location="corporation_overview"
-                className="font-semibold text-secondary hover:underline"
-              >
-                出典：{corporation.basicInfo.sourceName}
-              </a>
-            )}
-            {corporation.gbizInfo &&
-              corporation.gbizInfo.sourceUrl !== corporation.basicInfo?.sourceUrl && (
-                <a
-                  href={corporation.gbizInfo.sourceUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  data-analytics-event="source_link"
-                  data-source-type="gbizinfo"
-                  data-analytics-location="corporation_overview"
-                  className="font-semibold text-secondary hover:underline"
-                >
-                  出典：{corporation.gbizInfo.sourceName}
-                </a>
-              )}
-          </div>
         </section>
       )}
 
@@ -493,17 +453,6 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
                 gBizINFOで公開されている補助金・調達・認定などの情報です。再就職情報とは独立した公的法人情報として表示しています。
               </p>
             </div>
-            <a
-              href={corporation.gbizInfo.sourceUrl}
-              target="_blank"
-              rel="noreferrer"
-              data-analytics-event="source_link"
-              data-source-type="gbizinfo"
-              data-analytics-location="corporation_public_info"
-              className="shrink-0 text-sm font-semibold text-secondary hover:underline"
-            >
-              gBizINFOで確認
-            </a>
           </div>
 
           <div className="mt-3 grid grid-cols-1 gap-3 lg:grid-cols-2">
@@ -614,9 +563,6 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
             </div>
           )}
 
-          <p className="mt-4 text-xs text-on-surface-variant">
-            取得日: {corporation.gbizInfo.fetchedAt.slice(0, 10)}
-          </p>
         </section>
       )}
 
@@ -690,18 +636,6 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
                 ))}
               </div>
             </div>
-          </div>
-          <div>
-            <h3 className="mb-2 text-sm font-bold text-on-surface-variant">出典資料</h3>
-            <SourceLinkList
-              links={relatedSources.map((source) => ({
-                label: `${source.publisher}：${source.title}`,
-                href: source.url,
-              }))}
-            />
-            <p className="mt-3 text-xs leading-snug text-on-surface-variant">
-              本ページは政府・各省庁等の公表資料に基づき、官民の人材移動を中立的に整理したものです。特定の因果関係や不適切性を断定・示すものではありません。
-            </p>
           </div>
         </div>
       </section>

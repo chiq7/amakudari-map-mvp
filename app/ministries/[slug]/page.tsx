@@ -86,7 +86,7 @@ export default async function MinistryPage(props: PageProps) {
           </h1>
           <p className="mt-3 text-base leading-relaxed text-on-surface-variant">
             政府公表資料に記載された{ministry.name}出身者の再就職情報を、再就職先法人ごとに整理しています。
-            現在の公開データでは{matchingPeople.length}人・{matchingCorporations.length}法人の記録を確認できます。掲載内容は公表資料の記録であり、個人・法人・省庁の適法性や妥当性を評価するものではありません。
+            現在の公開データでは{matchingPeople.length}人・{matchingCorporations.length}法人の記録を確認できます。
           </p>
         </div>
         <ShareButton title={`${ministry.name}の天下り先一覧 | 天下りマップ`} />
@@ -116,7 +116,7 @@ export default async function MinistryPage(props: PageProps) {
           <div>
             <h2 className="text-2xl font-bold text-primary">再就職先法人一覧</h2>
             <p className="mt-1 text-sm text-on-surface-variant">
-              公表再就職者数の多い順に表示しています。法人詳細では出典や個別の公表記録を確認できます。
+              公表再就職者数の多い順に表示しています。法人詳細では業務内容と人物の移動を確認できます。
             </p>
           </div>
           <Link href={`/corporations?ministry=${encodeURIComponent(ministry.name)}`} className="text-sm font-bold text-secondary hover:underline">
@@ -149,7 +149,7 @@ export default async function MinistryPage(props: PageProps) {
                   </div>
                 </dl>
                 <Link href={`/corporations/${corporation.slug}`} className="mt-4 inline-flex min-h-11 items-center font-bold text-secondary hover:underline">
-                  法人詳細と出典を見る →
+                  法人詳細を見る →
                 </Link>
               </article>
             );
@@ -218,9 +218,9 @@ export default async function MinistryPage(props: PageProps) {
       {disclosureGuide ? (
         <section className="rounded-lg border border-secondary/25 bg-secondary-fixed/40 p-5">
           <p className="text-xs font-bold tracking-[0.08em] text-secondary">PUBLIC RECORDS EXPLAINED</p>
-          <h2 className="mt-2 text-xl font-bold text-primary">公表資料の読み方も確認する</h2>
+          <h2 className="mt-2 text-xl font-bold text-primary">制度と記録を読む</h2>
           <p className="mt-1 text-sm leading-relaxed text-on-surface-variant">
-            この一覧で確認できる範囲と、資料だけでは判断できない事項を解説しています。
+            再就職制度と記録の見方を、具体例とともに解説しています。
           </p>
           <Link href={`/news/${disclosureGuide.slug}`} className="mt-4 inline-flex text-sm font-bold text-secondary hover:underline">
             {disclosureGuide.title} →
@@ -228,15 +228,6 @@ export default async function MinistryPage(props: PageProps) {
         </section>
       ) : null}
 
-      <section className="rounded-lg border border-outline-variant bg-surface-container-low p-6">
-        <h2 className="text-xl font-bold text-primary">データについて</h2>
-        <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
-          この一覧は、政府・各省庁等が公表する再就職関連資料をもとに作成しています。氏名や所属の表記、対象範囲は出典資料に準じます。
-        </p>
-        <Link href="/data-policy" className="mt-4 inline-block text-sm font-bold text-secondary hover:underline">
-          データ方針を確認する →
-        </Link>
-      </section>
     </div>
   );
 }

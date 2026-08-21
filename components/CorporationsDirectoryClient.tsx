@@ -316,7 +316,7 @@ function CorporationsContent() {
                   </p>
                 ) : null}
                 <span className="mt-4 flex items-center justify-between text-sm font-bold text-secondary">
-                  詳細と出典を見る <ArrowRightIcon size={17} />
+                  詳細を見る <ArrowRightIcon size={17} />
                 </span>
               </Link>
             ))}
@@ -447,15 +447,6 @@ function CorporationsContent() {
 
         </div>
 
-        <section className="rounded-lg border border-outline-variant bg-surface-container-low p-6 text-center">
-          <h3 className="text-xl font-bold text-primary">データの前提を確認する</h3>
-          <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-on-surface-variant">
-            本サイトのデータは、公表資料をもとに客観的に整理しています。表示項目や待機期間の算出方法はデータ方針で確認できます。
-          </p>
-          <Link href="/data-policy" className="mt-4 inline-block rounded bg-primary px-5 py-2 text-sm font-bold text-white">
-            データ方針を見る
-          </Link>
-        </section>
       </section>
     </div>
   );

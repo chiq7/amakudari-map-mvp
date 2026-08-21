@@ -1,7 +1,6 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Breadcrumb, RelatedLinks, SourceLinkList, TagChip } from "@/components/ui";
+import { Breadcrumb, RelatedLinks, TagChip } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import { canonicalUrl } from "@/lib/seo";
 import { getNewsArticle, newsArticles } from "@/lib/news";
@@ -157,29 +156,6 @@ export default async function NewsArticlePage(props: { params: Promise<{ slug: s
         </div>
       </section>
 
-      <section className="rounded-lg border border-outline-variant bg-surface-container-low p-5">
-        <h2 className="text-xl font-bold text-primary">資料だけでは確認できないこと</h2>
-        <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-on-surface-variant">
-          {article.notVerified.map((item) => <li key={item}>{item}</li>)}
-        </ul>
-      </section>
-
-      <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
-        <h2 className="text-xl font-bold text-primary">一次資料・確認日</h2>
-        <div className="mt-4 space-y-3">
-          {article.sources.map((source) => (
-            <div key={source.url}>
-              <p className="text-sm text-on-surface-variant">
-                {source.kind} / {source.publisher}
-                {source.publishedAt ? ` / 公表日 ${formatDate(source.publishedAt)}` : ""}
-                {` / 確認日 ${formatDate(source.checkedAt)}`}
-              </p>
-              <SourceLinkList links={[{ label: source.title, href: source.url }]} />
-            </div>
-          ))}
-        </div>
-      </section>
-
       <RelatedLinks title="関連データ・ページ" links={article.relatedLinks} />
 
       <section>
@@ -193,10 +169,6 @@ export default async function NewsArticlePage(props: { params: Promise<{ slug: s
           ))}
         </div>
       </section>
-
-      <p className="text-sm leading-relaxed text-on-surface-variant">
-        新しい根拠資料がある場合は、{<Link href="/data-policy#contact" className="font-semibold text-secondary hover:underline">掲載内容の修正・情報提供</Link>}からお知らせください。
-      </p>
     </article>
   );
 }

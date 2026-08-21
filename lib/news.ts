@@ -20,7 +20,6 @@ export type NewsArticle = {
   verifiedFacts: Array<{ title: string; body: string }>;
   readingGuide: Array<{ title: string; body: string }>;
   timeline: Array<{ date: string; label: string; body: string }>;
-  notVerified: string[];
   sources: NewsSource[];
   relatedLinks: Array<{ label: string; href: string }>;
   faq: Array<{ question: string; answer: string }>;

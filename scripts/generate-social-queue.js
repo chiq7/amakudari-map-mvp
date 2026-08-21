@@ -33,8 +33,6 @@
       "noteタイトル",
       "note下書き",
       "天下りマップURL",
-      "一次資料名",
-      "一次資料URL",
       "note公開判断",
       "確認事項",
     ];
@@ -47,8 +45,6 @@
       entry.note.title,
       entry.note.draft,
       entry.siteUrl,
-      entry.source.title,
-      entry.source.url,
       entry.note.publicationEligibility,
       entry.editorialNote,
     ]);

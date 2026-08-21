@@ -259,7 +259,6 @@ export interface CorporationEditorialContext {
     sourceTitle: string;
     sourceUrl: string;
   }>;
-  limitations: string[];
 }
 
 export interface Person {

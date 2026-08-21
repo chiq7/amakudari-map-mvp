@@ -15,13 +15,11 @@ export default function CorporationBusinessContext({
   corporation,
   recordCount,
   publicOfficerCount,
-  sourceCount,
   connection,
 }: {
   corporation: Corporation;
   recordCount?: number;
   publicOfficerCount?: number;
-  sourceCount?: number;
   connection?: string;
 }) {
   const editorialContext = getCorporationEditorialContext(corporation.slug);
@@ -112,7 +110,6 @@ export default function CorporationBusinessContext({
               {[
                 ["公表役員", publicOfficerCount ?? 0, "人"],
                 ["再就職記録", recordCount, "件"],
-                ["出典資料", sourceCount ?? 0, "件"],
                 ...(publicSubsidyTotal !== undefined
                   ? [["公表補助金額", formatPublicSubsidyAmount(publicSubsidyTotal), ""]]
                   : []),
@@ -166,7 +163,6 @@ export default function CorporationBusinessContext({
               </article>
             ))}
           </div>
-          <p className="mt-3 text-right text-xs text-on-surface-variant">確認日：{editorialContext.checkedAt}</p>
         </div>
       ) : null}
     </section>

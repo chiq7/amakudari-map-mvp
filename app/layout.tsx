@@ -9,7 +9,7 @@ import "./globals.css";
 
 const title = "天下りマップ";
 const description =
-  "政府・各省庁等の公表資料に基づく再就職情報を、中立的に検索・閲覧できる官民人材移動データベースです。";
+  "政府・各省庁等が公表する再就職情報を、人・法人・省庁のつながりからたどるデータベースです。";
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
 const bingSiteVerification =
   process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION?.trim() ||

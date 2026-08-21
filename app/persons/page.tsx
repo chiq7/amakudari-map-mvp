@@ -30,7 +30,7 @@ export default function PersonsPage() {
           <p className="text-xs font-extrabold tracking-[0.14em] text-[#f2b2a8]">PEOPLE</p>
           <h1 className="mt-3 text-balance text-3xl font-extrabold tracking-tight md:text-4xl">人から公表記録を探す</h1>
           <p className="mt-4 max-w-2xl text-pretty text-sm leading-7 text-white/72 md:text-base">
-            人物を出身省庁ごとに分けました。氏名から、役職・再就職先・出典を確認できます。
+            人物を出身省庁ごとに分けました。氏名から、役職・再就職先を確認できます。
           </p>
         </div>
         <SearchBox placeholder="氏名・役職・省庁名で検索" className="text-on-surface" />

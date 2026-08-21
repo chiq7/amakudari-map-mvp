@@ -1,10 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Breadcrumb, SourceLinkList, TagChip } from "@/components/ui";
+import { Breadcrumb, TagChip } from "@/components/ui";
 import CorporationBusinessContext from "@/components/CorporationBusinessContext";
 import ShareButton from "@/components/ShareButton";
-import { getCorporation, getPublicOfficer, publicOfficers, sources } from "@/lib/static-content";
+import { getCorporation, getPublicOfficer, publicOfficers } from "@/lib/static-content";
 
 export function generateStaticParams() {
   return publicOfficers.map((officer) => ({ slug: officer.slug }));
@@ -15,7 +15,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   const officer = getPublicOfficer(params.slug);
   const title = officer ? `${officer.name}氏の公表役員プロフィール` : "公表役員プロフィール";
   const description = officer
-    ? `${officer.corporationName}が公表している${officer.name}氏の役員・経歴情報を、出典とあわせて整理しています。`
+    ? `${officer.corporationName}が公表している${officer.name}氏の役員・経歴情報を整理しています。`
     : "法人の公表情報に基づく役員プロフィールです。";
   return {
     title,
@@ -32,8 +32,6 @@ export default async function PublicOfficerPage(props: { params: Promise<{ slug:
   if (!officer) notFound();
 
   const corporation = getCorporation(officer.corporationSlug);
-  const relatedSources = sources.filter((source) => officer.sourceIds.includes(source.id));
-
   return (
     <div className="flex flex-col gap-8">
       <Breadcrumb
@@ -54,12 +52,6 @@ export default async function PublicOfficerPage(props: { params: Promise<{ slug:
           </p>
         </div>
         <ShareButton title={`${officer.name}氏の公表役員プロフィール | 天下りマップ`} />
-      </section>
-
-      <section className="rounded-lg border border-outline-variant bg-surface-container-low p-4">
-        <p className="text-sm leading-relaxed text-on-surface-variant">
-          本ページは法人の公式発表・会社情報に掲載された公開プロフィールを整理したものです。国家公務員の再就職状況公表資料に基づく記録とは区別しており、退職日・就任日は確認できる範囲を超えて推測していません。個人への評価、違法性、責任を断定するものではありません。
-        </p>
       </section>
 
       <CorporationBusinessContext
@@ -95,17 +87,7 @@ export default async function PublicOfficerPage(props: { params: Promise<{ slug:
         </div>
       </section>
 
-      <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
-          <h2 className="mb-4 text-xl font-bold text-primary">出典・公開情報</h2>
-          <SourceLinkList
-            links={relatedSources.map((source) => ({
-              label: `${source.publisher}：${source.title}`,
-              href: source.url,
-            }))}
-          />
-        </div>
-        <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+      <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
           <h2 className="mb-4 text-xl font-bold text-primary">関連リンク</h2>
           <Link
             href={`/corporations/${officer.corporationSlug}`}
@@ -113,7 +95,6 @@ export default async function PublicOfficerPage(props: { params: Promise<{ slug:
           >
             {officer.corporationName}の法人情報を見る
           </Link>
-        </div>
       </section>
     </div>
   );

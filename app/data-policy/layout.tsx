@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "データ方針・出典",
+  title: "データについて",
   description:
-    "天下りマップで扱う公表資料、データの整理方針、掲載内容に関する注意事項を説明します。",
+    "天下りマップで表示する人物・法人・集計データの見方を紹介します。",
   alternates: { canonical: "/data-policy" },
 };
 

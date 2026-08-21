@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import {
   corporations,
   getCorporationPersonHighlights,
-  getSourceSummary,
   meta,
   topics,
   totals,
@@ -43,16 +42,9 @@ const featuredCorporations = [
 
 const featuredCorporationCards = featuredCorporations.map((corporation) => {
   const highlights = getCorporationPersonHighlights(corporation);
-  const sourceIds = Array.from(
-    new Set([
-      ...corporation.sources,
-      ...highlights.people.flatMap((person) => person.sourceIds),
-    ]),
-  );
   return {
     corporation,
     highlights,
-    sourceSummary: getSourceSummary(sourceIds),
     selectionReason:
       corporation.slug === explainerCorporation?.slug
         ? "最新の解説とつながる法人"
@@ -167,11 +159,6 @@ function ExplainerSection() {
                 </li>
               ))}
             </ul>
-            {featuredArticle.notVerified[0] ? (
-              <p className="mt-5 border-l-2 border-outline pl-3 text-xs leading-6 text-on-surface-variant">
-                <strong className="text-primary">資料だけでは確認できない：</strong> {featuredArticle.notVerified[0]}
-              </p>
-            ) : null}
           </aside>
         </div>
       </article>
@@ -412,7 +399,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="mt-8 grid gap-4 lg:grid-cols-3">
-          {featuredCorporationCards.map(({ corporation, highlights, sourceSummary, selectionReason }) => (
+          {featuredCorporationCards.map(({ corporation, highlights, selectionReason }) => (
             <article key={corporation.slug} className="flex flex-col rounded-3xl bg-white p-6 shadow-card ring-1 ring-outline-variant/70">
               <div className="flex items-center justify-between gap-3">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-container-low px-3 py-1 text-xs font-bold text-on-surface-variant">
@@ -443,9 +430,8 @@ export default function Home() {
                 )}
               </div>
 
-              <p className="mt-4 text-xs leading-5 text-on-surface-variant">出典：{sourceSummary || "公表資料"}</p>
               <Link href={`/corporations/${corporation.slug}`} className="mt-5 inline-flex items-center justify-between border-t border-outline-variant/70 pt-4 text-sm font-bold text-secondary">
-                詳細と出典を見る <ArrowRightIcon size={17} />
+                詳細を見る <ArrowRightIcon size={17} />
               </Link>
             </article>
           ))}
@@ -487,19 +473,6 @@ export default function Home() {
       </section>
 
       <ExplainerSection />
-
-      <section className="flex flex-col gap-5 border-y border-outline-variant bg-surface-container-low px-5 py-8 sm:flex-row sm:items-center sm:justify-between md:px-8">
-        <div className="max-w-3xl">
-          <p className="text-xs font-extrabold tracking-[0.14em] text-secondary">このサイトの読み方</p>
-          <h2 className="mt-2 text-balance text-xl font-extrabold text-primary md:text-2xl">数字は評価ではなく、公表資料への入口です。</h2>
-          <p className="mt-2 text-sm leading-7 text-on-surface-variant">
-            確認できた事実と、資料だけでは判断できないことを分けて表示しています。
-          </p>
-        </div>
-        <Link href="/data-policy" className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 border border-primary bg-white px-4 text-sm font-bold text-primary transition hover:bg-primary hover:text-white">
-          データ方針を見る <ArrowRightIcon size={17} />
-        </Link>
-      </section>
     </div>
   );
 }

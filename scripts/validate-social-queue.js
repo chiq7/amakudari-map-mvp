@@ -54,8 +54,6 @@
       assert(entry.x.thread[1].includes(entry.source.url), `${entry.id} reply must include the primary source URL.`);
       assert(entry.note?.title, `${entry.id} needs a note title.`);
       assert(entry.note?.draft?.includes("## 確認できた事実"), `${entry.id} note draft needs verified facts.`);
-      assert(entry.note?.draft?.includes("## 資料だけでは確認できないこと"), `${entry.id} note draft needs an explicit limitation.`);
-      assert(entry.note?.draft?.includes(entry.source.url), `${entry.id} note draft needs the primary source URL.`);
       assert(entry.note.publicationEligibility.includes("追加の一次資料"), `${entry.id} must block thin note publication.`);
     }
     console.log(`投稿キュー検証 OK: ${queue.entries.length}件`);

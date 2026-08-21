@@ -94,9 +94,6 @@ export default function TopicsPage() {
         </section>
       </div>
 
-      <aside className="border-l-4 border-accent bg-accent-soft/45 px-5 py-4 text-sm leading-7 text-on-surface-variant">
-        テーマ名は関係する記録を探すための入口です。テーマとの関連だけで、人物・法人への評価や因果関係を示すものではありません。
-      </aside>
     </div>
   );
 }

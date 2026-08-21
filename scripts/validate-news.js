@@ -50,9 +50,6 @@
         errors.push(`${prefix}.timeline[${timelineIndex}] requires date, label, and body.`);
       }
     }
-    if (!Array.isArray(article.notVerified) || article.notVerified.length === 0 || article.notVerified.some((item) => !isString(item))) {
-      errors.push(`${prefix}.notVerified must contain at least one statement.`);
-    }
     if (!Array.isArray(article.sources) || article.sources.length === 0) {
       errors.push(`${prefix}.sources must contain at least one source.`);
     }

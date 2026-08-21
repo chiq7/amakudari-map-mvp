@@ -28,9 +28,6 @@ export default function SiteFooter() {
           <p className="mt-5 text-sm leading-7 text-white/72">
             政府・各省庁等の公表資料をもとに、官民の人材移動を人・法人・省庁のつながりから確認できるよう整理したデータベースです。
           </p>
-          <p className="mt-4 text-xs leading-6 text-white/55">
-            公表情報を比較しやすくするためのサービスであり、個人や法人の適法性・妥当性を独自に評価するものではありません。
-          </p>
         </div>
 
         <nav aria-label="データを探す">
@@ -65,9 +62,8 @@ export default function SiteFooter() {
         </nav>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-[1280px] flex-col gap-2 px-4 py-5 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between md:px-8">
+        <div className="mx-auto flex max-w-[1280px] px-4 py-5 text-xs text-white/45 md:px-8">
           <p>© 天下りマップ</p>
-          <p>一次資料の出典と確認日を各ページに掲載しています。</p>
         </div>
       </div>
     </footer>

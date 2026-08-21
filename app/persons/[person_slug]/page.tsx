@@ -1,10 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Breadcrumb, SourceLinkList, TagChip } from "@/components/ui";
+import { Breadcrumb, TagChip } from "@/components/ui";
 import CorporationBusinessContext from "@/components/CorporationBusinessContext";
 import ShareButton from "@/components/ShareButton";
 import { getCorporationEditorialContext } from "@/lib/corporation-contexts";
-import { getCorporation, getPerson, persons, sources } from "@/lib/static-content";
+import { getCorporation, getPerson, persons } from "@/lib/static-content";
 
 export function generateStaticParams() {
   return persons.map((person) => ({ person_slug: person.slug }));
@@ -40,13 +40,6 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
   const corporationContext = getCorporationEditorialContext(person.corporationSlug);
   const corporationWebsite =
     corporationContext?.business.officialWebsite || corporation.gbizInfo?.officialWebsite;
-  const sourceLinks = person.sourceIds.flatMap((sourceId) => {
-    const source = sources.find((item) => item.id === sourceId);
-    return source
-      ? [{ label: `${source.publisher}：${source.title}`, href: source.url }]
-      : [];
-  });
-
   return (
     <div className="flex flex-col gap-8">
       <Breadcrumb
@@ -133,12 +126,6 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
         connection={`${person.name}氏が${person.ministry}の「${person.formerPosition}」から、${person.newPosition}として${corporation.name}へ再就職した記録が公表されています。`}
       />
 
-      <section className="border-l-4 border-outline bg-surface-container-low px-4 py-3">
-        <p className="text-sm leading-relaxed text-on-surface-variant">
-          本ページは公表資料に記載された氏名・官職・再就職先を整理したものです。同姓同名の別人が含まれる可能性があるため、人物の特定には出典資料もあわせて確認してください。個人への評価や違法性を断定するものではありません。
-        </p>
-      </section>
-
       <section>
         <h2 className="mb-2 text-sm font-bold text-on-surface-variant">関連タグ</h2>
         <div className="flex flex-wrap gap-2">
@@ -158,15 +145,7 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
         </div>
       </section>
 
-      <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
-          <h2 className="mb-4 text-xl font-bold text-primary">出典・公表資料</h2>
-          <SourceLinkList links={sourceLinks} />
-          <p className="mt-4 text-xs leading-relaxed text-on-surface-variant">
-            本ページに記載されている情報は、公的資料に基づき機械的に整理したものです。掲載されている個人の資質や再就職の正当性について評価を行うものではありません。
-          </p>
-        </div>
-        <div className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+      <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
           <h2 className="mb-4 text-xl font-bold text-primary">関連リンク</h2>
           <div className="flex flex-col gap-3">
             <Link href={`/corporations/${person.corporationSlug}`} className="font-semibold text-secondary hover:underline">
@@ -185,7 +164,6 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
               データ方針について
             </Link>
           </div>
-        </div>
       </section>
     </div>
   );
