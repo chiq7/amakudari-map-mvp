@@ -3742,6 +3742,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-c40ea013bf481a4c",
+    "name": "弁護士法人上原総合法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 18
+    },
+    "relatedPersons": [
+      "person-18d444977ef7d6de"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [
