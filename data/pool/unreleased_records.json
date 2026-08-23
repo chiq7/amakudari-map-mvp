@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 6,
+  "remainingCount": 5,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "5fd85385ce0ca7b905b950358f2e6cd528df33c18d40084ba08148ea381c3c63",
-      "dedupeKey": "f210d9bd47e58e8835d6b82b294315a113264b98e84eecda8f291591e96bfd73",
-      "personName": "梶原 真也",
-      "originMinistry": "法務省",
-      "titleAtRetirement": "東京高等検察庁検事",
-      "retirementDate": "2023-12-31",
-      "reemploymentDate": "2024-01-04",
-      "waitingDays": 4,
-      "corporationName": "弁護士法人春田法律事務所",
-      "corporationType": "弁護士法人",
-      "newPosition": "広島オフィス弁護士",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r06-files",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "f30fefdb3a1e3a1616746ec9f07b7660c37f4f8d2042770c3beba044824413df",
       "dedupeKey": "be497e6ec72df4aa71ffb94f01b3049aae509dc95f18905ccde76e0810f88a59",

@@ -3113,5 +3113,25 @@
     "sources": [
       "cabinet-office-106-25-1-r06-files"
     ]
+  },
+  {
+    "person_slug": "person-73bbf359855df1bc",
+    "name": "梶原 真也",
+    "fromMinistry": "法務省",
+    "previousPosition": "東京高等検察庁検事",
+    "corporationSlug": "corporation-638be66e3d8f9a65",
+    "corporationName": "弁護士法人春田法律事務所",
+    "newPosition": "広島オフィス弁護士",
+    "retirementDate": "2023-12-31",
+    "reemploymentDate": "2024-01-04",
+    "waitingDays": 4,
+    "tags": [
+      "法務省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ]
   }
 ]

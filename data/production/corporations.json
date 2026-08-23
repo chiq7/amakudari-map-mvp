@@ -3767,6 +3767,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-638be66e3d8f9a65",
+    "name": "弁護士法人春田法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 4
+    },
+    "relatedPersons": [
+      "person-73bbf359855df1bc"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

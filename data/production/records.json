@@ -2606,5 +2606,21 @@
     "waitingDays": 18,
     "sourceId": "cabinet-office-106-25-1-r06-files",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "5fd85385ce0ca7b905b950358f2e6cd528df33c18d40084ba08148ea381c3c63",
+    "dedupeKey": "f210d9bd47e58e8835d6b82b294315a113264b98e84eecda8f291591e96bfd73",
+    "personSlug": "person-73bbf359855df1bc",
+    "name": "梶原 真也",
+    "fromMinistry": "法務省",
+    "previousPosition": "東京高等検察庁検事",
+    "corporationSlug": "corporation-638be66e3d8f9a65",
+    "corporationName": "弁護士法人春田法律事務所",
+    "newPosition": "広島オフィス弁護士",
+    "retirementDate": "2023-12-31",
+    "reemploymentDate": "2024-01-04",
+    "waitingDays": 4,
+    "sourceId": "cabinet-office-106-25-1-r06-files",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx"
   }
 ]
