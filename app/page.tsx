@@ -29,16 +29,23 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-const explainerCorporation = corporations.find((corporation) => corporation.slug === "corporation-luup");
+const latestExplainerCorporationSlugs = new Set(
+  (newsArticles[0]?.relatedLinks ?? [])
+    .map((link) => link.href.match(/^\/corporations\/([^/]+)$/)?.[1])
+    .filter((slug): slug is string => Boolean(slug)),
+);
+const latestExplainerCorporations = corporations.filter((corporation) =>
+  latestExplainerCorporationSlugs.has(corporation.slug),
+);
 const recordRichCorporations = [...corporations]
-  .filter((corporation) => corporation.slug !== explainerCorporation?.slug && corporation.count > 1)
+  .filter((corporation) => corporation.count > 1)
   .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name, "ja"));
 const featuredCorporations = [
-  explainerCorporation ?? recordRichCorporations[0] ?? corporations[0],
-  ...recordRichCorporations.slice(0, 2),
+  ...latestExplainerCorporations,
+  ...recordRichCorporations,
 ].filter((corporation, index, list) =>
   corporation && list.findIndex((item) => item?.slug === corporation.slug) === index,
-);
+).slice(0, 3);
 
 const featuredCorporationCards = featuredCorporations.map((corporation) => {
   const highlights = getCorporationPersonHighlights(corporation);
@@ -46,8 +53,8 @@ const featuredCorporationCards = featuredCorporations.map((corporation) => {
     corporation,
     highlights,
     selectionReason:
-      corporation.slug === explainerCorporation?.slug
-        ? "最新の解説とつながる法人"
+      latestExplainerCorporationSlugs.has(corporation.slug)
+        ? "最新の解説で読む法人"
         : `公表記録が複数（${corporation.count}人）`,
   };
 });
@@ -392,7 +399,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="PUBLIC RECORDS"
             title="公表情報を、つながりで見る"
-            description="最新の解説に関連する法人と、公表記録が複数ある法人を選んでいます。"
+            description="最新の解説に出た法人を先頭に、公表記録が多い法人をあわせて表示しています。記事やデータが更新されると入れ替わります。"
           />
           <Link href="/corporations" className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-secondary hover:underline">
             法人一覧を見る <ArrowRightIcon size={17} />
