@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 5,
+  "remainingCount": 4,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "f30fefdb3a1e3a1616746ec9f07b7660c37f4f8d2042770c3beba044824413df",
-      "dedupeKey": "be497e6ec72df4aa71ffb94f01b3049aae509dc95f18905ccde76e0810f88a59",
-      "personName": "福島 崇之",
-      "originMinistry": "法務省",
-      "titleAtRetirement": "法務総合研究所国際協力部法務教官",
-      "retirementDate": "2023-12-31",
-      "reemploymentDate": "2024-02-01",
-      "waitingDays": 32,
-      "corporationName": "Assegaf Hamzah&Partners法律事務所",
-      "corporationType": "",
-      "newPosition": "外国法弁護士",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r06-files",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type source column was not found and could not be inferred."
-      ]
-    },
     {
       "rawId": "0c7b4e98bd56f6f2b52ee63e2452e2ff3a33a9d3d36d2aa06e47332ca7e5c681",
       "dedupeKey": "8c7d4c4de9cbc40d200db6ab90c06374779485dc43492b661668855cc88920a3",

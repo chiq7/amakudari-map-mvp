@@ -3133,5 +3133,24 @@
     "sources": [
       "cabinet-office-106-25-1-r06-files"
     ]
+  },
+  {
+    "person_slug": "person-5fa147b4403093dc",
+    "name": "福島 崇之",
+    "fromMinistry": "法務省",
+    "previousPosition": "法務総合研究所国際協力部法務教官",
+    "corporationSlug": "corporation-e562246b989e6108",
+    "corporationName": "Assegaf Hamzah&Partners法律事務所",
+    "newPosition": "外国法弁護士",
+    "retirementDate": "2023-12-31",
+    "reemploymentDate": "2024-02-01",
+    "waitingDays": 32,
+    "tags": [
+      "法務省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ]
   }
 ]

@@ -3792,6 +3792,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-e562246b989e6108",
+    "name": "Assegaf Hamzah&Partners法律事務所",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 32
+    },
+    "relatedPersons": [
+      "person-5fa147b4403093dc"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [
