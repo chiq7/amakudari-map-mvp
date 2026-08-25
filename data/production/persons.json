@@ -3152,5 +3152,24 @@
     "sources": [
       "cabinet-office-106-25-1-r06-files"
     ]
+  },
+  {
+    "person_slug": "person-484f0b9098efc66e",
+    "name": "金谷 梨紗",
+    "fromMinistry": "法務省",
+    "previousPosition": "神戸地方検察庁検事",
+    "corporationSlug": "corporation-78554f814c937818",
+    "corporationName": "中原和之法律事務所",
+    "newPosition": "弁護士",
+    "retirementDate": "2024-02-01",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 60,
+    "tags": [
+      "法務省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ]
   }
 ]

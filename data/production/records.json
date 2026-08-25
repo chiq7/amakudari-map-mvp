@@ -2638,5 +2638,21 @@
     "waitingDays": 32,
     "sourceId": "cabinet-office-106-25-1-r06-files",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "0c7b4e98bd56f6f2b52ee63e2452e2ff3a33a9d3d36d2aa06e47332ca7e5c681",
+    "dedupeKey": "8c7d4c4de9cbc40d200db6ab90c06374779485dc43492b661668855cc88920a3",
+    "personSlug": "person-484f0b9098efc66e",
+    "name": "金谷 梨紗",
+    "fromMinistry": "法務省",
+    "previousPosition": "神戸地方検察庁検事",
+    "corporationSlug": "corporation-78554f814c937818",
+    "corporationName": "中原和之法律事務所",
+    "newPosition": "弁護士",
+    "retirementDate": "2024-02-01",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 60,
+    "sourceId": "cabinet-office-106-25-1-r06-files",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx"
   }
 ]

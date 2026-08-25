@@ -3817,6 +3817,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-78554f814c937818",
+    "name": "中原和之法律事務所",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 60
+    },
+    "relatedPersons": [
+      "person-484f0b9098efc66e"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [
