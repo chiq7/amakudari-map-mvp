@@ -17,8 +17,8 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const params = await props.params;
   const person = getPerson(params.person_slug);
-  const title = `${person.name}氏｜${person.ministry}から${person.corporationName}への再就職`;
-  const description = `${person.name}氏が${person.ministry}の「${person.formerPosition}」を離職し、${person.corporationName}の「${person.newPosition}」へ再就職した公表記録、日付、法人の業務、一次資料を整理しています。`;
+  const title = `${person.name}氏｜${person.ministry}から${person.corporationName}への再就職先`;
+  const description = `${person.name}氏の再就職先を確認できます。${person.ministry}の「${person.formerPosition}」から、${person.corporationName}の「${person.newPosition}」へ移った記録と法人の業務を整理しています。`;
   return {
     title,
     description,
@@ -54,7 +54,7 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
       <section>
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h1 className="text-3xl font-bold text-primary md:text-4xl">{person.name} 氏の公表再就職情報</h1>
+            <h1 className="text-3xl font-bold text-primary md:text-4xl">{person.name} 氏の再就職先・公表記録</h1>
             <p className="mt-2 text-base leading-7 text-on-surface-variant">
               {person.ministry}の「{person.formerPosition}」から、{person.corporationName}の「{person.newPosition}」へ移った公表記録です。
             </p>
@@ -88,7 +88,7 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
             </div>
             <p className="text-sm font-extrabold text-secondary">待機 {person.waitDays}日</p>
             <p className="mt-1 text-xs text-on-surface-variant">
-              {person.waitDays === 0 ? "離職日と再就職日が同日" : "公表日付に基づき算出"}
+              {person.waitDays === 0 ? "離職日と就任日が同日" : "離職日から就任日まで"}
             </p>
           </div>
 

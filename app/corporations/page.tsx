@@ -4,9 +4,9 @@ import CorporationsDirectoryClient from "@/components/CorporationsDirectoryClien
 import { corporations, totals } from "@/lib/static-content";
 
 export const metadata: Metadata = {
-  title: "天下り先の法人一覧｜公表再就職情報を法人から探す",
+  title: "天下り先企業・法人一覧｜省庁別の公表再就職情報を探す",
   description:
-    "政府・各省庁等の公表資料に記載された再就職先法人を一覧で確認できます。法人ごとの公表記録数と主な出身省庁を整理しています。",
+    "天下り先の企業・法人を一覧で探せます。法人名から公表された人物・出身省庁を確認し、省庁別・法人種別でも絞り込めます。",
   alternates: { canonical: "/corporations" },
 };
 
@@ -18,10 +18,10 @@ export default function CorporationsPage() {
   return (
     <div className="flex flex-col gap-10">
       <section className="mx-auto max-w-4xl text-center">
-        <p className="text-sm font-bold text-secondary">PUBLIC REEMPLOYMENT RECORDS</p>
-        <h1 className="mt-2 text-3xl font-bold text-primary md:text-4xl">天下り先の法人一覧</h1>
+        <p className="text-sm font-bold text-secondary">FIND DESTINATIONS</p>
+        <h1 className="mt-2 text-3xl font-bold text-primary md:text-4xl">天下り先の企業・法人を探す</h1>
         <p className="mt-3 text-base leading-relaxed text-on-surface-variant">
-          公表資料に記載された受け入れ法人を、再就職者数と主な出身省庁から探せます。
+          法人名から公表された人物と出身省庁を確認できます。省庁別・法人種別でも絞り込めます。
         </p>
       </section>
 
@@ -29,7 +29,7 @@ export default function CorporationsPage() {
         {[
           ["受け入れ法人", totals.corporations.toLocaleString(), "法人"],
           ["公表再就職記録", totals.publicRecords.toLocaleString(), "件"],
-          ["30日以内の記録", totals.within30DaysCorporations.toLocaleString(), "件"],
+          ["30日以内の記録がある法人", totals.within30DaysCorporations.toLocaleString(), "法人"],
         ].map(([label, value, unit]) => (
           <div key={label} className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-outline-variant/70">
             <dt className="text-sm font-semibold text-on-surface-variant">{label}</dt>
@@ -39,6 +39,19 @@ export default function CorporationsPage() {
           </div>
         ))}
       </dl>
+
+      <section aria-label="法人一覧の使い方" className="grid gap-px overflow-hidden rounded-2xl border border-outline-variant bg-outline-variant sm:grid-cols-3">
+        {[
+          ["法人名が分かる", "名前で検索して、人物と出身省庁を確認"],
+          ["省庁から探す", "財務省・国土交通省などの一覧へ進む"],
+          ["種別から絞る", "株式会社・公益法人などを比較する"],
+        ].map(([title, description]) => (
+          <div key={title} className="bg-surface-container-lowest px-5 py-4 text-left">
+            <p className="font-extrabold text-primary">{title}</p>
+            <p className="mt-1 text-sm leading-6 text-on-surface-variant">{description}</p>
+          </div>
+        ))}
+      </section>
 
       <nav aria-label="よく見られる省庁の一覧" className="border-y border-outline-variant py-5">
         <p className="text-center text-sm font-bold text-on-surface-variant">出身省庁から天下り先の企業・法人を探す</p>

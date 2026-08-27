@@ -23,9 +23,9 @@ import {
 import { getMinistryPath } from "@/lib/ministry-pages";
 
 export const metadata: Metadata = {
-  title: "天下り先・企業一覧を公表資料から探す｜天下りマップ",
+  title: "天下り先・企業一覧｜省庁・法人・人物から探す｜天下りマップ",
   description:
-    "官僚・国家公務員の天下り先企業や法人を、財務省・国土交通省・警察庁などの省庁別、人物別に検索できます。政府公表の再就職情報と一次資料を掲載しています。",
+    "天下り先の企業・法人を、省庁別・法人別・人物別に探せるデータベースです。誰がどこからどこへ移ったか、法人の業務とあわせて確認できます。",
   alternates: { canonical: "/" },
 };
 
@@ -248,11 +248,11 @@ export default function Home() {
             PUBLIC RECORDS, VISUALIZED
           </p>
           <h1 className="mt-6 text-balance text-[34px] font-extrabold leading-[1.25] tracking-[-0.035em] sm:text-[42px] md:leading-[1.22] xl:text-[46px]">
-            <span className="block">官民の人の動きを、</span>
-            <span className="block text-accent">公表資料からたどる。</span>
+            <span className="block">天下り先を、</span>
+            <span className="block text-accent">省庁・法人・人物から探す。</span>
           </h1>
           <p className="mt-5 max-w-xl text-pretty text-base font-medium leading-8 text-on-surface-variant md:text-lg">
-            官僚・国家公務員の天下り先企業や法人を、誰が、どこから、どこへ移ったか一本の線で確認できます。
+            国家公務員の再就職先企業・法人を、誰が、どこから、どこへ移ったか、法人の業務とあわせて確認できます。
           </p>
 
           <figure className="mt-6 overflow-hidden rounded-2xl bg-[#f6f0e6] ring-1 ring-[#dfd4c5] lg:hidden">
