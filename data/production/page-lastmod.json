@@ -3,15 +3,15 @@
   "pages": {
     "/data-policy": "2026-07-28T18:25:27+09:00",
     "/retirement-estimator": "2026-08-03T17:00:00+09:00",
-    "/": "2026-08-25T21:34:22.519Z",
-    "/rankings": "2026-08-25T21:34:22.519Z",
-    "/corporations": "2026-08-25T21:34:22.519Z",
+    "/": "2026-08-27T00:36:43.542Z",
+    "/rankings": "2026-08-27T00:36:43.542Z",
+    "/corporations": "2026-08-27T00:36:43.542Z",
     "/ministries/npa": "2026-08-20T18:36:03+09:00",
     "/ministries/mic": "2026-08-20T18:36:03+09:00",
     "/persons/person-976d95e664e0913e": "2026-08-20T18:36:03+09:00",
     "/persons/person-52ff2a4059e36a01": "2026-08-20T18:36:03+09:00",
-    "/persons": "2026-08-25T21:34:22.519Z",
-    "/organizations": "2026-08-25T21:34:22.519Z",
+    "/persons": "2026-08-27T00:36:43.542Z",
+    "/organizations": "2026-08-27T00:36:43.542Z",
     "/persons/person-b14a2349e05a9a96": "2026-07-28T22:11:43.541Z",
     "/corporations/corporation-422fcd4b721a97db": "2026-08-03T22:13:08.607Z",
     "/corporations/corporation-83ba7ab290ca473c": "2026-08-03T22:13:08.607Z",
@@ -165,6 +165,8 @@
     "/persons/person-5fa147b4403093dc": "2026-08-24T21:35:14.297Z",
     "/corporations/corporation-e562246b989e6108": "2026-08-24T21:35:14.297Z",
     "/persons/person-484f0b9098efc66e": "2026-08-25T21:34:22.519Z",
-    "/corporations/corporation-78554f814c937818": "2026-08-25T21:34:22.519Z"
+    "/corporations/corporation-78554f814c937818": "2026-08-25T21:34:22.519Z",
+    "/persons/person-d4690eb287e70df7": "2026-08-27T00:36:43.542Z",
+    "/corporations/corporation-27105fe467cb505c": "2026-08-27T00:36:43.542Z"
   }
 }

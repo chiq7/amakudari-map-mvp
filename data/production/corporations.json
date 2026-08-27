@@ -3842,6 +3842,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-27105fe467cb505c",
+    "name": "弁護士法人ベリーベスト法律事務所",
+    "type": "弁護士法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "法務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 3
+    },
+    "relatedPersons": [
+      "person-d4690eb287e70df7"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

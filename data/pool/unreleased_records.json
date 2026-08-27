@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 3,
+  "remainingCount": 2,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "f5d8dad91241624086c41fc5c2594edb345db5482349def2c30a2130292e4f1f",
-      "dedupeKey": "f72144891a40f18d08b28e18489e01ba9309641b78303dba349e4b982f0aef23",
-      "personName": "佐川 雄一",
-      "originMinistry": "法務省",
-      "titleAtRetirement": "神戸地方検察庁検事",
-      "retirementDate": "2024-03-15",
-      "reemploymentDate": "2024-03-18",
-      "waitingDays": 3,
-      "corporationName": "弁護士法人ベリーベスト法律事務所",
-      "corporationType": "弁護士法人",
-      "newPosition": "高松オフィス弁護士",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r06-files",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "d5c55de8e2fd6475e544807aa5f99994861492d3a89c831154d6e126314b0099",
       "dedupeKey": "6d2b03bcb33a132a90a4425c1fb4686018c6213319a4097cd27465d99d1d0745",

@@ -2654,5 +2654,21 @@
     "waitingDays": 60,
     "sourceId": "cabinet-office-106-25-1-r06-files",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "f5d8dad91241624086c41fc5c2594edb345db5482349def2c30a2130292e4f1f",
+    "dedupeKey": "f72144891a40f18d08b28e18489e01ba9309641b78303dba349e4b982f0aef23",
+    "personSlug": "person-d4690eb287e70df7",
+    "name": "佐川 雄一",
+    "fromMinistry": "法務省",
+    "previousPosition": "神戸地方検察庁検事",
+    "corporationSlug": "corporation-27105fe467cb505c",
+    "corporationName": "弁護士法人ベリーベスト法律事務所",
+    "newPosition": "高松オフィス弁護士",
+    "retirementDate": "2024-03-15",
+    "reemploymentDate": "2024-03-18",
+    "waitingDays": 3,
+    "sourceId": "cabinet-office-106-25-1-r06-files",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx"
   }
 ]

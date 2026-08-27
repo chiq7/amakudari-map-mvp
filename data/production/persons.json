@@ -3171,5 +3171,25 @@
     "sources": [
       "cabinet-office-106-25-1-r06-files"
     ]
+  },
+  {
+    "person_slug": "person-d4690eb287e70df7",
+    "name": "佐川 雄一",
+    "fromMinistry": "法務省",
+    "previousPosition": "神戸地方検察庁検事",
+    "corporationSlug": "corporation-27105fe467cb505c",
+    "corporationName": "弁護士法人ベリーベスト法律事務所",
+    "newPosition": "高松オフィス弁護士",
+    "retirementDate": "2024-03-15",
+    "reemploymentDate": "2024-03-18",
+    "waitingDays": 3,
+    "tags": [
+      "法務省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ]
   }
 ]
