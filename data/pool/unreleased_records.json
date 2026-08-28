@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 2,
+  "remainingCount": 1,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -25,32 +25,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "d5c55de8e2fd6475e544807aa5f99994861492d3a89c831154d6e126314b0099",
-      "dedupeKey": "6d2b03bcb33a132a90a4425c1fb4686018c6213319a4097cd27465d99d1d0745",
-      "personName": "井上 悟志",
-      "originMinistry": "経済産業省",
-      "titleAtRetirement": "経済産業省大臣官房付",
-      "retirementDate": "2023-12-31",
-      "reemploymentDate": "2024-01-01",
-      "waitingDays": 1,
-      "corporationName": "学校法人東京理科大学",
-      "corporationType": "学校法人",
-      "newPosition": "東京理科大学経営学研究科技術経営専攻教授",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r06-files",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    },
     {
       "rawId": "d1575d097403805a53ec5676e1c30ee73a25b63283e803dcbcca433c3e0490dd",
       "dedupeKey": "8e69319a381735463df6ec0abc96a2d3dbfe48e306b4c8628327652a576b2421",

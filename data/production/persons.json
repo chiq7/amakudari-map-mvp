@@ -3191,5 +3191,25 @@
     "sources": [
       "cabinet-office-106-25-1-r06-files"
     ]
+  },
+  {
+    "person_slug": "person-152b2e335072842b",
+    "name": "井上 悟志",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省大臣官房付",
+    "corporationSlug": "corporation-abd325e7edcf550f",
+    "corporationName": "学校法人東京理科大学",
+    "newPosition": "東京理科大学経営学研究科技術経営専攻教授",
+    "retirementDate": "2023-12-31",
+    "reemploymentDate": "2024-01-01",
+    "waitingDays": 1,
+    "tags": [
+      "経済産業省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ]
   }
 ]

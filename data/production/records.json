@@ -2670,5 +2670,21 @@
     "waitingDays": 3,
     "sourceId": "cabinet-office-106-25-1-r06-files",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx"
+  },
+  {
+    "rawId": "d5c55de8e2fd6475e544807aa5f99994861492d3a89c831154d6e126314b0099",
+    "dedupeKey": "6d2b03bcb33a132a90a4425c1fb4686018c6213319a4097cd27465d99d1d0745",
+    "personSlug": "person-152b2e335072842b",
+    "name": "井上 悟志",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省大臣官房付",
+    "corporationSlug": "corporation-abd325e7edcf550f",
+    "corporationName": "学校法人東京理科大学",
+    "newPosition": "東京理科大学経営学研究科技術経営専攻教授",
+    "retirementDate": "2023-12-31",
+    "reemploymentDate": "2024-01-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-106-25-1-r06-files",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx"
   }
 ]

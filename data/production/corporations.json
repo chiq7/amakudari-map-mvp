@@ -407,22 +407,24 @@
     "type": "学校法人",
     "prefecture": "不明",
     "ministry": {
-      "name": "総務省",
+      "name": "経済産業省",
       "count": 1
     },
     "counts": {
-      "publicRecords": 1,
+      "publicRecords": 2,
       "nextDay": 0,
-      "within30Days": 1
+      "within30Days": 2
     },
     "waitingDays": {
       "average": 1
     },
     "relatedPersons": [
-      "person-8521aa4d1743ba3a"
+      "person-8521aa4d1743ba3a",
+      "person-152b2e335072842b"
     ],
     "sources": [
-      "cabinet-office-annual-2024"
+      "cabinet-office-annual-2024",
+      "cabinet-office-106-25-1-r06-files"
     ],
     "topics": []
   },
