@@ -3211,5 +3211,25 @@
     "sources": [
       "cabinet-office-106-25-1-r06-files"
     ]
+  },
+  {
+    "person_slug": "person-242443ad1a346cb4",
+    "name": "芦田 真太郎",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "国土交通省航空局航空ネットワーク部航空ネットワーク企画課空港経営改革推進室専門官",
+    "corporationSlug": "corporation-9c8bbd8190d91fbe",
+    "corporationName": "東急株式会社",
+    "newPosition": "社会インフラ事業部課長級",
+    "retirementDate": "2023-12-31",
+    "reemploymentDate": "2024-01-01",
+    "waitingDays": 1,
+    "tags": [
+      "国土交通省",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-106-25-1-r06-files"
+    ]
   }
 ]

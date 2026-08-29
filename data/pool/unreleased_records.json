@@ -5,7 +5,7 @@
   "inputCount": 56,
   "productionDuplicateCount": 4,
   "poolDuplicateCount": 0,
-  "remainingCount": 1,
+  "remainingCount": 0,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -24,32 +24,5 @@
       "memo": "国家公務員法第106条の25第1項等に基づく報告"
     }
   ],
-  "records": [
-    {
-      "rawId": "d1575d097403805a53ec5676e1c30ee73a25b63283e803dcbcca433c3e0490dd",
-      "dedupeKey": "8e69319a381735463df6ec0abc96a2d3dbfe48e306b4c8628327652a576b2421",
-      "personName": "芦田 真太郎",
-      "originMinistry": "国土交通省",
-      "titleAtRetirement": "国土交通省航空局航空ネットワーク部航空ネットワーク企画課空港経営改革推進室専門官",
-      "retirementDate": "2023-12-31",
-      "reemploymentDate": "2024-01-01",
-      "waitingDays": 1,
-      "corporationName": "東急株式会社",
-      "corporationType": "営利法人",
-      "newPosition": "社会インフラ事業部課長級",
-      "sourceTitle": "国家公務員法第106条の25第1項等に基づく報告（令和5年10月1日～12月31日分）",
-      "sourceId": "cabinet-office-106-25-1-r06-files",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-1/r06/files/siryou1-1.xlsx",
-      "publishedDate": "",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ]
-    }
-  ]
+  "records": []
 }
