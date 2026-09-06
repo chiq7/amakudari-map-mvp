@@ -59,6 +59,7 @@ export default function CorporationsPage() {
           {[
             ["財務省", "/ministries/finance"],
             ["国土交通省", "/ministries/mlit"],
+            ["経済産業省", "/ministries/meti"],
             ["警察庁", "/ministries/npa"],
             ["総務省", "/ministries/mic"],
           ].map(([label, href]) => (

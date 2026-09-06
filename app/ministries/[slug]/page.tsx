@@ -56,6 +56,15 @@ export default async function MinistryPage(props: PageProps) {
     .sort((left, right) => right.people.length - left.people.length);
   const totalNextDay = matchingPeople.filter((person) => person.waitDays === 0).length;
   const totalWithin30Days = matchingPeople.filter((person) => person.waitDays <= 30).length;
+  const corporationTypeCounts = Array.from(
+    matchingCorporations.reduce((counts, { corporation, people }) => {
+      const type = corporation.type?.trim() || "未分類";
+      counts.set(type, (counts.get(type) ?? 0) + people.length);
+      return counts;
+    }, new Map<string, number>()),
+  )
+    .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0], "ja"))
+    .slice(0, 4);
   const relatedMinistries = ministryPages
     .filter((candidate) => candidate.slug !== ministry.slug)
     .sort((left, right) => {
@@ -109,6 +118,27 @@ export default async function MinistryPage(props: PageProps) {
         <p className="border-l-4 border-outline bg-surface-container-low px-5 py-4 text-sm leading-7 text-on-surface-variant">
           退職翌日の再就職記録は、現在の公開データでは0件です。
         </p>
+      ) : null}
+
+      {corporationTypeCounts.length > 0 ? (
+        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+          <h2 className="text-xl font-bold text-primary">再就職先の法人種別</h2>
+          <p className="mt-1 text-sm leading-relaxed text-on-surface-variant">
+            {ministry.name}出身者の公表記録を、再就職先法人の種別ごとに見られます。
+          </p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {corporationTypeCounts.map(([type, count]) => (
+              <Link
+                key={type}
+                href={`/corporations?ministry=${encodeURIComponent(ministry.name)}&type=${encodeURIComponent(type)}`}
+                className="rounded-lg border border-outline-variant bg-white px-4 py-3 transition hover:border-secondary hover:bg-secondary-fixed"
+              >
+                <span className="block text-sm font-bold text-primary">{type}</span>
+                <span className="mt-1 block text-sm font-extrabold text-secondary">公表記録 {count}件 →</span>
+              </Link>
+            ))}
+          </div>
+        </section>
       ) : null}
 
       <section>
