@@ -3894,6 +3894,356 @@
     "topics": []
   },
   {
+    "slug": "corporation-73231e5518ebb1bf",
+    "name": "日本銀行",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 434
+    },
+    "relatedPersons": [
+      "person-11cb0a057f6e16ad"
+    ],
+    "sources": [
+      "cabinet-office-r06-2-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-da24a40c0e173067",
+    "name": "株式会社テレビ西日本",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 721
+    },
+    "relatedPersons": [
+      "person-ccc5de9783a0e6ed"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-188d2e14e08d6844",
+    "name": "川崎重工業株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 640
+    },
+    "relatedPersons": [
+      "person-e8fafb5a9ec2eee6"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-737a9b7e7628242b",
+    "name": "三菱ケミカルグループ株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 647
+    },
+    "relatedPersons": [
+      "person-7404a3f10c6a299d"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-1fbd759c037164a8",
+    "name": "ラブエフエム国際放送株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 728
+    },
+    "relatedPersons": [
+      "person-ccc5de9783a0e6ed"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-a5e3594a1eec02b7",
+    "name": "一般社団法人ビジネス機械・情報システム産業協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 697
+    },
+    "relatedPersons": [
+      "person-c764618a078729ff"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-994e1e33120cac67",
+    "name": "株式会社三菱総合研究所",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 2
+    },
+    "counts": {
+      "publicRecords": 2,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 457
+    },
+    "relatedPersons": [
+      "person-48e861b7b5e2cb81"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-b44959ec23198a71",
+    "name": "西日本鉄道株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 730
+    },
+    "relatedPersons": [
+      "person-ccc5de9783a0e6ed"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-11b7f92901e4a88f",
+    "name": "一般社団法人新金属協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 458
+    },
+    "relatedPersons": [
+      "person-b6593effb4a2f62a"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-b17a76a342f04e8e",
+    "name": "日本住宅パネル工業協同組合",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 727
+    },
+    "relatedPersons": [
+      "person-96b5554f05fa9f9b"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-0a211634c83daef5",
+    "name": "一般社団法人繊維評価技術協議会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 458
+    },
+    "relatedPersons": [
+      "person-201bcc9f95fb1a57"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-cf63020f67d9910a",
+    "name": "いちい信用金庫",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "財務省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 718
+    },
+    "relatedPersons": [
+      "person-8b44fa6ae30981b0"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-0256b5c23df9e0a2",
+    "name": "一般財団法人九州港湾福利厚生協会",
+    "type": "一般財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "国土交通省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 428
+    },
+    "relatedPersons": [
+      "person-977d8d98e5b5dd39"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
+    "slug": "corporation-9388f8f92f9f4627",
+    "name": "一般財団法人日本塗料工業会",
+    "type": "一般財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "経済産業省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 417
+    },
+    "relatedPersons": [
+      "person-e1b8dc07d7455bd6"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

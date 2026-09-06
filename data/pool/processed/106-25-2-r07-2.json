@@ -1,0 +1,107 @@
+{
+  "sourceType": "cabinet-office-annual-excel",
+  "status": "draft",
+  "approved": false,
+  "createdAt": "2026-09-06",
+  "limit": 3,
+  "rowsRead": 3,
+  "draftCount": 3,
+  "skippedCount": 0,
+  "duplicateCandidateCount": 0,
+  "sources": [
+    {
+      "id": "cabinet-office-r06-2-20250926",
+      "title": "国家公務員の再就職状況（令和6年度分）・離職後の事前届出",
+      "publisher": "内閣官房",
+      "url": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
+      "publishedAt": "2025-09-26",
+      "memo": "国家公務員法第106条の25第1項等に基づく報告"
+    }
+  ],
+  "records": [
+    {
+      "rawId": "065b20ec1fcdc6a8388517b20f8b851d1a2bf5d912882a8ca6ecf14f67846180",
+      "dedupeKey": "801fa4d9d82cc5d5ab88c37a5e1a9bcabd9c809dd6700d550d9f6a6e7187ee80",
+      "personName": "諏訪園 健司",
+      "originMinistry": "財務省",
+      "titleAtRetirement": "財務省関税局長",
+      "retirementDate": "2023-07-04",
+      "reemploymentDate": "2024-09-10",
+      "waitingDays": 434,
+      "corporationName": "日本銀行",
+      "corporationType": "",
+      "newPosition": "理事",
+      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事前届出",
+      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事前届出",
+      "sourceId": "cabinet-office-r06-2-20250926",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
+      "publishedDate": "2025-09-26",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "approved": false,
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type source column was not found and could not be inferred."
+      ]
+    },
+    {
+      "rawId": "e06faf91de6e1ab0f9a97dc2e0fddfcd3fbd8fa4023118b2f20e7edc224ac022",
+      "dedupeKey": "e983ddc5049b4c5a744c749a077fde76fce4846db5a161beb4dfed52a0b43bad",
+      "personName": "増田 直弘",
+      "originMinistry": "農林水産省",
+      "titleAtRetirement": "農林水産省大臣官房検査・監察部長",
+      "retirementDate": "2023-09-30",
+      "reemploymentDate": "2024-06-27",
+      "waitingDays": 271,
+      "corporationName": "公益財団法人農林水産長期金融協会",
+      "corporationType": "公益財団法人",
+      "newPosition": "監事",
+      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事前届出",
+      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事前届出",
+      "sourceId": "cabinet-office-r06-2-20250926",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
+      "publishedDate": "2025-09-26",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "approved": false,
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    },
+    {
+      "rawId": "ef38d738133c0ceee1623afcdc2fbb8814a2338c90a8cef64d331c4b1d11bda8",
+      "dedupeKey": "f47e1ce30330759392a30556fcfcc1b07c37cdc039c795be058239f88793e9eb",
+      "personName": "萩原 辰男",
+      "originMinistry": "環境省",
+      "titleAtRetirement": "環境省自然環境局自然環境整備課長",
+      "retirementDate": "2024-03-31",
+      "reemploymentDate": "2024-06-25",
+      "waitingDays": 86,
+      "corporationName": "公益財団法人日本環境整備教育センター",
+      "corporationType": "公益財団法人",
+      "newPosition": "理事",
+      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事前届出",
+      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事前届出",
+      "sourceId": "cabinet-office-r06-2-20250926",
+      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
+      "publishedDate": "2025-09-26",
+      "flags": {
+        "nextDay": false,
+        "within30Days": false
+      },
+      "status": "draft",
+      "approved": false,
+      "notes": [
+        "Origin ministry was inferred from the retirement title.",
+        "Corporation type was inferred from the corporation name."
+      ]
+    }
+  ]
+}

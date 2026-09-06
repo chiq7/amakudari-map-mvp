@@ -262,6 +262,9 @@ function generateCandidate(options) {
   const existingCorporations = options.mergeProduction
     ? readJson(path.join(productionDirectory, "corporations.json"))
     : [];
+  const existingCorporationBySlug = new Map(
+    existingCorporations.map((corporation) => [corporation.slug, corporation]),
+  );
   const recordCorporationSlugs = new Set(
     recordCorporations.map((corporation) => corporation.slug),
   );
@@ -270,7 +273,40 @@ function generateCandidate(options) {
       !recordCorporationSlugs.has(corporation.slug) &&
       (corporation.publicOfficers?.length ?? 0) > 0,
   );
-  const corporations = [...recordCorporations, ...profileOnlyCorporations];
+  const corporations = [
+    ...recordCorporations.map((corporation) => {
+      const existing = existingCorporationBySlug.get(corporation.slug);
+      if (!existing) return corporation;
+      const {
+        slug: _slug,
+        name: _name,
+        type: existingType,
+        prefecture: existingPrefecture,
+        ministry: _ministry,
+        counts: _counts,
+        waitingDays: _waitingDays,
+        relatedPersons: _relatedPersons,
+        sources: existingSources,
+        topics: existingTopics,
+        ...profileMetadata
+      } = existing;
+      return {
+        ...corporation,
+        type:
+          corporation.type === "未分類" && existingType
+            ? existingType
+            : corporation.type,
+        prefecture:
+          corporation.prefecture === "不明" && existingPrefecture
+            ? existingPrefecture
+            : corporation.prefecture,
+        sources: [...new Set([...corporation.sources, ...(existingSources ?? [])])],
+        topics: [...new Set([...corporation.topics, ...(existingTopics ?? [])])],
+        ...profileMetadata,
+      };
+    }),
+    ...profileOnlyCorporations,
+  ];
   const rankedCorporations = corporations.filter(
     (corporation) => corporation.counts.publicRecords > 0,
   );

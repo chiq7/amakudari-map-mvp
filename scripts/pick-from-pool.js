@@ -20,6 +20,12 @@ function parseArguments(argv) {
     } else if (argv[index] === "--output") {
       options.output = argv[index + 1];
       index += 1;
+    } else if (argv[index] === "--ministries") {
+      options.ministries = argv[index + 1]
+        .split(",")
+        .map((value) => value.trim())
+        .filter(Boolean);
+      index += 1;
     } else if (argv[index] === "--dry-run") {
       options.dryRun = true;
     } else {
@@ -54,6 +60,42 @@ function setGithubOutput(name, value) {
   fs.appendFileSync(process.env.GITHUB_OUTPUT, `${name}=${value}\n`, "utf8");
 }
 
+function recordIdentity(record) {
+  return [
+    record.name ?? record.personName,
+    record.fromMinistry ?? record.originMinistry,
+    record.previousPosition ?? record.titleAtRetirement,
+    record.corporationName,
+    record.newPosition,
+    record.retirementDate,
+    record.reemploymentDate,
+  ].join("\u001f");
+}
+
+function pickRoundRobin(records, ministries, count) {
+  const byMinistry = new Map(
+    ministries.map((ministry) => [
+      ministry,
+      records.filter(
+        (record) => (record.fromMinistry ?? record.originMinistry) === ministry,
+      ),
+    ]),
+  );
+  const picked = [];
+  while (picked.length < count) {
+    let pickedThisRound = false;
+    for (const ministry of ministries) {
+      const record = byMinistry.get(ministry)?.shift();
+      if (!record) continue;
+      picked.push(record);
+      pickedThisRound = true;
+      if (picked.length === count) break;
+    }
+    if (!pickedThisRound) break;
+  }
+  return picked;
+}
+
 function pickFromPool(options) {
   const root = process.cwd();
   const poolPath = path.resolve(options.pool);
@@ -68,21 +110,39 @@ function pickFromPool(options) {
   const productionDedupeKeys = new Set(
     productionRecords.map((record) => record.dedupeKey),
   );
+  const productionIdentities = new Set(productionRecords.map(recordIdentity));
 
   const eligible = [];
   let productionDuplicateCount = 0;
+  let poolDuplicateCount = 0;
+  const eligibleIdentities = new Set();
   for (const record of pool.records ?? []) {
     if (
       productionRawIds.has(record.rawId) ||
-      productionDedupeKeys.has(record.dedupeKey)
+      productionDedupeKeys.has(record.dedupeKey) ||
+      productionIdentities.has(recordIdentity(record))
     ) {
       productionDuplicateCount += 1;
       continue;
     }
+    if (eligibleIdentities.has(recordIdentity(record))) {
+      poolDuplicateCount += 1;
+      continue;
+    }
+    eligibleIdentities.add(recordIdentity(record));
     eligible.push(record);
   }
 
-  const picked = eligible.slice(0, options.count);
+  const preferredEligible = options.ministries?.length
+    ? eligible.filter((record) =>
+        options.ministries.includes(
+          record.fromMinistry ?? record.originMinistry,
+        ),
+      )
+    : eligible;
+  const picked = options.ministries?.length
+    ? pickRoundRobin(preferredEligible, options.ministries, options.count)
+    : eligible.slice(0, options.count);
   setGithubOutput("picked_count", picked.length);
   if (picked.length === 0) {
     console.log("追加対象なし");
@@ -117,7 +177,11 @@ function pickFromPool(options) {
   }
 
   console.log(`Picked ${picked.length} record(s) from the pool.`);
+  if (options.ministries?.length) {
+    console.log(`- ministries: ${options.ministries.join(", ")}`);
+  }
   console.log(`- production duplicates skipped: ${productionDuplicateCount}`);
+  console.log(`- pool duplicates skipped: ${poolDuplicateCount}`);
   console.log(`- remaining records: ${eligible.length - picked.length}`);
   console.log(`- output: ${path.relative(root, outputPath)}`);
   if (options.dryRun) console.log("- dry run: pool was not modified");

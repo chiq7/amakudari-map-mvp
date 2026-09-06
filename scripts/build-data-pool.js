@@ -77,7 +77,13 @@ function buildPool() {
       }
       seenRawIds.add(record.rawId);
       seenDedupeKeys.add(record.dedupeKey);
-      records.push(record);
+      records.push({
+        ...record,
+        // Excel imports use originMinistry, while production records use
+        // fromMinistry. Keep the pool filterable without changing the
+        // imported draft format consumed by the candidate generator.
+        fromMinistry: record.fromMinistry ?? record.originMinistry ?? "",
+      });
     }
   }
 

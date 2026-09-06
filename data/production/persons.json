@@ -3231,5 +3231,233 @@
     "sources": [
       "cabinet-office-106-25-1-r06-files"
     ]
+  },
+  {
+    "person_slug": "person-11cb0a057f6e16ad",
+    "name": "諏訪園 健司",
+    "fromMinistry": "財務省",
+    "previousPosition": "財務省関税局長",
+    "corporationSlug": "corporation-73231e5518ebb1bf",
+    "corporationName": "日本銀行",
+    "newPosition": "理事",
+    "retirementDate": "2023-07-04",
+    "reemploymentDate": "2024-09-10",
+    "waitingDays": 434,
+    "tags": [
+      "財務省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-2-20250926"
+    ]
+  },
+  {
+    "person_slug": "person-ccc5de9783a0e6ed",
+    "name": "河原畑 徹",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "国土交通省大臣官房付",
+    "corporationSlug": "corporation-da24a40c0e173067",
+    "corporationName": "株式会社テレビ西日本",
+    "newPosition": "監査役",
+    "retirementDate": "2022-06-28",
+    "reemploymentDate": "2024-06-18",
+    "waitingDays": 721,
+    "tags": [
+      "国土交通省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
+  },
+  {
+    "person_slug": "person-e8fafb5a9ec2eee6",
+    "name": "十時 憲司",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省大臣官房付",
+    "corporationSlug": "corporation-188d2e14e08d6844",
+    "corporationName": "川崎重工業株式会社",
+    "newPosition": "執行役員マーケティング・渉外本部長",
+    "retirementDate": "2022-07-01",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 640,
+    "tags": [
+      "経済産業省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
+  },
+  {
+    "person_slug": "person-7404a3f10c6a299d",
+    "name": "栗原 一福",
+    "fromMinistry": "財務省",
+    "previousPosition": "財務省大臣官房財政経済特別研究官（国税庁税務大学校長）",
+    "corporationSlug": "corporation-737a9b7e7628242b",
+    "corporationName": "三菱ケミカルグループ株式会社",
+    "newPosition": "渉外部長",
+    "retirementDate": "2022-06-24",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 647,
+    "tags": [
+      "財務省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
+  },
+  {
+    "person_slug": "person-c764618a078729ff",
+    "name": "林 祥一郎",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省大臣官房付",
+    "corporationSlug": "corporation-a5e3594a1eec02b7",
+    "corporationName": "一般社団法人ビジネス機械・情報システム産業協会",
+    "newPosition": "専務理事",
+    "retirementDate": "2022-07-01",
+    "reemploymentDate": "2024-05-28",
+    "waitingDays": 697,
+    "tags": [
+      "経済産業省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
+  },
+  {
+    "person_slug": "person-48e861b7b5e2cb81",
+    "name": "神例 高章",
+    "fromMinistry": "財務省",
+    "previousPosition": "財務省大臣官房付",
+    "corporationSlug": "corporation-994e1e33120cac67",
+    "corporationName": "株式会社三菱総合研究所",
+    "newPosition": "客員研究員",
+    "retirementDate": "2022-07-01",
+    "reemploymentDate": "2023-03-01",
+    "waitingDays": 243,
+    "tags": [
+      "財務省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
+  },
+  {
+    "person_slug": "person-b6593effb4a2f62a",
+    "name": "石垣 宏毅",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省大臣官房付",
+    "corporationSlug": "corporation-11b7f92901e4a88f",
+    "corporationName": "一般社団法人新金属協会",
+    "newPosition": "専務理事",
+    "retirementDate": "2023-03-31",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 458,
+    "tags": [
+      "経済産業省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
+  },
+  {
+    "person_slug": "person-96b5554f05fa9f9b",
+    "name": "田中 敬三",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "国土交通省大臣官房付",
+    "corporationSlug": "corporation-b17a76a342f04e8e",
+    "corporationName": "日本住宅パネル工業協同組合",
+    "newPosition": "理事長",
+    "retirementDate": "2022-07-01",
+    "reemploymentDate": "2024-06-27",
+    "waitingDays": 727,
+    "tags": [
+      "国土交通省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
+  },
+  {
+    "person_slug": "person-201bcc9f95fb1a57",
+    "name": "太田 聡",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省製造産業局化学物質管理課化学兵器・麻薬原料等規制対策室長",
+    "corporationSlug": "corporation-0a211634c83daef5",
+    "corporationName": "一般社団法人繊維評価技術協議会",
+    "newPosition": "専務理事",
+    "retirementDate": "2023-03-31",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 458,
+    "tags": [
+      "経済産業省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
+  },
+  {
+    "person_slug": "person-8b44fa6ae30981b0",
+    "name": "白瀧 智彦",
+    "fromMinistry": "財務省",
+    "previousPosition": "東海財務局静岡財務事務所長",
+    "corporationSlug": "corporation-cf63020f67d9910a",
+    "corporationName": "いちい信用金庫",
+    "newPosition": "常勤監事",
+    "retirementDate": "2022-07-01",
+    "reemploymentDate": "2024-06-18",
+    "waitingDays": 718,
+    "tags": [
+      "財務省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
+  },
+  {
+    "person_slug": "person-977d8d98e5b5dd39",
+    "name": "阿部 裕一",
+    "fromMinistry": "国土交通省",
+    "previousPosition": "九州運輸局下関海事事務所長",
+    "corporationSlug": "corporation-0256b5c23df9e0a2",
+    "corporationName": "一般財団法人九州港湾福利厚生協会",
+    "newPosition": "事務職員",
+    "retirementDate": "2023-03-31",
+    "reemploymentDate": "2024-06-01",
+    "waitingDays": 428,
+    "tags": [
+      "国土交通省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
+  },
+  {
+    "person_slug": "person-e1b8dc07d7455bd6",
+    "name": "金地 隆志",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省産業技術環境局研究開発課技術評価調整官",
+    "corporationSlug": "corporation-9388f8f92f9f4627",
+    "corporationName": "一般財団法人日本塗料工業会",
+    "newPosition": "常務理事",
+    "retirementDate": "2023-03-31",
+    "reemploymentDate": "2024-05-21",
+    "waitingDays": 417,
+    "tags": [
+      "経済産業省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]
