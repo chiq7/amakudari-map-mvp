@@ -4244,6 +4244,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-2be53c729c69988c",
+    "name": "公益財団法人農林水産長期金融協会",
+    "type": "公益財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "農林水産省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 271
+    },
+    "relatedPersons": [
+      "person-f4e5b06c60425b91"
+    ],
+    "sources": [
+      "cabinet-office-r06-2-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

@@ -3459,5 +3459,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-f4e5b06c60425b91",
+    "name": "増田 直弘",
+    "fromMinistry": "農林水産省",
+    "previousPosition": "農林水産省大臣官房検査・監察部長",
+    "corporationSlug": "corporation-2be53c729c69988c",
+    "corporationName": "公益財団法人農林水産長期金融協会",
+    "newPosition": "監事",
+    "retirementDate": "2023-09-30",
+    "reemploymentDate": "2024-06-27",
+    "waitingDays": 271,
+    "tags": [
+      "農林水産省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-2-20250926"
+    ]
   }
 ]
