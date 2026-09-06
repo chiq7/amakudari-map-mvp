@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { Suspense, useEffect, useMemo, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
 import { ArrowRightIcon, BuildingIcon, MinistryIcon, PersonIcon, SearchIcon } from "@/components/icons";
@@ -24,7 +24,6 @@ type SearchOrganization = {
 
 function SearchContent() {
   const [query, setQuery] = useState("");
-  const lastTrackedQuery = useRef("");
   const persons: SearchPerson[] = useMemo(
     () =>
       (personsData as PersonData[]).map((person) => ({
@@ -73,21 +72,24 @@ function SearchContent() {
     };
   }, [query, persons, organizations]);
 
-  useEffect(() => {
-    if (query.trim().length <= 1 || query === lastTrackedQuery.current) return;
-    const timeout = window.setTimeout(() => {
-      trackEvent("site_search", {
-        result_count: results.persons.length + results.organizations.length,
-        page_type: "search",
-        location: "search_results",
-      });
-      lastTrackedQuery.current = query;
-    }, 500);
-    return () => window.clearTimeout(timeout);
-  }, [query, results]);
-
   const totalResults = results.persons.length + results.organizations.length;
   const isSearching = query.trim().length > 1;
+
+  function handleSearchSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const normalizedQuery = query.trim();
+    if (normalizedQuery.length <= 1) return;
+
+    trackEvent("site_search", {
+      result_count: totalResults,
+      page_type: "search",
+      location: "search_results",
+    });
+
+    const url = new URL(window.location.href);
+    url.searchParams.set("keyword", normalizedQuery);
+    window.history.replaceState(null, "", url);
+  }
 
   return (
     <div className="flex flex-col gap-10">
@@ -98,7 +100,7 @@ function SearchContent() {
           人名、離職時の官職、再就職先の法人名から、関連する公表記録をまとめて探せます。
         </p>
 
-        <label className="mx-auto mt-7 block max-w-3xl text-left">
+        <form className="mx-auto mt-7 block max-w-3xl text-left" onSubmit={handleSearchSubmit}>
           <span className="sr-only">検索キーワード</span>
           <span className="flex flex-col gap-2 rounded-2xl border border-outline-variant bg-white p-2 shadow-card sm:flex-row sm:items-center">
             <span className="relative min-w-0 flex-1">
@@ -112,11 +114,11 @@ function SearchContent() {
                 autoFocus
               />
             </span>
-            <span className="inline-flex min-h-12 items-center justify-center rounded-xl bg-secondary px-5 text-sm font-bold text-white">
-              {isSearching ? `${totalResults}件` : "2文字以上で検索"}
-            </span>
+            <button type="submit" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-secondary px-5 text-sm font-bold text-white transition hover:bg-secondary/90 disabled:cursor-not-allowed disabled:bg-outline" disabled={!isSearching}>
+              {isSearching ? `${totalResults}件を検索` : "2文字以上で検索"}
+            </button>
           </span>
-        </label>
+        </form>
       </section>
 
       {!isSearching ? (
