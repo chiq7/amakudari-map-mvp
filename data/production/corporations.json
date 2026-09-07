@@ -4269,6 +4269,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-41beaece6791ed43",
+    "name": "公益財団法人日本環境整備教育センター",
+    "type": "公益財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "環境省",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 86
+    },
+    "relatedPersons": [
+      "person-23531db81cadf8ba"
+    ],
+    "sources": [
+      "cabinet-office-r06-2-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

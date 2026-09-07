@@ -3478,5 +3478,24 @@
     "sources": [
       "cabinet-office-r06-2-20250926"
     ]
+  },
+  {
+    "person_slug": "person-23531db81cadf8ba",
+    "name": "萩原 辰男",
+    "fromMinistry": "環境省",
+    "previousPosition": "環境省自然環境局自然環境整備課長",
+    "corporationSlug": "corporation-41beaece6791ed43",
+    "corporationName": "公益財団法人日本環境整備教育センター",
+    "newPosition": "理事",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-06-25",
+    "waitingDays": 86,
+    "tags": [
+      "環境省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-2-20250926"
+    ]
   }
 ]

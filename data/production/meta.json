@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-09-06",
+  "lastUpdated": "2026-09-07",
   "sourceDescription": "内閣官房の国家公務員再就職状況公表Excelから生成したproduction候補",
-  "productionRecordCount": 185,
-  "corporationCount": 171,
-  "personCount": 176,
+  "productionRecordCount": 186,
+  "corporationCount": 172,
+  "personCount": 177,
   "rankingCount": 4,
   "note": "公表資料から生成。元府省庁と法人種別の一部は名称から推定。"
 }
