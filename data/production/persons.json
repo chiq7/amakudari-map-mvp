@@ -3497,5 +3497,24 @@
     "sources": [
       "cabinet-office-r06-2-20250926"
     ]
+  },
+  {
+    "person_slug": "person-8ef6d22705b48c80",
+    "name": "岡本 宰",
+    "fromMinistry": "内閣官房",
+    "previousPosition": "内閣官房内閣審議官（内閣官房副長官補付） 命 内閣官房拉致問題対策本部事務局審議官 併任 内閣府大臣官房審議官（拉致被害者等支援担当）",
+    "corporationSlug": "corporation-50796b1e949c059f",
+    "corporationName": "株式会社名古屋証券取引所",
+    "newPosition": "常務取締役",
+    "retirementDate": "2022-07-18",
+    "reemploymentDate": "2024-06-28",
+    "waitingDays": 711,
+    "tags": [
+      "内閣官房",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]

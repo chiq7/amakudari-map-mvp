@@ -2974,5 +2974,21 @@
     "waitingDays": 86,
     "sourceId": "cabinet-office-r06-2-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "4f7ad415cf7cd32e58db3dea91a05731d75fd11da4d72340ba1ea2c66172df51",
+    "dedupeKey": "7533518281b78a2380636a1965a63f057f2f7dd1906e749653ba1828f3cf98eb",
+    "personSlug": "person-8ef6d22705b48c80",
+    "name": "岡本 宰",
+    "fromMinistry": "内閣官房",
+    "previousPosition": "内閣官房内閣審議官（内閣官房副長官補付） 命 内閣官房拉致問題対策本部事務局審議官 併任 内閣府大臣官房審議官（拉致被害者等支援担当）",
+    "corporationSlug": "corporation-50796b1e949c059f",
+    "corporationName": "株式会社名古屋証券取引所",
+    "newPosition": "常務取締役",
+    "retirementDate": "2022-07-18",
+    "reemploymentDate": "2024-06-28",
+    "waitingDays": 711,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
