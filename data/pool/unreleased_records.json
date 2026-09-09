@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1172,
+  "remainingCount": 1171,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "22f2d22a268e3669a40f05c0dda682e8a5a11f9482137d15f8a8d5e41f3d7856",
-      "dedupeKey": "5f13fe2ae6edea663ea26c629bd5fd6a94eef17cfc619c2a7de65b80e4c90d56",
-      "personName": "安藤 晴彦",
-      "originMinistry": "内閣官房",
-      "titleAtRetirement": "内閣官房内閣審議官（内閣官房副長官補付）",
-      "retirementDate": "2023-03-31",
-      "reemploymentDate": "2024-06-29",
-      "waitingDays": 456,
-      "corporationName": "一般社団法人JCCP国際石油・ガス・持続可能エネルギー協力機関",
-      "corporationType": "一般社団法人",
-      "newPosition": "専務理事",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "内閣官房"
-    },
     {
       "rawId": "06b2488f8aa88abefb99b559c9eb51a05f1b3bf07cb3d9bc1c83f83915f1a404",
       "dedupeKey": "30bc52b8e925a5f99ed54d7962c33c77a431d43d56d5b46888d203d674598aa8",

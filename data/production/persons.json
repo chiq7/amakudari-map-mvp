@@ -3516,5 +3516,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-11765828945b40ad",
+    "name": "安藤 晴彦",
+    "fromMinistry": "内閣官房",
+    "previousPosition": "内閣官房内閣審議官（内閣官房副長官補付）",
+    "corporationSlug": "corporation-9a1ace6675c68f71",
+    "corporationName": "一般社団法人JCCP国際石油・ガス・持続可能エネルギー協力機関",
+    "newPosition": "専務理事",
+    "retirementDate": "2023-03-31",
+    "reemploymentDate": "2024-06-29",
+    "waitingDays": 456,
+    "tags": [
+      "内閣官房",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]
