@@ -198,6 +198,7 @@ export default function Home() {
       {
         "@type": "WebSite",
         name: "天下りマップ",
+        alternateName: "amakudari.jp",
         url: "https://amakudari.jp/",
         description:
           "政府・各省庁等の公表資料に基づく再就職情報を、人・法人・省庁から確認できるデータベースです。",
