@@ -40,8 +40,9 @@ export const metadata: Metadata = {
     images: ["/ogp.png"],
   },
   icons: {
-    icon: [{ url: "/favicon-96.png", type: "image/png", sizes: "96x96" }],
-    shortcut: "/favicon-96.png",
+    icon: [{ url: "/favicon.jpg", type: "image/jpeg", sizes: "400x400" }],
+    shortcut: "/favicon.jpg",
+    apple: "/favicon.jpg",
   },
   verification: {
     google: googleSiteVerification || undefined,
