@@ -3535,5 +3535,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-a3c3ba9234e132fa",
+    "name": "大矢 俊雄",
+    "fromMinistry": "内閣官房",
+    "previousPosition": "内閣官房内閣審議官（内閣官房副長官補付） 命 海外ビジネス投資支援室長",
+    "corporationSlug": "corporation-b7fc53da9977b85a",
+    "corporationName": "鹿島建設株式会社",
+    "newPosition": "顧問",
+    "retirementDate": "2023-07-18",
+    "reemploymentDate": "2024-05-01",
+    "waitingDays": 288,
+    "tags": [
+      "内閣官房",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]

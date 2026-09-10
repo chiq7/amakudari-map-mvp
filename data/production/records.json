@@ -3006,5 +3006,21 @@
     "waitingDays": 456,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "06b2488f8aa88abefb99b559c9eb51a05f1b3bf07cb3d9bc1c83f83915f1a404",
+    "dedupeKey": "30bc52b8e925a5f99ed54d7962c33c77a431d43d56d5b46888d203d674598aa8",
+    "personSlug": "person-a3c3ba9234e132fa",
+    "name": "大矢 俊雄",
+    "fromMinistry": "内閣官房",
+    "previousPosition": "内閣官房内閣審議官（内閣官房副長官補付） 命 海外ビジネス投資支援室長",
+    "corporationSlug": "corporation-b7fc53da9977b85a",
+    "corporationName": "鹿島建設株式会社",
+    "newPosition": "顧問",
+    "retirementDate": "2023-07-18",
+    "reemploymentDate": "2024-05-01",
+    "waitingDays": 288,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
