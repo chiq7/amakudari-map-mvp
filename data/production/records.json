@@ -3022,5 +3022,21 @@
     "waitingDays": 288,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "b039cdfe70507e22d15111275cbf628cc2d366eefc5620bf75d7f45079b2c064",
+    "dedupeKey": "4773e023ef1535308572a9e102f84f0d49300efe435b3a57a36bd089e8fa7a6e",
+    "personSlug": "person-a3c3ba9234e132fa",
+    "name": "大矢 俊雄",
+    "fromMinistry": "内閣官房",
+    "previousPosition": "内閣官房内閣審議官（内閣官房副長官補付） 命 海外ビジネス投資支援室長",
+    "corporationSlug": "corporation-d3a307f07f837947",
+    "corporationName": "株式会社ディー・エヌ・エー",
+    "newPosition": "Executive Economist",
+    "retirementDate": "2023-07-18",
+    "reemploymentDate": "2024-06-16",
+    "waitingDays": 334,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
