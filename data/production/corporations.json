@@ -4394,6 +4394,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-a2cb282ba8490df3",
+    "name": "株式会社Tryfunds",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "内閣官房",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 349
+    },
+    "relatedPersons": [
+      "person-a3c3ba9234e132fa"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

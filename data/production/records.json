@@ -3038,5 +3038,21 @@
     "waitingDays": 334,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "c81beb3d77027978405bd1319c5c7b64524a83c94a952864bdf17109a9144c75",
+    "dedupeKey": "2dc2f18bf4ca6be3c4ab5787a6a82bfef4bf11228706dc2b1a947573808168ce",
+    "personSlug": "person-a3c3ba9234e132fa",
+    "name": "大矢 俊雄",
+    "fromMinistry": "内閣官房",
+    "previousPosition": "内閣官房内閣審議官（内閣官房副長官補付） 命 海外ビジネス投資支援室長",
+    "corporationSlug": "corporation-a2cb282ba8490df3",
+    "corporationName": "株式会社Tryfunds",
+    "newPosition": "顧問",
+    "retirementDate": "2023-07-18",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 349,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

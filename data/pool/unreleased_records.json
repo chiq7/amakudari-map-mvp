@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1169,
+  "remainingCount": 1168,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "c81beb3d77027978405bd1319c5c7b64524a83c94a952864bdf17109a9144c75",
-      "dedupeKey": "2dc2f18bf4ca6be3c4ab5787a6a82bfef4bf11228706dc2b1a947573808168ce",
-      "personName": "大矢 俊雄",
-      "originMinistry": "内閣官房",
-      "titleAtRetirement": "内閣官房内閣審議官（内閣官房副長官補付） 命 海外ビジネス投資支援室長",
-      "retirementDate": "2023-07-18",
-      "reemploymentDate": "2024-07-01",
-      "waitingDays": 349,
-      "corporationName": "株式会社Tryfunds",
-      "corporationType": "営利法人",
-      "newPosition": "顧問",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "内閣官房"
-    },
     {
       "rawId": "b40fca5a19e889570a6d636354093cd4db3593f74d395345ecb5ddb5dc86ed01",
       "dedupeKey": "50f37b20c99ce6c700d74f44c93899c4d617b0aead656d055b53d23de1faa93c",
