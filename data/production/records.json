@@ -3054,5 +3054,21 @@
     "waitingDays": 349,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "b40fca5a19e889570a6d636354093cd4db3593f74d395345ecb5ddb5dc86ed01",
+    "dedupeKey": "50f37b20c99ce6c700d74f44c93899c4d617b0aead656d055b53d23de1faa93c",
+    "personSlug": "person-3d908c308c0ec890",
+    "name": "吉川 浩民",
+    "fromMinistry": "内閣官房",
+    "previousPosition": "内閣官房内閣審議官（内閣官房副長官補付） 命 内閣官房デジタル田園都市国家構想実現会議事務局長 命 内閣官房デジタル行財政改革会議事務局局員",
+    "corporationSlug": "corporation-e2eb893e8ff38522",
+    "corporationName": "株式会社みずほ銀行",
+    "newPosition": "顧問",
+    "retirementDate": "2024-07-05",
+    "reemploymentDate": "2024-11-01",
+    "waitingDays": 119,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
