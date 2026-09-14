@@ -3573,5 +3573,25 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-780b765cf7f9ee96",
+    "name": "黒木 理恵",
+    "fromMinistry": "内閣官房",
+    "previousPosition": "内閣官房内閣審議官（内閣官房副長官補付）",
+    "corporationSlug": "corporation-cb42f862ea440a38",
+    "corporationName": "消費者庁",
+    "newPosition": "審議官",
+    "retirementDate": "2024-08-31",
+    "reemploymentDate": "2024-09-01",
+    "waitingDays": 1,
+    "tags": [
+      "内閣官房",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]

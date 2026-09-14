@@ -3070,5 +3070,21 @@
     "waitingDays": 119,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "c9df74cbc84a8a425f2e8c505720a82703b6e84804dcbed57948a95f7c93fa76",
+    "dedupeKey": "ac68fae07b44a8c42feff4fe9562aac61270bed091b68c7127e2605d2e642944",
+    "personSlug": "person-780b765cf7f9ee96",
+    "name": "黒木 理恵",
+    "fromMinistry": "内閣官房",
+    "previousPosition": "内閣官房内閣審議官（内閣官房副長官補付）",
+    "corporationSlug": "corporation-cb42f862ea440a38",
+    "corporationName": "消費者庁",
+    "newPosition": "審議官",
+    "retirementDate": "2024-08-31",
+    "reemploymentDate": "2024-09-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

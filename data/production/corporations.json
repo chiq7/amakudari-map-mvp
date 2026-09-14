@@ -4444,6 +4444,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-cb42f862ea440a38",
+    "name": "消費者庁",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "内閣官房",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 1
+    },
+    "waitingDays": {
+      "average": 1
+    },
+    "relatedPersons": [
+      "person-780b765cf7f9ee96"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [
