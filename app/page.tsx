@@ -170,6 +170,41 @@ function ExplainerSection() {
         </div>
       </article>
 
+      {featuredArticle.featuredEntities?.length ? (
+        <section className="mt-4" aria-labelledby="featured-entities-title">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">IN THIS PLAN</p>
+              <h3 id="featured-entities-title" className="mt-1 text-lg font-extrabold text-primary">
+                今回の計画を動かす3社
+              </h3>
+            </div>
+            <Link
+              href={`/news/${featuredArticle.slug}`}
+              className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-secondary hover:underline"
+            >
+              役割を詳しく見る <ArrowRightIcon size={17} />
+            </Link>
+          </div>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            {featuredArticle.featuredEntities.map((entity) => (
+              <Link
+                key={entity.name}
+                href={`/news/${featuredArticle.slug}`}
+                className="group rounded-2xl border border-outline-variant bg-white p-5 transition hover:-translate-y-0.5 hover:border-secondary/40 hover:shadow-card"
+              >
+                <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">{entity.role}</p>
+                <h4 className="mt-2 text-xl font-extrabold text-primary">{entity.name}</h4>
+                <p className="mt-3 text-sm leading-6 text-on-surface-variant">{entity.description}</p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary">
+                  計画の全体を見る <ArrowRightIcon className="transition group-hover:translate-x-1" size={16} />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
       {otherArticles.length > 0 ? (
         <div className="mt-4 divide-y divide-outline-variant border-y border-outline-variant">
           {otherArticles.slice(0, 2).map((article) => (

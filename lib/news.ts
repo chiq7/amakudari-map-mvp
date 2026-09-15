@@ -23,6 +23,7 @@ export type NewsArticle = {
   sources: NewsSource[];
   relatedLinks: Array<{ label: string; href: string }>;
   faq: Array<{ question: string; answer: string }>;
+  featuredEntities?: Array<{ name: string; role: string; description: string }>;
 };
 
 export const newsArticles = (newsData as NewsArticle[]).sort(

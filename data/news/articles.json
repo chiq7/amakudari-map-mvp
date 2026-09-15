@@ -553,6 +553,23 @@
         "href": "/news/how-to-read-national-public-servant-reemployment-disclosure-2025"
       }
     ],
+    "featuredEntities": [
+      {
+        "name": "GO",
+        "role": "配車・事業者連携",
+        "description": "地域のタクシー事業者との連携設計と、アプリを通じたサービス提供を担う計画です。"
+      },
+      {
+        "name": "Waymo",
+        "role": "自動運転技術・車両管理",
+        "description": "自動運転技術、運用基盤、車両管理システムを担う計画です。"
+      },
+      {
+        "name": "日本交通",
+        "role": "運行管理・営業所運営",
+        "description": "現場の運行管理と営業所運営を担い、利用者を支える計画です。"
+      }
+    ],
     "faq": [
       {
         "question": "日本資金決済業協会は何をする組織ですか？",
