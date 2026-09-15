@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1166,
+  "remainingCount": 1165,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "3976716ee879f6d9ed0da297c7f825758097523229ce1cc8dd8f1094f5200a92",
-      "dedupeKey": "9626b2b4ec3184341de4de56b1e99ae5c96abfe7103862ddc6ac11535c2811b5",
-      "personName": "新原 浩朗",
-      "originMinistry": "内閣官房",
-      "titleAtRetirement": "内閣官房内閣審議官（内閣官房副長官補付） 命 内閣官房国際博覧会推進本部事務局長 命 内閣官房新しい資本主義実現本部事務局長代理 命 内閣官房新しい資本主義実現本部事務局私的独占禁止法特例法担当室長 命 内閣官房スタートアップ創出総括官",
-      "retirementDate": "2024-09-30",
-      "reemploymentDate": "2024-11-01",
-      "waitingDays": 32,
-      "corporationName": "一般財団法人キヤノングローバル戦略研究所",
-      "corporationType": "一般財団法人",
-      "newPosition": "研究主幹（非常勤）",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "内閣官房"
-    },
     {
       "rawId": "946846010e649e9100aa8a55aa3e2ab5ed6a64747daa1314ad077a9b97d5a7c8",
       "dedupeKey": "8c4992607be8582670575ce39f05a8e34f775bfb491fc1a3eeefc427c12c0f1b",

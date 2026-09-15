@@ -4469,6 +4469,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-33375833ff973aaa",
+    "name": "一般財団法人キヤノングローバル戦略研究所",
+    "type": "一般財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "内閣官房",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 32
+    },
+    "relatedPersons": [
+      "person-5f34e300d241335d"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [
