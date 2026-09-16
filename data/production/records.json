@@ -3102,5 +3102,21 @@
     "waitingDays": 32,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "946846010e649e9100aa8a55aa3e2ab5ed6a64747daa1314ad077a9b97d5a7c8",
+    "dedupeKey": "8c4992607be8582670575ce39f05a8e34f775bfb491fc1a3eeefc427c12c0f1b",
+    "personSlug": "person-5f34e300d241335d",
+    "name": "新原 浩朗",
+    "fromMinistry": "内閣官房",
+    "previousPosition": "内閣官房内閣審議官（内閣官房副長官補付） 命 内閣官房国際博覧会推進本部事務局長 命 内閣官房新しい資本主義実現本部事務局長代理 命 内閣官房新しい資本主義実現本部事務局私的独占禁止法特例法担当室長 命 内閣官房スタートアップ創出総括官",
+    "corporationSlug": "corporation-321d7b62872384e1",
+    "corporationName": "株式会社NTTデータ経営研究所",
+    "newPosition": "特別顧問",
+    "retirementDate": "2024-09-30",
+    "reemploymentDate": "2025-01-01",
+    "waitingDays": 93,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
