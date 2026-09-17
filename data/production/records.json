@@ -3118,5 +3118,21 @@
     "waitingDays": 93,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "bed99c6950bbf6a31b4af106ae1315bd7d08df81a6045ec369d5b1106bcb725b",
+    "dedupeKey": "8275a3490dcfedffc122b4d2e1c97e21c90cd886dcfde4ed3d26ec856b4363e1",
+    "personSlug": "person-15cec0e8ff23d86f",
+    "name": "平川 薫",
+    "fromMinistry": "内閣法制局",
+    "previousPosition": "内閣法制局第二部長",
+    "corporationSlug": "corporation-47887e1c13e5e963",
+    "corporationName": "SMBC日興証券株式会社",
+    "newPosition": "顧問",
+    "retirementDate": "2024-07-04",
+    "reemploymentDate": "2024-11-01",
+    "waitingDays": 120,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
