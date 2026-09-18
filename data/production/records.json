@@ -3134,5 +3134,21 @@
     "waitingDays": 120,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "6ffe2c2bc5dd114f1f142f92a2fc58343cebc30e4f3010e79d00fd4aecef3e19",
+    "dedupeKey": "ca332b7f579ced6fa53e37587535e2309da06e596a3b9e5d626d3ec73d1ed094",
+    "personSlug": "person-0cbfe1b965e29e28",
+    "name": "西 浩明",
+    "fromMinistry": "人事院",
+    "previousPosition": "人事院事務総局人材局長",
+    "corporationSlug": "corporation-9f5b9a6ce8da1901",
+    "corporationName": "日本合成アルコール株式会社",
+    "newPosition": "取締役",
+    "retirementDate": "2022-12-12",
+    "reemploymentDate": "2024-06-27",
+    "waitingDays": 563,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1163,
+  "remainingCount": 1162,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "6ffe2c2bc5dd114f1f142f92a2fc58343cebc30e4f3010e79d00fd4aecef3e19",
-      "dedupeKey": "ca332b7f579ced6fa53e37587535e2309da06e596a3b9e5d626d3ec73d1ed094",
-      "personName": "西 浩明",
-      "originMinistry": "人事院",
-      "titleAtRetirement": "人事院事務総局人材局長",
-      "retirementDate": "2022-12-12",
-      "reemploymentDate": "2024-06-27",
-      "waitingDays": 563,
-      "corporationName": "日本合成アルコール株式会社",
-      "corporationType": "営利法人",
-      "newPosition": "取締役",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "人事院"
-    },
     {
       "rawId": "8a4bfafa96a09bc234503c2b8ee87c29d384d81549675980314c0dc281d07103",
       "dedupeKey": "d53974b4aeb9d3dcb9e635afe8ac77c01f2cdb450dba7a1e583800bcb428c63e",
