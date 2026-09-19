@@ -3150,5 +3150,21 @@
     "waitingDays": 563,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "8a4bfafa96a09bc234503c2b8ee87c29d384d81549675980314c0dc281d07103",
+    "dedupeKey": "d53974b4aeb9d3dcb9e635afe8ac77c01f2cdb450dba7a1e583800bcb428c63e",
+    "personSlug": "person-e1cf9b3969dfe59b",
+    "name": "一之瀬 徹",
+    "fromMinistry": "人事院",
+    "previousPosition": "人事院事務総局関東事務局長",
+    "corporationSlug": "corporation-712b088f1d402b62",
+    "corporationName": "特定非営利活動法人アグリやさと",
+    "newPosition": "非常勤スタッフ",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-23",
+    "waitingDays": 23,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

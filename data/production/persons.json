@@ -3650,5 +3650,25 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-e1cf9b3969dfe59b",
+    "name": "一之瀬 徹",
+    "fromMinistry": "人事院",
+    "previousPosition": "人事院事務総局関東事務局長",
+    "corporationSlug": "corporation-712b088f1d402b62",
+    "corporationName": "特定非営利活動法人アグリやさと",
+    "newPosition": "非常勤スタッフ",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-23",
+    "waitingDays": 23,
+    "tags": [
+      "人事院",
+      "再就職情報",
+      "30日以内"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]

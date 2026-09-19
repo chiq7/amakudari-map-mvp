@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1162,
+  "remainingCount": 1161,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "8a4bfafa96a09bc234503c2b8ee87c29d384d81549675980314c0dc281d07103",
-      "dedupeKey": "d53974b4aeb9d3dcb9e635afe8ac77c01f2cdb450dba7a1e583800bcb428c63e",
-      "personName": "一之瀬 徹",
-      "originMinistry": "人事院",
-      "titleAtRetirement": "人事院事務総局関東事務局長",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-23",
-      "waitingDays": 23,
-      "corporationName": "特定非営利活動法人アグリやさと",
-      "corporationType": "",
-      "newPosition": "非常勤スタッフ",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type source column was not found and could not be inferred."
-      ],
-      "fromMinistry": "人事院"
-    },
     {
       "rawId": "374789486da327f67c35d4d27bdf8b3187ebc61580f0d46c5dc26eb3499f31a3",
       "dedupeKey": "732bfc9b8de636912c3ece9ecee55bfa19d0cbd06326c18876adc50e975bdd0c",
