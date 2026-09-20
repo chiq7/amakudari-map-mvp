@@ -4594,6 +4594,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-a747d762da9251f8",
+    "name": "警察職員生活協同組合",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "人事院",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 92
+    },
+    "relatedPersons": [
+      "person-870de39d9d9cfc6e"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

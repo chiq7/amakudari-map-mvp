@@ -3166,5 +3166,21 @@
     "waitingDays": 23,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "374789486da327f67c35d4d27bdf8b3187ebc61580f0d46c5dc26eb3499f31a3",
+    "dedupeKey": "732bfc9b8de636912c3ece9ecee55bfa19d0cbd06326c18876adc50e975bdd0c",
+    "personSlug": "person-870de39d9d9cfc6e",
+    "name": "宮川 忠彰",
+    "fromMinistry": "人事院",
+    "previousPosition": "人事院事務総局付",
+    "corporationSlug": "corporation-a747d762da9251f8",
+    "corporationName": "警察職員生活協同組合",
+    "newPosition": "審議役",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 92,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
