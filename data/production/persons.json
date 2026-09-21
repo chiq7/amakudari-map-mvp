@@ -3689,5 +3689,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-04837f4dba07b277",
+    "name": "平良 公孝",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府沖縄総合事務局陸運事務所長",
+    "corporationSlug": "corporation-ca2efd10c40ec571",
+    "corporationName": "一般社団法人沖縄旅客船協会",
+    "newPosition": "専務理事 兼 事務局長",
+    "retirementDate": "2023-03-31",
+    "reemploymentDate": "2024-06-01",
+    "waitingDays": 428,
+    "tags": [
+      "内閣府",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]

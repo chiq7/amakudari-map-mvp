@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1160,
+  "remainingCount": 1159,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "219f2928b8b04ec58d1335ca9cb8c8d8ad06c6b37198a9b787cbb0b39b5f7a44",
-      "dedupeKey": "4d339034da070c24e7afaf326a44ebcd300030774c9fca601d6fa421eea55b31",
-      "personName": "平良 公孝",
-      "originMinistry": "内閣府",
-      "titleAtRetirement": "内閣府沖縄総合事務局陸運事務所長",
-      "retirementDate": "2023-03-31",
-      "reemploymentDate": "2024-06-01",
-      "waitingDays": 428,
-      "corporationName": "一般社団法人沖縄旅客船協会",
-      "corporationType": "一般社団法人",
-      "newPosition": "専務理事 兼 事務局長",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "内閣府"
-    },
     {
       "rawId": "376bab2c3cfeb0c8f6716e3677d6e97381cb5f1328203ff98de5c3b34f9812d5",
       "dedupeKey": "af7e6470fc4759fc89420f76a7125fcc7467ed12d5c204fb6e0e626418356865",
