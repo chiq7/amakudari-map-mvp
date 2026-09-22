@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1159,
+  "remainingCount": 1158,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "376bab2c3cfeb0c8f6716e3677d6e97381cb5f1328203ff98de5c3b34f9812d5",
-      "dedupeKey": "af7e6470fc4759fc89420f76a7125fcc7467ed12d5c204fb6e0e626418356865",
-      "personName": "清水谷 諭",
-      "originMinistry": "内閣府",
-      "titleAtRetirement": "内閣府大臣官房",
-      "retirementDate": "2023-06-30",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 276,
-      "corporationName": "国立大学法人名古屋大学",
-      "corporationType": "国立大学法人",
-      "newPosition": "名古屋大学大学院国際開発研究科教授",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "内閣府"
-    },
     {
       "rawId": "79cd7cb3171e8e2efcb9b3f48393837bc64bee1bfd91c0aeb1fe44d0f6494d03",
       "dedupeKey": "0e801bcfb658f53f2ecb3d7164b5cc8c30ddc873b3e5de6bc47df12b7e94c1d2",

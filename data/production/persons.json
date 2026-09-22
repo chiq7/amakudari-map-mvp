@@ -3708,5 +3708,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-f3a106182d43a680",
+    "name": "清水谷 諭",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府大臣官房",
+    "corporationSlug": "corporation-faa8d5308e4a25c2",
+    "corporationName": "国立大学法人名古屋大学",
+    "newPosition": "名古屋大学大学院国際開発研究科教授",
+    "retirementDate": "2023-06-30",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 276,
+    "tags": [
+      "内閣府",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]
