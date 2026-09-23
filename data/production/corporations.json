@@ -4669,6 +4669,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-f1cee172a1ed0b07",
+    "name": "一般社団法人日本養豚協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "内閣府",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 360
+    },
+    "relatedPersons": [
+      "person-48af9ab33385b9f6"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

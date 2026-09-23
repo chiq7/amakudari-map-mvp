@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1158,
+  "remainingCount": 1157,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "79cd7cb3171e8e2efcb9b3f48393837bc64bee1bfd91c0aeb1fe44d0f6494d03",
-      "dedupeKey": "0e801bcfb658f53f2ecb3d7164b5cc8c30ddc873b3e5de6bc47df12b7e94c1d2",
-      "personName": "鋤柄 卓夫",
-      "originMinistry": "内閣府",
-      "titleAtRetirement": "内閣府食品安全委員会事務局長",
-      "retirementDate": "2023-07-03",
-      "reemploymentDate": "2024-06-27",
-      "waitingDays": 360,
-      "corporationName": "一般社団法人日本養豚協会",
-      "corporationType": "一般社団法人",
-      "newPosition": "専務理事",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "内閣府"
-    },
     {
       "rawId": "4a91605020c3378a444cd291e084d86083fbdcbbe5e339269a5b52e44dfb7edb",
       "dedupeKey": "cb19265cd793a4d0ad1bc5432f14cee724d99fbc383417acf436b9307bf8c1cd",
