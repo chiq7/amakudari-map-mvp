@@ -3230,5 +3230,21 @@
     "waitingDays": 360,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "4a91605020c3378a444cd291e084d86083fbdcbbe5e339269a5b52e44dfb7edb",
+    "dedupeKey": "cb19265cd793a4d0ad1bc5432f14cee724d99fbc383417acf436b9307bf8c1cd",
+    "personSlug": "person-2512c042dc6d1532",
+    "name": "増島 稔",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府経済社会総合研究所長",
+    "corporationSlug": "corporation-2358be89de4d9389",
+    "corporationName": "国立大学法人滋賀大学",
+    "newPosition": "国立大学法人滋賀大学特任教授（データサイエンス・AIイノベーション研究推進センター）",
+    "retirementDate": "2023-07-04",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 272,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

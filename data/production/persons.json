@@ -3746,5 +3746,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-2512c042dc6d1532",
+    "name": "増島 稔",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府経済社会総合研究所長",
+    "corporationSlug": "corporation-2358be89de4d9389",
+    "corporationName": "国立大学法人滋賀大学",
+    "newPosition": "国立大学法人滋賀大学特任教授（データサイエンス・AIイノベーション研究推進センター）",
+    "retirementDate": "2023-07-04",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 272,
+    "tags": [
+      "内閣府",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]
