@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1156,
+  "remainingCount": 1155,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "88692c057d0a0e3ad5a3ab6308d379afc1e100f3f4edd6c3e6e772dbbbc1d463",
-      "dedupeKey": "88413c57c5f52e33965175786a4f665968e02c53041ac7c7b8d87db4a899960a",
-      "personName": "宮地 毅",
-      "originMinistry": "内閣府",
-      "titleAtRetirement": "内閣府迎賓館長",
-      "retirementDate": "2023-07-04",
-      "reemploymentDate": "2024-06-01",
-      "waitingDays": 333,
-      "corporationName": "全国市議会議長会",
-      "corporationType": "",
-      "newPosition": "事務総長",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type source column was not found and could not be inferred."
-      ],
-      "fromMinistry": "内閣府"
-    },
     {
       "rawId": "d2b120e5ae15f1f5a96bef2fc9e2e9be3ea920c1cca86252a8cc981c7afc26d9",
       "dedupeKey": "7566bd79785a817141d3bd1996057259f915860de7e63af6b1ddbb99f503ad59",

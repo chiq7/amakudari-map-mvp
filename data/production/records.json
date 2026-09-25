@@ -3246,5 +3246,21 @@
     "waitingDays": 272,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "88692c057d0a0e3ad5a3ab6308d379afc1e100f3f4edd6c3e6e772dbbbc1d463",
+    "dedupeKey": "88413c57c5f52e33965175786a4f665968e02c53041ac7c7b8d87db4a899960a",
+    "personSlug": "person-f0b9efa3c428c684",
+    "name": "宮地 毅",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府迎賓館長",
+    "corporationSlug": "corporation-ad07689dbb7366ad",
+    "corporationName": "全国市議会議長会",
+    "newPosition": "事務総長",
+    "retirementDate": "2023-07-04",
+    "reemploymentDate": "2024-06-01",
+    "waitingDays": 333,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
