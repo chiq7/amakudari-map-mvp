@@ -3278,5 +3278,21 @@
     "waitingDays": 92,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "3a6c05912a32b53b5de08c99f45156aa640f9373d612564069e0540c69f9a64e",
+    "dedupeKey": "7709f74bac5836e9992f560b208d780ef6ba072f620b9fc19c50afbb95dd042d",
+    "personSlug": "person-c55dce6665dfd959",
+    "name": "大城 護",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府沖縄総合事務局開発建設部管理課長 併任 総務調整官",
+    "corporationSlug": "corporation-9b50ea2753b9f07e",
+    "corporationName": "一般社団法人沖縄しまたて協会",
+    "newPosition": "総務部上席参与",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 92,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

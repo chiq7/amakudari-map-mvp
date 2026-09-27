@@ -3803,5 +3803,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-c55dce6665dfd959",
+    "name": "大城 護",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府沖縄総合事務局開発建設部管理課長 併任 総務調整官",
+    "corporationSlug": "corporation-9b50ea2753b9f07e",
+    "corporationName": "一般社団法人沖縄しまたて協会",
+    "newPosition": "総務部上席参与",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 92,
+    "tags": [
+      "内閣府",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]

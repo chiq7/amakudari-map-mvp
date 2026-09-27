@@ -4769,6 +4769,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-9b50ea2753b9f07e",
+    "name": "一般社団法人沖縄しまたて協会",
+    "type": "一般社団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "内閣府",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 92
+    },
+    "relatedPersons": [
+      "person-c55dce6665dfd959"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [
