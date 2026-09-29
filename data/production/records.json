@@ -3294,5 +3294,21 @@
     "waitingDays": 92,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "dc404b7d774b79a2763c4c8c3251b494fa0cdbe57c6cf477d8af99334c5c92d2",
+    "dedupeKey": "55fee6704bf99b5a0b7ab4aeaee170b4148ef9f9a03b39dea33545d3b416b172",
+    "personSlug": "person-fc515b8220f87b8b",
+    "name": "片山 朗",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府大臣官房企画調整課統計情報分析推進官（内閣府大臣官房サイバーセキュリティ・情報化審議官）",
+    "corporationSlug": "corporation-95b1238a48b8e6ef",
+    "corporationName": "学校法人村崎学園",
+    "newPosition": "徳島文理大学総合政策学部教授",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

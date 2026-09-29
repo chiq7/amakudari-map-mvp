@@ -1,9 +1,9 @@
 {
   "totals": {
-    "publicRecords": 206,
-    "corporations": 192,
+    "publicRecords": 207,
+    "corporations": 193,
     "nextDayCorporations": 0,
-    "within30DaysCorporations": 131
+    "within30DaysCorporations": 132
   },
   "rankings": {
     "publicRecords": [
@@ -769,6 +769,10 @@
       },
       {
         "corporationSlug": "corporation-9b50ea2753b9f07e",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-95b1238a48b8e6ef",
         "value": 1
       }
     ],
@@ -1536,6 +1540,10 @@
       {
         "corporationSlug": "corporation-9b50ea2753b9f07e",
         "value": 0
+      },
+      {
+        "corporationSlug": "corporation-95b1238a48b8e6ef",
+        "value": 0
       }
     ],
     "within30Days": [
@@ -2061,6 +2069,10 @@
       },
       {
         "corporationSlug": "corporation-712b088f1d402b62",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-95b1238a48b8e6ef",
         "value": 1
       },
       {
@@ -2715,6 +2727,10 @@
       },
       {
         "corporationSlug": "corporation-cb42f862ea440a38",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-95b1238a48b8e6ef",
         "value": 1
       },
       {
