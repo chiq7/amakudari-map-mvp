@@ -3310,5 +3310,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "3bc210a3b12f959330e7cc7bcd792dd0e39669b430100cf69885634d3ec1d394",
+    "dedupeKey": "427e7c002d4710d32164ec78173cea8703d4f2507bc293548c66f8be385305bc",
+    "personSlug": "person-f64e82167b094aa2",
+    "name": "中井川 季央",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府経済社会システム成果連動型事業推進室参事官",
+    "corporationSlug": "corporation-cb9ff51ec852214f",
+    "corporationName": "株式会社三井住友銀行",
+    "newPosition": "法人戦略部上席推進役",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 1,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1152,
+  "remainingCount": 1151,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "3bc210a3b12f959330e7cc7bcd792dd0e39669b430100cf69885634d3ec1d394",
-      "dedupeKey": "427e7c002d4710d32164ec78173cea8703d4f2507bc293548c66f8be385305bc",
-      "personName": "中井川 季央",
-      "originMinistry": "内閣府",
-      "titleAtRetirement": "内閣府経済社会システム成果連動型事業推進室参事官",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 1,
-      "corporationName": "株式会社三井住友銀行",
-      "corporationType": "営利法人",
-      "newPosition": "法人戦略部上席推進役",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": true
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "内閣府"
-    },
     {
       "rawId": "936f4ee70ec23fa95b4de83354bf261d8e34736702ffb96c85902baccfc1c7b3",
       "dedupeKey": "3ae16dfcc8f71ced4c5cfcecaec4f4eb43a9122187bbd2e8b33452045871207e",
