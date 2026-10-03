@@ -3374,5 +3374,21 @@
     "waitingDays": 120,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "29fcecc1fff1d72a76cd98e74d7cfd4c3278bf2406aea6ca0ab82b3c9b785891",
+    "dedupeKey": "de9a52da7613db952171821145b8ec6a36f71d609427e59e3f9ad98c59ea7cfa",
+    "personSlug": "person-872ac8ad039cd15c",
+    "name": "田和 宏",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府事務次官",
+    "corporationSlug": "corporation-63ff278aa68f4dec",
+    "corporationName": "東京フィナンシャルリサーチ株式会社",
+    "newPosition": "編集委員",
+    "retirementDate": "2024-07-04",
+    "reemploymentDate": "2024-11-27",
+    "waitingDays": 146,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
