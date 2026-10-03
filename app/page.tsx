@@ -14,7 +14,6 @@ import DiscoveryRouteVisual from "@/components/DiscoveryRouteVisual";
 import {
   ArrowRightIcon,
   BuildingIcon,
-  CheckIcon,
   DocumentIcon,
   MinistryIcon,
   NewsIcon,
@@ -116,112 +115,82 @@ function ExplainerSection() {
   }
 
   return (
-    <section aria-labelledby="featured-explainer-title" className="border-y border-outline-variant py-10 md:py-14">
-      <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-        <SectionHeading
-          eyebrow="PUBLIC RECORDS EXPLAINED"
-          title="記録の背景まで読む"
-          description="人がどこへ移ったかだけでなく、法人の業務、元の役職、制度上の接点を一次資料から整理します。"
-        />
+    <section aria-labelledby="featured-explainer-title" data-analytics-location="home_featured_news">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b-2 border-primary pb-3">
+        <h2 id="featured-explainer-title" className="inline-flex items-center gap-2 text-xl font-extrabold tracking-tight text-primary md:text-2xl">
+          <NewsIcon size={22} /> いま注目のテーマ
+        </h2>
         <Link
           href="/news"
-          className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 border border-secondary bg-secondary px-4 text-sm font-bold text-white transition hover:bg-primary"
+          className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-secondary hover:underline"
         >
           解説をすべて見る <ArrowRightIcon size={17} />
         </Link>
       </div>
 
-      <article className="mt-7 overflow-hidden border border-outline-variant bg-white shadow-card">
-        <div className="grid lg:grid-cols-[180px_1fr_320px]">
-          <div className="flex flex-row items-center justify-between gap-3 bg-primary px-5 py-4 text-white lg:flex-col lg:items-start lg:justify-start lg:px-6 lg:py-7">
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold tracking-[0.08em]">
-              <NewsIcon size={16} /> {featuredArticle.kind}
-            </span>
-            <time className="text-xs text-white/70 lg:mt-auto" dateTime={featuredArticle.dateModified}>
-              {featuredArticle.dateModified !== featuredArticle.datePublished ? "更新 " : ""}{formatDate(featuredArticle.dateModified)}
-            </time>
-          </div>
-
+      <div className="mt-5 grid gap-5 lg:grid-cols-[minmax(0,1.8fr)_minmax(0,1fr)]">
+        <article className="min-w-0 overflow-hidden rounded-2xl border border-outline-variant bg-white shadow-card">
           <div className="p-5 md:p-7">
-            <p className="text-xs font-extrabold text-secondary">最新の解説</p>
-            <h2 id="featured-explainer-title" className="mt-2 text-balance text-xl font-extrabold leading-8 text-primary md:text-2xl">
-              {featuredArticle.title}
-            </h2>
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-bold">
+              <span className="rounded-full bg-secondary-fixed px-3 py-1 text-secondary">{featuredArticle.kind}</span>
+              <time className="text-on-surface-variant" dateTime={featuredArticle.dateModified}>
+                {featuredArticle.dateModified !== featuredArticle.datePublished ? "更新 " : ""}{formatDate(featuredArticle.dateModified)}
+              </time>
+            </div>
+            <h3 className="mt-4 text-pretty text-2xl font-extrabold leading-[1.5] tracking-tight text-primary md:text-3xl">
+              <Link href={`/news/${featuredArticle.slug}`} className="hover:text-secondary">{featuredArticle.title}</Link>
+            </h3>
             <p className="mt-3 text-sm leading-7 text-on-surface-variant">{featuredArticle.description}</p>
             <Link
               href={`/news/${featuredArticle.slug}`}
               className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 border border-primary px-4 text-sm font-bold text-primary transition hover:bg-primary hover:text-white"
             >
-              この解説を読む <ArrowRightIcon size={17} />
+              記事を読む <ArrowRightIcon size={17} />
             </Link>
           </div>
 
-          <aside className="border-t border-outline-variant bg-surface-container-low p-5 lg:border-l lg:border-t-0 lg:p-7" aria-label="記事で確認できること">
-            <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">この記事で確認できること</p>
-            <ul className="mt-4 space-y-3">
-              {featuredArticle.verifiedFacts.slice(0, 2).map((fact) => (
-                <li key={fact.title} className="flex gap-3 text-sm font-bold leading-6 text-primary">
-                  <CheckIcon className="mt-0.5 shrink-0 text-secondary" size={17} />
-                  <span>{fact.title}</span>
-                </li>
-              ))}
-            </ul>
-          </aside>
-        </div>
-      </article>
-
-      {featuredArticle.featuredEntities?.length ? (
-        <section className="mt-4" aria-labelledby="featured-entities-title">
-          <div className="flex flex-wrap items-end justify-between gap-3">
-            <div>
-              <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">IN THIS PLAN</p>
-              <h3 id="featured-entities-title" className="mt-1 text-lg font-extrabold text-primary">
-                今回の計画を動かす3社
-              </h3>
+          {featuredArticle.featuredEntities?.length ? (
+            <div className="border-t border-outline-variant bg-surface-container-low p-5 md:px-7" aria-label="記事に登場する企業">
+              <p className="text-xs font-bold text-on-surface-variant">記事に登場する企業と役割</p>
+              <div className="mt-3 grid gap-2 sm:grid-cols-3">
+                {featuredArticle.featuredEntities.map((entity) => (
+                  <Link
+                    key={entity.name}
+                    href={`/news/${featuredArticle.slug}`}
+                    className="group flex min-h-11 flex-col justify-center rounded-xl bg-white px-3 py-2 ring-1 ring-outline-variant/70 transition hover:ring-secondary"
+                  >
+                    <span className="inline-flex items-center justify-between gap-2 text-sm font-extrabold text-primary">
+                      {entity.name} <ArrowRightIcon className="shrink-0 text-secondary" size={14} />
+                    </span>
+                    <span className="mt-1 text-xs leading-5 text-on-surface-variant">{entity.role}</span>
+                  </Link>
+                ))}
+              </div>
             </div>
-            <Link
-              href={`/news/${featuredArticle.slug}`}
-              className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-secondary hover:underline"
-            >
-              役割を詳しく見る <ArrowRightIcon size={17} />
-            </Link>
-          </div>
-          <div className="mt-4 grid gap-3 md:grid-cols-3">
-            {featuredArticle.featuredEntities.map((entity) => (
-              <Link
-                key={entity.name}
-                href={`/news/${featuredArticle.slug}`}
-                className="group rounded-2xl border border-outline-variant bg-white p-5 transition hover:-translate-y-0.5 hover:border-secondary/40 hover:shadow-card"
-              >
-                <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">{entity.role}</p>
-                <h4 className="mt-2 text-xl font-extrabold text-primary">{entity.name}</h4>
-                <p className="mt-3 text-sm leading-6 text-on-surface-variant">{entity.description}</p>
-                <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary">
-                  計画の全体を見る <ArrowRightIcon className="transition group-hover:translate-x-1" size={16} />
-                </span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      ) : null}
-
-      {otherArticles.length > 0 ? (
-        <div className="mt-4 divide-y divide-outline-variant border-y border-outline-variant">
-          {otherArticles.slice(0, 2).map((article) => (
-            <Link
-              key={article.slug}
-              href={`/news/${article.slug}`}
-              className="group grid gap-2 py-4 sm:grid-cols-[120px_1fr_auto] sm:items-center"
-            >
-              <time className="text-xs font-bold text-on-surface-variant" dateTime={article.dateModified}>
-                {article.dateModified !== article.datePublished ? "更新 " : ""}{formatDate(article.dateModified)}
-              </time>
-              <span className="text-sm font-extrabold leading-6 text-primary">{article.title}</span>
-              <ArrowRightIcon className="hidden text-outline transition group-hover:translate-x-1 group-hover:text-secondary sm:block" size={17} />
-            </Link>
-          ))}
-        </div>
-      ) : null}
+          ) : null}
+        </article>
+        {otherArticles.length > 0 ? (
+          <aside className="min-w-0" aria-label="あわせて読みたい解説">
+            <p className="border-b border-outline-variant pb-3 text-sm font-extrabold text-primary">あわせて読みたい</p>
+            <div className="divide-y divide-outline-variant">
+              {otherArticles.slice(0, 2).map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/news/${article.slug}`}
+                  className="group flex flex-col gap-2 py-4"
+                >
+                  <time className="text-xs font-bold text-on-surface-variant" dateTime={article.dateModified}>
+                    {article.dateModified !== article.datePublished ? "更新 " : ""}{formatDate(article.dateModified)}
+                  </time>
+                  <span className="text-sm font-extrabold leading-6 text-primary">{article.title}</span>
+                  <span className="hidden text-sm leading-6 text-on-surface-variant lg:line-clamp-2">{article.description}</span>
+                  <span className="inline-flex items-center gap-2 text-xs font-bold text-secondary group-hover:underline">記事を読む <ArrowRightIcon size={14} /></span>
+                </Link>
+              ))}
+            </div>
+          </aside>
+        ) : null}
+      </div>
     </section>
   );
 }
@@ -268,11 +237,13 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col gap-20 md:gap-28">
+    <div className="flex flex-col gap-12 md:gap-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
+
+      <ExplainerSection />
 
       <section
         className="relative overflow-hidden rounded-3xl bg-[#eee6da] shadow-soft ring-1 ring-[#dfd4c5] lg:grid lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch"
@@ -515,7 +486,6 @@ export default function Home() {
         </div>
       </section>
 
-      <ExplainerSection />
     </div>
   );
 }
