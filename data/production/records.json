@@ -3358,5 +3358,21 @@
     "waitingDays": 120,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "b91b8d0f1282962e4bb59ac8c98452705f71dd31652589f54ba4dc703bc02e7b",
+    "dedupeKey": "c055f08ec2a1c1b10ca5242560e7af76c10c5f672aad77b171f02267597017c4",
+    "personSlug": "person-872ac8ad039cd15c",
+    "name": "田和 宏",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府事務次官",
+    "corporationSlug": "corporation-b8677823eab4e0ac",
+    "corporationName": "長島・大野・常松法律事務所",
+    "newPosition": "顧問",
+    "retirementDate": "2024-07-04",
+    "reemploymentDate": "2024-11-01",
+    "waitingDays": 120,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
