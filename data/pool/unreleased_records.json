@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1147,
+  "remainingCount": 1146,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "1a2598ed5d09d233f749fc93b704999a2de0a29319abad11d55642d026589d1b",
-      "dedupeKey": "f974c7f85b90e0729094244555287a7bad52660806babf07f15400c3f76cf954",
-      "personName": "田和 宏",
-      "originMinistry": "内閣府",
-      "titleAtRetirement": "内閣府事務次官",
-      "retirementDate": "2024-07-04",
-      "reemploymentDate": "2025-01-01",
-      "waitingDays": 181,
-      "corporationName": "株式会社日本総合研究所",
-      "corporationType": "営利法人",
-      "newPosition": "顧問",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "内閣府"
-    },
     {
       "rawId": "cc342a3048c392c1df610527543e90b7db9632e92c590eff16d0d1dca181a2ca",
       "dedupeKey": "41e3baa11a2dad7e2bab3a845e6596788a13f36d1817cf6c1cf132a4bba00787",

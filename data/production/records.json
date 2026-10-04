@@ -3390,5 +3390,21 @@
     "waitingDays": 146,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "1a2598ed5d09d233f749fc93b704999a2de0a29319abad11d55642d026589d1b",
+    "dedupeKey": "f974c7f85b90e0729094244555287a7bad52660806babf07f15400c3f76cf954",
+    "personSlug": "person-872ac8ad039cd15c",
+    "name": "田和 宏",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府事務次官",
+    "corporationSlug": "corporation-0ff9140bd03ac949",
+    "corporationName": "株式会社日本総合研究所",
+    "newPosition": "顧問",
+    "retirementDate": "2024-07-04",
+    "reemploymentDate": "2025-01-01",
+    "waitingDays": 181,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
