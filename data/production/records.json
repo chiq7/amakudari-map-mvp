@@ -3406,5 +3406,21 @@
     "waitingDays": 181,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "cc342a3048c392c1df610527543e90b7db9632e92c590eff16d0d1dca181a2ca",
+    "dedupeKey": "41e3baa11a2dad7e2bab3a845e6596788a13f36d1817cf6c1cf132a4bba00787",
+    "personSlug": "person-2167b618f998a145",
+    "name": "大塚 幸寛",
+    "fromMinistry": "内閣府",
+    "previousPosition": "内閣府審議官",
+    "corporationSlug": "corporation-544f2b592250b7c9",
+    "corporationName": "株式会社日本経済研究所",
+    "newPosition": "上席研究主幹",
+    "retirementDate": "2024-07-05",
+    "reemploymentDate": "2024-10-01",
+    "waitingDays": 88,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
