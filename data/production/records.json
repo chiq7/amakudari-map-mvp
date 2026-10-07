@@ -3422,5 +3422,21 @@
     "waitingDays": 88,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "4dc5a57a2429876710ae5a675aab126a823b452e82d1c1b38dd4f36dffb5243e",
+    "dedupeKey": "95adcc843bb307ff31869c57d43bb3b4bfb15095e65a4e5cc7bfb9bc9b59a68d",
+    "personSlug": "person-650754eaaa185679",
+    "name": "鹿内 浩胤",
+    "fromMinistry": "宮内庁",
+    "previousPosition": "宮内庁書陵部編修課長",
+    "corporationSlug": "corporation-70d741b307bd6509",
+    "corporationName": "シダックス大新東ヒューマンサービス株式会社",
+    "newPosition": "専門契約社員",
+    "retirementDate": "2023-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 367,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
