@@ -3438,5 +3438,21 @@
     "waitingDays": 367,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "063fe5c6817f7ef9f948c58072a7c70c9ab54cd08c9497071ece35c6fcf3c7a8",
+    "dedupeKey": "1b59a1ad614529bf0ce585e9259ca7d897d1fb3aace5d54e23cf48411e25b08f",
+    "personSlug": "person-650754eaaa185679",
+    "name": "鹿内 浩胤",
+    "fromMinistry": "宮内庁",
+    "previousPosition": "宮内庁書陵部編修課長",
+    "corporationSlug": "corporation-7e1ecbf43ebdc22a",
+    "corporationName": "株式会社あすた",
+    "newPosition": "児童指導員",
+    "retirementDate": "2023-03-31",
+    "reemploymentDate": "2024-08-16",
+    "waitingDays": 504,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

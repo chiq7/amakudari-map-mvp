@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1144,
+  "remainingCount": 1143,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "063fe5c6817f7ef9f948c58072a7c70c9ab54cd08c9497071ece35c6fcf3c7a8",
-      "dedupeKey": "1b59a1ad614529bf0ce585e9259ca7d897d1fb3aace5d54e23cf48411e25b08f",
-      "personName": "鹿内 浩胤",
-      "originMinistry": "宮内庁",
-      "titleAtRetirement": "宮内庁書陵部編修課長",
-      "retirementDate": "2023-03-31",
-      "reemploymentDate": "2024-08-16",
-      "waitingDays": 504,
-      "corporationName": "株式会社あすた",
-      "corporationType": "営利法人",
-      "newPosition": "児童指導員",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "宮内庁"
-    },
     {
       "rawId": "be85466d76f52d1e654c5057d530a8acfda91f618c54dae48c758e8b5c042da3",
       "dedupeKey": "975e7c48b737420bf13cbeb064fe85200c700495ce15820cca9bdfc22f13e422",
