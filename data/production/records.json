@@ -3454,5 +3454,21 @@
     "waitingDays": 504,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "be85466d76f52d1e654c5057d530a8acfda91f618c54dae48c758e8b5c042da3",
+    "dedupeKey": "975e7c48b737420bf13cbeb064fe85200c700495ce15820cca9bdfc22f13e422",
+    "personSlug": "person-31728d9f20bab2f5",
+    "name": "池田 憲治",
+    "fromMinistry": "宮内庁",
+    "previousPosition": "宮内庁次長",
+    "corporationSlug": "corporation-27dabe20d9a3e664",
+    "corporationName": "地方公務員共済組合連合会",
+    "newPosition": "理事長",
+    "retirementDate": "2023-12-19",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 104,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
