@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1142,
+  "remainingCount": 1141,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "e5993282ae420c3aa0d64928a72d1b0d50fe5d567c8ba499e2ab3dfb65345dcf",
-      "dedupeKey": "69e43bf01539248fce9f06c32706c35210c3f3112ed7b91f1494bd8f74dda1a4",
-      "personName": "小林 渉",
-      "originMinistry": "公正取引委員会",
-      "titleAtRetirement": "公正取引委員会事務総長",
-      "retirementDate": "2023-07-05",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 271,
-      "corporationName": "学校法人同志社",
-      "corporationType": "学校法人",
-      "newPosition": "同志社大学司法研究科特別客員教授",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "公正取引委員会"
-    },
     {
       "rawId": "76696e3aab8ac53c908e2a7bf7852d6253197fe8ef0a4eaa51b622b7df0c1920",
       "dedupeKey": "5103290f5c71dc37457b9bccbc1cf76b34df16e26e0d6c4f45563ea9d8b9d05c",
