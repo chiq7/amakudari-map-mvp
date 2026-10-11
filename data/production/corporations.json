@@ -5094,6 +5094,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-b2b3d18b916d2c14",
+    "name": "フレッシュフィールズブルックハウスデリンガー法律事務所",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "公正取引委員会",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 355
+    },
+    "relatedPersons": [
+      "person-09098bdd7c485ee8"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

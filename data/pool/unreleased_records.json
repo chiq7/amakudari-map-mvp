@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1141,
+  "remainingCount": 1140,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "76696e3aab8ac53c908e2a7bf7852d6253197fe8ef0a4eaa51b622b7df0c1920",
-      "dedupeKey": "5103290f5c71dc37457b9bccbc1cf76b34df16e26e0d6c4f45563ea9d8b9d05c",
-      "personName": "田辺 治",
-      "originMinistry": "公正取引委員会",
-      "titleAtRetirement": "公正取引委員会事務総局審査局長",
-      "retirementDate": "2024-01-12",
-      "reemploymentDate": "2025-01-01",
-      "waitingDays": 355,
-      "corporationName": "フレッシュフィールズブルックハウスデリンガー法律事務所",
-      "corporationType": "",
-      "newPosition": "シニアコンサルタント",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type source column was not found and could not be inferred."
-      ],
-      "fromMinistry": "公正取引委員会"
-    },
     {
       "rawId": "a2ad706fe22fef5b514c3ee89dadb4438585199e799f2e10fcfbbf034b11b2a7",
       "dedupeKey": "57328fa034c7864ac0ebbed4789b1053a4d8ccffece53f859c91986e68d70f67",

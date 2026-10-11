@@ -3486,5 +3486,21 @@
     "waitingDays": 271,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "76696e3aab8ac53c908e2a7bf7852d6253197fe8ef0a4eaa51b622b7df0c1920",
+    "dedupeKey": "5103290f5c71dc37457b9bccbc1cf76b34df16e26e0d6c4f45563ea9d8b9d05c",
+    "personSlug": "person-09098bdd7c485ee8",
+    "name": "田辺 治",
+    "fromMinistry": "公正取引委員会",
+    "previousPosition": "公正取引委員会事務総局審査局長",
+    "corporationSlug": "corporation-b2b3d18b916d2c14",
+    "corporationName": "フレッシュフィールズブルックハウスデリンガー法律事務所",
+    "newPosition": "シニアコンサルタント",
+    "retirementDate": "2024-01-12",
+    "reemploymentDate": "2025-01-01",
+    "waitingDays": 355,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
