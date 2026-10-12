@@ -3502,5 +3502,21 @@
     "waitingDays": 355,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "a2ad706fe22fef5b514c3ee89dadb4438585199e799f2e10fcfbbf034b11b2a7",
+    "dedupeKey": "57328fa034c7864ac0ebbed4789b1053a4d8ccffece53f859c91986e68d70f67",
+    "personSlug": "person-41ab76ea7ef17f6d",
+    "name": "筒井 秀樹",
+    "fromMinistry": "公正取引委員会",
+    "previousPosition": "公正取引委員会事務総局北海道事務所長",
+    "corporationSlug": "corporation-cf242cb9c335aa24",
+    "corporationName": "北海道建設業信用保証株式会社",
+    "newPosition": "総務企画部参事",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 92,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
