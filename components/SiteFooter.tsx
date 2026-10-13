@@ -26,7 +26,7 @@ export default function SiteFooter() {
       <div className="mx-auto grid w-full max-w-[1280px] gap-10 px-4 py-12 md:grid-cols-[1.3fr_0.8fr_0.8fr] md:px-8 md:py-14">
         <div className="max-w-md">
           <Link href="/" className="inline-flex items-center gap-3">
-            <BrandMark size={42} className="bg-white text-primary" />
+            <BrandMark size={42} className="ring-1 ring-white/25" />
             <span className="text-xl font-extrabold">天下りマップ</span>
           </Link>
           <p className="mt-5 text-sm leading-7 text-white/72">
