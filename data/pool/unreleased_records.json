@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1139,
+  "remainingCount": 1138,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "cdb551034a86e10957d3d250710afd5153db897046b1383dc53705714dbd860b",
-      "dedupeKey": "45bf19975740e752429bd634f1fca062ecaca8c8e9193f384bc72758d8aef7f1",
-      "personName": "扇澤 昭宏",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "警察庁長官官房付",
-      "retirementDate": "2022-08-26",
-      "reemploymentDate": "2024-07-01",
-      "waitingDays": 675,
-      "corporationName": "一般社団法人全日本指定自動車教習所協会連合会",
-      "corporationType": "一般社団法人",
-      "newPosition": "専務理事",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "b38a78bf8ab85bdb1f02483ee54077b51cb2a21bc6a2b8cf01b4a3252f363e60",
       "dedupeKey": "e791eee0a42c059cf0b21c09115b3a998a9961631a7ce11ef43c0bab5d6e9a3f",
