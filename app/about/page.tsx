@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { Breadcrumb } from "@/components/ui";
+import { SITE_OPERATOR, CONTACT_EMAIL, CONTACT_EMAIL_HREF } from "@/lib/site-contact";
 
 export const metadata = pageMetadata("このサイトについて", "天下りマップの目的、人物・法人・省庁からの探し方、情報の整理・更新と運営について。", "/about");
 
@@ -58,6 +59,10 @@ export default function AboutPage() {
       </section>
       <section className="border-t border-outline-variant pt-6">
         <h2 className="text-xl font-extrabold text-primary">運営と連絡</h2>
+        <dl className="mt-4 space-y-3 text-sm leading-7">
+          <div className="flex flex-wrap gap-x-5"><dt className="font-bold text-primary">運営者</dt><dd>{SITE_OPERATOR}</dd></div>
+          <div className="flex flex-wrap gap-x-5"><dt className="font-bold text-primary">お問い合わせ</dt><dd><a href={CONTACT_EMAIL_HREF} className="font-bold text-secondary underline underline-offset-4">{CONTACT_EMAIL}</a></dd></div>
+        </dl>
         <p className="mt-3 text-sm leading-8 text-on-surface-variant">天下りマップは、掲載している行政機関・法人の公式サイトではありません。掲載内容の修正、情報提供、削除・非表示の相談は、対象ページURLと具体的な箇所を添えてご連絡ください。</p>
         <Link href="/data-policy#contact" className="mt-3 inline-block text-sm font-bold text-secondary underline">情報提供・お問い合わせ →</Link>
       </section>

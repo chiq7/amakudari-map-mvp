@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { trackEvent } from "@/lib/analytics";
+import { CONTACT_EMAIL } from "@/lib/site-contact";
 
 export default function InformationProvisionForm() {
   const [status, setStatus] = useState("");
@@ -23,7 +24,7 @@ export default function InformationProvisionForm() {
     try {
       await navigator.clipboard.writeText(message);
       trackEvent("prepare_information_provision", { category });
-      setStatus("本文をコピーしました。メール等の連絡手段へ貼り付けてお送りください。");
+      setStatus(`本文をコピーしました。${CONTACT_EMAIL} 宛のメールへ貼り付けてお送りください。`);
     } catch {
       setStatus("本文をコピーできませんでした。内容を選択してコピーしてください。");
     }

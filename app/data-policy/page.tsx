@@ -2,6 +2,7 @@ import Link from "next/link";
 import InformationProvisionForm from "@/components/InformationProvisionForm";
 import { records, sources, corporations, persons, publicOfficers, meta } from "@/lib/static-content";
 import { newsArticles } from "@/lib/news";
+import { SITE_OPERATOR, CONTACT_EMAIL, CONTACT_EMAIL_HREF } from "@/lib/site-contact";
 
 const usedSourceIds = new Set([
   ...records.map((record) => record.sourceId),
@@ -65,8 +66,11 @@ export default function DataPolicyPage() {
         <p className="mt-3 leading-8 text-on-surface-variant">待機日数は、離職日から再就職日までの日数です。法人や省庁ごとの記録を比べるために表示しています。</p>
       </section>
 
-      <section id="contact" className="border border-outline-variant bg-surface-container-low p-6 text-center">
+      <section id="contact" className="scroll-mt-36 border border-outline-variant bg-surface-container-low p-6 text-center">
         <h2 className="text-2xl font-extrabold text-primary">情報提供・お問い合わせ</h2>
+        <p className="mt-3 text-sm text-on-surface-variant">{SITE_OPERATOR}</p>
+        <a href={CONTACT_EMAIL_HREF} className="mt-3 inline-block break-all text-lg font-bold text-secondary underline underline-offset-4">{CONTACT_EMAIL}</a>
+        <p className="mt-2 text-sm leading-7 text-on-surface-variant">メールでご連絡ください。下のフォームで連絡文を作成・コピーできます。</p>
         <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-on-surface-variant">対象ページのURLと、修正・追加したい内容を連絡文にまとめられます。この操作では送信されません。</p>
         <InformationProvisionForm />
       </section>
