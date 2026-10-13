@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb, RelatedLinks, TagChip } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
-import { canonicalUrl } from "@/lib/seo";
+import { canonicalUrl, SHARE_IMAGE, SITE_NAME } from "@/lib/seo";
 import { getNewsArticle, newsArticles } from "@/lib/news";
 
 export function generateStaticParams() {
@@ -20,17 +20,20 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
     alternates: { canonical: `/news/${article.slug}` },
     openGraph: {
       type: "article",
+      siteName: SITE_NAME,
+      locale: "ja_JP",
       title: article.title,
       description: article.description,
       url: `/news/${article.slug}`,
       publishedTime: article.datePublished,
       modifiedTime: article.dateModified,
-      images: ["/ogp.png"],
+      images: [SHARE_IMAGE],
     },
     twitter: {
+      card: "summary_large_image",
       title: article.title,
       description: article.description,
-      images: ["/ogp.png"],
+      images: [SHARE_IMAGE],
     },
   };
 }
@@ -70,7 +73,7 @@ export default async function NewsArticlePage(props: { params: Promise<{ slug: s
         dateModified: article.dateModified,
         mainEntityOfPage: articleUrl,
         url: articleUrl,
-        image: canonicalUrl("/ogp.png"),
+        image: canonicalUrl(SHARE_IMAGE),
         inLanguage: "ja-JP",
         isBasedOn: article.sources.map((source) => source.url),
         citation: article.sources.map((source) => source.url),

@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import AnalyticsListener from "@/components/AnalyticsListener";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import { SHARE_IMAGE } from "@/lib/seo";
 import "./globals.css";
 
 const title = "天下りマップ";
@@ -31,18 +32,18 @@ export const metadata: Metadata = {
     siteName: title,
     title,
     description,
-    images: [{ url: "/ogp.png", width: 1200, height: 630, alt: title }],
+    images: [{ url: SHARE_IMAGE, width: 1200, height: 630, alt: title }],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/ogp.png"],
+    images: [SHARE_IMAGE],
   },
   icons: {
-    icon: [{ url: "/favicon.jpg", type: "image/jpeg", sizes: "400x400" }],
-    shortcut: "/favicon.jpg",
-    apple: "/favicon.jpg",
+    icon: [{ url: "/brand-icon-96.png", type: "image/png", sizes: "96x96" }, { url: "/brand-icon-192.png", type: "image/png", sizes: "192x192" }],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   verification: {
     google: googleSiteVerification || undefined,
@@ -58,7 +59,7 @@ export default function RootLayout({
   const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
 
   return (
-    <html lang="ja">
+    <html lang="ja" data-scroll-behavior="smooth">
       <body className="flex min-h-screen flex-col overflow-x-hidden bg-background text-on-background antialiased">
         <AnalyticsListener />
         <SiteHeader />

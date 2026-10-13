@@ -20,6 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/data-policy",
     "/about",
     "/retirement-estimator",
+    "/faq",
+    "/privacy",
+    "/terms",
+    "/link-to-us",
   ];
   const latestNewsModified = newsArticles
     .map((article) => toLastModified(article.dateModified))
@@ -62,7 +66,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 function lastModifiedFor(pathname: string) {
   const pageLastmod = pageLastmodData as PageLastmodData;
-  const lastModified = toLastModified(pageLastmod.pages?.[pathname]);
+  const editorialUpdated = ["/about", "/data-policy", "/faq", "/privacy", "/terms", "/link-to-us"].includes(pathname) ? "2026-10-13" : undefined;
+  const lastModified = toLastModified([pageLastmod.pages?.[pathname], editorialUpdated].filter((value): value is string => Boolean(value)).sort().at(-1));
   return lastModified ? { lastModified } : {};
 }
 

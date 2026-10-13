@@ -1,17 +1,8 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import RetirementAllowanceEstimator from "@/components/RetirementAllowanceEstimator";
 import { Breadcrumb } from "@/components/ui";
 
-export const metadata: Metadata = {
-  title: "国家公務員の退職手当モデル試算",
-  description: "国家公務員の支給率と職責別の調整月額をもとに、役職経験モデルごとの退職手当を試算します。",
-  alternates: { canonical: "/retirement-estimator" },
-  openGraph: {
-    title: "国家公務員の退職手当モデル試算",
-    description: "職責・勤続年数・退職理由の仮定から、制度上の退職手当の目安を確認できます。",
-    url: "/retirement-estimator",
-  },
-};
+export const metadata = pageMetadata("国家公務員の退職手当モデル試算", "国家公務員の支給率と職責別の調整月額をもとに、役職経験モデルごとの退職手当を試算します。", "/retirement-estimator");
 
 export default function RetirementEstimatorPage() {
   return (

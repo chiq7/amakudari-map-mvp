@@ -1,11 +1,6 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "個人別の公表再就職情報",
-  description:
-    "政府・各省庁等の公表資料に記載された再就職情報を、個人別に確認できます。",
-  alternates: { canonical: "/persons" },
-};
+export const metadata = pageMetadata("個人別の公表再就職情報", "政府・各省庁等の公表資料に記載された再就職情報を、個人別に確認できます。", "/persons");
 
 export default function PersonsLayout({
   children,

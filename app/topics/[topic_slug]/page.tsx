@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { Breadcrumb, DataNotice } from "@/components/ui";
 import { ArrowRightIcon } from "@/components/icons";
 import { corporations, persons, publicOfficers } from "@/lib/static-content";
@@ -22,8 +23,7 @@ export async function generateMetadata(props: { params: Promise<{ topic_slug: st
   const params = await props.params;
   const topic = topicPages.find((item) => item.topic_slug === params.topic_slug);
   return {
-    title: topic ? `${topic.title}に関連する公表記録` : "テーマ別公表記録",
-    alternates: { canonical: `/topics/${params.topic_slug}` },
+    ...pageMetadata(topic ? `${topic.title}に関連する公表記録` : "テーマ別公表記録", "テーマに関連付けられた法人・人物の公開情報を確認できます。", `/topics/${params.topic_slug}`),
     robots: { index: false, follow: true },
   };
 }

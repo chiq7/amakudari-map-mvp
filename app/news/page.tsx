@@ -1,27 +1,9 @@
 import Link from "next/link";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { Breadcrumb, TagChip } from "@/components/ui";
 import { newsArticles } from "@/lib/news";
 
-export const metadata: Metadata = {
-  title: "天下り関連ニュース・解説",
-  description:
-    "再就職の公表資料、制度変更、国会・行政の動きのうち、天下りマップのデータと一次資料で確認できる内容を整理します。",
-  alternates: { canonical: "/news" },
-  openGraph: {
-    title: "天下り関連ニュース・解説",
-    description:
-      "一次資料と天下りマップのデータをつなぎ、再就職・制度・行政の動きを整理します。",
-    url: "/news",
-    images: ["/ogp.png"],
-  },
-  twitter: {
-    title: "天下り関連ニュース・解説",
-    description:
-      "一次資料と天下りマップのデータをつなぎ、再就職・制度・行政の動きを整理します。",
-    images: ["/ogp.png"],
-  },
-};
+export const metadata = pageMetadata("天下り関連ニュース・解説", "再就職の公表資料、制度変更、国会・行政の動きのうち、天下りマップのデータと一次資料で確認できる内容を整理します。", "/news");
 
 function formatDate(value: string) {
   return value.replace(/-/g, ".");

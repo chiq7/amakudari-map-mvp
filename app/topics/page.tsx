@@ -1,15 +1,11 @@
 import Link from "next/link";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { ArrowRightIcon, MinistryIcon, NewsIcon } from "@/components/icons";
 import { topics as topicGroups } from "@/lib/static-content";
 import { getMinistryPath } from "@/lib/ministry-pages";
 import topicPagesData from "@/public/data/topics.json";
 
-export const metadata: Metadata = {
-  title: "省庁・テーマから探す",
-  description: "省庁や行政テーマから、関連する人物・法人の公表記録を探せます。",
-  alternates: { canonical: "/topics" },
-};
+export const metadata = pageMetadata("省庁・テーマから探す", "省庁や行政テーマから、関連する人物・法人の公表記録を探せます。", "/topics");
 
 type TopicPage = {
   topic_slug: string;

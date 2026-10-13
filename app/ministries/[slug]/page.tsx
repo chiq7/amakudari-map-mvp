@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { Breadcrumb } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import { corporations, persons } from "@/lib/static-content";
@@ -27,13 +28,7 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const title = `${ministry.name}の天下り先一覧`;
   const description = `${ministry.name}出身者に関する公表再就職情報を、再就職先法人・件数・待機日数とともに一覧で確認できます。政府公表資料に基づくデータベースです。`;
 
-  return {
-    title,
-    description,
-    alternates: { canonical: `/ministries/${ministry.slug}` },
-    openGraph: { title, description, url: `/ministries/${ministry.slug}`, images: ["/ogp.png"] },
-    twitter: { title, description, images: ["/ogp.png"] },
-  };
+  return pageMetadata(title, description, `/ministries/${ministry.slug}`);
 }
 
 export default async function MinistryPage(props: PageProps) {

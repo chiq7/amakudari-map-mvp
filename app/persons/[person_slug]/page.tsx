@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { Breadcrumb, TagChip } from "@/components/ui";
 import CorporationBusinessContext from "@/components/CorporationBusinessContext";
 import ShareButton from "@/components/ShareButton";
@@ -19,18 +20,7 @@ export async function generateMetadata(
   const person = getPerson(params.person_slug);
   const title = `${person.name}氏｜${person.ministry}から${person.corporationName}への再就職先`;
   const description = `${person.name}氏の再就職先を確認できます。${person.ministry}の「${person.formerPosition}」から、${person.corporationName}の「${person.newPosition}」へ移った記録と法人の業務を整理しています。`;
-  return {
-    title,
-    description,
-    alternates: { canonical: `/persons/${params.person_slug}` },
-    openGraph: {
-      title,
-      description,
-      url: `/persons/${params.person_slug}`,
-      images: ["/ogp.png"],
-    },
-    twitter: { title, description, images: ["/ogp.png"] },
-  };
+  return pageMetadata(title, description, `/persons/${params.person_slug}`);
 }
 
 export default async function PersonDetailPage(props: { params: Promise<{ person_slug: string }> }) {

@@ -11,8 +11,12 @@ const exploreLinks = [
 
 const policyLinks = [
   { href: "/about", label: "このサイトについて" },
-  { href: "/data-policy", label: "データ方針" },
+  { href: "/faq", label: "よくある質問" },
+  { href: "/data-policy", label: "データ・元資料について" },
   { href: "/data-policy#dataset-license", label: "データ利用条件" },
+  { href: "/privacy", label: "プライバシーポリシー" },
+  { href: "/terms", label: "利用規約" },
+  { href: "/link-to-us", label: "リンク・紹介素材" },
   { href: "/data-policy#contact", label: "お問い合わせ" },
 ];
 

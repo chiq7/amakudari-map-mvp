@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import {
   corporations,
   getCorporationPersonHighlights,
@@ -21,11 +21,9 @@ import {
 } from "@/components/icons";
 import { getMinistryPath } from "@/lib/ministry-pages";
 
-export const metadata: Metadata = {
-  title: "天下り先・企業一覧｜省庁・法人・人物から探す｜天下りマップ",
-  description:
-    "天下り先の企業・法人を、省庁別・法人別・人物別に探せるデータベースです。誰がどこからどこへ移ったか、法人の業務とあわせて確認できます。",
-  alternates: { canonical: "/" },
+export const metadata = {
+  ...pageMetadata("天下り先・企業一覧｜省庁・法人・人物から探す", "天下り先の企業・法人を、省庁別・法人別・人物別に探せるデータベースです。誰がどこからどこへ移ったか、法人の業務とあわせて確認できます。", "/"),
+  title: { absolute: "天下り先・企業一覧｜省庁・法人・人物から探す｜天下りマップ" },
 };
 
 const latestExplainerCorporationSlugs = new Set(
@@ -268,7 +266,6 @@ export default function Home() {
                 src="/images/relationship-editorial-v1.webp"
                 alt="省庁から人物、法人への移動と、それを裏付ける公表資料の関係図"
                 fill
-                priority
                 unoptimized
                 sizes="100vw"
                 className="object-contain object-center"
@@ -301,7 +298,6 @@ export default function Home() {
               src="/images/relationship-editorial-v1.webp"
               alt="省庁から人物、法人への移動と、それを裏付ける公表資料の関係図"
               fill
-              priority
               unoptimized
               sizes="(max-width: 1024px) 100vw, 58vw"
               className="object-contain object-center"

@@ -243,18 +243,7 @@ export async function generateMetadata(
     highlights.kind === "public-officer"
       ? `${corporation.name}の公表役員情報・行政出身者`
       : `${corporation.name}の公表再就職情報`;
-  return {
-    title,
-    alternates: { canonical: `/corporations/${params.slug}` },
-    description,
-    openGraph: {
-      title,
-      description,
-      url: `/corporations/${params.slug}`,
-      images: ["/ogp.png"],
-    },
-    twitter: { title, description, images: ["/ogp.png"] },
-  };
+  return pageMetadata(title, description, `/corporations/${params.slug}`);
 }
 
 export default async function CorporationDetailPage(props: { params: Promise<{ slug: string }> }) {
@@ -655,3 +644,4 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
     </div>
   );
 }
+import { pageMetadata } from "@/lib/seo";

@@ -1,13 +1,9 @@
 import { rankingLists } from "@/lib/static-content";
 import { DataNotice, TagChip } from "@/components/ui";
 import RankingExplorer, { type ComparisonGroup } from "@/components/RankingExplorer";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "集計を見る",
-  description: "公表された再就職記録を、法人別件数や待機日数などの指標で確認できます。",
-  alternates: { canonical: "/rankings" },
-};
+export const metadata = pageMetadata("集計を見る", "公表された再就職記録を、法人別件数や待機日数などの指標で確認できます。", "/rankings");
 
 const linkGroups = [
   {

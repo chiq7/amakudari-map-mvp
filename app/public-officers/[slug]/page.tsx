@@ -21,8 +21,8 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
     title,
     description,
     alternates: { canonical: `/public-officers/${params.slug}` },
-    openGraph: { title, description, url: `/public-officers/${params.slug}`, images: ["/ogp.png"] },
-    twitter: { title, description, images: ["/ogp.png"] },
+    openGraph: { title, description, siteName: SITE_NAME, url: `/public-officers/${params.slug}`, images: [SHARE_IMAGE] },
+    twitter: { card: "summary_large_image", title, description, images: [SHARE_IMAGE] },
   };
 }
 
@@ -99,3 +99,4 @@ export default async function PublicOfficerPage(props: { params: Promise<{ slug:
     </div>
   );
 }
+import { SHARE_IMAGE, SITE_NAME } from "@/lib/seo";
