@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1138,
+  "remainingCount": 1137,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "b38a78bf8ab85bdb1f02483ee54077b51cb2a21bc6a2b8cf01b4a3252f363e60",
-      "dedupeKey": "e791eee0a42c059cf0b21c09115b3a998a9961631a7ce11ef43c0bab5d6e9a3f",
-      "personName": "鬼塚 友章",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "警察庁長官官房付",
-      "retirementDate": "2022-08-30",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 580,
-      "corporationName": "全国遊技機商業協同組合連合会",
-      "corporationType": "",
-      "newPosition": "顧問（非常勤）",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type source column was not found and could not be inferred."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "a87d51a098dd7080839cf26f6045585483e0e2a4a4b3b0334b67883d52e0e7ff",
       "dedupeKey": "407242003ce68bdb8866661bf959a4eddd953aea7449c131980bfbd45dc49bc4",

@@ -5169,6 +5169,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-b73846bf834d76be",
+    "name": "全国遊技機商業協同組合連合会",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "警察庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 580
+    },
+    "relatedPersons": [
+      "person-98d5a48ef4575161"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [
