@@ -3550,5 +3550,21 @@
     "waitingDays": 580,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "a87d51a098dd7080839cf26f6045585483e0e2a4a4b3b0334b67883d52e0e7ff",
+    "dedupeKey": "407242003ce68bdb8866661bf959a4eddd953aea7449c131980bfbd45dc49bc4",
+    "personSlug": "person-98d5a48ef4575161",
+    "name": "鬼塚 友章",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房付",
+    "corporationSlug": "corporation-d32bd3d980e25c7a",
+    "corporationName": "株式会社HESTA大倉",
+    "newPosition": "取締役社長",
+    "retirementDate": "2022-08-30",
+    "reemploymentDate": "2024-06-26",
+    "waitingDays": 666,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
