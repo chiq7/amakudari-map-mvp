@@ -5219,6 +5219,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-586341dd9ffc312c",
+    "name": "日本証券業協会",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "警察庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 493
+    },
+    "relatedPersons": [
+      "person-911687abdc725f8f"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

@@ -3566,5 +3566,21 @@
     "waitingDays": 666,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "36d8a07c6f7d0852978d96a075ed0b949b08eebc03572f1895b1ad055437afb6",
+    "dedupeKey": "b1eec845aa6c2174f47db746d1c11be78514c5199854a9cd5def7d354b00b298",
+    "personSlug": "person-911687abdc725f8f",
+    "name": "堀 誠司",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房政策立案総括審議官 兼 公文書監理官",
+    "corporationSlug": "corporation-586341dd9ffc312c",
+    "corporationName": "日本証券業協会",
+    "newPosition": "特別参与",
+    "retirementDate": "2023-03-27",
+    "reemploymentDate": "2024-08-01",
+    "waitingDays": 493,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

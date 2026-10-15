@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1136,
+  "remainingCount": 1135,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "36d8a07c6f7d0852978d96a075ed0b949b08eebc03572f1895b1ad055437afb6",
-      "dedupeKey": "b1eec845aa6c2174f47db746d1c11be78514c5199854a9cd5def7d354b00b298",
-      "personName": "堀 誠司",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "警察庁長官官房政策立案総括審議官 兼 公文書監理官",
-      "retirementDate": "2023-03-27",
-      "reemploymentDate": "2024-08-01",
-      "waitingDays": 493,
-      "corporationName": "日本証券業協会",
-      "corporationType": "",
-      "newPosition": "特別参与",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type source column was not found and could not be inferred."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "29eac880dabe56cfdd3d06b166c5e1db3bf5ce2a661fd103aa2be2b7b6597b8e",
       "dedupeKey": "2d755d352943c0eacabaa47e791ea65f176cbf213158c5c86ec151cee97575b5",
