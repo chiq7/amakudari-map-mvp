@@ -3582,5 +3582,21 @@
     "waitingDays": 493,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "29eac880dabe56cfdd3d06b166c5e1db3bf5ce2a661fd103aa2be2b7b6597b8e",
+    "dedupeKey": "2d755d352943c0eacabaa47e791ea65f176cbf213158c5c86ec151cee97575b5",
+    "personSlug": "person-c9463b5e5b00dbb9",
+    "name": "今林 寛幸",
+    "fromMinistry": "警察庁",
+    "previousPosition": "中部管区警察局長",
+    "corporationSlug": "corporation-ac9868afb9e417cc",
+    "corporationName": "株式会社サイバージムジャパン",
+    "newPosition": "顧問",
+    "retirementDate": "2023-08-01",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 244,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
