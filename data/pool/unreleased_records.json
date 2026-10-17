@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1134,
+  "remainingCount": 1133,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "5f2226d8a044cfe1a8c04e43d935bfa47d1c82f6a48fc6ee472863c1fe2f01b2",
-      "dedupeKey": "7f0f88e817eb0802cd8c926d32f5c6daeb8c478b6117666f68722d28470970b5",
-      "personName": "今林 寛幸",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "中部管区警察局長",
-      "retirementDate": "2023-08-01",
-      "reemploymentDate": "2024-12-01",
-      "waitingDays": 488,
-      "corporationName": "株式会社サカイ引越センター",
-      "corporationType": "営利法人",
-      "newPosition": "顧問",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "90b95f7165d8609f0cef2d992b2a8f1a2ecb4e8375a3e0d42432f75b4394ca79",
       "dedupeKey": "23c917c3d8d59c439a57432da09783d4a9e6d86b3eae1f6579fd9ff2e7669b5e",
