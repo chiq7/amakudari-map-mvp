@@ -4053,5 +4053,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-2e431f79734ccca1",
+    "name": "大塚 尚",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房付",
+    "corporationSlug": "corporation-983b5a059573e09e",
+    "corporationName": "株式会社メディア工房",
+    "newPosition": "社外監査役",
+    "retirementDate": "2023-08-07",
+    "reemploymentDate": "2024-11-22",
+    "waitingDays": 473,
+    "tags": [
+      "警察庁",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]
