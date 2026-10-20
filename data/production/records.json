@@ -3646,5 +3646,21 @@
     "waitingDays": 357,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "85da8699d3cc5d5f136e6c80a1d2baa201492e21e1139c2732273a80bde09f5f",
+    "dedupeKey": "d09c965c203f8507ee3537ecc14eb369b65cdc5b7e2b2fab8fa83e261b878ac4",
+    "personSlug": "person-1ae7ed7f28ec4b96",
+    "name": "福田 守雄",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房付",
+    "corporationSlug": "corporation-50a19ca927370192",
+    "corporationName": "株式会社コロワイド",
+    "newPosition": "社外取締役",
+    "retirementDate": "2023-08-25",
+    "reemploymentDate": "2024-06-27",
+    "waitingDays": 307,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

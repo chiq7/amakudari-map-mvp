@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1131,
+  "remainingCount": 1130,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "85da8699d3cc5d5f136e6c80a1d2baa201492e21e1139c2732273a80bde09f5f",
-      "dedupeKey": "d09c965c203f8507ee3537ecc14eb369b65cdc5b7e2b2fab8fa83e261b878ac4",
-      "personName": "福田 守雄",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "警察庁長官官房付",
-      "retirementDate": "2023-08-25",
-      "reemploymentDate": "2024-06-27",
-      "waitingDays": 307,
-      "corporationName": "株式会社コロワイド",
-      "corporationType": "営利法人",
-      "newPosition": "社外取締役",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "52d7d3b3c2371e652cc037bd08a45618bfa2b04720c1b72e7f11119e7c9ea8aa",
       "dedupeKey": "65681527aea85aa89199d94685ff1b390707f7d0443a5c49cbad3b92cd02d89d",

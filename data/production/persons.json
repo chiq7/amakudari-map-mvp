@@ -4091,5 +4091,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-1ae7ed7f28ec4b96",
+    "name": "福田 守雄",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房付",
+    "corporationSlug": "corporation-50a19ca927370192",
+    "corporationName": "株式会社コロワイド",
+    "newPosition": "社外取締役",
+    "retirementDate": "2023-08-25",
+    "reemploymentDate": "2024-06-27",
+    "waitingDays": 307,
+    "tags": [
+      "警察庁",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]
