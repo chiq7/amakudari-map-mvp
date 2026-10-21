@@ -3662,5 +3662,21 @@
     "waitingDays": 307,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "52d7d3b3c2371e652cc037bd08a45618bfa2b04720c1b72e7f11119e7c9ea8aa",
+    "dedupeKey": "65681527aea85aa89199d94685ff1b390707f7d0443a5c49cbad3b92cd02d89d",
+    "personSlug": "person-880f7eafb72c36f8",
+    "name": "山本 和毅",
+    "fromMinistry": "警察庁",
+    "previousPosition": "関東管区警察局長",
+    "corporationSlug": "corporation-b8601e48448b0d87",
+    "corporationName": "一般財団法人ITSサービス高度化機構",
+    "newPosition": "監事",
+    "retirementDate": "2023-09-08",
+    "reemploymentDate": "2024-06-12",
+    "waitingDays": 278,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

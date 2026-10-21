@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1130,
+  "remainingCount": 1129,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "52d7d3b3c2371e652cc037bd08a45618bfa2b04720c1b72e7f11119e7c9ea8aa",
-      "dedupeKey": "65681527aea85aa89199d94685ff1b390707f7d0443a5c49cbad3b92cd02d89d",
-      "personName": "山本 和毅",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "関東管区警察局長",
-      "retirementDate": "2023-09-08",
-      "reemploymentDate": "2024-06-12",
-      "waitingDays": 278,
-      "corporationName": "一般財団法人ITSサービス高度化機構",
-      "corporationType": "一般財団法人",
-      "newPosition": "監事",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "c68da66bb0042d45ff40131d2d4aecfb07c05d9d079d75a3da92a1082de5f1cd",
       "dedupeKey": "e9529f51161ad682e329a9c4fbc04b8ed0f92488beb32d0912df406a3cce10ca",
