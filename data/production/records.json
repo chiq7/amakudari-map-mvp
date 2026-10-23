@@ -3694,5 +3694,21 @@
     "waitingDays": 96,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "04695f95a0f070bafbc082a8357588a9fade62262a04e0ecf1b43b1021aca7b0",
+    "dedupeKey": "e865c28d1224edf42f1985d41b9c66590ed6a38a69c5e8a7cff46b4d0981992a",
+    "personSlug": "person-8cf2d9e9b039bbb7",
+    "name": "河原 淳平",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁サイバー警察局長",
+    "corporationSlug": "corporation-0c366841ee8e940f",
+    "corporationName": "三井住友海上火災保険株式会社",
+    "newPosition": "顧問",
+    "retirementDate": "2024-01-26",
+    "reemploymentDate": "2024-06-01",
+    "waitingDays": 127,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
