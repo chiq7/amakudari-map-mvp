@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1127,
+  "remainingCount": 1126,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "2a78425ede84eed352b6152f2e3349b39396b04c59d353823fb9bd6b79d2c902",
-      "dedupeKey": "971c951df9e5395dd113f224e57754ca39f434dc6eeb863a76830ede9a472d05",
-      "personName": "福田 正信",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "関東管区警察局長",
-      "retirementDate": "2024-01-26",
-      "reemploymentDate": "2024-05-01",
-      "waitingDays": 96,
-      "corporationName": "弁護士法人岡野法律事務所",
-      "corporationType": "弁護士法人",
-      "newPosition": "九段下オフィス弁護士",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "32b8009eada46ad7556fc00e662f44d6af364d7118ac484257e8ed10f8ec50b6",
       "dedupeKey": "9335efd7684e44c27e9e76e7edaef8c9cca5a7ef979144d42ee52c5083bd1576",
