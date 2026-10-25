@@ -3726,5 +3726,21 @@
     "waitingDays": 96,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "32b8009eada46ad7556fc00e662f44d6af364d7118ac484257e8ed10f8ec50b6",
+    "dedupeKey": "9335efd7684e44c27e9e76e7edaef8c9cca5a7ef979144d42ee52c5083bd1576",
+    "personSlug": "person-18299b08152f1656",
+    "name": "福田 正信",
+    "fromMinistry": "警察庁",
+    "previousPosition": "関東管区警察局長",
+    "corporationSlug": "corporation-41b4d30c0453b740",
+    "corporationName": "株式会社オオバ",
+    "newPosition": "企画本部顧問",
+    "retirementDate": "2024-01-26",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 157,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

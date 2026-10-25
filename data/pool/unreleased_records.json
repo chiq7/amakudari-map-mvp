@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1126,
+  "remainingCount": 1125,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "32b8009eada46ad7556fc00e662f44d6af364d7118ac484257e8ed10f8ec50b6",
-      "dedupeKey": "9335efd7684e44c27e9e76e7edaef8c9cca5a7ef979144d42ee52c5083bd1576",
-      "personName": "福田 正信",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "関東管区警察局長",
-      "retirementDate": "2024-01-26",
-      "reemploymentDate": "2024-07-01",
-      "waitingDays": 157,
-      "corporationName": "株式会社オオバ",
-      "corporationType": "営利法人",
-      "newPosition": "企画本部顧問",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "6672364e8991844d4fe674a16acdbfad669ccbf2c4ec7e197c2d455d8d90092e",
       "dedupeKey": "7f572379c5042756b59d89b7c377f138e161c7dd95a15ca8e9c23409fb0c0dc5",
