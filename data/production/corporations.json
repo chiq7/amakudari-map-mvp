@@ -5494,6 +5494,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-813dab8e5b320b19",
+    "name": "一般財団法人保安通信協会",
+    "type": "一般財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "警察庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 122
+    },
+    "relatedPersons": [
+      "person-7643151bdb105627"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [

@@ -4167,5 +4167,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-7643151bdb105627",
+    "name": "見垣 実男",
+    "fromMinistry": "警察庁",
+    "previousPosition": "関東管区警察局栃木県情報通信部長",
+    "corporationSlug": "corporation-813dab8e5b320b19",
+    "corporationName": "一般財団法人保安通信協会",
+    "newPosition": "調査役",
+    "retirementDate": "2024-03-01",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 122,
+    "tags": [
+      "警察庁",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]

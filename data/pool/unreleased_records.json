@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1125,
+  "remainingCount": 1124,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "6672364e8991844d4fe674a16acdbfad669ccbf2c4ec7e197c2d455d8d90092e",
-      "dedupeKey": "7f572379c5042756b59d89b7c377f138e161c7dd95a15ca8e9c23409fb0c0dc5",
-      "personName": "見垣 実男",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "関東管区警察局栃木県情報通信部長",
-      "retirementDate": "2024-03-01",
-      "reemploymentDate": "2024-07-01",
-      "waitingDays": 122,
-      "corporationName": "一般財団法人保安通信協会",
-      "corporationType": "一般財団法人",
-      "newPosition": "調査役",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "35b0e8a1903d56fd163adeb92caaa72125df1f329038da0ab83fd25e43ab1451",
       "dedupeKey": "e841716aa6ba688fe5d3911be2112a6337dfb9f362d3d41331d29a4361da50ae",
