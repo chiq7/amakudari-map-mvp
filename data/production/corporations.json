@@ -4599,19 +4599,20 @@
     "type": "未分類",
     "prefecture": "不明",
     "ministry": {
-      "name": "人事院",
+      "name": "警察庁",
       "count": 1
     },
     "counts": {
-      "publicRecords": 1,
+      "publicRecords": 2,
       "nextDay": 0,
       "within30Days": 0
     },
     "waitingDays": {
-      "average": 92
+      "average": 100
     },
     "relatedPersons": [
-      "person-870de39d9d9cfc6e"
+      "person-870de39d9d9cfc6e",
+      "person-951ae4caf4d54016"
     ],
     "sources": [
       "cabinet-office-r06-3-1-20250926"

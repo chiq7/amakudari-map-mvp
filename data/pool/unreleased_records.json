@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1124,
+  "remainingCount": 1123,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "35b0e8a1903d56fd163adeb92caaa72125df1f329038da0ab83fd25e43ab1451",
-      "dedupeKey": "e841716aa6ba688fe5d3911be2112a6337dfb9f362d3d41331d29a4361da50ae",
-      "personName": "恩地 俊之",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "関東管区警察局茨城県情報通信部長",
-      "retirementDate": "2024-03-15",
-      "reemploymentDate": "2024-07-01",
-      "waitingDays": 108,
-      "corporationName": "警察職員生活協同組合",
-      "corporationType": "",
-      "newPosition": "審議役",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type source column was not found and could not be inferred."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "2c07e5d0cf1a91fa99d3d0ccb315bdb07e0701e357e22b00cd012c502c7cb223",
       "dedupeKey": "4909fdef5f62c629ac19ec0f88c6536e5b8b1766bd848ce39576a7019e417d46",
