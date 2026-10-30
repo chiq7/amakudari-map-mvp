@@ -3790,5 +3790,21 @@
     "waitingDays": 94,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "aaddb874f03456168544ad6b24d7748529cf984629f8671ea1540749b1db97e8",
+    "dedupeKey": "c2cf294e60607048d1e27aaa621b9488577fd6693bb25b614120e15b7605fe32",
+    "personSlug": "person-976d95e664e0913e",
+    "name": "岡部 正勝",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房付",
+    "corporationSlug": "corporation-cefeb1f15bdcbd6e",
+    "corporationName": "グローリー株式会社",
+    "newPosition": "顧問",
+    "retirementDate": "2024-03-29",
+    "reemploymentDate": "2024-09-01",
+    "waitingDays": 156,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

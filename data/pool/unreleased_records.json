@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1122,
+  "remainingCount": 1121,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "aaddb874f03456168544ad6b24d7748529cf984629f8671ea1540749b1db97e8",
-      "dedupeKey": "c2cf294e60607048d1e27aaa621b9488577fd6693bb25b614120e15b7605fe32",
-      "personName": "岡部 正勝",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "警察庁長官官房付",
-      "retirementDate": "2024-03-29",
-      "reemploymentDate": "2024-09-01",
-      "waitingDays": 156,
-      "corporationName": "グローリー株式会社",
-      "corporationType": "営利法人",
-      "newPosition": "顧問",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "2cebdae2f81a67e207267d01abc106a3fb6645c105d25dff1b30e477e7c9d02a",
       "dedupeKey": "ca51019118a9f93e6bf41c3f8a1ea1518b3ce779ce3f07f22fb79e82c1a5227b",
