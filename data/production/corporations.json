@@ -5547,6 +5547,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-d6f16d4d423c5ca5",
+    "name": "アクサ生命保険株式会社",
+    "type": "営利法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "警察庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 125
+    },
+    "relatedPersons": [
+      "person-af9e443eb6a464b3"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [
