@@ -4244,5 +4244,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-54f901396d980c5c",
+    "name": "金澤 正和",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁刑事局犯罪鑑識官",
+    "corporationSlug": "corporation-67ef038f436e411c",
+    "corporationName": "公益財団法人警察協会",
+    "newPosition": "参与",
+    "retirementDate": "2024-03-29",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 94,
+    "tags": [
+      "警察庁",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]

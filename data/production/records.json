@@ -3822,5 +3822,21 @@
     "waitingDays": 125,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "9158a975ace85bc181f0a111195e7fe2e04e32d7b810fa148a46378689dbc604",
+    "dedupeKey": "fc667aa0c1b863c407454be27dd857b6eb861802afa4184833ff483c96dfd1b7",
+    "personSlug": "person-54f901396d980c5c",
+    "name": "金澤 正和",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁刑事局犯罪鑑識官",
+    "corporationSlug": "corporation-67ef038f436e411c",
+    "corporationName": "公益財団法人警察協会",
+    "newPosition": "参与",
+    "retirementDate": "2024-03-29",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 94,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
