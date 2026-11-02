@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1119,
+  "remainingCount": 1118,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "08285bb0cf479b4b26ffa8fe81b9039324309fc3d6a222f11fec08ed3222149c",
-      "dedupeKey": "c3190bdf03618a4840c5508639445d161c34f0bb530534323008f841e5dff041",
-      "personName": "島﨑 俊隆",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "警察庁長官官房技術総括審議官",
-      "retirementDate": "2024-03-29",
-      "reemploymentDate": "2024-07-01",
-      "waitingDays": 94,
-      "corporationName": "富士通株式会社",
-      "corporationType": "営利法人",
-      "newPosition": "シニアアドバイザー",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "2a3f0ec35195728dba9fe0a286fe83432fe1592d9620be19dee579af42bf8aaa",
       "dedupeKey": "f8bfcad4b5a132e4e2abc7378f9c3f9b0e8efca9c03f04bc81982aedf9b448c4",

@@ -4263,5 +4263,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-e0256d637d23c259",
+    "name": "島﨑 俊隆",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房技術総括審議官",
+    "corporationSlug": "corporation-92dabc0ad94139b6",
+    "corporationName": "富士通株式会社",
+    "newPosition": "シニアアドバイザー",
+    "retirementDate": "2024-03-29",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 94,
+    "tags": [
+      "警察庁",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]
