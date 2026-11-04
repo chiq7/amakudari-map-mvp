@@ -3870,5 +3870,21 @@
     "waitingDays": 75,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "9f83115ab46e4aab84d9e4819303f0fd7e1b6fc5c6468901f94c82331b4dc6c9",
+    "dedupeKey": "43b97b1b6e6933ca01ba9159c0476039d17b7bed770ea5f024abf3ef17ab4025",
+    "personSlug": "person-79cf18e52929ddb5",
+    "name": "高橋 靖",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房付",
+    "corporationSlug": "corporation-f0fb3746862353a0",
+    "corporationName": "株式会社ソユー",
+    "newPosition": "特別顧問",
+    "retirementDate": "2024-03-29",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 94,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
