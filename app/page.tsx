@@ -105,6 +105,35 @@ function SectionHeading({
   );
 }
 
+function SearchIntentSection() {
+  const listLink = "inline-flex min-h-11 items-center justify-center gap-1.5 rounded-lg border border-outline-variant bg-white px-3 text-sm font-bold text-primary transition hover:border-secondary hover:text-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary";
+
+  return (
+    <section aria-label="調べたいことから探す" className="grid min-w-0 divide-y divide-outline-variant rounded-2xl border border-outline-variant bg-surface-container-lowest md:grid-cols-2 md:divide-x md:divide-y-0">
+      <div className="min-w-0 px-4 py-3 sm:px-5" data-analytics-location="home_intent_definition">
+        <h2 className="text-base font-extrabold text-primary">天下りとは？</h2>
+        <p className="mt-1 text-pretty text-sm leading-relaxed text-on-surface-variant">
+          府省庁のあっせんで、退職した職員が企業や団体に再就職することを指します。
+        </p>
+        <Link href="/news/how-to-read-national-public-servant-reemployment-disclosure-2025" className="inline-flex min-h-11 items-center gap-1.5 text-sm font-bold text-secondary underline underline-offset-4">
+          再就職の制度を読む <ArrowRightIcon size={15} />
+        </Link>
+      </div>
+      <div className="min-w-0 px-4 py-3 sm:px-5" data-analytics-location="home_intent_lists">
+        <h2 className="text-base font-extrabold text-primary">再就職先を一覧で探す</h2>
+        <div className="mt-2 flex flex-wrap gap-2">
+          <Link href="/topics" className={listLink}>
+            省庁別一覧 <ArrowRightIcon size={15} />
+          </Link>
+          <Link href="/corporations" className={listLink}>
+            企業・法人一覧 <ArrowRightIcon size={15} />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ExplainerSection() {
   const [featuredArticle, ...otherArticles] = newsArticles;
 
@@ -247,7 +276,10 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
 
-      <ExplainerSection />
+      <div className="flex flex-col gap-6 md:gap-8">
+        <SearchIntentSection />
+        <ExplainerSection />
+      </div>
 
       <section
         className="relative overflow-hidden rounded-3xl bg-[#eee6da] shadow-soft ring-1 ring-[#dfd4c5] lg:grid lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch"
