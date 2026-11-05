@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { Breadcrumb, TagChip } from "@/components/ui";
 import CorporationBusinessContext from "@/components/CorporationBusinessContext";
+import OnizukaReemployment, { onizukaSlug } from "@/components/OnizukaReemployment";
 import ShareButton from "@/components/ShareButton";
 import { getCorporationEditorialContext } from "@/lib/corporation-contexts";
 import { getCorporation, getPerson, persons } from "@/lib/static-content";
@@ -17,6 +18,13 @@ export async function generateMetadata(
   }
 ): Promise<Metadata> {
   const params = await props.params;
+  if (params.person_slug === onizukaSlug) {
+    return pageMetadata(
+      "鬼塚友章氏の再就職先｜警察庁離職後の公表記録",
+      "鬼塚友章氏は2022年8月30日に警察庁長官官房付で離職。全国遊技機商業協同組合連合会や株式会社HESTA大倉など、6件の再就職先を就任日と当時の役職で一覧にしました。",
+      `/persons/${onizukaSlug}`,
+    );
+  }
   const person = getPerson(params.person_slug);
   const title = `${person.name}氏｜${person.ministry}から${person.corporationName}への再就職先`;
   const description = `${person.name}氏の再就職先を確認できます。${person.ministry}の「${person.formerPosition}」から、${person.corporationName}の「${person.newPosition}」へ移った記録と法人の業務を整理しています。`;
@@ -25,6 +33,7 @@ export async function generateMetadata(
 
 export default async function PersonDetailPage(props: { params: Promise<{ person_slug: string }> }) {
   const params = await props.params;
+  if (params.person_slug === onizukaSlug) return <OnizukaReemployment />;
   const person = getPerson(params.person_slug);
   const corporation = getCorporation(person.corporationSlug);
   const corporationContext = getCorporationEditorialContext(person.corporationSlug);
