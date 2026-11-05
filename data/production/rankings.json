@@ -1,7 +1,7 @@
 {
   "totals": {
-    "publicRecords": 244,
-    "corporations": 228,
+    "publicRecords": 249,
+    "corporations": 233,
     "nextDayCorporations": 0,
     "within30DaysCorporations": 133
   },
@@ -914,6 +914,26 @@
       {
         "corporationSlug": "corporation-cc59e983330a6bd1",
         "value": 1
+      },
+      {
+        "corporationSlug": "corporation-c215fa46eba64830",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-9ada51ba44a02602",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-b972531d680463a9",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-2bbb9534d836a616",
+        "value": 1
+      },
+      {
+        "corporationSlug": "corporation-c3b726bf889afc6f",
+        "value": 1
       }
     ],
     "nextDay": [
@@ -1823,6 +1843,26 @@
       },
       {
         "corporationSlug": "corporation-cc59e983330a6bd1",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-c215fa46eba64830",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-9ada51ba44a02602",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-b972531d680463a9",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-2bbb9534d836a616",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-c3b726bf889afc6f",
         "value": 0
       }
     ],
@@ -2734,6 +2774,26 @@
       {
         "corporationSlug": "corporation-cc59e983330a6bd1",
         "value": 0
+      },
+      {
+        "corporationSlug": "corporation-c215fa46eba64830",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-9ada51ba44a02602",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-b972531d680463a9",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-2bbb9534d836a616",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-c3b726bf889afc6f",
+        "value": 0
       }
     ],
     "shortestAverageWaitingDays": [
@@ -3518,6 +3578,10 @@
         "value": 307
       },
       {
+        "corporationSlug": "corporation-c3b726bf889afc6f",
+        "value": 326
+      },
+      {
         "corporationSlug": "corporation-ad07689dbb7366ad",
         "value": 333
       },
@@ -3570,6 +3634,14 @@
         "value": 457
       },
       {
+        "corporationSlug": "corporation-b972531d680463a9",
+        "value": 457
+      },
+      {
+        "corporationSlug": "corporation-2bbb9534d836a616",
+        "value": 457
+      },
+      {
         "corporationSlug": "corporation-11b7f92901e4a88f",
         "value": 458
       },
@@ -3588,6 +3660,10 @@
       {
         "corporationSlug": "corporation-586341dd9ffc312c",
         "value": 493
+      },
+      {
+        "corporationSlug": "corporation-9ada51ba44a02602",
+        "value": 499
       },
       {
         "corporationSlug": "corporation-7e1ecbf43ebdc22a",
@@ -3632,6 +3708,10 @@
       {
         "corporationSlug": "corporation-da24a40c0e173067",
         "value": 721
+      },
+      {
+        "corporationSlug": "corporation-c215fa46eba64830",
+        "value": 723
       },
       {
         "corporationSlug": "corporation-b17a76a342f04e8e",

@@ -4339,5 +4339,100 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-e0899be47ec95a92",
+    "name": "鎌田 篤",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省大臣官房付",
+    "corporationSlug": "corporation-c215fa46eba64830",
+    "corporationName": "CRDビジネスサポート株式会社",
+    "newPosition": "代表取締役社長",
+    "retirementDate": "2023-06-27",
+    "reemploymentDate": "2025-06-19",
+    "waitingDays": 723,
+    "tags": [
+      "経済産業省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r07-3-1-20261002"
+    ]
+  },
+  {
+    "person_slug": "person-5d6c9f29b818648b",
+    "name": "及川 洋",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省商務情報政策局商務・サービスグループ首席国際博覧会統括調整官",
+    "corporationSlug": "corporation-9ada51ba44a02602",
+    "corporationName": "石油連盟",
+    "newPosition": "常務理事",
+    "retirementDate": "2024-01-31",
+    "reemploymentDate": "2025-06-13",
+    "waitingDays": 499,
+    "tags": [
+      "経済産業省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r07-3-1-20261002"
+    ]
+  },
+  {
+    "person_slug": "person-c8706c7e18d1b705",
+    "name": "田村 修司",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省製造産業局化学物質管理課化学兵器・麻薬原料等規制対策室長",
+    "corporationSlug": "corporation-b972531d680463a9",
+    "corporationName": "一般財団法人化学研究評価機構",
+    "newPosition": "理事 兼 食品接触材料安全センター事業所長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2025-07-01",
+    "waitingDays": 457,
+    "tags": [
+      "経済産業省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r07-3-1-20261002"
+    ]
+  },
+  {
+    "person_slug": "person-34c21944f30a0239",
+    "name": "本間 登",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省大臣官房付",
+    "corporationSlug": "corporation-2bbb9534d836a616",
+    "corporationName": "一般財団法人国際資源開発研修センター",
+    "newPosition": "常勤理事",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2025-07-01",
+    "waitingDays": 457,
+    "tags": [
+      "経済産業省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r07-3-1-20261002"
+    ]
+  },
+  {
+    "person_slug": "person-bc6411603b69b4c1",
+    "name": "山下 隆也",
+    "fromMinistry": "経済産業省",
+    "previousPosition": "経済産業省大臣官房付",
+    "corporationSlug": "corporation-c3b726bf889afc6f",
+    "corporationName": "一般社団法人日本鉄鋼連盟",
+    "newPosition": "常務理事",
+    "retirementDate": "2024-07-01",
+    "reemploymentDate": "2025-05-23",
+    "waitingDays": 326,
+    "tags": [
+      "経済産業省",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r07-3-1-20261002"
+    ]
   }
 ]

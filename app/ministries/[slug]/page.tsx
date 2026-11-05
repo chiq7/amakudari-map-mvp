@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { Breadcrumb } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
-import { corporations, persons } from "@/lib/static-content";
+import MetiRecordFinder from "@/components/MetiRecordFinder";
+import { corporations, persons, records } from "@/lib/static-content";
 import { ministryPages } from "@/lib/ministry-pages";
 import { newsArticles } from "@/lib/news";
 
@@ -26,7 +27,9 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   if (!ministry) return {};
 
   const title = `${ministry.name}の天下り先一覧`;
-  const description = `${ministry.name}出身者に関する公表再就職情報を、再就職先法人・件数・待機日数とともに一覧で確認できます。政府公表資料に基づくデータベースです。`;
+  const description = ministry.slug === "meti"
+    ? "経済産業省出身者の再就職先を、就職年度・法人名・人物名で絞り込めます。公表記録ごとに就職日と就任時の役職を確認できます。"
+    : `${ministry.name}出身者に関する公表再就職情報を、再就職先法人・件数・待機日数とともに一覧で確認できます。政府公表資料に基づくデータベースです。`;
 
   return pageMetadata(title, description, `/ministries/${ministry.slug}`);
 }
@@ -37,6 +40,19 @@ export default async function MinistryPage(props: PageProps) {
   if (!ministry) notFound();
 
   const matchingPeople = persons.filter((person) => person.ministry === ministry.name);
+  const metiEntries = ministry.slug === "meti" ? records
+    .filter((record) => record.fromMinistry === ministry.name)
+    .sort((left, right) => right.reemploymentDate.localeCompare(left.reemploymentDate) || left.name.localeCompare(right.name, "ja"))
+    .map((record) => ({
+      id: record.rawId,
+      name: record.name,
+      personSlug: record.personSlug,
+      corporation: record.corporationName,
+      corporationSlug: record.corporationSlug,
+      aliases: corporations.find((corporation) => corporation.slug === record.corporationSlug)?.aliases ?? [],
+      date: record.reemploymentDate,
+      position: record.newPosition,
+    })) : null;
   const peopleByCorporation = new Map<string, typeof matchingPeople>();
   matchingPeople.forEach((person) => {
     const people = peopleByCorporation.get(person.corporationSlug) ?? [];
@@ -95,6 +111,8 @@ export default async function MinistryPage(props: PageProps) {
         </div>
         <ShareButton title={`${ministry.name}の天下り先一覧 | 天下りマップ`} />
       </section>
+
+      {metiEntries ? <MetiRecordFinder entries={metiEntries} /> : null}
 
       <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {[

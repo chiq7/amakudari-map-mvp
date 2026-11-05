@@ -1,17 +1,18 @@
 {
   "version": 1,
   "pages": {
+    "/ministries/meti": "2026-11-05",
     "/data-policy": "2026-07-28T18:25:27+09:00",
     "/retirement-estimator": "2026-08-03T17:00:00+09:00",
-    "/": "2026-11-05T01:24:54.866Z",
-    "/rankings": "2026-11-05T01:24:54.866Z",
-    "/corporations": "2026-11-05T01:24:54.866Z",
+    "/": "2026-11-05T03:53:03.752Z",
+    "/rankings": "2026-11-05T03:53:03.752Z",
+    "/corporations": "2026-11-05T03:53:03.752Z",
     "/ministries/npa": "2026-08-20T18:36:03+09:00",
     "/ministries/mic": "2026-08-20T18:36:03+09:00",
     "/persons/person-976d95e664e0913e": "2026-10-30T00:43:07.837Z",
     "/persons/person-52ff2a4059e36a01": "2026-08-20T18:36:03+09:00",
-    "/persons": "2026-11-05T01:24:54.866Z",
-    "/organizations": "2026-11-05T01:24:54.866Z",
+    "/persons": "2026-11-05T03:53:03.752Z",
+    "/organizations": "2026-11-05T03:53:03.752Z",
     "/persons/person-b14a2349e05a9a96": "2026-07-28T22:11:43.541Z",
     "/corporations/corporation-422fcd4b721a97db": "2026-08-03T22:13:08.607Z",
     "/corporations/corporation-83ba7ab290ca473c": "2026-08-03T22:13:08.607Z",
@@ -301,6 +302,16 @@
     "/persons/person-79cf18e52929ddb5": "2026-11-04T01:09:25.150Z",
     "/corporations/corporation-f0fb3746862353a0": "2026-11-04T01:09:25.150Z",
     "/persons/person-b863dfaed0b7a1bf": "2026-11-05T01:24:54.866Z",
-    "/corporations/corporation-cc59e983330a6bd1": "2026-11-05T01:24:54.866Z"
+    "/corporations/corporation-cc59e983330a6bd1": "2026-11-05T01:24:54.866Z",
+    "/persons/person-e0899be47ec95a92": "2026-11-05T03:53:03.752Z",
+    "/persons/person-5d6c9f29b818648b": "2026-11-05T03:53:03.752Z",
+    "/persons/person-c8706c7e18d1b705": "2026-11-05T03:53:03.752Z",
+    "/persons/person-34c21944f30a0239": "2026-11-05T03:53:03.752Z",
+    "/persons/person-bc6411603b69b4c1": "2026-11-05T03:53:03.752Z",
+    "/corporations/corporation-c215fa46eba64830": "2026-11-05T03:53:03.752Z",
+    "/corporations/corporation-9ada51ba44a02602": "2026-11-05T03:53:03.752Z",
+    "/corporations/corporation-b972531d680463a9": "2026-11-05T03:53:03.752Z",
+    "/corporations/corporation-2bbb9534d836a616": "2026-11-05T03:53:03.752Z",
+    "/corporations/corporation-c3b726bf889afc6f": "2026-11-05T03:53:03.752Z"
   }
 }
