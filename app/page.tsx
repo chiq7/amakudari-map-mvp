@@ -111,6 +111,7 @@ function ExplainerSection() {
   if (!featuredArticle) {
     return null;
   }
+  const featuredMinistryLink = featuredArticle.relatedLinks.find((link) => /^\/ministries\/[^/]+$/.test(link.href));
 
   return (
     <section aria-labelledby="featured-explainer-title" data-analytics-location="home_featured_news">
@@ -145,6 +146,11 @@ function ExplainerSection() {
             >
               記事を読む <ArrowRightIcon size={17} />
             </Link>
+            {featuredMinistryLink ? (
+              <Link href={featuredMinistryLink.href} className="mt-2 inline-flex min-h-11 items-center px-2 text-sm font-bold text-secondary underline underline-offset-4 sm:ml-3">
+                {featuredMinistryLink.label}
+              </Link>
+            ) : null}
           </div>
 
           {featuredArticle.featuredEntities?.length ? (
