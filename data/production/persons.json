@@ -4434,5 +4434,24 @@
     "sources": [
       "cabinet-office-r07-3-1-20261002"
     ]
+  },
+  {
+    "person_slug": "person-329770138e3a87de",
+    "name": "寺崎 信夫",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房付",
+    "corporationSlug": "corporation-abfdc2c7863e67d0",
+    "corporationName": "公益財団法人日本道路交通情報センター",
+    "newPosition": "業務部長",
+    "retirementDate": "2024-03-29",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 94,
+    "tags": [
+      "警察庁",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]

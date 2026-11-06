@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1115,
+  "remainingCount": 1114,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "d8d4cdb24ed63ba74022d61aa8d137d74a08ed379a6df1da3f82eda5e3fb53bf",
-      "dedupeKey": "ac0487ddadd182ecbb32c19f55876ad9f47a45be043835b55d4d1ff80b649510",
-      "personName": "寺崎 信夫",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "警察庁長官官房付",
-      "retirementDate": "2024-03-29",
-      "reemploymentDate": "2024-07-01",
-      "waitingDays": 94,
-      "corporationName": "公益財団法人日本道路交通情報センター",
-      "corporationType": "公益財団法人",
-      "newPosition": "業務部長",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "3c96865245513af54708be9826c95cea5cc5602be6a587b86e6840c02ae43143",
       "dedupeKey": "5c290e853f296183c4621f484a4f8ee3738543bb8cb5d388a845553094eeac2d",
