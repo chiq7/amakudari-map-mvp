@@ -1,7 +1,7 @@
 {
   "totals": {
-    "publicRecords": 250,
-    "corporations": 234,
+    "publicRecords": 251,
+    "corporations": 235,
     "nextDayCorporations": 0,
     "within30DaysCorporations": 133
   },
@@ -938,6 +938,10 @@
       {
         "corporationSlug": "corporation-abfdc2c7863e67d0",
         "value": 1
+      },
+      {
+        "corporationSlug": "corporation-3d58d335228ac81f",
+        "value": 1
       }
     ],
     "nextDay": [
@@ -1871,6 +1875,10 @@
       },
       {
         "corporationSlug": "corporation-abfdc2c7863e67d0",
+        "value": 0
+      },
+      {
+        "corporationSlug": "corporation-3d58d335228ac81f",
         "value": 0
       }
     ],
@@ -2806,6 +2814,10 @@
       {
         "corporationSlug": "corporation-abfdc2c7863e67d0",
         "value": 0
+      },
+      {
+        "corporationSlug": "corporation-3d58d335228ac81f",
+        "value": 0
       }
     ],
     "shortestAverageWaitingDays": [
@@ -3547,6 +3559,10 @@
       },
       {
         "corporationSlug": "corporation-63ff278aa68f4dec",
+        "value": 146
+      },
+      {
+        "corporationSlug": "corporation-3d58d335228ac81f",
         "value": 146
       },
       {
