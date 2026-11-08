@@ -4014,5 +4014,21 @@
     "waitingDays": 146,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "59ca08fb4566773e8deeace05853f57d6a0fd708317fb532c381d026998834fd",
+    "dedupeKey": "5a0d3fad56867490c4e8daec33f054f4dbe6473ccd82c85b6421881db53f53f7",
+    "personSlug": "person-8cb3b95feaa24576",
+    "name": "米田 茂雄",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房付",
+    "corporationSlug": "corporation-d95f156e141a8c2a",
+    "corporationName": "イオンフィナンシャルサービス株式会社",
+    "newPosition": "顧問",
+    "retirementDate": "2024-03-29",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 94,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

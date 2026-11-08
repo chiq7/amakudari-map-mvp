@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1113,
+  "remainingCount": 1112,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "59ca08fb4566773e8deeace05853f57d6a0fd708317fb532c381d026998834fd",
-      "dedupeKey": "5a0d3fad56867490c4e8daec33f054f4dbe6473ccd82c85b6421881db53f53f7",
-      "personName": "米田 茂雄",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "警察庁長官官房付",
-      "retirementDate": "2024-03-29",
-      "reemploymentDate": "2024-07-01",
-      "waitingDays": 94,
-      "corporationName": "イオンフィナンシャルサービス株式会社",
-      "corporationType": "営利法人",
-      "newPosition": "顧問",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "3b9b75df49bc92083794c8c9ee98dd4ab42623230174f1d5fe886656cc93a7ec",
       "dedupeKey": "93a18c8761a83ae9ef9d7ec7f13d75876fcf6d87b18215978521ef5694e25fec",
