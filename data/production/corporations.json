@@ -5897,6 +5897,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-4a7268b52aa2fa2c",
+    "name": "自動車安全運転センター",
+    "type": "未分類",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "警察庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 94
+    },
+    "relatedPersons": [
+      "person-ef4a821b2e4c90bb"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [
