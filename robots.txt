@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://amakudari.jp
+Sitemap: https://amakudari.jp/sitemap.xml

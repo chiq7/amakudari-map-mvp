@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="天下りマップ">
+  <rect width="64" height="64" rx="14" fill="#06213f"/>
+  <path d="M14 43 27 28l9 8 14-18" fill="none" stroke="#65b8cf" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <circle cx="14" cy="43" r="4" fill="#c99a35"/>
+  <circle cx="27" cy="28" r="4" fill="#65b8cf"/>
+  <circle cx="36" cy="36" r="4" fill="#65b8cf"/>
+  <circle cx="50" cy="18" r="4" fill="#c99a35"/>
+</svg>
