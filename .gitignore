@@ -2,6 +2,7 @@ node_modules/
 .next/
 out/
 dist/
+.cloudflare/
 .env
 .env.local
 .env.*.local

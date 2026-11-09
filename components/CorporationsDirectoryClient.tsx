@@ -3,11 +3,29 @@
 import Link from "next/link";
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { corporations, totals } from "@/lib/static-content";
 import { getMinistryPath } from "@/lib/ministry-pages";
 import { DataNotice, SearchBox, TagChip } from "@/components/ui";
 import { ArrowRightIcon, BuildingIcon } from "@/components/icons";
 import type { Corporation } from "@/lib/types";
+
+export type DirectoryCorporation = Pick<Corporation,
+  "slug" | "name" | "type" | "region" | "count" | "topMinistry" | "nextDay" |
+  "within30Days" | "averageWaitDays" | "ministries" | "topics" | "aliases" |
+  "relatedTags" | "description"
+> & {
+  publicOfficers: Pick<Corporation["publicOfficers"][number],
+    "name" | "role" | "formerOrganization" | "formerPosition" | "profile"
+  >[];
+};
+
+type DirectoryProps = {
+  corporations: DirectoryCorporation[];
+  totals: {
+    corporations: number;
+    nextDayCorporations: number;
+    within30DaysCorporations: number;
+  };
+};
 
 const ministryLinks = ["警察庁", "国土交通省", "経済産業省", "厚生労働省", "防衛省"];
 const typeLinks = ["独立行政法人", "公益財団法人", "一般財団法人", "公益社団法人", "株式会社"];
@@ -23,16 +41,16 @@ type ActiveFilter = {
   value: string;
 };
 
-function matchesType(corporation: Corporation, type: string) {
+function matchesType(corporation: DirectoryCorporation, type: string) {
   return corporation.type === type || corporation.name.includes(type);
 }
 
-function matchesArea(corporation: Corporation, area: string) {
+function matchesArea(corporation: DirectoryCorporation, area: string) {
   const prefectures = areaPrefectures[area];
   return prefectures ? prefectures.includes(corporation.region) : corporation.region === area;
 }
 
-function matchesTag(corporation: Corporation, tag: string) {
+function matchesTag(corporation: DirectoryCorporation, tag: string) {
   const normalizedTag = tag.toLocaleLowerCase("ja");
   return [
     corporation.name,
@@ -145,7 +163,7 @@ function getActiveFilters({
   return filters;
 }
 
-function CorporationsContent() {
+function CorporationsContent({ corporations, totals }: DirectoryProps) {
   const searchParams = useSearchParams();
   const requestedShowAll = searchParams.get("show") === "all";
   const [expanded, setExpanded] = useState(false);
@@ -452,10 +470,10 @@ function CorporationsContent() {
   );
 }
 
-export default function CorporationsDirectoryClient() {
+export default function CorporationsDirectoryClient(props: DirectoryProps) {
   return (
     <Suspense>
-      <CorporationsContent />
+      <CorporationsContent {...props} />
     </Suspense>
   );
 }

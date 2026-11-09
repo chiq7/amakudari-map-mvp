@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
-import CorporationsDirectoryClient from "@/components/CorporationsDirectoryClient";
+import CorporationsDirectoryClient, { type DirectoryCorporation } from "@/components/CorporationsDirectoryClient";
 import { corporations, totals } from "@/lib/static-content";
 
 export const metadata = pageMetadata("天下り先企業・法人一覧｜省庁別の公表再就職情報を探す", "天下り先の企業・法人を一覧で探せます。法人名から公表された人物・出身省庁を確認し、省庁別・法人種別でも絞り込めます。", "/corporations");
@@ -8,6 +8,23 @@ export const metadata = pageMetadata("天下り先企業・法人一覧｜省庁
 const featuredCorporations = [...corporations]
   .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name, "ja"))
   .slice(0, 20);
+
+const directoryCorporations: DirectoryCorporation[] = corporations.map(({
+  slug, name, type, region, count, topMinistry, nextDay, within30Days, averageWaitDays,
+  ministries, topics, aliases, relatedTags, description, publicOfficers,
+}) => ({
+  slug, name, type, region, count, topMinistry, nextDay, within30Days, averageWaitDays,
+  ministries, topics, aliases, relatedTags, description,
+  publicOfficers: publicOfficers.map(({ name, role, formerOrganization, formerPosition, profile }) => ({
+    name, role, formerOrganization, formerPosition, profile,
+  })),
+}));
+
+const directoryTotals = {
+  corporations: totals.corporations,
+  nextDayCorporations: totals.nextDayCorporations,
+  within30DaysCorporations: totals.within30DaysCorporations,
+};
 
 export default function CorporationsPage() {
   return (
@@ -88,7 +105,7 @@ export default function CorporationsPage() {
         </ul>
       </section>
 
-      <CorporationsDirectoryClient />
+      <CorporationsDirectoryClient corporations={directoryCorporations} totals={directoryTotals} />
     </div>
   );
 }

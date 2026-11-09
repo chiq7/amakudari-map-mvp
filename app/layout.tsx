@@ -57,6 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
+  const isVercel = process.env.VERCEL === "1";
 
   return (
     <html lang="ja" data-scroll-behavior="smooth">
@@ -67,8 +68,8 @@ export default function RootLayout({
           {children}
         </main>
         <SiteFooter />
-        <Analytics />
-        <SpeedInsights />
+        {isVercel ? <Analytics /> : null}
+        {isVercel ? <SpeedInsights /> : null}
       </body>
       {googleAnalyticsId ? <GoogleAnalytics gaId={googleAnalyticsId} /> : null}
     </html>
