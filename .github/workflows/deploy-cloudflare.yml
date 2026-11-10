@@ -1,0 +1,49 @@
+name: Deploy to Cloudflare
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+  workflow_call:
+    secrets:
+      CLOUDFLARE_API_TOKEN:
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: amakudari-cloudflare-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm install --global cf@1.0.0-beta.28
+
+      - name: Build production assets
+        env:
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: G-PF00H4MW14
+        run: CLOUDFLARE_BUILD_COMMIT="$(git rev-parse HEAD)" npm run build:cloudflare
+
+      - name: Verify the new version, deploy it, and check production
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ac96a440e4ccd079ea591cda7e237d62
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: bash scripts/deploy-cloudflare.sh

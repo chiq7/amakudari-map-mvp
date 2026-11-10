@@ -1,4 +1,4 @@
-import { copyFile, cp, glob, mkdir, readFile, realpath, rm, writeFile } from "node:fs/promises";
+import { appendFile, copyFile, cp, glob, mkdir, readFile, realpath, rm, writeFile } from "node:fs/promises";
 import { join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -9,6 +9,10 @@ const worker = join(output, "workers", "default");
 const assets = join(worker, "assets");
 const dist = join(root, "dist");
 const preview = process.argv.includes("--preview");
+const buildCommit = process.env.CLOUDFLARE_BUILD_COMMIT;
+if (buildCommit && !/^[0-9a-f]{40}$/.test(buildCommit)) {
+  throw new Error("CLOUDFLARE_BUILD_COMMIT must be a full Git commit SHA.");
+}
 
 const homepage = await readFile(join(dist, "index.html"), "utf8");
 if (!/googletagmanager\.com\/gtag\/js\?id=G-[A-Z0-9]+/.test(homepage)) {
@@ -38,6 +42,9 @@ for (const [directory, entry] of segmentDirectories) {
   for await (const file of glob("**/*.txt", { cwd: directory })) {
     await copyFile(join(directory, file), join(routeAssets, `${entry.name}.${file.split(sep).join(".")}`));
   }
+}
+if (buildCommit) {
+  await appendFile(join(assets, "_headers"), `\n/\n  X-Amakudari-Build: ${buildCommit}\n`);
 }
 await writeFile(join(output, "config.json"), JSON.stringify({
   buildContext: { isPreview: preview },

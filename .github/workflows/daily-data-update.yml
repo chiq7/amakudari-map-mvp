@@ -15,6 +15,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    outputs:
+      published: ${{ steps.publish.outputs.published }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -72,6 +74,7 @@ jobs:
         run: npm run build
 
       - name: Commit verified production update
+        id: publish
         if: steps.pick.outputs.picked_count != '0'
         run: |
           git config user.name "amakudari-map automation"
@@ -83,3 +86,14 @@ jobs:
           fi
           git commit -m "chore: publish daily verified data update (${{ steps.pick.outputs.picked_count }} record)"
           git push origin HEAD:master
+          echo "published=true" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: update
+    # Pushes made with GITHUB_TOKEN do not trigger another workflow.
+    if: github.ref == 'refs/heads/master' && needs.update.outputs.published == 'true'
+    permissions:
+      contents: read
+    uses: ./.github/workflows/deploy-cloudflare.yml
+    secrets:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
