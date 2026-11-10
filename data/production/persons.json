@@ -4510,5 +4510,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-93ee25a89ed69f86",
+    "name": "金澤 武好",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房付",
+    "corporationSlug": "corporation-94c819e4963c9050",
+    "corporationName": "一般財団法人警察大学校学友会",
+    "newPosition": "総務課長",
+    "retirementDate": "2024-03-31",
+    "reemploymentDate": "2024-07-01",
+    "waitingDays": 92,
+    "tags": [
+      "警察庁",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]

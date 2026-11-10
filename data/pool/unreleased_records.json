@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1111,
+  "remainingCount": 1110,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "876620ea1197aa179a203f2a976820d71e4c38ef54fd1f6c522555cb4cb55ee4",
-      "dedupeKey": "29fc35fcaa3c36d6c1fdc73b7ddc86d7305f0978bad76bb10680ff2898b521af",
-      "personName": "金澤 武好",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "警察庁長官官房付",
-      "retirementDate": "2024-03-31",
-      "reemploymentDate": "2024-07-01",
-      "waitingDays": 92,
-      "corporationName": "一般財団法人警察大学校学友会",
-      "corporationType": "一般財団法人",
-      "newPosition": "総務課長",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "624cbfa6ab299ee73e6678cafbd5ebc462d1e83e54f3f40267c2b92b231758f7",
       "dedupeKey": "403ea18cd02ebb01f57acba3997ea294b8d995a64e607c214c08bc375f73fe55",

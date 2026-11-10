@@ -5922,6 +5922,31 @@
     "topics": []
   },
   {
+    "slug": "corporation-94c819e4963c9050",
+    "name": "一般財団法人警察大学校学友会",
+    "type": "一般財団法人",
+    "prefecture": "不明",
+    "ministry": {
+      "name": "警察庁",
+      "count": 1
+    },
+    "counts": {
+      "publicRecords": 1,
+      "nextDay": 0,
+      "within30Days": 0
+    },
+    "waitingDays": {
+      "average": 92
+    },
+    "relatedPersons": [
+      "person-93ee25a89ed69f86"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ],
+    "topics": []
+  },
+  {
     "slug": "corporation-luup",
     "name": "株式会社Luup",
     "aliases": [
