@@ -5828,18 +5828,19 @@
     "prefecture": "不明",
     "ministry": {
       "name": "警察庁",
-      "count": 1
+      "count": 2
     },
     "counts": {
-      "publicRecords": 1,
+      "publicRecords": 2,
       "nextDay": 0,
       "within30Days": 0
     },
     "waitingDays": {
-      "average": 94
+      "average": 85
     },
     "relatedPersons": [
-      "person-329770138e3a87de"
+      "person-329770138e3a87de",
+      "person-c8c4f3c1778702fd"
     ],
     "sources": [
       "cabinet-office-r06-3-1-20250926"

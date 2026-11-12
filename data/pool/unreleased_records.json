@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1109,
+  "remainingCount": 1108,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "f454453616aca09849c092eec180dd636c835a59452c4b1df80389461f446488",
-      "dedupeKey": "dd5c97b7fc9f7c24adc54b1d55bd9ba37524cafe2b56e907925bfbb0fbaee2ad",
-      "personName": "加藤 伸宏",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "警察庁長官官房付",
-      "retirementDate": "2024-04-05",
-      "reemploymentDate": "2024-06-19",
-      "waitingDays": 75,
-      "corporationName": "公益財団法人日本道路交通情報センター",
-      "corporationType": "公益財団法人",
-      "newPosition": "業務執行理事",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "04b26e772f60df145346fbbdae1356265473a37a0919c7f38c5b985aa64a3b93",
       "dedupeKey": "35042856230a669da3cae880c5ed5aad8989dcac1cdc6e3ca1cf9012ca85e57e",
