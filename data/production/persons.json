@@ -4567,5 +4567,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-2a72f8dfb1806f4b",
+    "name": "根本 純史",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房付",
+    "corporationSlug": "corporation-0c366841ee8e940f",
+    "corporationName": "三井住友海上火災保険株式会社",
+    "newPosition": "顧問",
+    "retirementDate": "2024-08-26",
+    "reemploymentDate": "2024-12-01",
+    "waitingDays": 97,
+    "tags": [
+      "警察庁",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]

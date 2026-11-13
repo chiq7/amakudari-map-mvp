@@ -4,15 +4,15 @@
     "/ministries/meti": "2026-11-05",
     "/data-policy": "2026-07-28T18:25:27+09:00",
     "/retirement-estimator": "2026-08-03T17:00:00+09:00",
-    "/": "2026-11-12T02:10:47.864Z",
-    "/rankings": "2026-11-12T02:10:47.864Z",
-    "/corporations": "2026-11-12T02:10:47.864Z",
+    "/": "2026-11-13T01:44:39.411Z",
+    "/rankings": "2026-11-13T01:44:39.411Z",
+    "/corporations": "2026-11-13T01:44:39.411Z",
     "/ministries/npa": "2026-08-20T18:36:03+09:00",
     "/ministries/mic": "2026-08-20T18:36:03+09:00",
     "/persons/person-976d95e664e0913e": "2026-10-30T00:43:07.837Z",
     "/persons/person-52ff2a4059e36a01": "2026-08-20T18:36:03+09:00",
-    "/persons": "2026-11-12T02:10:47.864Z",
-    "/organizations": "2026-11-12T02:10:47.864Z",
+    "/persons": "2026-11-13T01:44:39.411Z",
+    "/organizations": "2026-11-13T01:44:39.411Z",
     "/persons/person-b14a2349e05a9a96": "2026-07-28T22:11:43.541Z",
     "/corporations/corporation-422fcd4b721a97db": "2026-08-03T22:13:08.607Z",
     "/corporations/corporation-83ba7ab290ca473c": "2026-08-03T22:13:08.607Z",
@@ -281,7 +281,7 @@
     "/corporations/corporation-b8601e48448b0d87": "2026-10-21T23:56:46.598Z",
     "/persons/person-8cf2d9e9b039bbb7": "2026-10-22T23:56:20.882Z",
     "/corporations/corporation-07309aaa36b41c18": "2026-10-22T23:56:20.882Z",
-    "/corporations/corporation-0c366841ee8e940f": "2026-10-23T23:48:04.466Z",
+    "/corporations/corporation-0c366841ee8e940f": "2026-11-13T01:44:39.411Z",
     "/persons/person-18299b08152f1656": "2026-10-24T23:02:14.659Z",
     "/corporations/corporation-c5e0e844af73a096": "2026-10-24T23:02:14.659Z",
     "/corporations/corporation-41b4d30c0453b740": "2026-10-25T23:07:04.516Z",
@@ -324,6 +324,7 @@
     "/persons/person-93ee25a89ed69f86": "2026-11-10T03:21:37.732Z",
     "/corporations/corporation-94c819e4963c9050": "2026-11-10T03:21:37.732Z",
     "/persons/person-061c4f12ea31afaa": "2026-11-11T01:10:07.528Z",
-    "/persons/person-c8c4f3c1778702fd": "2026-11-12T02:10:47.864Z"
+    "/persons/person-c8c4f3c1778702fd": "2026-11-12T02:10:47.864Z",
+    "/persons/person-2a72f8dfb1806f4b": "2026-11-13T01:44:39.411Z"
   }
 }

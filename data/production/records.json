@@ -4094,5 +4094,21 @@
     "waitingDays": 75,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "04b26e772f60df145346fbbdae1356265473a37a0919c7f38c5b985aa64a3b93",
+    "dedupeKey": "35042856230a669da3cae880c5ed5aad8989dcac1cdc6e3ca1cf9012ca85e57e",
+    "personSlug": "person-2a72f8dfb1806f4b",
+    "name": "根本 純史",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房付",
+    "corporationSlug": "corporation-0c366841ee8e940f",
+    "corporationName": "三井住友海上火災保険株式会社",
+    "newPosition": "顧問",
+    "retirementDate": "2024-08-26",
+    "reemploymentDate": "2024-12-01",
+    "waitingDays": 97,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

@@ -5428,18 +5428,19 @@
     "prefecture": "不明",
     "ministry": {
       "name": "警察庁",
-      "count": 1
+      "count": 2
     },
     "counts": {
-      "publicRecords": 1,
+      "publicRecords": 2,
       "nextDay": 0,
       "within30Days": 0
     },
     "waitingDays": {
-      "average": 127
+      "average": 112
     },
     "relatedPersons": [
-      "person-8cf2d9e9b039bbb7"
+      "person-8cf2d9e9b039bbb7",
+      "person-2a72f8dfb1806f4b"
     ],
     "sources": [
       "cabinet-office-r06-3-1-20250926"
