@@ -4158,5 +4158,21 @@
     "waitingDays": 90,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "42a55eb363f89958f71c32d258992067f8acd10ae069aeae578da313f8802749",
+    "dedupeKey": "ebed9abff5f91ce73f3ec8bb63127c559a743f1349b623a3adcc076933e6c7af",
+    "personSlug": "person-84f33780573ee623",
+    "name": "山岸 一生",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房付",
+    "corporationSlug": "corporation-c3902dafa9f51d96",
+    "corporationName": "日本ハーデス株式会社",
+    "newPosition": "顧問",
+    "retirementDate": "2024-09-02",
+    "reemploymentDate": "2025-01-01",
+    "waitingDays": 121,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]

@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1104,
+  "remainingCount": 1103,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "42a55eb363f89958f71c32d258992067f8acd10ae069aeae578da313f8802749",
-      "dedupeKey": "ebed9abff5f91ce73f3ec8bb63127c559a743f1349b623a3adcc076933e6c7af",
-      "personName": "山岸 一生",
-      "originMinistry": "警察庁",
-      "titleAtRetirement": "警察庁長官官房付",
-      "retirementDate": "2024-09-02",
-      "reemploymentDate": "2025-01-01",
-      "waitingDays": 121,
-      "corporationName": "日本ハーデス株式会社",
-      "corporationType": "営利法人",
-      "newPosition": "顧問",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "警察庁"
-    },
     {
       "rawId": "cd1180ee61155e91840b0dd45cb6d17732c38cdc036031e40d825ad5461f48be",
       "dedupeKey": "08fa316e706d3df79e0def2589ad4a395dd5a887b85fddd0e619f332a27c87b1",
