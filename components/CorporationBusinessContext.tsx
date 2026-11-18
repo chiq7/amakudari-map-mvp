@@ -108,7 +108,7 @@ export default function CorporationBusinessContext({
           {recordCount !== undefined ? (
             <dl className="mt-5 grid grid-cols-3 gap-3 md:grid-cols-1 md:gap-5">
               {[
-                ["公表役員", publicOfficerCount ?? 0, "人"],
+                ["掲載している役員情報", publicOfficerCount || "未収録", publicOfficerCount ? "人" : ""],
                 ["再就職記録", recordCount, "件"],
                 ...(publicSubsidyTotal !== undefined
                   ? [["公表補助金額", formatPublicSubsidyAmount(publicSubsidyTotal), ""]]

@@ -117,6 +117,10 @@ export default async function MinistryPage(props: PageProps) {
       </section>
 
       {metiEntries ? <MetiRecordFinder entries={metiEntries} /> : null}
+      {metiEntries ? <p className="text-sm leading-7 text-on-surface-variant">
+        この一覧には、複数年度にわたり当サイトが収録した{metiEntries.length}件を掲載しています。
+        <Link href="/news/meti-reemployment-disclosure-fy2025" className="font-semibold text-secondary underline">令和7年度の公表表で数えた74件の解説</Link>では、同年度の離職後の事後届出を集計しています。
+      </p> : null}
 
       <section className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {[

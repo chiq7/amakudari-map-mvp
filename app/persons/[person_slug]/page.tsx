@@ -1,3 +1,4 @@
+import { formatDate } from "@/lib/display-text";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
@@ -44,8 +45,7 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
       <Breadcrumb
         items={[
           { label: "TOP", href: "/" },
-          { label: "法人検索", href: "/corporations" },
-          { label: person.corporationName, href: `/corporations/${person.corporationSlug}` },
+          { label: "人物一覧", href: "/persons" },
           { label: person.name },
         ]}
       />
@@ -71,7 +71,7 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
           <div className="mt-1 border-l-4 border-on-surface-variant bg-surface-container-low p-5 lg:mt-5">
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <span className="bg-on-surface-variant px-2 py-1 text-sm font-semibold text-surface">離職前</span>
-              <span className="font-mono text-sm text-on-surface-variant">{person.retiredAt} 離職</span>
+              <span className="font-mono text-sm text-on-surface-variant">{formatDate(person.retiredAt)} 離職</span>
             </div>
             <p className="text-sm font-bold text-on-surface-variant">所属</p>
             <p className="mt-1 text-2xl font-extrabold text-primary">{person.ministry}</p>
@@ -94,7 +94,7 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
           <div className="border-l-4 border-secondary bg-secondary-fixed/30 p-5 lg:mt-5">
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <span className="bg-secondary px-2 py-1 text-sm font-semibold text-on-secondary">再就職後</span>
-              <span className="font-mono text-sm text-on-surface-variant">{person.reemployedAt} 就任</span>
+              <span className="font-mono text-sm text-on-surface-variant">{formatDate(person.reemployedAt)} 就任</span>
             </div>
             <p className="text-sm font-bold text-on-surface-variant">再就職先</p>
             <Link href={`/corporations/${person.corporationSlug}`} className="mt-1 block text-2xl font-extrabold leading-tight text-secondary hover:underline">

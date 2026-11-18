@@ -1,3 +1,4 @@
+import { formatDate } from "@/lib/display-text";
 import Link from "next/link";
 import Image from "next/image";
 import { pageMetadata } from "@/lib/seo";
@@ -5,6 +6,7 @@ import {
   corporations,
   getCorporationPersonHighlights,
   meta,
+  records,
   topics,
   totals,
 } from "@/lib/static-content";
@@ -72,14 +74,11 @@ const featuredMinistries = [
 ]
   .map((name) => ({
     name,
-    corporationCount: corporations.filter((corporation) => corporation.ministries.includes(name)).length,
+    path: getMinistryPath(name),
+    corporationCount: new Set(records.filter((record) => record.fromMinistry === name).map((record) => record.corporationSlug)).size,
   }))
   .filter((ministry) => ministry.corporationCount > 0)
   .slice(0, 6);
-
-function formatDate(value: string) {
-  return value.replace(/-/g, ".");
-}
 
 function SectionHeading({
   eyebrow,
@@ -352,16 +351,16 @@ export default function Home() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow="CURRENT DATA"
-            title="公表データをひと目で"
+            title="天下りマップの収録件数"
           />
-          <p className="text-xs font-semibold text-on-surface-variant">データ更新日 {formatDate(meta.lastUpdated)}</p>
+          <Link href="/data-policy#coverage" className="text-sm font-semibold text-secondary underline">収録期間と数え方を見る</Link>
         </div>
         <h2 id="data-summary-title" className="sr-only">データ概要</h2>
         <dl className="mt-7 grid grid-cols-2 overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-outline-variant/70 lg:grid-cols-4">
           {[
             ["公表された再就職記録", totals.publicRecords.toLocaleString(), "件"],
-            ["再就職先として掲載", totals.corporations.toLocaleString(), "法人"],
-            ["30日以内の再就職", totals.within30DaysCorporations.toLocaleString(), "件"],
+            ["掲載している法人", totals.corporations.toLocaleString(), "法人"],
+            ["30日以内の再就職記録がある法人", totals.within30DaysCorporations.toLocaleString(), "法人"],
             ["人物ページ", meta.personCount.toLocaleString(), "人"],
           ].map(([label, value, unit], index) => (
             <div
@@ -500,7 +499,7 @@ export default function Home() {
           {featuredMinistries.map((ministry) => (
             <Link
               key={ministry.name}
-              href={getMinistryPath(ministry.name)}
+              href={ministry.path}
               className="group flex min-h-16 items-center justify-between gap-3 rounded-2xl bg-white px-4 py-3 font-bold text-primary shadow-sm ring-1 ring-outline-variant/50 transition hover:ring-secondary/30"
             >
               <span className="flex items-center gap-3">
@@ -511,7 +510,7 @@ export default function Home() {
               </span>
               <span className="flex shrink-0 items-center gap-3">
                 <span className="text-xs font-bold text-on-surface-variant">
-                  {ministry.corporationCount}法人
+                  {ministry.path.startsWith("/ministries/") ? `再就職先 ${ministry.corporationCount}法人` : "関連法人を絞り込む"}
                 </span>
                 <ArrowRightIcon className="text-outline transition group-hover:translate-x-1 group-hover:text-secondary" size={16} />
               </span>

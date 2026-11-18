@@ -1,9 +1,13 @@
+import { formatDate } from "@/lib/display-text";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb, RelatedLinks, TagChip } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import { canonicalUrl, SHARE_IMAGE, SITE_NAME } from "@/lib/seo";
 import { getNewsArticle, newsArticles } from "@/lib/news";
+import { records } from "@/lib/static-content";
+const metiRecords = records.filter((record) => record.fromMinistry === "経済産業省");
 
 export function generateStaticParams() {
   return newsArticles.map((article) => ({ slug: article.slug }));
@@ -36,10 +40,6 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
       images: [SHARE_IMAGE],
     },
   };
-}
-
-function formatDate(value: string) {
-  return value.replace(/-/g, ".");
 }
 
 function ArticleTitle({ title }: { title: string }) {
@@ -114,6 +114,10 @@ export default async function NewsArticlePage(props: { params: Promise<{ slug: s
           <ShareButton title={`${article.title} | 天下りマップ`} />
         </div>
         <p className="mt-4 text-lg leading-relaxed text-on-surface-variant">{article.lead}</p>
+        {article.slug === "meti-reemployment-disclosure-fy2025" ? <p className="mt-3 text-sm leading-7">
+          74件は令和7年度の公表表にある明細の数です。<Link href="/ministries/meti" className="font-bold text-secondary underline">当サイトの経産省一覧（複数年度から収録した{metiRecords.length}件）</Link>で、収録済みの人物・法人を探せます。
+          {!metiRecords.some((record) => record.corporationName.normalize("NFKC").includes("CRD協会")) ? "本文で紹介する鎌田篤氏のCRD協会への就任は、元資料に掲載されている事例です。当サイトの一覧には未収録です。" : null}
+        </p> : null}
         <p className="mt-4 text-sm text-on-surface-variant">
           公開日：<time dateTime={article.datePublished}>{formatDate(article.datePublished)}</time>
           <span className="mx-2">/</span>

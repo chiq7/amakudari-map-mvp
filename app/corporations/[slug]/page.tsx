@@ -1,3 +1,4 @@
+import { formatDate } from "@/lib/display-text";
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { Corporation, GbizInfoCollection, ReemploymentRecord } from "@/lib/types";
@@ -113,8 +114,8 @@ function ReemploymentRecordList({ entries }: { entries: ReemploymentRecord[] }) 
                 <dd className="mt-1 font-semibold leading-6 text-primary">{record.newPosition}</dd>
               </div>
               <div className="grid grid-cols-2 gap-3">
-                <div><dt className="text-xs font-bold text-on-surface-variant">離職日</dt><dd className="mt-1 font-mono">{record.retirementDate}</dd></div>
-                <div><dt className="text-xs font-bold text-on-surface-variant">再就職日</dt><dd className="mt-1 font-mono">{record.reemploymentDate}</dd></div>
+                <div><dt className="text-xs font-bold text-on-surface-variant">離職日</dt><dd className="mt-1 font-mono">{formatDate(record.retirementDate)}</dd></div>
+                <div><dt className="text-xs font-bold text-on-surface-variant">再就職日</dt><dd className="mt-1 font-mono">{formatDate(record.reemploymentDate)}</dd></div>
               </div>
             </dl>
           </article>
@@ -138,7 +139,7 @@ function ReemploymentRecordList({ entries }: { entries: ReemploymentRecord[] }) 
                 <td className="px-4 py-4 font-bold"><Link href={`/persons/${record.personSlug}`} className="text-secondary hover:underline">{record.name}</Link></td>
                 <td className="px-4 py-4 text-sm"><strong className="block text-primary">{record.fromMinistry}</strong><span className="mt-1 block leading-6 text-on-surface-variant">{record.previousPosition}</span></td>
                 <td className="px-4 py-4 text-sm leading-6">{record.newPosition}</td>
-                <td className="px-4 py-4 font-mono text-sm"><span className="block">{record.retirementDate}</span><span className="block text-on-surface-variant">→ {record.reemploymentDate}</span></td>
+                <td className="px-4 py-4 font-mono text-sm"><span className="block">{formatDate(record.retirementDate)}</span><span className="block text-on-surface-variant">→ {formatDate(record.reemploymentDate)}</span></td>
                 <td className="px-4 py-4 text-center"><span className="inline-flex border border-secondary/20 bg-secondary-fixed px-2 py-1 text-sm font-bold text-secondary">{record.waitingDays}日</span></td>
               </tr>
             ))}
@@ -604,7 +605,7 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
         <h2 className="mb-3 text-2xl font-bold text-primary">関連情報</h2>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           <div className="space-y-3">
-            <div>
+            {corporation.topics.length > 0 ? <div>
               <h3 className="mb-2 text-sm font-bold text-on-surface-variant">関連話題</h3>
               <div className="flex flex-wrap gap-2">
                 {corporation.topics.map((label) => (
@@ -612,11 +613,8 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
                     {label}
                   </TagChip>
                 ))}
-                {corporation.topics.length === 0 && (
-                  <span className="text-sm text-on-surface-variant">関連話題は登録されていません。</span>
-                )}
               </div>
-            </div>
+            </div> : null}
             <div>
               <h3 className="mb-2 text-sm font-bold text-on-surface-variant">関連省庁</h3>
               <div className="flex flex-wrap gap-2">

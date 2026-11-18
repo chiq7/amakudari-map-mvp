@@ -2,10 +2,10 @@
 
 import { searchKey } from "@/lib/search-key";
 import Link from "next/link";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { getMinistryPath } from "@/lib/ministry-pages";
-import { DataNotice, SearchBox, TagChip } from "@/components/ui";
+import { SearchBox, TagChip } from "@/components/ui";
 import { ArrowRightIcon, BuildingIcon } from "@/components/icons";
 import type { Corporation } from "@/lib/types";
 
@@ -92,7 +92,7 @@ function getActiveFilters({
     filters.push({
       label: "省庁",
       heading: `${ministry}に関連する法人を表示中`,
-      description: `最多出身省庁が『${ministry}』の法人を表示しています。`,
+      description: `再就職記録や公表された役員略歴に「${ministry}」が登場する法人を表示しています。`,
       value: ministry,
     });
   }
@@ -167,8 +167,6 @@ function getActiveFilters({
 function CorporationsContent({ corporations, totals }: DirectoryProps) {
   const searchParams = useSearchParams();
   const requestedShowAll = searchParams.get("show") === "all";
-  const [expanded, setExpanded] = useState(false);
-  const showAll = requestedShowAll || expanded;
   const ministry = searchParams.get("ministry")?.trim() ?? "";
   const type = searchParams.get("type")?.trim() ?? "";
   const area =
@@ -229,12 +227,18 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
     });
 
   const isFiltered = activeFilters.length > 0;
-  const initialLimit = 20;
-  const visibleCorporations =
-    isFiltered || showAll ? filteredCorporations : filteredCorporations.slice(0, initialLimit);
-  const hiddenCount = filteredCorporations.length - visibleCorporations.length;
-
-  const renderDirectory = isFiltered || showAll;
+  const pageSize = 20;
+  const pageCount = Math.max(1, Math.ceil(filteredCorporations.length / pageSize));
+  const requestedPage = Number(searchParams.get("page"));
+  const page = Number.isInteger(requestedPage) ? Math.min(pageCount, Math.max(1, requestedPage)) : 1;
+  const first = (page - 1) * pageSize;
+  const visibleCorporations = filteredCorporations.slice(first, first + pageSize);
+  const renderDirectory = isFiltered || requestedShowAll;
+  function pageHref(destination: number) {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("page", String(destination));
+    return `/corporations?${params}#directory-results`;
+  }
 
   useEffect(() => {
     const staticDirectory = document.getElementById("featured-corporations-directory");
@@ -245,6 +249,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
   return (
     <div className="flex flex-col gap-8">
       <section id="corporation-search-tools" className="mx-auto flex w-full max-w-4xl flex-col gap-3 rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-sm">
+        <h2 className="font-bold text-primary">法人一覧を検索・絞り込み</h2>
         <SearchBox action="/corporations" />
         <div className="flex flex-wrap gap-2">
           <TagChip href="/corporations?ministry=警察庁" active={ministry === "警察庁"}>警察庁</TagChip>
@@ -278,18 +283,11 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
         </section>
       ) : null}
 
-      {!isFiltered && totals.nextDayCorporations === 0 ? (
-        <DataNotice>
-          <strong className="text-primary">退職翌日の再就職記録は0件です。</strong>
-          現在の公開データでは該当法人がないため、一覧の列や絞り込み条件には表示していません。
-        </DataNotice>
-      ) : null}
-
-      {renderDirectory ? <section className="flex flex-col gap-4">
+      {renderDirectory ? <section id="directory-results" className="flex scroll-mt-24 flex-col gap-4">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <h2 className="text-2xl font-bold text-primary">法人一覧</h2>
           <p className="text-base font-bold text-primary">
-            全 {totals.corporations}件中 {visibleCorporations.length}件を表示
+            {filteredCorporations.length}法人中 {filteredCorporations.length ? first + 1 : 0}〜{first + visibleCorporations.length}法人を表示
           </p>
         </div>
         <p className="text-sm leading-relaxed text-on-surface-variant">
@@ -385,19 +383,12 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
             </tbody>
           </table>
           </div>
-          {hiddenCount > 0 ? (
-            <div className="border-t border-outline-variant pt-5 text-center">
-              <p className="text-sm text-on-surface-variant">
-                最初の{initialLimit}法人を表示しています。法人名が分かる場合は上の検索が便利です。
-              </p>
-              <button
-                type="button"
-                onClick={() => setExpanded(true)}
-                className="mt-3 min-h-11 border border-primary bg-white px-6 text-sm font-bold text-primary transition hover:bg-surface-container-low"
-              >
-                残り{hiddenCount}法人をすべて表示
-              </button>
-            </div>
+          {pageCount > 1 ? (
+            <nav aria-label="法人一覧のページ送り" className="flex flex-wrap items-center justify-center gap-4 border-t border-outline-variant pt-4 text-sm font-bold">
+              {page > 1 ? <Link href={pageHref(page - 1)} className="inline-flex min-h-11 items-center px-4 text-secondary underline">前の20法人</Link> : null}
+              <span>{page} / {pageCount} ページ</span>
+              {page < pageCount ? <Link href={pageHref(page + 1)} className="inline-flex min-h-11 items-center px-4 text-secondary underline">次の法人を見る</Link> : null}
+            </nav>
           ) : null}
           </>
         ) : (
@@ -428,7 +419,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
             <div className="mt-4 flex flex-wrap gap-2">
               {ministryLinks.map((label) => (
                 <TagChip key={label} href={getMinistryPath(label)}>
-                  {label}
+                  {label}{getMinistryPath(label).startsWith("/ministries/") ? "の省庁別一覧" : "の関連法人で絞り込む"}
                 </TagChip>
               ))}
             </div>

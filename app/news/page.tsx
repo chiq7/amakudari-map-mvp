@@ -1,13 +1,10 @@
+import { formatDate } from "@/lib/display-text";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { Breadcrumb, TagChip } from "@/components/ui";
 import { newsArticles } from "@/lib/news";
 
 export const metadata = pageMetadata("天下り関連ニュース・解説", "再就職の公表資料、制度変更、国会・行政の動きのうち、天下りマップのデータと一次資料で確認できる内容を整理します。", "/news");
-
-function formatDate(value: string) {
-  return value.replace(/-/g, ".");
-}
 
 export default function NewsIndexPage() {
   return (

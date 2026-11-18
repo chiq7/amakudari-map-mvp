@@ -45,7 +45,7 @@ export default function PersonsPage() {
             </p>
           </div>
           <p className="shrink-0 text-sm font-bold text-on-surface-variant">
-            {persons.length.toLocaleString()}件 / {ministryGroups.length}区分
+            {persons.length.toLocaleString()}人 / {ministryGroups.length}区分
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function PersonsPage() {
               className="flex min-h-12 items-center justify-between gap-2 bg-white px-3 py-2 text-xs font-bold text-primary transition hover:bg-secondary-fixed hover:text-secondary"
             >
               <span>{group.ministry}</span>
-              <span className="text-on-surface-variant">{group.people.length}</span>
+              <span className="text-on-surface-variant" aria-hidden="true">↓</span>
             </a>
           ))}
         </nav>
@@ -69,14 +69,13 @@ export default function PersonsPage() {
           {ministryGroups.map((group) => (
             <details
               key={group.id}
-              id={group.id}
               className="group scroll-mt-44 border border-outline-variant bg-surface-container-lowest lg:scroll-mt-28"
             >
               <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 border-l-4 border-secondary bg-surface-container-low px-4 py-3 [&::-webkit-details-marker]:hidden">
                 <span>
                   <span className="block text-lg font-extrabold text-primary">{group.ministry}</span>
                   <span className="mt-0.5 block text-xs font-semibold text-on-surface-variant">
-                    公表記録 {group.people.length.toLocaleString()}件
+                    掲載人物 {group.people.length.toLocaleString()}人
                   </span>
                 </span>
                 <span className="shrink-0 text-xs font-bold text-secondary">
@@ -85,12 +84,12 @@ export default function PersonsPage() {
                 </span>
               </summary>
 
-              <ul className="divide-y divide-outline-variant">
+              <ul id={group.id} className="scroll-mt-20 divide-y divide-outline-variant lg:scroll-mt-40">
                 {group.people.map((person, personIndex) => (
                   <li key={`${person.slug}-${person.corporationSlug}-${personIndex}`}>
                     <Link
                       href={`/persons/${person.slug}`}
-                      className="group/row grid gap-2 px-4 py-4 transition hover:bg-surface-container-low md:grid-cols-[minmax(120px,0.7fr)_minmax(220px,1.2fr)_24px_minmax(220px,1.2fr)_auto] md:items-center md:gap-4"
+                      className="group/row grid gap-1 px-4 py-3 transition hover:bg-surface-container-low md:grid-cols-[minmax(120px,0.7fr)_minmax(220px,1.2fr)_24px_minmax(220px,1.2fr)_auto] md:items-center md:gap-4"
                     >
                       <div>
                         <h3 className="font-extrabold text-primary group-hover/row:text-secondary">{person.name}</h3>

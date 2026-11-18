@@ -22,7 +22,7 @@ export default function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-outline-variant/80 bg-surface/95 backdrop-blur-xl">
+    <header className="top-0 z-50 border-b border-outline-variant/80 bg-surface/95 backdrop-blur-xl lg:sticky [@media(max-height:600px)]:!static">
       <div className="mx-auto flex h-[68px] w-full max-w-[1280px] items-center justify-between gap-6 px-4 md:px-8">
         <Link href="/" className="group flex min-w-0 items-center gap-3" aria-label="天下りマップ トップページ">
           <BrandMark size={38} className="transition-transform group-hover:scale-[1.03]" />
@@ -79,6 +79,7 @@ export default function SiteHeader() {
 
         <Link
           href="/search"
+          aria-label="サイト内を検索"
           className="inline-flex min-h-11 items-center gap-2 rounded-full border border-outline-variant bg-white px-3 text-sm font-bold text-primary shadow-sm xl:hidden"
         >
           <SearchIcon size={18} />

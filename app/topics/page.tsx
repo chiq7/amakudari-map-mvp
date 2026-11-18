@@ -55,6 +55,7 @@ export default function TopicsPage() {
                 className="group flex min-h-14 items-center justify-between gap-4 bg-white/55 px-4 py-3 font-bold text-primary transition hover:bg-white"
               >
                 <span>{ministry}</span>
+                <span className="ml-auto text-xs font-semibold text-on-surface-variant">{getMinistryPath(ministry).startsWith("/ministries/") ? "省庁別一覧" : "関連法人を絞り込む"}</span>
                 <ArrowRightIcon className="text-outline transition group-hover:translate-x-1 group-hover:text-secondary" size={17} />
               </Link>
             ))}

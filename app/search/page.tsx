@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { corporationDisplayName } from "@/lib/display-text";
 import SearchContent from "./SearchContent";
 import personsData from "@/data/production/persons.json";
 import corporationsData from "@/data/production/corporations.json";
@@ -8,13 +9,13 @@ const persons = (personsData as PersonData[]).map((person) => ({
   person_slug: person.person_slug,
   氏名: person.name,
   離職時官職: `${person.fromMinistry} ${person.previousPosition}`,
-  再就職先名称: person.corporationName,
+  再就職先名称: corporationDisplayName(person.corporationName),
   再就職先地位: person.newPosition,
 }));
 
 const organizations = (corporationsData as CorporationData[]).map((corporation) => ({
   organization_slug: corporation.slug,
-  再就職先名称: corporation.name,
+  再就職先名称: corporationDisplayName(corporation.name),
   aliases: corporation.aliases ?? [],
   公表記録数: corporation.counts.publicRecords,
 }));

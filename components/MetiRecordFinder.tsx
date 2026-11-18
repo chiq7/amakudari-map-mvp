@@ -1,5 +1,6 @@
 "use client";
 
+import { formatDate } from "@/lib/display-text";
 import Link from "next/link";
 import { searchKey } from "@/lib/search-key";
 import { useState } from "react";
@@ -67,7 +68,7 @@ export default function MetiRecordFinder({ entries }: { entries: Entry[] }) {
         <ul className="divide-y divide-outline-variant border-y border-outline-variant">
           {results.map((entry) => (
             <li key={entry.id} className="grid min-w-0 gap-1 py-3 md:grid-cols-[7rem_minmax(0,1fr)_minmax(0,2fr)] md:items-start md:gap-4">
-              <time dateTime={entry.date} className="pt-2 text-sm tabular-nums text-on-surface-variant">{entry.date.replaceAll("-", "/")}</time>
+              <time dateTime={entry.date} className="pt-2 text-sm tabular-nums text-on-surface-variant">{formatDate(entry.date)}</time>
               <Link href={`/persons/${entry.personSlug}`} className="flex min-h-11 items-center break-words font-bold text-secondary underline underline-offset-4">{entry.name}</Link>
               <div className="min-w-0">
                 <Link href={`/corporations/${entry.corporationSlug}`} className="inline-flex min-h-11 items-center break-words font-bold text-primary underline underline-offset-4">{entry.corporation}</Link>

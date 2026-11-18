@@ -1,3 +1,4 @@
+import { formatDate } from "@/lib/display-text";
 import Link from "next/link";
 import InformationProvisionForm from "@/components/InformationProvisionForm";
 import { records, sources, corporations, persons, publicOfficers, meta } from "@/lib/static-content";
@@ -11,6 +12,12 @@ const usedSourceIds = new Set([
   ...publicOfficers.flatMap((officer) => officer.sourceIds),
 ]);
 const usedSources = sources.filter((source) => usedSourceIds.has(source.id) && new URL(source.url).pathname !== "/");
+const retirementDates = records.map((record) => record.retirementDate).sort();
+const startDates = records.map((record) => record.reemploymentDate).sort();
+const recordCorporations = new Set(records.map((record) => record.corporationSlug)).size;
+function dateRange(dates: string[]) {
+  return [dates[0], dates[dates.length - 1]].map((date) => date?.replace(/^(\d{4})-0?(\d{1,2})-0?(\d{1,2})$/, "$1年$2月$3日")).join("〜");
+}
 const allSources = [...new Map<string, {url: string; title: string; publisher: string}>([
   ...usedSources.map((source) => [source.url, source] as const),
   ...newsArticles.flatMap((article) => article.sources.map((source) => [source.url, source] as const)),
@@ -27,8 +34,13 @@ export default function DataPolicyPage() {
 
       <section id="coverage" className="border-t border-outline-variant pt-6">
         <h2 className="text-2xl font-extrabold text-primary">掲載している記録の範囲</h2>
-        <p className="mt-3 leading-8 text-on-surface-variant">現在の掲載は{records.length.toLocaleString()}件の再就職記録、{persons.length.toLocaleString()}人、{corporations.length.toLocaleString()}法人です。公表資料全体をそのまま収録した件数ではなく、当サイトへ取り込んだ記録を集計しています。複数回の再就職がある人物は、記録数と人物数が異なります。</p>
-        <p className="mt-3 text-sm leading-7 text-on-surface-variant">データ反映日：{meta.lastUpdated.replaceAll("-", ".")}。離職日・再就職日と元資料の対象期間は、それぞれの記録・資料の時点です。</p>
+        <p className="mt-3 leading-8 text-on-surface-variant">公表資料から当サイトに取り込んだ範囲は、{persons.length}人の再就職記録{records.length}件です。1人が複数の役職に就いた場合は、就任ごとに1件と数えます。この記録に登場する再就職先は{recordCorporations}法人です。法人一覧の{corporations.length}法人には、役員情報をもとに掲載した法人も含まれます。</p>
+        <dl className="mt-4 grid gap-2 text-sm text-on-surface-variant">
+          <div><dt className="inline font-bold">掲載記録の離職日　</dt><dd className="inline">{dateRange(retirementDates)}</dd></div>
+          <div><dt className="inline font-bold">掲載記録の再就職日　</dt><dd className="inline">{dateRange(startDates)}</dd></div>
+          <div><dt className="inline font-bold">データ反映日　</dt><dd className="inline">{formatDate(meta.lastUpdated)}</dd></div>
+        </dl>
+        <p className="mt-3 text-sm leading-7 text-on-surface-variant">両日付は収録済みの記録の最も早い日と遅い日です。各年度の対象者全体を調べる場合は、下の資料一覧から内閣人事局の年度別・届出区分別の公表表を参照できます。</p>
       </section>
 
       <section id="sources" className="border-t border-outline-variant pt-6">
@@ -70,8 +82,7 @@ export default function DataPolicyPage() {
         <h2 className="text-2xl font-extrabold text-primary">情報提供・お問い合わせ</h2>
         <p className="mt-3 text-sm text-on-surface-variant">{SITE_OPERATOR}</p>
         <a href={CONTACT_EMAIL_HREF} className="mt-3 inline-block break-all text-lg font-bold text-secondary underline underline-offset-4">{CONTACT_EMAIL}</a>
-        <p className="mt-2 text-sm leading-7 text-on-surface-variant">メールでご連絡ください。下のフォームで連絡文を作成・コピーできます。</p>
-        <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-on-surface-variant">対象ページのURLと、修正・追加したい内容を連絡文にまとめられます。この操作では送信されません。</p>
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-on-surface-variant">下のフォームで連絡文を用意し、メールアプリで内容を確認して送信してください。</p>
         <InformationProvisionForm />
       </section>
 

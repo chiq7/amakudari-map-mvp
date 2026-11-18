@@ -45,6 +45,7 @@ export default function RetirementAllowanceEstimator() {
   const [reason, setReason] = useState<"standard" | "self">("standard");
 
   const role = rolePresets.find((preset) => preset.id === roleId) ?? rolePresets[1];
+  const isExample = roleId === "2" && monthlySalary === 800_000 && years === 35 && reason === "standard";
   const rate = (reason === "standard" ? standardRates : selfInitiatedRates)[years];
   const result = useMemo(() => {
     const basicAmount = monthlySalary * rate;
@@ -152,7 +153,8 @@ export default function RetirementAllowanceEstimator() {
         <p className="mt-3 text-sm leading-6 text-white/75">選択した役職経験モデルと入力条件による試算です。個人の実際の受給額ではありません。</p>
 
         <div className="mt-7 border-y border-white/15 py-5">
-          <p className="text-xs font-bold text-white/60">退職手当のモデル合計</p>
+          <p className="text-sm font-bold text-white">{isExample ? "初期入力例の試算額" : "入力した条件での試算額"}</p>
+          <p className="mt-1 text-xs text-white/80">{role.label}・勤続{years}年・俸給月額{yen.format(monthlySalary)}</p>
           <p className="mt-2 text-4xl font-extrabold tracking-tight tabular-nums md:text-5xl">{yen.format(result.total)}</p>
           <p className="mt-2 text-xs text-white/60">基本額 + 調整額（職責区分の上位60月を仮定）</p>
         </div>

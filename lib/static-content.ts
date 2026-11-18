@@ -1,4 +1,5 @@
 import corporationsData from "@/data/production/corporations.json";
+import { corporationDisplayName } from "@/lib/display-text";
 import personsData from "@/data/production/persons.json";
 import rankingsData from "@/data/production/rankings.json";
 import recordsData from "@/data/production/records.json";
@@ -26,18 +27,21 @@ const rawPersons = personsData as PersonData[];
 export const sources = sourcesData as Source[];
 export const topics = topicsData as Topic[];
 export const rankings = rankingsData as RankingsData;
-export const records = recordsData as ReemploymentRecord[];
+export const records: ReemploymentRecord[] = recordsData.map((record) => ({
+  ...record, corporationName: corporationDisplayName(record.corporationName),
+}));
 export const meta = metaData as DataMeta;
 
 const sourcesById = new Map(sources.map((source) => [source.id, source]));
 const ministriesByCorporation = new Map<string, Set<string>>();
 const tagsByCorporation = new Map<string, Set<string>>();
 
+records.forEach((record) => {
+  const ministries = ministriesByCorporation.get(record.corporationSlug) ?? new Set<string>();
+  ministries.add(record.fromMinistry);
+  ministriesByCorporation.set(record.corporationSlug, ministries);
+});
 rawPersons.forEach((person) => {
-  const ministries = ministriesByCorporation.get(person.corporationSlug) ?? new Set<string>();
-  ministries.add(person.fromMinistry);
-  ministriesByCorporation.set(person.corporationSlug, ministries);
-
   const tags = tagsByCorporation.get(person.corporationSlug) ?? new Set<string>();
   person.tags.forEach((tag) => tags.add(tag));
   tagsByCorporation.set(person.corporationSlug, tags);
@@ -45,7 +49,7 @@ rawPersons.forEach((person) => {
 
 export const corporations: Corporation[] = rawCorporations.map((corporation) => ({
   slug: corporation.slug,
-  name: corporation.name,
+  name: corporationDisplayName(corporation.name),
   type: corporation.type,
   region:
     corporation.prefecture !== "不明"
@@ -93,7 +97,7 @@ export const persons: Person[] = rawPersons.map((person) => {
     ministry: person.fromMinistry,
     formerPosition: person.previousPosition,
     corporationSlug: person.corporationSlug,
-    corporationName: person.corporationName,
+    corporationName: corporationDisplayName(person.corporationName),
     newPosition: person.newPosition,
     retiredAt: person.retirementDate,
     reemployedAt: person.reemploymentDate,

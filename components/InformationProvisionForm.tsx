@@ -6,6 +6,7 @@ import { CONTACT_EMAIL } from "@/lib/site-contact";
 
 export default function InformationProvisionForm() {
   const [status, setStatus] = useState("");
+  const [draft, setDraft] = useState("");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -21,18 +22,18 @@ export default function InformationProvisionForm() {
       .filter(Boolean)
       .join("\n\n");
 
+    setDraft(message);
     try {
       await navigator.clipboard.writeText(message);
       trackEvent("prepare_information_provision", { category });
       setStatus(`本文をコピーしました。${CONTACT_EMAIL} 宛のメールへ貼り付けてお送りください。`);
     } catch {
-      setStatus("本文をコピーできませんでした。内容を選択してコピーしてください。");
+      setStatus("メールアプリで下書きを開くか、下の本文を選択してコピーしてください。");
     }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mx-auto mt-5 max-w-2xl space-y-3 text-left">
-      <p className="text-sm leading-relaxed text-on-surface-variant">内容を端末上で整形してコピーする連絡用フォームです。</p>
+    <form onSubmit={handleSubmit} onChange={() => { setDraft(""); setStatus(""); }} className="mx-auto mt-5 max-w-2xl space-y-3 text-left">
       <label className="block text-sm font-semibold text-on-surface-variant">
         種別
         <select name="category" className="mt-1 w-full rounded border border-outline-variant bg-surface-container-lowest px-3 py-2 text-on-surface">
@@ -50,9 +51,12 @@ export default function InformationProvisionForm() {
         <textarea name="details" required rows={5} className="mt-1 w-full rounded border border-outline-variant bg-surface-container-lowest px-3 py-2 text-on-surface" placeholder="追加・更新したい内容や、ご質問を記載してください。" />
       </label>
       <button type="submit" className="rounded bg-primary px-5 py-2 text-sm font-bold text-white hover:bg-primary/90">
-        連絡用の本文をコピーする
+        メール用の本文を作成・コピー
       </button>
       {status ? <p role="status" className="text-sm text-on-surface-variant">{status}</p> : null}
+      {draft ? <div className="grid gap-3"><label className="text-sm font-bold">作成したメール本文
+        <textarea value={draft} readOnly rows={5} className="mt-1 w-full rounded border border-outline-variant bg-white p-3 font-normal" />
+      </label><a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("天下りマップへのご連絡")}&body=${encodeURIComponent(draft)}`} className="w-fit font-bold text-secondary underline">メールアプリで下書きを開く</a></div> : null}
     </form>
   );
 }

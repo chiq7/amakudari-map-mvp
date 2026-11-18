@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
 import { searchKey } from "@/lib/search-key";
+import { expandMinistryName, ministryPages } from "@/lib/ministry-pages";
 import { ArrowRightIcon, BuildingIcon, MinistryIcon, PersonIcon, SearchIcon } from "@/components/icons";
 
 type SearchPerson = {
@@ -39,7 +40,7 @@ export default function SearchContent({ persons, organizations }: {
   }, []);
 
   const results = useMemo(() => {
-    const normalizedQuery = searchKey(query);
+    const normalizedQuery = expandMinistryName(searchKey(query));
     if (normalizedQuery.length <= 1) return { persons: [], organizations: [] };
     return {
       persons: persons
@@ -60,6 +61,7 @@ export default function SearchContent({ persons, organizations }: {
   const visibleOrganizations = results.organizations.slice(0, limit);
   const remaining = totalResults - visiblePersons.length - visibleOrganizations.length;
   const isSearching = searchKey(query).length > 1;
+  const ministry = ministryPages.find((item) => item.name === expandMinistryName(searchKey(query)));
 
   function handleSearchSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -105,11 +107,16 @@ export default function SearchContent({ persons, organizations }: {
               />
             </span>
             <button type="submit" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-secondary px-5 text-sm font-bold text-white transition hover:bg-secondary/90 disabled:cursor-not-allowed disabled:bg-outline" disabled={!isSearching}>
-              {isSearching ? `${totalResults}件を検索` : "2文字以上で検索"}
+              {isSearching ? "検索" : "2文字以上で検索"}
             </button>
           </span>
         </form>
       </section>
+
+      {ministry ? <Link href={`/ministries/${ministry.slug}`} className="mx-auto w-full max-w-4xl rounded-xl border border-secondary px-5 py-4 font-bold text-secondary hover:bg-secondary-fixed">
+        {ministry.name}の再就職先一覧を見る →
+      </Link> : null}
+      {isSearching ? <p role="status" className="mx-auto w-full max-w-4xl text-sm font-semibold text-primary">検索結果 {totalResults}件</p> : null}
 
       {!isSearching ? (
         <section className="mx-auto grid w-full max-w-4xl gap-3 sm:grid-cols-3">
