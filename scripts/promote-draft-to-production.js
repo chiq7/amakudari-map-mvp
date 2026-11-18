@@ -406,7 +406,7 @@ function buildCandidate(draft, production, additions) {
         },
         counts: {
           publicRecords: group.length,
-          nextDay: group.filter((record) => record.waitingDays === 0).length,
+          nextDay: group.filter((record) => record.waitingDays === 1).length,
           within30Days: group.filter(
             (record) => record.waitingDays >= 0 && record.waitingDays <= 30,
           ).length,

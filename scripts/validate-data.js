@@ -345,6 +345,36 @@ function validateData() {
   });
 
   const totals = rankings?.totals ?? {};
+  const nextDayByCorporation = new Map();
+  for (const record of records) {
+    const elapsedDays = (Date.parse(record.reemploymentDate) - Date.parse(record.retirementDate)) / 86400000;
+    if (elapsedDays !== record.waitingDays) {
+      errors.push(`records.json ${record.rawId}: waitingDays must match the two calendar dates.`);
+    }
+    if (elapsedDays === 1) {
+      nextDayByCorporation.set(record.corporationSlug, (nextDayByCorporation.get(record.corporationSlug) ?? 0) + 1);
+    }
+  }
+  for (const corporation of corporations) {
+    if (corporation.counts?.nextDay !== (nextDayByCorporation.get(corporation.slug) ?? 0)) {
+      errors.push(`corporations.json ${corporation.slug}: nextDay must count records starting the day after retirement.`);
+    }
+  }
+  if (totals.nextDayCorporations !== nextDayByCorporation.size) {
+    errors.push("rankings.json.totals.nextDayCorporations does not match the dated records.");
+  }
+  if (Array.isArray(rankings?.rankings?.nextDay)) {
+    const rankedNextDay = new Set();
+    for (const item of rankings.rankings.nextDay) {
+      rankedNextDay.add(item.corporationSlug);
+      if (item.value !== (nextDayByCorporation.get(item.corporationSlug) ?? 0)) {
+        errors.push(`rankings.json ${item.corporationSlug}: incorrect nextDay value.`);
+      }
+    }
+    for (const slug of nextDayByCorporation.keys()) {
+      if (!rankedNextDay.has(slug)) errors.push(`rankings.json is missing nextDay records for ${slug}.`);
+    }
+  }
   for (const field of ["publicRecords", "corporations", "nextDayCorporations", "within30DaysCorporations"]) {
     if (!isFiniteNumber(totals[field])) errors.push(`rankings.json.totals.${field} must be a number.`);
   }

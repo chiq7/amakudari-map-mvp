@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
+import { searchKey } from "@/lib/search-key";
 import { ArrowRightIcon, BuildingIcon, MinistryIcon, PersonIcon, SearchIcon } from "@/components/icons";
 
 type SearchPerson = {
@@ -15,8 +16,9 @@ type SearchPerson = {
 
 type SearchOrganization = {
   organization_slug: string;
+  aliases: string[];
   再就職先名称?: string;
-  受け入れ人数?: number;
+  公表記録数?: number;
 };
 
 export default function SearchContent({ persons, organizations }: {
@@ -24,6 +26,7 @@ export default function SearchContent({ persons, organizations }: {
   organizations: SearchOrganization[];
 }) {
   const [query, setQuery] = useState("");
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     const urlQuery = new URLSearchParams(window.location.search)
@@ -36,29 +39,32 @@ export default function SearchContent({ persons, organizations }: {
   }, []);
 
   const results = useMemo(() => {
-    if (query.trim().length <= 1) return { persons: [], organizations: [] };
-    const normalizedQuery = query.trim().toLocaleLowerCase("ja");
+    const normalizedQuery = searchKey(query);
+    if (normalizedQuery.length <= 1) return { persons: [], organizations: [] };
     return {
       persons: persons
         .filter((person) =>
           [person.氏名, person.離職時官職, person.再就職先名称, person.再就職先地位].some((value) =>
-            value?.toLocaleLowerCase("ja").includes(normalizedQuery),
+            value && searchKey(value).includes(normalizedQuery),
           ),
-        )
-        .slice(0, 50),
+        ),
       organizations: organizations
-        .filter((organization) => organization.再就職先名称?.toLocaleLowerCase("ja").includes(normalizedQuery))
-        .slice(0, 50),
+        .filter((organization) => [organization.再就職先名称, ...organization.aliases]
+          .some((name) => name && searchKey(name).includes(normalizedQuery))),
     };
   }, [query, persons, organizations]);
 
   const totalResults = results.persons.length + results.organizations.length;
-  const isSearching = query.trim().length > 1;
+  const limit = showAll ? undefined : 50;
+  const visiblePersons = results.persons.slice(0, limit);
+  const visibleOrganizations = results.organizations.slice(0, limit);
+  const remaining = totalResults - visiblePersons.length - visibleOrganizations.length;
+  const isSearching = searchKey(query).length > 1;
 
   function handleSearchSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const normalizedQuery = query.trim();
-    if (normalizedQuery.length <= 1) return;
+    if (!isSearching) return;
 
     trackEvent("site_search", {
       result_count: totalResults,
@@ -81,14 +87,18 @@ export default function SearchContent({ persons, organizations }: {
         </p>
 
         <form className="mx-auto mt-7 block max-w-3xl text-left" onSubmit={handleSearchSubmit}>
-          <span className="sr-only">検索キーワード</span>
+          <label htmlFor="record-search-query" className="sr-only">検索キーワード</label>
           <span className="flex flex-col gap-2 rounded-2xl border border-outline-variant bg-white p-2 shadow-card sm:flex-row sm:items-center">
             <span className="relative min-w-0 flex-1">
               <SearchIcon className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant" size={21} />
               <input
+                id="record-search-query"
                 type="search"
                 value={query}
-                onChange={(event) => setQuery(event.target.value)}
+                onChange={(event) => {
+                  setQuery(event.target.value);
+                  setShowAll(false);
+                }}
                 placeholder="例：氏名、国土交通省、法人名"
                 className="h-12 w-full rounded-xl border-0 bg-transparent py-3 pl-11 pr-3 text-base font-medium text-on-surface outline-none placeholder:font-normal placeholder:text-on-surface-variant focus:ring-0"
                 autoFocus
@@ -128,7 +138,7 @@ export default function SearchContent({ persons, organizations }: {
               <span className="text-sm font-bold text-on-surface-variant">{results.persons.length}件</span>
             </div>
             <div className="mt-4 grid gap-3">
-              {results.persons.map((person) => (
+              {visiblePersons.map((person) => (
                 <Link key={person.person_slug} href={`/persons/${person.person_slug}`} className="group rounded-2xl bg-white p-5 shadow-card ring-1 ring-outline-variant/70 transition hover:ring-secondary/30">
                   <div className="flex items-start justify-between gap-4">
                     <div className="min-w-0">
@@ -151,17 +161,23 @@ export default function SearchContent({ persons, organizations }: {
               <span className="text-sm font-bold text-on-surface-variant">{results.organizations.length}件</span>
             </div>
             <div className="mt-4 grid gap-3">
-              {results.organizations.map((organization) => (
+              {visibleOrganizations.map((organization) => (
                 <Link key={organization.organization_slug} href={`/corporations/${organization.organization_slug}`} className="group flex items-center justify-between gap-4 rounded-2xl bg-white p-5 shadow-card ring-1 ring-outline-variant/70 transition hover:ring-secondary/30">
                   <div className="min-w-0">
                     <h3 className="font-extrabold leading-6 text-primary">{organization.再就職先名称}</h3>
-                    <p className="mt-2 text-sm text-on-surface-variant">公表された受け入れ人数 {organization.受け入れ人数 ?? 0}人</p>
+                    <p className="mt-2 text-sm text-on-surface-variant">公表再就職記録 {organization.公表記録数 ?? 0}件</p>
                   </div>
                   <ArrowRightIcon className="shrink-0 text-outline transition group-hover:translate-x-1 group-hover:text-secondary" size={18} />
                 </Link>
               ))}
             </div>
           </section>
+          {remaining > 0 ? (
+            <button type="button" onClick={() => setShowAll(true)}
+              className="min-h-12 rounded-xl border border-secondary px-5 font-bold text-secondary hover:bg-secondary-fixed lg:col-span-2">
+              残り{remaining}件を表示
+            </button>
+          ) : null}
         </div>
       )}
     </div>

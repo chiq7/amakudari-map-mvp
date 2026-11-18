@@ -517,7 +517,7 @@ function convertRow(
     sourceUrl,
     publishedDate: recordPublishedDate,
     flags: {
-      nextDay: waitingDays === 0,
+      nextDay: waitingDays === 1,
       within30Days:
         waitingDays !== null && waitingDays >= 0 && waitingDays <= 30,
     },

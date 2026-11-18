@@ -52,7 +52,7 @@ const featuredCorporationCards = featuredCorporations.map((corporation) => {
     selectionReason:
       latestExplainerCorporationSlugs.has(corporation.slug)
         ? "最新の解説で読む法人"
-        : `公表記録が複数（${corporation.count}人）`,
+        : `公表記録が複数（${corporation.count}件）`,
   };
 });
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { searchKey } from "@/lib/search-key";
 import Link from "next/link";
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -146,9 +147,9 @@ function getActiveFilters({
   if (sort === "publicRecords") {
     filters.push({
       label: "並び順",
-      heading: "公表再就職者数の多い順で表示中",
-      description: "公表再就職者数の多い順で表示しています。",
-      value: "公表再就職者数",
+      heading: "公表再就職記録数の多い順で表示中",
+      description: "公表再就職記録数の多い順で表示しています。",
+      value: "公表再就職記録数",
     });
   }
   if (sort === "shortestAverageWaitingDays") {
@@ -200,7 +201,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
     .filter((corporation) => !tag || matchesTag(corporation, tag))
     .filter((corporation) => {
       if (!keyword) return true;
-      const normalizedKeyword = keyword.toLocaleLowerCase("ja");
+      const normalizedKeyword = searchKey(keyword);
       return [
         corporation.name,
         ...corporation.aliases,
@@ -217,7 +218,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
           officer.formerPosition,
           officer.profile,
         ]),
-      ].some((value) => value.toLocaleLowerCase("ja").includes(normalizedKeyword));
+      ].some((value) => searchKey(value).includes(normalizedKeyword));
     })
     .sort((left, right) => {
       if (sort === "publicRecords") return right.count - left.count;
@@ -316,8 +317,8 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
                 </div>
                 <dl className="mt-4 grid grid-cols-2 gap-3 border-y border-outline-variant py-3 text-sm">
                   <div>
-                    <dt className="text-xs font-semibold text-on-surface-variant">公表再就職者</dt>
-                    <dd className="mt-1 font-extrabold text-primary">{corporation.count}人</dd>
+                    <dt className="text-xs font-semibold text-on-surface-variant">公表再就職記録</dt>
+                    <dd className="mt-1 font-extrabold text-primary">{corporation.count}件</dd>
                   </div>
                   <div>
                     <dt className="text-xs font-semibold text-on-surface-variant">主な出身省庁</dt>
@@ -344,7 +345,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
             <thead className="border-b border-outline-variant bg-surface-container-low">
               <tr>
                 <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">法人名</th>
-                <th className="px-4 py-3 text-center text-sm font-semibold text-on-surface-variant">再就職者数</th>
+                <th className="px-4 py-3 text-center text-sm font-semibold text-on-surface-variant">再就職記録数</th>
                 <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">最多出身省庁</th>
                 <th className="px-4 py-3 text-center text-sm font-semibold text-on-surface-variant">平均待機日数</th>
                 <th className="px-4 py-3" />
@@ -361,7 +362,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
                       </span>
                     ) : null}
                   </td>
-                  <td className="px-4 py-4 text-center font-semibold">{corporation.count}人</td>
+                  <td className="px-4 py-4 text-center font-semibold">{corporation.count}件</td>
                   <td className="px-4 py-4 text-sm text-on-surface-variant">
                     <span
                       className={
@@ -449,9 +450,9 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
             <h3 className="text-xl font-bold text-primary">ランキングから探す</h3>
             <div className="mt-4 divide-y divide-outline-variant rounded border border-outline-variant">
               {[
-                ["公表再就職者数ランキング", "/corporations?sort=publicRecords"],
+                ["公表再就職記録数ランキング", "/corporations?sort=publicRecords"],
                 ...(totals.nextDayCorporations > 0
-                  ? [["退職翌日再就職件数ランキング", "/corporations?flag=nextDay"]]
+                  ? [["退職翌日の再就職記録がある法人", "/corporations?flag=nextDay"]]
                   : []),
                 ["30日以内再就職ランキング", "/corporations?flag=within30Days"],
                 ["平均待機日数が短い法人", "/corporations?sort=shortestAverageWaitingDays"],

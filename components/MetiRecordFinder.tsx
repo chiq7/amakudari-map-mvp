@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { searchKey } from "@/lib/search-key";
 import { useState } from "react";
 
 type Entry = {
@@ -17,10 +18,6 @@ type Entry = {
 function fiscalYear(date: string) {
   const [year, month] = date.split("-").map(Number);
   return month >= 4 ? year : year - 1;
-}
-
-function searchKey(text: string) {
-  return text.normalize("NFKC").toLowerCase().replace(/\s+/gu, "");
 }
 
 export default function MetiRecordFinder({ entries }: { entries: Entry[] }) {

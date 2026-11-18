@@ -98,7 +98,7 @@ export default function CorporationsPage() {
               <Link href={`/corporations/${corporation.slug}`} className="grid gap-2 px-1 py-4 transition hover:bg-surface-container-low sm:grid-cols-[minmax(0,1fr)_auto_auto] sm:items-center sm:gap-5">
                 <span className="font-bold text-primary">{corporation.name}</span>
                 <span className="text-sm text-on-surface-variant">主な出身省庁：{corporation.topMinistry}</span>
-                <span className="text-sm font-extrabold text-secondary">公表再就職者 {corporation.count}人 →</span>
+                <span className="text-sm font-extrabold text-secondary">公表再就職記録 {corporation.count}件 →</span>
               </Link>
             </li>
           ))}
@@ -106,6 +106,18 @@ export default function CorporationsPage() {
       </section>
 
       <CorporationsDirectoryClient corporations={directoryCorporations} totals={directoryTotals} />
+      <details className="border-y border-outline-variant py-4">
+        <summary className="cursor-pointer py-2 text-lg font-bold text-primary">掲載法人を名前から探す（{corporations.length}法人）</summary>
+        <ul className="mt-4 grid gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
+          {[...corporations].sort((left, right) => left.name.localeCompare(right.name, "ja")).map((corporation) => (
+            <li key={corporation.slug}>
+              <Link href={`/corporations/${corporation.slug}`} className="inline-flex min-h-11 items-center text-sm text-secondary underline underline-offset-4">
+                {corporation.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </details>
     </div>
   );
 }

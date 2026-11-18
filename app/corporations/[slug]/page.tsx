@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import type { Corporation, GbizInfoCollection, Person } from "@/lib/types";
+import type { Corporation, GbizInfoCollection, ReemploymentRecord } from "@/lib/types";
 import CorporationBusinessContext from "@/components/CorporationBusinessContext";
 import { Breadcrumb, DataNotice, HighlightStatCard, StatCard, TagChip } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
@@ -8,7 +8,6 @@ import {
   corporations,
   getCorporation,
   getCorporationPersonHighlights,
-  persons,
   records,
 } from "@/lib/static-content";
 
@@ -77,7 +76,7 @@ function PublicDataCollection({
   );
 }
 
-function ReemploymentRecordList({ relatedPersons }: { relatedPersons: Person[] }) {
+function ReemploymentRecordList({ entries }: { entries: ReemploymentRecord[] }) {
   return (
     <section className="border-t-4 border-primary bg-surface-container-lowest shadow-card ring-1 ring-outline-variant/70">
       <div className="flex flex-wrap items-end justify-between gap-3 border-b border-outline-variant px-5 py-5 md:px-6">
@@ -86,36 +85,36 @@ function ReemploymentRecordList({ relatedPersons }: { relatedPersons: Person[] }
           <h2 className="mt-1 text-2xl font-extrabold text-primary">公表再就職記録</h2>
         </div>
         <p className="text-sm font-bold text-on-surface-variant">
-          {relatedPersons.length === 1 ? "確認できる記録は1件です" : `${relatedPersons.length}件の記録`}
+          {entries.length === 1 ? "確認できる記録は1件です" : `${entries.length}件の記録`}
         </p>
       </div>
 
       <div className="grid gap-3 p-4 md:hidden">
-        {relatedPersons.map((person) => (
-          <article key={person.slug} className="border border-outline-variant bg-white p-4">
+        {entries.map((record) => (
+          <article key={record.rawId} className="border border-outline-variant bg-white p-4">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <p className="text-xs font-bold text-on-surface-variant">{person.ministry}</p>
+                <p className="text-xs font-bold text-on-surface-variant">{record.fromMinistry}</p>
                 <h3 className="mt-1 text-xl font-extrabold text-primary">
-                  <Link href={`/persons/${person.slug}`} className="hover:underline">{person.name}</Link>
+                  <Link href={`/persons/${record.personSlug}`} className="hover:underline">{record.name}</Link>
                 </h3>
               </div>
               <span className="shrink-0 border border-secondary/20 bg-secondary-fixed px-2 py-1 text-xs font-extrabold text-secondary">
-                待機 {person.waitDays}日
+                待機 {record.waitingDays}日
               </span>
             </div>
             <dl className="mt-4 grid gap-3 border-t border-outline-variant pt-4 text-sm">
               <div>
                 <dt className="text-xs font-bold text-on-surface-variant">離職時官職</dt>
-                <dd className="mt-1 font-semibold leading-6 text-primary">{person.formerPosition}</dd>
+                <dd className="mt-1 font-semibold leading-6 text-primary">{record.previousPosition}</dd>
               </div>
               <div>
                 <dt className="text-xs font-bold text-on-surface-variant">再就職先での地位</dt>
-                <dd className="mt-1 font-semibold leading-6 text-primary">{person.newPosition}</dd>
+                <dd className="mt-1 font-semibold leading-6 text-primary">{record.newPosition}</dd>
               </div>
               <div className="grid grid-cols-2 gap-3">
-                <div><dt className="text-xs font-bold text-on-surface-variant">離職日</dt><dd className="mt-1 font-mono">{person.retiredAt}</dd></div>
-                <div><dt className="text-xs font-bold text-on-surface-variant">再就職日</dt><dd className="mt-1 font-mono">{person.reemployedAt}</dd></div>
+                <div><dt className="text-xs font-bold text-on-surface-variant">離職日</dt><dd className="mt-1 font-mono">{record.retirementDate}</dd></div>
+                <div><dt className="text-xs font-bold text-on-surface-variant">再就職日</dt><dd className="mt-1 font-mono">{record.reemploymentDate}</dd></div>
               </div>
             </dl>
           </article>
@@ -134,13 +133,13 @@ function ReemploymentRecordList({ relatedPersons }: { relatedPersons: Person[] }
             </tr>
           </thead>
           <tbody className="divide-y divide-outline-variant">
-            {relatedPersons.map((person) => (
-              <tr key={person.slug} className="align-top hover:bg-surface-container-low">
-                <td className="px-4 py-4 font-bold"><Link href={`/persons/${person.slug}`} className="text-secondary hover:underline">{person.name}</Link></td>
-                <td className="px-4 py-4 text-sm"><strong className="block text-primary">{person.ministry}</strong><span className="mt-1 block leading-6 text-on-surface-variant">{person.formerPosition}</span></td>
-                <td className="px-4 py-4 text-sm leading-6">{person.newPosition}</td>
-                <td className="px-4 py-4 font-mono text-sm"><span className="block">{person.retiredAt}</span><span className="block text-on-surface-variant">→ {person.reemployedAt}</span></td>
-                <td className="px-4 py-4 text-center"><span className="inline-flex border border-secondary/20 bg-secondary-fixed px-2 py-1 text-sm font-bold text-secondary">{person.waitDays}日</span></td>
+            {entries.map((record) => (
+              <tr key={record.rawId} className="align-top hover:bg-surface-container-low">
+                <td className="px-4 py-4 font-bold"><Link href={`/persons/${record.personSlug}`} className="text-secondary hover:underline">{record.name}</Link></td>
+                <td className="px-4 py-4 text-sm"><strong className="block text-primary">{record.fromMinistry}</strong><span className="mt-1 block leading-6 text-on-surface-variant">{record.previousPosition}</span></td>
+                <td className="px-4 py-4 text-sm leading-6">{record.newPosition}</td>
+                <td className="px-4 py-4 font-mono text-sm"><span className="block">{record.retirementDate}</span><span className="block text-on-surface-variant">→ {record.reemploymentDate}</span></td>
+                <td className="px-4 py-4 text-center"><span className="inline-flex border border-secondary/20 bg-secondary-fixed px-2 py-1 text-sm font-bold text-secondary">{record.waitingDays}日</span></td>
               </tr>
             ))}
           </tbody>
@@ -249,7 +248,6 @@ export async function generateMetadata(
 export default async function CorporationDetailPage(props: { params: Promise<{ slug: string }> }) {
   const params = await props.params;
   const corporation = getCorporation(params.slug);
-  const relatedPersons = persons.filter((person) => person.corporationSlug === corporation.slug);
   const relatedRecords = records.filter((record) => record.corporationSlug === corporation.slug);
   const ministryCounts = relatedRecords.reduce<Map<string, number>>((counts, record) => {
     counts.set(record.fromMinistry, (counts.get(record.fromMinistry) ?? 0) + 1);
@@ -268,23 +266,27 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
             10,
         ) / 10
       : 0;
-  const nextDayCount = relatedRecords.filter((record) => record.waitingDays === 0).length;
+  const nextDayCount = relatedRecords.filter((record) => record.waitingDays === 1).length;
   const minimumWaitDays = relatedRecords.length > 0
     ? Math.min(...relatedRecords.map((record) => record.waitingDays))
     : 0;
   const waitDistribution = [
     {
-      label: "退職翌日",
+      label: "離職当日",
       value: relatedRecords.filter((record) => record.waitingDays === 0).length,
     },
     {
-      label: "7日以内",
+      label: "退職翌日",
+      value: nextDayCount,
+    },
+    {
+      label: "2〜7日",
       value: relatedRecords.filter(
-        (record) => record.waitingDays >= 1 && record.waitingDays <= 7,
+        (record) => record.waitingDays >= 2 && record.waitingDays <= 7,
       ).length,
     },
     {
-      label: "30日以内",
+      label: "8〜30日",
       value: relatedRecords.filter(
         (record) => record.waitingDays >= 8 && record.waitingDays <= 30,
       ).length,
@@ -298,11 +300,11 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
     1,
     ...waitDistribution.map((item) => item.value),
   );
-  const publicMovement = relatedPersons
+  const publicMovement = relatedRecords
     .slice(0, 2)
     .map(
-      (person) =>
-        `${person.name}氏が${person.ministry}の「${person.formerPosition}」から${person.newPosition}として再就職`,
+      (record) =>
+        `${record.name}氏が${record.fromMinistry}の「${record.previousPosition}」から${record.newPosition}として再就職`,
     )
     .join("。 ");
 
@@ -339,10 +341,10 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
 
       {relatedRecords.length > 0 ? (
         <section aria-label="法人の再就職記録サマリー" className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-          <StatCard label="公表再就職者数" value={relatedRecords.length} unit="人" />
+          <StatCard label="公表再就職記録" value={relatedRecords.length} unit="件" />
           <StatCard
             label="最多出身省庁"
-            value={topMinistry ? `${topMinistry.name}（${topMinistry.count}人）` : "該当なし"}
+            value={topMinistry ? `${topMinistry.name}（${topMinistry.count}件）` : "該当なし"}
           />
           <StatCard label="平均待機日数" value={averageWaitDays} unit="日" />
           {nextDayCount > 0 ? (
@@ -368,7 +370,7 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
         connection={publicMovement || undefined}
       />
 
-      {relatedPersons.length > 0 ? <ReemploymentRecordList relatedPersons={relatedPersons} /> : null}
+      {relatedRecords.length > 0 ? <ReemploymentRecordList entries={relatedRecords} /> : null}
 
       {(corporation.basicInfo || corporation.gbizInfo) && (
         <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
@@ -564,7 +566,7 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
                 <div key={ministry.name}>
                   <div className="mb-1 flex justify-between text-sm font-semibold">
                     <span>{ministry.name}</span>
-                    <span>{ministry.count}人</span>
+                    <span>{ministry.count}件</span>
                   </div>
                   <div className="h-2 rounded-full bg-surface-container">
                     <div

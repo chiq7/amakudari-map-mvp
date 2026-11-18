@@ -37,8 +37,16 @@ export default function RankingsPage() {
       label: "複数の公表記録",
       title: "公表記録が複数ある法人",
       description: "1件のみの法人を大量に並べず、2件以上の記録がある法人だけを比較します。",
-      unit: "人",
+      unit: "件",
       items: rankingLists.publicRecords.filter((item) => item.value > 1),
+    },
+    {
+      id: "next_day",
+      label: "退職翌日",
+      title: "退職翌日の再就職記録がある法人",
+      description: "離職した翌日に就任した記録の件数順に表示します。",
+      unit: "件",
+      items: nextDayItems,
     },
     {
       id: "within_30_days",
@@ -82,7 +90,7 @@ export default function RankingsPage() {
         <div className="border-t border-outline-variant p-4">
           <dl className="grid gap-x-8 gap-y-4 md:grid-cols-2">
             {[
-              ["公表再就職者数", "公表資料に含まれる再就職記録の件数"],
+              ["公表再就職記録数", "公表資料に含まれる再就職記録の件数"],
               ["退職翌日再就職", "公表日付から退職翌日として整理した記録の件数"],
               ["30日以内再就職", "離職日から30日以内の再就職記録の件数"],
               ["平均待機日数", "法人ごとの離職日から再就職日までの日数の平均"],

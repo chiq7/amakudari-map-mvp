@@ -15,7 +15,8 @@ const persons = (personsData as PersonData[]).map((person) => ({
 const organizations = (corporationsData as CorporationData[]).map((corporation) => ({
   organization_slug: corporation.slug,
   再就職先名称: corporation.name,
-  受け入れ人数: corporation.counts.publicRecords,
+  aliases: corporation.aliases ?? [],
+  公表記録数: corporation.counts.publicRecords,
 }));
 
 export default function SearchPage() {

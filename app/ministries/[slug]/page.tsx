@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 import { Breadcrumb } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import MetiRecordFinder from "@/components/MetiRecordFinder";
-import { corporations, persons, records } from "@/lib/static-content";
+import { corporations, records } from "@/lib/static-content";
 import { ministryPages } from "@/lib/ministry-pages";
 import { newsArticles } from "@/lib/news";
 
@@ -39,9 +39,9 @@ export default async function MinistryPage(props: PageProps) {
   const ministry = getMinistry(params.slug);
   if (!ministry) notFound();
 
-  const matchingPeople = persons.filter((person) => person.ministry === ministry.name);
-  const metiEntries = ministry.slug === "meti" ? records
-    .filter((record) => record.fromMinistry === ministry.name)
+  const ministryRecords = records.filter((record) => record.fromMinistry === ministry.name);
+  const personCount = new Set(ministryRecords.map((record) => record.personSlug)).size;
+  const metiEntries = ministry.slug === "meti" ? [...ministryRecords]
     .sort((left, right) => right.reemploymentDate.localeCompare(left.reemploymentDate) || left.name.localeCompare(right.name, "ja"))
     .map((record) => ({
       id: record.rawId,
@@ -53,24 +53,28 @@ export default async function MinistryPage(props: PageProps) {
       date: record.reemploymentDate,
       position: record.newPosition,
     })) : null;
-  const peopleByCorporation = new Map<string, typeof matchingPeople>();
-  matchingPeople.forEach((person) => {
-    const people = peopleByCorporation.get(person.corporationSlug) ?? [];
-    people.push(person);
-    peopleByCorporation.set(person.corporationSlug, people);
+  const recordsByCorporation = new Map<string, typeof ministryRecords>();
+  ministryRecords.forEach((record) => {
+    const group = recordsByCorporation.get(record.corporationSlug) ?? [];
+    group.push(record);
+    recordsByCorporation.set(record.corporationSlug, group);
   });
-  const matchingCorporations = Array.from(peopleByCorporation.entries())
-    .flatMap(([corporationSlug, people]) => {
+  const matchingCorporations = Array.from(recordsByCorporation.entries())
+    .flatMap(([corporationSlug, group]) => {
       const corporation = corporations.find((candidate) => candidate.slug === corporationSlug);
-      return corporation ? [{ corporation, people }] : [];
+      if (!corporation) return [];
+      const people = Array.from(new Map(group.map((record) => [record.personSlug, record.name])),
+        ([slug, name]) => ({ slug, name }));
+      const days = Math.round(group.reduce((sum, record) => sum + record.waitingDays, 0) / group.length);
+      return [{ corporation, people, count: group.length, waitingLabel: `${group.length > 1 ? "平均" : ""}${days}日` }];
     })
-    .sort((left, right) => right.people.length - left.people.length);
-  const totalNextDay = matchingPeople.filter((person) => person.waitDays === 0).length;
-  const totalWithin30Days = matchingPeople.filter((person) => person.waitDays <= 30).length;
+    .sort((left, right) => right.count - left.count || left.corporation.name.localeCompare(right.corporation.name, "ja"));
+  const totalNextDay = ministryRecords.filter((record) => record.waitingDays === 1).length;
+  const totalWithin30Days = ministryRecords.filter((record) => record.waitingDays <= 30).length;
   const corporationTypeCounts = Array.from(
-    matchingCorporations.reduce((counts, { corporation, people }) => {
+    matchingCorporations.reduce((counts, { corporation, count }) => {
       const type = corporation.type?.trim() || "未分類";
-      counts.set(type, (counts.get(type) ?? 0) + people.length);
+      counts.set(type, (counts.get(type) ?? 0) + count);
       return counts;
     }, new Map<string, number>()),
   )
@@ -94,7 +98,7 @@ export default async function MinistryPage(props: PageProps) {
       <Breadcrumb
         items={[
           { label: "TOP", href: "/" },
-          { label: "省庁別一覧", href: "/corporations" },
+          { label: "省庁別一覧", href: "/topics#ministry-list-title" },
           { label: ministry.name },
         ]}
       />
@@ -106,7 +110,7 @@ export default async function MinistryPage(props: PageProps) {
           </h1>
           <p className="mt-3 text-base leading-relaxed text-on-surface-variant">
             政府公表資料に記載された{ministry.name}出身者の再就職情報を、再就職先法人ごとに整理しています。
-            現在の公開データでは{matchingPeople.length}人・{matchingCorporations.length}法人の記録を確認できます。
+            {personCount}人が{matchingCorporations.length}法人に再就職した計{ministryRecords.length}件の記録を掲載しています。
           </p>
         </div>
         <ShareButton title={`${ministry.name}の天下り先一覧 | 天下りマップ`} />
@@ -114,10 +118,11 @@ export default async function MinistryPage(props: PageProps) {
 
       {metiEntries ? <MetiRecordFinder entries={metiEntries} /> : null}
 
-      <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
+      <section className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {[
-          ["公表再就職者数", `${matchingPeople.length}人`],
+          ["公表再就職者数", `${personCount}人`],
           ["関連する再就職先法人", `${matchingCorporations.length}法人`],
+          ["退職翌日の再就職記録", `${totalNextDay}件`],
           ["30日以内の再就職記録", `${totalWithin30Days}件`],
         ].map(([label, value]) => (
           <div key={label} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5 shadow-sm">
@@ -126,12 +131,6 @@ export default async function MinistryPage(props: PageProps) {
           </div>
         ))}
       </section>
-
-      {totalNextDay === 0 ? (
-        <p className="border-l-4 border-outline bg-surface-container-low px-5 py-4 text-sm leading-7 text-on-surface-variant">
-          退職翌日の再就職記録は、現在の公開データでは0件です。
-        </p>
-      ) : null}
 
       {corporationTypeCounts.length > 0 ? (
         <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
@@ -159,7 +158,7 @@ export default async function MinistryPage(props: PageProps) {
           <div>
             <h2 className="text-2xl font-bold text-primary">再就職先法人一覧</h2>
             <p className="mt-1 text-sm text-on-surface-variant">
-              公表再就職者数の多い順に表示しています。法人詳細では業務内容と人物の移動を確認できます。
+              公表記録の多い順に表示しています。法人名から就任時の役職と業務内容を確認できます。
             </p>
           </div>
           <Link href={`/corporations?ministry=${encodeURIComponent(ministry.name)}`} className="text-sm font-bold text-secondary hover:underline">
@@ -168,10 +167,7 @@ export default async function MinistryPage(props: PageProps) {
         </div>
 
         <div className="mt-4 grid gap-3 md:hidden">
-          {matchingCorporations.map(({ corporation, people }) => {
-            const waitingLabel = people.length === 1
-              ? `${people[0].waitDays}日`
-              : `平均${Math.round(people.reduce((sum, person) => sum + person.waitDays, 0) / people.length)}日`;
+          {matchingCorporations.map(({ corporation, people, waitingLabel }) => {
             return (
               <article key={corporation.slug} className="border border-outline-variant bg-surface-container-lowest p-5">
                 <h3 className="font-extrabold leading-6 text-primary">{corporation.name}</h3>
@@ -211,7 +207,7 @@ export default async function MinistryPage(props: PageProps) {
               </tr>
             </thead>
             <tbody className="divide-y divide-outline-variant">
-              {matchingCorporations.map(({ corporation, people }) => (
+              {matchingCorporations.map(({ corporation, people, waitingLabel }) => (
                 <tr key={corporation.slug} className="hover:bg-surface-container-low">
                   <td className="px-4 py-4 font-bold text-primary">{corporation.name}</td>
                   <td className="px-4 py-4">
@@ -226,9 +222,7 @@ export default async function MinistryPage(props: PageProps) {
                     </ul>
                   </td>
                   <td className="px-4 py-4 text-center text-sm font-semibold text-primary">
-                    {people.length === 1
-                      ? `${people[0].waitDays}日`
-                      : `平均${Math.round(people.reduce((sum, person) => sum + person.waitDays, 0) / people.length)}日`}
+                    {waitingLabel}
                   </td>
                   <td className="px-4 py-4 text-right">
                     <Link href={`/corporations/${corporation.slug}`} className="text-sm font-bold text-secondary hover:underline">
