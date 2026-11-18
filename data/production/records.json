@@ -4174,5 +4174,21 @@
     "waitingDays": 121,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "cd1180ee61155e91840b0dd45cb6d17732c38cdc036031e40d825ad5461f48be",
+    "dedupeKey": "08fa316e706d3df79e0def2589ad4a395dd5a887b85fddd0e619f332a27c87b1",
+    "personSlug": "person-8c1fbc66ebe019c1",
+    "name": "飯利 雄彦",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁長官官房政策立案総括審議官 兼 公文書監理官",
+    "corporationSlug": "corporation-28e23bd92ebb778b",
+    "corporationName": "第一生命保険株式会社",
+    "newPosition": "顧問",
+    "retirementDate": "2024-11-05",
+    "reemploymentDate": "2025-03-01",
+    "waitingDays": 116,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
