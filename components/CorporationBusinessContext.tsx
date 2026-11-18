@@ -29,13 +29,14 @@ export default function CorporationBusinessContext({
     editorialContext?.business.summary || corporation.gbizInfo?.businessSummary || corporation.description;
   const publicSubsidyTotal = corporation.gbizInfo?.subsidies?.totalAmount;
   const hasBusinessSummary = Boolean(businessSummary?.trim());
+  const hasBusinessData = Boolean(hasBusinessSummary || officialWebsite || corporation.gbizInfo?.sourceUrl || corporation.basicInfo);
   const showSidePanel = recordCount !== undefined || Boolean(connection);
+  if (!hasBusinessData && recordCount === undefined) return null;
 
   return (
     <section className="overflow-hidden border border-outline-variant border-t-4 border-t-accent bg-surface-container-lowest">
-      <div className={showSidePanel ? "grid md:grid-cols-[1.25fr_0.75fr]" : "grid"}>
-        <div className="p-5 md:p-7">
-          <p className="text-xs font-extrabold tracking-[0.08em] text-accent">会社の仕事を先に理解する</p>
+      <div className={showSidePanel && hasBusinessData ? "grid md:grid-cols-[1.25fr_0.75fr]" : "grid"}>
+        {hasBusinessData ? <div className="p-5 md:p-7">
           {hasBusinessSummary ? (
             <>
               <h2 className="mt-2 text-2xl font-extrabold text-primary">この法人は何をしている？</h2>
@@ -55,7 +56,6 @@ export default function CorporationBusinessContext({
                 {corporation.basicInfo
                   ? `${corporation.basicInfo.officialName}（法人番号 ${corporation.basicInfo.corporateNumber}）として登録されていることを確認できます。`
                   : "法人名と再就職記録は公表資料で確認できます。"}
-                業務内容は、法人公式または公的データで確認できた範囲だけを追加します。
               </p>
             </>
           )}
@@ -99,7 +99,7 @@ export default function CorporationBusinessContext({
             </a>
             ) : null}
           </div>
-        </div>
+        </div> : null}
 
         {showSidePanel ? <aside className="border-t border-outline-variant bg-surface-container-low p-5 md:border-l md:border-t-0 md:p-7">
           <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">

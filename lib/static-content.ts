@@ -24,7 +24,13 @@ import metaData from "@/data/production/meta.json";
 const rawCorporations = corporationsData as CorporationData[];
 const rawPersons = personsData as PersonData[];
 
-export const sources = sourcesData as Source[];
+const officialSourceFiles: Record<string, string> = {
+  "cabinet-office-r06-2-20250926": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou2_20250926.xlsx",
+  "cabinet-office-r06-3-1-20250926": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou3-1_20250926.xlsx",
+};
+export const sources: Source[] = sourcesData.map((source) => ({
+  ...source, url: officialSourceFiles[source.id] ?? source.url,
+}));
 export const topics = topicsData as Topic[];
 export const rankings = rankingsData as RankingsData;
 export const records: ReemploymentRecord[] = recordsData.map((record) => ({

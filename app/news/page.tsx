@@ -25,7 +25,7 @@ export default function NewsIndexPage() {
       <section aria-labelledby="article-list-title">
         <div className="mb-4 flex items-end justify-between gap-4">
           <h2 id="article-list-title" className="text-2xl font-extrabold text-primary">解説記事</h2>
-          <p className="text-sm font-bold text-on-surface-variant">{newsArticles.length}件</p>
+          <p className="text-sm font-bold text-on-surface-variant">最終更新順・{newsArticles.length}件</p>
         </div>
         <div className="divide-y divide-outline-variant border-y border-outline-variant">
         {newsArticles.map((article) => (
@@ -33,9 +33,8 @@ export default function NewsIndexPage() {
             <Link href={`/news/${article.slug}`} className="group grid gap-5 px-1 py-6 transition hover:bg-white md:grid-cols-[150px_1fr_auto] md:items-start md:px-5">
               <div className="flex flex-wrap items-center gap-3 text-sm text-on-surface-variant md:block">
                 <TagChip>{article.kind}</TagChip>
-                <time className="md:mt-3 md:block" dateTime={article.dateModified}>
-                  {article.dateModified !== article.datePublished ? "更新 " : ""}{formatDate(article.dateModified)}
-                </time>
+                <time className="md:mt-3 md:block" dateTime={article.datePublished}>公開日：{formatDate(article.datePublished)}</time>
+                {article.dateModified !== article.datePublished ? <time className="md:mt-1 md:block" dateTime={article.dateModified}>更新日：{formatDate(article.dateModified)}</time> : null}
               </div>
               <div>
                 <h3 className="text-balance text-xl font-extrabold leading-8 text-primary transition group-hover:text-secondary md:text-2xl">

@@ -71,11 +71,11 @@ const editorialDates: Record<string, string> = {
     "/persons": "2026-11-19",
     "/rankings": "2026-11-19",
     "/retirement-estimator": "2026-11-19",
-    "/about": "2026-10-13",
+    "/about": "2026-11-19",
     "/faq": "2026-11-19",
-    "/privacy": "2026-10-13",
+    "/privacy": "2026-11-19",
     "/terms": "2026-10-13",
-    "/link-to-us": "2026-10-13",
+    "/link-to-us": "2026-11-19",
 };
 
 function lastModifiedFor(pathname: string) {

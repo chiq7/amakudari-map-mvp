@@ -5,6 +5,7 @@ import type { Corporation, GbizInfoCollection, ReemploymentRecord } from "@/lib/
 import CorporationBusinessContext from "@/components/CorporationBusinessContext";
 import { Breadcrumb, DataNotice, HighlightStatCard, StatCard, TagChip } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
+import { newsArticles } from "@/lib/news";
 import {
   corporations,
   getCorporation,
@@ -242,7 +243,7 @@ export async function generateMetadata(
   const title =
     highlights.kind === "public-officer"
       ? `${corporation.name}の公表役員情報・行政出身者`
-      : `${corporation.name}の公表再就職情報`;
+      : `${corporation.name}の再就職受入記録${corporation.count}件｜主な出身省庁は${corporation.topMinistry}`;
   return pageMetadata(title, description, `/corporations/${params.slug}`);
 }
 
@@ -250,6 +251,7 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
   const params = await props.params;
   const corporation = getCorporation(params.slug);
   const relatedRecords = records.filter((record) => record.corporationSlug === corporation.slug);
+  const relatedArticles = newsArticles.filter((article) => article.relatedLinks.some((link) => link.href === `/corporations/${corporation.slug}`));
   const ministryCounts = relatedRecords.reduce<Map<string, number>>((counts, record) => {
     counts.set(record.fromMinistry, (counts.get(record.fromMinistry) ?? 0) + 1);
     return counts;
@@ -314,7 +316,7 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
       <Breadcrumb
         items={[
           { label: "TOP", href: "/" },
-          { label: "法人検索", href: "/corporations" },
+          { label: "法人一覧", href: "/corporations" },
           { label: corporation.name },
         ]}
       />
@@ -372,6 +374,9 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
       />
 
       {relatedRecords.length > 0 ? <ReemploymentRecordList entries={relatedRecords} /> : null}
+      {relatedArticles.length ? <section aria-label="この法人に関する解説"><h2 className="text-xl font-bold text-primary">この法人に関する解説</h2>
+        <ul className="mt-2 space-y-2">{relatedArticles.map((article) => <li key={article.slug}><Link href={`/news/${article.slug}`} className="font-semibold text-secondary underline">{article.title}</Link></li>)}</ul>
+      </section> : null}
 
       {(corporation.basicInfo || corporation.gbizInfo) && (
         <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">

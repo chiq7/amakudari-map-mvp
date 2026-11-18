@@ -1,13 +1,14 @@
 import { formatDate } from "@/lib/display-text";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
+import { canonicalUrl, pageMetadata } from "@/lib/seo";
+import { getMinistryPath } from "@/lib/ministry-pages";
 import { Breadcrumb, TagChip } from "@/components/ui";
 import CorporationBusinessContext from "@/components/CorporationBusinessContext";
 import OnizukaReemployment, { onizukaSlug } from "@/components/OnizukaReemployment";
 import ShareButton from "@/components/ShareButton";
 import { getCorporationEditorialContext } from "@/lib/corporation-contexts";
-import { getCorporation, getPerson, persons } from "@/lib/static-content";
+import { getCorporation, getPerson, persons, records, sources } from "@/lib/static-content";
 
 export function generateStaticParams() {
   return persons.map((person) => ({ person_slug: person.slug }));
@@ -27,8 +28,10 @@ export async function generateMetadata(
     );
   }
   const person = getPerson(params.person_slug);
-  const title = `${person.name}氏｜${person.ministry}から${person.corporationName}への再就職先`;
-  const description = `${person.name}氏の再就職先を確認できます。${person.ministry}の「${person.formerPosition}」から、${person.corporationName}の「${person.newPosition}」へ移った記録と法人の業務を整理しています。`;
+  const title = `${person.name.replace(/\s/g, "")}氏の公表再就職記録｜${person.ministry}から${person.corporationName}へ`;
+  const description = person.newPosition === "-"
+    ? `${person.name}氏の離職時の官職は「${person.formerPosition}」。${formatDate(person.reemployedAt)}の公表記録にある再就職先は「${person.corporationName}」で、役職欄は「-」です。`
+    : `${person.name}氏の離職時の官職は「${person.formerPosition}」。${formatDate(person.reemployedAt)}に${person.corporationName}の「${person.newPosition}」へ就任した公表記録と、元資料を確認できます。`;
   return pageMetadata(title, description, `/persons/${params.person_slug}`);
 }
 
@@ -36,12 +39,21 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
   const params = await props.params;
   if (params.person_slug === onizukaSlug) return <OnizukaReemployment />;
   const person = getPerson(params.person_slug);
+  const recordSources = [...new Set(records.filter((record) => record.personSlug === person.slug).map((record) => record.sourceId))]
+    .flatMap((id) => sources.filter((source) => source.id === id));
+  const pageUrl = canonicalUrl(`/persons/${person.slug}`);
+  const appointment = person.newPosition === "-" ? `再就職先は「${person.corporationName}」（役職欄は「-」）` : `再就職先は${person.corporationName}、就任時の役職は「${person.newPosition}」`;
+  const sameNameProfiles = persons.filter((other) => other.slug !== person.slug && other.name === person.name);
+  const personData = { "@context": "https://schema.org", "@type": "WebPage", url: pageUrl,
+    mainEntity: { "@type": "Person", name: person.name, url: pageUrl, description: `${formatDate(person.reemployedAt)}の公表記録。 ${appointment}。` },
+    citation: recordSources.map((source) => source.url) };
   const corporation = getCorporation(person.corporationSlug);
   const corporationContext = getCorporationEditorialContext(person.corporationSlug);
   const corporationWebsite =
     corporationContext?.business.officialWebsite || corporation.gbizInfo?.officialWebsite;
   return (
     <div className="flex flex-col gap-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personData).replace(/</g, "\\u003c") }} />
       <Breadcrumb
         items={[
           { label: "TOP", href: "/" },
@@ -55,8 +67,11 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
           <div>
             <h1 className="text-3xl font-bold text-primary md:text-4xl">{person.name} 氏の再就職先・公表記録</h1>
             <p className="mt-2 text-base leading-7 text-on-surface-variant">
-              {person.ministry}の「{person.formerPosition}」から、{person.corporationName}の「{person.newPosition}」へ移った公表記録です。
+              離職時の官職は「{person.formerPosition}」。公表表に記載された{appointment}です。
             </p>
+            <h2 className="mt-4 text-sm font-bold">再就職記録の根拠資料</h2>
+            <div className="flex flex-wrap gap-x-4 text-sm">{recordSources.map((source) => <a key={source.id} href={source.url} data-analytics-event="source_link" data-source-type="government" className="inline-flex min-h-11 items-center font-semibold text-secondary underline">{source.publisher}の原資料：{source.title}{source.url.endsWith(".xlsx") ? "（Excel）" : ""}</a>)}</div>
+            {sameNameProfiles.length ? <p className="mt-2 text-sm leading-7">同じ表記の氏名で別の官職・就職先を記載した記録もあります。同一人物かは確定していません。{sameNameProfiles.map((other) => <Link key={other.slug} href={`/persons/${other.slug}`} className="ml-2 font-semibold text-secondary underline">{other.corporationName}への記録</Link>)}</p> : null}
           </div>
           <ShareButton title={`${person.name}氏の公表再就職情報 | 天下りマップ`} />
         </div>
@@ -133,13 +148,13 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
           {corporation.region && corporation.region !== "不明" ? (
             <TagChip href={`/corporations?region=${encodeURIComponent(corporation.region)}`}>{corporation.region}</TagChip>
           ) : null}
-          {person.waitDays === 0 ? (
+          {person.waitDays === 1 ? (
             <TagChip href="/corporations?flag=nextDay" active>
-              離職日と再就職日が同日
+              退職翌日の再就職
             </TagChip>
           ) : null}
-          {person.tags.filter((tag) => tag !== person.ministry).slice(0, 3).map((tag) => (
-            <TagChip key={tag} href={`/corporations?tag=${encodeURIComponent(tag)}`}>{tag}</TagChip>
+          {person.tags.filter((tag) => tag !== person.ministry && tag !== "再就職情報").slice(0, 3).map((tag) => (
+            <TagChip key={tag} href={tag === "30日以内" ? "/corporations?flag=within30Days" : `/corporations?tag=${encodeURIComponent(tag)}`}>{tag === "30日以内" ? "30日以内の記録がある法人" : tag}</TagChip>
           ))}
         </div>
       </section>
@@ -150,13 +165,13 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
             <Link href={`/corporations/${person.corporationSlug}`} className="font-semibold text-secondary hover:underline">
               法人情報を詳しく見る
             </Link>
-            <Link href={`/corporations?ministry=${encodeURIComponent(person.ministry)}`} className="font-semibold text-secondary hover:underline">
+            <Link href={getMinistryPath(person.ministry)} className="font-semibold text-secondary hover:underline">
               {person.ministry}の関連記録を見る
             </Link>
             <Link href="/rankings" className="font-semibold text-secondary hover:underline">
               ランキングを見る
             </Link>
-            <Link href={`/corporations?ministry=${encodeURIComponent(person.ministry)}&sort=waitDays`} className="font-semibold text-secondary hover:underline">
+            <Link href={`/corporations?ministry=${encodeURIComponent(person.ministry)}&sort=shortestAverageWaitingDays`} className="font-semibold text-secondary hover:underline">
               類似の再就職事例を見る
             </Link>
             <Link href="/data-policy" className="font-semibold text-secondary hover:underline">

@@ -40,6 +40,7 @@ const yen = new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY",
 
 export default function RetirementAllowanceEstimator() {
   const [roleId, setRoleId] = useState("2");
+  const [showAmount, setShowAmount] = useState(false);
   const [monthlySalary, setMonthlySalary] = useState(800_000);
   const [years, setYears] = useState(35);
   const [reason, setReason] = useState<"standard" | "self">("standard");
@@ -61,7 +62,7 @@ export default function RetirementAllowanceEstimator() {
 
   return (
     <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(360px,1.05fr)]">
-      <section aria-labelledby="estimator-input-title" className="border border-outline-variant bg-surface-container-lowest p-5 shadow-card md:p-7">
+      <section aria-labelledby="estimator-input-title" onChangeCapture={() => setShowAmount(true)} className="border border-outline-variant bg-surface-container-lowest p-5 shadow-card md:p-7">
         <div className="flex items-start justify-between gap-4 border-b border-outline-variant pb-5">
           <div>
             <p className="text-xs font-extrabold tracking-[0.14em] text-accent">MODEL INPUT</p>
@@ -152,7 +153,7 @@ export default function RetirementAllowanceEstimator() {
         <h2 className="mt-2 text-2xl font-extrabold">制度上の概算</h2>
         <p className="mt-3 text-sm leading-6 text-white/75">選択した役職経験モデルと入力条件による試算です。個人の実際の受給額ではありません。</p>
 
-        <div className="mt-7 border-y border-white/15 py-5">
+        {showAmount ? <><div className="mt-7 border-y border-white/15 py-5">
           <p className="text-sm font-bold text-white">{isExample ? "初期入力例の試算額" : "入力した条件での試算額"}</p>
           <p className="mt-1 text-xs text-white/80">{role.label}・勤続{years}年・俸給月額{yen.format(monthlySalary)}</p>
           <p className="mt-2 text-4xl font-extrabold tracking-tight tabular-nums md:text-5xl">{yen.format(result.total)}</p>
@@ -172,7 +173,10 @@ export default function RetirementAllowanceEstimator() {
           <div className="flex items-baseline justify-between gap-4">
             <dt className="text-white/65">役職モデル</dt><dd className="text-right font-extrabold">{role.label}</dd>
           </div>
-        </dl>
+        </dl></> : <div className="mt-5 space-y-3 border-y border-white/20 py-5">
+          <p>役職・勤続年数・俸給の条件を変更すると試算額が表示されます。</p>
+          <button type="button" onClick={() => setShowAmount(true)} className="min-h-11 rounded bg-white px-4 font-bold text-primary">初期入力例で試算する</button>
+        </div>}
 
         <div className="mt-6 border-l-2 border-accent bg-white/5 p-4 text-xs leading-6 text-white/75">
           <strong className="block text-white">この数字で分からないこと</strong>

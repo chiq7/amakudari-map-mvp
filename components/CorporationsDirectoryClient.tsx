@@ -1,23 +1,13 @@
 "use client";
 
-import { searchKey } from "@/lib/search-key";
 import Link from "next/link";
 import { Suspense, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { getMinistryPath } from "@/lib/ministry-pages";
+import { getMinistryPath, ministryPages } from "@/lib/ministry-pages";
 import { SearchBox, TagChip } from "@/components/ui";
 import { ArrowRightIcon, BuildingIcon } from "@/components/icons";
-import type { Corporation } from "@/lib/types";
 
-export type DirectoryCorporation = Pick<Corporation,
-  "slug" | "name" | "type" | "region" | "count" | "topMinistry" | "nextDay" |
-  "within30Days" | "averageWaitDays" | "ministries" | "topics" | "aliases" |
-  "relatedTags" | "description"
-> & {
-  publicOfficers: Pick<Corporation["publicOfficers"][number],
-    "name" | "role" | "formerOrganization" | "formerPosition" | "profile"
-  >[];
-};
+import { getDirectoryPage, type DirectoryCorporation } from "@/lib/directory-filters";
 
 type DirectoryProps = {
   corporations: DirectoryCorporation[];
@@ -28,212 +18,12 @@ type DirectoryProps = {
   };
 };
 
-const ministryLinks = ["警察庁", "国土交通省", "経済産業省", "厚生労働省", "防衛省"];
+const ministryLinks = ministryPages.map((ministry) => ministry.name);
 const typeLinks = ["独立行政法人", "公益財団法人", "一般財団法人", "公益社団法人", "株式会社"];
-const areaPrefectures: Record<string, string[]> = {
-  関東地方: ["茨城県", "栃木県", "群馬県", "埼玉県", "千葉県", "東京都", "神奈川県"],
-  近畿地方: ["三重県", "滋賀県", "京都府", "大阪府", "兵庫県", "奈良県", "和歌山県"],
-};
-
-type ActiveFilter = {
-  label: string;
-  heading: string;
-  description: string;
-  value: string;
-};
-
-function matchesType(corporation: DirectoryCorporation, type: string) {
-  return corporation.type === type || corporation.name.includes(type);
-}
-
-function matchesArea(corporation: DirectoryCorporation, area: string) {
-  const prefectures = areaPrefectures[area];
-  return prefectures ? prefectures.includes(corporation.region) : corporation.region === area;
-}
-
-function matchesTag(corporation: DirectoryCorporation, tag: string) {
-  const normalizedTag = tag.toLocaleLowerCase("ja");
-  return [
-    corporation.name,
-    ...corporation.aliases,
-    corporation.description,
-    ...corporation.topics,
-    ...corporation.relatedTags,
-    ...corporation.publicOfficers.flatMap((officer) => [
-      officer.name,
-      officer.role,
-      officer.formerOrganization,
-      officer.formerPosition,
-      officer.profile,
-    ]),
-  ].some((value) => value.toLocaleLowerCase("ja").includes(normalizedTag));
-}
-
-function getActiveFilters({
-  ministry,
-  type,
-  area,
-  flag,
-  tag,
-  keyword,
-  sort,
-}: {
-  ministry: string;
-  type: string;
-  area: string;
-  flag: string;
-  tag: string;
-  keyword: string;
-  sort: string;
-}) {
-  const filters: ActiveFilter[] = [];
-
-  if (ministry) {
-    filters.push({
-      label: "省庁",
-      heading: `${ministry}に関連する法人を表示中`,
-      description: `再就職記録や公表された役員略歴に「${ministry}」が登場する法人を表示しています。`,
-      value: ministry,
-    });
-  }
-  if (type) {
-    filters.push({
-      label: "法人種別",
-      heading: `${type}の法人を表示中`,
-      description: `法人種別が『${type}』の法人を表示しています。`,
-      value: type,
-    });
-  }
-  if (area) {
-    filters.push({
-      label: "地域",
-      heading: `${area}の法人を表示中`,
-      description: `所在地が『${area}』の法人を表示しています。`,
-      value: area,
-    });
-  }
-  if (flag === "nextDay") {
-    filters.push({
-      label: "指標",
-      heading: "退職翌日再就職がある法人を表示中",
-      description: "退職翌日再就職の記録がある法人を表示しています。",
-      value: "退職翌日再就職",
-    });
-  }
-  if (flag === "within30Days") {
-    filters.push({
-      label: "指標",
-      heading: "30日以内再就職がある法人を表示中",
-      description: "30日以内再就職の記録がある法人を表示しています。",
-      value: "30日以内再就職",
-    });
-  }
-  if (tag) {
-    filters.push({
-      label: "タグ",
-      heading: `「${tag}」に関連する法人を表示中`,
-      description: `「${tag}」に関連する法人を表示しています。`,
-      value: tag,
-    });
-  }
-  if (keyword) {
-    filters.push({
-      label: "検索語",
-      heading: `「${keyword}」の検索結果を表示中`,
-      description: `「${keyword}」を含む法人を表示しています。`,
-      value: keyword,
-    });
-  }
-  if (sort === "publicRecords") {
-    filters.push({
-      label: "並び順",
-      heading: "公表再就職記録数の多い順で表示中",
-      description: "公表再就職記録数の多い順で表示しています。",
-      value: "公表再就職記録数",
-    });
-  }
-  if (sort === "shortestAverageWaitingDays") {
-    filters.push({
-      label: "並び順",
-      heading: "平均待機日数が短い順で表示中",
-      description: "平均待機日数が短い順で表示しています。",
-      value: "平均待機日数",
-    });
-  }
-
-  return filters;
-}
 
 function CorporationsContent({ corporations, totals }: DirectoryProps) {
   const searchParams = useSearchParams();
-  const requestedShowAll = searchParams.get("show") === "all";
-  const ministry = searchParams.get("ministry")?.trim() ?? "";
-  const type = searchParams.get("type")?.trim() ?? "";
-  const area =
-    searchParams.get("area")?.trim() ??
-    searchParams.get("region")?.trim() ??
-    "";
-  const flag =
-    searchParams.get("flag")?.trim() ??
-    (searchParams.get("nextDay") === "true"
-      ? "nextDay"
-      : searchParams.get("within30Days") === "true"
-        ? "within30Days"
-        : "");
-  const sort = searchParams.get("sort")?.trim() ?? "";
-  const tag =
-    searchParams.get("tag")?.trim() ??
-    searchParams.get("topic")?.trim() ??
-    searchParams.get("industry")?.trim() ??
-    "";
-  const keyword = searchParams.get("keyword")?.trim() ?? "";
-  const activeFilters = getActiveFilters({ ministry, type, area, flag, tag, keyword, sort });
-  const primaryFilter = activeFilters[0];
-
-  const filteredCorporations = corporations
-    .filter((corporation) => !ministry || corporation.ministries.includes(ministry))
-    .filter((corporation) => !type || matchesType(corporation, type))
-    .filter((corporation) => !area || matchesArea(corporation, area))
-    .filter((corporation) => flag !== "nextDay" || corporation.nextDay > 0)
-    .filter((corporation) => flag !== "within30Days" || corporation.within30Days > 0)
-    .filter((corporation) => !tag || matchesTag(corporation, tag))
-    .filter((corporation) => {
-      if (!keyword) return true;
-      const normalizedKeyword = searchKey(keyword);
-      return [
-        corporation.name,
-        ...corporation.aliases,
-        corporation.type,
-        corporation.region,
-        corporation.description,
-        ...corporation.ministries,
-        ...corporation.topics,
-        ...corporation.relatedTags,
-        ...corporation.publicOfficers.flatMap((officer) => [
-          officer.name,
-          officer.role,
-          officer.formerOrganization,
-          officer.formerPosition,
-          officer.profile,
-        ]),
-      ].some((value) => searchKey(value).includes(normalizedKeyword));
-    })
-    .sort((left, right) => {
-      if (sort === "publicRecords") return right.count - left.count;
-      if (sort === "shortestAverageWaitingDays") {
-        return left.averageWaitDays - right.averageWaitDays;
-      }
-      return 0;
-    });
-
-  const isFiltered = activeFilters.length > 0;
-  const pageSize = 20;
-  const pageCount = Math.max(1, Math.ceil(filteredCorporations.length / pageSize));
-  const requestedPage = Number(searchParams.get("page"));
-  const page = Number.isInteger(requestedPage) ? Math.min(pageCount, Math.max(1, requestedPage)) : 1;
-  const first = (page - 1) * pageSize;
-  const visibleCorporations = filteredCorporations.slice(first, first + pageSize);
-  const renderDirectory = isFiltered || requestedShowAll;
+  const { ministry, type, flag, activeFilters, primaryFilter, filteredCorporations, isFiltered, pageCount, page, first, visibleCorporations, renderDirectory } = getDirectoryPage(corporations, searchParams);
   function pageHref(destination: number) {
     const params = new URLSearchParams(searchParams.toString());
     params.set("page", String(destination));
@@ -252,7 +42,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
         <h2 className="font-bold text-primary">法人一覧を検索・絞り込み</h2>
         <SearchBox action="/corporations" />
         <div className="flex flex-wrap gap-2">
-          <TagChip href="/corporations?ministry=警察庁" active={ministry === "警察庁"}>警察庁</TagChip>
+          <TagChip href="/corporations?ministry=警察庁" active={ministry === "警察庁"}>警察庁の関連法人で絞り込む</TagChip>
           <TagChip href="/corporations?type=一般財団法人" active={type === "一般財団法人"}>一般財団法人</TagChip>
           {totals.nextDayCorporations > 0 ? (
             <TagChip href="/corporations?flag=nextDay" active={flag === "nextDay"}>退職翌日再就職あり</TagChip>
@@ -316,7 +106,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
                 <dl className="mt-4 grid grid-cols-2 gap-3 border-y border-outline-variant py-3 text-sm">
                   <div>
                     <dt className="text-xs font-semibold text-on-surface-variant">公表再就職記録</dt>
-                    <dd className="mt-1 font-extrabold text-primary">{corporation.count}件</dd>
+                    <dd className="mt-1 font-extrabold text-primary">{corporation.count ? `${corporation.personCount}人・${corporation.count}件` : "未収録"}</dd>
                   </div>
                   <div>
                     <dt className="text-xs font-semibold text-on-surface-variant">主な出身省庁</dt>
@@ -360,7 +150,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
                       </span>
                     ) : null}
                   </td>
-                  <td className="px-4 py-4 text-center font-semibold">{corporation.count}件</td>
+                  <td className="px-4 py-4 text-center font-semibold">{corporation.count ? `${corporation.personCount}人・${corporation.count}件` : "未収録"}</td>
                   <td className="px-4 py-4 text-sm text-on-surface-variant">
                     <span
                       className={
@@ -375,7 +165,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
                   <td className="px-4 py-4 text-center text-sm font-semibold text-primary">{corporation.averageWaitDays}日</td>
                   <td className="px-4 py-4 text-right">
                     <Link href={`/corporations/${corporation.slug}`} className="text-sm font-bold text-secondary hover:underline">
-                      詳細を見る
+                      <span className="sr-only">{corporation.name}の</span>詳細を見る
                     </Link>
                   </td>
                 </tr>
@@ -393,8 +183,8 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
           </>
         ) : (
           <div className="rounded-lg border border-outline-variant bg-surface-container-lowest px-6 py-10 text-center">
-            <p className="font-bold text-primary">該当する法人データはまだありません。</p>
-            <p className="mt-2 text-sm text-on-surface-variant">公表資料をもとに順次追加予定です。</p>
+            <p className="font-bold text-primary">条件に一致する法人は見つかりませんでした。</p>
+            <Link href="/corporations?show=all" className="mt-2 inline-flex min-h-11 items-center font-bold text-secondary underline">条件を外して全法人を見る</Link>
           </div>
         )}
       </section> : null}

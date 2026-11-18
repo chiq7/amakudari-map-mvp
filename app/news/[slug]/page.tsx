@@ -117,11 +117,11 @@ export default async function NewsArticlePage(props: { params: Promise<{ slug: s
         {article.slug === "meti-reemployment-disclosure-fy2025" ? <p className="mt-3 text-sm leading-7">
           74件は令和7年度の公表表にある明細の数です。<Link href="/ministries/meti" className="font-bold text-secondary underline">当サイトの経産省一覧（複数年度から収録した{metiRecords.length}件）</Link>で、収録済みの人物・法人を探せます。
           {!metiRecords.some((record) => record.corporationName.normalize("NFKC").includes("CRD協会")) ? "本文で紹介する鎌田篤氏のCRD協会への就任は、元資料に掲載されている事例です。当サイトの一覧には未収録です。" : null}
+          <Link href="/about#ai-editing" className="ml-2 font-semibold text-secondary underline">この説明でのAI利用と原表の照合</Link>
         </p> : null}
         <p className="mt-4 text-sm text-on-surface-variant">
           公開日：<time dateTime={article.datePublished}>{formatDate(article.datePublished)}</time>
-          <span className="mx-2">/</span>
-          更新日：<time dateTime={article.dateModified}>{formatDate(article.dateModified)}</time>
+          {article.datePublished !== article.dateModified ? <>　更新日：<time dateTime={article.dateModified}>{formatDate(article.dateModified)}</time></> : null}
         </p>
       </header>
 

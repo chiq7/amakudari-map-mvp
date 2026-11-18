@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { ArrowRightIcon, MinistryIcon, NewsIcon } from "@/components/icons";
-import { topics as topicGroups } from "@/lib/static-content";
-import { getMinistryPath } from "@/lib/ministry-pages";
+import { records, topics as topicGroups } from "@/lib/static-content";
+import { getMinistryPath, ministryPages } from "@/lib/ministry-pages";
 import topicPagesData from "@/public/data/topics.json";
 
 export const metadata = pageMetadata("省庁・テーマから探す", "省庁や行政テーマから、関連する人物・法人の公表記録を探せます。", "/topics");
@@ -15,7 +15,9 @@ type TopicPage = {
 };
 
 export default function TopicsPage() {
-  const ministries = topicGroups.find((group) => group.category === "ministry")?.items ?? [];
+  const ministries = ministryPages.map((ministry) => ministry.name);
+  const unlisted = (topicGroups.find((group) => group.category === "ministry")?.items ?? [])
+    .filter((name) => !records.some((record) => record.fromMinistry === name));
   const themeLabels = topicGroups.find((group) => group.category === "topic")?.items ?? [];
   const publishedTopics = topicPagesData as TopicPage[];
   const publishedByTitle = new Map(
@@ -60,6 +62,7 @@ export default function TopicsPage() {
               </Link>
             ))}
           </div>
+          {unlisted.length ? <p className="mt-3 text-sm text-on-surface-variant">{unlisted.join("・")}の再就職記録は現在未収録です。</p> : null}
         </section>
 
         <section aria-labelledby="theme-list-title">

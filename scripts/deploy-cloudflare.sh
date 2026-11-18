@@ -31,6 +31,9 @@ preview="https://${version:0:8}-$worker.2222color.workers.dev"
 check_build "$preview"
 curl --fail --silent --show-error --max-time 15 --output /dev/null "$preview/search"
 curl --fail --silent --show-error --max-time 15 --output /dev/null "$preview/sitemap.xml"
+directory_html=$(curl --fail --silent --show-error --max-time 20 "$preview/corporations?show=all")
+grep -Fq 'id="server-directory-results"' <<< "$directory_html"
+grep -Fq '法人中 1〜20法人を表示' <<< "$directory_html"
 
 # A newer push may have arrived while this revision was building.
 latest=$(git ls-remote --exit-code origin refs/heads/master | cut -f1)

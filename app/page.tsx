@@ -12,7 +12,6 @@ import {
 } from "@/lib/static-content";
 import { newsArticles } from "@/lib/news";
 import { SearchBox } from "@/components/ui";
-import DiscoveryRouteVisual from "@/components/DiscoveryRouteVisual";
 import {
   ArrowRightIcon,
   BuildingIcon,
@@ -23,9 +22,10 @@ import {
 } from "@/components/icons";
 import { getMinistryPath } from "@/lib/ministry-pages";
 
+const homeTitle = "天下りとは？ 意味と省庁別の天下り先・企業一覧";
 export const metadata = {
-  ...pageMetadata("天下り先・企業一覧｜省庁・法人・人物から探す", "天下り先の企業・法人を、省庁別・法人別・人物別に探せるデータベースです。誰がどこからどこへ移ったか、法人の業務とあわせて確認できます。", "/"),
-  title: { absolute: "天下り先・企業一覧｜省庁・法人・人物から探す｜天下りマップ" },
+  ...pageMetadata(homeTitle, "天下りと天下り先の意味を解説。国家公務員の公表再就職記録から、財務省・国土交通省などの出身者がどの企業や団体のどの役職に就いたか、省庁・法人・氏名で調べられます。", "/"),
+  title: { absolute: `${homeTitle}｜天下りマップ` },
 };
 
 const latestExplainerCorporationSlugs = new Set(
@@ -112,14 +112,15 @@ function SearchIntentSection() {
       <div className="min-w-0 px-4 py-3 sm:px-5" data-analytics-location="home_intent_definition">
         <h2 className="text-base font-extrabold text-primary">天下りとは？</h2>
         <p className="mt-1 text-pretty text-sm leading-relaxed text-on-surface-variant">
-          府省庁のあっせんで、退職した職員が企業や団体に再就職することを指します。
+          政府が「天下り」として問題にしてきたのは、退職した職員が府省庁のあっせんを受け、企業や団体に再就職することです。再就職の公表記録で分かるのは、元の官職や再就職先、就任時の役職です。勤務先の名前だけから、あっせんの有無は判断できません。
         </p>
-        <Link href="/news/how-to-read-national-public-servant-reemployment-disclosure-2025" className="inline-flex min-h-11 items-center gap-1.5 text-sm font-bold text-secondary underline underline-offset-4">
-          再就職の制度を読む <ArrowRightIcon size={15} />
+        <Link href="/about#reemployment-rules" className="inline-flex min-h-11 items-center gap-1.5 text-sm font-bold text-secondary underline underline-offset-4">
+          再就職等規制と公表制度を読む <ArrowRightIcon size={15} />
         </Link>
       </div>
       <div className="min-w-0 px-4 py-3 sm:px-5" data-analytics-location="home_intent_lists">
-        <h2 className="text-base font-extrabold text-primary">再就職先を一覧で探す</h2>
+        <h2 className="text-base font-extrabold text-primary">天下り先とは？</h2>
+        <p className="mt-1 text-pretty text-sm leading-relaxed text-on-surface-variant">こうした再就職で職員を受け入れる企業や団体を指す言い方です。ここでは公表された再就職先を一覧にまとめ、株式会社のほか学校法人や公益法人も掲載しています。</p>
         <div className="mt-2 flex flex-wrap gap-2">
           <Link href="/topics" className={listLink}>
             省庁別一覧 <ArrowRightIcon size={15} />
@@ -161,7 +162,7 @@ function ExplainerSection() {
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-bold">
               <span className="rounded-full bg-secondary-fixed px-3 py-1 text-secondary">{featuredArticle.kind}</span>
               <time className="text-on-surface-variant" dateTime={featuredArticle.dateModified}>
-                {featuredArticle.dateModified !== featuredArticle.datePublished ? "更新 " : ""}{formatDate(featuredArticle.dateModified)}
+                {featuredArticle.dateModified !== featuredArticle.datePublished ? "更新 " : "公開 "}{formatDate(featuredArticle.dateModified)}
               </time>
             </div>
             <h3 className="mt-4 text-pretty text-2xl font-extrabold leading-[1.5] tracking-tight text-primary md:text-3xl">
@@ -212,7 +213,7 @@ function ExplainerSection() {
                   className="group flex flex-col gap-2 py-4"
                 >
                   <time className="text-xs font-bold text-on-surface-variant" dateTime={article.dateModified}>
-                    {article.dateModified !== article.datePublished ? "更新 " : ""}{formatDate(article.dateModified)}
+                    {article.dateModified !== article.datePublished ? "更新 " : "公開 "}{formatDate(article.dateModified)}
                   </time>
                   <span className="text-sm font-extrabold leading-6 text-primary">{article.title}</span>
                   <span className="hidden text-sm leading-6 text-on-surface-variant lg:line-clamp-2">{article.description}</span>
@@ -262,7 +263,7 @@ export default function Home() {
         },
         variableMeasured: [
           { "@type": "PropertyValue", name: "公表再就職情報", value: totals.publicRecords, unitText: "件" },
-          { "@type": "PropertyValue", name: "受け入れ法人", value: totals.corporations, unitText: "法人" },
+          { "@type": "PropertyValue", name: "掲載している法人（役員情報のみの法人を含む）", value: totals.corporations, unitText: "法人" },
         ],
       },
     ],
@@ -275,10 +276,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
 
-      <div className="flex flex-col gap-6 md:gap-8">
-        <SearchIntentSection />
-        <ExplainerSection />
-      </div>
+      <SearchIntentSection />
 
       <section
         className="relative overflow-hidden rounded-3xl bg-[#eee6da] shadow-soft ring-1 ring-[#dfd4c5] lg:grid lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch"
@@ -297,7 +295,8 @@ export default function Home() {
             国家公務員の再就職先企業・法人を、誰が、どこから、どこへ移ったか、法人の業務とあわせて確認できます。
           </p>
 
-          <figure className="mt-6 overflow-hidden rounded-2xl bg-[#f6f0e6] ring-1 ring-[#dfd4c5] lg:hidden">
+          <details className="mt-3 lg:hidden"><summary className="cursor-pointer py-2 text-sm font-semibold text-secondary">省庁・人物・法人の関係を図で見る</summary>
+          <figure className="overflow-hidden rounded-2xl bg-[#f6f0e6] ring-1 ring-[#dfd4c5]">
             <div className="relative aspect-[3/2] w-full">
               <Image
                 src="/images/relationship-editorial-v1.webp"
@@ -312,11 +311,11 @@ export default function Home() {
               <span>省庁 → 人物 → 法人</span>
               <span className="text-secondary">出典は各ページに掲載</span>
             </figcaption>
-          </figure>
+          </figure></details>
 
           <SearchBox className="mt-7 max-w-xl" />
 
-          <div className="mt-6 flex flex-wrap gap-2 text-sm font-bold">
+          <div id="start-here" className="mt-6 flex flex-wrap gap-2 text-sm font-bold">
             <Link href="/persons" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-4 text-primary shadow-sm transition hover:-translate-y-0.5">
               <PersonIcon size={18} /> 人から探す <ArrowRightIcon size={15} />
             </Link>
@@ -347,6 +346,7 @@ export default function Home() {
         </figure>
       </section>
 
+      <ExplainerSection />
       <section aria-labelledby="data-summary-title">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
@@ -375,63 +375,6 @@ export default function Home() {
             </div>
           ))}
         </dl>
-      </section>
-
-      <section id="start-here" className="scroll-mt-28">
-        <SectionHeading
-          eyebrow="START HERE"
-          title="知りたい入口から、まっすぐ探せます"
-        />
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
-          {[
-            {
-              href: "/persons",
-              number: "01",
-              title: "人から探す",
-              description: "氏名から経歴資料を確認し、再就職先をたどる",
-              route: "person" as const,
-              tone: "bg-[#e9edf8]",
-              diagramTone: "text-secondary",
-            },
-            {
-              href: "/corporations",
-              number: "02",
-              title: "法人から探す",
-              description: "法人から公表人物を確認し、出身省庁をたどる",
-              route: "corporation" as const,
-              tone: "bg-[#f7e7e1]",
-              diagramTone: "text-accent",
-            },
-            {
-              href: "/topics",
-              number: "03",
-              title: "省庁・テーマから探す",
-              description: "省庁から公表人物を確認し、関係法人をたどる",
-              route: "ministry" as const,
-              tone: "bg-[#f1e3c8]",
-              diagramTone: "text-primary",
-            },
-          ].map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`group relative flex min-h-[250px] flex-col overflow-hidden rounded-2xl border border-outline-variant/70 p-5 transition hover:-translate-y-1 hover:border-primary/30 hover:shadow-soft md:p-6 ${item.tone}`}
-            >
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="text-xl font-extrabold text-primary md:text-2xl">{item.title}</h3>
-                <span className="font-mono text-sm font-extrabold tracking-[0.14em] text-on-surface-variant">{item.number}</span>
-              </div>
-              <div className={item.diagramTone}>
-                <DiscoveryRouteVisual variant={item.route} />
-              </div>
-              <span className="sr-only">{item.description}</span>
-              <div className="mt-auto flex items-center justify-between pt-4 text-sm font-bold text-primary">
-                <span>一覧を見る</span>
-                <ArrowRightIcon className="transition-transform group-hover:translate-x-1" size={18} />
-              </div>
-            </Link>
-          ))}
-        </div>
       </section>
 
       <section>
@@ -478,7 +421,7 @@ export default function Home() {
               </div>
 
               <Link href={`/corporations/${corporation.slug}`} className="mt-5 inline-flex items-center justify-between border-t border-outline-variant/70 pt-4 text-sm font-bold text-secondary">
-                詳細を見る <ArrowRightIcon size={17} />
+                <span><span className="sr-only">{corporation.name}の</span>詳細を見る</span> <ArrowRightIcon size={17} />
               </Link>
             </article>
           ))}

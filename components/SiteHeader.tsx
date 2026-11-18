@@ -23,7 +23,7 @@ export default function SiteHeader() {
 
   return (
     <header className="top-0 z-50 border-b border-outline-variant/80 bg-surface/95 backdrop-blur-xl lg:sticky [@media(max-height:600px)]:!static">
-      <div className="mx-auto flex h-[68px] w-full max-w-[1280px] items-center justify-between gap-6 px-4 md:px-8">
+      <div className="relative mx-auto flex h-14 w-full max-w-[1280px] items-center justify-between gap-2 px-4 md:px-8 lg:h-[68px] lg:gap-6">
         <Link href="/" className="group flex min-w-0 items-center gap-3" aria-label="天下りマップ トップページ">
           <BrandMark size={38} className="transition-transform group-hover:scale-[1.03]" />
           <span className="min-w-0">
@@ -80,15 +80,14 @@ export default function SiteHeader() {
         <Link
           href="/search"
           aria-label="サイト内を検索"
-          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-outline-variant bg-white px-3 text-sm font-bold text-primary shadow-sm xl:hidden"
+          className="ml-auto inline-flex min-h-11 items-center gap-2 rounded-full border border-outline-variant bg-white px-3 text-sm font-bold text-primary shadow-sm xl:hidden"
         >
           <SearchIcon size={18} />
           <span className="hidden sm:inline">検索</span>
         </Link>
-      </div>
-
-      <nav className="border-t border-outline-variant/60 lg:hidden" aria-label="スマートフォンメニュー">
-        <div className="mx-auto flex max-w-[1280px] gap-1 overflow-x-auto px-3 py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <details key={pathname} className="lg:hidden">
+        <summary className="flex min-h-11 cursor-pointer list-none items-center rounded-full border border-outline-variant bg-white px-3 text-sm font-bold text-primary">メニュー</summary>
+        <nav className="absolute inset-x-0 top-full z-50 grid grid-cols-2 gap-1 border-y border-outline-variant bg-white px-4 py-3 shadow-md" aria-label="スマートフォンメニュー">
           {navItems.map((item) => {
             const active = isActive(pathname, item.activeFor);
             return (
@@ -96,7 +95,7 @@ export default function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`shrink-0 rounded-full px-3 py-2 text-xs font-bold ${
+                className={`inline-flex min-h-11 items-center rounded-lg px-3 py-2 text-sm font-bold ${
                   active ? "bg-secondary-fixed text-secondary" : "text-on-surface-variant"
                 }`}
               >
@@ -104,8 +103,9 @@ export default function SiteHeader() {
               </Link>
             );
           })}
-        </div>
-      </nav>
+        </nav>
+      </details>
+      </div>
     </header>
   );
 }

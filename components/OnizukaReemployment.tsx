@@ -38,6 +38,7 @@ function formatDate(date: string) {
 export default function OnizukaReemployment() {
   return (
     <div className="flex flex-col gap-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Person", name: "鬼塚 友章", url: `https://amakudari.jp/persons/${onizukaSlug}`, description: "2022年8月30日の警察庁離職後に公表された再就職記録" }) }} />
       <Breadcrumb items={[
         { label: "TOP", href: "/" },
         { label: "人物一覧", href: "/persons" },
@@ -47,6 +48,10 @@ export default function OnizukaReemployment() {
         <div className="min-w-0">
           <h1 className="text-balance text-3xl font-bold text-primary md:text-4xl">鬼塚友章氏の再就職先</h1>
           <p className="mt-2 text-sm leading-6 text-on-surface-variant">警察庁を離職した後の再就職記録6件を、就任日順に掲載しています。</p>
+          <h2 className="mt-3 text-sm font-bold">再就職記録の根拠資料</h2>
+          <p className="mt-2 text-sm leading-7">内閣官房の原資料（離職後の事後届出）：
+            <a className="font-bold text-secondary underline" href="https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r06/files/siryou3-1.xlsx">令和5年度・通番49〜52（Excel）</a> ／ <a className="font-bold text-secondary underline" href="https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/files/siryou3-1_20250926.xlsx">令和6年度・通番36〜37（Excel）</a>
+          </p>
         </div>
         <ShareButton title="鬼塚友章氏の再就職先 | 天下りマップ" />
       </header>

@@ -1,3 +1,4 @@
+import InternationalDataGuide from "@/components/InternationalDataGuide";
 import { formatDate } from "@/lib/display-text";
 import Link from "next/link";
 import InformationProvisionForm from "@/components/InformationProvisionForm";
@@ -42,6 +43,8 @@ export default function DataPolicyPage() {
         </dl>
         <p className="mt-3 text-sm leading-7 text-on-surface-variant">両日付は収録済みの記録の最も早い日と遅い日です。各年度の対象者全体を調べる場合は、下の資料一覧から内閣人事局の年度別・届出区分別の公表表を参照できます。</p>
         <p className="mt-2 text-sm leading-7 text-on-surface-variant">法人の種類が「未分類」の場合は、当サイトのデータに法人種別を登録していません。法人名と再就職の記録は一覧で確認できます。</p>
+        <p className="mt-2 text-sm leading-7 text-on-surface-variant">掲載人数は人物ページ単位で集計します。氏名が同じでも、公表表の官職などが異なり本人の一致を確定できない場合は、別の記録として表示します。</p>
+        <p className="mt-2 text-sm leading-7 text-on-surface-variant">法人一覧の掲載数は再就職先の登録単位です。公表表の再就職先欄が「自営」の記録も含みます。</p>
       </section>
 
       <section id="sources" className="border-t border-outline-variant pt-6">
@@ -59,6 +62,7 @@ export default function DataPolicyPage() {
         <h2 className="text-2xl font-extrabold text-primary">データの利用条件</h2>
         <p className="mt-3 leading-8 text-on-surface-variant">公表データを再利用する場合は、提供元の利用条件を確認してください。編集・加工した内容は、その旨と元資料の提供元・URLを示し、行政機関や法人が作成した原資料そのものと区別してください。当サイト独自の文章・画像の利用は<Link href="/terms" className="font-bold text-secondary underline">利用規約</Link>、紹介用素材は<Link href="/link-to-us" className="font-bold text-secondary underline">リンク・紹介素材</Link>で案内します。</p>
         <ul className="mt-3 space-y-2 text-sm"><li><a href="https://www.cas.go.jp/jp/tyosakuken/index.html" className="text-secondary underline">内閣官房のコピーライトポリシー</a></li><li><a href="https://help.info.gbiz.go.jp/hc/ja/articles/4795140981406-%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84" className="text-secondary underline">Gビズインフォの利用規約</a></li></ul>
+        <p className="mt-2 text-sm leading-7 text-on-surface-variant">規約ページにアクセス確認画面が表示された場合は、<a href="https://info.gbiz.go.jp/" className="font-semibold text-secondary underline">Gビズインフォのトップページ</a>からも利用案内を開けます。</p>
       </section>
 
       <section className="grid gap-4 md:grid-cols-3">
@@ -87,6 +91,7 @@ export default function DataPolicyPage() {
         <InformationProvisionForm />
       </section>
 
+      <InternationalDataGuide />
       <Link href="/" className="text-sm font-bold text-secondary hover:underline">TOPへ戻る →</Link>
     </div>
   );

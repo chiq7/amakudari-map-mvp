@@ -4,8 +4,9 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { Breadcrumb } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
-import MetiRecordFinder from "@/components/MetiRecordFinder";
-import { corporations, records } from "@/lib/static-content";
+import MinistryRecordFinder from "@/components/MinistryRecordFinder";
+import { corporations, records, sources } from "@/lib/static-content";
+import { formatDate } from "@/lib/display-text";
 import { ministryPages } from "@/lib/ministry-pages";
 import { newsArticles } from "@/lib/news";
 
@@ -26,10 +27,10 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const ministry = getMinistry(params.slug);
   if (!ministry) return {};
 
-  const title = `${ministry.name}の天下り先一覧`;
+  const title = `${ministry.name}の天下り先一覧｜再就職先と公表記録`;
   const description = ministry.slug === "meti"
     ? "経済産業省出身者の再就職先を、就職年度・法人名・人物名で絞り込めます。公表記録ごとに就職日と就任時の役職を確認できます。"
-    : `${ministry.name}出身者に関する公表再就職情報を、再就職先法人・件数・待機日数とともに一覧で確認できます。政府公表資料に基づくデータベースです。`;
+    : `${ministry.name}出身者の再就職先を、内閣官房の公表記録から一覧で確認できます。就任年度・法人種別・離職時の官職で絞り込み、再就職先と就任時の役職を比較できます。`;
 
   return pageMetadata(title, description, `/ministries/${ministry.slug}`);
 }
@@ -41,7 +42,7 @@ export default async function MinistryPage(props: PageProps) {
 
   const ministryRecords = records.filter((record) => record.fromMinistry === ministry.name);
   const personCount = new Set(ministryRecords.map((record) => record.personSlug)).size;
-  const metiEntries = ministry.slug === "meti" ? [...ministryRecords]
+  const entries = [...ministryRecords]
     .sort((left, right) => right.reemploymentDate.localeCompare(left.reemploymentDate) || left.name.localeCompare(right.name, "ja"))
     .map((record) => ({
       id: record.rawId,
@@ -50,9 +51,14 @@ export default async function MinistryPage(props: PageProps) {
       corporation: record.corporationName,
       corporationSlug: record.corporationSlug,
       aliases: corporations.find((corporation) => corporation.slug === record.corporationSlug)?.aliases ?? [],
+      corporationType: corporations.find((corporation) => corporation.slug === record.corporationSlug)?.type ?? "未分類",
       date: record.reemploymentDate,
       position: record.newPosition,
-    })) : null;
+      formerPosition: record.previousPosition,
+    }));
+  const ids = new Set(ministryRecords.map((record) => record.sourceId));
+  const publishedSources = sources.filter((source) => ids.has(source.id));
+  const latestPublished = publishedSources.map((source) => source.publishedAt).filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value)).sort().at(-1);
   const recordsByCorporation = new Map<string, typeof ministryRecords>();
   ministryRecords.forEach((record) => {
     const group = recordsByCorporation.get(record.corporationSlug) ?? [];
@@ -106,28 +112,30 @@ export default async function MinistryPage(props: PageProps) {
         <div className="min-w-0 flex-1">
           <p className="text-sm font-bold text-secondary">省庁別の公表再就職情報</p>
           <h1 className="mt-2 text-3xl font-bold text-primary md:text-4xl">
-            {ministry.name}の天下り先一覧
+            {ministry.name}の天下り先一覧・公表再就職記録
           </h1>
           <p className="mt-3 text-base leading-relaxed text-on-surface-variant">
             政府公表資料に記載された{ministry.name}出身者の再就職情報を、再就職先法人ごとに整理しています。
             {personCount}人が{matchingCorporations.length}法人に再就職した計{ministryRecords.length}件の記録を掲載しています。
+            {entries.length ? `収録した再就職日は${formatDate(entries[entries.length - 1].date)}〜${formatDate(entries[0].date)}です。` : ""}
+            {ministry.slug === "npa" ? "この一覧は離職時の所属が警察庁の記録を対象としています。" : ""}
           </p>
         </div>
         <ShareButton title={`${ministry.name}の天下り先一覧 | 天下りマップ`} />
       </section>
 
-      {metiEntries ? <MetiRecordFinder entries={metiEntries} /> : null}
-      {metiEntries ? <p className="text-sm leading-7 text-on-surface-variant">
-        この一覧には、複数年度にわたり当サイトが収録した{metiEntries.length}件を掲載しています。
+      {ministry.slug === "meti" ? <p className="text-sm leading-7 text-on-surface-variant">
+        この一覧には、複数年度にわたり当サイトが収録した{entries.length}件を掲載しています。
         <Link href="/news/meti-reemployment-disclosure-fy2025" className="font-semibold text-secondary underline">令和7年度の公表表で数えた74件の解説</Link>では、同年度の離職後の事後届出を集計しています。
       </p> : null}
 
-      <section className="grid grid-cols-2 gap-4 md:grid-cols-4">
+      <section className="grid grid-cols-2 gap-3 md:grid-cols-5">
         {[
           ["公表再就職者数", `${personCount}人`],
           ["関連する再就職先法人", `${matchingCorporations.length}法人`],
           ["退職翌日の再就職記録", `${totalNextDay}件`],
           ["30日以内の再就職記録", `${totalWithin30Days}件`],
+          ["収録資料の公表日（確認できた最新）", latestPublished ? formatDate(latestPublished) : "掲載資料に日付の記載なし"],
         ].map(([label, value]) => (
           <div key={label} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5 shadow-sm">
             <p className="text-sm font-semibold text-on-surface-variant">{label}</p>
@@ -135,6 +143,7 @@ export default async function MinistryPage(props: PageProps) {
           </div>
         ))}
       </section>
+      <MinistryRecordFinder entries={entries} ministry={ministry.name} headingId={`${ministry.slug}-records`} />
 
       {corporationTypeCounts.length > 0 ? (
         <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
@@ -192,7 +201,7 @@ export default async function MinistryPage(props: PageProps) {
                   </div>
                 </dl>
                 <Link href={`/corporations/${corporation.slug}`} className="mt-4 inline-flex min-h-11 items-center font-bold text-secondary hover:underline">
-                  法人詳細を見る →
+                  <span className="sr-only">{corporation.name}の</span>法人詳細を見る →
                 </Link>
               </article>
             );
@@ -230,7 +239,7 @@ export default async function MinistryPage(props: PageProps) {
                   </td>
                   <td className="px-4 py-4 text-right">
                     <Link href={`/corporations/${corporation.slug}`} className="text-sm font-bold text-secondary hover:underline">
-                      詳細を見る
+                      <span className="sr-only">{corporation.name}の</span>詳細を見る
                     </Link>
                   </td>
                 </tr>
