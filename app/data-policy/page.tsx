@@ -41,6 +41,7 @@ export default function DataPolicyPage() {
           <div><dt className="inline font-bold">データ反映日　</dt><dd className="inline">{formatDate(meta.lastUpdated)}</dd></div>
         </dl>
         <p className="mt-3 text-sm leading-7 text-on-surface-variant">両日付は収録済みの記録の最も早い日と遅い日です。各年度の対象者全体を調べる場合は、下の資料一覧から内閣人事局の年度別・届出区分別の公表表を参照できます。</p>
+        <p className="mt-2 text-sm leading-7 text-on-surface-variant">法人の種類が「未分類」の場合は、当サイトのデータに法人種別を登録していません。法人名と再就職の記録は一覧で確認できます。</p>
       </section>
 
       <section id="sources" className="border-t border-outline-variant pt-6">
@@ -75,7 +76,7 @@ export default function DataPolicyPage() {
 
       <section id="waiting-period" className="border border-outline-variant bg-surface-container-lowest p-6">
         <h2 className="text-2xl font-extrabold text-primary">待機日数の見方</h2>
-        <p className="mt-3 leading-8 text-on-surface-variant">待機日数は、離職日から再就職日までの日数です。法人や省庁ごとの記録を比べるために表示しています。</p>
+        <p className="mt-3 leading-8 text-on-surface-variant">公表された離職日から再就職日までを暦日で数えます。同じ日は0日、翌日は1日です。「30日以内」には0日から30日までの記録を含みます。たとえば3月31日に離職し4月1日に再就職した記録は、退職翌日と30日以内の両方に入ります。</p>
       </section>
 
       <section id="contact" className="scroll-mt-36 border border-outline-variant bg-surface-container-low p-6 text-center">

@@ -132,7 +132,7 @@ export default function CorporationBusinessContext({
       {editorialContext?.regulatoryTouchpoints.length ? (
         <div className="border-t border-outline-variant bg-secondary-fixed/20 p-5 md:p-7">
           <div className="max-w-3xl">
-            <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">制度上の接点</p>
+            <p className="text-xs font-extrabold tracking-[0.08em] text-secondary">法人の仕事に関わる行政制度</p>
             <h2 className="mt-2 text-xl font-extrabold text-primary">この会社の仕事と、元の行政領域はどこで交わる？</h2>
             {connection ? (
               <p className="mt-3 border-l-4 border-secondary bg-white px-4 py-3 text-sm font-bold leading-7 text-primary">

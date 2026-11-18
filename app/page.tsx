@@ -310,7 +310,7 @@ export default function Home() {
             </div>
             <figcaption className="flex items-center justify-between gap-2 border-t border-[#dfd4c5] bg-white/80 px-3 py-2 text-[11px] font-bold text-primary">
               <span>省庁 → 人物 → 法人</span>
-              <span className="text-secondary">公表資料で照合</span>
+              <span className="text-secondary">出典は各ページに掲載</span>
             </figcaption>
           </figure>
 
@@ -342,7 +342,7 @@ export default function Home() {
           </div>
           <figcaption className="absolute bottom-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2 rounded-xl bg-white/90 px-3 py-2 text-[11px] font-bold text-primary shadow-sm backdrop-blur md:bottom-5 md:left-5 md:right-5 md:px-4 md:py-3 md:text-xs">
             <span>省庁 → 人物 → 法人</span>
-            <span className="text-secondary">公表資料で照合</span>
+            <span className="text-secondary">出典は各ページに掲載</span>
           </figcaption>
         </figure>
       </section>

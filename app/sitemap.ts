@@ -64,9 +64,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 }
 
+const editorialDates: Record<string, string> = {
+    "/": "2026-11-19",
+    "/data-policy": "2026-11-19",
+    "/corporations": "2026-11-19",
+    "/persons": "2026-11-19",
+    "/rankings": "2026-11-19",
+    "/retirement-estimator": "2026-11-19",
+    "/about": "2026-10-13",
+    "/faq": "2026-11-19",
+    "/privacy": "2026-10-13",
+    "/terms": "2026-10-13",
+    "/link-to-us": "2026-10-13",
+};
+
 function lastModifiedFor(pathname: string) {
   const pageLastmod = pageLastmodData as PageLastmodData;
-  const editorialUpdated = ["/about", "/data-policy", "/faq", "/privacy", "/terms", "/link-to-us"].includes(pathname) ? "2026-10-13" : undefined;
+  const editorialUpdated = pathname.startsWith("/ministries/") ? "2026-11-19" : editorialDates[pathname];
   const lastModified = toLastModified([pageLastmod.pages?.[pathname], editorialUpdated].filter((value): value is string => Boolean(value)).sort().at(-1));
   return lastModified ? { lastModified } : {};
 }
