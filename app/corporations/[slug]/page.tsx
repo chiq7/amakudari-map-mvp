@@ -6,6 +6,7 @@ import CorporationBusinessContext from "@/components/CorporationBusinessContext"
 import { Breadcrumb, DataNotice, HighlightStatCard, StatCard, TagChip } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import { newsArticles } from "@/lib/news";
+import { canonicalUrl } from "@/lib/seo";
 import {
   corporations,
   getCorporation,
@@ -236,13 +237,13 @@ export async function generateMetadata(
     .join("、");
   const description =
     highlights.kind === "public-officer"
-      ? `${corporation.name}の公表役員プロフィール。${peopleDescription}など、公式発表・gBizINFOに基づく公開情報を整理。`
+      ? `${corporation.name}の公表役員${corporation.publicOfficers.length}人。法人の公式発表にある役職・元所属を確認できます。${peopleDescription}。`
       : highlights.kind === "reemployment-record"
-        ? `${corporation.name}の公表再就職情報。${peopleDescription}など、国家公務員再就職状況の公表資料に基づく情報を整理。`
+        ? `${corporation.name}への再就職記録は${corporation.count}件、主な出身省庁は${corporation.topMinistry}です。${peopleDescription}の就任時の役職・就任日を公表記録で確認できます。`
         : `${corporation.name}の法人情報を、公表資料と公的法人情報に基づいて整理。`;
   const title =
     highlights.kind === "public-officer"
-      ? `${corporation.name}の公表役員情報・行政出身者`
+      ? `${corporation.name}の公表役員${corporation.publicOfficers.length}人｜役職・行政での元所属`
       : `${corporation.name}の再就職受入記録${corporation.count}件｜主な出身省庁は${corporation.topMinistry}`;
   return pageMetadata(title, description, `/corporations/${params.slug}`);
 }
@@ -250,6 +251,10 @@ export async function generateMetadata(
 export default async function CorporationDetailPage(props: { params: Promise<{ slug: string }> }) {
   const params = await props.params;
   const corporation = getCorporation(params.slug);
+  const pageUrl = canonicalUrl(`/corporations/${corporation.slug}`);
+  const organizationData = corporation.name === "自営"
+    ? { "@context": "https://schema.org", "@type": "WebPage", name: "公表表の再就職先「自営」の記録", url: pageUrl }
+    : { "@context": "https://schema.org", "@type": "Organization", name: corporation.name, url: pageUrl };
   const relatedRecords = records.filter((record) => record.corporationSlug === corporation.slug);
   const relatedArticles = newsArticles.filter((article) => article.relatedLinks.some((link) => link.href === `/corporations/${corporation.slug}`));
   const ministryCounts = relatedRecords.reduce<Map<string, number>>((counts, record) => {
@@ -313,6 +318,7 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
 
   return (
     <div className="flex flex-col gap-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData).replace(/</g, "\\u003c") }} />
       <Breadcrumb
         items={[
           { label: "TOP", href: "/" },

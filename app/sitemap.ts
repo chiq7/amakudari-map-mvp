@@ -80,7 +80,8 @@ const editorialDates: Record<string, string> = {
 
 function lastModifiedFor(pathname: string) {
   const pageLastmod = pageLastmodData as PageLastmodData;
-  const editorialUpdated = pathname.startsWith("/ministries/") ? "2026-11-19" : editorialDates[pathname];
+  const updatedDirectory = ["/ministries/", "/persons/", "/corporations/"].some((prefix) => pathname.startsWith(prefix));
+  const editorialUpdated = updatedDirectory ? "2026-11-19" : editorialDates[pathname];
   const lastModified = toLastModified([pageLastmod.pages?.[pathname], editorialUpdated].filter((value): value is string => Boolean(value)).sort().at(-1));
   return lastModified ? { lastModified } : {};
 }

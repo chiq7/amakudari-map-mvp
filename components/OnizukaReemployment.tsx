@@ -36,9 +36,12 @@ function formatDate(date: string) {
 }
 
 export default function OnizukaReemployment() {
+  const url = `https://amakudari.jp/persons/${onizukaSlug}`;
+  const structured = { "@context": "https://schema.org", "@type": "WebPage", url,
+    mainEntity: { "@type": "Person", name: "鬼塚 友章", url, description: "2022年8月30日の警察庁離職後に公表された再就職記録" } };
   return (
     <div className="flex flex-col gap-6">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Person", name: "鬼塚 友章", url: `https://amakudari.jp/persons/${onizukaSlug}`, description: "2022年8月30日の警察庁離職後に公表された再就職記録" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structured) }} />
       <Breadcrumb items={[
         { label: "TOP", href: "/" },
         { label: "人物一覧", href: "/persons" },

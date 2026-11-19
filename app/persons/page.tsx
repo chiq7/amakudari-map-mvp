@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { persons } from "@/lib/static-content";
+import { persons, publicOfficers } from "@/lib/static-content";
 import { ArrowRightIcon } from "@/components/icons";
 import { SearchBox } from "@/components/ui";
 
@@ -114,6 +114,17 @@ export default function PersonsPage() {
           ))}
         </div>
       </section>
+      {publicOfficers.length > 0 && (
+        <section>
+          <h2 className="text-xl font-bold text-primary">法人が公表した役員の略歴</h2>
+          <p className="mt-2 text-sm text-on-surface-variant">法人の公式発表で確認した役職と元所属です。</p>
+          <ul className="mt-3 space-y-2">
+            {publicOfficers.map((officer) => (
+              <li key={officer.slug}><Link className="font-bold text-secondary underline" href={`/public-officers/${officer.slug}`}>{officer.name}氏（{officer.corporationName}・{officer.role}）</Link></li>
+            ))}
+          </ul>
+        </section>
+      )}
     </div>
   );
 }

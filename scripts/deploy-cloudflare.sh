@@ -34,6 +34,12 @@ curl --fail --silent --show-error --max-time 15 --output /dev/null "$preview/sit
 directory_html=$(curl --fail --silent --show-error --max-time 20 "$preview/corporations?show=all")
 grep -Fq 'id="server-directory-results"' <<< "$directory_html"
 grep -Fq '法人中 1〜20法人を表示' <<< "$directory_html"
+empty_html=$(curl --fail --silent --show-error --max-time 20 "$preview/corporations?keyword=not-a-published-organization-0000")
+grep -Fq 'name="robots" content="noindex, follow"' <<< "$empty_html"
+legacy_status=$(curl --silent --show-error --max-time 15 --output /dev/null --write-out '%{http_code} %{redirect_url}' "$preview/organizations/%e6%97%a5%e6%9c%ac%e9%8a%80%e8%a1%8c")
+[[ "$legacy_status" == "308 $preview/corporations/corporation-73231e5518ebb1bf" ]]
+missing_status=$(curl --silent --show-error --max-time 15 --output /dev/null --write-out '%{http_code}' "$preview/organizations/retired-unknown-path")
+[[ "$missing_status" == "404" ]]
 
 # A newer push may have arrived while this revision was building.
 latest=$(git ls-remote --exit-code origin refs/heads/master | cut -f1)

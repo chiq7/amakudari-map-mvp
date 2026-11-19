@@ -22,16 +22,16 @@ export async function generateMetadata(
   const params = await props.params;
   if (params.person_slug === onizukaSlug) {
     return pageMetadata(
-      "鬼塚友章氏の再就職先｜警察庁離職後の公表記録",
-      "鬼塚友章氏は2022年8月30日に警察庁長官官房付で離職。全国遊技機商業協同組合連合会や株式会社HESTA大倉など、6件の再就職先を就任日と当時の役職で一覧にしました。",
+      "鬼塚友章氏｜全国遊技機商業協同組合連合会など再就職先6件・元警察庁",
+      "鬼塚友章氏の再就職先は全国遊技機商業協同組合連合会・株式会社HESTA大倉など6件。警察庁を離職後、2023年4月から2024年6月までに就任した役職を公表原表で確認できます。",
       `/persons/${onizukaSlug}`,
     );
   }
   const person = getPerson(params.person_slug);
-  const title = `${person.name.replace(/\s/g, "")}氏の公表再就職記録｜${person.ministry}から${person.corporationName}へ`;
-  const description = person.newPosition === "-"
-    ? `${person.name}氏の離職時の官職は「${person.formerPosition}」。${formatDate(person.reemployedAt)}の公表記録にある再就職先は「${person.corporationName}」で、役職欄は「-」です。`
-    : `${person.name}氏の離職時の官職は「${person.formerPosition}」。${formatDate(person.reemployedAt)}に${person.corporationName}の「${person.newPosition}」へ就任した公表記録と、元資料を確認できます。`;
+  const month = formatDate(person.reemployedAt).slice(0, 7);
+  const title = `${person.name.replace(/\s/g, "")}氏｜${person.corporationName}への再就職（${month}・元${person.ministry}）`;
+  const role = person.newPosition === "-" ? "役職欄は「-」" : `就任時の役職は「${person.newPosition}」`;
+  const description = `${person.name}氏の再就職先は${person.corporationName}（${formatDate(person.reemployedAt)}、元${person.ministry}）。公表記録の${role}です。離職時の官職と内閣官房の原表を掲載しています。`;
   return pageMetadata(title, description, `/persons/${params.person_slug}`);
 }
 
@@ -39,7 +39,8 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
   const params = await props.params;
   if (params.person_slug === onizukaSlug) return <OnizukaReemployment />;
   const person = getPerson(params.person_slug);
-  const recordSources = [...new Set(records.filter((record) => record.personSlug === person.slug).map((record) => record.sourceId))]
+  const personRecords = records.filter((record) => record.personSlug === person.slug);
+  const recordSources = [...new Set(personRecords.map((record) => record.sourceId))]
     .flatMap((id) => sources.filter((source) => source.id === id));
   const pageUrl = canonicalUrl(`/persons/${person.slug}`);
   const appointment = person.newPosition === "-" ? `再就職先は「${person.corporationName}」（役職欄は「-」）` : `再就職先は${person.corporationName}、就任時の役職は「${person.newPosition}」`;
@@ -160,10 +161,24 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
       </section>
 
       <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+          {personRecords.length > 1 && (
+            <div className="mb-6">
+              <h2 className="mb-3 text-xl font-bold text-primary">この人物の公表再就職記録</h2>
+              <ul className="space-y-2">
+                {personRecords.map((record) => (
+                  <li key={record.rawId}>
+                    <time dateTime={record.reemploymentDate}>{formatDate(record.reemploymentDate)}</time>　
+                    <Link href={`/corporations/${record.corporationSlug}`} className="font-semibold text-secondary underline">{record.corporationName}</Link>
+                    {record.newPosition !== "-" && `（${record.newPosition}）`}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <h2 className="mb-4 text-xl font-bold text-primary">関連リンク</h2>
           <div className="flex flex-col gap-3">
             <Link href={`/corporations/${person.corporationSlug}`} className="font-semibold text-secondary hover:underline">
-              法人情報を詳しく見る
+              {person.corporationName}の公表記録を見る
             </Link>
             <Link href={getMinistryPath(person.ministry)} className="font-semibold text-secondary hover:underline">
               {person.ministry}の関連記録を見る
@@ -172,7 +187,7 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
               ランキングを見る
             </Link>
             <Link href={`/corporations?ministry=${encodeURIComponent(person.ministry)}&sort=shortestAverageWaitingDays`} className="font-semibold text-secondary hover:underline">
-              類似の再就職事例を見る
+              {person.ministry}に関係する法人を平均待機日数順で見る
             </Link>
             <Link href="/data-policy" className="font-semibold text-secondary hover:underline">
               データ方針について

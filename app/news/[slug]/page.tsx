@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumb, RelatedLinks, TagChip } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import { canonicalUrl, SHARE_IMAGE, SITE_NAME } from "@/lib/seo";
+import { SITE_OPERATOR } from "@/lib/site-contact";
 import { getNewsArticle, newsArticles } from "@/lib/news";
 import { records } from "@/lib/static-content";
 const metiRecords = records.filter((record) => record.fromMinistry === "経済産業省");
@@ -68,6 +69,7 @@ export default async function NewsArticlePage(props: { params: Promise<{ slug: s
       {
         "@type": "NewsArticle",
         headline: article.title,
+        author: { "@type": "Organization", name: SITE_OPERATOR, url: canonicalUrl("/about") },
         description: article.description,
         datePublished: article.datePublished,
         dateModified: article.dateModified,
@@ -123,6 +125,7 @@ export default async function NewsArticlePage(props: { params: Promise<{ slug: s
           公開日：<time dateTime={article.datePublished}>{formatDate(article.datePublished)}</time>
           {article.datePublished !== article.dateModified ? <>　更新日：<time dateTime={article.dateModified}>{formatDate(article.dateModified)}</time></> : null}
         </p>
+        <p className="mt-2 text-sm text-on-surface-variant">編集・掲載　<Link href="/about" className="font-semibold text-secondary underline">{SITE_OPERATOR}</Link></p>
       </header>
 
       <section className="rounded-lg border border-outline-variant bg-surface-container-low p-5">

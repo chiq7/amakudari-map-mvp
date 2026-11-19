@@ -55,6 +55,22 @@ await mkdir(bundle);
 await copyFile(join(root, "scripts", "directory-worker.mjs"), join(bundle, "index.mjs"));
 const directory = await readFile(join(dist, "corporations", "filter-data.json"), "utf8");
 await writeFile(join(bundle, "directory-data.js"), `export default ${directory};\n`);
+const oldOrganizations = JSON.parse(await readFile(join(root, "public", "data", "organizations.json"), "utf8"));
+const normalizeName = (value) => value.normalize("NFKC").toLowerCase().replace(/\s+/g, "");
+const destinations = new Map();
+for (const corporation of JSON.parse(directory)) {
+  for (const name of [corporation.name, ...corporation.aliases]) {
+    const key = normalizeName(name);
+    if (!destinations.has(key)) destinations.set(key, new Set());
+    destinations.get(key).add(corporation.slug);
+  }
+}
+const redirects = Object.fromEntries(oldOrganizations.flatMap((entry) => {
+  const matches = destinations.get(normalizeName(entry.再就職先名称));
+  // Keep the exact encoded slug. The original export truncated some multibyte escapes.
+  return matches?.size === 1 ? [[entry.organization_slug.toLowerCase(), [...matches][0]]] : [];
+}));
+await writeFile(join(bundle, "legacy-organizations.js"), `export default ${JSON.stringify(redirects)};\n`);
 for (const name of ["directory-filters", "corporation-types", "search-key"]) {
   const source = await readFile(join(root, "lib", `${name}.ts`), "utf8");
   const { outputText } = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022 } });
@@ -67,5 +83,5 @@ await writeFile(join(worker, "worker.config.json"), JSON.stringify({
   previewUrls: true,
   env: { ASSETS: { type: "assets" } },
   manifest: { type: "partial", mainModule: "index.mjs", modules: {} },
-  assets: { htmlHandling: "drop-trailing-slash", notFoundHandling: "404-page", runWorkerFirst: ["/corporations"] },
+  assets: { htmlHandling: "drop-trailing-slash", notFoundHandling: "404-page", runWorkerFirst: ["/corporations", "/organizations/*"] },
 }));

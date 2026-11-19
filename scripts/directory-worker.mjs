@@ -1,5 +1,6 @@
 import { getDirectoryPage } from "./directory-filters.js";
 import corporations from "./directory-data.js";
+import legacyOrganizations from "./legacy-organizations.js";
 
 function escape(value) {
   return String(value).replace(/[&<>"']/g, (char) => ({
@@ -29,6 +30,15 @@ function resultsMarkup(result, params) {
 const directoryWorker = {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname.startsWith("/organizations/") && ["GET", "HEAD"].includes(request.method)) {
+      const key = url.pathname.slice("/organizations/".length).replace(/\/$/, "").toLowerCase();
+      if (!key) return Response.redirect(new URL("/corporations", url), 308);
+      if (Object.hasOwn(legacyOrganizations, key)) {
+        return Response.redirect(new URL(`/corporations/${legacyOrganizations[key]}`, url), 308);
+      }
+      const missing = await env.ASSETS.fetch(new Request(new URL("/_missing-legacy-organization", url), { method: request.method }));
+      return new Response(missing.body, { status: 404, headers: missing.headers });
+    }
     if (url.pathname !== "/corporations" || !url.search || !["GET", "HEAD"].includes(request.method)) {
       return env.ASSETS.fetch(request);
     }
@@ -40,10 +50,13 @@ const directoryWorker = {
     baseRequest.headers.delete("If-Modified-Since");
     const base = await env.ASSETS.fetch(baseRequest);
     if (!base.ok || !base.headers.get("Content-Type")?.includes("text/html")) return base;
-    const output = new HTMLRewriter()
+    const rewriter = new HTMLRewriter()
       .on("#server-directory", { element(el) { el.setInnerContent(resultsMarkup(result, url.searchParams), { html: true }); } })
-      .on("#featured-corporations-directory", { element(el) { el.setAttribute("hidden", ""); } })
-      .transform(base);
+      .on("#featured-corporations-directory", { element(el) { el.setAttribute("hidden", ""); } });
+    if (result.filteredCorporations.length === 0) {
+      rewriter.on("head", { element(el) { el.append('<meta name="robots" content="noindex, follow">', { html: true }); } });
+    }
+    const output = rewriter.transform(base);
     output.headers.delete("ETag");
     output.headers.set("Cache-Control", "private, no-cache");
     return output;
