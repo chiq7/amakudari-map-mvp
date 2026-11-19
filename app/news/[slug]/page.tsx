@@ -123,7 +123,7 @@ export default async function NewsArticlePage(props: { params: Promise<{ slug: s
         </p> : null}
         <p className="mt-4 text-sm text-on-surface-variant">
           公開日：<time dateTime={article.datePublished}>{formatDate(article.datePublished)}</time>
-          {article.datePublished !== article.dateModified ? <>　更新日：<time dateTime={article.dateModified}>{formatDate(article.dateModified)}</time></> : null}
+          {formatDate(article.datePublished) !== formatDate(article.dateModified) ? <>　更新日：<time dateTime={article.dateModified}>{formatDate(article.dateModified)}</time></> : null}
         </p>
         <p className="mt-2 text-sm text-on-surface-variant">編集・掲載　<Link href="/about" className="font-semibold text-secondary underline">{SITE_OPERATOR}</Link></p>
       </header>

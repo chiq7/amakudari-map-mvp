@@ -34,7 +34,7 @@ export default function NewsIndexPage() {
               <div className="flex flex-wrap items-center gap-3 text-sm text-on-surface-variant md:block">
                 <TagChip>{article.kind}</TagChip>
                 <time className="md:mt-3 md:block" dateTime={article.datePublished}>公開日：{formatDate(article.datePublished)}</time>
-                {article.dateModified !== article.datePublished ? <time className="md:mt-1 md:block" dateTime={article.dateModified}>更新日：{formatDate(article.dateModified)}</time> : null}
+                {formatDate(article.dateModified) !== formatDate(article.datePublished) ? <time className="md:mt-1 md:block" dateTime={article.dateModified}>更新日：{formatDate(article.dateModified)}</time> : null}
               </div>
               <div>
                 <h3 className="text-balance text-xl font-extrabold leading-8 text-primary transition group-hover:text-secondary md:text-2xl">
