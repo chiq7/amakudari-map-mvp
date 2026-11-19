@@ -44,7 +44,11 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
     .flatMap((id) => sources.filter((source) => source.id === id));
   const pageUrl = canonicalUrl(`/persons/${person.slug}`);
   const appointment = person.newPosition === "-" ? `再就職先は「${person.corporationName}」（役職欄は「-」）` : `再就職先は${person.corporationName}、就任時の役職は「${person.newPosition}」`;
-  const sameNameProfiles = persons.filter((other) => other.slug !== person.slug && other.name === person.name);
+  const normalizedName = person.name.replace(/\s/g, "");
+  const sameNameProfiles = persons.filter((other) => other.slug !== person.slug && other.name.replace(/\s/g, "") === normalizedName);
+  const headingSuffix = sameNameProfiles.length
+    ? ` 氏の${person.corporationName}への再就職記録`
+    : " 氏の再就職先・公表記録";
   const personData = { "@context": "https://schema.org", "@type": "WebPage", url: pageUrl,
     mainEntity: { "@type": "Person", name: person.name, url: pageUrl, description: `${formatDate(person.reemployedAt)}の公表記録。 ${appointment}。` },
     citation: recordSources.map((source) => source.url) };
@@ -66,7 +70,7 @@ export default async function PersonDetailPage(props: { params: Promise<{ person
       <section>
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h1 className="text-3xl font-bold text-primary md:text-4xl">{person.name} 氏の再就職先・公表記録</h1>
+            <h1 className="text-3xl font-bold text-primary md:text-4xl">{person.name}{headingSuffix}</h1>
             <p className="mt-2 text-base leading-7 text-on-surface-variant">
               離職時の官職は「{person.formerPosition}」。公表表に記載された{appointment}です。
             </p>

@@ -60,7 +60,7 @@ function PublicDataCollection({
             <p className="text-sm font-semibold leading-relaxed">{example.title}</p>
             <p className="mt-1 text-xs leading-relaxed text-on-surface-variant">
               {[
-                example.date || example.applicationDate,
+                formatDate(example.date || example.applicationDate || ""),
                 example.governmentDepartment,
                 example.registrationNumber
                   ? `登録番号 ${example.registrationNumber}`
@@ -411,7 +411,7 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
               <div>
                 <dt className="text-sm font-semibold text-on-surface-variant">設立日</dt>
                 <dd className="mt-0.5 text-sm text-primary">
-                  {corporation.gbizInfo.establishmentDate}
+                  {formatDate(corporation.gbizInfo.establishmentDate)}
                 </dd>
               </div>
             )}

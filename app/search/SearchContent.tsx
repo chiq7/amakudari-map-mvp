@@ -30,11 +30,15 @@ export default function SearchContent({ persons, organizations }: {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    const urlQuery = new URLSearchParams(window.location.search)
-      .get("keyword")
-      ?.trim();
+    const url = new URL(window.location.href);
+    const urlQuery = url.searchParams.get("keyword")?.trim() || url.searchParams.get("q")?.trim();
     if (!urlQuery) return;
 
+    if (url.searchParams.has("q")) {
+      url.searchParams.set("keyword", urlQuery);
+      url.searchParams.delete("q");
+      window.history.replaceState(window.history.state, "", url);
+    }
     const timer = window.setTimeout(() => setQuery(urlQuery), 0);
     return () => window.clearTimeout(timer);
   }, []);

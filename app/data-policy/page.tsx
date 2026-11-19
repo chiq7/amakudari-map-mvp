@@ -2,7 +2,7 @@ import InternationalDataGuide from "@/components/InternationalDataGuide";
 import { formatDate } from "@/lib/display-text";
 import Link from "next/link";
 import InformationProvisionForm from "@/components/InformationProvisionForm";
-import { records, sources, corporations, persons, publicOfficers, meta } from "@/lib/static-content";
+import { records, recordCoverage, sources, corporations, persons, publicOfficers, meta } from "@/lib/static-content";
 import { newsArticles } from "@/lib/news";
 import { SITE_OPERATOR, CONTACT_EMAIL, CONTACT_EMAIL_HREF } from "@/lib/site-contact";
 
@@ -13,12 +13,7 @@ const usedSourceIds = new Set([
   ...publicOfficers.flatMap((officer) => officer.sourceIds),
 ]);
 const usedSources = sources.filter((source) => usedSourceIds.has(source.id) && new URL(source.url).pathname !== "/");
-const retirementDates = records.map((record) => record.retirementDate).sort();
-const startDates = records.map((record) => record.reemploymentDate).sort();
 const recordCorporations = new Set(records.map((record) => record.corporationSlug)).size;
-function dateRange(dates: string[]) {
-  return [dates[0], dates[dates.length - 1]].map((date) => date?.replace(/^(\d{4})-0?(\d{1,2})-0?(\d{1,2})$/, "$1年$2月$3日")).join("〜");
-}
 const allSources = [...new Map<string, {url: string; title: string; publisher: string}>([
   ...usedSources.map((source) => [source.url, source] as const),
   ...newsArticles.flatMap((article) => article.sources.map((source) => [source.url, source] as const)),
@@ -37,8 +32,8 @@ export default function DataPolicyPage() {
         <h2 className="text-2xl font-extrabold text-primary">掲載している記録の範囲</h2>
         <p className="mt-3 leading-8 text-on-surface-variant">公表資料から当サイトに取り込んだ範囲は、{persons.length}人の再就職記録{records.length}件です。1人が複数の役職に就いた場合は、就任ごとに1件と数えます。この記録に登場する再就職先は{recordCorporations}法人です。法人一覧の{corporations.length}法人には、役員情報をもとに掲載した法人も含まれます。</p>
         <dl className="mt-4 grid gap-2 text-sm text-on-surface-variant">
-          <div><dt className="inline font-bold">掲載記録の離職日　</dt><dd className="inline">{dateRange(retirementDates)}</dd></div>
-          <div><dt className="inline font-bold">掲載記録の再就職日　</dt><dd className="inline">{dateRange(startDates)}</dd></div>
+          <div><dt className="inline font-bold">掲載記録の離職日　</dt><dd className="inline">{recordCoverage.retirement}</dd></div>
+          <div><dt className="inline font-bold">掲載記録の再就職日　</dt><dd className="inline">{recordCoverage.reemployment}</dd></div>
           <div><dt className="inline font-bold">データ反映日　</dt><dd className="inline">{formatDate(meta.lastUpdated)}</dd></div>
         </dl>
         <p className="mt-3 text-sm leading-7 text-on-surface-variant">両日付は収録済みの記録の最も早い日と遅い日です。各年度の対象者全体を調べる場合は、下の資料一覧から内閣人事局の年度別・届出区分別の公表表を参照できます。</p>

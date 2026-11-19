@@ -36,6 +36,17 @@ export const rankings = rankingsData as RankingsData;
 export const records: ReemploymentRecord[] = recordsData.map((record) => ({
   ...record, corporationName: corporationDisplayName(record.corporationName),
 }));
+function recordDateRange(field: "retirementDate" | "reemploymentDate") {
+  const dates = records.map(record => record[field]).filter(Boolean).sort();
+  if (!dates.length) return "未収録";
+  return [dates[0], dates[dates.length - 1]]
+    .map(date => date.replace(/^(\d{4})-0?(\d{1,2})-0?(\d{1,2})$/, "$1年$2月$3日"))
+    .join("〜");
+}
+export const recordCoverage = {
+  retirement: recordDateRange("retirementDate"),
+  reemployment: recordDateRange("reemploymentDate"),
+};
 export const meta = metaData as DataMeta;
 
 const sourcesById = new Map(sources.map((source) => [source.id, source]));

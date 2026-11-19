@@ -6,6 +6,7 @@ import {
   corporations,
   getCorporationPersonHighlights,
   meta,
+  recordCoverage,
   records,
   topics,
   totals,
@@ -355,6 +356,10 @@ export default function Home() {
           />
           <Link href="/data-policy#coverage" className="text-sm font-semibold text-secondary underline">収録期間と数え方を見る</Link>
         </div>
+        <p className="mt-4 text-sm leading-7 text-on-surface-variant">
+          内閣官房などが公表した再就職記録のうち、当サイトに収録した分を集計しています。
+          掲載記録の離職日は{recordCoverage.retirement}、再就職日は{recordCoverage.reemployment}です。
+        </p>
         <h2 id="data-summary-title" className="sr-only">データ概要</h2>
         <dl className="mt-7 grid grid-cols-2 overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-outline-variant/70 lg:grid-cols-4">
           {[
