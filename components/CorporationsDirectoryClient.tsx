@@ -57,7 +57,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
             <h2 className="text-xl font-bold text-primary">
               {primaryFilter ? primaryFilter.heading : "絞り込み中"}
             </h2>
-            <Link href="/corporations" className="text-sm font-bold text-secondary hover:underline">
+            <Link href="/corporations?show=all" className="text-sm font-bold text-secondary hover:underline">
               すべての法人を見る
             </Link>
           </div>
