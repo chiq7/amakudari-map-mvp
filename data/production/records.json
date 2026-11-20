@@ -4206,5 +4206,21 @@
     "waitingDays": 47,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "57fc3e7e79ea0e84ae52424128b287810863470357e80bed967cba8fe65684ee",
+    "dedupeKey": "2c83252705d2255f1d967bc8921700fa94359831bc6a894b578b9582817031a5",
+    "personSlug": "person-9665ec2c44bc6bd3",
+    "name": "棚瀬 誠",
+    "fromMinistry": "警察庁",
+    "previousPosition": "警察庁サイバー警察局サイバー捜査課長",
+    "corporationSlug": "corporation-81eae9b6338be680",
+    "corporationName": "株式会社トランジットホールディングス",
+    "newPosition": "特別顧問",
+    "retirementDate": "2024-12-16",
+    "reemploymentDate": "2025-03-01",
+    "waitingDays": 75,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
