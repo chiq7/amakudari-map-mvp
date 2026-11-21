@@ -4222,5 +4222,21 @@
     "waitingDays": 75,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "c484d3dffb66a66969019d598a55a0933ff32a2254660d1588512daee296f19b",
+    "dedupeKey": "b76741c1d2ad49b5085c40a18f0b0cefa02ef582dead70e23366e5cfca79f37f",
+    "personSlug": "person-bbe632baeb17fba2",
+    "name": "松本 秀一",
+    "fromMinistry": "個人情報保護委員会",
+    "previousPosition": "個人情報保護委員会事務局監視・監督研究官（個人情報保護委員会事務局政策立案参事官）",
+    "corporationSlug": "corporation-635aaa42552d9b65",
+    "corporationName": "一般財団法人日本情報経済社会推進協会",
+    "newPosition": "常務理事",
+    "retirementDate": "2023-03-31",
+    "reemploymentDate": "2024-06-14",
+    "waitingDays": 441,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
