@@ -4238,5 +4238,21 @@
     "waitingDays": 441,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "980ea7a6192b6daef9e87f05625566887649d2154ae26bfeed26a12de6729bf7",
+    "dedupeKey": "64935b8a000aae87ed2e470859273a46dc6090eef999fddcf1a8ce6b52a48fb0",
+    "personSlug": "person-65d662fe63e021ec",
+    "name": "松元 照仁",
+    "fromMinistry": "個人情報保護委員会",
+    "previousPosition": "個人情報保護委員会事務局長",
+    "corporationSlug": "corporation-36adb76b77eb7f44",
+    "corporationName": "株式会社三菱UFJトラスト投資工学研究所",
+    "newPosition": "業務顧問",
+    "retirementDate": "2024-07-05",
+    "reemploymentDate": "2024-11-01",
+    "waitingDays": 119,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
