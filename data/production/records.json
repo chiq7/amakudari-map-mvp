@@ -4254,5 +4254,21 @@
     "waitingDays": 119,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "7761b3ebe55cf0351334b46debd973373ef25b8c70beff2475ca7d46f813de3b",
+    "dedupeKey": "bd22bc88ca9e30041830cea4b67ad295175286fe8e12484f795c5808b26a7568",
+    "personSlug": "person-9811b2af4814b92d",
+    "name": "合田 健彦",
+    "fromMinistry": "金融庁",
+    "previousPosition": "金融庁総合政策局リスク分析総括課専門検査官 兼 監督局総務課課付 兼 監督局銀行第一課課付",
+    "corporationSlug": "corporation-55527711ad3e892f",
+    "corporationName": "あかつき証券株式会社",
+    "newPosition": "コンプライアンス部部長",
+    "retirementDate": "2023-03-31",
+    "reemploymentDate": "2024-12-01",
+    "waitingDays": 611,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
