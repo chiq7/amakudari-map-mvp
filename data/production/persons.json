@@ -4720,5 +4720,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-6253d9dec04c05e2",
+    "name": "百瀬 卓",
+    "fromMinistry": "金融庁",
+    "previousPosition": "金融庁総合政策局リスク分析総括課専門検査官 兼 総合政策局リスク分析総括課リスク管理検査室室付 兼 監督局総務課課付 兼 監督局銀行第一課課付 兼 監督局銀行第二課課付",
+    "corporationSlug": "corporation-c5475d0e1fcfd649",
+    "corporationName": "みずほ電子債権記録株式会社",
+    "newPosition": "社外監査役",
+    "retirementDate": "2023-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 367,
+    "tags": [
+      "金融庁",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]
