@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 1096,
+  "remainingCount": 1095,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "11ec384713c033be45860988b5b90c7b4e1aeb789bd7263c743124cc258c2647",
-      "dedupeKey": "233093b89d3c8e4a0da6bf07b0d65501653fb08ba48f6c3d9a9521abedae9f7c",
-      "personName": "百瀬 卓",
-      "originMinistry": "金融庁",
-      "titleAtRetirement": "金融庁総合政策局リスク分析総括課専門検査官 兼 総合政策局リスク分析総括課リスク管理検査室室付 兼 監督局総務課課付 兼 監督局銀行第一課課付 兼 監督局銀行第二課課付",
-      "retirementDate": "2023-03-31",
-      "reemploymentDate": "2024-04-01",
-      "waitingDays": 367,
-      "corporationName": "みずほファクター株式会社",
-      "corporationType": "営利法人",
-      "newPosition": "顧問",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "金融庁"
-    },
     {
       "rawId": "c3581e8d1a7603914dcb5f69d11946cd4f875585cf0ef8caf09d5fbdac58827a",
       "dedupeKey": "cbe802f6eeca7a0e877691da4ae31489026f3244dbf50bea776adcce2b0a8272",

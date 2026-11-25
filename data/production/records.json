@@ -4286,5 +4286,21 @@
     "waitingDays": 367,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "11ec384713c033be45860988b5b90c7b4e1aeb789bd7263c743124cc258c2647",
+    "dedupeKey": "233093b89d3c8e4a0da6bf07b0d65501653fb08ba48f6c3d9a9521abedae9f7c",
+    "personSlug": "person-6253d9dec04c05e2",
+    "name": "百瀬 卓",
+    "fromMinistry": "金融庁",
+    "previousPosition": "金融庁総合政策局リスク分析総括課専門検査官 兼 総合政策局リスク分析総括課リスク管理検査室室付 兼 監督局総務課課付 兼 監督局銀行第一課課付 兼 監督局銀行第二課課付",
+    "corporationSlug": "corporation-775ad58ad3bd744a",
+    "corporationName": "みずほファクター株式会社",
+    "newPosition": "顧問",
+    "retirementDate": "2023-03-31",
+    "reemploymentDate": "2024-04-01",
+    "waitingDays": 367,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
