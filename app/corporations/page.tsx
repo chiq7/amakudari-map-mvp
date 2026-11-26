@@ -4,10 +4,12 @@ import { pageMetadata } from "@/lib/seo";
 import CorporationsDirectoryClient from "@/components/CorporationsDirectoryClient";
 import { corporations, totals } from "@/lib/static-content";
 import { corporationTypeGroups } from "@/lib/corporation-types";
+import { isSelfEmployed } from "@/lib/display-text";
 
 export const metadata = pageMetadata("天下り先の企業・法人一覧｜民間企業・公益法人などの再就職先", "国家公務員の公表記録に登場する再就職先を一覧で検索できます。民間企業、一般社団・財団法人、公益法人で絞り込み、各法人の収録人数、記録数、主な出身省庁を比較できます。", "/corporations");
 
 const featuredCorporations = [...corporations]
+  .filter((corporation) => !isSelfEmployed(corporation.name))
   .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name, "ja"))
   .slice(0, 20);
 

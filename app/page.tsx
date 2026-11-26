@@ -1,4 +1,4 @@
-import { formatDate } from "@/lib/display-text";
+import { formatDate, isSelfEmployed } from "@/lib/display-text";
 import Link from "next/link";
 import Image from "next/image";
 import { pageMetadata } from "@/lib/seo";
@@ -37,7 +37,7 @@ const latestExplainerCorporations = corporations.filter((corporation) =>
   latestExplainerCorporationSlugs.has(corporation.slug),
 );
 const recordRichCorporations = [...corporations]
-  .filter((corporation) => corporation.count > 1)
+  .filter((corporation) => corporation.count > 1 && !isSelfEmployed(corporation.name))
   .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name, "ja"));
 const featuredCorporations = [
   ...latestExplainerCorporations,

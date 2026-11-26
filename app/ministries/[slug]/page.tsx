@@ -6,7 +6,7 @@ import { Breadcrumb } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import MinistryRecordFinder from "@/components/MinistryRecordFinder";
 import { corporations, records, sources } from "@/lib/static-content";
-import { formatDate } from "@/lib/display-text";
+import { formatDate, isSelfEmployed } from "@/lib/display-text";
 import { ministryPages } from "@/lib/ministry-pages";
 import { newsArticles } from "@/lib/news";
 
@@ -74,7 +74,9 @@ export default async function MinistryPage(props: PageProps) {
       const days = Math.round(group.reduce((sum, record) => sum + record.waitingDays, 0) / group.length);
       return [{ corporation, people, count: group.length, waitingLabel: `${group.length > 1 ? "平均" : ""}${days}日` }];
     })
-    .sort((left, right) => right.count - left.count || left.corporation.name.localeCompare(right.corporation.name, "ja"));
+    .sort((left, right) =>
+      Number(isSelfEmployed(left.corporation.name)) - Number(isSelfEmployed(right.corporation.name)) ||
+      right.count - left.count || left.corporation.name.localeCompare(right.corporation.name, "ja"));
   const totalNextDay = ministryRecords.filter((record) => record.waitingDays === 1).length;
   const totalWithin30Days = ministryRecords.filter((record) => record.waitingDays <= 30).length;
   const corporationTypeCounts = Array.from(

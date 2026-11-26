@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import pageLastmodData from "@/data/production/page-lastmod.json";
-import { corporations, persons, publicOfficers } from "@/lib/static-content";
+import { corporations, persons, publicOfficers, selfEmployedCanonicalSlug, selfEmployedSlugs } from "@/lib/static-content";
 import { canonicalUrl } from "@/lib/seo";
 import { ministryPages } from "@/lib/ministry-pages";
 import { newsArticles } from "@/lib/news";
@@ -50,7 +50,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? { lastModified: toLastModified(article.dateModified) }
         : lastModifiedFor(`/news/${article.slug}`)),
     })),
-    ...corporations.map((corporation) => ({
+    ...corporations
+      .filter((corporation) => !selfEmployedSlugs.has(corporation.slug) || corporation.slug === selfEmployedCanonicalSlug)
+      .map((corporation) => ({
       url: canonicalUrl(`/corporations/${corporation.slug}`),
       ...lastModifiedFor(`/corporations/${corporation.slug}`),
     })),
@@ -70,10 +72,10 @@ const editorialDates: Record<string, string> = {
     "/data-policy": "2026-11-19",
     "/corporations": "2026-11-19",
     "/persons": "2026-11-19",
-    "/rankings": "2026-11-19",
+    "/rankings": "2026-11-27",
     "/retirement-estimator": "2026-11-19",
     "/about": "2026-11-19",
-    "/faq": "2026-11-19",
+    "/faq": "2026-11-27",
     "/privacy": "2026-11-19",
     "/terms": "2026-10-13",
     "/link-to-us": "2026-11-19",

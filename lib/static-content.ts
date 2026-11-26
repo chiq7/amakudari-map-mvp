@@ -1,5 +1,5 @@
 import corporationsData from "@/data/production/corporations.json";
-import { corporationDisplayName } from "@/lib/display-text";
+import { corporationDisplayName, isSelfEmployed } from "@/lib/display-text";
 import personsData from "@/data/production/persons.json";
 import rankingsData from "@/data/production/rankings.json";
 import recordsData from "@/data/production/records.json";
@@ -210,6 +210,13 @@ export const rankingLists = {
 };
 
 export const totals = rankings.totals;
+
+// 「自営」「自営業」は1ページにまとめ、「自営」側を代表のURLにする
+const selfEmployedCorporations = corporations.filter((corporation) => isSelfEmployed(corporation.name));
+export const selfEmployedCanonicalSlug =
+  (selfEmployedCorporations.find((corporation) => corporation.name === "自営") ?? selfEmployedCorporations[0])?.slug ?? "";
+export const selfEmployedSlugs = new Set(selfEmployedCorporations.map((corporation) => corporation.slug));
+
 
 export function getCorporation(slug: string) {
   return corporations.find((corporation) => corporation.slug === slug) ?? corporations[0];

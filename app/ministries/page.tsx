@@ -4,6 +4,7 @@ import { Breadcrumb } from "@/components/ui";
 import { ArrowRightIcon, MinistryIcon } from "@/components/icons";
 import { corporations, records } from "@/lib/static-content";
 import { getMinistryPath, ministryPages } from "@/lib/ministry-pages";
+import { isSelfEmployed } from "@/lib/display-text";
 
 export const metadata = pageMetadata(
   "省庁別の天下り先一覧｜出身省庁から再就職先の企業・法人を探す",
@@ -34,7 +35,7 @@ function summarize(name: string): MinistrySummary {
   const topCorporations = Array.from(countsByCorporation.entries())
     .flatMap(([slug, count]) => {
       const corporation = corporations.find((candidate) => candidate.slug === slug);
-      return corporation ? [{ slug, name: corporation.name, count, latest: latestByCorporation.get(slug) ?? "" }] : [];
+      return corporation && !isSelfEmployed(corporation.name) ? [{ slug, name: corporation.name, count, latest: latestByCorporation.get(slug) ?? "" }] : [];
     })
     .sort((left, right) => right.count - left.count || right.latest.localeCompare(left.latest) || left.name.localeCompare(right.name, "ja"))
     .slice(0, 3);
