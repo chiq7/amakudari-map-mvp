@@ -79,11 +79,30 @@ function hasMeaningfulData(value) {
   return value !== null && value !== undefined;
 }
 
+function newestFirst(items, dateField) {
+  return [...items].sort((left, right) =>
+    cleanDate(right[dateField]).localeCompare(cleanDate(left[dateField])),
+  );
+}
+
+// 発注元・交付元の機関ごとの件数（多い順に上位5つ）
+function departmentCounts(items) {
+  const counts = new Map();
+  for (const item of items) {
+    const name = cleanString(item.government_departments);
+    if (name) counts.set(name, (counts.get(name) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0], "ja"))
+    .slice(0, 5)
+    .map(([name, count]) => ({ name, count }));
+}
+
 function normalizeFinancialCollection(items, dateField, limit = 3) {
   if (!Array.isArray(items) || items.length === 0) return undefined;
   const amounts = items.map((item) => amountNumber(item.amount));
   const numericAmounts = amounts.filter((amount) => amount !== null);
-  const examples = items.slice(0, limit).map((item) =>
+  const examples = newestFirst(items, dateField).slice(0, limit).map((item) =>
     compactObject([
       ["title", cleanString(item.title)],
       ["amount", amountNumber(item.amount)],
@@ -99,6 +118,7 @@ function normalizeFinancialCollection(items, dateField, limit = 3) {
         ? numericAmounts.reduce((total, amount) => total + amount, 0)
         : undefined,
     ],
+    ["departments", departmentCounts(items)],
     ["examples", examples],
   ]);
 }
@@ -107,7 +127,7 @@ function normalizeNamedCollection(items, dateField, limit = 5) {
   if (!Array.isArray(items) || items.length === 0) return undefined;
   return {
     count: items.length,
-    examples: items.slice(0, limit).map((item) =>
+    examples: newestFirst(items, dateField).slice(0, limit).map((item) =>
       compactObject([
         ["title", cleanString(item.title)],
         ["date", cleanDate(item[dateField])],

@@ -76,6 +76,7 @@ export interface GbizInfoExample {
 export interface GbizInfoCollection {
   count: number;
   totalAmount?: number;
+  departments?: Array<{ name: string; count: number }>;
   examples: GbizInfoExample[];
 }
 

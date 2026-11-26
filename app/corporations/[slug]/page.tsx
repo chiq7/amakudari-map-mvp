@@ -24,7 +24,13 @@ function formatNumber(value: number) {
   return numberFormatter.format(value);
 }
 
+// 大きな金額は億・万で丸めて読みやすくする
 function formatCurrency(value: number) {
+  const absolute = Math.abs(value);
+  if (absolute >= 100_000_000) {
+    return `${(value / 100_000_000).toLocaleString("ja-JP", { maximumFractionDigits: absolute >= 10_000_000_000 ? 0 : 1 })}億円`;
+  }
+  if (absolute >= 10_000) return `${Math.round(value / 10_000).toLocaleString("ja-JP")}万円`;
   return `${formatNumber(value)}円`;
 }
 
@@ -55,6 +61,12 @@ function PublicDataCollection({
             : ""}
         </p>
       </div>
+      {collection.departments?.length ? (
+        <p className="mt-2 text-sm leading-6 text-primary">
+          <span className="font-semibold text-on-surface-variant">主な相手先：</span>
+          {collection.departments.map((department) => `${department.name}（${formatNumber(department.count)}件）`).join("・")}
+        </p>
+      ) : null}
       <ul className="mt-3 space-y-3">
         {collection.examples.map((example, index) => (
           <li
@@ -397,7 +409,7 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
           {topMinistry && (
             <TagChip href={`/corporations?ministry=${encodeURIComponent(topMinistry.name)}`}>{topMinistry.name}</TagChip>
           )}
-          {isSelfEmployedPage ? null : <TagChip href={`/corporations?type=${encodeURIComponent(corporation.type)}`}>{corporation.type}</TagChip>}
+          {isSelfEmployedPage || corporation.type === "未分類" ? null : <TagChip href={`/corporations?type=${encodeURIComponent(corporation.type)}`}>{corporation.type}</TagChip>}
           {corporation.region !== "不明" ? (
             <TagChip href={`/corporations?region=${encodeURIComponent(corporation.region)}`}>{corporation.region}</TagChip>
           ) : null}
@@ -444,9 +456,6 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
       {(corporation.basicInfo || corporation.gbizInfo) && (
         <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
           <h2 className="text-xl font-bold text-primary">法人概要</h2>
-          <p className="mt-1 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
-            gBizINFO・法人番号公表サイト・法人公式発表などの公開情報を整理しています。再就職情報とは独立した公的法人情報です。
-          </p>
           <dl className="mt-3 grid grid-cols-1 gap-x-6 gap-y-2.5 md:grid-cols-2">
             {corporation.gbizInfo?.representativeName && (
               <div>
@@ -482,11 +491,9 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
             )}
             {corporation.basicInfo &&
               [
-                ["所在地", corporation.basicInfo.registeredAddress],
-                ["都道府県", corporation.basicInfo.prefecture],
-                ["市区町村", corporation.basicInfo.city],
-                ["法人番号", corporation.basicInfo.corporateNumber],
                 ["正式名称", corporation.basicInfo.officialName],
+                ["所在地", corporation.basicInfo.registeredAddress],
+                ["法人番号", corporation.basicInfo.corporateNumber],
               ].map(([label, value]) => (
                 <div key={label}>
                   <dt className="text-sm font-semibold text-on-surface-variant">{label}</dt>
@@ -508,10 +515,7 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
         <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
-              <h2 className="text-xl font-bold text-primary">公的法人情報の詳細</h2>
-              <p className="mt-1 max-w-4xl text-sm leading-relaxed text-on-surface-variant">
-                gBizINFOで公開されている補助金・調達・認定などの情報です。再就職情報とは独立した公的法人情報として表示しています。
-              </p>
+              <h2 className="text-xl font-bold text-primary">国の補助金・調達などの記録</h2>
             </div>
           </div>
 
