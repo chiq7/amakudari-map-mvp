@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { persons, publicOfficers } from "@/lib/static-content";
-import { ArrowRightIcon } from "@/components/icons";
 import { SearchBox } from "@/components/ui";
 
 const ministryGroups = Array.from(
@@ -87,25 +86,9 @@ export default function PersonsPage() {
               <ul id={group.id} className="scroll-mt-20 divide-y divide-outline-variant lg:scroll-mt-40">
                 {group.people.map((person, personIndex) => (
                   <li key={`${person.slug}-${person.corporationSlug}-${personIndex}`}>
-                    <Link
-                      href={`/persons/${person.slug}`}
-                      className="group/row grid gap-1 px-4 py-3 transition hover:bg-surface-container-low md:grid-cols-[minmax(120px,0.7fr)_minmax(220px,1.2fr)_24px_minmax(220px,1.2fr)_auto] md:items-center md:gap-4"
-                    >
-                      <div>
-                        <h3 className="font-extrabold text-primary group-hover/row:text-secondary">{person.name}</h3>
-                        <p className="mt-1 text-xs font-bold text-on-surface-variant">待機 {person.waitDays}日</p>
-                      </div>
-                      <div>
-                        <p className="text-[11px] font-bold text-on-surface-variant md:hidden">離職時官職</p>
-                        <p className="text-sm leading-6 text-on-surface-variant">{person.formerPosition}</p>
-                      </div>
-                      <span className="hidden text-center text-outline md:block" aria-hidden="true">→</span>
-                      <div>
-                        <p className="text-[11px] font-bold text-on-surface-variant md:hidden">再就職先</p>
-                        <p className="text-sm font-bold leading-6 text-primary">{person.corporationName}</p>
-                        <p className="mt-0.5 text-xs leading-5 text-on-surface-variant">{person.newPosition}</p>
-                      </div>
-                      <ArrowRightIcon className="hidden shrink-0 text-outline transition group-hover/row:translate-x-1 group-hover/row:text-secondary md:block" size={18} />
+                    <Link href={`/persons/${person.slug}`} className="flex flex-wrap items-baseline gap-x-3 px-4 py-3 hover:bg-surface-container-low">
+                      <span className="font-extrabold text-primary">{person.name}</span>
+                      <span className="text-sm text-on-surface-variant">{person.corporationName}</span>
                     </Link>
                   </li>
                 ))}

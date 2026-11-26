@@ -179,7 +179,7 @@ export default async function MinistryPage(props: PageProps) {
           </Link>
         </div>
 
-        <div className="mt-4 grid gap-3 md:hidden">
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {matchingCorporations.map(({ corporation, people, waitingLabel }) => {
             return (
               <article key={corporation.slug} className="border border-outline-variant bg-surface-container-lowest p-5">
@@ -208,45 +208,6 @@ export default async function MinistryPage(props: PageProps) {
           })}
         </div>
 
-        <div className="mt-4 hidden max-w-full overflow-x-auto rounded-lg border border-outline-variant bg-surface-container-lowest md:block">
-          <table className="w-full min-w-[620px] text-left">
-            <caption className="sr-only">{ministry.name}出身者の再就職先法人と公表人物、待機日数</caption>
-            <thead className="border-b border-outline-variant bg-surface-container-low">
-              <tr>
-                <th scope="col" className="px-4 py-3 text-sm font-semibold text-on-surface-variant">法人名</th>
-                <th scope="col" className="px-4 py-3 text-sm font-semibold text-on-surface-variant">公表された人物</th>
-                <th scope="col" className="px-4 py-3 text-center text-sm font-semibold text-on-surface-variant">待機日数</th>
-                <th scope="col" className="px-4 py-3"><span className="sr-only">法人詳細</span></th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-outline-variant">
-              {matchingCorporations.map(({ corporation, people, waitingLabel }) => (
-                <tr key={corporation.slug} className="hover:bg-surface-container-low">
-                  <td className="px-4 py-4 font-bold text-primary">{corporation.name}</td>
-                  <td className="px-4 py-4">
-                    <ul className="space-y-1">
-                      {people.map((person) => (
-                        <li key={person.slug}>
-                          <Link href={`/persons/${person.slug}`} className="text-sm font-bold text-primary hover:text-secondary hover:underline">
-                            {person.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </td>
-                  <td className="px-4 py-4 text-center text-sm font-semibold text-primary">
-                    {waitingLabel}
-                  </td>
-                  <td className="px-4 py-4 text-right">
-                    <Link href={`/corporations/${corporation.slug}`} className="text-sm font-bold text-secondary hover:underline">
-                      <span className="sr-only">{corporation.name}の</span>詳細を見る
-                    </Link>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
       </section>
 
       <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
