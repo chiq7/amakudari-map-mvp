@@ -9,7 +9,7 @@ const navItems = [
   { href: "/corporations", label: "法人から探す", activeFor: ["/corporations", "/organizations"] },
   { href: "/topics", label: "省庁・テーマ", activeFor: ["/topics", "/ministries"] },
   { href: "/news", label: "ニュース・解説", activeFor: ["/news"] },
-  { href: "/rankings", label: "集計を見る", activeFor: ["/rankings"] },
+  { href: "/rankings", label: "ランキング", activeFor: ["/rankings"] },
   { href: "/retirement-estimator", label: "退職手当の目安", activeFor: ["/retirement-estimator"] },
 ];
 
