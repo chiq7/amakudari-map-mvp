@@ -12,7 +12,11 @@ const usedSourceIds = new Set([
   ...corporations.flatMap((corporation) => corporation.sources),
   ...publicOfficers.flatMap((officer) => officer.sourceIds),
 ]);
-const usedSources = sources.filter((source) => usedSourceIds.has(source.id) && new URL(source.url).pathname !== "/");
+// 法人ごとの法人番号・gBizINFO の照会ページは資料一覧に並べず、件数だけを1行で示す
+const isCorporationRegistrySource = (source: { id: string; url: string }) =>
+  source.id.startsWith("corporation-info-") || /(^|\.)gbiz\.go\.jp$/.test(new URL(source.url).hostname);
+const registrySourceCount = sources.filter((source) => usedSourceIds.has(source.id) && isCorporationRegistrySource(source)).length;
+const usedSources = sources.filter((source) => usedSourceIds.has(source.id) && new URL(source.url).pathname !== "/" && !isCorporationRegistrySource(source));
 const recordCorporations = new Set(records.map((record) => record.corporationSlug)).size;
 const allSources = [...new Map<string, {url: string; title: string; publisher: string}>([
   ...usedSources.map((source) => [source.url, source] as const),
@@ -45,9 +49,10 @@ export default function DataPolicyPage() {
         <h2 className="text-2xl font-extrabold text-primary">元資料・情報の提供元</h2>
         <p className="mt-3 leading-8 text-on-surface-variant">内閣官房などが公表した再就職情報、Gビズインフォの法人情報、法人の公式発表、制度に関する行政資料をもとに、天下りマップが検索・集計・解説用に整理しています。</p>
         <details className="mt-5 rounded-xl border border-outline-variant bg-white p-5">
-          <summary className="cursor-pointer font-bold text-primary">人物・法人・解説で使っている資料を見る（{allSources.length}件）</summary>
+          <summary className="cursor-pointer font-bold text-primary">人物・法人・解説で使っている資料を見る（{allSources.length + (registrySourceCount > 0 ? 1 : 0)}件）</summary>
           <ul className="mt-4 divide-y divide-outline-variant">
             {allSources.map((source) => <li key={source.url} className="py-3"><p className="text-xs text-on-surface-variant">{source.publisher}</p><a href={source.url} data-analytics-event="source_link" data-analytics-location="data_sources" className="mt-1 inline-block text-sm font-bold leading-6 text-secondary underline underline-offset-4">{source.title}</a></li>)}
+            {registrySourceCount > 0 ? <li className="py-3"><p className="text-xs text-on-surface-variant">経済産業省・国税庁</p><a href="https://info.gbiz.go.jp/" className="mt-1 inline-block text-sm font-bold leading-6 text-secondary underline underline-offset-4">Gビズインフォ・法人番号公表サイトの法人情報（{registrySourceCount}法人）</a></li> : null}
           </ul>
         </details>
       </section>

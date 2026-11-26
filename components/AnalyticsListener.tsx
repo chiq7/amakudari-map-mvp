@@ -8,6 +8,7 @@ import {
   trackEvent,
   trackPageEventWhenReady,
 } from "@/lib/analytics";
+import { getJourneyClickEvent } from "@/lib/journey-analytics";
 
 function getLocation(element: Element) {
   return (
@@ -54,6 +55,22 @@ export default function AnalyticsListener() {
       if (!anchor) return;
 
       const location = getLocation(anchor);
+      const { origin, pathname: pagePath } = window.location;
+      const url = new URL(anchor.href, origin);
+      const isSourceLink = anchor.dataset.analyticsEvent === "source_link";
+      const journeyEvent = getJourneyClickEvent({
+        pagePath,
+        origin,
+        location,
+        destination: url,
+        isSourceLink,
+        sourceType: anchor.dataset.sourceType,
+      });
+      if (journeyEvent) {
+        // The name alone is reportable. Do not add query strings or target URLs.
+        trackEvent(journeyEvent, { page_location: origin + pagePath, page_path: pagePath });
+      }
+
       if (anchor.dataset.experimentId) {
         trackEvent("click_experiment_cta", {
           cta_name: anchor.dataset.ctaName ?? "unknown",
@@ -69,7 +86,7 @@ export default function AnalyticsListener() {
         });
       }
 
-      if (anchor.dataset.analyticsEvent === "source_link") {
+      if (isSourceLink) {
         trackEvent("click_source_link", {
           source_type: getSourceType(anchor),
           location,
@@ -80,8 +97,7 @@ export default function AnalyticsListener() {
         trackEvent("click_contact_link", { location });
       }
 
-      const url = new URL(anchor.href, window.location.origin);
-      if (url.origin !== window.location.origin) return;
+      if (url.origin !== origin) return;
 
       const filterKeys = [
         "ministry",
