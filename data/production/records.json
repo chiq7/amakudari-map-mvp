@@ -4302,5 +4302,21 @@
     "waitingDays": 367,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "c3581e8d1a7603914dcb5f69d11946cd4f875585cf0ef8caf09d5fbdac58827a",
+    "dedupeKey": "cbe802f6eeca7a0e877691da4ae31489026f3244dbf50bea776adcce2b0a8272",
+    "personSlug": "person-73d4e03087dc1511",
+    "name": "天谷 知子",
+    "fromMinistry": "金融庁",
+    "previousPosition": "金融庁金融国際審議官 兼 総合政策局総務課IAIS年次総会準備室長",
+    "corporationSlug": "corporation-0b333eccb0e97109",
+    "corporationName": "東日本旅客鉄道株式会社",
+    "newPosition": "監査等委員である社外取締役",
+    "retirementDate": "2023-07-04",
+    "reemploymentDate": "2024-06-20",
+    "waitingDays": 352,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
