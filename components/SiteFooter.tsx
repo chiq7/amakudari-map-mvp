@@ -4,7 +4,9 @@ import { BrandMark } from "@/components/icons";
 const exploreLinks = [
   { href: "/persons", label: "人から探す" },
   { href: "/corporations", label: "法人から探す" },
-  { href: "/topics", label: "省庁・テーマから探す" },
+  { href: "/ministries", label: "省庁から探す" },
+  { href: "/topics", label: "テーマから探す" },
+  { href: "/rankings", label: "ランキング" },
   { href: "/news", label: "ニュース・解説" },
   { href: "/retirement-estimator", label: "退職手当の目安" },
 ];
@@ -20,10 +22,12 @@ const policyLinks = [
   { href: "/data-policy#contact", label: "お問い合わせ" },
 ];
 
+const footerButton = "inline-flex min-h-11 items-center rounded-lg border border-white/25 px-3 text-sm font-semibold text-white/85 transition hover:border-white hover:bg-white/10 hover:text-white";
+
 export default function SiteFooter() {
   return (
     <footer className="mt-20 border-t border-outline-variant bg-primary text-white">
-      <div className="mx-auto grid w-full max-w-[1280px] gap-10 px-4 py-12 md:grid-cols-[1.3fr_0.8fr_0.8fr] md:px-8 md:py-14">
+      <div className="mx-auto grid w-full max-w-[1280px] gap-10 px-4 py-12 md:grid-cols-[1fr_1fr_1.2fr] md:px-8 md:py-14">
         <div className="max-w-md">
           <Link href="/" className="inline-flex items-center gap-3">
             <BrandMark size={42} className="ring-1 ring-white/25" />
@@ -36,10 +40,10 @@ export default function SiteFooter() {
 
         <nav aria-label="データを探す">
           <p className="text-xs font-bold tracking-[0.12em] text-white/50">データを探す</p>
-          <ul className="mt-4 space-y-3">
+          <ul className="mt-4 flex flex-wrap gap-2">
             {exploreLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="text-sm font-semibold text-white/80 transition hover:text-white">
+                <Link href={link.href} className={footerButton}>
                   {link.label}
                 </Link>
               </li>
@@ -49,14 +53,14 @@ export default function SiteFooter() {
 
         <nav aria-label="サイト情報">
           <p className="text-xs font-bold tracking-[0.12em] text-white/50">サイト情報</p>
-          <ul className="mt-4 space-y-3">
+          <ul className="mt-4 flex flex-wrap gap-2">
             {policyLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   data-analytics-event={link.href.includes("#contact") ? "contact_link" : undefined}
                   data-analytics-location="site_footer"
-                  className="text-sm font-semibold text-white/80 transition hover:text-white"
+                  className={footerButton}
                 >
                   {link.label}
                 </Link>

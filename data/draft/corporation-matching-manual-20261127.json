@@ -1,0 +1,1303 @@
+{
+ "sourceType": "manual-corporation-matching",
+ "createdAt": "2026-11-27",
+ "method": "国税庁法人番号公表サイトで名称・都道府県を絞って検索し、本社所在地・元職の地域・役職から同一法人と判断できたものだけ反映。社名変更は変更履歴で同一法人を確認。閉鎖法人は除外。",
+ "applied": [
+  {
+   "corporationName": "株式会社リクルート",
+   "corporateNumber": "5010001149426",
+   "officialName": "株式会社リクルート"
+  },
+  {
+   "corporationName": "尼崎信用金庫",
+   "corporateNumber": "8140005010881",
+   "officialName": "尼崎信用金庫"
+  },
+  {
+   "corporationName": "辻・本郷税理士法人",
+   "corporateNumber": "1011105001880",
+   "officialName": "辻・本郷税理士法人"
+  },
+  {
+   "corporationName": "国立健康危機管理研究機構",
+   "corporateNumber": "1011105011401",
+   "officialName": "国立健康危機管理研究機構"
+  },
+  {
+   "corporationName": "日本銀行",
+   "corporateNumber": "3010005002599",
+   "officialName": "日本銀行"
+  },
+  {
+   "corporationName": "警察職員生活協同組合",
+   "corporateNumber": "4010005002490",
+   "officialName": "警察職員生活協同組合"
+  },
+  {
+   "corporationName": "株式会社あすた",
+   "corporateNumber": "6011001137262",
+   "officialName": "株式会社あすた"
+  },
+  {
+   "corporationName": "株式会社コロワイド",
+   "corporateNumber": "8020001040291",
+   "officialName": "株式会社コロワイド"
+  },
+  {
+   "corporationName": "株式会社ソユー",
+   "corporateNumber": "6410001003327",
+   "officialName": "株式会社ソユー"
+  },
+  {
+   "corporationName": "あかつき証券株式会社",
+   "corporateNumber": "9010001042585",
+   "officialName": "あかつき証券株式会社"
+  },
+  {
+   "corporationName": "日本年金機構",
+   "corporateNumber": "4011305001653",
+   "officialName": "日本年金機構"
+  },
+  {
+   "corporationName": "品川区",
+   "corporateNumber": "6000020131091",
+   "officialName": "品川区"
+  },
+  {
+   "corporationName": "住宅保証機構株式会社",
+   "corporateNumber": "1010401093871",
+   "officialName": "住宅保証機構株式会社"
+  },
+  {
+   "corporationName": "日本道路株式会社",
+   "corporateNumber": "9010401023409",
+   "officialName": "日本道路株式会社"
+  },
+  {
+   "corporationName": "税理士法人ガイア",
+   "corporateNumber": "3011505001165",
+   "officialName": "税理士法人ガイア"
+  },
+  {
+   "corporationName": "行政書士法人登録サポート",
+   "corporateNumber": "5010705002095",
+   "officialName": "行政書士法人登録サポート"
+  },
+  {
+   "corporationName": "宮地電機株式会社",
+   "corporateNumber": "9490001001221",
+   "officialName": "宮地電機株式会社"
+  },
+  {
+   "corporationName": "船橋市",
+   "corporateNumber": "6000020122041",
+   "officialName": "船橋市"
+  },
+  {
+   "corporationName": "熱海市",
+   "corporateNumber": "8000020222054",
+   "officialName": "熱海市"
+  },
+  {
+   "corporationName": "成田国際空港株式会社",
+   "corporateNumber": "9040001044645",
+   "officialName": "成田国際空港株式会社"
+  },
+  {
+   "corporationName": "株式会社カプコン",
+   "corporateNumber": "3120001077023",
+   "officialName": "株式会社カプコン"
+  },
+  {
+   "corporationName": "京都中央信用金庫",
+   "corporateNumber": "8130005004513",
+   "officialName": "京都中央信用金庫"
+  },
+  {
+   "corporationName": "近畿労働金庫",
+   "corporateNumber": "2120005004536",
+   "officialName": "近畿労働金庫"
+  },
+  {
+   "corporationName": "日本電設工業株式会社",
+   "corporateNumber": "6010501016240",
+   "officialName": "日本電設工業株式会社"
+  },
+  {
+   "corporationName": "日本通運株式会社",
+   "corporateNumber": "4010401022860",
+   "officialName": "日本通運株式会社"
+  },
+  {
+   "corporationName": "株式会社オリエンタルランド",
+   "corporateNumber": "3040001029379",
+   "officialName": "株式会社オリエンタルランド"
+  },
+  {
+   "corporationName": "丸紅株式会社",
+   "corporateNumber": "9010001008776",
+   "officialName": "丸紅株式会社"
+  },
+  {
+   "corporationName": "ニデック株式会社",
+   "corporateNumber": "9130001002387",
+   "officialName": "ニデック株式会社"
+  },
+  {
+   "corporationName": "株式会社近鉄エクスプレス",
+   "corporateNumber": "3010001014251",
+   "officialName": "株式会社近鉄エクスプレス"
+  },
+  {
+   "corporationName": "株式会社栄農人",
+   "corporateNumber": "4180301027183",
+   "officialName": "株式会社栄農人"
+  },
+  {
+   "corporationName": "国際航業株式会社",
+   "corporateNumber": "9010001008669",
+   "officialName": "国際航業株式会社"
+  },
+  {
+   "corporationName": "株式会社星電",
+   "corporateNumber": "5470001002274",
+   "officialName": "株式会社星電"
+  },
+  {
+   "corporationName": "日鉄興和不動産株式会社",
+   "corporateNumber": "8010401055238",
+   "officialName": "日鉄興和不動産株式会社"
+  },
+  {
+   "corporationName": "足立区",
+   "corporateNumber": "2000020131211",
+   "officialName": "足立区"
+  },
+  {
+   "corporationName": "税理士法人高津会計",
+   "corporateNumber": "3460405000538",
+   "officialName": "税理士法人高津会計"
+  },
+  {
+   "corporationName": "日本電気株式会社",
+   "corporateNumber": "7010401022916",
+   "officialName": "日本電気株式会社"
+  },
+  {
+   "corporationName": "学校法人花園学園",
+   "corporateNumber": "9130005004264",
+   "officialName": "学校法人花園学園"
+  },
+  {
+   "corporationName": "株式会社大創産業",
+   "corporateNumber": "7240001022681",
+   "officialName": "株式会社大創産業"
+  },
+  {
+   "corporationName": "株式会社ウィザス",
+   "corporateNumber": "9120001076820",
+   "officialName": "株式会社ウィザス"
+  },
+  {
+   "corporationName": "株式会社ツガミ",
+   "corporateNumber": "3010001101264",
+   "officialName": "株式会社ツガミ"
+  },
+  {
+   "corporationName": "株式会社小松製作所",
+   "corporateNumber": "1010401010455",
+   "officialName": "株式会社小松製作所"
+  },
+  {
+   "corporationName": "学校法人亀井学園",
+   "corporateNumber": "9011705000498",
+   "officialName": "学校法人亀井学園"
+  },
+  {
+   "corporationName": "第一警備保障株式会社",
+   "corporateNumber": "4290801002220",
+   "officialName": "第一警備保障株式会社"
+  },
+  {
+   "corporationName": "鹿島建設株式会社",
+   "corporateNumber": "8010401006744",
+   "officialName": "鹿島建設株式会社"
+  },
+  {
+   "corporationName": "株式会社ディー・エヌ・エー",
+   "corporateNumber": "4011001032721",
+   "officialName": "株式会社ディー・エヌ・エー"
+  },
+  {
+   "corporationName": "株式会社メディア工房",
+   "corporateNumber": "6010401040811",
+   "officialName": "株式会社メディア工房"
+  },
+  {
+   "corporationName": "株式会社オオバ",
+   "corporateNumber": "9013201001170",
+   "officialName": "株式会社オオバ"
+  },
+  {
+   "corporationName": "グローリー株式会社",
+   "corporateNumber": "5140001058614",
+   "officialName": "グローリー株式会社"
+  },
+  {
+   "corporationName": "イオンフィナンシャルサービス株式会社",
+   "corporateNumber": "2010001010887",
+   "officialName": "イオンフィナンシャルサービス株式会社"
+  },
+  {
+   "corporationName": "株式会社ミツハシ",
+   "corporateNumber": "9020001006861",
+   "officialName": "株式会社ミツハシ"
+  },
+  {
+   "corporationName": "株式会社大林組",
+   "corporateNumber": "7010401088742",
+   "officialName": "株式会社大林組"
+  },
+  {
+   "corporationName": "株式会社やまびこ",
+   "corporateNumber": "1013101005329",
+   "officialName": "株式会社やまびこ"
+  },
+  {
+   "corporationName": "税理士法人サンライズ",
+   "corporateNumber": "4110005015573",
+   "officialName": "税理士法人サンライズ"
+  },
+  {
+   "corporationName": "学校法人高木学園",
+   "corporateNumber": "7290005003797",
+   "officialName": "学校法人高木学園"
+  },
+  {
+   "corporationName": "日本化学産業株式会社",
+   "corporateNumber": "8010501016239",
+   "officialName": "日本化学産業株式会社"
+  },
+  {
+   "corporationName": "株式会社コアズ",
+   "corporateNumber": "1180001035761",
+   "officialName": "株式会社コアズ"
+  },
+  {
+   "corporationName": "学校法人国際学院",
+   "corporateNumber": "1030005000917",
+   "officialName": "学校法人国際学院"
+  },
+  {
+   "corporationName": "豊田通商株式会社",
+   "corporateNumber": "6180001031731",
+   "officialName": "豊田通商株式会社"
+  },
+  {
+   "corporationName": "株式会社辰巳商会",
+   "corporateNumber": "2120001029347",
+   "officialName": "株式会社辰巳商会"
+  },
+  {
+   "corporationName": "大成建設株式会社",
+   "corporateNumber": "4011101011880",
+   "officialName": "大成建設株式会社"
+  },
+  {
+   "corporationName": "加藤海運株式会社",
+   "corporateNumber": "8140001006909",
+   "officialName": "加藤海運株式会社"
+  },
+  {
+   "corporationName": "日本工営株式会社",
+   "corporateNumber": "2010001016851",
+   "officialName": "日本工営株式会社"
+  },
+  {
+   "corporationName": "株式会社不動産流通研究所",
+   "corporateNumber": "1010001142046",
+   "officialName": "株式会社不動産流通研究所"
+  },
+  {
+   "corporationName": "株式会社ダイナム",
+   "corporateNumber": "2011501007357",
+   "officialName": "株式会社ダイナム"
+  },
+  {
+   "corporationName": "株式会社SHIFT",
+   "corporateNumber": "8010401073462",
+   "officialName": "株式会社ＳＨＩＦＴ"
+  },
+  {
+   "corporationName": "株式会社NSD",
+   "corporateNumber": "1011101046616",
+   "officialName": "株式会社ＮＳＤ"
+  },
+  {
+   "corporationName": "学校法人国士舘",
+   "corporateNumber": "3010905000751",
+   "officialName": "学校法人國士舘"
+  },
+  {
+   "corporationName": "学校法人光華女子学園",
+   "corporateNumber": "1130005004230",
+   "officialName": "学校法人光華学園"
+  },
+  {
+   "corporationName": "医療法人社団東光会戸田中央リハビリテーション病院",
+   "corporateNumber": "5030005003016",
+   "officialName": "医療法人社団東光会"
+  },
+  {
+   "corporationName": "医療法人社団あしたば会富士在宅診療所",
+   "corporateNumber": "6080105005856",
+   "officialName": "医療法人社団あしたば会"
+  },
+  {
+   "corporationName": "トヨタ自動車株式会社",
+   "corporateNumber": "1180301018771",
+   "officialName": "トヨタ自動車株式会社"
+  },
+  {
+   "corporationName": "マツダ株式会社",
+   "corporateNumber": "3240001036223",
+   "officialName": "マツダ株式会社"
+  },
+  {
+   "corporationName": "日産自動車株式会社",
+   "corporateNumber": "9020001031109",
+   "officialName": "日産自動車株式会社"
+  },
+  {
+   "corporationName": "エヌ・ティ・ティ・インターネット株式会社",
+   "corporateNumber": "4010701026215",
+   "officialName": "ＮＴＴインターネット株式会社"
+  },
+  {
+   "corporationName": "マルハニチロ株式会社",
+   "corporateNumber": "2010601040697",
+   "officialName": "Ｕｍｉｏｓ株式会社"
+  },
+  {
+   "corporationName": "JPモルガン・チェ―ス銀行",
+   "corporateNumber": "7700150000813",
+   "officialName": "ジェー・ピー・モルガン・チェース・バンク・ナショナル・アソシエーション"
+  },
+  {
+   "corporationName": "学校法人白鷗大学",
+   "corporateNumber": "6060005005124",
+   "officialName": "学校法人白鴎大学"
+  },
+  {
+   "corporationName": "一般財団法人日本塗料工業会",
+   "corporateNumber": "8011005000134",
+   "officialName": "一般社団法人日本塗料工業会"
+  },
+  {
+   "corporationName": "一般社団法人JCCP国際石油・ガス・持続可能エネルギー協力機関",
+   "corporateNumber": "9013305001876",
+   "officialName": "一般財団法人ＪＣＣＰ国際石油・ガス・持続可能エネルギー協力機関"
+  },
+  {
+   "corporationName": "国立大学法人名古屋大学",
+   "corporateNumber": "3180005006071",
+   "officialName": "国立大学法人東海国立大学機構"
+  },
+  {
+   "corporationName": "株式会社リソー教育",
+   "corporateNumber": "2013301009186",
+   "officialName": "株式会社リソー教育グループ"
+  },
+  {
+   "corporationName": "日本冲荷役安全協会",
+   "corporateNumber": "8700150068107",
+   "officialName": "日本沖荷役安全協会"
+  },
+  {
+   "corporationName": "株式会社FPパートナー",
+   "corporateNumber": "8010001129227",
+   "officialName": "株式会社ＦＰパートナー"
+  },
+  {
+   "corporationName": "公益財団法人結核予防会複十字病院",
+   "corporateNumber": "2010005015593",
+   "officialName": "公益財団法人結核予防会"
+  },
+  {
+   "corporationName": "株式会社OCS",
+   "corporateNumber": "5010401006994",
+   "officialName": "株式会社ＯＣＳ"
+  },
+  {
+   "corporationName": "合同会社オフィスUK",
+   "corporateNumber": "5470003002693",
+   "officialName": "合同会社オフィスＵＫ"
+  },
+  {
+   "corporationName": "興和不動産投資顧問株式会社",
+   "corporateNumber": "9010401070772",
+   "officialName": "日鉄興和不動産投資顧問株式会社"
+  },
+  {
+   "corporationName": "MAC&BPミッドランド税理士法人",
+   "corporateNumber": "8180005005515",
+   "officialName": "ＭＡＣミッドランド税理士法人"
+  },
+  {
+   "corporationName": "Noster株式会社",
+   "corporateNumber": "4130001066940",
+   "officialName": "Ｎｏｓｔｅｒ株式会社"
+  },
+  {
+   "corporationName": "三重県",
+   "corporateNumber": "5000020240001",
+   "officialName": "三重県"
+  },
+  {
+   "corporationName": "宮城県",
+   "corporateNumber": "8000020040002",
+   "officialName": "宮城県"
+  },
+  {
+   "corporationName": "京都府庁",
+   "corporateNumber": "2000020260002",
+   "officialName": "京都府"
+  },
+  {
+   "corporationName": "文京区役所",
+   "corporateNumber": "6000020131059",
+   "officialName": "文京区"
+  },
+  {
+   "corporationName": "別府市教育委員会",
+   "corporateNumber": "3000020442020",
+   "officialName": "別府市"
+  }
+ ],
+ "remaining": [
+  {
+   "corporationName": "Mercer Japan Ltd.",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "医療用医薬品製造販売業公正取引協議会",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "株式会社CONNECT",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "八雲法律事務所",
+   "reason": "law-office-partnership-not-the-registered-entity"
+  },
+  {
+   "corporationName": "かがやき税理士法人",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "森・濱田松本法律事務所",
+   "reason": "law-office-partnership-not-the-registered-entity"
+  },
+  {
+   "corporationName": "西播商事株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "新電力開発株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "学校法人江戸川学園",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "Assegaf Hamzah&Partners法律事務所",
+   "reason": "law-office-partnership-not-the-registered-entity"
+  },
+  {
+   "corporationName": "中原和之法律事務所",
+   "reason": "law-office-partnership-not-the-registered-entity"
+  },
+  {
+   "corporationName": "長島・大野・常松法律事務所",
+   "reason": "law-office-partnership-not-the-registered-entity"
+  },
+  {
+   "corporationName": "東京フィナンシャルリサーチ株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "株式会社日本経済研究所",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "フレッシュフィールズブルックハウスデリンガー法律事務所",
+   "reason": "law-office-partnership-not-the-registered-entity"
+  },
+  {
+   "corporationName": "株式会社サイバージムジャパン",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "株式会社シー・エス・エム",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "リーテックス株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "自営",
+   "reason": "self-employed"
+  },
+  {
+   "corporationName": "医療法人緑栄会",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "富士古河E&C株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "北陸信越山岳観光索道協会",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "北陸信越鉄道協会",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "豊川晋次税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "司法書士しまやリーガルサービス",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "アスト株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "見坂茂範後援会",
+   "reason": "not-a-corporation"
+  },
+  {
+   "corporationName": "楫伸税理士・行政書士事務所",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "岡元敬浩税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "荻原和弥税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "平博成税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "佐賀野豊税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "木幡四郎税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "有限会社菅原企画",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "Cross-border税理士法人",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "株式会社シービーエス",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "城森和弘税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "関善光税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "関谷幸子税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "髙松博和税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "株式会社CGSコーポレーション",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "中川修税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "京都倉庫協会",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "永和不動産株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "株式会社クレイツ",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "萩原広作税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "株式会社リクサン",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "中国工業株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "藤原冬樹税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "九州バス協会",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "松井史浩税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "さくらパートナーズ合同会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "本谷憲泰税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "山崎正貴税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "大森建設株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "自営業",
+   "reason": "self-employed"
+  },
+  {
+   "corporationName": "高橋達也税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "株式会社ImpactEAST",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "YDK日本橋税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "学校法人千葉学園",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "大阪通関業会",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "不二製油株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "株式会社ポルテック",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "横浜通関業会",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "りんかい日産建設株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "冨士運輸株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "新洋海運株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "相互運輸株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "株式会社コバック",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "神鋼物流株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "アイディア株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "株式会社ジャパンM&Aインキュベーション",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "JPインベストメント株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "メディカル・マネジメント・プランニング・グループ",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "アンダーソン・毛利・友常法律事務所外国法共同事業",
+   "reason": "law-office-partnership-not-the-registered-entity"
+  },
+  {
+   "corporationName": "足立道夫税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "穴澤靖税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "尼﨑和朗税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "池田龍太郎税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "一般社団法人全国自治体ライドシェア連絡協議会",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "池戸哲郎税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "小原泰史税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "井坂好孝税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "石橋史祥税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "板倉弘至税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "株式会社アクテス",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "今村宏嗣税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "佐藤祐一税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "株式会社パスク",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "植木伸二税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "上野英二税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "関一也税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "松木技術士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "在バルバドス日本国大使館",
+   "reason": "not-a-corporation"
+  },
+  {
+   "corporationName": "梅川和哉税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "株式会社KSP",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "大隅秀樹税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "大関吉則税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "大竹泰彦税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "武田俊彦税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "大橋輝久税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "小川勝弘税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "梶原忍税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "余田幹男税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "加藤千博税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "加藤敏博税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "金田倫之税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "加納直人税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "川端正晃税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "北川健司税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "城戸孝輔税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "木村晃英税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "草薙雅弘税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "株式会社はなおか",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "窪田悟嗣税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "黒田豊税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "黒柳智税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "河之口幹夫税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "堀越倫世税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "小宮山敬光税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "青木裕介税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "株式会社STAGE",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "丸八興業株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "佐合一信税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "佐々木匡之税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "西田孝雄税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "常松佳吉税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "佐藤章寿税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "佐藤修税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "佐藤晃税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "佐藤寿一税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "佐藤秀春税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "鴫谷卓郎税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "島袋伸税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "本永愼三税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "清水良樹税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "下道正隆税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "白田徳秀税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "高橋英樹税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "髙橋学税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "絹川辰夫税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "日本医療サービス株式会社",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "但野浩司税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "唯間秀隆税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "田中厚税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "辻和伸税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "日本ワイナリー協会",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "長野康宏税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "中之薗裕司税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "株式会社佐々木会計事務所",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "佐々木德先税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "西川進税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "西野武税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "西原信一郎税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "野﨑隆範税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "野原久照税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "野平雄二税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "信本努税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "野村浩一税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "野村尚史税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "橋本盛夫税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "長谷川清彦税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "服部考一朗税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "税理士法人だいち",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "浜野靖史税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "林健太郎税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "林訓己税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "東山俊雄税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "久地正浩税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "久松泰雄税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "平江誠也税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "平澤裕紀子税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "平野裕司税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "福原俊之税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "藤岡龍二税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "藤田圭助税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "村松昇税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "船島芳文税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "袰田英一税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "本間伸幸税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "松浦剛税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "松沢玲子税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "森下昭彦税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "松下滋春税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "松㠀昌吾税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "松山清人税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "水谷孝広税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "三宅浩一税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "宮坂博人税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "税理士法人ティグレパートナーズ",
+   "reason": "unresolved-ambiguous-or-not-found"
+  },
+  {
+   "corporationName": "宮﨑潤税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "宮葉敏之税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "村本正浩税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "最上治税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "森貞夫税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "森文人税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "山﨑義久税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "山田晃央税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "山本茂税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "山夲雅人税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "横井克宏税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "横山隆税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "吉岡啓三税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "戸田強税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "吉川達也税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  },
+  {
+   "corporationName": "渡部高久税理士事務所",
+   "reason": "individual-office-no-corporate-number"
+  }
+ ]
+}
