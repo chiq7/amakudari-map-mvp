@@ -58,6 +58,7 @@ export default function CorporationsPage() {
             ["国土交通省", "/ministries/mlit"],
             ["経済産業省", "/ministries/meti"],
             ["警察庁", "/ministries/npa"],
+            ["法務省", "/ministries/moj"],
             ["総務省", "/ministries/mic"],
           ].map(([label, href]) => (
             <Link key={href} href={href} className="inline-flex min-h-11 items-center border border-secondary bg-white px-4 text-sm font-bold text-secondary hover:bg-secondary-fixed">
@@ -91,7 +92,7 @@ export default function CorporationsPage() {
       </section>
 
       <CorporationsDirectoryClient corporations={directoryCorporations} totals={directoryTotals} />
-      <noscript id="server-directory" suppressHydrationWarning><p>この画面の条件検索にはJavaScriptを使用します。下の法人名索引では全法人を閲覧できます。省庁別の公表記録は<Link href="/topics#ministry-list-title">省庁一覧</Link>から開けます。</p></noscript>
+      <noscript id="server-directory" suppressHydrationWarning><p>この画面の条件検索にはJavaScriptを使用します。下の法人名索引では全法人を閲覧できます。省庁別の公表記録は<Link href="/ministries">省庁一覧</Link>から開けます。</p></noscript>
       <details className="border-y border-outline-variant py-4">
         <summary className="cursor-pointer py-2 text-lg font-bold text-primary">掲載法人を名前から探す（{corporations.length}法人）</summary>
         <ul className="mt-4 grid gap-x-6 sm:grid-cols-2 lg:grid-cols-3">

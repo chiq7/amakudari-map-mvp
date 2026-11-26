@@ -104,7 +104,7 @@ export default async function MinistryPage(props: PageProps) {
       <Breadcrumb
         items={[
           { label: "TOP", href: "/" },
-          { label: "省庁別一覧", href: "/topics#ministry-list-title" },
+          { label: "省庁別一覧", href: "/ministries" },
           { label: ministry.name },
         ]}
       />

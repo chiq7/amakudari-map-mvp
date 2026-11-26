@@ -11,7 +11,7 @@ const questions: { question: string; answer: (string | { href: string; text: str
   },
   {
     question: "省庁ごとの再就職先を比較できますか？",
-    answer: [{ href: "/topics", text: "省庁・テーマの入口" }, "から省庁別ページへ進めます。", { href: "/rankings", text: "集計ページ" }, "では掲載記録数や待機日数を比べられます。"],
+    answer: [{ href: "/ministries", text: "省庁別一覧" }, "から省庁ごとのページへ進めます。", { href: "/rankings", text: "集計ページ" }, "では掲載記録数や待機日数を比べられます。"],
   },
   {
     question: "掲載件数は全国の再就職者の総数ですか？",

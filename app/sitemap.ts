@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/rankings",
     "/corporations",
     "/persons",
+    "/ministries",
     "/data-policy",
     "/about",
     "/retirement-estimator",

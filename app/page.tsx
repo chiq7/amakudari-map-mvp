@@ -8,7 +8,6 @@ import {
   meta,
   recordCoverage,
   records,
-  topics,
   totals,
 } from "@/lib/static-content";
 import { newsArticles } from "@/lib/news";
@@ -21,7 +20,7 @@ import {
   NewsIcon,
   PersonIcon,
 } from "@/components/icons";
-import { getMinistryPath } from "@/lib/ministry-pages";
+import { getMinistryPath, ministryPages } from "@/lib/ministry-pages";
 
 const homeTitle = "天下りとは？ 意味と省庁別の天下り先・企業一覧";
 export const metadata = {
@@ -59,27 +58,19 @@ const featuredCorporationCards = featuredCorporations.map((corporation) => {
   };
 });
 
-const ministryTopic = topics.find((topic) => topic.queryKey === "ministry");
-const ministryItems = ministryTopic?.items ?? [
-  "国土交通省",
-  "経済産業省",
-  "厚生労働省",
-  "総務省",
-  "警察庁",
-  "内閣府",
-];
-const featuredMinistries = [
-  "財務省",
-  "国土交通省",
-  ...ministryItems.filter((name) => name !== "財務省" && name !== "国土交通省"),
-]
-  .map((name) => ({
-    name,
-    path: getMinistryPath(name),
-    corporationCount: new Set(records.filter((record) => record.fromMinistry === name).map((record) => record.corporationSlug)).size,
-  }))
+// 省庁ページがある省庁を、公表記録の多い順にすべて並べる
+const featuredMinistries = ministryPages
+  .map(({ name }) => {
+    const ministryRecords = records.filter((record) => record.fromMinistry === name);
+    return {
+      name,
+      path: getMinistryPath(name),
+      recordCount: ministryRecords.length,
+      corporationCount: new Set(ministryRecords.map((record) => record.corporationSlug)).size,
+    };
+  })
   .filter((ministry) => ministry.corporationCount > 0)
-  .slice(0, 6);
+  .sort((left, right) => right.recordCount - left.recordCount || left.name.localeCompare(right.name, "ja"));
 
 function SectionHeading({
   eyebrow,
@@ -123,7 +114,7 @@ function SearchIntentSection() {
         <h2 className="text-base font-extrabold text-primary">天下り先とは？</h2>
         <p className="mt-1 text-pretty text-sm leading-relaxed text-on-surface-variant">こうした再就職で職員を受け入れる企業や団体を指す言い方です。ここでは公表された再就職先を一覧にまとめ、株式会社のほか学校法人や公益法人も掲載しています。</p>
         <div className="mt-2 flex flex-wrap gap-2">
-          <Link href="/topics" className={listLink}>
+          <Link href="/ministries" className={listLink}>
             省庁別一覧 <ArrowRightIcon size={15} />
           </Link>
           <Link href="/corporations" className={listLink}>
@@ -323,7 +314,7 @@ export default function Home() {
             <Link href="/corporations" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-4 text-primary shadow-sm transition hover:-translate-y-0.5">
               <BuildingIcon size={18} /> 法人から探す <ArrowRightIcon size={15} />
             </Link>
-            <Link href="/topics" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-4 text-primary shadow-sm transition hover:-translate-y-0.5">
+            <Link href="/ministries" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-4 text-primary shadow-sm transition hover:-translate-y-0.5">
               <MinistryIcon size={18} /> 省庁から探す <ArrowRightIcon size={15} />
             </Link>
           </div>
@@ -439,8 +430,8 @@ export default function Home() {
             eyebrow="BROWSE BY MINISTRY"
             title="省庁から関係をたどる"
           />
-          <Link href="/topics" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-secondary hover:underline">
-            すべての省庁・テーマを見る <ArrowRightIcon size={17} />
+          <Link href="/ministries" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-secondary hover:underline">
+            すべての省庁を見る <ArrowRightIcon size={17} />
           </Link>
         </div>
         <div className="grid gap-2 sm:grid-cols-2">
@@ -450,15 +441,15 @@ export default function Home() {
               href={ministry.path}
               className="group flex min-h-16 items-center justify-between gap-3 rounded-2xl bg-white px-4 py-3 font-bold text-primary shadow-sm ring-1 ring-outline-variant/50 transition hover:ring-secondary/30"
             >
-              <span className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-secondary-fixed text-secondary">
+              <span className="flex min-w-0 items-center gap-3">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-secondary-fixed text-secondary">
                   <MinistryIcon size={18} />
                 </span>
-                {ministry.name}
+                <span className="whitespace-nowrap">{ministry.name}</span>
               </span>
-              <span className="flex shrink-0 items-center gap-3">
+              <span className="flex shrink-0 items-center gap-2">
                 <span className="text-xs font-bold text-on-surface-variant">
-                  {ministry.path.startsWith("/ministries/") ? `再就職先 ${ministry.corporationCount}法人` : "関連法人を絞り込む"}
+                  {`${ministry.corporationCount}法人`}
                 </span>
                 <ArrowRightIcon className="text-outline transition group-hover:translate-x-1 group-hover:text-secondary" size={16} />
               </span>
