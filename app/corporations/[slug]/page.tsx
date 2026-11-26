@@ -180,7 +180,7 @@ function ReemploymentRecordList({ entries }: { entries: ReemploymentRecord[] }) 
               <div>
                 <p className="text-xs font-bold text-on-surface-variant">{record.fromMinistry}</p>
                 <h3 className="mt-1 text-xl font-extrabold text-primary">
-                  <Link href={`/persons/${record.personSlug}`} className="hover:underline">{record.name}</Link>
+                  <Link href={`/persons/${record.personSlug}`} className="hover:text-secondary">{record.name}</Link>
                 </h3>
               </div>
               <span className="shrink-0 border border-secondary/20 bg-secondary-fixed px-2 py-1 text-xs font-extrabold text-secondary">
@@ -234,7 +234,7 @@ function PublicOfficerSection({ corporation }: { corporation: Corporation }) {
               <div>
                 <p className="text-xs font-bold text-on-surface-variant">{officer.formerOrganization}での経歴</p>
                 <h3 className="mt-1 text-2xl font-extrabold leading-tight text-primary">
-                  <Link href={`/public-officers/${officer.slug}`} className="hover:underline">
+                  <Link href={`/public-officers/${officer.slug}`} className="hover:text-secondary">
                     {officer.name}
                   </Link>
                 </h3>
@@ -260,9 +260,9 @@ function PublicOfficerSection({ corporation }: { corporation: Corporation }) {
             <p className="mt-4 text-sm leading-7 text-on-surface-variant">{officer.profile}</p>
             <Link
               href={`/public-officers/${officer.slug}`}
-              className="mt-4 inline-flex min-h-11 items-center border-b-2 border-secondary text-sm font-extrabold text-secondary hover:border-primary hover:text-primary"
+              className={`mt-4 ${buttonLink}`}
             >
-              人物詳細を見る →
+              人物詳細を見る
             </Link>
           </article>
         ))}
@@ -450,7 +450,7 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
 
       {relatedRecords.length > 0 ? <ReemploymentRecordList entries={relatedRecords} /> : null}
       {relatedArticles.length ? <section aria-label="この法人に関する解説"><h2 className="text-xl font-bold text-primary">この法人に関する解説</h2>
-        <ul className="mt-2 space-y-2">{relatedArticles.map((article) => <li key={article.slug}><Link href={`/news/${article.slug}`} className="font-semibold text-secondary underline">{article.title}</Link></li>)}</ul>
+        <ul className="mt-3 grid gap-2 md:grid-cols-2">{relatedArticles.map((article) => <li key={article.slug}><Link href={`/news/${article.slug}`} className="block h-full rounded-lg border border-outline-variant bg-white px-4 py-3 text-sm font-bold leading-6 text-primary transition hover:border-secondary hover:text-secondary">{article.title}</Link></li>)}</ul>
       </section> : null}
 
       {(corporation.basicInfo || corporation.gbizInfo) && (
@@ -736,3 +736,4 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
   );
 }
 import { pageMetadata } from "@/lib/seo";
+import { buttonLink } from "@/lib/ui-classes";

@@ -5,6 +5,7 @@ import CorporationsDirectoryClient from "@/components/CorporationsDirectoryClien
 import { corporations, totals } from "@/lib/static-content";
 import { corporationTypeGroups } from "@/lib/corporation-types";
 import { isSelfEmployed } from "@/lib/display-text";
+import { buttonLink } from "@/lib/ui-classes";
 
 export const metadata = pageMetadata("天下り先の企業・法人一覧｜民間企業・公益法人などの再就職先", "国家公務員の公表記録に登場する再就職先を一覧で検索できます。民間企業、一般社団・財団法人、公益法人で絞り込み、各法人の収録人数、記録数、主な出身省庁を比較できます。", "/corporations");
 
@@ -62,7 +63,7 @@ export default function CorporationsPage() {
             ["総務省", "/ministries/mic"],
           ].map(([label, href]) => (
             <Link key={href} href={href} className="inline-flex min-h-11 items-center border border-secondary bg-white px-4 text-sm font-bold text-secondary hover:bg-secondary-fixed">
-              {label}の天下り先一覧 →
+              {label}の天下り先一覧
             </Link>
           ))}
         </div>
@@ -74,8 +75,8 @@ export default function CorporationsPage() {
             <h2 id="featured-corporations-title" className="text-2xl font-bold text-primary">公表記録数が多い法人</h2>
             <p className="mt-1 text-sm leading-relaxed text-on-surface-variant">まずは主要な法人から、人物・出身省庁・業務内容をたどれます。</p>
           </div>
-          <Link href="/corporations?show=all#corporation-search-tools" className="text-sm font-bold text-secondary hover:underline">
-            すべての法人を検索・絞り込む →
+          <Link href="/corporations?show=all#corporation-search-tools" className={buttonLink}>
+            すべての法人を検索・絞り込む
           </Link>
         </div>
         <ul className="mt-5 divide-y divide-outline-variant border-y border-outline-variant">
@@ -84,7 +85,7 @@ export default function CorporationsPage() {
               <Link href={`/corporations/${corporation.slug}`} className="grid gap-2 px-1 py-4 transition hover:bg-surface-container-low sm:grid-cols-[minmax(0,1fr)_auto_auto] sm:items-center sm:gap-5">
                 <span className="font-bold text-primary">{corporation.name}</span>
                 <span className="text-sm text-on-surface-variant">主な出身省庁：{corporation.topMinistry}</span>
-                <span className="text-sm font-extrabold text-secondary">収録 {peopleByCorporation.get(corporation.slug)?.size ?? 0}人・再就職記録 {corporation.count}件 →</span>
+                <span className="text-sm font-extrabold text-secondary">収録 {peopleByCorporation.get(corporation.slug)?.size ?? 0}人・再就職記録 {corporation.count}件</span>
               </Link>
             </li>
           ))}
@@ -98,7 +99,7 @@ export default function CorporationsPage() {
         <ul className="mt-4 grid gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
           {[...corporations].sort((left, right) => left.name.localeCompare(right.name, "ja")).map((corporation) => (
             <li key={corporation.slug}>
-              <Link href={`/corporations/${corporation.slug}`} className="inline-flex min-h-11 items-center text-sm text-secondary underline underline-offset-4">
+              <Link href={`/corporations/${corporation.slug}`} className="inline-flex min-h-11 items-center text-sm text-primary hover:text-secondary">
                 {corporation.name}
               </Link>
             </li>

@@ -100,9 +100,9 @@ export default function PersonsPage() {
         <section>
           <h2 className="text-xl font-bold text-primary">法人が公表した役員の略歴</h2>
           <p className="mt-2 text-sm text-on-surface-variant">法人の公式発表で確認した役職と元所属です。</p>
-          <ul className="mt-3 space-y-2">
+          <ul className="mt-3 grid gap-2 md:grid-cols-2">
             {publicOfficers.map((officer) => (
-              <li key={officer.slug}><Link className="font-bold text-secondary underline" href={`/public-officers/${officer.slug}`}>{officer.name}氏（{officer.corporationName}・{officer.role}）</Link></li>
+              <li key={officer.slug}><Link className="block h-full rounded-lg border border-outline-variant bg-white px-4 py-3 text-sm font-bold leading-6 text-primary transition hover:border-secondary hover:text-secondary" href={`/public-officers/${officer.slug}`}>{officer.name}氏（{officer.corporationName}・{officer.role}）</Link></li>
             ))}
           </ul>
         </section>

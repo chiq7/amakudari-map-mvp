@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { CONTACT_EMAIL } from "@/lib/site-contact";
+import { buttonLink } from "@/lib/ui-classes";
 
 export default function InformationProvisionForm() {
   const [status, setStatus] = useState("");
@@ -56,7 +57,7 @@ export default function InformationProvisionForm() {
       {status ? <p role="status" className="text-sm text-on-surface-variant">{status}</p> : null}
       {draft ? <div className="grid gap-3"><label className="text-sm font-bold">作成したメール本文
         <textarea value={draft} readOnly rows={5} className="mt-1 w-full rounded border border-outline-variant bg-white p-3 font-normal" />
-      </label><a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("天下りマップへのご連絡")}&body=${encodeURIComponent(draft)}`} className="w-fit font-bold text-secondary underline">メールアプリで下書きを開く</a></div> : null}
+      </label><a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("天下りマップへのご連絡")}&body=${encodeURIComponent(draft)}`} className={buttonLink}>メールアプリで下書きを開く</a></div> : null}
     </form>
   );
 }

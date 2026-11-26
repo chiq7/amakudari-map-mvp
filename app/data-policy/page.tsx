@@ -5,6 +5,7 @@ import InformationProvisionForm from "@/components/InformationProvisionForm";
 import { records, recordCoverage, sources, corporations, persons, publicOfficers, meta } from "@/lib/static-content";
 import { newsArticles } from "@/lib/news";
 import { SITE_OPERATOR, CONTACT_EMAIL, CONTACT_EMAIL_HREF } from "@/lib/site-contact";
+import { buttonLink } from "@/lib/ui-classes";
 
 const usedSourceIds = new Set([
   ...records.map((record) => record.sourceId),
@@ -51,17 +52,23 @@ export default function DataPolicyPage() {
         <details className="mt-5 rounded-xl border border-outline-variant bg-white p-5">
           <summary className="cursor-pointer font-bold text-primary">人物・法人・解説で使っている資料を見る（{allSources.length + (registrySourceCount > 0 ? 1 : 0)}件）</summary>
           <ul className="mt-4 divide-y divide-outline-variant">
-            {allSources.map((source) => <li key={source.url} className="py-3"><p className="text-xs text-on-surface-variant">{source.publisher}</p><a href={source.url} data-analytics-event="source_link" data-analytics-location="data_sources" className="mt-1 inline-block text-sm font-bold leading-6 text-secondary underline underline-offset-4">{source.title}</a></li>)}
-            {registrySourceCount > 0 ? <li className="py-3"><p className="text-xs text-on-surface-variant">経済産業省・国税庁</p><a href="https://info.gbiz.go.jp/" className="mt-1 inline-block text-sm font-bold leading-6 text-secondary underline underline-offset-4">Gビズインフォ・法人番号公表サイトの法人情報（{registrySourceCount}法人）</a></li> : null}
+            {allSources.map((source) => <li key={source.url}><a href={source.url} data-analytics-event="source_link" data-analytics-location="data_sources" className="block rounded-lg px-3 py-3 transition hover:bg-surface-container-low"><span className="block text-xs text-on-surface-variant">{source.publisher}</span><span className="mt-1 block text-sm font-bold leading-6 text-primary">{source.title}</span></a></li>)}
+            {registrySourceCount > 0 ? <li><a href="https://info.gbiz.go.jp/" className="block rounded-lg px-3 py-3 transition hover:bg-surface-container-low"><span className="block text-xs text-on-surface-variant">経済産業省・国税庁</span><span className="mt-1 block text-sm font-bold leading-6 text-primary">Gビズインフォ・法人番号公表サイトの法人情報（{registrySourceCount}法人）</span></a></li> : null}
           </ul>
         </details>
       </section>
 
       <section id="dataset-license" className="border-t border-outline-variant pt-6">
         <h2 className="text-2xl font-extrabold text-primary">データの利用条件</h2>
-        <p className="mt-3 leading-8 text-on-surface-variant">公表データを再利用する場合は、提供元の利用条件を確認してください。編集・加工した内容は、その旨と元資料の提供元・URLを示し、行政機関や法人が作成した原資料そのものと区別してください。当サイト独自の文章・画像の利用は<Link href="/terms" className="font-bold text-secondary underline">利用規約</Link>、紹介用素材は<Link href="/link-to-us" className="font-bold text-secondary underline">リンク・紹介素材</Link>で案内します。</p>
-        <ul className="mt-3 space-y-2 text-sm"><li><a href="https://www.cas.go.jp/jp/tyosakuken/index.html" className="text-secondary underline">内閣官房のコピーライトポリシー</a></li><li><a href="https://help.info.gbiz.go.jp/hc/ja/articles/4795140981406-%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84" className="text-secondary underline">Gビズインフォの利用規約</a></li></ul>
-        <p className="mt-2 text-sm leading-7 text-on-surface-variant">規約ページにアクセス確認画面が表示された場合は、<a href="https://info.gbiz.go.jp/" className="font-semibold text-secondary underline">Gビズインフォのトップページ</a>からも利用案内を開けます。</p>
+        <p className="mt-3 leading-8 text-on-surface-variant">公表データを再利用する場合は、提供元の利用条件を確認してください。編集・加工した内容は、その旨と元資料の提供元・URLを示し、行政機関や法人が作成した原資料そのものと区別してください。当サイト独自の文章・画像の利用は利用規約、紹介用素材はリンク・紹介素材で案内しています。</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <a href="https://www.cas.go.jp/jp/tyosakuken/index.html" className={buttonLink}>内閣官房のコピーライトポリシー</a>
+          <a href="https://help.info.gbiz.go.jp/hc/ja/articles/4795140981406-%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84" className={buttonLink}>Gビズインフォの利用規約</a>
+          <a href="https://info.gbiz.go.jp/" className={buttonLink}>Gビズインフォのトップページ</a>
+          <Link href="/terms" className={buttonLink}>利用規約</Link>
+          <Link href="/link-to-us" className={buttonLink}>リンク・紹介素材</Link>
+        </div>
+        <p className="mt-2 text-sm leading-7 text-on-surface-variant">Gビズインフォの規約ページにアクセス確認画面が表示された場合は、Gビズインフォのトップページからも利用案内を開けます。</p>
       </section>
 
       <section className="grid gap-4 md:grid-cols-3">
@@ -85,13 +92,13 @@ export default function DataPolicyPage() {
       <section id="contact" className="scroll-mt-36 border border-outline-variant bg-surface-container-low p-6 text-center">
         <h2 className="text-2xl font-extrabold text-primary">情報提供・お問い合わせ</h2>
         <p className="mt-3 text-sm text-on-surface-variant">{SITE_OPERATOR}</p>
-        <a href={CONTACT_EMAIL_HREF} className="mt-3 inline-block break-all text-lg font-bold text-secondary underline underline-offset-4">{CONTACT_EMAIL}</a>
+        <a href={CONTACT_EMAIL_HREF} className={`mx-auto mt-3 break-all ${buttonLink}`}>{CONTACT_EMAIL}</a>
         <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-on-surface-variant">下のフォームで連絡文を用意し、メールアプリで内容を確認して送信してください。</p>
         <InformationProvisionForm />
       </section>
 
       <InternationalDataGuide />
-      <Link href="/" className="text-sm font-bold text-secondary hover:underline">TOPへ戻る →</Link>
+      <Link href="/" className={buttonLink}>TOPへ戻る</Link>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import { corporations, records } from "@/lib/static-content";
 import { formatDate, isSelfEmployed } from "@/lib/display-text";
 import { ministryPages } from "@/lib/ministry-pages";
 import { newsArticles } from "@/lib/news";
+import { buttonLink } from "@/lib/ui-classes";
 
 const INITIAL_CORPORATIONS = 24;
 
@@ -98,14 +99,14 @@ export default async function MinistryPage(props: PageProps) {
     .slice(0, 4);
   const renderCorporation = ({ corporation, people, waitingLabel }: (typeof matchingCorporations)[number]) => (
     <article key={corporation.slug} className="rounded-xl bg-white p-4 ring-1 ring-outline-variant/60">
-      <Link href={`/corporations/${corporation.slug}`} className="font-extrabold leading-6 text-primary hover:text-secondary hover:underline">
+      <Link href={`/corporations/${corporation.slug}`} className="font-extrabold leading-6 text-primary hover:text-secondary">
         {corporation.name}
       </Link>
       <p className="mt-2 text-sm leading-6 text-on-surface-variant">
         {people.map((person, index) => (
           <span key={person.slug}>
             {index > 0 ? "・" : ""}
-            <Link href={`/persons/${person.slug}`} className="font-bold text-primary hover:underline">{person.name}</Link>
+            <Link href={`/persons/${person.slug}`} className="font-bold text-primary hover:text-secondary">{person.name}</Link>
           </span>
         ))}
         <span className="ml-2 whitespace-nowrap text-xs">待機 {waitingLabel}</span>
@@ -141,10 +142,10 @@ export default async function MinistryPage(props: PageProps) {
         <ShareButton title={`${ministry.name}の天下り先一覧 | 天下りマップ`} />
       </section>
 
-      {ministry.slug === "meti" ? <p className="text-sm leading-7 text-on-surface-variant">
-        この一覧には、複数年度にわたり当サイトが収録した{entries.length}件を掲載しています。
-        <Link href="/news/meti-reemployment-disclosure-fy2025" className="font-semibold text-secondary underline">令和7年度の公表表で数えた74件の解説</Link>では、同年度の離職後の事後届出を集計しています。
-      </p> : null}
+      {ministry.slug === "meti" ? <div className="text-sm leading-7 text-on-surface-variant">
+        <p>この一覧には、複数年度にわたり当サイトが収録した{entries.length}件を掲載しています。令和7年度の公表表で数えた74件の解説では、同年度の離職後の事後届出を集計しています。</p>
+        <Link href="/news/meti-reemployment-disclosure-fy2025" className={`mt-2 ${buttonLink}`}>令和7年度の74件の解説を読む</Link>
+      </div> : null}
 
       <section className="grid grid-cols-2 gap-3 md:max-w-xl">
         {[
@@ -173,7 +174,7 @@ export default async function MinistryPage(props: PageProps) {
                 className="rounded-lg border border-outline-variant bg-white px-4 py-3 transition hover:border-secondary hover:bg-secondary-fixed"
               >
                 <span className="block text-sm font-bold text-primary">{type}</span>
-                <span className="mt-1 block text-sm font-extrabold text-secondary">公表記録 {count}件 →</span>
+                <span className="mt-1 block text-sm font-extrabold text-secondary">公表記録 {count}件</span>
               </Link>
             ))}
           </div>
@@ -188,7 +189,7 @@ export default async function MinistryPage(props: PageProps) {
               公表記録の多い順に表示しています。法人名から就任時の役職と業務内容を確認できます。
             </p>
           </div>
-          <Link href={`/corporations?ministry=${encodeURIComponent(ministry.name)}`} className="text-sm font-bold text-secondary hover:underline">
+          <Link href={`/corporations?ministry=${encodeURIComponent(ministry.name)}`} className={buttonLink}>
             条件を変えて法人検索する
           </Link>
         </div>
@@ -231,8 +232,8 @@ export default async function MinistryPage(props: PageProps) {
           <p className="mt-1 text-sm leading-relaxed text-on-surface-variant">
             再就職制度と記録の見方を、具体例とともに解説しています。
           </p>
-          <Link href={`/news/${disclosureGuide.slug}`} className="mt-4 inline-flex text-sm font-bold text-secondary hover:underline">
-            {disclosureGuide.title} →
+          <Link href={`/news/${disclosureGuide.slug}`} className={`mt-4 text-left ${buttonLink}`}>
+            {disclosureGuide.title}
           </Link>
         </section>
       ) : null}

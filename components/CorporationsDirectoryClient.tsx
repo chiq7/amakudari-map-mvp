@@ -8,6 +8,7 @@ import { SearchBox, TagChip } from "@/components/ui";
 import { ArrowRightIcon, BuildingIcon } from "@/components/icons";
 
 import { getDirectoryPage, type DirectoryCorporation } from "@/lib/directory-filters";
+import { buttonLink } from "@/lib/ui-classes";
 
 type DirectoryProps = {
   corporations: DirectoryCorporation[];
@@ -57,7 +58,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
             <h2 className="text-xl font-bold text-primary">
               {primaryFilter ? primaryFilter.heading : "絞り込み中"}
             </h2>
-            <Link href="/corporations?show=all" className="text-sm font-bold text-secondary hover:underline">
+            <Link href="/corporations?show=all" className={buttonLink}>
               すべての法人を見る
             </Link>
           </div>
@@ -164,7 +165,7 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
                   </td>
                   <td className="px-4 py-4 text-center text-sm font-semibold text-primary">{corporation.averageWaitDays}日</td>
                   <td className="px-4 py-4 text-right">
-                    <Link href={`/corporations/${corporation.slug}`} className="text-sm font-bold text-secondary hover:underline">
+                    <Link href={`/corporations/${corporation.slug}`} className={`whitespace-nowrap ${buttonLink}`}>
                       <span className="sr-only">{corporation.name}の</span>詳細を見る
                     </Link>
                   </td>
@@ -175,16 +176,16 @@ function CorporationsContent({ corporations, totals }: DirectoryProps) {
           </div>
           {pageCount > 1 ? (
             <nav aria-label="法人一覧のページ送り" className="flex flex-wrap items-center justify-center gap-4 border-t border-outline-variant pt-4 text-sm font-bold">
-              {page > 1 ? <Link href={pageHref(page - 1)} className="inline-flex min-h-11 items-center px-4 text-secondary underline">前の20法人</Link> : null}
+              {page > 1 ? <Link href={pageHref(page - 1)} className={buttonLink}>前の20法人</Link> : null}
               <span>{page} / {pageCount} ページ</span>
-              {page < pageCount ? <Link href={pageHref(page + 1)} className="inline-flex min-h-11 items-center px-4 text-secondary underline">次の法人を見る</Link> : null}
+              {page < pageCount ? <Link href={pageHref(page + 1)} className={buttonLink}>次の法人を見る</Link> : null}
             </nav>
           ) : null}
           </>
         ) : (
           <div className="rounded-lg border border-outline-variant bg-surface-container-lowest px-6 py-10 text-center">
             <p className="font-bold text-primary">条件に一致する法人は見つかりませんでした。</p>
-            <Link href="/corporations?show=all" className="mt-2 inline-flex min-h-11 items-center font-bold text-secondary underline">条件を外して全法人を見る</Link>
+            <Link href="/corporations?show=all" className={`mx-auto mt-3 ${buttonLink}`}>条件を外して全法人を見る</Link>
           </div>
         )}
       </section> : null}

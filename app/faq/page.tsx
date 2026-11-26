@@ -62,7 +62,10 @@ export default function FaqPage() {
       {questions.map(({ question, answer }) => (
         <section key={question}>
           <h2>{question}</h2>
-          <p>{answer.map((part) => typeof part === "string" ? part : <Link key={part.href} href={part.href}>{part.text}</Link>)}</p>
+          <p>{answer.map((part) => typeof part === "string" ? part : part.text).join("")}</p>
+          {answer.some((part) => typeof part !== "string") ? <div className="mt-3 flex flex-wrap gap-2">
+            {answer.flatMap((part) => typeof part === "string" ? [] : [<Link key={part.href} href={part.href}>{part.text}</Link>])}
+          </div> : null}
         </section>
       ))}
     </InformationPage>

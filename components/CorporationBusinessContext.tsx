@@ -1,5 +1,6 @@
 import type { Corporation } from "@/lib/types";
 import { getCorporationEditorialContext } from "@/lib/corporation-contexts";
+import { buttonLink } from "@/lib/ui-classes";
 
 function formatPublicSubsidyAmount(value: number) {
   if (value >= 100_000_000) {
@@ -156,9 +157,9 @@ export default function CorporationBusinessContext({
                   data-analytics-event="source_link"
                   data-source-type="government_primary_source"
                   data-analytics-location="corporation_regulatory_context"
-                  className="mt-4 inline-flex min-h-11 items-center text-sm font-bold text-secondary hover:underline"
+                  className={`mt-4 text-left ${buttonLink}`}
                 >
-                  {touchpoint.sourceTitle} ↗
+                  {touchpoint.sourceTitle}
                 </a>
               </article>
             ))}

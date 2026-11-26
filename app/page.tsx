@@ -20,6 +20,7 @@ import {
   PersonIcon,
 } from "@/components/icons";
 import { getMinistryPath, ministryPages } from "@/lib/ministry-pages";
+import { buttonLink } from "@/lib/ui-classes";
 
 const homeTitle = "天下りとは？ 意味と省庁別の天下り先・企業一覧";
 export const metadata = {
@@ -102,7 +103,7 @@ function SearchIntentSection() {
         <p className="mt-1 text-pretty text-sm leading-relaxed text-on-surface-variant">
           政府が「天下り」として問題にしてきたのは、退職した職員が府省庁のあっせんを受け、企業や団体に再就職することです。再就職の公表記録で分かるのは、元の官職や再就職先、就任時の役職です。勤務先の名前だけから、あっせんの有無は判断できません。
         </p>
-        <Link href="/about#reemployment-rules" className="inline-flex min-h-11 items-center gap-1.5 text-sm font-bold text-secondary underline underline-offset-4">
+        <Link href="/about#reemployment-rules" className={`mt-2 ${buttonLink}`}>
           再就職等規制と公表制度を読む <ArrowRightIcon size={15} />
         </Link>
       </div>
@@ -138,7 +139,7 @@ function ExplainerSection() {
         </h2>
         <Link
           href="/news"
-          className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-secondary hover:underline"
+          className={buttonLink}
         >
           解説をすべて見る <ArrowRightIcon size={17} />
         </Link>
@@ -164,7 +165,7 @@ function ExplainerSection() {
               記事を読む <ArrowRightIcon size={17} />
             </Link>
             {featuredMinistryLink ? (
-              <Link href={featuredMinistryLink.href} className="mt-2 inline-flex min-h-11 items-center px-2 text-sm font-bold text-secondary underline underline-offset-4 sm:ml-3">
+              <Link href={featuredMinistryLink.href} className={`mt-2 sm:ml-3 ${buttonLink}`}>
                 {featuredMinistryLink.label}
               </Link>
             ) : null}
@@ -198,14 +199,13 @@ function ExplainerSection() {
                 <Link
                   key={article.slug}
                   href={`/news/${article.slug}`}
-                  className="group flex flex-col gap-2 py-4"
+                  className="group -mx-2 flex flex-col gap-2 rounded-lg px-2 py-4 transition hover:bg-surface-container-low"
                 >
                   <time className="text-xs font-bold text-on-surface-variant" dateTime={article.dateModified}>
                     {article.dateModified !== article.datePublished ? "更新 " : "公開 "}{formatDate(article.dateModified)}
                   </time>
-                  <span className="text-sm font-extrabold leading-6 text-primary">{article.title}</span>
+                  <span className="text-sm font-extrabold leading-6 text-primary group-hover:text-secondary">{article.title}</span>
                   <span className="hidden text-sm leading-6 text-on-surface-variant lg:line-clamp-2">{article.description}</span>
-                  <span className="inline-flex items-center gap-2 text-xs font-bold text-secondary group-hover:underline">記事を読む <ArrowRightIcon size={14} /></span>
                 </Link>
               ))}
             </div>
@@ -336,7 +336,7 @@ export default function Home() {
           <SectionHeading
             title="天下りマップの収録件数"
           />
-          <Link href="/data-policy#coverage" className="text-sm font-semibold text-secondary underline">収録期間と数え方を見る</Link>
+          <Link href="/data-policy#coverage" className={buttonLink}>収録期間と数え方を見る</Link>
         </div>
         <p className="mt-4 text-sm leading-7 text-on-surface-variant">
           内閣官房などが公表した再就職記録のうち、当サイトに収録した分を集計しています。
@@ -370,7 +370,7 @@ export default function Home() {
             title="公表情報を、つながりで見る"
             description="最新の解説に出た法人を先頭に、公表記録が多い法人をあわせて表示しています。記事やデータが更新されると入れ替わります。"
           />
-          <Link href="/corporations" className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-secondary hover:underline">
+          <Link href="/corporations" className={`shrink-0 ${buttonLink}`}>
             法人一覧を見る <ArrowRightIcon size={17} />
           </Link>
         </div>
@@ -419,7 +419,7 @@ export default function Home() {
           <SectionHeading
             title="省庁から関係をたどる"
           />
-          <Link href="/ministries" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-secondary hover:underline">
+          <Link href="/ministries" className={`mt-6 ${buttonLink}`}>
             すべての省庁を見る <ArrowRightIcon size={17} />
           </Link>
         </div>

@@ -4,6 +4,7 @@ import { formatDate } from "@/lib/display-text";
 import Link from "next/link";
 import { searchKey } from "@/lib/search-key";
 import { useState } from "react";
+import { buttonLink } from "@/lib/ui-classes";
 
 type Entry = {
   id: string;
@@ -80,7 +81,7 @@ export default function MinistryRecordFinder({ entries, ministry, headingId }: {
       <div className="mt-2 flex min-h-11 flex-wrap items-center justify-between gap-x-3">
         <p role="status" className="text-sm font-bold text-primary">{results.length}件の再就職記録</p>
         {year || corporation || person || type || formerPosition ? (
-          <button type="button" className="min-h-11 px-2 text-sm font-bold text-secondary underline" onClick={() => {
+          <button type="button" className={buttonLink} onClick={() => {
             setYear("");
             setCorporation("");
             setPerson("");
@@ -94,10 +95,10 @@ export default function MinistryRecordFinder({ entries, ministry, headingId }: {
           {results.map((entry, index) => (
             <li key={entry.id} className={`${index >= visible ? "hidden" : "grid"} min-w-0 gap-1 py-3 md:grid-cols-[7rem_minmax(0,1fr)_minmax(0,2fr)] md:items-start md:gap-4`}>
               <time dateTime={entry.date} className="pt-2 text-sm tabular-nums text-on-surface-variant">{formatDate(entry.date)}</time>
-              <div><Link href={`/persons/${entry.personSlug}`} className="inline-flex min-h-11 items-center break-words font-bold text-secondary underline underline-offset-4">{entry.name}</Link>
+              <div><Link href={`/persons/${entry.personSlug}`} className="inline-flex min-h-11 items-center break-words font-bold text-secondary hover:text-primary">{entry.name}</Link>
                 <p className="text-sm leading-relaxed text-on-surface-variant">離職時：{entry.formerPosition}</p></div>
               <div className="min-w-0">
-                <Link href={`/corporations/${entry.corporationSlug}`} className="inline-flex min-h-11 items-center break-words font-bold text-primary underline underline-offset-4">{entry.corporation}</Link>
+                <Link href={`/corporations/${entry.corporationSlug}`} className="inline-flex min-h-11 items-center break-words font-bold text-primary hover:text-secondary">{entry.corporation}</Link>
                 {entry.position ? <p className="break-words text-sm leading-relaxed text-on-surface-variant">{entry.position}</p> : null}
               </div>
             </li>

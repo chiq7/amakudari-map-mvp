@@ -117,7 +117,7 @@ export default function SearchContent({ persons, organizations }: {
       </section>
 
       {ministry ? <Link href={`/ministries/${ministry.slug}`} className="mx-auto w-full max-w-4xl rounded-xl border border-secondary px-5 py-4 font-bold text-secondary hover:bg-secondary-fixed">
-        {ministry.name}の再就職先一覧を見る →
+        {ministry.name}の再就職先一覧を見る
       </Link> : null}
       {isSearching ? <p role="status" className="mx-auto w-full max-w-4xl text-sm font-semibold text-primary">検索結果 {totalResults}件</p> : null}
 

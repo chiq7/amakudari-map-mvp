@@ -29,7 +29,7 @@ export default function NewsIndexPage() {
         <div className="divide-y divide-outline-variant border-y border-outline-variant">
         {newsArticles.map((article) => (
           <article key={article.slug} className="bg-white/55">
-            <Link href={`/news/${article.slug}`} className="group grid gap-5 px-1 py-6 transition hover:bg-white md:grid-cols-[150px_1fr_auto] md:items-start md:px-5">
+            <Link href={`/news/${article.slug}`} className="group grid gap-5 px-1 py-6 transition hover:bg-white md:grid-cols-[150px_1fr] md:items-start md:px-5">
               <div className="flex flex-wrap items-center gap-3 text-sm text-on-surface-variant md:block">
                 <TagChip>{article.kind}</TagChip>
                 <time className="md:mt-3 md:block" dateTime={article.datePublished}>公開日：{formatDate(article.datePublished)}</time>
@@ -41,7 +41,6 @@ export default function NewsIndexPage() {
                 </h3>
                 <p className="mt-3 leading-relaxed text-on-surface-variant">{article.description}</p>
               </div>
-              <span className="mt-1 text-sm font-bold text-secondary">解説を読む →</span>
             </Link>
           </article>
         ))}

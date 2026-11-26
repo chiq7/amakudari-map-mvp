@@ -218,7 +218,7 @@ export function RankingCard({
         <Link
           href={href}
           data-ranking-type={rankingType}
-          className="text-sm font-semibold text-secondary hover:underline"
+          className="inline-flex min-h-11 items-center rounded-lg border border-outline-variant bg-white px-4 text-sm font-bold text-primary transition hover:border-secondary hover:text-secondary"
         >
           詳細ランキングを見る
         </Link>
@@ -263,7 +263,7 @@ export function SourceLinkList({
             rel="noopener noreferrer"
             data-analytics-event="source_link"
             data-analytics-location="source_list"
-            className="text-sm font-semibold text-secondary hover:underline"
+            className="block rounded-lg px-3 py-2 text-sm font-semibold text-primary transition hover:bg-surface-container-low"
           >
             {link.label}
           </a>
