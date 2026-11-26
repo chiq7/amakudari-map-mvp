@@ -23,7 +23,6 @@ export default function DataPolicyPage() {
   return (
     <div className="flex max-w-4xl flex-col gap-10">
       <section className="border-b-2 border-primary pb-8">
-        <p className="text-xs font-extrabold tracking-[0.14em] text-accent">DATA GUIDE</p>
         <h1 className="mt-3 text-3xl font-extrabold text-primary md:text-4xl">データについて</h1>
         <p className="mt-4 text-base leading-8 text-on-surface-variant">天下りマップでは、再就職の公表記録を、人・法人・省庁・日付の切り口で検索しやすく整理しています。</p>
       </section>

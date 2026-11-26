@@ -86,7 +86,6 @@ export default function SearchContent({ persons, organizations }: {
   return (
     <div className="flex flex-col gap-10">
       <section className="mx-auto w-full max-w-4xl text-center">
-        <p className="text-xs font-extrabold tracking-[0.14em] text-secondary">SEARCH</p>
         <h1 className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-primary md:text-4xl">公表記録を横断検索</h1>
         <p className="mx-auto mt-4 max-w-2xl text-pretty text-sm leading-7 text-on-surface-variant md:text-base">
           人名、離職時の官職、再就職先の法人名から、関連する公表記録をまとめて探せます。

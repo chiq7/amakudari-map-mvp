@@ -23,18 +23,16 @@ export default function CorporationsPage() {
   return (
     <div className="flex flex-col gap-10">
       <section className="mx-auto max-w-4xl text-center">
-        <p className="text-sm font-bold text-secondary">FIND DESTINATIONS</p>
         <h1 className="mt-2 text-3xl font-bold text-primary md:text-4xl">天下り先の企業・法人を探す</h1>
         <p className="mt-3 text-base leading-relaxed text-on-surface-variant">
           法人名から公表された人物と出身省庁を確認できます。省庁別・法人種別でも絞り込めます。
         </p>
       </section>
 
-      <dl className="grid grid-cols-1 gap-3 sm:grid-cols-3 md:gap-4">
+      <dl className="grid grid-cols-2 gap-3 md:gap-4">
         {[
           ["掲載している法人", totals.corporations.toLocaleString(), "法人"],
           ["公表再就職記録", totals.publicRecords.toLocaleString(), "件"],
-          ["30日以内の記録がある法人", totals.within30DaysCorporations.toLocaleString(), "法人"],
         ].map(([label, value, unit]) => (
           <div key={label} className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-outline-variant/70">
             <dt className="text-sm font-semibold text-on-surface-variant">{label}</dt>

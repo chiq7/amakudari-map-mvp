@@ -33,7 +33,6 @@ export default function TopicsPage() {
   return (
     <div className="flex flex-col gap-12">
       <section className="border-b-2 border-primary pb-8">
-        <p className="text-xs font-extrabold tracking-[0.14em] text-accent">BROWSE</p>
         <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-primary md:text-4xl">省庁・テーマから探す</h1>
         <p className="mt-4 max-w-2xl text-sm leading-7 text-on-surface-variant md:text-base">
           出身省庁または行政テーマを入口に、関連する人物と法人の公表記録へ進めます。

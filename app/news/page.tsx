@@ -12,7 +12,6 @@ export default function NewsIndexPage() {
       <Breadcrumb items={[{ label: "TOP", href: "/" }, { label: "ニュース・解説" }]} />
 
       <section className="border-b-2 border-primary pb-8 pt-2">
-        <p className="text-xs font-extrabold tracking-[0.14em] text-accent">NEWS & EXPLAINERS</p>
         <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-primary md:text-4xl">
           <span className="block md:inline">公表資料から読む</span>
           <span className="block md:ml-2 md:inline">ニュース・解説</span>

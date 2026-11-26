@@ -17,7 +17,6 @@ export default function AboutPage() {
     <div className="mx-auto flex max-w-4xl flex-col gap-10">
       <Breadcrumb items={[{ label: "TOP", href: "/" }, { label: "このサイトについて" }]} />
       <header className="border-b-2 border-primary pb-8">
-        <p className="text-xs font-extrabold tracking-[0.14em] text-accent">ABOUT</p>
         <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-primary md:text-4xl">人の移動を、組織と仕事から読む。</h1>
         <p className="mt-4 max-w-3xl text-sm leading-7 text-on-surface-variant md:text-base">
           天下りマップは、政府・各省庁等が公表する再就職情報を、人物、法人、省庁、業務分野のつながりから読める形に整理したデータベースです。

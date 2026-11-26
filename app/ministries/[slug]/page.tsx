@@ -5,10 +5,12 @@ import { pageMetadata } from "@/lib/seo";
 import { Breadcrumb } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import MinistryRecordFinder from "@/components/MinistryRecordFinder";
-import { corporations, records, sources } from "@/lib/static-content";
+import { corporations, records } from "@/lib/static-content";
 import { formatDate, isSelfEmployed } from "@/lib/display-text";
 import { ministryPages } from "@/lib/ministry-pages";
 import { newsArticles } from "@/lib/news";
+
+const INITIAL_CORPORATIONS = 24;
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -56,9 +58,6 @@ export default async function MinistryPage(props: PageProps) {
       position: record.newPosition,
       formerPosition: record.previousPosition,
     }));
-  const ids = new Set(ministryRecords.map((record) => record.sourceId));
-  const publishedSources = sources.filter((source) => ids.has(source.id));
-  const latestPublished = publishedSources.map((source) => source.publishedAt).filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value)).sort().at(-1);
   const recordsByCorporation = new Map<string, typeof ministryRecords>();
   ministryRecords.forEach((record) => {
     const group = recordsByCorporation.get(record.corporationSlug) ?? [];
@@ -97,6 +96,22 @@ export default async function MinistryPage(props: PageProps) {
       return (leftPriority === -1 ? priority.length : leftPriority) - (rightPriority === -1 ? priority.length : rightPriority);
     })
     .slice(0, 4);
+  const renderCorporation = ({ corporation, people, waitingLabel }: (typeof matchingCorporations)[number]) => (
+    <article key={corporation.slug} className="rounded-xl bg-white p-4 ring-1 ring-outline-variant/60">
+      <Link href={`/corporations/${corporation.slug}`} className="font-extrabold leading-6 text-primary hover:text-secondary hover:underline">
+        {corporation.name}
+      </Link>
+      <p className="mt-2 text-sm leading-6 text-on-surface-variant">
+        {people.map((person, index) => (
+          <span key={person.slug}>
+            {index > 0 ? "・" : ""}
+            <Link href={`/persons/${person.slug}`} className="font-bold text-primary hover:underline">{person.name}</Link>
+          </span>
+        ))}
+        <span className="ml-2 whitespace-nowrap text-xs">待機 {waitingLabel}</span>
+      </p>
+    </article>
+  );
   const disclosureGuide = newsArticles.find(
     (article) => article.slug === "how-to-read-national-public-servant-reemployment-disclosure-2025",
   );
@@ -131,13 +146,10 @@ export default async function MinistryPage(props: PageProps) {
         <Link href="/news/meti-reemployment-disclosure-fy2025" className="font-semibold text-secondary underline">令和7年度の公表表で数えた74件の解説</Link>では、同年度の離職後の事後届出を集計しています。
       </p> : null}
 
-      <section className="grid grid-cols-2 gap-3 md:grid-cols-5">
+      <section className="grid grid-cols-2 gap-3 md:max-w-xl">
         {[
-          ["公表再就職者数", `${personCount}人`],
-          ["関連する再就職先法人", `${matchingCorporations.length}法人`],
           ["退職翌日の再就職記録", `${totalNextDay}件`],
           ["30日以内の再就職記録", `${totalWithin30Days}件`],
-          ["収録資料の公表日（確認できた最新）", latestPublished ? formatDate(latestPublished) : "掲載資料に日付の記載なし"],
         ].map(([label, value]) => (
           <div key={label} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5 shadow-sm">
             <p className="text-sm font-semibold text-on-surface-variant">{label}</p>
@@ -181,35 +193,20 @@ export default async function MinistryPage(props: PageProps) {
           </Link>
         </div>
 
-        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {matchingCorporations.map(({ corporation, people, waitingLabel }) => {
-            return (
-              <article key={corporation.slug} className="border border-outline-variant bg-surface-container-lowest p-5">
-                <h3 className="font-extrabold leading-6 text-primary">{corporation.name}</h3>
-                <dl className="mt-3 grid grid-cols-[1fr_auto] gap-3 border-y border-outline-variant py-3 text-sm">
-                  <div>
-                    <dt className="text-xs font-semibold text-on-surface-variant">公表された人物</dt>
-                    <dd className="mt-1 space-y-1">
-                      {people.map((person) => (
-                        <Link key={person.slug} href={`/persons/${person.slug}`} className="block font-bold text-primary hover:underline">
-                          {person.name}
-                        </Link>
-                      ))}
-                    </dd>
-                  </div>
-                  <div className="text-right">
-                    <dt className="text-xs font-semibold text-on-surface-variant">待機日数</dt>
-                    <dd className="mt-1 font-extrabold text-primary">{waitingLabel}</dd>
-                  </div>
-                </dl>
-                <Link href={`/corporations/${corporation.slug}`} className="mt-4 inline-flex min-h-11 items-center font-bold text-secondary hover:underline">
-                  <span className="sr-only">{corporation.name}の</span>法人詳細を見る →
-                </Link>
-              </article>
-            );
-          })}
+        <div className="mt-4 grid gap-2 md:grid-cols-2 xl:grid-cols-3">
+          {matchingCorporations.slice(0, INITIAL_CORPORATIONS).map(renderCorporation)}
         </div>
-
+        {matchingCorporations.length > INITIAL_CORPORATIONS ? (
+          <details className="group mt-3">
+            <summary className="flex min-h-11 cursor-pointer list-none items-center justify-center rounded-lg border border-secondary bg-white px-4 text-sm font-bold text-secondary hover:bg-secondary-fixed [&::-webkit-details-marker]:hidden">
+              <span className="group-open:hidden">すべての再就職先を表示（残り{matchingCorporations.length - INITIAL_CORPORATIONS}法人）</span>
+              <span className="hidden group-open:inline">閉じる</span>
+            </summary>
+            <div className="mt-3 grid gap-2 md:grid-cols-2 xl:grid-cols-3">
+              {matchingCorporations.slice(INITIAL_CORPORATIONS).map(renderCorporation)}
+            </div>
+          </details>
+        ) : null}
       </section>
 
       <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
@@ -230,7 +227,6 @@ export default async function MinistryPage(props: PageProps) {
 
       {disclosureGuide ? (
         <section className="rounded-lg border border-secondary/25 bg-secondary-fixed/40 p-5">
-          <p className="text-xs font-bold tracking-[0.08em] text-secondary">PUBLIC RECORDS EXPLAINED</p>
           <h2 className="mt-2 text-xl font-bold text-primary">制度と記録を読む</h2>
           <p className="mt-1 text-sm leading-relaxed text-on-surface-variant">
             再就職制度と記録の見方を、具体例とともに解説しています。

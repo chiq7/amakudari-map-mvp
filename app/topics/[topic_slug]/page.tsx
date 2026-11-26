@@ -47,7 +47,6 @@ export default async function TopicDetailPage(props: { params: Promise<{ topic_s
       <Breadcrumb items={[{ label: "TOP", href: "/" }, { label: "省庁・テーマ", href: "/topics" }, { label: topic.title }]} />
 
       <section className="border-b-2 border-primary pb-8">
-        <p className="text-xs font-extrabold tracking-[0.14em] text-accent">TOPIC</p>
         <h1 className="mt-3 text-3xl font-extrabold text-primary md:text-4xl">{topic.title}に関連する公表記録</h1>
         <p className="mt-4 max-w-2xl text-sm leading-7 text-on-surface-variant md:text-base">
           テーマに関連付けられた法人・人物の公開情報を確認できます。

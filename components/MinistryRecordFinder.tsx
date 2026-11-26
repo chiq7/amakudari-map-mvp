@@ -18,6 +18,9 @@ type Entry = {
   corporationType: string;
 };
 
+const INITIAL_VISIBLE = 30;
+const STEP = 50;
+
 function fiscalYear(date: string) {
   const [year, month] = date.split("-").map(Number);
   return month >= 4 ? year : year - 1;
@@ -38,6 +41,10 @@ export default function MinistryRecordFinder({ entries, ministry, headingId }: {
     (!type || entry.corporationType === type) &&
     searchKey(entry.formerPosition).includes(searchKey(formerPosition))
   );
+  // 長い一覧は最初の30件だけ見せ、残りは「さらに表示」で開く（HTMLには全件を残す）
+  const filterKey = [year, corporation, person, type, formerPosition].join("|");
+  const [expanded, setExpanded] = useState({ key: "", count: INITIAL_VISIBLE });
+  const visible = expanded.key === filterKey ? expanded.count : INITIAL_VISIBLE;
   const fieldClass = "mt-1 min-h-11 w-full min-w-0 rounded-lg border border-outline bg-white px-3 text-base text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary";
 
   return (
@@ -84,8 +91,8 @@ export default function MinistryRecordFinder({ entries, ministry, headingId }: {
       </div>
       {results.length ? (
         <ul className="divide-y divide-outline-variant border-y border-outline-variant">
-          {results.map((entry) => (
-            <li key={entry.id} className="grid min-w-0 gap-1 py-3 md:grid-cols-[7rem_minmax(0,1fr)_minmax(0,2fr)] md:items-start md:gap-4">
+          {results.map((entry, index) => (
+            <li key={entry.id} className={`${index >= visible ? "hidden" : "grid"} min-w-0 gap-1 py-3 md:grid-cols-[7rem_minmax(0,1fr)_minmax(0,2fr)] md:items-start md:gap-4`}>
               <time dateTime={entry.date} className="pt-2 text-sm tabular-nums text-on-surface-variant">{formatDate(entry.date)}</time>
               <div><Link href={`/persons/${entry.personSlug}`} className="inline-flex min-h-11 items-center break-words font-bold text-secondary underline underline-offset-4">{entry.name}</Link>
                 <p className="text-sm leading-relaxed text-on-surface-variant">離職時：{entry.formerPosition}</p></div>
@@ -96,7 +103,17 @@ export default function MinistryRecordFinder({ entries, ministry, headingId }: {
             </li>
           ))}
         </ul>
-      ) : <p className="border-t border-outline-variant py-4 text-sm text-on-surface-variant">条件に合う記録はありません。名前を短くするか、年度を変更してください。</p>}
+      ) : null}
+      {results.length > visible ? (
+        <button
+          type="button"
+          className="mt-3 inline-flex min-h-11 w-full items-center justify-center rounded-lg border border-secondary bg-white px-4 text-sm font-bold text-secondary hover:bg-secondary-fixed"
+          onClick={() => setExpanded({ key: filterKey, count: visible + STEP })}
+        >
+          さらに表示（残り{results.length - visible}件）
+        </button>
+      ) : null}
+      {results.length ? null : <p className="border-t border-outline-variant py-4 text-sm text-on-surface-variant">条件に合う記録はありません。名前を短くするか、年度を変更してください。</p>}
     </section>
   );
 }

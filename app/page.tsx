@@ -15,7 +15,6 @@ import { SearchBox } from "@/components/ui";
 import {
   ArrowRightIcon,
   BuildingIcon,
-  DocumentIcon,
   MinistryIcon,
   NewsIcon,
   PersonIcon,
@@ -73,18 +72,15 @@ const featuredMinistries = ministryPages
   .sort((left, right) => right.recordCount - left.recordCount || left.name.localeCompare(right.name, "ja"));
 
 function SectionHeading({
-  eyebrow,
   title,
   description,
 }: {
-  eyebrow: string;
   title: string;
   description?: string;
 }) {
   return (
     <div className="max-w-2xl">
-      <p className="text-xs font-extrabold tracking-[0.14em] text-secondary">{eyebrow}</p>
-      <h2 className="mt-2 text-balance text-2xl font-extrabold tracking-tight text-primary md:text-3xl">
+      <h2 className="text-balance text-2xl font-extrabold tracking-tight text-primary md:text-3xl">
         {title}
       </h2>
       {description ? (
@@ -275,10 +271,6 @@ export default function Home() {
         data-analytics-location="home_hero"
       >
         <div className="relative z-10 flex flex-col justify-center px-5 py-8 sm:px-8 md:px-12 md:py-12 lg:px-14 lg:py-16">
-          <p className="inline-flex w-fit items-center gap-2 border-b-2 border-accent pb-2 text-xs font-extrabold tracking-[0.1em] text-primary">
-            <DocumentIcon size={16} />
-            PUBLIC RECORDS, VISUALIZED
-          </p>
           <h1 className="mt-6 text-balance text-[34px] font-extrabold leading-[1.25] tracking-[-0.035em] sm:text-[42px] md:leading-[1.22] xl:text-[46px]">
             <span className="block">天下り先を、</span>
             <span className="block text-accent">省庁・法人・人物から探す。</span>
@@ -342,7 +334,6 @@ export default function Home() {
       <section aria-labelledby="data-summary-title">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
-            eyebrow="CURRENT DATA"
             title="天下りマップの収録件数"
           />
           <Link href="/data-policy#coverage" className="text-sm font-semibold text-secondary underline">収録期間と数え方を見る</Link>
@@ -356,7 +347,7 @@ export default function Home() {
           {[
             ["公表された再就職記録", totals.publicRecords.toLocaleString(), "件"],
             ["掲載している法人", totals.corporations.toLocaleString(), "法人"],
-            ["30日以内の再就職記録がある法人", totals.within30DaysCorporations.toLocaleString(), "法人"],
+            ["出身の省庁など", new Set(records.map((record) => record.fromMinistry)).size.toLocaleString(), "機関"],
             ["人物ページ", meta.personCount.toLocaleString(), "人"],
           ].map(([label, value, unit], index) => (
             <div
@@ -376,7 +367,6 @@ export default function Home() {
       <section>
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
-            eyebrow="PUBLIC RECORDS"
             title="公表情報を、つながりで見る"
             description="最新の解説に出た法人を先頭に、公表記録が多い法人をあわせて表示しています。記事やデータが更新されると入れ替わります。"
           />
@@ -427,7 +417,6 @@ export default function Home() {
       <section className="grid gap-8 rounded-3xl bg-[#e9edf8] p-6 md:p-9 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
         <div>
           <SectionHeading
-            eyebrow="BROWSE BY MINISTRY"
             title="省庁から関係をたどる"
           />
           <Link href="/ministries" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-secondary hover:underline">

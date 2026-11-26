@@ -65,7 +65,6 @@ export default function RetirementAllowanceEstimator() {
       <section aria-labelledby="estimator-input-title" onChangeCapture={() => setShowAmount(true)} className="border border-outline-variant bg-surface-container-lowest p-5 shadow-card md:p-7">
         <div className="flex items-start justify-between gap-4 border-b border-outline-variant pb-5">
           <div>
-            <p className="text-xs font-extrabold tracking-[0.14em] text-accent">MODEL INPUT</p>
             <h2 id="estimator-input-title" className="mt-2 text-2xl font-extrabold text-primary">経歴モデルを設定する</h2>
           </div>
           <span className="border border-secondary/30 bg-secondary-fixed px-3 py-1 text-xs font-bold text-secondary">25年以上勤務モデル</span>
@@ -149,7 +148,6 @@ export default function RetirementAllowanceEstimator() {
       </section>
 
       <aside aria-live="polite" className="border-t-4 border-primary bg-primary p-5 text-white shadow-soft md:p-7">
-        <p className="text-xs font-extrabold tracking-[0.14em] text-secondary-fixed">INSTITUTIONAL MODEL</p>
         <h2 className="mt-2 text-2xl font-extrabold">制度上の概算</h2>
         <p className="mt-3 text-sm leading-6 text-white/75">選択した役職経験モデルと入力条件による試算です。個人の実際の受給額ではありません。</p>
 
