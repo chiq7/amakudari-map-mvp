@@ -12,7 +12,11 @@ import {
   getCorporation,
   getCorporationPersonHighlights,
   records,
+  selfEmployedCanonicalSlug,
+  selfEmployedSlugs,
 } from "@/lib/static-content";
+import { isSelfEmployed } from "@/lib/display-text";
+import { getMinistryPath } from "@/lib/ministry-pages";
 
 const numberFormatter = new Intl.NumberFormat("ja-JP");
 
@@ -79,6 +83,71 @@ function PublicDataCollection({
   );
 }
 
+function compactName(name: string) {
+  return name.replace(/\s/g, "");
+}
+
+function yearMonth(date: string) {
+  const [year, month] = date.split("-").map(Number);
+  return year && month ? `${year}年${month}月` : "";
+}
+
+// 「自営」「自営業」は1ページにまとめて、両方の記録を見せる
+function getRelatedRecords(corporation: Corporation) {
+  return selfEmployedSlugs.has(corporation.slug)
+    ? records.filter((record) => isSelfEmployed(record.corporationName))
+    : records.filter((record) => record.corporationSlug === corporation.slug);
+}
+
+function ministryCountText(entries: ReemploymentRecord[], limit = 3) {
+  const counts = new Map<string, number>();
+  entries.forEach((record) => counts.set(record.fromMinistry, (counts.get(record.fromMinistry) ?? 0) + 1));
+  const sorted = Array.from(counts.entries()).sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0], "ja"));
+  const shown = sorted.slice(0, limit).map(([name, count]) => `${name}${count}件`).join("・");
+  return sorted.length > limit ? `${shown}ほか` : shown;
+}
+
+function leadSentence(corporation: Corporation, entries: ReemploymentRecord[]) {
+  if (entries.length === 0) return "法人の業務と、法人が公表した役員の行政での経歴を確認できます。";
+  const latest = [...entries].sort((left, right) => right.reemploymentDate.localeCompare(left.reemploymentDate))[0];
+  if (selfEmployedSlugs.has(corporation.slug)) {
+    return `公表表で再就職先が「自営」「自営業」と記載された${entries.length}件の記録です。出身は${ministryCountText(entries)}です。`;
+  }
+  if (entries.length === 1) {
+    const former = latest.previousPosition.startsWith(latest.fromMinistry) ? latest.previousPosition : `${latest.fromMinistry}の${latest.previousPosition}`;
+    return `${former}だった${compactName(latest.name)}氏が、${yearMonth(latest.reemploymentDate)}に${latest.newPosition}として就任した記録が公表されています。`;
+  }
+  return `${entries.length}件の再就職記録があり、出身は${ministryCountText(entries)}です。直近は${yearMonth(latest.reemploymentDate)}の${compactName(latest.name)}氏（${latest.newPosition}）です。`;
+}
+
+// 同じ出身省庁の別の再就職先。同じ法人種別を優先し、次に就任日が近い順
+function getSameMinistryCorporations(corporation: Corporation, ministry: string, entries: ReemploymentRecord[]) {
+  if (!ministry) return [];
+  const anchor = entries.map((record) => record.reemploymentDate).sort().at(-1) ?? "";
+  const anchorTime = anchor ? Date.parse(anchor) : 0;
+  const bySlug = new Map<string, { count: number; nearest: number }>();
+  records.forEach((record) => {
+    if (record.fromMinistry !== ministry || record.corporationSlug === corporation.slug) return;
+    if (selfEmployedSlugs.has(record.corporationSlug)) return;
+    const distance = anchorTime ? Math.abs(Date.parse(record.reemploymentDate) - anchorTime) : 0;
+    const current = bySlug.get(record.corporationSlug);
+    bySlug.set(record.corporationSlug, {
+      count: (current?.count ?? 0) + 1,
+      nearest: Math.min(current?.nearest ?? Number.POSITIVE_INFINITY, distance),
+    });
+  });
+  return Array.from(bySlug.entries())
+    .flatMap(([slug, stats]) => {
+      const candidate = corporations.find((item) => item.slug === slug);
+      return candidate ? [{ corporation: candidate, ...stats }] : [];
+    })
+    .sort((left, right) =>
+      Number(right.corporation.type === corporation.type) - Number(left.corporation.type === corporation.type) ||
+      left.nearest - right.nearest ||
+      left.corporation.name.localeCompare(right.corporation.name, "ja"))
+    .slice(0, 6);
+}
+
 function ReemploymentRecordList({ entries }: { entries: ReemploymentRecord[] }) {
   return (
     <section className="border-t-4 border-primary bg-surface-container-lowest shadow-card ring-1 ring-outline-variant/70">
@@ -92,7 +161,7 @@ function ReemploymentRecordList({ entries }: { entries: ReemploymentRecord[] }) 
         </p>
       </div>
 
-      <div className="grid gap-3 p-4 md:hidden">
+      <div className="grid gap-3 p-4 md:grid-cols-2">
         {entries.map((record) => (
           <article key={record.rawId} className="border border-outline-variant bg-white p-4">
             <div className="flex items-start justify-between gap-3">
@@ -124,30 +193,6 @@ function ReemploymentRecordList({ entries }: { entries: ReemploymentRecord[] }) 
         ))}
       </div>
 
-      <div className="hidden overflow-x-auto md:block">
-        <table className="w-full min-w-[900px] text-left">
-          <thead className="bg-surface-container-low">
-            <tr>
-              <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">氏名</th>
-              <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">元省庁・離職時官職</th>
-              <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">再就職先での地位</th>
-              <th className="px-4 py-3 text-sm font-semibold text-on-surface-variant">離職日 → 再就職日</th>
-              <th className="px-4 py-3 text-center text-sm font-semibold text-on-surface-variant">待機日数</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-outline-variant">
-            {entries.map((record) => (
-              <tr key={record.rawId} className="align-top hover:bg-surface-container-low">
-                <td className="px-4 py-4 font-bold"><Link href={`/persons/${record.personSlug}`} className="text-secondary hover:underline">{record.name}</Link></td>
-                <td className="px-4 py-4 text-sm"><strong className="block text-primary">{record.fromMinistry}</strong><span className="mt-1 block leading-6 text-on-surface-variant">{record.previousPosition}</span></td>
-                <td className="px-4 py-4 text-sm leading-6">{record.newPosition}</td>
-                <td className="px-4 py-4 font-mono text-sm"><span className="block">{formatDate(record.retirementDate)}</span><span className="block text-on-surface-variant">→ {formatDate(record.reemploymentDate)}</span></td>
-                <td className="px-4 py-4 text-center"><span className="inline-flex border border-secondary/20 bg-secondary-fixed px-2 py-1 text-sm font-bold text-secondary">{record.waitingDays}日</span></td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
     </section>
   );
 }
@@ -226,6 +271,7 @@ export async function generateMetadata(
   const params = await props.params;
   const corporation = getCorporation(params.slug);
   const highlights = getCorporationPersonHighlights(corporation);
+  const entries = getRelatedRecords(corporation);
   const peopleDescription = highlights.people
     .map((person) => {
       const former =
@@ -241,21 +287,30 @@ export async function generateMetadata(
       : highlights.kind === "reemployment-record"
         ? `${corporation.name}への再就職記録は${corporation.count}件、主な出身省庁は${corporation.topMinistry}です。${peopleDescription}の就任時の役職・就任日を公表記録で確認できます。`
         : `${corporation.name}の法人情報を、公表資料と公的法人情報に基づいて整理。`;
+  if (selfEmployedSlugs.has(corporation.slug)) {
+    const selfEmployedTitle = `再就職先が「自営」と公表された記録${entries.length}件｜天下りマップ`;
+    return {
+      ...pageMetadata(selfEmployedTitle, `公表表で再就職先が「自営」「自営業」と記載された${entries.length}件の記録です。出身は${ministryCountText(entries)}です。`, `/corporations/${selfEmployedCanonicalSlug}`),
+      title: { absolute: selfEmployedTitle },
+    };
+  }
+  // 法人配下は共通の型でサイト名が付かないため、ここで付ける（法人を「天下り先」と断定しない）
   const title =
     highlights.kind === "public-officer"
-      ? `${corporation.name}の公表役員${corporation.publicOfficers.length}人｜役職・行政での元所属`
-      : `${corporation.name}の再就職受入記録${corporation.count}件｜主な出身省庁は${corporation.topMinistry}`;
-  return pageMetadata(title, description, `/corporations/${params.slug}`);
+      ? `${corporation.name}の公表役員${corporation.publicOfficers.length}人｜役職・行政での元所属｜天下りマップ`
+      : `${corporation.name}の再就職受入記録${corporation.count}件（${corporation.topMinistry}出身）｜天下りマップ`;
+  return { ...pageMetadata(title, description, `/corporations/${params.slug}`), title: { absolute: title } };
 }
 
 export default async function CorporationDetailPage(props: { params: Promise<{ slug: string }> }) {
   const params = await props.params;
   const corporation = getCorporation(params.slug);
   const pageUrl = canonicalUrl(`/corporations/${corporation.slug}`);
-  const organizationData = corporation.name === "自営"
-    ? { "@context": "https://schema.org", "@type": "WebPage", name: "公表表の再就職先「自営」の記録", url: pageUrl }
+  const isSelfEmployedPage = selfEmployedSlugs.has(corporation.slug);
+  const organizationData = isSelfEmployedPage
+    ? { "@context": "https://schema.org", "@type": "WebPage", name: "公表表の再就職先「自営」の記録", url: canonicalUrl(`/corporations/${selfEmployedCanonicalSlug}`) }
     : { "@context": "https://schema.org", "@type": "Organization", name: corporation.name, url: pageUrl };
-  const relatedRecords = records.filter((record) => record.corporationSlug === corporation.slug);
+  const relatedRecords = getRelatedRecords(corporation);
   const relatedArticles = newsArticles.filter((article) => article.relatedLinks.some((link) => link.href === `/corporations/${corporation.slug}`));
   const ministryCounts = relatedRecords.reduce<Map<string, number>>((counts, record) => {
     counts.set(record.fromMinistry, (counts.get(record.fromMinistry) ?? 0) + 1);
@@ -266,6 +321,7 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
     .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name, "ja"));
   const topMinistry = ministryBreakdown[0];
   const primaryMinistry = topMinistry?.name ?? corporation.ministries.find(Boolean) ?? "";
+  const sameMinistryCorporations = isSelfEmployedPage ? [] : getSameMinistryCorporations(corporation, primaryMinistry, relatedRecords);
   const averageWaitDays =
     relatedRecords.length > 0
       ? Math.round(
@@ -323,16 +379,16 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
         items={[
           { label: "TOP", href: "/" },
           { label: "法人一覧", href: "/corporations" },
-          { label: corporation.name },
+          { label: isSelfEmployedPage ? "自営" : corporation.name },
         ]}
       />
 
       <section className="flex flex-col gap-3">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h1 className="text-3xl font-bold text-primary md:text-4xl">{corporation.name}</h1>
+            <h1 className="text-3xl font-bold text-primary md:text-4xl">{isSelfEmployedPage ? "再就職先が「自営」と公表された記録" : corporation.name}</h1>
             <p className="mt-2 max-w-3xl text-sm leading-7 text-on-surface-variant md:text-base">
-              法人の業務と、公表された人物・役職・出身組織を確認できます。
+              {leadSentence(corporation, relatedRecords)}
             </p>
           </div>
           <ShareButton title={`${corporation.name}の公表再就職情報 | 天下りマップ`} />
@@ -341,14 +397,14 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
           {topMinistry && (
             <TagChip href={`/corporations?ministry=${encodeURIComponent(topMinistry.name)}`}>{topMinistry.name}</TagChip>
           )}
-          <TagChip href={`/corporations?type=${encodeURIComponent(corporation.type)}`}>{corporation.type}</TagChip>
+          {isSelfEmployedPage ? null : <TagChip href={`/corporations?type=${encodeURIComponent(corporation.type)}`}>{corporation.type}</TagChip>}
           {corporation.region !== "不明" ? (
             <TagChip href={`/corporations?region=${encodeURIComponent(corporation.region)}`}>{corporation.region}</TagChip>
           ) : null}
         </div>
       </section>
 
-      {relatedRecords.length > 0 ? (
+      {relatedRecords.length > 1 ? (
         <section aria-label="法人の再就職記録サマリー" className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           <StatCard label="公表再就職記録" value={relatedRecords.length} unit="件" />
           <StatCard
@@ -358,9 +414,9 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
           <StatCard label="平均待機日数" value={averageWaitDays} unit="日" />
           {nextDayCount > 0 ? (
             <HighlightStatCard label="退職翌日再就職" value={nextDayCount} unit="件" />
-          ) : (
+          ) : minimumWaitDays !== averageWaitDays ? (
             <StatCard label="最短待機日数" value={minimumWaitDays} unit="日" />
-          )}
+          ) : null}
         </section>
       ) : null}
 
@@ -372,12 +428,13 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
         </DataNotice>
       ) : null}
 
-      <CorporationBusinessContext
-        corporation={corporation}
-        recordCount={relatedRecords.length}
-        publicOfficerCount={corporation.publicOfficers.length}
-        connection={publicMovement || undefined}
-      />
+      {isSelfEmployedPage ? null : (
+        <CorporationBusinessContext
+          corporation={corporation}
+          publicOfficerCount={corporation.publicOfficers.length}
+          connection={relatedRecords.length > 1 ? publicMovement || undefined : undefined}
+        />
+      )}
 
       {relatedRecords.length > 0 ? <ReemploymentRecordList entries={relatedRecords} /> : null}
       {relatedArticles.length ? <section aria-label="この法人に関する解説"><h2 className="text-xl font-bold text-primary">この法人に関する解説</h2>
@@ -640,15 +697,34 @@ export default async function CorporationDetailPage(props: { params: Promise<{ s
         </div>
       </section>
 
-      <section className="grid grid-cols-1 gap-3 md:grid-cols-3">
+      {sameMinistryCorporations.length > 0 ? (
+        <section aria-labelledby="same-ministry-title" className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4 md:p-5">
+          <h2 id="same-ministry-title" className="text-xl font-bold text-primary">{primaryMinistry}からのほかの再就職先</h2>
+          <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {sameMinistryCorporations.map(({ corporation: candidate, count }) => (
+              <li key={candidate.slug}>
+                <Link href={`/corporations/${candidate.slug}`} className="group flex h-full min-h-14 items-center justify-between gap-3 rounded-xl bg-white px-4 py-3 ring-1 ring-outline-variant/60 transition hover:ring-secondary/40">
+                  <span className="min-w-0">
+                    <span className="block font-bold leading-6 text-primary group-hover:text-secondary">{candidate.name}</span>
+                    <span className="block text-xs text-on-surface-variant">{candidate.type}・{count}件</span>
+                  </span>
+                  <span aria-hidden="true" className="shrink-0 text-outline transition group-hover:translate-x-1 group-hover:text-secondary">→</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
+      <section className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {[
-          ["省庁別の集計を見る", `${primaryMinistry || "省庁"}の関連法人を見る`, primaryMinistry ? `/corporations?ministry=${encodeURIComponent(primaryMinistry)}` : "/corporations"],
-          ["集計から比較する", "待機日数の比較を見る", "/rankings"],
-          ["同じ省庁から探す", "関連する法人を一覧で見る", primaryMinistry ? `/corporations?ministry=${encodeURIComponent(primaryMinistry)}` : "/corporations"],
-        ].map(([label, title, href]) => (
-          <Link key={label} href={href} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-3 hover:border-secondary">
-            <span className="text-sm font-semibold text-on-surface-variant">{label}</span>
-            <p className="mt-1 font-bold text-primary">{title}</p>
+          primaryMinistry
+            ? [getMinistryPath(primaryMinistry).startsWith("/ministries/") ? `${primaryMinistry}の天下り先一覧` : `${primaryMinistry}出身者の再就職先を探す`, getMinistryPath(primaryMinistry)]
+            : ["省庁別の天下り先一覧", "/ministries"],
+          ["天下り先の多い企業・法人ランキング", "/rankings"],
+        ].map(([label, href]) => (
+          <Link key={href} href={href} className="group flex min-h-14 items-center justify-between gap-3 rounded-xl bg-white px-4 py-3 font-bold text-primary ring-1 ring-outline-variant/60 transition hover:ring-secondary/40">
+            {label}<span aria-hidden="true" className="text-outline transition group-hover:translate-x-1 group-hover:text-secondary">→</span>
           </Link>
         ))}
       </section>
