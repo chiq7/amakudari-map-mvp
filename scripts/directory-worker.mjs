@@ -50,6 +50,15 @@ const directoryWorker = {
     baseRequest.headers.delete("If-Modified-Since");
     const base = await env.ASSETS.fetch(baseRequest);
     if (!base.ok || !base.headers.get("Content-Type")?.includes("text/html")) return base;
+    // HEAD has no body to rewrite; HTMLRewriter on it returned 500 for filtered URLs
+    // (Next.js link prefetch sends HEAD). Answer with the same headers as a GET would.
+    if (request.method === "HEAD") {
+      const headers = new Headers(base.headers);
+      headers.delete("ETag");
+      headers.delete("Content-Length");
+      headers.set("Cache-Control", "private, no-cache");
+      return new Response(null, { status: base.status, headers });
+    }
     const rewriter = new HTMLRewriter()
       .on("#server-directory", { element(el) { el.setInnerContent(resultsMarkup(result, url.searchParams), { html: true }); } })
       .on("#featured-corporations-directory", { element(el) { el.setAttribute("hidden", ""); } });
