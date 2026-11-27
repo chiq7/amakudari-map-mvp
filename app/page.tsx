@@ -22,7 +22,7 @@ import {
 import { getMinistryPath, ministryPages } from "@/lib/ministry-pages";
 import { buttonLink } from "@/lib/ui-classes";
 
-const homeTitle = "天下りとは？ 意味と省庁別の天下り先・企業一覧";
+const homeTitle = "天下りとは？意味と天下り先一覧【省庁・企業別の再就職公表記録】";
 export const metadata = {
   ...pageMetadata(homeTitle, "天下りと天下り先の意味を解説。国家公務員の公表再就職記録から、財務省・国土交通省などの出身者がどの企業や団体のどの役職に就いたか、省庁・法人・氏名で調べられます。", "/"),
   title: { absolute: `${homeTitle}｜天下りマップ` },

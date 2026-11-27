@@ -30,7 +30,7 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const ministry = getMinistry(params.slug);
   if (!ministry) return {};
 
-  const title = `${ministry.name}の天下り先一覧｜再就職先と公表記録`;
+  const title = `${ministry.name}の天下り先一覧｜再就職先の企業・法人と公表記録`;
   const description = ministry.slug === "meti"
     ? "経済産業省出身者の再就職先を、就職年度・法人名・人物名で絞り込めます。公表記録ごとに就職日と就任時の役職を確認できます。"
     : `${ministry.name}出身者の再就職先を、内閣官房の公表記録から一覧で確認できます。就任年度・法人種別・離職時の官職で絞り込み、再就職先と就任時の役職を比較できます。`;

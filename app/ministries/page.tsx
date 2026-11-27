@@ -7,7 +7,7 @@ import { getMinistryPath, ministryPages } from "@/lib/ministry-pages";
 import { isSelfEmployed } from "@/lib/display-text";
 
 export const metadata = pageMetadata(
-  "省庁別の天下り先一覧｜出身省庁から再就職先の企業・法人を探す",
+  "省庁別の官僚天下り先一覧｜財務省・警察庁など各省庁の再就職先",
   "財務省・警察庁・法務省・経済産業省など、国家公務員の出身省庁ごとに公表された再就職先を一覧にしています。省庁を選ぶと、人物・再就職先法人・就任時の役職を確認できます。",
   "/ministries",
 );
