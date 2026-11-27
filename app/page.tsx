@@ -22,7 +22,7 @@ import {
 import { getMinistryPath, ministryPages } from "@/lib/ministry-pages";
 import { buttonLink } from "@/lib/ui-classes";
 
-const homeTitle = "天下りはなぜ悪い？財務省・警察庁OBの天下り先一覧";
+const homeTitle = "天下りはなぜ悪い？｜財務省・警察庁など省庁別の天下り先一覧";
 export const metadata = {
   ...pageMetadata(homeTitle, "財務省・警察庁・国土交通省などの元国家公務員が、どの企業・団体のどの役職に再就職したかを、公表記録から省庁・法人・氏名で調べられます。天下りがなぜ悪いと言われるのか、どこから規制違反になるのかも解説しています。", "/"),
   title: { absolute: `${homeTitle}｜天下りマップ` },
