@@ -14142,5 +14142,21 @@
     "waitingDays": 1,
     "sourceId": "cabinet-office-r06-3-1-20250926",
     "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
+  },
+  {
+    "rawId": "359a907d365e399237aeb05938121eced0a6c368eabff56f219183d7beae5ebf",
+    "dedupeKey": "1ffde97326a1a29864d78c1d583303768b92aa7a006cde959f214c084edb25b6",
+    "personSlug": "person-73d4e03087dc1511",
+    "name": "天谷 知子",
+    "fromMinistry": "金融庁",
+    "previousPosition": "金融庁金融国際審議官 兼 総合政策局総務課IAIS年次総会準備室長",
+    "corporationSlug": "corporation-188d2e14e08d6844",
+    "corporationName": "川崎重工業株式会社",
+    "newPosition": "監査等委員である社外取締役",
+    "retirementDate": "2023-07-04",
+    "reemploymentDate": "2024-06-26",
+    "waitingDays": 358,
+    "sourceId": "cabinet-office-r06-3-1-20250926",
+    "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html"
   }
 ]
