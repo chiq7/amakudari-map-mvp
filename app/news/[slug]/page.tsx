@@ -92,6 +92,22 @@ export default async function NewsArticlePage(props: { params: Promise<{ slug: s
     ],
   };
 
+  // 見出しの指定がある記事は、読み方を「答え」として事実の前に出す
+  const readingGuideSection = (
+    <section>
+      <h2 className="text-2xl font-bold text-primary">{article.readingGuideHeading ?? "資料とデータを確認する手順"}</h2>
+      <div className="mt-4 grid gap-4 md:grid-cols-3">
+        {article.readingGuide.map((guide, index) => (
+          <div key={guide.title} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
+            {article.readingGuideHeading ? null : <p className="text-sm font-bold text-secondary">STEP {index + 1}</p>}
+            <h3 className={`${article.readingGuideHeading ? "" : "mt-2 "}font-bold text-on-surface`}>{guide.title}</h3>
+            <p className="mt-3 text-sm leading-relaxed text-on-surface-variant">{guide.body}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+
   return (
     <article className="flex max-w-4xl flex-col gap-8">
       <script
@@ -134,6 +150,8 @@ export default async function NewsArticlePage(props: { params: Promise<{ slug: s
         <p className="mt-2 text-sm text-on-surface-variant">編集・掲載　{SITE_OPERATOR}</p>
       </header>
 
+      {article.readingGuideHeading ? readingGuideSection : null}
+
       <section className="rounded-lg border border-outline-variant bg-surface-container-low p-5">
         <h2 className="text-xl font-bold text-primary">この記事で確認できた事実</h2>
         <div className="mt-4 space-y-4">
@@ -159,18 +177,7 @@ export default async function NewsArticlePage(props: { params: Promise<{ slug: s
         </ol>
       </section>
 
-      <section>
-        <h2 className="text-2xl font-bold text-primary">資料とデータを確認する手順</h2>
-        <div className="mt-4 grid gap-4 md:grid-cols-3">
-          {article.readingGuide.map((guide, index) => (
-            <div key={guide.title} className="rounded-lg border border-outline-variant bg-surface-container-lowest p-5">
-              <p className="text-sm font-bold text-secondary">STEP {index + 1}</p>
-              <h3 className="mt-2 font-bold text-on-surface">{guide.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-on-surface-variant">{guide.body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {article.readingGuideHeading ? null : readingGuideSection}
 
       <RelatedLinks title="関連データ・ページ" links={article.relatedLinks} />
 

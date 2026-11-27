@@ -19,6 +19,7 @@ export type NewsArticle = {
   lead: string;
   verifiedFacts: Array<{ title: string; body: string }>;
   readingGuide: Array<{ title: string; body: string }>;
+  readingGuideHeading?: string;
   timeline: Array<{ date: string; label: string; body: string }>;
   sources: NewsSource[];
   relatedLinks: Array<{ label: string; href: string }>;

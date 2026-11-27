@@ -22,9 +22,9 @@ import {
 import { getMinistryPath, ministryPages } from "@/lib/ministry-pages";
 import { buttonLink } from "@/lib/ui-classes";
 
-const homeTitle = "天下り先一覧｜財務省・警察庁OBはどの企業へ？公表記録で検索";
+const homeTitle = "天下りはなぜ悪い？財務省・警察庁OBの天下り先一覧";
 export const metadata = {
-  ...pageMetadata(homeTitle, "財務省・警察庁・国土交通省などの元国家公務員が、どの企業・団体のどの役職に再就職したかを、公表記録から省庁・法人・氏名で調べられます。天下りの意味や、どこから規制違反になるのかも解説しています。", "/"),
+  ...pageMetadata(homeTitle, "財務省・警察庁・国土交通省などの元国家公務員が、どの企業・団体のどの役職に再就職したかを、公表記録から省庁・法人・氏名で調べられます。天下りがなぜ悪いと言われるのか、どこから規制違反になるのかも解説しています。", "/"),
   title: { absolute: `${homeTitle}｜天下りマップ` },
 };
 
@@ -99,12 +99,12 @@ function SearchIntentSection() {
   return (
     <section aria-label="調べたいことから探す" className="grid min-w-0 divide-y divide-outline-variant rounded-2xl border border-outline-variant bg-surface-container-lowest md:grid-cols-2 md:divide-x md:divide-y-0">
       <div className="min-w-0 px-4 py-3 sm:px-5" data-analytics-location="home_intent_definition">
-        <h2 className="text-base font-extrabold text-primary">天下りとは？</h2>
+        <h2 className="text-base font-extrabold text-primary">天下りとは？なぜ悪いと言われる？</h2>
         <p className="mt-1 text-pretty text-sm leading-relaxed text-on-surface-variant">
-          政府が「天下り」として問題にしてきたのは、退職した職員が府省庁のあっせんを受け、企業や団体に再就職することです。再就職の公表記録で分かるのは、元の官職や再就職先、就任時の役職です。勤務先の名前だけから、あっせんの有無は判断できません。
+          政府が「天下り」として問題にしてきたのは、退職した職員が府省庁のあっせんを受け、企業や団体に再就職することです。許認可や補助金で関わる相手に役所の世話で人を送ると、行政の判断が公正かどうか疑われるため、あっせんは法律で禁止されています。再就職そのものは違法ではありません。
         </p>
-        <Link href="/about#reemployment-rules" className={`mt-2 ${buttonLink}`}>
-          再就職等規制と公表制度を読む <ArrowRightIcon size={15} />
+        <Link href="/news/why-is-amakudari-bad" className={`mt-2 ${buttonLink}`}>
+          なぜ悪いのか、文科省62事案から読む <ArrowRightIcon size={15} />
         </Link>
       </div>
       <div className="min-w-0 px-4 py-3 sm:px-5" data-analytics-location="home_intent_lists">
