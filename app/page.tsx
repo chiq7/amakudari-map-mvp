@@ -22,9 +22,9 @@ import {
 import { getMinistryPath, ministryPages } from "@/lib/ministry-pages";
 import { buttonLink } from "@/lib/ui-classes";
 
-const homeTitle = "天下りとは？意味と天下り先一覧【省庁・企業別の再就職公表記録】";
+const homeTitle = "天下り先一覧｜財務省・警察庁OBはどの企業へ？公表記録で検索";
 export const metadata = {
-  ...pageMetadata(homeTitle, "天下りと天下り先の意味を解説。国家公務員の公表再就職記録から、財務省・国土交通省などの出身者がどの企業や団体のどの役職に就いたか、省庁・法人・氏名で調べられます。", "/"),
+  ...pageMetadata(homeTitle, "財務省・警察庁・国土交通省などの元国家公務員が、どの企業・団体のどの役職に再就職したかを、公表記録から省庁・法人・氏名で調べられます。天下りの意味や、どこから規制違反になるのかも解説しています。", "/"),
   title: { absolute: `${homeTitle}｜天下りマップ` },
 };
 
