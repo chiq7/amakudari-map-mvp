@@ -13871,5 +13871,24 @@
     "sources": [
       "cabinet-office-r06-3-1-20250926"
     ]
+  },
+  {
+    "person_slug": "person-fb56b93b03d912b9",
+    "name": "中島 淳一",
+    "fromMinistry": "金融庁",
+    "previousPosition": "金融庁長官",
+    "corporationSlug": "corporation-58adf980f28c60ef",
+    "corporationName": "株式会社三菱UFJフィナンシャル・グループ",
+    "newPosition": "リスク委員会外部専門家",
+    "retirementDate": "2023-07-04",
+    "reemploymentDate": "2024-11-11",
+    "waitingDays": 496,
+    "tags": [
+      "金融庁",
+      "再就職情報"
+    ],
+    "sources": [
+      "cabinet-office-r06-3-1-20250926"
+    ]
   }
 ]

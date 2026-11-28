@@ -5,7 +5,7 @@
   "inputCount": 1366,
   "productionDuplicateCount": 176,
   "poolDuplicateCount": 0,
-  "remainingCount": 479,
+  "remainingCount": 478,
   "sources": [
     {
       "id": "cabinet-office-106-25-1-r05-files4",
@@ -49,35 +49,6 @@
     }
   ],
   "records": [
-    {
-      "rawId": "fdfef8bed3aafee2f7b7ea08c3296c2da4895d3fb9920fd112c95838e3b45177",
-      "dedupeKey": "d00130864db5f2c71ea12cc4acaaabc3c24dcaeca1ada7eb2ce8cd7e59fb9a6f",
-      "personName": "中島 淳一",
-      "originMinistry": "金融庁",
-      "titleAtRetirement": "金融庁長官",
-      "retirementDate": "2023-07-04",
-      "reemploymentDate": "2024-11-11",
-      "waitingDays": 496,
-      "corporationName": "株式会社三菱UFJフィナンシャル・グループ",
-      "corporationType": "営利法人",
-      "newPosition": "リスク委員会外部専門家",
-      "sourceTitle": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceName": "国家公務員の再就職状況（令和6年度分）・離職後の事後届出",
-      "sourceId": "cabinet-office-r06-3-1-20250926",
-      "sourceUrl": "https://www.cas.go.jp/jp/gaiyou/jimu/jinjikyoku/106-25-2/r07/kouhyou_0926.html",
-      "publishedDate": "2025-09-26",
-      "flags": {
-        "nextDay": false,
-        "within30Days": false
-      },
-      "status": "draft",
-      "approved": false,
-      "notes": [
-        "Origin ministry was inferred from the retirement title.",
-        "Corporation type was inferred from the corporation name."
-      ],
-      "fromMinistry": "金融庁"
-    },
     {
       "rawId": "3c23a59d899188f17d87a74afb2202d49e9b0592ac8169274642c29b5c654bfe",
       "dedupeKey": "5d237e81a335ec1a9d43bb19af7e355919375985b1011de5e45fff083e751203",
